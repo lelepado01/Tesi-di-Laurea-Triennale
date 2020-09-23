@@ -8,8 +8,7 @@ Dati su Incidenti
 In base a fattori esterni
 
 - autovelox
-    Posizione in Italia:
-    [https://www.google.com/maps/d/viewer?mid=1CBgMTvIDnbGo22-Y1f3rVcbeX4C0v_w1&ll=45.365557951599605%2C10.03650113755961&z=8](ciao)
+    [Posizione in Italia](https://www.google.com/maps/d/viewer?mid=1CBgMTvIDnbGo22-Y1f3rVcbeX4C0v_w1&ll=45.365557951599605%2C10.03650113755961&z=8)
 - vento
 - meteo
 
