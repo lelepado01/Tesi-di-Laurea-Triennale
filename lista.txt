@@ -1,0 +1,15 @@
+Studio su Incidentalità
+
+Fattori:                    Dati Presenti?
+    Meteo                       Posizione incidente + posizione sensore ANSA
+    Stagioni                    SI (file istat)
+    Sesso Conducente            SI (file istat)
+    Linee Autobus               Percorsi linee di superficie ATM
+    Autovelox                   Pochi
+    Vento?                      SI
+    Weekend                     SI
+    Tipo di Strada              SI
+    Segnaletica                 SI
+
+
+segreteria@di.unimi.it

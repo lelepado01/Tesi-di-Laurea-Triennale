@@ -2,11 +2,14 @@
 
 ## Incidenti
 
+Dati su Incidenti
 [https://www.istat.it/it/archivio/87539](https://www.istat.it/it/archivio/87539)
 
 In base a fattori esterni
 
-- autovelox ?
+- autovelox
+    Posizione in Italia:
+    [https://www.google.com/maps/d/viewer?mid=1CBgMTvIDnbGo22-Y1f3rVcbeX4C0v_w1&ll=45.365557951599605%2C10.03650113755961&z=8](ciao)
 - vento
 - meteo
 
