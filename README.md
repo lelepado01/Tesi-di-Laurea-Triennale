@@ -1,6 +1,6 @@
 # Tirocinio
 
-## Studio sull'incidentalità stradale attraverso dataset aperti
+## Studio sull'incidentalità stradale tramite dataset aperti
 
 ### Incidenti
 
