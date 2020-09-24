@@ -20,11 +20,15 @@
 
     [Dati sensore per tutti anni passati](https://www.arpalombardia.it/Pages/Meteorologia/Richiesta-dati-misurati.aspx)
 
-- Linee Autobus
+- Linee Autobus (ATM)
 
     [Linee di superficie](https://dati.comune.milano.it/dataset/ds532-atm-composizione-percorsi-linee-di-superficie-urbane)
 
     [Percorsi linee di superficie](https://dati.comune.milano.it/dataset/ds538_atm-percorsi-linee-di-superficie-urbane)
+
+- Linee Autobus (turistici)
+
+    [Aree di sosta bus turistici](https://dati.comune.milano.it/dataset/ds740_sosta_bus_gt_turistici)
 
 - Stagione
 - Traffico
@@ -33,4 +37,5 @@
 - Tipo di Strada (autostrada, strada urbana...)
 - Segnaletica (rotonda...)
 - Sesso Conducente
+- Presenza di trasporto merci
 
