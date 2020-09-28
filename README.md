@@ -10,7 +10,11 @@
 
 - Autovelox
 
-    [Posizione in Italia](https://www.google.com/maps/d/viewer?mid=1CBgMTvIDnbGo22-Y1f3rVcbeX4C0v_w1&ll=45.365557951599605%2C10.03650113755961&z=8)
+    [Posizione in Italia](https://www.google.com/maps/d/viewer?mid=1CBgMTvIDnbGo22-Y1f3rVcbeX4C0v_w1&ll=45.365557951599605%2C10.03650113755961&z=8) 
+    (Non ufficiale)
+
+    [Posizione a Milano](https://overpass-turbo.eu/) 
+    (Tramite openstreetmaps e Overpass API)
 
 - Meteo
 
@@ -30,12 +34,17 @@
 
     [Aree di sosta bus turistici](https://dati.comune.milano.it/dataset/ds740_sosta_bus_gt_turistici)
 
-- Stagione
-- Traffico
-- Vento
-- Weekend
-- Tipo di Strada (autostrada, strada urbana...)
-- Segnaletica (rotonda...)
-- Sesso Conducente
+- Presenza di Piste Ciclabili
+
+    [Percorsi piste ciclabili](https://geoportale.comune.milano.it/sit/cerca-nel-catalogo/)
+
 - Presenza di trasporto merci
 
+- Posso usare direttamente il dataset sugli incidenti per: 
+    - Stagione
+    - Traffico
+    - Vento
+    - Weekend
+    - Tipo di Strada (autostrada, strada urbana...)
+    - Segnaletica (rotonda...)
+    - Sesso Conducente

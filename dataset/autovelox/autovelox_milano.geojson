@@ -1,0 +1,1440 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-ide",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2020-09-25T07:52:03Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/32121948",
+        "highway": "speed_camera",
+        "maxspeed": "90",
+        "name": "Autovelox Sesto San Giovanni",
+        "surface": "asphalt",
+        "@timestamp": "2019-05-13T15:39:39Z",
+        "@version": 5,
+        "@changeset": 70198334,
+        "@user": "LuSirto",
+        "@uid": 506470
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.2621399,
+          45.5357122
+        ]
+      },
+      "id": "node/32121948"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/869674749",
+        "highway": "speed_camera",
+        "maxspeed": "50",
+        "@timestamp": "2010-08-20T01:06:32Z",
+        "@version": 1,
+        "@changeset": 5540313,
+        "@user": "lucabonpub",
+        "@uid": 319024
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.2866732,
+          45.5575601
+        ]
+      },
+      "id": "node/869674749"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/892618754",
+        "highway": "speed_camera",
+        "maxspeed": "50",
+        "@timestamp": "2010-09-01T23:55:45Z",
+        "@version": 1,
+        "@changeset": 5658431,
+        "@user": "lucabonpub",
+        "@uid": 319024
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.2827082,
+          45.5479785
+        ]
+      },
+      "id": "node/892618754"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/892618969",
+        "highway": "speed_camera",
+        "maxspeed": "50",
+        "@timestamp": "2010-09-01T23:55:58Z",
+        "@version": 1,
+        "@changeset": 5658431,
+        "@user": "lucabonpub",
+        "@uid": 319024
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.2848426,
+          45.5504552
+        ]
+      },
+      "id": "node/892618969"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1009311992",
+        "highway": "speed_camera",
+        "@timestamp": "2010-11-27T23:18:58Z",
+        "@version": 1,
+        "@changeset": 6474343,
+        "@user": "stanton",
+        "@uid": 230707
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1376053,
+          45.4674028
+        ]
+      },
+      "id": "node/1009311992"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1027462176",
+        "highway": "speed_camera",
+        "@timestamp": "2013-01-23T19:36:18Z",
+        "@version": 3,
+        "@changeset": 14761289,
+        "@user": "efred",
+        "@uid": 125339
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1165513,
+          45.5216301
+        ]
+      },
+      "id": "node/1027462176"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1277834158",
+        "highway": "speed_camera",
+        "@timestamp": "2013-01-23T19:36:21Z",
+        "@version": 3,
+        "@changeset": 14761289,
+        "@user": "efred",
+        "@uid": 125339
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1752225,
+          45.523272
+        ]
+      },
+      "id": "node/1277834158"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1277834171",
+        "highway": "speed_camera",
+        "@timestamp": "2012-08-07T19:28:24Z",
+        "@version": 2,
+        "@changeset": 12649702,
+        "@user": "AnyFile",
+        "@uid": 113669
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1568131,
+          45.522274
+        ]
+      },
+      "id": "node/1277834171"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1277834384",
+        "highway": "speed_camera",
+        "@timestamp": "2013-01-23T19:36:21Z",
+        "@version": 4,
+        "@changeset": 14761289,
+        "@user": "efred",
+        "@uid": 125339
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1402912,
+          45.5192438
+        ]
+      },
+      "id": "node/1277834384"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1277834506",
+        "highway": "speed_camera",
+        "@timestamp": "2011-05-09T01:05:20Z",
+        "@version": 1,
+        "@changeset": 8089002,
+        "@user": "stanton",
+        "@uid": 230707
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1563758,
+          45.5220863
+        ]
+      },
+      "id": "node/1277834506"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1277834561",
+        "highway": "speed_camera",
+        "@timestamp": "2011-05-09T01:05:22Z",
+        "@version": 1,
+        "@changeset": 8089002,
+        "@user": "stanton",
+        "@uid": 230707
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1417858,
+          45.519435
+        ]
+      },
+      "id": "node/1277834561"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1277834645",
+        "highway": "speed_camera",
+        "@timestamp": "2013-01-23T19:36:21Z",
+        "@version": 3,
+        "@changeset": 14761289,
+        "@user": "efred",
+        "@uid": 125339
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1758599,
+          45.5237094
+        ]
+      },
+      "id": "node/1277834645"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1279803117",
+        "highway": "speed_camera",
+        "@timestamp": "2013-01-23T19:36:21Z",
+        "@version": 3,
+        "@changeset": 14761289,
+        "@user": "efred",
+        "@uid": 125339
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1580014,
+          45.4944015
+        ]
+      },
+      "id": "node/1279803117"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1295159019",
+        "highway": "speed_camera",
+        "@timestamp": "2013-01-23T19:36:21Z",
+        "@version": 3,
+        "@changeset": 14761289,
+        "@user": "efred",
+        "@uid": 125339
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1562169,
+          45.516897
+        ]
+      },
+      "id": "node/1295159019"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1295159020",
+        "highway": "speed_camera",
+        "@timestamp": "2013-01-23T19:36:21Z",
+        "@version": 3,
+        "@changeset": 14761289,
+        "@user": "efred",
+        "@uid": 125339
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1564297,
+          45.5164484
+        ]
+      },
+      "id": "node/1295159020"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1449078197",
+        "highway": "speed_camera",
+        "maxspeed": "90",
+        "name": "Autovelox Cernusco",
+        "@timestamp": "2014-06-03T20:28:43Z",
+        "@version": 5,
+        "@changeset": 22722534,
+        "@user": "LuSirto",
+        "@uid": 506470
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.3064451,
+          45.5382667
+        ]
+      },
+      "id": "node/1449078197"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1449078198",
+        "highway": "speed_camera",
+        "maxspeed": "90",
+        "name": "Autovelox Cernusco",
+        "@timestamp": "2014-06-03T20:28:43Z",
+        "@version": 5,
+        "@changeset": 22722534,
+        "@user": "LuSirto",
+        "@uid": 506470
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.3035327,
+          45.538299
+        ]
+      },
+      "id": "node/1449078198"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1475286040",
+        "highway": "speed_camera",
+        "@timestamp": "2011-10-21T19:47:59Z",
+        "@version": 1,
+        "@changeset": 9619154,
+        "@user": "stanton",
+        "@uid": 230707
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.0781022,
+          45.4690002
+        ]
+      },
+      "id": "node/1475286040"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1612880082",
+        "highway": "speed_camera",
+        "@timestamp": "2018-04-10T14:18:16Z",
+        "@version": 2,
+        "@changeset": 57974295,
+        "@user": "Constable",
+        "@uid": 527535
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.2001994,
+          45.528914
+        ]
+      },
+      "id": "node/1612880082"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1612880083",
+        "highway": "speed_camera",
+        "@timestamp": "2018-04-10T14:18:16Z",
+        "@version": 2,
+        "@changeset": 57974295,
+        "@user": "Constable",
+        "@uid": 527535
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.200022,
+          45.5289163
+        ]
+      },
+      "id": "node/1612880083"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2140629076",
+        "fixme": "Position estimated",
+        "fixme:2": "non registra la velicità, ma controlla gli accessi",
+        "highway": "speed_camera",
+        "@timestamp": "2013-02-03T21:07:04Z",
+        "@version": 1,
+        "@changeset": 14902343,
+        "@user": "AnyFile",
+        "@uid": 113669
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1958768,
+          45.4545847
+        ]
+      },
+      "id": "node/2140629076"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2153645026",
+        "highway": "speed_camera",
+        "maxspeed": "90",
+        "name": "Autovelox Sesto San Giovanni",
+        "@timestamp": "2014-06-04T19:09:18Z",
+        "@version": 2,
+        "@changeset": 22741078,
+        "@user": "LuSirto",
+        "@uid": 506470
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.2622317,
+          45.5357468
+        ]
+      },
+      "id": "node/2153645026"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2153647629",
+        "highway": "speed_camera",
+        "maxspeed": "90",
+        "name": "Autovelox Lambrate",
+        "@timestamp": "2014-06-04T19:01:38Z",
+        "@version": 2,
+        "@changeset": 22740938,
+        "@user": "LuSirto",
+        "@uid": 506470
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.2568884,
+          45.5029918
+        ]
+      },
+      "id": "node/2153647629"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2279979580",
+        "highway": "speed_camera",
+        "maxspeed": "70",
+        "name": "Autovelox Cinisello",
+        "@timestamp": "2013-04-24T19:47:29Z",
+        "@version": 1,
+        "@changeset": 15853368,
+        "@user": "LuSirto",
+        "@uid": 506470
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.2313112,
+          45.5477378
+        ]
+      },
+      "id": "node/2279979580"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2514279195",
+        "highway": "speed_camera",
+        "@timestamp": "2013-10-30T19:07:23Z",
+        "@version": 1,
+        "@changeset": 18622739,
+        "@user": "D@N",
+        "@uid": 1788831
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1519749,
+          45.4899438
+        ]
+      },
+      "id": "node/2514279195"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2619705381",
+        "highway": "speed_camera",
+        "@timestamp": "2018-10-27T17:25:24Z",
+        "@version": 2,
+        "@changeset": 63933533,
+        "@user": "maurizioa",
+        "@uid": 2498239
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1906069,
+          45.4838833
+        ]
+      },
+      "id": "node/2619705381"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2631098591",
+        "alt_name": "Autovelox",
+        "highway": "speed_camera",
+        "maxspeed": "70",
+        "name": "Autovelox Palmanova",
+        "old_name": "Autovelox Milano",
+        "@timestamp": "2016-05-23T19:36:12Z",
+        "@version": 2,
+        "@changeset": 39517710,
+        "@user": "ThePresident19",
+        "@uid": 3838393
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.2405259,
+          45.4995207
+        ]
+      },
+      "id": "node/2631098591"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2754640901",
+        "highway": "speed_camera",
+        "maxspeed": "70",
+        "@timestamp": "2017-09-01T12:43:08Z",
+        "@version": 5,
+        "@changeset": 51642295,
+        "@user": "chip_e_chop",
+        "@uid": 1197992
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1821288,
+          45.5074547
+        ]
+      },
+      "id": "node/2754640901"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2754952315",
+        "highway": "speed_camera",
+        "@timestamp": "2014-03-30T21:40:22Z",
+        "@version": 1,
+        "@changeset": 21409333,
+        "@user": "stanton",
+        "@uid": 230707
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1306824,
+          45.4971563
+        ]
+      },
+      "id": "node/2754952315"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2758806534",
+        "fixme": "Position estimated",
+        "highway": "speed_camera",
+        "maxspeed": "90",
+        "@timestamp": "2014-04-17T20:43:55Z",
+        "@version": 2,
+        "@changeset": 21757823,
+        "@user": "AnyFile",
+        "@uid": 113669
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1376862,
+          45.5427141
+        ]
+      },
+      "id": "node/2758806534"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2758806551",
+        "fixme": "Position estimated",
+        "highway": "speed_camera",
+        "maxspeed": "90",
+        "@timestamp": "2014-04-01T17:47:06Z",
+        "@version": 1,
+        "@changeset": 21443838,
+        "@user": "AnyFile",
+        "@uid": 113669
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1461857,
+          45.5528693
+        ]
+      },
+      "id": "node/2758806551"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2812724500",
+        "highway": "speed_camera",
+        "maxspeed": "70",
+        "@timestamp": "2014-04-24T07:27:36Z",
+        "@version": 1,
+        "@changeset": 21901610,
+        "@user": "noperante",
+        "@uid": 68842
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.0662811,
+          45.5292369
+        ]
+      },
+      "id": "node/2812724500"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2897998693",
+        "highway": "speed_camera",
+        "maxspeed": "90",
+        "name": "Autovelox Cernusco",
+        "surface": "asphalt",
+        "@timestamp": "2019-05-13T15:39:42Z",
+        "@version": 2,
+        "@changeset": 70198334,
+        "@user": "LuSirto",
+        "@uid": 506470
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.3035431,
+          45.5381946
+        ]
+      },
+      "id": "node/2897998693"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2897998694",
+        "highway": "speed_camera",
+        "maxspeed": "90",
+        "name": "Autovelox Cernusco",
+        "surface": "asphalt",
+        "@timestamp": "2019-05-13T15:39:42Z",
+        "@version": 2,
+        "@changeset": 70198334,
+        "@user": "LuSirto",
+        "@uid": 506470
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.3064269,
+          45.5383536
+        ]
+      },
+      "id": "node/2897998694"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2899606593",
+        "highway": "speed_camera",
+        "maxspeed": "90",
+        "name": "Autovelox Lambrate",
+        "surface": "asphalt",
+        "@timestamp": "2019-05-13T15:39:42Z",
+        "@version": 2,
+        "@changeset": 70198334,
+        "@user": "LuSirto",
+        "@uid": 506470
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.2570186,
+          45.5029384
+        ]
+      },
+      "id": "node/2899606593"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2899623754",
+        "alt_name": "Autovelox",
+        "highway": "speed_camera",
+        "maxspeed": "70",
+        "name": "Autovelox Palmanova",
+        "old_name": "Autovelox Milano",
+        "@timestamp": "2014-06-04T19:09:17Z",
+        "@version": 1,
+        "@changeset": 22741078,
+        "@user": "LuSirto",
+        "@uid": 506470
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.2404556,
+          45.4994665
+        ]
+      },
+      "id": "node/2899623754"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2961020233",
+        "highway": "speed_camera",
+        "maxspeed": "70",
+        "@timestamp": "2014-07-15T12:57:59Z",
+        "@version": 2,
+        "@changeset": 24160387,
+        "@user": "dega180",
+        "@uid": 454306
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.2301053,
+          45.5471587
+        ]
+      },
+      "id": "node/2961020233"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3047669753",
+        "highway": "speed_camera",
+        "@timestamp": "2015-10-25T21:10:44Z",
+        "@version": 2,
+        "@changeset": 34868998,
+        "@user": "gnrc69",
+        "@uid": 99872
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1448275,
+          45.4857421
+        ]
+      },
+      "id": "node/3047669753"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3047669754",
+        "highway": "speed_camera",
+        "@timestamp": "2015-08-12T11:39:45Z",
+        "@version": 2,
+        "@changeset": 33289351,
+        "@user": "fedc",
+        "@uid": 602784
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1447429,
+          45.4856003
+        ]
+      },
+      "id": "node/3047669754"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3047669755",
+        "highway": "speed_camera",
+        "@timestamp": "2015-08-12T11:39:45Z",
+        "@version": 2,
+        "@changeset": 33289351,
+        "@user": "fedc",
+        "@uid": 602784
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1445786,
+          45.4853901
+        ]
+      },
+      "id": "node/3047669755"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3047669756",
+        "highway": "speed_camera",
+        "@timestamp": "2014-08-28T16:08:32Z",
+        "@version": 1,
+        "@changeset": 25077169,
+        "@user": "[DarKwiN]",
+        "@uid": 2290238
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1557693,
+          45.4927981
+        ]
+      },
+      "id": "node/3047669756"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3047669757",
+        "highway": "speed_camera",
+        "@timestamp": "2014-08-28T16:08:32Z",
+        "@version": 1,
+        "@changeset": 25077169,
+        "@user": "[DarKwiN]",
+        "@uid": 2290238
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1557098,
+          45.492846
+        ]
+      },
+      "id": "node/3047669757"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3047669758",
+        "highway": "speed_camera",
+        "@timestamp": "2014-08-28T16:08:32Z",
+        "@version": 1,
+        "@changeset": 25077169,
+        "@user": "[DarKwiN]",
+        "@uid": 2290238
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1502354,
+          45.4892699
+        ]
+      },
+      "id": "node/3047669758"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3047669759",
+        "highway": "speed_camera",
+        "@timestamp": "2014-08-28T16:08:32Z",
+        "@version": 1,
+        "@changeset": 25077169,
+        "@user": "[DarKwiN]",
+        "@uid": 2290238
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1502899,
+          45.4892264
+        ]
+      },
+      "id": "node/3047669759"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3047669760",
+        "highway": "speed_camera",
+        "layer": "1",
+        "maxspeed": "70",
+        "@timestamp": "2018-05-22T11:51:34Z",
+        "@version": 5,
+        "@changeset": 59177941,
+        "@user": "LuSirto",
+        "@uid": 506470
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1303627,
+          45.4992641
+        ]
+      },
+      "id": "node/3047669760"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3054329216",
+        "highway": "speed_camera",
+        "@timestamp": "2014-09-01T19:52:27Z",
+        "@version": 1,
+        "@changeset": 25168502,
+        "@user": "AnyFile",
+        "@uid": 113669
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.2143511,
+          45.4676112
+        ]
+      },
+      "id": "node/3054329216"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3387910611",
+        "highway": "speed_camera",
+        "maxspeed": "50",
+        "@timestamp": "2015-03-07T17:13:51Z",
+        "@version": 1,
+        "@changeset": 29312650,
+        "@user": "ottomano",
+        "@uid": 136399
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.200694,
+          45.5066706
+        ]
+      },
+      "id": "node/3387910611"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3483653042",
+        "highway": "speed_camera",
+        "maxspeed": "70",
+        "source": "survey",
+        "@timestamp": "2018-11-10T21:16:28Z",
+        "@version": 2,
+        "@changeset": 64362161,
+        "@user": "linus12",
+        "@uid": 2842512
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1027541,
+          45.4524574
+        ]
+      },
+      "id": "node/3483653042"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3687509663",
+        "highway": "speed_camera",
+        "maxspeed": "50",
+        "@timestamp": "2015-08-08T22:19:24Z",
+        "@version": 1,
+        "@changeset": 33209645,
+        "@user": "lucabon",
+        "@uid": 712141
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.2830655,
+          45.5341849
+        ]
+      },
+      "id": "node/3687509663"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3802684104",
+        "highway": "speed_camera",
+        "source": "present en 2015/10 localisé Bing+GPS a l'arret",
+        "@timestamp": "2015-10-25T20:33:11Z",
+        "@version": 1,
+        "@changeset": 34868415,
+        "@user": "gnrc69",
+        "@uid": 99872
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1127148,
+          45.5265007
+        ]
+      },
+      "id": "node/3802684104"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3802684105",
+        "highway": "speed_camera",
+        "source": "present en 2015/10 localisé Bing+GPS a l'arret",
+        "@timestamp": "2015-10-25T20:33:11Z",
+        "@version": 1,
+        "@changeset": 34868415,
+        "@user": "gnrc69",
+        "@uid": 99872
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1120149,
+          45.5270693
+        ]
+      },
+      "id": "node/3802684105"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3803264551",
+        "highway": "speed_camera",
+        "source": "present en 2015/10 localisé Bing+GPS a l'arret",
+        "@timestamp": "2015-10-26T09:54:51Z",
+        "@version": 1,
+        "@changeset": 34876679,
+        "@user": "gnrc69",
+        "@uid": 99872
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.0967754,
+          45.4133745
+        ]
+      },
+      "id": "node/3803264551"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3803264552",
+        "highway": "speed_camera",
+        "source": "present en 2015/10 localisé Bing+GPS a l'arret",
+        "@timestamp": "2015-10-26T09:54:51Z",
+        "@version": 1,
+        "@changeset": 34876679,
+        "@user": "gnrc69",
+        "@uid": 99872
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.0663211,
+          45.5025305
+        ]
+      },
+      "id": "node/3803264552"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3803282965",
+        "highway": "speed_camera",
+        "source": "present en 2015/10 localisé Bing+GPS a l'arret",
+        "@timestamp": "2015-10-26T10:03:00Z",
+        "@version": 1,
+        "@changeset": 34876827,
+        "@user": "gnrc69",
+        "@uid": 99872
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1095497,
+          45.409065
+        ]
+      },
+      "id": "node/3803282965"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4010831721",
+        "direction": "45",
+        "highway": "speed_camera",
+        "maxspeed": "50",
+        "type": "enforcement",
+        "@timestamp": "2018-08-03T21:22:22Z",
+        "@version": 2,
+        "@changeset": 61342272,
+        "@user": "Ysogo",
+        "@uid": 6220204
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1259566,
+          45.4278631
+        ]
+      },
+      "id": "node/4010831721"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4237211667",
+        "highway": "speed_camera",
+        "source": "survey",
+        "@timestamp": "2016-06-11T10:18:07Z",
+        "@version": 2,
+        "@changeset": 39949491,
+        "@user": "Constable",
+        "@uid": 527535
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.119076,
+          45.436887
+        ]
+      },
+      "id": "node/4237211667"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4690390926",
+        "highway": "speed_camera",
+        "source": "survey",
+        "@timestamp": "2017-02-17T12:09:22Z",
+        "@version": 1,
+        "@changeset": 46162685,
+        "@user": "Constable",
+        "@uid": 527535
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.2683533,
+          45.562471
+        ]
+      },
+      "id": "node/4690390926"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4952732298",
+        "highway": "speed_camera",
+        "maxspeed": "70",
+        "@timestamp": "2017-07-05T14:32:38Z",
+        "@version": 1,
+        "@changeset": 50060820,
+        "@user": "Senbee",
+        "@uid": 312126
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.2714941,
+          45.4272263
+        ]
+      },
+      "id": "node/4952732298"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5202563703",
+        "alt_name": "Autovelox",
+        "highway": "speed_camera",
+        "maxspeed": "70",
+        "name": "Autovelox Palmanova",
+        "old_name": "Autovelox Milano",
+        "@timestamp": "2017-10-31T16:41:00Z",
+        "@version": 1,
+        "@changeset": 53400735,
+        "@user": "LuSirto",
+        "@uid": 506470
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.2404002,
+          45.499554
+        ]
+      },
+      "id": "node/5202563703"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5535618191",
+        "highway": "speed_camera",
+        "maxspeed": "50",
+        "@timestamp": "2018-04-07T10:17:46Z",
+        "@version": 1,
+        "@changeset": 57887670,
+        "@user": "linus12",
+        "@uid": 2842512
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1996162,
+          45.5046008
+        ]
+      },
+      "id": "node/5535618191"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5535618192",
+        "highway": "speed_camera",
+        "maxspeed": "50",
+        "@timestamp": "2018-04-07T10:17:46Z",
+        "@version": 1,
+        "@changeset": 57887670,
+        "@user": "linus12",
+        "@uid": 2842512
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1994922,
+          45.5042683
+        ]
+      },
+      "id": "node/5535618192"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5808063090",
+        "direction": "270",
+        "highway": "speed_camera",
+        "maxspeed": "50",
+        "@timestamp": "2018-11-10T21:27:02Z",
+        "@version": 2,
+        "@changeset": 64362348,
+        "@user": "linus12",
+        "@uid": 2842512
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.160451,
+          45.4371822
+        ]
+      },
+      "id": "node/5808063090"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6051605326",
+        "highway": "speed_camera",
+        "@timestamp": "2018-11-10T20:19:13Z",
+        "@version": 1,
+        "@changeset": 64361164,
+        "@user": "linus12",
+        "@uid": 2842512
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1610661,
+          45.4111698
+        ]
+      },
+      "id": "node/6051605326"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6051605327",
+        "highway": "speed_camera",
+        "@timestamp": "2018-11-10T20:19:13Z",
+        "@version": 1,
+        "@changeset": 64361164,
+        "@user": "linus12",
+        "@uid": 2842512
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1751933,
+          45.4044548
+        ]
+      },
+      "id": "node/6051605327"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6051678775",
+        "highway": "speed_camera",
+        "@timestamp": "2018-11-10T21:16:28Z",
+        "@version": 1,
+        "@changeset": 64362161,
+        "@user": "linus12",
+        "@uid": 2842512
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1040584,
+          45.4529774
+        ]
+      },
+      "id": "node/6051678775"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6051678776",
+        "description": "Via Virgilio Ferrari (direzione periferia)",
+        "highway": "speed_camera",
+        "@timestamp": "2018-11-10T21:16:28Z",
+        "@version": 1,
+        "@changeset": 64362161,
+        "@user": "linus12",
+        "@uid": 2842512
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1961025,
+          45.4276244
+        ]
+      },
+      "id": "node/6051678776"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6051678777",
+        "highway": "speed_camera",
+        "@timestamp": "2018-11-10T21:16:28Z",
+        "@version": 1,
+        "@changeset": 64362161,
+        "@user": "linus12",
+        "@uid": 2842512
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1961253,
+          45.4276291
+        ]
+      },
+      "id": "node/6051678777"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6175986334",
+        "addr:city": "Monza",
+        "addr:housenumber": "dopo civico 48",
+        "addr:postcode": "20900",
+        "addr:street": "Viale Guglielmo Marconi",
+        "highway": "speed_camera",
+        "@timestamp": "2019-01-01T06:51:01Z",
+        "@version": 1,
+        "@changeset": 65926570,
+        "@user": "Ecro",
+        "@uid": 9288022
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.26521,
+          45.5584006
+        ]
+      },
+      "id": "node/6175986334"
+    }
+  ]
+}

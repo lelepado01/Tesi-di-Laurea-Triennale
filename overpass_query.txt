@@ -1,0 +1,4 @@
+
+[out:json];
+node({{bbox}})["highway"="speed_camera"];
+out meta;
