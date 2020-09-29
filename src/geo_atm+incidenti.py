@@ -44,15 +44,16 @@ def parse_geojson_linestring(linestr) -> list: # -> return LIST<(double, double)
 # guardando la MAPPA 1, voglio togliere le linee che vanno 'sopra' 5.715 * 10^6 
 # e quelle che vanno 'sotto' 5.68 * 10^6 
 
-UPPER_BOUND = 5.715 * pow(10, 6)
-LOWER_BOUND = 5.68 * pow(10, 6)
+UPPER_BOUND = 5.708 * pow(10, 6)
+LOWER_BOUND = 5.683 * pow(10, 6)
+LEFT_BOUND = 1.007 * pow(10, 6)
 
 # 'is_in_range()' controlla che per ogni punto della linea questi non escano dal range
 
 def is_in_range(lines) -> bool:
     for point in parse_geojson_linestring(lines): 
-        point_y = point[1]
-        if point_y > UPPER_BOUND or point_y < LOWER_BOUND: 
+        point_x, point_y = point
+        if point_y > UPPER_BOUND or point_y < LOWER_BOUND or point_x < LEFT_BOUND: 
             return False
 
     return True
@@ -62,7 +63,7 @@ def is_in_range(lines) -> bool:
 # al termine dell'esecuzione converto la lista in pandas.Series in modo da poter 
 # fare il filtraggio delle linee che fuoriescono dal range 
 
-def remove_lines_out_of_range(geodf) -> pd.Series: 
+def remove_lines_out_of_range(geodf : gp.GeoDataFrame) -> pd.Series: 
     res_ls = []
     for line in geodf: 
         res_ls.append(is_in_range(line))
@@ -93,3 +94,5 @@ plt.show()
 
 # volendo potrei ridurre ancora il range dei percorsi, visto che ci sono molte linee atm 
 # che non si sovrappongono a strade con molti incidenti 
+
+# Ho ridotto i range UP e DOWN e ho introdotto range LEFT
