@@ -43,17 +43,18 @@ def parse_geojson_linestring(linestr) -> list: # -> return LIST<(double, double)
 # vanno troppo in periferia 
 # guardando la MAPPA 1, voglio togliere le linee che vanno 'sopra' 5.715 * 10^6 
 # e quelle che vanno 'sotto' 5.68 * 10^6 
-
-UPPER_BOUND = 5.708 * pow(10, 6)
-LOWER_BOUND = 5.683 * pow(10, 6)
-LEFT_BOUND = 1.007 * pow(10, 6)
+scale = pow(10, 6)
+UPPER_BOUND = 5.708 * scale
+LOWER_BOUND = 5.683 * scale
+LEFT_BOUND = 1.007 * scale
+RIGHT_BOUND = 1.036 * scale
 
 # 'is_in_range()' controlla che per ogni punto della linea questi non escano dal range
 
 def is_in_range(lines) -> bool:
     for point in parse_geojson_linestring(lines): 
         point_x, point_y = point
-        if point_y > UPPER_BOUND or point_y < LOWER_BOUND or point_x < LEFT_BOUND: 
+        if point_y > UPPER_BOUND or point_y < LOWER_BOUND or point_x < LEFT_BOUND or point_x > RIGHT_BOUND: 
             return False
 
     return True
@@ -87,12 +88,14 @@ percorsi_ridotti = percorsi_atm[remove_lines_out_of_range(percorsi_atm['geometry
 path_incidenti = "tesi/Tesi/dataset/incidenti/inc_strad_milano_2016.geojson"
 incidenti = gp.read_file(path_incidenti).to_crs(epsg=3857)
 
-layer_percorsi_ridotti = percorsi_ridotti.plot(color="red", figsize=(11,9), alpha=0.5)
-layer_incidenti = incidenti.plot(ax=layer_percorsi_ridotti, alpha=0.1)
-cx.add_basemap(ax=layer_incidenti)
-plt.show()
+#layer_percorsi_ridotti = percorsi_ridotti.plot(color="red", figsize=(11,9), alpha=0.5)
+#layer_incidenti = incidenti.plot(ax=layer_percorsi_ridotti, alpha=0.1)
+#cx.add_basemap(ax=layer_incidenti)
+#plt.show()
 
 # volendo potrei ridurre ancora il range dei percorsi, visto che ci sono molte linee atm 
 # che non si sovrappongono a strade con molti incidenti 
 
-# Ho ridotto i range UP e DOWN e ho introdotto range LEFT
+# Ho ridotto i range UP e DOWN e ho introdotto range LEFT e RIGHT
+#print(len(percorsi_ridotti))
+# Rimangono 291 linee rispetto alle 393 iniziali
