@@ -4,6 +4,16 @@ import pandas as pd
 
 # 'line_is_in_range()' controlla che per ogni punto della linea questi non escano dal range
 
+def remove_points_out_of_range(geodf, bounds) -> pd.Series: 
+    res_ls = []
+    for pointstr in geodf: 
+        res_ls.append(
+            point_is_in_range(
+                parse_geojson_point(pointstr), 
+                bounds
+                ))
+    return pd.Series(res_ls)
+
 def point_is_in_range(point, bounds) -> bool:
     point_x, point_y = point
     return not (point_y > bounds[0] or point_y < bounds[1] or point_x < bounds[2] or point_x > bounds[3])
