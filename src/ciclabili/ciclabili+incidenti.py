@@ -3,8 +3,8 @@ import geopandas as gp
 import matplotlib.pyplot as plt
 import contextily as cx
 
-path_incidenti = "tesi/Tesi/dataset/incidenti/inc_strad_milano_2016.geojson"
-path_ciclabili = "tesi/Tesi/dataset/ciclabili/bike_ciclabili.shp"
+path_incidenti = "dataset/incidenti/inc_strad_milano_2016.geojson"
+path_ciclabili = "dataset/ciclabili/bike_ciclabili.shp"
 
 dati_incidenti = gp.read_file(path_incidenti).to_crs(epsg=3857)
 dati_ciclabili  = gp.read_file(path_ciclabili).to_crs(epsg=3857)

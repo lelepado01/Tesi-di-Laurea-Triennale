@@ -2,7 +2,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-file_path = "/Users/gabrielepadovani/Desktop/Università/Data/tesi/Tesi/dataset/incidenti/incidenti_2010.txt"
+file_path = "dataset/incidenti/incidenti_2010.txt"
 data = pd.read_csv(file_path, sep='\t', decimal='.')
 
 incidenti_per_mese = data['mese'].value_counts()

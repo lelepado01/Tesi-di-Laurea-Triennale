@@ -2,7 +2,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-meteo = pd.read_csv("/Users/gabrielepadovani/Desktop/Università/Data/tesi/Tesi/dataset/meteo/meteo_milano_generale_2008_2019.csv", sep=",")
+meteo = pd.read_csv("dataset/meteo/meteo_milano_generale_2008_2019.csv", sep=",")
 
 meteo_2010 = meteo[meteo['Date_Time'].map(lambda x : x.split(' ')[0].split('/')[2] == "2010")]
 meteo_2011 = meteo[meteo['Date_Time'].map(lambda x : x.split(' ')[0].split('/')[2] == "2011")]

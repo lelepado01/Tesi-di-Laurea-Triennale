@@ -3,8 +3,8 @@ import geopandas as gp
 import matplotlib.pyplot as plt
 import contextily as cx
 
-path_atm = "tesi/Tesi/dataset/atm/atm_percorsi.geojson"
-path_incidenti = "tesi/Tesi/dataset/incidenti/inc_strad_milano_2016.geojson"
+path_atm = "dataset/atm/atm_percorsi.geojson"
+path_incidenti = "dataset/incidenti/inc_strad_milano_2016.geojson"
 
 percorsi_atm = gp.read_file(path_atm).to_crs(epsg=3857)
 incidenti = gp.read_file(path_incidenti).to_crs(epsg=3857)

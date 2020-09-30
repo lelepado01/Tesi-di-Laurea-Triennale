@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import geopandas as gp
 import contextily as cx
 
-path = "/Users/gabrielepadovani/Desktop/Università/Data/tesi/Tesi/dataset/ciclabili/bike_ciclabili.shp"
+path = "dataset/ciclabili/bike_ciclabili.shp"
 
 # to_crs(...) è per fare in modo che la mappa sia in proiezione di Mercatore
 # se non lo metto la mappa diventa 'obliqua'

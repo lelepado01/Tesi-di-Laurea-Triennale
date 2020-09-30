@@ -3,7 +3,7 @@ import geopandas as gp
 import matplotlib.pyplot as plt
 import contextily as cx
 
-path = "tesi/Tesi/dataset/autovelox/autovelox_milano.geojson"
+path = "dataset/autovelox/autovelox_milano.geojson"
 
 autovelox = gp.read_file(path).to_crs(epsg=3857)
 #print(autovelox)

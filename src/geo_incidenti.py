@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import geopandas as gpd
 import contextily as cx
 
-path = "/Users/gabrielepadovani/Desktop/Università/Data/tesi/Tesi/dataset/incidenti/inc_strad_milano_2016.geojson"
+path = "dataset/incidenti/inc_strad_milano_2016.geojson"
 
 # to_crs(...) è per fare in modo che la mappa sia in proiezione di Mercatore
 # se non lo metto la mappa diventa 'obliqua'

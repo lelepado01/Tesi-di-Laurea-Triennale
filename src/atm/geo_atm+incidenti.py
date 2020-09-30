@@ -5,11 +5,11 @@ import contextily as cx
 import pandas as pd
 import sys
 
-sys.path.append("tesi/Tesi/src/")
+sys.path.append("src/")
 
 import utils
 
-path = "tesi/Tesi/dataset/atm/atm_percorsi.geojson"
+path = "dataset/atm/atm_percorsi.geojson"
 
 percorsi_atm = gp.read_file(path).to_crs(epsg=3857)
 #print(percorsi_atm)
