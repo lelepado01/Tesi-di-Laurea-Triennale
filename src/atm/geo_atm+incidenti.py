@@ -3,6 +3,11 @@ import geopandas as gp
 import matplotlib.pyplot as plt
 import contextily as cx
 import pandas as pd
+import sys
+
+sys.path.append("tesi/Tesi/src/")
+
+import utils
 
 path = "tesi/Tesi/dataset/atm/atm_percorsi.geojson"
 
@@ -23,18 +28,7 @@ percorsi_atm = gp.read_file(path).to_crs(epsg=3857)
 #print(type(percorsi_atm['geometry'][0]))
 
 # non ho trovato funzioni / librerie per fare parse di geojson, 
-# quindi creo la funzione: 
-
-def parse_geojson_linestring(linestr) -> list: # -> return LIST<(double, double)>
-    # prendo tutti i valori tranne il primo, che è la stringa LINESTRING
-    value_list = str(linestr)[12:][:-1].split(", ")
-    
-    tuple_list = []
-    for val in value_list: 
-        x, y = val.split(" ")
-        tuple_list.append((float(x), float(y)))
-    
-    return tuple_list
+# creo funzioni in file 'utils.py'
 
 #lista_coords = parse_geojson_linestring(percorsi_atm['geometry'][0])
 #print(lista_coords)
@@ -49,32 +43,18 @@ LOWER_BOUND = 5.683 * scale
 LEFT_BOUND = 1.007 * scale
 RIGHT_BOUND = 1.036 * scale
 
-# 'is_in_range()' controlla che per ogni punto della linea questi non escano dal range
-
-def is_in_range(lines) -> bool:
-    for point in parse_geojson_linestring(lines): 
-        point_x, point_y = point
-        if point_y > UPPER_BOUND or point_y < LOWER_BOUND or point_x < LEFT_BOUND or point_x > RIGHT_BOUND: 
-            return False
-
-    return True
-
 # 'remove_lines_out_of_range()' esegue per ogni linea del dataframe la funzione precedente, 
 # e aggiunge il risultato a una lista 
 # al termine dell'esecuzione converto la lista in pandas.Series in modo da poter 
 # fare il filtraggio delle linee che fuoriescono dal range 
 
-def remove_lines_out_of_range(geodf : gp.GeoDataFrame) -> pd.Series: 
-    res_ls = []
-    for line in geodf: 
-        res_ls.append(is_in_range(line))
-
-    return pd.Series(res_ls)
-
 #print(len(percorsi_atm))
 #print(percorsi_atm[series_from_geodataframe(percorsi_atm['geometry'])])
 
-percorsi_ridotti = percorsi_atm[remove_lines_out_of_range(percorsi_atm['geometry'])]
+percorsi_ridotti = percorsi_atm[utils.remove_lines_out_of_range(
+    percorsi_atm['geometry'],
+    [UPPER_BOUND, LOWER_BOUND, LEFT_BOUND, RIGHT_BOUND]
+    )]
 
 # la mappa che ottengo è più 'zoommata'
 
