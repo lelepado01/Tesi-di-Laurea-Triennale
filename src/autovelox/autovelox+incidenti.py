@@ -22,13 +22,22 @@ dati_autovelox = gp.read_file(path_autovelox).to_crs(epsg=3857)
 # dovrei togliere i punti in alto (autovelox) che non rientrano nei dati incidenti
 
 scale = pow(10, 6)
-UPPER_BOUND = 5.708 * scale
-LOWER_BOUND = 5.683 * scale
-LEFT_BOUND = 1.007 * scale
-RIGHT_BOUND = 1.036 * scale
+UPPER_BOUND = 5.7055 * scale
+LOWER_BOUND = 5.687 * scale
+LEFT_BOUND = 1.01 * scale
+RIGHT_BOUND = 1.032 * scale
 
 autovelox_ridotti = dati_autovelox[utils.remove_points_out_of_range(
     dati_autovelox['geometry'], 
     [UPPER_BOUND, LOWER_BOUND, LEFT_BOUND, RIGHT_BOUND]
     )]
-print(len(autovelox_ridotti))
+
+#print(len(autovelox_ridotti))
+
+layer_incidenti = dati_incidenti.plot(figsize=(11,9), color="blue", alpha=0.1)
+layer_autovelox = autovelox_ridotti.plot(ax=layer_incidenti, color="red")
+cx.add_basemap(ax=layer_autovelox)
+plt.show()
+
+# Ho ridotto il numero di autovelox a 45, ma quelli rimossi erano lontani dai 
+# principali punti di incidente
