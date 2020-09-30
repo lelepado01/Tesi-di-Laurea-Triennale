@@ -33,3 +33,7 @@ def parse_geojson_linestring(linestr) -> list: # -> return LIST<(double, double)
         tuple_list.append((float(x), float(y)))
     
     return tuple_list
+
+def parse_geojson_point(point) -> tuple: # -> return (double, double)
+    value_list = str(point)[7:][:-1].split(" ")
+    return (float(value_list[0]), float(value_list[1]))
