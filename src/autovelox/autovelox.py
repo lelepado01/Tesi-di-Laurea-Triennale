@@ -1,10 +1,11 @@
 
 import geopandas as gp
 import matplotlib.pyplot as plt
+import contextily as cx
 
 path = "tesi/Tesi/dataset/autovelox/autovelox_milano.geojson"
 
-autovelox = gp.read_file(path)
+autovelox = gp.read_file(path).to_crs(epsg=3857)
 #print(autovelox)
 #print(len(autovelox))
 
@@ -15,8 +16,8 @@ autovelox = gp.read_file(path)
 #   restituisce un dataframe vuoto (sono due colonne uguali)
 
 # controllo se ci sono altri campi tutti uguali: 
-for index in autovelox.columns: 
-    print(str(index) + ":  " + str(len(autovelox[index].unique())))
+#for index in autovelox.columns: 
+#    print(str(index) + ":  " + str(len(autovelox[index].unique())))
 
 # questi campi hanno tutti un solo valore != None
 
@@ -41,3 +42,6 @@ for index in autovelox.columns:
 #print(autovelox['alt_name'].unique())
 #print(autovelox['direction'].unique())
 
+layer_autovelox = autovelox.plot(figsize=(11,9), color="red")
+cx.add_basemap(ax=layer_autovelox)
+plt.show()
