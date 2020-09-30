@@ -58,7 +58,13 @@ incidenti_ridotti = dati_incidenti[utils.remove_points_out_of_range(
 #print(len(incidenti_ridotti))  -> 8500
 
 # MAPPA 3
-layer_incidenti = incidenti_ridotti.plot(figsize=(11,9), color="blue", alpha=0.07)
+layer_incidenti = incidenti_ridotti.plot(figsize=(11,9), color="blue", alpha=0.07, marker='.')
 layer_autovelox = autovelox_ridotti.plot(ax=layer_incidenti, color="red")
 cx.add_basemap(ax=layer_autovelox)
 plt.show()
+
+# Google maps per la ricerca vuole coordinate in gradi decimali (DD)
+#print(autovelox_ridotti.to_crs(epsg=4326))
+
+# Per l'analisi di questi mi serve un modo per trovare velocemente il punto dell'autovelox
+# (non so quale indice ha un determinato punto sulla mappa)
