@@ -1,4 +1,4 @@
-IdSensore,Tipologia,Unità DiMisura,IdStazione,NomeStazione,Quota,Provincia,UTM_Nord,UTM_Est,lng,lat,location,Limiti amministrativi 2014 delle province di Regione Lombardia,Limiti amministrativi 2015 delle province di Regione Lombardia
+IdSensore,Tipologia,Unità_DiMisura,IdStazione,NomeStazione,Quota,Provincia,UTM_Nord,UTM_Est,lng,lat,location,Limiti amministrativi 2014 delle province di Regione Lombardia,Limiti amministrativi 2015 delle province di Regione Lombardia
 17498,Livello Idrometrico,cm,1875,Opera Ponte Matteotti,98,MI,5024991,515066,9.192426151446794,45.378271735110665,"(45.378271735110665, 9.192426151446794)",4,4
 8125,Livello Idrometrico,cm,869,Milano v.Feltre,127,MI,5037597,519436,9.248738238564373,45.49163261583995,"(45.49163261583995, 9.248738238564373)",4,4
 14742,Temperatura,°C,1546,Rho Scalo Fiorenza - Prato,143,MI,5040479,506867,9.087923300302434,45.51781084679456,"(45.51781084679456, 9.087923300302434)",4,4
