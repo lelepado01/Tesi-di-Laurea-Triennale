@@ -55,11 +55,33 @@ ora_8 = data[data['ora'] == 8]['giorno_settimana'].value_counts().sort_index()
 ora_11 = data[data['ora'] == 11]['giorno_settimana'].value_counts().sort_index()
 ora_22 = data[data['ora'] == 22]['giorno_settimana'].value_counts().sort_index()
 
-#ora_8.plot.bar() # ancora più accentuato
+# MAPPA 6
+#fasce_unite = pd.DataFrame([ora_8, ora_11, ora_18, ora_22], index=['8', '11', '18', '22']).transpose()
+#fasce_unite.plot.bar()
 #plt.show()
 
-#ora_11.plot.bar() # sabato uguale ai giorni restanti della settimana
-#plt.show()
+# Alle 8 ho una discesa simile, probabilmente per il traffico nella direzione opposta
+# Alle 11 ho minore discesa, solo di Domenica
+# Alle 22 non ho discesa di incidenti nei weekend (probabilmente per il traffico serale)
 
-#ora_22.plot.bar() # tutti i giorni uguali
-#plt.show()
+# Un'altra cosa che posso controllare è quanto influisce il numero di 
+# incidenti dovuti alle escite del sabato sera
+
+ore_notte = data[((data['ora'] > 21) & (data['ora'] != 25)) | (data['ora'] < 4)][['giorno_settimana', 'ora']]
+sabato = ore_notte[ore_notte['giorno_settimana'] == 6]['ora'].value_counts().sort_index()
+
+# Scelgo mercoledi per fare il confronto con sabato, 
+# volendo potrei utilizzare tutti i giorni settimanali e fare normalize = True: 
+
+#settimana = ore_notte[ore_notte['giorno_settimana'] < 6]['ora'].value_counts(normalize=True).sort_index()
+mercoledi = ore_notte[ore_notte['giorno_settimana'] == 3]['ora'].value_counts().sort_index()
+
+# MAPPA 7
+#settimana_e_sabato = pd.DataFrame([settimana, sabato], index=['settimana', 'sabato']).transpose()
+mercoledi_e_sabato = pd.DataFrame([mercoledi, sabato], index=['mercoledi', 'sabato']).transpose()
+mercoledi_e_sabato.plot.bar()
+plt.show()
+
+# Dal grafo si nota che sabato si hanno molti più incidenti nella fascia dell'[1, 2, 3], 
+# mentre di mercoledi nella fascia delle 22
+
