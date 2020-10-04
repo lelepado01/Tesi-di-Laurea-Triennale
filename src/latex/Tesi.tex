@@ -1,0 +1,74 @@
+% scopiazzato dal template di Matteo Longeri (grazie!)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper]{report}
+% o article, book, ...
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% packages...
+\usepackage[utf8]{inputenc}
+\usepackage[english,italian]{babel}
+\usepackage[hyphens]{url}
+
+% Per generare il file PDF aderente alle specifiche PDF/A-1b. Verificarne poi la validità.
+%\usepackage[a-1b]{pdfx}
+
+\usepackage{hyperref}
+\usepackage{graphicx}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% Frontespizio
+\begin{titlepage}
+\begin{center}
+\includegraphics[width=\textwidth]{Logo.jpg}\\
+{\large{\bf Corso di Laurea Triennale in Informatica}}
+\end{center}
+\vspace{12mm}
+\begin{center}
+{\huge{\bf Studio sull'incidentalità stradale}}\\
+\vspace{4mm}
+{\huge{\bf tramite dataset aperti}}\\
+\end{center}
+\vspace{12mm}
+\begin{flushright}
+{\large{\bf Tesi di Laurea di:}}\\
+{\large{\bf Gabriele Padovani}}\\
+{\large{\bf Matr. 909165}}\\
+\end{flushright}
+\vspace{4mm}
+\begin{flushleft}
+{\large{\bf Relatore:}}\\
+{\large{\bf Andrea Trentini}}\\
+\vspace{4mm}
+{\large{\bf Correlatore:}}\\
+{\large{\bf CORREL}}\\
+\end{flushleft}
+\vspace{12mm}
+\begin{center}
+{\large{\bf Anno Accademico 2020/2021}}
+\end{center}
+\end{titlepage}
+
+
+\tableofcontents
+
+
+% o sections (dipende dal documentclass)
+\chapter{Cap1}
+
+TCP/IP over Avian Carriers\cite{waitzman1990standard}
+
+\chapter{Cap2}
+\chapter{Cap3}
+\chapter{Cap4}
+
+
+\bibliographystyle{plain}
+\bibliography{Biblio}
+%\addcontentsline{toc}{chapter}{Bibliografia}
+
+\end{document}
