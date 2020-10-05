@@ -24,6 +24,8 @@
 
     [Dati sensore per tutti anni passati](https://www.arpalombardia.it/Pages/Meteorologia/Richiesta-dati-misurati.aspx)
 
+    [Dati presi da ilmeteo](https://www.ilmeteo.it/portale/archivio-meteo/Milano/2010/)
+
 - Linee Autobus (ATM)
 
     [Linee di superficie](https://dati.comune.milano.it/dataset/ds532-atm-composizione-percorsi-linee-di-superficie-urbane)
