@@ -107,16 +107,26 @@ for path in paths:
 
 meteo_2010 = meteo_2010.fillna(1).replace("nebbia", 2).replace("pioggia nebbia", 2).replace("pioggia neve nebbia", 2).replace("pioggia temporale nebbia", 3).replace("pioggia", 3).replace("temporale", 3).replace("pioggia temporale", 3).replace("neve", 5).replace("pioggia neve", 5).replace("neve nebbia", 5)
 
-print(meteo_2010)
-
 # Ora posso calcolare la varianza: 
 
-print(meteo_2010.var())
-print(meteo.var())
-print(meteo_2010.cov(meteo))
-print(meteo_2010.cov(meteo) / (meteo.var() * meteo_2010.var()))
+#print(meteo_2010.var())
+#print(meteo.var())
+#print(meteo_2010.cov(meteo))
+#print(meteo_2010.cov(meteo) / (meteo.var() * meteo_2010.var()))
 
 # Il coeff. di Pearson tende a 0, le variabili sono non correlate
 
 # Siamo sicuri? 
 # Tento di calcolare la percentiale di incidenti in giorni sereni vs giorni di pioggia
+
+incidenti_con_condizioni = meteo[(meteo != 4) & (meteo < 6)]
+print(incidenti_con_condizioni.value_counts().sort_index()) # numero di incidenti
+print(meteo_2010.value_counts().sort_index())               # numero di giorni con le condizioni
+
+# Se divido le due serie trovo il numero di incidenti al giorno per la rispettiva giornata
+
+incidenti_per_condizione = incidenti_con_condizioni.value_counts().sort_index() / meteo_2010.value_counts().sort_index()
+print(incidenti_per_condizione)
+
+# Concluderei che non c'è molta correlazione tra meteo e incidenti, almeno a milano, 
+# dove è sereno spesso e ci sono molti altri fattori in gioco 
