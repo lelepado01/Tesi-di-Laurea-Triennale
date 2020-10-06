@@ -35,10 +35,16 @@ segnaletica = data['segnaletica']
 # Qualcosa non va perchè col.4 dovrebbe essere col.3 + col.2
 
 labels_intersezione = pd.read_csv("dataset/incidenti/Classificazioni/intersezione_o_non_interse3.csv")
-print(labels_intersezione['Descrizione'])
+#print(labels_intersezione['Descrizione'])
 
 intersezione = data['intersezione_o_non_interse1']
 #print(intersezione.unique())
 
-intersezione.value_counts().sort_index().plot.bar()
+#intersezione.value_counts().sort_index().plot.bar()
+#plt.show()
+
+tronco = data['tronco_di_strada_o_autostrada'].replace('  ', 0).astype(int)
+#print(tronco.unique())
+
+tronco.value_counts().sort_index().plot.bar()
 plt.show()
