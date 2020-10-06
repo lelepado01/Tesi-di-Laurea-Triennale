@@ -38,7 +38,7 @@ paths = [
     "dataset/meteo/ilmeteo2010/Milano-2010-Settembre.csv",
     "dataset/meteo/ilmeteo2010/Milano-2010-Ottobre.csv",
     "dataset/meteo/ilmeteo2010/Milano-2010-Novembre.csv",
-    "dataset/meteo/ilmeteo2010/Milano-2010-Dicembre.csv",
+    "dataset/meteo/ilmeteo2010/Milano-2010-Dicembre.csv"
 ]
 
 def add_values_to_dict(dictionary : dict, df : pd.Series): 
@@ -91,8 +91,32 @@ for index, val in zip(meteo.value_counts().index, meteo.value_counts()):
 
 #print(incidenti_pesati)
 
-pd.Series(incidenti_pesati).plot.bar()
-plt.show()
+#pd.Series(incidenti_pesati).plot.bar()
+#plt.show()
 
 # Il grafo non mi dice molto... potrei calcolare il coeff. di pearson delle due variabili
-# ma devo fare in modo che sia possibile calcolare la covarianza tra i due set 
+# ma devo fare in modo che sia possibile calcolare la covarianza tra i due set
+
+# Devo trasfrormare gli indici str in valori numerici per poter calcolare 
+# varianza e covarianza
+
+meteo_2010 = pd.Series()
+for path in paths: 
+    m = pd.read_csv(path, sep=";")['FENOMENI']
+    meteo_2010 = meteo_2010.append(m)
+
+meteo_2010 = meteo_2010.fillna(1).replace("nebbia", 2).replace("pioggia nebbia", 2).replace("pioggia neve nebbia", 2).replace("pioggia temporale nebbia", 3).replace("pioggia", 3).replace("temporale", 3).replace("pioggia temporale", 3).replace("neve", 5).replace("pioggia neve", 5).replace("neve nebbia", 5)
+
+print(meteo_2010)
+
+# Ora posso calcolare la varianza: 
+
+print(meteo_2010.var())
+print(meteo.var())
+print(meteo_2010.cov(meteo))
+print(meteo_2010.cov(meteo) / (meteo.var() * meteo_2010.var()))
+
+# Il coeff. di Pearson tende a 0, le variabili sono non correlate
+
+# Siamo sicuri? 
+# Tento di calcolare la percentiale di incidenti in giorni sereni vs giorni di pioggia
