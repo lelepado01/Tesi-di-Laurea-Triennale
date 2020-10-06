@@ -37,3 +37,5 @@ wind = meteo_2010['Wind_Speed'].value_counts().sort_index()
 print(meteo_2010['Wind_Speed'].var())
 #wind.plot()
 #plt.show()
+
+# TODO: questo può essere utile con i dataset degli incidenti

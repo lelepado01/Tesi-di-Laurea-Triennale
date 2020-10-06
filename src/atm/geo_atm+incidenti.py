@@ -106,3 +106,5 @@ plt.show()
 #       viale stelvio 
 # 
 # Inoltre a saltare all'occhio è anche piazzale Loreto, che è intersezione di tre linee
+
+# TODO: zoomma su punti di interesse

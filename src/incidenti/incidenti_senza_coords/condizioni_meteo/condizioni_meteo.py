@@ -17,6 +17,8 @@ meteo = data['condizioni_meteorologiche']
 # ilmeteo.it ha un archivio del meteo di milano per giorno del mese
 # https://www.ilmeteo.it/portale/archivio-meteo/Milano/2010/
 
+# TODO: relazioni con tutti gli altri anni?
+
 path_meteo = "dataset/meteo/ilmeteo2010/Milano-2010-Luglio.csv"
 
 # Sostituisco tutti i valori "" con 'sereno' 
@@ -69,10 +71,12 @@ for k, v in zip(percentuali_annuali.keys(), percentuali_annuali.values()):
 #print(percentuali_annuali)
 
 # è stato sereno il 40% delle giornate durante il 2010
-# IMP: il dataset di ilmeteo non tiene conto di grandine, mentre il dataset istat si
+# TODO: il dataset di ilmeteo non tiene conto di grandine, mentre il dataset istat si
 
 # Se moltiplico percentuali_annuali per i dati del meteo: 
 # Mi interessano sereno, pioggia, neve e nebbia
+
+# TODO: tutto il procedimento che ho fatto è necessario?
 
 number_to_label = {
     1 : "sereno", 
@@ -127,6 +131,8 @@ print(meteo_2010.value_counts().sort_index())               # numero di giorni c
 
 incidenti_per_condizione = incidenti_con_condizioni.value_counts().sort_index() / meteo_2010.value_counts().sort_index()
 print(incidenti_per_condizione)
+
+# TODO: non sono sicuro di aver calcolato correttamente gli incidenti per giorno
 
 # Concluderei che non c'è molta correlazione tra meteo e incidenti, almeno a milano, 
 # dove è sereno spesso e ci sono molti altri fattori in gioco 

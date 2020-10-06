@@ -35,3 +35,5 @@ plt.show()
 #   viale famagosta
 #   viale lodovico il moro
 # la maggior parte di queste ho notato essere in periferia
+
+# TODO: zoomma su punti di interesse

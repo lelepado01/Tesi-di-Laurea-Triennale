@@ -46,5 +46,21 @@ intersezione = data['intersezione_o_non_interse1']
 tronco = data['tronco_di_strada_o_autostrada'].replace('  ', 0).astype(int)
 #print(tronco.unique())
 
-tronco.value_counts().sort_index().plot.bar()
+#tronco.value_counts().sort_index().plot.bar()
+#plt.show()
+
+denominazione = data['denominazione_della_strada'].value_counts().sort_index()
+#print(denominazione.value_counts())
+
+LOWER_BOUND = 200
+#denominazione[(denominazione > LOWER_BOUND) & (denominazione < 9000)].plot.bar()
+#plt.show()
+
+natura_incidente = data['natura_incidente'].value_counts().sort_index()
+#print(natura_incidente.unique())
+
+natura_incidente.plot.bar()
 plt.show()
+
+# Scontri frontali / laterali sono molto frequenti, 
+# TODO: c'è correlazione con segnaletica / incroci? 

@@ -1,4 +1,6 @@
 
+# TODO: descrizione funzioni / documentazione
+
 import geopandas as gp
 import pandas as pd
 

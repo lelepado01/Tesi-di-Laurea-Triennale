@@ -64,6 +64,8 @@ def get_incidenti_al_giorno_per_trimestre(file_path : str):
 
     return incidenti_al_giorno
 
+# TODO: fix dei dataset 2014 e 2017
+
 df = pd.DataFrame([
     #get_incidenti_al_giorno_per_trimestre("dataset/incidenti/incidenti_2014.txt"),
     get_incidenti_al_giorno_per_trimestre("dataset/incidenti/incidenti_2015.txt"),
@@ -87,5 +89,6 @@ plt.show()
 
 # Perchè?
 
-# Il primo trimestre ha un basso numero di incidenti probabilmente perchè è inverno, 
-# è possibile controllare  
+# Il primo trimestre ha un basso numero di incidenti probabilmente perchè è inverno
+
+# TODO: finire
