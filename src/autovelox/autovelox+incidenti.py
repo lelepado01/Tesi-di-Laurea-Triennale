@@ -6,7 +6,7 @@ import sys
 
 sys.path.append("src/")
 
-import utils
+import geo_utils
 
 path_incidenti = "dataset/incidenti/inc_strad_milano_2016.geojson"
 path_autovelox = "dataset/autovelox/autovelox_milano.geojson"

@@ -7,7 +7,7 @@ import sys
 
 sys.path.append("src/")
 
-import utils
+import geo_utils
 
 path = "dataset/atm/atm_percorsi.geojson"
 
