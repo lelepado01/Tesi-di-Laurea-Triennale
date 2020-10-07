@@ -1,4 +1,6 @@
 
+# TODO: documentazione
+
 import pandas as pd
 
 def get_weather_by_year(meteo : pd.DataFrame, year : int) -> pd.Series: 
