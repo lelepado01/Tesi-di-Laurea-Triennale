@@ -1,4 +1,7 @@
 
+# TODO: non è un file necessario
+# Ci sono prove che ho fatto per realizzare label_utils.py 
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import sys
