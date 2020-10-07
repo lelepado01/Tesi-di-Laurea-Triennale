@@ -1,25 +1,35 @@
 
 import pandas as pd
+import matplotlib.pyplot as plt
 
 path = "dataset/incidenti/incidenti_2010.txt"
-label_path = "dataset/incidenti/Classificazioni/provincia.txt"
+label_path = "dataset/incidenti/Classificazioni/provincia.csv"
 
 dati = pd.read_csv(path, sep='\t')
-labels = pd.read_csv(label_path)
-#print(labels['id'].value_counts().unique())
-#print(dati)
-#print(labels)
+labels = pd.read_csv(label_path, sep=',')
+provincia : pd.Series = dati['provincia']
 
-prov = dati['provincia'].value_counts()
-#print(prov.index)
+campi = ['Modalita\'', 'Descrizione']
 
-def join(values: pd.Series, labels :  pd.Series) -> pd.Series: 
-    return values.index.map(lambda x: get_value(x, labels))
+#print(provincia)
+#print(labels[campi])
+labels = labels[campi]
 
-def get_value(ID, labels : pd.Series) -> str: 
-    return labels[labels['id'] == ID]['value']
+def dataframe_to_dict(df : pd.DataFrame) -> dict: 
+    dictionary : dict = {} 
+    for row in df.values: 
+        k, d = row
+        dictionary[k] = d
+    
+    return dictionary
 
-joined = join(prov, labels)
-print(joined)
+def join_labels(dataframe : pd.DataFrame, path_to_labels) -> pd.DataFrame: 
+    labels = pd.read_csv(path_to_labels, sep=',')
+    return provincia.replace(dataframe_to_dict(labels))
 
-# TODO: finire
+
+provincia = provincia.replace(dataframe_to_dict(labels)).value_counts()
+
+provincia[provincia > 500].plot.barh()
+plt.show()
+

@@ -17,4 +17,4 @@ plt.show()
 #   - moto private
 #   - autocarri
  
-# TODO: altri dati
+# TODO: altri dati disponibili
