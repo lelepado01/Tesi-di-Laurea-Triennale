@@ -50,3 +50,7 @@
     - Tipo di Strada (autostrada, strada urbana...)
     - Segnaletica (rotonda...)
     - Sesso Conducente
+
+### Todo
+
+- Devo tradurre i commenti / i nomi delle variabili in inglese?
