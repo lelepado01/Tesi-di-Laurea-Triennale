@@ -29,13 +29,16 @@ class MyHTMLParser(HTMLParser):
             # Se trovo qualunque dato, lo scrivo nel nuovo file
             self.file.write(data)
 
+# Dir_path è il path relativo alla directory
+# filename è il nome del file
+# La funzione crea un nuovo file con nome = al campo che sta parsando
 def parse_html_file(dir_path : str, file_name : str): 
     file = open(dir_path + file_name).read()
     parser = MyHTMLParser(dir_path)
     parser.feed(file)
     parser.file.close()
 
-# Realizza un parse di file html in file csv
+# Realizza un parse di file html in file csv a partire dalla directory di riferimento
 def parse_files_in_dir(dir_path : str): 
     # Prendo una lista di tutti i file nella cartella
     res = os.listdir(path)
@@ -54,4 +57,4 @@ def parse_files_in_dir(dir_path : str):
 #parse_files_in_dir(dir_path)
 
 # O di un solo file
-parse_html_file("dataset/incidenti/Classificazioni/", "INCSTRAD_Classificazione_Anno 2011_var36.html")
+#parse_html_file("dataset/incidenti/Classificazioni/", "INCSTRAD_Classificazione_Anno 2011_var36.html")
