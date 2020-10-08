@@ -131,5 +131,52 @@ investimento_pedoni_labels = label_utils.join_labels(
 #print(investimento_pedoni_labels)
 # La rotatoria ha anche la metà di incidenti con pedoni
 
-# TODO: incidenti con pedoni /feriti / morti?
+def count_people(row) -> int: 
+    campi_pedoni_feriti = ['pedone_ferito_1__sesso', 'pedone_ferito_2__sesso', 'pedone_ferito_3__sesso', 'pedone_ferito_4__sesso']
 
+    count = 0
+    for field in campi_pedoni_feriti: 
+        if row[field] != ' ' and row[field] != '':
+            count += 1
+
+    return count
+
+def get_people(dataset : pd.DataFrame): 
+    res = {}
+    for index in range(0, len(dataset)): 
+        res[index] = 0
+
+    for index, row in dataset.iterrows(): 
+        res[index] = count_people(row)
+
+    return pd.Series(res)
+
+campi = ['intersezione_o_non_interse1', 'pedone_morto_1__sesso', 'pedone_morto_2__sesso', 'pedone_morto_3__sesso', 'pedone_morto_4__sesso']
+pedoni = data[data['natura_incidente'] == 5][campi]
+
+#num_pedoni_per_zona = pd.DataFrame([pedoni['intersezione_o_non_interse1'], get_people(pedoni)], ['zona', 'numero_pedoni']).transpose().dropna()
+#print(num_pedoni_per_zona[num_pedoni_per_zona['numero_pedoni'] > 0.0].value_counts())
+
+#num_pedoni_per_zona = num_pedoni_per_zona[num_pedoni_per_zona['numero_pedoni'] > 0.0]
+#num_pedoni_per_zona.value_counts().sort_values().plot.barh()
+#plt.show()
+
+# Di nuovo si nota che gli incidenti più frequenti sono quelli in 
+# rettilineo dove è coinvolto un solo pedone
+# Avere più di un pedone coinvolto è molto raro -> 4 istanze in totale
+
+# DUBBIO: questi sono campi con pedoni morti, ma gli indici indicano anche feriti,
+# però ho altre colonne dedicate a pedoni feriti, cambia qualcosa?
+
+campi_pedoni_feriti = ['intersezione_o_non_interse1', 'pedone_ferito_1__sesso', 'pedone_ferito_2__sesso', 'pedone_ferito_3__sesso', 'pedone_ferito_4__sesso']
+pedoni = data[data['natura_incidente'] == 5][campi_pedoni_feriti]
+
+num_pedoni_per_zona = pd.DataFrame([pedoni['intersezione_o_non_interse1'], get_people(pedoni)], ['zona', 'numero_pedoni']).transpose().dropna()
+
+num_pedoni_per_zona = num_pedoni_per_zona[num_pedoni_per_zona['numero_pedoni'] > 0.0].value_counts()
+num_pedoni_per_zona = num_pedoni_per_zona[num_pedoni_per_zona > 100]
+num_pedoni_per_zona.sort_values().plot.barh()
+plt.show()
+
+# Cambiano decisamente, ci sono molti più feriti che morti
+# confermano comunque il trend di rettilineo, intersezione e incrocio

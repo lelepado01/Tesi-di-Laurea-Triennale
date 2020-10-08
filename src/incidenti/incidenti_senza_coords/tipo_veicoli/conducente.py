@@ -25,6 +25,8 @@ sesso = sesso[sesso != ' ']
 # Potrebbe essere dovuto al maggiore volume di guidatori maschi
 
 # Il numero di passeggeri influenza gli incidenti?
+
+# TODO: generalizza la funzione a 'conta_values_non_NaN()'
 def count_people(row) -> int: 
     campi = ['veicolo__a___sesso_conducente', 'veicolo__a___et__passegger12', 'veicolo__a___et__passegger15', 'veicolo__a___et__passegger18', 'veicolo__a___et__passegger21']
 
