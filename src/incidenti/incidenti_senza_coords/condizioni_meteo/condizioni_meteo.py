@@ -76,8 +76,6 @@ for k, v in zip(percentuali_annuali.keys(), percentuali_annuali.values()):
 # Se moltiplico percentuali_annuali per i dati del meteo: 
 # Mi interessano sereno, pioggia, neve e nebbia
 
-# TODO: tutto il procedimento che ho fatto è necessario?
-
 number_to_label = {
     1 : "sereno", 
     2 : "nebbia", 

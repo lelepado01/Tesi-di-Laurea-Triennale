@@ -11,7 +11,7 @@ incidenti_per_mese = data['mese'].value_counts()
 #plt.show()
 loc = data['denominazione_della_strada'].value_counts()
 loc = loc[loc < 400][loc > 20]
-print(loc)
+#print(loc)
 
 loc.plot.bar()
 plt.show()
