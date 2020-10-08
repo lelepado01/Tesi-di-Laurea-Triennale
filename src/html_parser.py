@@ -22,28 +22,36 @@ class MyHTMLParser(HTMLParser):
     def handle_data(self, data):
         # Se sto parsando la prima linea, estraggo il nome del campo
         if self.start_line == "": 
-            self.start_line = str(data) 
+            self.start_line = str(data)
             filename = self.start_line.split(" ")[4] # è sempre in quarta posizione
             self.file = open(self.path + filename + ".csv", "w")
         else: 
             # Se trovo qualunque dato, lo scrivo nel nuovo file
             self.file.write(data)
 
-# Prendo una lista di tutti i file nella cartella
-dir_path = 'dataset/incidenti/Classificazioni/'
-res = os.listdir(dir_path)
-
-# Elimino i file nella lista che non voglio convertire (quelli che non in formato html)
-for f in res: 
-    if not (os.path.isfile(dir_path + str(f)) and str(f).endswith(".html")): 
-        res.remove(f)
-
-def parse_html_file(path : str): 
-    file = open(dir_path + file_path).read()
+def parse_html_file(dir_path : str, file_name : str): 
+    file = open(dir_path + file_name).read()
     parser = MyHTMLParser(dir_path)
     parser.feed(file)
     parser.file.close()
 
-# Per ogni file parso i dati e li metto in un nuovo file csv
-for file_path in res: 
-    parse_html_file(file_path)
+# Realizza un parse di file html in file csv
+def parse_files_in_dir(dir_path : str): 
+    # Prendo una lista di tutti i file nella cartella
+    res = os.listdir(path)
+
+    # Elimino i file nella lista che non voglio convertire (quelli che non in formato html)
+    for f in res: 
+        if not (os.path.isfile(dir_path + str(f)) and str(f).endswith(".html")): 
+            res.remove(f)
+
+    # Per ogni file parso i dati e li metto in un nuovo file csv
+    for file_path in res: 
+        parse_html_file(dir_path, file_path)
+
+# Posso fare parse di più file alla volta
+#dir_path = 'dataset/incidenti/Classificazioni/'
+#parse_files_in_dir(dir_path)
+
+# O di un solo file
+parse_html_file("dataset/incidenti/Classificazioni/", "INCSTRAD_Classificazione_Anno 2011_var36.html")
