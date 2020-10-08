@@ -14,8 +14,8 @@ sesso = sesso[sesso != ' ']
 #print(eta.value_counts())
 #print(sesso.value_counts())
 
-eta.value_counts().sort_index().plot()
-plt.show()
+#eta.value_counts().sort_index().plot()
+#plt.show()
 # la fascia 30-44 anni è quella con più incidenti, successivamente scende, per avere un altro picco
 # ai 65+ 
 
@@ -25,6 +25,32 @@ plt.show()
 # Potrebbe essere dovuto al maggiore volume di guidatori maschi
 
 # Il numero di passeggeri influenza gli incidenti?
-# TODO: per ogni campo veicoli, sommo il numero di passeggeri delle diverse colonne
-def get_people_in_vehicle(num: int): 
-    field_list = []
+def count_people(row) -> int: 
+    campi = ['veicolo__a___sesso_conducente', 'veicolo__a___et__passegger12', 'veicolo__a___et__passegger15', 'veicolo__a___et__passegger18', 'veicolo__a___et__passegger21']
+
+    count = 0
+    for field in campi: 
+        if row[field] != '  ':  
+            count += 1
+
+    return count
+
+def get_people_in_vehicles(dataset : pd.DataFrame): 
+    res = {}
+    for index in range(0, len(dataset)): 
+        res[index] = 0
+
+    for index, row in dataset.iterrows(): 
+        res[index] = count_people(row)
+
+    return pd.Series(res)
+
+passenger_count = get_people_in_vehicles(data)
+
+passenger_count.value_counts().sort_index().plot.bar()
+plt.show()
+
+# Il risultato che mi sarei aspettato è una campana tra 1 e 2 per volume, ma sono molto più frequenti 
+# incidenti con solo il conducente a bordo
+# Il fatto di avere altre persone a bordo rende il conducente più attento?
+

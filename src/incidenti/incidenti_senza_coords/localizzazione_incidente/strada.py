@@ -132,3 +132,4 @@ investimento_pedoni_labels = label_utils.join_labels(
 # La rotatoria ha anche la metà di incidenti con pedoni
 
 # TODO: incidenti con pedoni /feriti / morti?
+
