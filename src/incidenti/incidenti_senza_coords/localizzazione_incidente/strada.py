@@ -128,5 +128,7 @@ investimento_pedoni_labels = label_utils.join_labels(
 #plt.show()
 
 # Ha numero simile a un incrocio con semaforo, ma la rotatoria rende il traffico più fluido
-print(investimento_pedoni_labels)
+#print(investimento_pedoni_labels)
 # La rotatoria ha anche la metà di incidenti con pedoni
+
+# TODO: incidenti con pedoni /feriti / morti?
