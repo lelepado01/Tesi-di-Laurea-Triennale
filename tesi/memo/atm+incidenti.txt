@@ -1,0 +1,34 @@
+
+Ho ridotto i range UP e DOWN e ho introdotto range LEFT e RIGHT
+
+Rimangono 291 linee rispetto alle 393 iniziali
+Ho trovato tre zone 
+    Navigli: 
+        viale col di lana       (con tram)
+        viale bligny            (con tram)
+        viale coni zugna        ('')
+        viale gorizia           ('')
+            Una cosa che ho notato è che queste sono tutte delle vie parallele a 
+        viale Papiniano         (molto trafficato) 
+        viale gabriele d'annunzio
+        viale gian galeazzo
+        viale beatrice d'este
+ 
+    Zona 2:                     Tutti anche tram
+        viale premuda
+        viale corsica
+        viale 22 marzo
+            Anche in questo caso, viale premuda è una parallela di un'altro viale trafficato, 
+       viale bianca maria 
+ 
+    Zona Monumentale: 
+        viale farini            (con tram) -> è anche una via trafficata
+        viale stelvio 
+ 
+    Inoltre a saltare all'occhio è anche piazzale Loreto, che è intersezione di tre linee
+
+
+DOMANDE: 
+    - Le linee di autobus atm sono intenzionalmente posizionate in viee parallele a altri viali trafficati?
+    - O i viali trafficati sono conseguenza delle linee?
+    - Cambia qualcosa tra tram e autobus?

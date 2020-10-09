@@ -11,6 +11,7 @@ path = "dataset/incidenti/incidenti_2011.txt"
 data : pd.DataFrame = pd.read_csv(path, sep="\t")
 
 #print(data['tipo_di_strada'].unique())
+#print(len(data[data['provincia'] == 15]))
 
 tipo_strada = data['tipo_di_strada']
 tipo_strada_labels = label_utils.join_labels(
@@ -171,8 +172,8 @@ num_pedoni_per_zona = pd.DataFrame([
 # GRAFO 7
 num_pedoni_per_zona = num_pedoni_per_zona[num_pedoni_per_zona['numero_pedoni'] > 0.0].value_counts().sort_values()
 num_pedoni_per_zona = num_pedoni_per_zona[num_pedoni_per_zona > 4]
-num_pedoni_per_zona.plot.barh()
-plt.show()
+#num_pedoni_per_zona.plot.barh()
+#plt.show()
 
 # Di nuovo si nota che gli incidenti più frequenti sono quelli in 
 # rettilineo dove è coinvolto un solo pedone

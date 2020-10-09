@@ -89,7 +89,4 @@ plt.show()
 # volume, mentre Aprile, Maggio e Giugno più alti 
 
 # Perchè?
-
 # Il primo trimestre ha un basso numero di incidenti probabilmente perchè è inverno
-
-# TODO: finire

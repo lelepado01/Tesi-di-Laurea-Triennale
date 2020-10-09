@@ -1,0 +1,6 @@
+
+DOMANDE: 
+    Gli autovelox nella mappa influiscono sul numero di incidenti?
+        - Mi servono dati riguardo incidenti prima dell'installazione
+        - Mi servono le date di installazione degli autovelox
+    

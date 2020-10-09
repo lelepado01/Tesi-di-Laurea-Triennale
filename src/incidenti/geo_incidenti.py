@@ -13,6 +13,6 @@ data = gpd.read_file(path).to_crs(epsg=3857)
 #world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
 #print(gpd.datasets.available)
 
-ax = data.plot(color="red", figsize=(11,9), alpha=0.05)
+ax = data.plot(figsize=(11,9), alpha=0.05)
 cx.add_basemap(ax, crs=data.crs.to_string())
-plt.show()
+plt.savefig("geo_incidenti.png")
