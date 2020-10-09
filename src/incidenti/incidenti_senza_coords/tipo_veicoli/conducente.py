@@ -1,6 +1,10 @@
 
 import pandas as pd
 import matplotlib.pyplot as plt
+import sys
+sys.path.append("src/")
+
+import label_utils
 
 data = pd.read_csv("dataset/incidenti/incidenti_2010.txt", sep="\t")
 #print(data)
@@ -14,15 +18,19 @@ sesso = sesso[sesso != ' ']
 #print(eta.value_counts())
 #print(sesso.value_counts())
 
-#eta.value_counts().sort_index().plot()
+# GRAFO 1
+#eta.value_counts().sort_index().plot(xlabel="Età conducente")
 #plt.show()
 # la fascia 30-44 anni è quella con più incidenti, successivamente scende, per avere un altro picco
 # ai 65+ 
 
-#sesso.value_counts(normalize=True).plot.pie()
-#plt.show()
+# GRAFO 2
+sesso = label_utils.join_labels(sesso.astype(int), "dataset/incidenti/Classificazioni/veicolo__a___sesso_conducente.csv")
+print(sesso)
+sesso.value_counts(normalize=True).plot.pie()
+plt.show()
 # Il numero di conducenti maschi è quasi 75%
-# Potrebbe essere dovuto al maggiore volume di guidatori maschi
+# Potrebbe essere dovuto al maggiore volume di guidatori maschi?
 
 # Il numero di passeggeri influenza gli incidenti?
 
@@ -47,12 +55,12 @@ def get_people_in_vehicles(dataset : pd.DataFrame):
 
     return pd.Series(res)
 
-passenger_count = get_people_in_vehicles(data)
+# GRAFO 3
+#passenger_count = get_people_in_vehicles(data)
+#passenger_count.value_counts().sort_index().plot.bar(xlabel="Numero Passeggeri")
+#plt.show()
 
-passenger_count.value_counts().sort_index().plot.bar()
-plt.show()
-
-# Il risultato che mi sarei aspettato è una campana tra 1 e 2 per volume, ma sono molto più frequenti 
-# incidenti con solo il conducente a bordo
+# Il risultato che mi sarei aspettato è una campana tra 1 e 2 per volume, 
+# ma sono molto più frequenti incidenti con solo il conducente a bordo
 # Il fatto di avere altre persone a bordo rende il conducente più attento?
 
