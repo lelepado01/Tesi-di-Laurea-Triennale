@@ -10,7 +10,7 @@ data = pd.read_csv(path, sep="\t")
 # GRAFO 1
 mese = data['mese']
 #print(mese.mean())
-#incidenti_al_mese = mese.value_counts().sort_index()
+incidenti_al_mese = mese.value_counts().sort_index()
 #incidenti_al_mese.plot.bar()
 #plt.show()
 
@@ -25,7 +25,7 @@ for index in range(0, len(incidenti_al_giorno_per_mese)):
     incidenti_al_giorno_per_mese.iloc[index] /= giorni_al_mese[index]
 
 # GRAFO 2 
-#incidenti_al_giorno_per_mese.plot.bar()
+#incidenti_al_giorno_per_mese.plot.bar(xlabel="incidenti al giorno ogni mese")
 #plt.show()
 
 # Si notano dicembre, gennaio, febbraio e dicembre hanno un numero di incidenti per giorno bassi
@@ -80,7 +80,8 @@ df = pd.DataFrame([
         "2018"
     ]).transpose()
 
-df.plot.bar()
+# GRAFO 3
+df.plot.bar(xlabel="incidenti per trimestre")
 plt.show()
 
 # Ho omesso 2014 e 2017 perchè davano problemi durante il parsing
