@@ -112,3 +112,4 @@ def get_coords_column(point_list : list, col : int) -> list:
     for point in point_list: 
         res.append(point.get(col))
     return res 
+    
