@@ -1,6 +1,8 @@
 
 import geopandas as gp
 import pandas as pd
+import contextily as cx
+import matplotlib.pyplot as plt
 
 # La funzione è usata per eseguire selezioni su dataframe contenenti POINT()
 # in base a bounds passati per argomento
@@ -113,3 +115,11 @@ def get_coords_column(point_list : list, col : int) -> list:
         res.append(point.get(col))
     return res 
     
+
+def print_zoomed_graph(data : gp.GeoDataFrame, bounds : list, label=""): 
+    ax = data.plot(figsize=(11,9), alpha=0.5)
+    ax.set_title(label)
+    ax.set_xlim([bounds[0], bounds[1]])
+    ax.set_ylim([bounds[2], bounds[3]])
+    cx.add_basemap(ax, crs=data.crs.to_string(), zoom=14)
+    plt.show()
