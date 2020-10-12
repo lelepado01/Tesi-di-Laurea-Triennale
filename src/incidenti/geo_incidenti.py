@@ -22,7 +22,12 @@ data = gpd.read_file(path).to_crs(epsg=3857)
 # sono punti con alta incidentalità?
 
 incidenti_ripetuti = pd.Series(data['geometry'].astype(str)).value_counts()
-#print(incidenti_ripetuti)
+incidenti_ripetuti = incidenti_ripetuti[incidenti_ripetuti > 15].index
+print(incidenti_ripetuti)
 
 # Ci sono molti incidenti che avvengono alle stesse esatte coordinate, sono errori?
-
+incidenti_sospetti = gpd.GeoDataFrame(
+    incidenti_ripetuti, 
+    )
+incidenti_sospetti.plot(figsize=(11,9))
+plt.show()
