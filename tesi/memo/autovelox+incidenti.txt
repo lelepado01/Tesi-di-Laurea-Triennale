@@ -1,6 +1,34 @@
 
 DOMANDE: 
-    Gli autovelox nella mappa influiscono sul numero di incidenti?
-        - Mi servono dati riguardo incidenti prima dell'installazione
-        - Mi servono le date di installazione degli autovelox
+    - Gli autovelox nella mappa influiscono sul numero di incidenti?
+        1) Mi servono dati riguardo incidenti prima dell'installazione
+            Ho queste informazioni dal 2010 al 2018
+        2) Mi servono le date di installazione degli autovelox
+            https://www.ztlmilano.it/Autovelox-Milano
+            Nel 2014 sono stati installati 18 nuovi autovelox a Milano, 
+            Posso provare a usare l'elenco delle vie per tentare di identificarli sulla mappa: 
+                1. Viale Monteceneri  dir. Lugano
+                2. Viale Monteceneri dir. Serra
+                3. Cavalcavia del Ghisallo
+                4. Viale Serra 
+                5. Viale Serra
+                6. Via Fermi
+                7. Viale Fulvio Testi direz. perif.
+                8. Viale Fulvio Testi direz. centro
+                9. Viale Palmanova  direz. centro
+                10. Viale Palmanova
+                11. Via Ferrari direz. Ripamonti
+                12. Via Ferrari
+                13. Via Chiesa Rossa
+                14. Via dei Missaglia direz. centro
+                15. Via dei Missaglia direz. periferia
+                16. Viale Famagosta
+                17. Via Parri
+                18. Via Parri
+            La maggior parte sono in entrambe le direzioni.
+            Sapendo che questi sono stati aggiunti nel 2014, 
+            posso controllare se le tendenze di incidenti cambiano da prima a dopo il 2014.
+            Inoltre, il dataset contiene altri autovelox, 
+            di cui non so la data di installazione, potrei vedere se il comportamento cambia 
+            nel tempo.
     
