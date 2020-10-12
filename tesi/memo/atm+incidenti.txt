@@ -1,7 +1,4 @@
 
-Ho ridotto i range UP e DOWN e ho introdotto range LEFT e RIGHT
-
-Rimangono 291 linee rispetto alle 393 iniziali
 Ho trovato tre zone 
     Navigli: 
         viale col di lana       (con tram)

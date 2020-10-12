@@ -39,7 +39,7 @@ RIGHT_BOUND = 1.030 * scale
 #
 #print(zoom_tangenziale)
 
-#geo_utils.print_zoomed_graph(data, [LEFT_BOUND, RIGHT_BOUND, LOWER_BOUND, UPPER_BOUND])
+geo_utils.print_zoomed_graph(data, [LEFT_BOUND, RIGHT_BOUND, LOWER_BOUND, UPPER_BOUND], label="Tangenziale Est")
 
 # Ho 22 incidenti con le stesse coordinate, mi sembra un errore più che un punto pericoloso
 # (Tangenziale est)
@@ -58,7 +58,7 @@ RIGHT_BOUND = 1.027 * scale
 
 #print(zoom_loreto)
 
-#geo_utils.print_zoomed_graph(data, [LEFT_BOUND, RIGHT_BOUND, LOWER_BOUND, UPPER_BOUND], label="Loreto")
+geo_utils.print_zoomed_graph(data, [LEFT_BOUND, RIGHT_BOUND, LOWER_BOUND, UPPER_BOUND], label="Loreto")
 
 # Loreto ha alcuni punti sovrapposti, ma la maggior parte sono omogeneamente distribuiti
 # Ho un punto simile sulla tangenziale ovest: 
@@ -75,4 +75,4 @@ UPPER_BOUND = 5.698 * scale
 LOWER_BOUND = 5.696 * scale
 LEFT_BOUND = 1.012 * scale
 RIGHT_BOUND = 1.014 * scale
-geo_utils.print_zoomed_graph(data, [LEFT_BOUND, RIGHT_BOUND, LOWER_BOUND, UPPER_BOUND], label="Punto vicino alla A50")
+#geo_utils.print_zoomed_graph(data, [LEFT_BOUND, RIGHT_BOUND, LOWER_BOUND, UPPER_BOUND], label="Punto vicino alla A50")

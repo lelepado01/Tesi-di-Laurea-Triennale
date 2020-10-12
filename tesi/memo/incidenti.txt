@@ -6,5 +6,3 @@ DOMANDE:
         <5.690, 1.030>
         ecc...
     Sono dei punti in cui avvengono molti incidenti o sono errori?
-
-    
