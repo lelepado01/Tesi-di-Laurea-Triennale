@@ -60,3 +60,42 @@ def parse_geojson_point(point) -> tuple: # -> return (float, float)
     # la struttura è POINT(x, y), devo eliminare la stringa POINT( e la parentesi finale
     value_list = str(point)[7:][:-1].split(" ")
     return (float(value_list[0]), float(value_list[1]))
+
+
+def convert_geometry(geometry) -> list: 
+    res = []
+    for row in geometry: 
+        data = str(row)[7:][:-1].split(" ")
+        res.append((float(data[0]), float(data[1])))
+
+    return res
+
+
+# Converto a lista di punti tutte le righe del dataframe
+def convert_to_Point(df : gp.GeoDataFrame, base : int) -> list:
+    res = []
+    for long, lat in convert_geometry(df['geometry']): 
+        res.append(Point(long, lat).mult(base))
+
+    return res
+
+
+class Point: 
+    def __init__(self, x, y): 
+        self.pos_x : float = x
+        self.pos_y : float = y
+
+    def mult(self, mult: int): 
+        self.pos_x *= mult
+        self.pos_y *= mult
+        return self
+
+    def get(self, coord : int): 
+        if coord == 0: 
+            return self.pos_x
+        elif coord == 1: 
+            return self.pos_y 
+        return None   
+
+    def print(self): 
+        print("POINT(" + str(self.pos_x) + ", " + str(self.pos_y) + ")")

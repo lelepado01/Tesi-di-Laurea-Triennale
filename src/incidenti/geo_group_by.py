@@ -3,6 +3,11 @@ import geopandas as gpd
 import matplotlib.pyplot as plt
 import contextily as cx
 
+import sys
+sys.path.append('src')
+
+import geo_utils
+
 #def plot_geolocation_by_cluster(df, 
 #                                cluster=None, 
 #                                title=None, 
@@ -76,52 +81,16 @@ import contextily as cx
 import math
 
 # Non voglio passare tuple alla funzione, preferisco avere un oggetto Point
-class Point: 
-    def __init__(self, x, y): 
-        self.pos_x : float = x
-        self.pos_y : float = y
 
-    def mult(self, mult: int): 
-        self.pos_x *= mult
-        self.pos_y *= mult
-        return self
-
-    def get(self, coord : int): 
-        if coord == 0: 
-            return self.pos_x
-        elif coord == 1: 
-            return self.pos_y 
-        return None   
-
-    def print(self): 
-        print("POINT(" + str(self.pos_x) + ", " + str(self.pos_y) + ")")
-
-def get_distance(p1 : Point, p2 : Point) -> float: 
+def distance_between(p1 : geo_utils.Point, p2 : geo_utils.Point) -> float: 
     return math.sqrt(pow(p1.pos_x - p2.pos_x, 2) + pow(p1.pos_y - p2.pos_y, 2))
-
-def convert_geometry(geometry) -> list: 
-    res = []
-    for row in geometry: 
-        data = str(row)[7:][:-1].split(" ")
-        res.append((float(data[0]), float(data[1])))
-
-    return res
-
-
-# Converto a lista di punti tutte le righe del dataframe
-def convert_to_Point(df : gpd.GeoDataFrame, base : int) -> list:
-    res = []
-    for long, lat in convert_geometry(df['geometry']): 
-        res.append(Point(long, lat).mult(base))
-
-    return res
 
 def get_points_close_to(centers : list, points : list, max_dist : float): 
     res = []
     for center in centers: 
         num = 0
         for point in points: 
-            if get_distance(center, point) < max_dist: 
+            if distance_between(center, point) < max_dist: 
                 num += 1
 
         res.append(num)
@@ -136,20 +105,19 @@ def get_coords_column(point_list : list, col : int) -> list:
 
 data = gpd.read_file("dataset/incidenti/inc_strad_milano_2016.geojson").to_crs(epsg=3857)
 BASE = pow(10, 6)
-points = convert_to_Point(data, BASE)
+points = geo_utils.convert_to_Point(data, BASE)
 
 # Uso per provare qualche centro
-
 centers = [
-    Point(5.692, 1.020).mult(BASE), 
-    Point(5.695, 1.025).mult(BASE), 
-    Point(5.700, 1.035).mult(BASE), 
-    Point(5.700, 1.020).mult(BASE)
+    geo_utils.Point(5.692, 1.020).mult(BASE), 
+    geo_utils.Point(5.695, 1.025).mult(BASE), 
+    geo_utils.Point(5.700, 1.035).mult(BASE), 
+    geo_utils.Point(5.700, 1.020).mult(BASE)
 ]
 
 #for center in centers: 
 #    points[4].print()
-#    print(get_distance(center, points[4]))
+#    print(distance_between(center, points[4]))
 
 # Voglio creare un dataframe che contenga la posizione dei centri, e il numero di punti vicini
 # a ognuno
