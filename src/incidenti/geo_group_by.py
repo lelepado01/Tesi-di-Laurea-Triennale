@@ -97,12 +97,6 @@ def get_points_close_to(centers : list, points : list, max_dist : float):
     
     return res
 
-def get_coords_column(point_list : list, col : int) -> list:
-    res = []
-    for point in point_list: 
-        res.append(point.get(col))
-    return res 
-
 data = gpd.read_file("dataset/incidenti/inc_strad_milano_2016.geojson").to_crs(epsg=3857)
 BASE = pow(10, 6)
 points = geo_utils.convert_to_Point(data, BASE)
@@ -130,8 +124,8 @@ points_close = get_points_close_to(centers, points, DISTANCE_RANGE)
 distance = gpd.GeoDataFrame(
     points_close, 
     geometry = gpd.points_from_xy(
-        get_coords_column(centers, 1), 
-        get_coords_column(centers, 0), 
+        geo_utils.get_coords_column(centers, 1), 
+        geo_utils.get_coords_column(centers, 0), 
         crs=3857), 
     columns=['points_close']
     )

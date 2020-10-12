@@ -61,6 +61,13 @@ def parse_geojson_point(point) -> tuple: # -> return (float, float)
     value_list = str(point)[7:][:-1].split(" ")
     return (float(value_list[0]), float(value_list[1]))
 
+def parse_geojson_point_list(point_list : list) -> list: 
+    res = []
+    for point in point_list: 
+        res.append(parse_geojson_point(point))
+
+    return res
+
 
 def convert_geometry(geometry) -> list: 
     res = []
@@ -99,3 +106,9 @@ class Point:
 
     def print(self): 
         print("POINT(" + str(self.pos_x) + ", " + str(self.pos_y) + ")")
+
+def get_coords_column(point_list : list, col : int) -> list:
+    res = []
+    for point in point_list: 
+        res.append(point.get(col))
+    return res 

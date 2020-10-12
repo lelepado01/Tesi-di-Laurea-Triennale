@@ -4,6 +4,11 @@ import matplotlib.pyplot as plt
 import geopandas as gpd
 import contextily as cx
 
+import sys
+sys.path.append('src')
+
+import geo_utils
+
 path = "dataset/incidenti/inc_strad_milano_2016.geojson"
 
 # to_crs(...) è per fare in modo che la mappa sia in proiezione di Mercatore
@@ -16,18 +21,39 @@ data = gpd.read_file(path).to_crs(epsg=3857)
 
 #ax = data.plot(figsize=(11,9), alpha=0.05)
 #cx.add_basemap(ax, crs=data.crs.to_string())
-#plt.savefig("geo_incidenti.png")
+#plt.show()
 
 # Ci sono dei punti in cui avvengono molti incidenti "sovrapposti", sono errori nei dati o 
 # sono punti con alta incidentalità?
 
-incidenti_ripetuti = pd.Series(data['geometry'].astype(str)).value_counts()
-incidenti_ripetuti = incidenti_ripetuti[incidenti_ripetuti > 15].index
-print(incidenti_ripetuti)
+scale = pow(10, 6)
+UPPER_BOUND = 5.690 * scale
+LOWER_BOUND = 5.687 * scale
+LEFT_BOUND = 1.028 * scale
+RIGHT_BOUND = 1.030 * scale
 
-# Ci sono molti incidenti che avvengono alle stesse esatte coordinate, sono errori?
-incidenti_sospetti = gpd.GeoDataFrame(
-    incidenti_ripetuti, 
-    )
-incidenti_sospetti.plot(figsize=(11,9))
-plt.show()
+zoom_tangenziale = data[geo_utils.remove_points_out_of_range(
+    data['geometry'], 
+    [UPPER_BOUND, LOWER_BOUND, LEFT_BOUND, RIGHT_BOUND]
+)]['geometry'].astype(str).value_counts()
+
+print(zoom_tangenziale)
+
+# Ho 22 incidenti con le stesse coordinate, mi sembra un errore più che un punto pericoloso
+# Un punto in cui avvengono molti incidenti, come piazzale Loreto, ha molti incidenti, 
+# ma tutti hanno coordinate diverse: 
+
+UPPER_BOUND = 5.699 * scale
+LOWER_BOUND = 5.698 * scale
+LEFT_BOUND = 1.026 * scale
+RIGHT_BOUND = 1.027 * scale
+
+zoom_loreto = data[geo_utils.remove_points_out_of_range(
+    data['geometry'], 
+    [UPPER_BOUND, LOWER_BOUND, LEFT_BOUND, RIGHT_BOUND]
+)]['geometry'].astype(str).value_counts()
+
+print(zoom_loreto)
+
+# Loreto ha alcuni punti sovrapposti, ma la maggior parte sono omogeneamente distribuiti
+
