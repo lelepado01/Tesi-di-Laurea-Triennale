@@ -99,10 +99,19 @@ class Point:
 def get_distance(p1 : Point, p2 : Point) -> float: 
     return math.sqrt(pow(p1.pos_x - p2.pos_x, 2) + pow(p1.pos_y - p2.pos_y, 2))
 
+def convert_geometry(geometry) -> list: 
+    res = []
+    for row in geometry: 
+        data = str(row)[7:][:-1].split(" ")
+        res.append((float(data[0]), float(data[1])))
+
+    return res
+
+
 # Converto a lista di punti tutte le righe del dataframe
 def convert_to_Point(df : gpd.GeoDataFrame, base : int) -> list:
     res = []
-    for long, lat in zip(df['longitudin'], df['latitudine']): 
+    for long, lat in convert_geometry(df['geometry']): 
         res.append(Point(long, lat).mult(base))
 
     return res
@@ -134,7 +143,7 @@ points = convert_to_Point(data, BASE)
 centers = [
     Point(5.692, 1.020).mult(BASE), 
     Point(5.695, 1.025).mult(BASE), 
-    Point(5.700, 1.027).mult(BASE), 
+    Point(5.700, 1.035).mult(BASE), 
     Point(5.700, 1.020).mult(BASE)
 ]
 
@@ -145,7 +154,7 @@ centers = [
 # Voglio creare un dataframe che contenga la posizione dei centri, e il numero di punti vicini
 # a ognuno
 
-DISTANCE_RANGE = 44529000.0
+DISTANCE_RANGE = 5776156660000.0
 
 # lista con numero di punti vicini
 points_close = get_points_close_to(centers, points, DISTANCE_RANGE)
@@ -160,6 +169,7 @@ distance = gpd.GeoDataFrame(
     )
 
 print(distance)
+
 datal = data.plot(alpha=0.01, figsize=(11,9))
 ax = distance.plot(ax=datal, markersize="points_close", alpha=0.8)
 cx.add_basemap(ax=ax)
