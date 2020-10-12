@@ -29,6 +29,7 @@ Ho trovato tre zone
 
 
 DOMANDE: 
-    - Le linee di autobus atm sono intenzionalmente posizionate in viee parallele a altri viali trafficati?
+    - Le linee di autobus atm sono intenzionalmente posizionate in viee 
+        parallele a altri viali trafficati?
     - O i viali trafficati sono conseguenza delle linee?
     - Cambia qualcosa tra tram e autobus?
