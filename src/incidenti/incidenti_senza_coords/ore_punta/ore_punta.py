@@ -1,4 +1,6 @@
 
+# IMPORTANTE: dati su tutta ITALIA
+
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -46,15 +48,34 @@ ora_punta = data[(data['ora'] > 6) & (data['ora'] < 11)]
 ora_punta_weekend = ora_punta[ora_punta['giorno_settimana'] > 5]['ora'].value_counts().sort_index()
 ora_punta_week = ora_punta[ora_punta['giorno_settimana'] < 6]['ora'].value_counts().sort_index()
 
+#uniti = pd.DataFrame([
+#    ora_punta_week / 5, 
+#    ora_punta_weekend / 2
+#], index=['week', 'weekend']).transpose()
+
+#uniti.plot.bar()
+#plt.xlabel("Incidenti in ore di Punta")
+#plt.show()
+
+# Si nota ancora di  più la differenza tra le 8 e le 9 (probabilmente perchè la gente dorme)
+# Alle 10 la situazione è già diversa
+
+# Se guardo solo in milano?
+
+ora_punta = data[(data['ora'] > 6) & (data['ora'] < 11)]
+ore_punta_milano = ora_punta[ora_punta['provincia'] == 15]
+#print(ore_punta_milano)
+ora_punta_weekend = ore_punta_milano[ore_punta_milano['giorno_settimana'] > 5]['ora'].value_counts().sort_index()
+ora_punta_week = ore_punta_milano[ore_punta_milano['giorno_settimana'] < 6]['ora'].value_counts().sort_index()
+
 uniti = pd.DataFrame([
     ora_punta_week / 5, 
     ora_punta_weekend / 2
 ], index=['week', 'weekend']).transpose()
 
-uniti.plot.bar()
-plt.xlabel("Incidenti in ore di Punta")
-plt.show()
+#uniti.plot.bar()
+#plt.xlabel("Incidenti in ore di Punta in Milano")
+#plt.show()
 
-# Si nota ancora di  più la differenza tra le 8 e le 9 (probabilmente perchè la gente dorme)
-# Alle 10 la situazione è già diversa
+# Si nota differenza anche alle 7, anche se su taglia di campione molto piccola...
 
