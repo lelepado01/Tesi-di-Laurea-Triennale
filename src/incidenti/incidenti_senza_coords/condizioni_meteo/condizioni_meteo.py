@@ -17,8 +17,6 @@ meteo = data['condizioni_meteorologiche']
 # ilmeteo.it ha un archivio del meteo di milano per giorno del mese
 # https://www.ilmeteo.it/portale/archivio-meteo/Milano/2010/
 
-# TODO: relazioni con tutti gli altri anni?
-
 path_meteo = "dataset/meteo/ilmeteo2010/Milano-2010-Luglio.csv"
 
 # Sostituisco tutti i valori "" con 'sereno' 
@@ -71,7 +69,6 @@ for k, v in zip(percentuali_annuali.keys(), percentuali_annuali.values()):
 #print(percentuali_annuali)
 
 # è stato sereno il 40% delle giornate durante il 2010
-# TODO: il dataset di ilmeteo non tiene conto di grandine, mentre il dataset istat si
 
 # Se moltiplico percentuali_annuali per i dati del meteo: 
 # Mi interessano sereno, pioggia, neve e nebbia

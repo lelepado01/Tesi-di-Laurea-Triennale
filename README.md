@@ -56,3 +56,4 @@
 ### Todo
 
 - Devo tradurre i commenti / i nomi delle variabili in inglese?
+- Trascrivere commenti importanti da file a latex, che ordine devo tenere per i capitoli? 

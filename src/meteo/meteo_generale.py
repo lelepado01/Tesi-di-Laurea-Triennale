@@ -1,6 +1,4 @@
 
-# TODO: questo può essere utile con i dataset degli incidenti
-
 import pandas as pd
 import matplotlib.pyplot as plt
 import sys

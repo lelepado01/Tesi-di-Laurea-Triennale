@@ -22,5 +22,3 @@ print(sensori)
 layer_sensori = sensori.plot(figsize=(11,9), color="blue")
 cx.add_basemap(ax=layer_sensori)
 plt.show()
-
-# TODO: sono tutti i sensori? sono pochi
