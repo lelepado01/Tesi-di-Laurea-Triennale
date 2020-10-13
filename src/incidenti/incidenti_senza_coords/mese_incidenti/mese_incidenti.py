@@ -81,8 +81,8 @@ df = pd.DataFrame([
     ]).transpose()
 
 # GRAFO 3
-df.plot.bar(xlabel="incidenti per trimestre")
-plt.show()
+#df.plot.bar(xlabel="incidenti per trimestre")
+#plt.show()
 
 # Ho omesso 2014 e 2017 perchè davano problemi durante il parsing
 # Anche utilizzando i trimestri però è confermata la tendenza, Gennaio, Febbraio, Marzo con basso 
