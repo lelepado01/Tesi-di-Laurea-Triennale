@@ -2,7 +2,8 @@
 DOMANDE: 
     - Gli autovelox nella mappa influiscono sul numero di incidenti?
         1) Mi servono dati riguardo incidenti prima dell'installazione
-            Ho queste informazioni dal 2010 al 2018
+            Ho queste informazioni dal 2010 al 2018 generiche, 
+            Ho le informazioni su incidenti con posizione solo nel 2016
         2) Mi servono le date di installazione degli autovelox
             https://www.ztlmilano.it/Autovelox-Milano
             Nel 2014 sono stati installati 18 nuovi autovelox a Milano, 
