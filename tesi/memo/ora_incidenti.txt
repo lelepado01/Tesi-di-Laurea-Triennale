@@ -18,7 +18,8 @@ incidenti dovuti alle escite del sabato sera
 
 DOMANDE: 
     - Quanto influiscono le ore di punta sugli incidenti? (7:00-9:00 e 17:00-18:00)
-    - Rifare il procedimento delle ore serali con le fasce orarie
+    - Rifare il procedimento delle ore serali con le fasce orarie  (GRAFO 6)
     - Se eseguo la stessa cosa ma in località marittime / vacanza in agosto, 
         cosa cambia (rispetto a mesi non di vacanza)?
-    - 
+        (fatto a milano, da fare con una località diversa)
+    - Eseguire il punto precedente per mese e per ora
