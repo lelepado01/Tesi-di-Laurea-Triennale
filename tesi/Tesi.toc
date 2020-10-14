@@ -4,9 +4,9 @@
 \contentsline {chapter}{\numberline {2}Dati Geolocalizzati}{3}{chapter.2}% 
 \contentsline {section}{\numberline {2.1}Incidenti}{4}{section.2.1}% 
 \contentsline {section}{\numberline {2.2}Incidenti e Linee dei Trasporti Pubblici}{5}{section.2.2}% 
-\contentsline {subsection}{\numberline {2.2.1}Il Pav\'e influisce sull'incidentalità?}{5}{subsection.2.2.1}% 
-\contentsline {section}{\numberline {2.3}Incidenti e Piste Ciclabili}{6}{section.2.3}% 
-\contentsline {section}{\numberline {2.4}Incidenti e Autovelox}{6}{section.2.4}% 
-\contentsline {section}{\numberline {2.5}Incidenti e Meteo}{6}{section.2.5}% 
-\contentsline {chapter}{\numberline {3}Dati su Incidenti}{8}{chapter.3}% 
-\contentsline {chapter}{\numberline {4}Dati su Meteo}{9}{chapter.4}% 
+\contentsline {subsection}{\numberline {2.2.1}Il Pav\'e influisce sull'incidentalit\'a?}{5}{subsection.2.2.1}% 
+\contentsline {section}{\numberline {2.3}Incidenti e Piste Ciclabili}{7}{section.2.3}% 
+\contentsline {section}{\numberline {2.4}Incidenti e Autovelox}{8}{section.2.4}% 
+\contentsline {section}{\numberline {2.5}Incidenti e Meteo}{9}{section.2.5}% 
+\contentsline {chapter}{\numberline {3}Dati su Incidenti}{10}{chapter.3}% 
+\contentsline {chapter}{\numberline {4}Dati su Meteo}{11}{chapter.4}% 
