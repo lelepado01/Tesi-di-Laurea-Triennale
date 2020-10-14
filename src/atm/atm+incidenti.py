@@ -51,7 +51,7 @@ RIGHT_BOUND = 1.036 * scale
 #print(len(percorsi_atm))
 #print(percorsi_atm[series_from_geodataframe(percorsi_atm['geometry'])])
 
-percorsi_ridotti = percorsi_atm[utils.remove_lines_out_of_range(
+percorsi_ridotti = percorsi_atm[geo_utils.remove_lines_out_of_range(
     percorsi_atm['geometry'],
     [UPPER_BOUND, LOWER_BOUND, LEFT_BOUND, RIGHT_BOUND]
     )]
@@ -65,14 +65,14 @@ percorsi_ridotti = percorsi_atm[utils.remove_lines_out_of_range(
 
 # ora posso aggiungere il traffico
 
-path_incidenti = "tesi/Tesi/dataset/incidenti/inc_strad_milano_2016.geojson"
+path_incidenti = "dataset/incidenti/inc_strad_milano_2016.geojson"
 incidenti = gp.read_file(path_incidenti).to_crs(epsg=3857)
 
 # MAPPA 3
-layer_percorsi_ridotti = percorsi_ridotti.plot(color="red", figsize=(11,9), alpha=0.5)
-layer_incidenti = incidenti.plot(ax=layer_percorsi_ridotti, alpha=0.1)
-cx.add_basemap(ax=layer_incidenti)
-plt.show()
+#layer_percorsi_ridotti = percorsi_ridotti.plot(color="red", figsize=(11,9), alpha=0.5)
+#layer_incidenti = incidenti.plot(ax=layer_percorsi_ridotti, alpha=0.1)
+#cx.add_basemap(ax=layer_incidenti)
+#plt.show()
 
 # volendo potrei ridurre ancora il range dei percorsi, visto che ci sono molte linee atm 
 # che non si sovrappongono a strade con molti incidenti 
@@ -107,4 +107,22 @@ plt.show()
 # 
 # Inoltre a saltare all'occhio è anche piazzale Loreto, che è intersezione di tre linee
 
-# TODO: zoomma su punti di interesse
+import map_utils
+
+scale = pow(10, 6)
+# Navigli
+bounds = [1.020 * scale, 1.025 * scale, 5.691 * scale, 5.695 * scale]
+mappa = map_utils.CustomMap(bounds=bounds)
+mappa.add_layer(incidenti)
+mappa.add_layer(percorsi_ridotti, alpha=0.5, color = "orange")
+mappa.set_label("Linee Autobus e Incidenti")
+#mappa.draw() 
+
+# Corso 22 Marzo
+bounds = [1.024 * scale, 1.028 * scale, 5.693 * scale, 5.697 * scale]
+mappa.set_bounds(bounds)
+#mappa.draw()
+
+bounds = [1.025 * scale, 1.027 * scale, 5.697 * scale, 5.700 * scale]
+mappa.set_bounds(bounds)
+mappa.draw()
