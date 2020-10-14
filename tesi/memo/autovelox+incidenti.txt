@@ -33,3 +33,6 @@ DOMANDE:
             di cui non so la data di installazione, potrei vedere se il comportamento cambia 
             nel tempo.
     
+            Ho trovato dati con la via specifica dell'incidente, ma 
+            sono disponibili solo per le autostrade principali e dal 2018 al 2013
+            http://www.lis.aci.it/it/dati/#/strade/AA05001/2013/03/015
