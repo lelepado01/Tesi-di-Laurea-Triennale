@@ -18,6 +18,8 @@
     [Posizione a Milano](https://overpass-turbo.eu/) 
     (Tramite openstreetmaps e Overpass API)
 
+    [Autovelox installati nel 2014](https://www.ztlmilano.it/Autovelox-Milano)
+
 - Meteo
 
     [Sensori](https://www.dati.lombardia.it/Ambiente/Stazioni-Meteorologiche/nf78-nj6b)
