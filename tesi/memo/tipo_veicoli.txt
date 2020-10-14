@@ -1,11 +1,6 @@
 
-I principali veicoli coinvolti sono: 
-  - auto private
-  - moto private
-  - autocarri
-
 DOMANDE: 
-    - Se mi sposto tra autostrade o SS o in città, come cambiano i veicoli coinvolti?
+    - Se mi sposto tra autostrade o SS o in città, come cambiano i veicoli coinvolti? SI
     - Eseguire osservazione per trovare rapporto uomini/donne alla guida e vedere quanto cambia 
         il numero di incidenti
     - Eseguire anche per il numero di persone a bordo?
