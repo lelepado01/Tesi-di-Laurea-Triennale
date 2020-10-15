@@ -24,4 +24,5 @@ lombardia.plot.bar()
 plt.tight_layout()
 plt.show()
 
+# Per come sono organizzati, i dati sono un po' scomodi
 

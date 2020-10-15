@@ -1,0 +1,1651 @@
+cReg,REGIONE,cProv,PROVINCIA,CODICE,NOME STRADA,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,Impr.,TOTALE
+01,Piemonte,001,Torino,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,1,0,0,0,1,2,0,1,0,0,0,0,7
+01,Piemonte,001,Torino,AA00401,A 04 -  Torino-Trieste,1,1,0,1,0,1,3,2,1,2,2,3,1,2,3,4,3,1,4,3,1,1,2,2,0,44
+01,Piemonte,001,Torino,AA00405,A 04 / A 05 -  Diramazione Ivrea-Santhià,1,0,0,0,1,0,0,1,1,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,6
+01,Piemonte,001,Torino,AA00501,A 05 -  Torino-Aosta,0,1,1,2,0,0,5,0,2,3,1,2,0,4,1,3,1,1,3,2,0,2,1,0,0,35
+01,Piemonte,001,Torino,AA00601,A 06 -  Torino-Savona (La Verdemare),0,0,0,1,1,0,0,0,0,0,0,0,2,0,0,0,1,4,1,1,1,0,1,0,0,13
+01,Piemonte,001,Torino,AA02101,A 21 -  Torino-Piacenza-Brescia (Autostrada dei Vini),1,0,0,0,0,1,0,1,0,0,0,0,0,1,1,0,0,0,0,0,1,1,0,1,0,8
+01,Piemonte,001,Torino,AA03201,A 32 -  Torino-Bardonecchia,1,1,0,1,1,0,1,3,2,0,2,0,0,2,2,4,1,2,0,2,2,1,1,0,0,29
+01,Piemonte,001,Torino,AA03205,A 32 dir -  Circonvallazione di Oulx,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1
+01,Piemonte,001,Torino,DI00301,Diramazione Moncalieri,0,1,0,0,0,1,3,1,4,3,0,0,1,2,3,1,4,1,4,2,1,1,0,0,0,33
+01,Piemonte,001,Torino,DI00401,Diramazione Pinerolo,0,0,1,0,1,0,1,4,2,3,0,0,1,1,1,1,0,1,1,3,1,4,1,1,0,28
+01,Piemonte,001,Torino,DI00501,Raccordo della Falchera (Diramazione Abbadia),0,0,0,0,0,0,0,0,3,0,0,1,1,0,0,2,0,0,0,1,0,0,0,0,0,8
+01,Piemonte,001,Torino,RA01001,Raccordo Autostradale Torino-Aeroporto di Caselle,1,0,0,1,1,0,3,0,1,2,0,1,1,2,1,4,2,7,1,1,0,1,1,0,0,31
+01,Piemonte,001,Torino,RA04701,Raccordo Autostradale di Chivasso Est,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1
+01,Piemonte,001,Torino,SS01001,SS 010 -  Padana Inferiore,0,0,0,0,0,0,0,0,0,1,1,1,1,3,1,0,1,1,2,0,0,0,0,0,0,12
+01,Piemonte,001,Torino,SS01101,SS 011 -  Padana Superiore ,0,0,0,0,0,0,1,1,0,2,0,0,1,1,4,0,1,1,1,0,1,0,1,0,0,15
+01,Piemonte,001,Torino,SS02001,SS 020 -  del Colle di Tenda e di Valle Roja,1,0,1,0,0,0,1,3,1,0,1,2,2,0,1,0,1,1,0,0,0,0,0,0,0,15
+01,Piemonte,001,Torino,SS02034,SS 020 var1 -  Variante di La Loggia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1
+01,Piemonte,001,Torino,SS02036,SS 020 var2 -  Variante di Carignano,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,3
+01,Piemonte,001,Torino,SS02301,SS 023 -  del Colle di Sestriere,0,0,0,0,0,0,0,1,4,2,4,6,1,0,2,5,4,3,6,1,1,0,0,0,0,40
+01,Piemonte,001,Torino,SS02305,SS 023 var1 -  Variante di Stupinigi,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+01,Piemonte,001,Torino,SS02334,SS 023 var2 -  Variante di Porte,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,2
+01,Piemonte,001,Torino,SS02401,SS 024 -  del Monginevro,1,0,0,0,0,0,0,0,3,2,3,2,1,2,5,6,5,1,5,1,2,0,2,0,0,41
+01,Piemonte,001,Torino,SS02434,SS 024 var -  Variante Alpignano-Pianezza,1,0,0,0,0,2,0,0,0,1,1,0,0,0,0,0,0,2,1,0,1,0,0,0,0,9
+01,Piemonte,001,Torino,SS02501,SS 025 -  del Moncenisio,0,1,0,0,0,0,0,1,1,1,1,4,3,4,3,3,3,4,3,2,0,2,1,0,0,37
+01,Piemonte,001,Torino,SS02601,SS 026 -  della Valle d'Aosta,1,0,0,1,0,1,1,1,4,5,4,5,3,4,4,5,5,4,4,1,0,0,0,1,0,54
+01,Piemonte,001,Torino,SS02901,SS 029 -  del Colle di Cadibona,0,0,0,0,0,0,0,0,2,1,1,2,1,1,0,0,0,3,1,1,1,0,0,0,0,14
+01,Piemonte,001,Torino,SS02921,SS 029 racc -  del Colle di Cadibona,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,3
+01,Piemonte,001,Torino,SS03102,SS 031 bis -  del Monferrato,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,1,0,0,0,0,0,0,0,4
+01,Piemonte,001,Torino,SS03160,SS 031 bis/var -  Variante di Verolengo,0,0,0,0,1,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,4
+01,Piemonte,001,Torino,SS22801,SS 228 -  del Lago di Viverone,0,0,0,0,0,0,0,2,0,0,0,0,0,0,1,1,0,0,0,1,1,1,0,0,0,7
+01,Piemonte,001,Torino,SS33501,SS 335 -  di Bardonecchia,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,2
+01,Piemonte,001,Torino,SS33801,SS 338 -  di Mongrando,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,2
+01,Piemonte,001,Torino,SS39301,SS 393 -  di Villastellone,0,0,2,0,0,0,0,1,0,1,1,1,1,1,1,2,2,2,2,2,1,0,0,0,0,20
+01,Piemonte,001,Torino,SS45801,SS 458 -  di Casalborgone,0,0,0,0,0,0,1,0,1,0,0,1,0,0,0,0,1,0,0,1,0,0,0,0,0,5
+01,Piemonte,001,Torino,SS46001,SS 460 -  di Ceresole,2,0,0,1,0,1,2,0,4,2,2,2,1,1,2,4,7,4,4,0,1,0,0,1,1,42
+01,Piemonte,001,Torino,SS46005,SS 460 dir -  Diramazione di Cuorgnè,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+01,Piemonte,001,Torino,SS56501,SS 565 -  di Castellamonte,1,0,0,0,0,0,1,0,1,0,0,0,0,0,2,0,0,1,1,0,0,1,0,0,0,8
+01,Piemonte,001,Torino,SS58901,SS 589 -  dei Laghi di Avigliana,0,0,0,0,0,0,1,1,3,1,2,4,1,1,3,0,2,4,4,1,0,0,0,0,0,28
+01,Piemonte,001,Torino,SS59001,SS 590 -  della Val Cerrina,2,1,0,0,0,0,3,2,4,0,3,0,1,3,1,3,3,2,2,0,2,1,3,2,0,38
+01,Piemonte,001,Torino,SS59501,SS 595 -  di Mazzè,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,1,1,1,0,0,0,0,0,6
+01,Piemonte,001,Torino,SS66101,SS 661 -  delle Langhe,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1,0,0,1,0,0,0,0,0,4
+01,Piemonte,001,Torino,SS66301,SS 663 -  di Saluzzo,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,3
+01,Piemonte,001,Torino,TA00201,Tangenziale Sud Torino,2,3,2,1,0,2,4,8,9,5,7,6,4,2,5,5,5,6,5,4,2,3,2,3,0,95
+01,Piemonte,001,Torino,TA00202,Tangenziale Nord Torino,5,3,6,2,4,2,2,8,6,11,5,5,3,5,11,5,4,16,9,7,2,4,3,2,0,130
+01,Piemonte,002,Vercelli,AA00401,A 04 -  Torino-Trieste,2,0,0,2,2,1,0,2,1,2,4,0,1,2,3,2,2,2,2,3,0,1,0,1,0,35
+01,Piemonte,002,Vercelli,AA00405,A 04 / A 05 -  Diramazione Ivrea-Santhià,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,2
+01,Piemonte,002,Vercelli,AA02601,A 26 -  Genova Voltri-Gravellona Toce (Autostrada dei Trafori),0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,1,0,0,2,1,1,0,0,0,8
+01,Piemonte,002,Vercelli,AA02604,A 26 / A 04 -  Diramazione Stroppiana-Santhià,1,0,0,0,0,1,1,0,0,0,2,0,0,0,1,0,0,0,1,0,0,0,0,0,1,8
+01,Piemonte,002,Vercelli,SS01101,SS 011 -  Padana Superiore ,0,1,2,0,0,0,0,2,1,1,1,0,1,0,1,1,1,2,1,0,0,1,0,0,0,16
+01,Piemonte,002,Vercelli,SS01102,SS 011 bis -  Vercelli-Borgo Vercelli,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1
+01,Piemonte,002,Vercelli,SS03101,SS 031 -  del Monferrato,1,0,1,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,2,0,1,0,0,0,0,8
+01,Piemonte,002,Vercelli,SS03102,SS 031 bis -  del Monferrato,0,0,0,0,0,0,0,0,1,0,2,0,0,1,1,0,1,0,0,0,0,0,0,0,0,6
+01,Piemonte,002,Vercelli,SS14201,SS 142 -  Biellese,0,0,0,0,0,0,0,0,1,0,3,1,1,0,1,1,1,2,2,0,1,0,0,0,0,14
+01,Piemonte,002,Vercelli,SS14301,SS 143 -  Vercellese,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,2
+01,Piemonte,002,Vercelli,SS23001,SS 230 -  di Massazza,0,0,2,0,0,0,0,0,1,1,0,0,0,0,0,0,1,0,2,0,0,0,0,0,0,7
+01,Piemonte,002,Vercelli,SS29901,SS 299 -  di Alagna,0,0,0,0,0,0,0,1,0,2,1,1,0,1,3,2,4,1,3,2,0,0,0,0,0,21
+01,Piemonte,002,Vercelli,SS45501,SS 455 -  di Pontestura,0,0,0,0,0,0,1,0,0,0,0,3,0,1,1,0,1,0,0,0,1,0,0,0,0,8
+01,Piemonte,002,Vercelli,SS59301,SS 593 -  di Borgo d'Ale,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,4
+01,Piemonte,002,Vercelli,SS59401,SS 594 -  Destra Sesia,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,1,1,0,1,1,0,0,0,9
+01,Piemonte,002,Vercelli,SS59601,SS 596 -  dei Cairoli,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+01,Piemonte,003,Novara,AA00401,A 04 -  Torino-Trieste,0,0,0,0,0,2,0,2,1,0,1,2,2,1,1,2,0,3,0,1,1,0,1,0,0,20
+01,Piemonte,003,Novara,AA00826,A 08 / A 26 -  Diramazione Gallarate-Gattico,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,1,0,0,1,0,0,0,5
+01,Piemonte,003,Novara,AA02601,A 26 -  Genova Voltri-Gravellona Toce (Autostrada dei Trafori),1,1,0,1,1,0,0,0,0,3,1,0,1,1,3,3,1,4,0,2,3,1,0,0,0,27
+01,Piemonte,003,Novara,SS01101,SS 011 -  Padana Superiore ,0,2,0,0,0,0,2,3,1,3,2,2,2,1,3,1,5,2,4,1,3,0,0,1,0,38
+01,Piemonte,003,Novara,SS03201,SS 032 -  Ticinese,0,0,0,1,0,0,1,1,1,2,4,5,3,1,0,1,2,5,2,1,2,0,1,1,0,34
+01,Piemonte,003,Novara,SS03205,SS 032 dir -  Ticinese,0,0,0,0,0,0,0,2,1,0,1,1,1,0,1,0,1,0,0,1,0,0,0,0,0,9
+01,Piemonte,003,Novara,SS03301,SS 033 -  del Sempione,0,0,1,0,0,0,0,4,1,5,6,1,2,1,1,6,8,5,3,3,0,1,0,0,0,48
+01,Piemonte,003,Novara,SS14201,SS 142 -  Biellese,1,0,1,0,0,0,0,3,2,1,3,3,2,1,0,1,4,0,1,2,0,2,0,0,0,27
+01,Piemonte,003,Novara,SS21101,SS 211 -  della Lomellina,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,2,0,0,0,0,0,0,0,4
+01,Piemonte,003,Novara,SS22901,SS 229 -  del Lago d'Orta,0,0,0,0,1,1,0,1,4,3,2,2,2,2,4,2,8,4,2,4,2,1,2,2,0,49
+01,Piemonte,003,Novara,SS29901,SS 299 -  di Alagna,0,0,0,0,1,0,0,1,2,1,0,0,0,0,1,0,0,1,1,2,1,3,1,0,0,15
+01,Piemonte,003,Novara,SS33601,SS 336 -  dell'Aeroporto della Malpensa,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,2
+01,Piemonte,003,Novara,SS34101,SS 341 -  Gallaratese,0,0,0,0,1,0,0,0,0,2,1,1,0,1,0,1,1,0,0,2,0,0,1,0,0,11
+01,Piemonte,003,Novara,SS52701,SS 527 -  Bustese,0,0,0,0,0,0,0,0,1,3,2,0,0,0,0,2,1,0,0,0,0,0,0,0,0,9
+01,Piemonte,003,Novara,SS70301,SS 703 -  Tangenziale Est di Novara,1,0,0,0,0,0,0,1,3,0,1,1,1,1,1,1,1,3,2,1,0,1,0,0,0,19
+01,Piemonte,004,Cuneo,AA00601,A 06 -  Torino-Savona (La Verdemare),3,0,1,0,1,0,5,5,3,2,1,3,0,0,2,3,2,2,2,2,1,1,0,2,0,41
+01,Piemonte,004,Cuneo,AA00606,A 06 -  Diramazione per Fossano,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2
+01,Piemonte,004,Cuneo,AA03301,A 33 -  Asti-Cuneo (A06-Asti),1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+01,Piemonte,004,Cuneo,AA03302,A 33 -  Asti-Cuneo (Cuneo-A06),0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,4
+01,Piemonte,004,Cuneo,SS02001,SS 020 -  del Colle di Tenda e di Valle Roja,2,1,1,0,0,0,1,2,4,3,9,3,4,4,3,4,5,7,4,1,4,0,3,0,0,65
+01,Piemonte,004,Cuneo,SS02035,SS 020 var -  Variante Est di Racconigi,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1
+01,Piemonte,004,Cuneo,SS02101,SS 021 -  della Maddalena,0,0,0,0,0,0,0,1,0,1,0,1,0,0,0,0,2,1,0,0,0,0,0,0,0,6
+01,Piemonte,004,Cuneo,SS02201,SS 022 -  di Val Macra,0,2,0,0,0,0,1,1,3,0,1,0,0,3,0,0,3,4,3,1,2,1,3,0,0,28
+01,Piemonte,004,Cuneo,SS02801,SS 028 -  del Colle di Nava,0,0,0,0,0,0,1,0,2,1,2,1,3,2,2,4,5,1,5,1,1,3,1,0,0,35
+01,Piemonte,004,Cuneo,SS02802,SS 028 bis -  del Colle di Nava,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,1,0,0,0,0,0,3
+01,Piemonte,004,Cuneo,SS02805,SS 028 dir -  del Colle di Nava,0,0,0,0,0,0,0,1,1,2,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,6
+01,Piemonte,004,Cuneo,SS02901,SS 029 -  del Colle di Cadibona,0,0,0,0,0,0,1,0,5,2,1,5,0,1,3,4,6,3,4,0,0,0,0,1,0,36
+01,Piemonte,004,Cuneo,SS23101,SS 231 -  di S. Vittoria,2,0,0,0,0,0,1,3,5,1,6,4,7,3,5,2,6,2,5,3,2,3,0,0,0,60
+01,Piemonte,004,Cuneo,SS33901,SS 339 -  di Cengio,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,3
+01,Piemonte,004,Cuneo,SS56401,SS 564 -  Monregalese,1,1,1,0,0,0,0,0,0,0,1,0,1,1,0,1,0,0,1,0,1,1,0,0,0,10
+01,Piemonte,004,Cuneo,SS58201,SS 582 -  del Colle di S. Bernardo,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,2
+01,Piemonte,004,Cuneo,SS58901,SS 589 -  dei Laghi di Avigliana,1,0,1,0,0,0,0,2,1,1,3,1,4,0,1,1,3,2,3,5,0,1,2,3,0,35
+01,Piemonte,004,Cuneo,SS58934,SS 589 var1 -  Variante di Saluzzo,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,2
+01,Piemonte,004,Cuneo,SS59201,SS 592 -  di Canelli,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,2
+01,Piemonte,004,Cuneo,SS66101,SS 661 -  delle Langhe,0,0,0,0,0,1,4,1,1,1,0,5,3,2,1,1,4,2,2,5,3,2,0,0,0,38
+01,Piemonte,004,Cuneo,SS66201,SS 662 -  di Savigliano,0,0,0,0,0,0,0,3,0,1,0,3,2,3,1,1,3,2,0,1,0,2,0,0,0,22
+01,Piemonte,004,Cuneo,SS66301,SS 663 -  di Saluzzo,2,0,0,1,1,0,2,2,0,1,2,0,0,0,1,0,0,0,3,0,1,0,0,0,0,16
+01,Piemonte,004,Cuneo,SS70401,SS 704 -  Tangenziale di Mondovì,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,2
+01,Piemonte,004,Cuneo,SS70501,SS 705 -  di Cuneo,0,0,0,0,0,0,0,0,1,0,1,0,0,1,0,0,0,0,1,1,0,1,0,0,0,6
+01,Piemonte,005,Asti,AA02101,A 21 -  Torino-Piacenza-Brescia (Autostrada dei Vini),0,1,0,1,0,1,1,2,0,0,1,3,3,2,1,5,2,3,2,2,0,0,1,0,0,31
+01,Piemonte,005,Asti,AA03301,A 33 -  Asti-Cuneo (A06-Asti),0,0,0,0,0,0,1,1,0,0,0,0,1,0,0,0,0,0,0,0,1,3,0,0,0,7
+01,Piemonte,005,Asti,SS01001,SS 010 -  Padana Inferiore,1,0,0,0,0,0,0,4,1,0,1,3,4,5,1,1,1,1,1,5,1,0,0,0,0,30
+01,Piemonte,005,Asti,SS02921,SS 029 racc -  del Colle di Cadibona,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1
+01,Piemonte,005,Asti,SS03001,SS 030 -  di Val Bormida,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1
+01,Piemonte,005,Asti,SS23101,SS 231 -  di S. Vittoria,0,0,0,0,0,0,0,1,1,0,0,0,2,1,0,0,0,1,0,1,1,0,0,0,0,8
+01,Piemonte,005,Asti,SS45601,SS 456 -  del Turchino,0,0,0,0,0,0,0,2,2,0,0,0,0,0,0,2,2,2,4,0,0,0,0,1,0,15
+01,Piemonte,005,Asti,SS45634,SS 456 var1 -  Variante di Isola,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,3
+01,Piemonte,005,Asti,SS45636,SS 456 var2 -  Variante di San Nicolao,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+01,Piemonte,005,Asti,SS45701,SS 457 -  di Moncalvo,0,0,0,0,0,0,0,1,0,2,0,4,1,1,0,1,1,2,1,2,0,0,0,0,0,16
+01,Piemonte,005,Asti,SS45801,SS 458 -  di Casalborgone,0,0,0,0,0,0,0,0,0,2,0,1,1,0,1,0,1,1,0,1,0,0,0,0,0,8
+01,Piemonte,005,Asti,SS59001,SS 590 -  della Val Cerrina,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1
+01,Piemonte,005,Asti,SS59201,SS 592 -  di Canelli,0,0,0,0,0,1,0,2,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,5
+01,Piemonte,005,Asti,SS70601,SS 706 -  Tangenziale Est di Asti,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1
+01,Piemonte,006,Alessandria,AA00701,A 07 -  Milano-Genova,0,1,0,1,0,1,2,1,1,1,1,4,3,1,6,4,1,1,2,0,1,2,0,1,0,35
+01,Piemonte,006,Alessandria,AA02101,A 21 -  Torino-Piacenza-Brescia (Autostrada dei Vini),0,1,2,1,3,4,2,1,2,1,2,3,1,2,1,1,3,0,0,1,1,2,2,2,0,38
+01,Piemonte,006,Alessandria,AA02601,A 26 -  Genova Voltri-Gravellona Toce (Autostrada dei Trafori),0,1,0,1,0,0,1,3,5,2,4,6,3,4,7,3,4,3,1,3,2,0,0,1,0,54
+01,Piemonte,006,Alessandria,AA02607,A 26 / A 07 -  Diramazione Predosa-Bettole,0,0,0,1,0,0,0,1,0,0,0,0,0,0,2,0,2,1,0,0,0,0,1,1,0,9
+01,Piemonte,006,Alessandria,SS01001,SS 010 -  Padana Inferiore,0,0,2,0,1,1,0,4,6,1,2,3,3,4,4,6,8,4,9,3,2,1,0,0,0,64
+01,Piemonte,006,Alessandria,SS01034,SS 010 var -  Variante di Alessandria (Tangenziale),0,0,0,0,0,0,0,0,2,1,1,0,0,1,0,0,0,0,2,0,0,0,1,0,0,8
+01,Piemonte,006,Alessandria,SS03001,SS 030 -  di Val Bormida,1,1,2,0,0,1,0,4,1,0,4,2,1,1,3,2,1,1,2,2,0,0,0,1,0,30
+01,Piemonte,006,Alessandria,SS03101,SS 031 -  del Monferrato,0,1,0,0,0,0,1,2,2,1,1,0,1,0,1,0,2,1,1,0,0,1,0,0,0,15
+01,Piemonte,006,Alessandria,SS03102,SS 031 bis -  del Monferrato,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,3
+01,Piemonte,006,Alessandria,SS03501,SS 035 -  dei Giovi,0,2,0,0,0,0,0,2,2,3,1,6,0,2,3,1,1,2,4,0,0,0,0,0,0,29
+01,Piemonte,006,Alessandria,SS03502,SS 035 bis -  dei Giovi,1,0,0,0,0,0,1,1,1,0,2,4,7,1,0,4,1,5,3,3,0,0,1,0,0,35
+01,Piemonte,006,Alessandria,SS03503,SS 035 ter -  Novi Ligure-Serravalle Scrivia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1
+01,Piemonte,006,Alessandria,SS21101,SS 211 -  della Lomellina,2,0,0,0,0,1,0,2,0,0,1,0,0,0,2,0,2,1,0,0,0,1,1,1,0,14
+01,Piemonte,006,Alessandria,SS33401,SS 334 -  del Sassello,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,1,1,1,0,0,0,0,0,5
+01,Piemonte,006,Alessandria,SS45601,SS 456 -  del Turchino,0,0,0,0,0,0,0,2,1,1,0,1,1,0,1,2,4,0,3,1,1,1,1,0,0,20
+01,Piemonte,006,Alessandria,SS45701,SS 457 -  di Moncalvo,0,0,1,0,1,0,0,0,0,0,1,0,1,0,0,1,0,0,0,1,0,0,0,1,0,7
+01,Piemonte,006,Alessandria,SS45734,SS 457 var -  Variante di Casale Monferrato,0,0,0,0,0,0,0,1,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,4
+01,Piemonte,006,Alessandria,SS49401,SS 494 -  Vigevanese,0,0,0,0,0,1,0,4,2,2,0,0,3,0,0,3,2,1,3,0,1,0,1,0,0,23
+01,Piemonte,006,Alessandria,SS59001,SS 590 -  della Val Cerrina,0,0,0,0,0,0,0,0,0,2,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,4
+01,Piemonte,096,Biella,SS14201,SS 142 -  Biellese,0,0,0,0,0,0,0,1,1,0,2,0,2,2,0,0,3,2,0,0,0,1,0,0,0,14
+01,Piemonte,096,Biella,SS14250,SS 142/a -  Raccordo per Variante di Biella,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,0,0,0,0,3
+01,Piemonte,096,Biella,SS14301,SS 143 -  Vercellese,0,0,0,1,0,0,1,0,0,0,3,3,0,1,2,0,1,0,2,2,1,0,0,0,1,18
+01,Piemonte,096,Biella,SS14401,SS 144 -  di Oropa,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,2
+01,Piemonte,096,Biella,SS23001,SS 230 -  di Massazza,0,0,0,0,0,1,0,0,0,0,1,1,1,0,1,0,0,0,1,0,0,0,0,0,0,6
+01,Piemonte,096,Biella,SS23201,SS 232 -  Panoramica Zegna,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,4
+01,Piemonte,096,Biella,SS23234,SS 232 var -  Variante di Mottalciata,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+01,Piemonte,096,Biella,SS23236,SS 232 var/a -  Variante Cossato-Vallemosso,0,0,0,0,0,0,0,2,0,0,0,0,1,0,0,0,0,0,1,0,0,0,1,0,0,5
+01,Piemonte,096,Biella,SS33801,SS 338 -  di Mongrando,0,0,1,0,0,1,0,0,0,0,0,1,0,0,2,1,0,0,1,0,0,1,0,0,0,8
+01,Piemonte,096,Biella,SS33834,SS 338 var -  Variante Biella-Mongrando,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1
+01,Piemonte,096,Biella,SS41901,SS 419 -  della Serra,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1
+01,Piemonte,096,Biella,SS59301,SS 593 -  di Borgo d'Ale,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,2
+01,Piemonte,103,Verbano-Cusio-Ossola,AA02601,A 26 -  Genova Voltri-Gravellona Toce (Autostrada dei Trafori),0,0,0,1,0,0,0,0,1,2,1,0,0,1,0,0,0,1,0,0,0,0,0,0,0,7
+01,Piemonte,103,Verbano-Cusio-Ossola,SS03301,SS 033 -  del Sempione,1,1,0,0,0,0,0,0,2,5,3,3,2,2,4,2,4,2,0,2,0,0,2,1,0,36
+01,Piemonte,103,Verbano-Cusio-Ossola,SS03321,SS 033 racc -  del Sempione,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1
+01,Piemonte,103,Verbano-Cusio-Ossola,SS03401,SS 034 -  del Lago Maggiore,0,2,1,0,1,2,6,7,3,11,4,5,3,5,5,6,3,8,3,2,3,2,0,0,0,82
+01,Piemonte,103,Verbano-Cusio-Ossola,SS22901,SS 229 -  del Lago d'Orta,1,0,0,0,0,0,0,0,0,1,0,1,2,0,2,3,2,0,1,0,0,1,0,0,0,14
+01,Piemonte,103,Verbano-Cusio-Ossola,SS33701,SS 337 -  della Val Vigezzo,0,0,0,0,0,0,0,0,0,1,0,1,0,0,1,0,0,0,2,0,0,0,1,0,0,6
+01,Piemonte,103,Verbano-Cusio-Ossola,SS54901,SS 549 -  di Macugnaga,0,0,0,0,0,0,0,0,0,0,0,0,2,1,1,0,0,0,0,0,0,0,1,0,0,5
+01,Piemonte,103,Verbano-Cusio-Ossola,SS63101,SS 631 -  di Valle Cannobina,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,2
+01,Piemonte,103,Verbano-Cusio-Ossola,SS65901,SS 659 -  di Valle Antigorio e Val Formazza,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,5
+02,Valle d'Aosta,007,Aosta,AA00501,A 05 -  Torino-Aosta,0,0,0,0,0,0,2,0,1,0,2,1,1,1,1,1,3,1,0,1,0,0,0,1,0,16
+02,Valle d'Aosta,007,Aosta,RA05301,Raccordo A/5-SS 027 del Gran San Bernardo,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,2
+02,Valle d'Aosta,007,Aosta,SS02601,SS 026 -  della Valle d'Aosta,2,0,3,0,0,2,4,7,6,2,8,4,3,7,1,7,11,8,7,3,3,3,3,0,0,94
+02,Valle d'Aosta,007,Aosta,SS02605,SS 026 dir -  della Valle d'Aosta,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,2
+02,Valle d'Aosta,007,Aosta,SS02701,SS 027 -  del Gran San Bernardo,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,4
+02,Valle d'Aosta,007,Aosta,SS02734,SS 027 var -  Variante di Gignod,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,2
+02,Valle d'Aosta,007,Aosta,SS40601,SS 406 -  di Cervinia,1,0,0,0,0,0,0,0,0,0,0,1,0,2,0,0,1,0,0,0,0,0,0,0,0,5
+02,Valle d'Aosta,007,Aosta,SS50501,SS 505 -  della Valle del Lys,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,2
+02,Valle d'Aosta,007,Aosta,SS50601,SS 506 -  della Valle d'Ayas,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,2,0,0,1,0,0,0,0,5
+02,Valle d'Aosta,007,Aosta,SS50701,SS 507 -  di Cogne,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,2
+02,Valle d'Aosta,007,Aosta,TR00201,TR 02 -  Traforo del Gran San Bernardo,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1
+03,Lombardia,012,Varese,AA00801,A 08 -  Milano-Varese (Autostrada dei Laghi),1,2,1,2,2,4,3,8,11,5,3,1,5,6,3,5,2,6,4,4,4,2,5,1,0,90
+03,Lombardia,012,Varese,AA00826,A 08 / A 26 -  Diramazione Gallarate-Gattico,1,1,2,0,0,1,0,2,2,4,2,1,0,0,3,3,1,2,2,3,0,1,0,2,0,33
+03,Lombardia,012,Varese,AA00901,A 09 -  Lainate-Como-Chiasso (Autostrada dei Laghi),0,1,0,0,0,0,2,2,1,1,1,0,3,0,2,2,1,0,1,1,0,1,1,0,0,20
+03,Lombardia,012,Varese,AA03601,A 36 -  Pedemontana Lombarda,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1
+03,Lombardia,012,Varese,AA06001,A 60 -  Tangenziale di Varese,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,1,1,0,1,1,1,0,0,7
+03,Lombardia,012,Varese,SS03301,SS 033 -  del Sempione,1,1,1,0,1,1,1,1,3,2,4,2,2,1,4,0,1,1,1,4,3,1,0,0,0,36
+03,Lombardia,012,Varese,SS23301,SS 233 -  Varesina,1,1,1,1,0,2,3,2,3,5,5,6,2,6,6,5,6,10,8,5,2,2,3,1,1,87
+03,Lombardia,012,Varese,SS33601,SS 336 -  dell'Aeroporto della Malpensa,0,0,0,1,2,3,1,6,3,2,3,4,4,4,2,4,4,4,6,2,3,0,0,1,1,60
+03,Lombardia,012,Varese,SS33605,SS 336 dir -  Diramazione per l'Aeroporto della Malpensa,0,0,1,0,1,0,0,1,1,1,2,0,0,0,2,1,1,0,1,0,0,2,0,1,0,15
+03,Lombardia,012,Varese,SS34101,SS 341 -  Gallaratese,0,1,0,2,0,0,0,1,0,0,0,2,1,0,0,0,1,1,1,2,0,1,0,0,0,13
+03,Lombardia,012,Varese,SS34201,SS 342 -  Briantea,1,0,0,0,1,1,1,2,0,1,0,1,1,0,1,0,1,0,0,0,0,0,1,0,0,12
+03,Lombardia,012,Varese,SS34401,SS 344 -  di Porto Ceresio,0,0,0,0,0,0,0,1,1,0,0,4,0,2,1,0,3,0,0,1,0,1,0,0,0,14
+03,Lombardia,012,Varese,SS39401,SS 394 -  del Verbano Orientale,0,1,0,1,1,0,3,3,1,1,0,3,4,3,4,5,3,4,6,1,1,2,3,0,1,51
+03,Lombardia,012,Varese,SS39405,SS 394 dir -  del Verbano Orientale,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,2
+03,Lombardia,012,Varese,SS52701,SS 527 -  Bustese,1,1,1,0,1,1,0,1,1,1,1,0,0,1,1,2,2,0,2,1,0,1,0,1,0,20
+03,Lombardia,012,Varese,SS62901,SS 629 -  del Lago di Monate,1,0,0,0,0,0,0,1,0,1,0,1,2,0,0,2,0,1,1,2,0,0,2,0,0,14
+03,Lombardia,012,Varese,SS70701,SS 707 -  Raccordo Gazzada-Varese,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,2,0,1,0,0,6
+03,Lombardia,012,Varese,SS71201,SS 712 -  Tangenziale Est di Varese,0,0,0,0,0,0,0,2,1,1,0,0,2,0,1,0,1,3,3,1,1,1,1,2,0,20
+03,Lombardia,013,Como,AA00901,A 09 -  Lainate-Como-Chiasso (Autostrada dei Laghi),1,0,2,0,1,3,2,1,3,0,2,2,2,2,1,3,2,5,2,5,0,2,2,0,0,43
+03,Lombardia,013,Como,SS03501,SS 035 -  dei Giovi,1,2,2,0,0,1,2,0,5,4,2,4,1,4,1,5,5,8,3,3,3,0,2,1,0,59
+03,Lombardia,013,Como,SS03601,SS 036 -  del Lago di Como e dello Spluga,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,1,2,0,1,0,0,0,0,0,0,8
+03,Lombardia,013,Como,SS23301,SS 233 -  Varesina,0,2,0,0,0,0,0,1,0,2,2,1,1,2,1,0,1,2,3,0,2,2,0,0,0,22
+03,Lombardia,013,Como,SS34001,SS 340 -  Regina,2,1,2,0,1,2,3,3,4,4,1,2,8,6,5,9,7,9,6,1,1,1,1,4,0,83
+03,Lombardia,013,Como,SS34005,SS 340 dir -  Regina,0,1,1,3,0,2,1,1,3,0,1,1,2,1,6,2,2,2,4,1,0,1,3,0,0,38
+03,Lombardia,013,Como,SS34201,SS 342 -  Briantea,1,1,0,2,0,1,6,0,5,3,3,2,1,4,3,1,3,4,6,2,4,2,1,0,1,56
+03,Lombardia,013,Como,SS40201,SS 402 -  Valeriana,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1
+03,Lombardia,013,Como,SS58301,SS 583 -  Lariana,1,1,0,0,1,0,0,0,1,0,0,3,0,2,1,2,1,2,0,2,0,0,0,0,0,17
+03,Lombardia,013,Como,SS63901,SS 639 -  dei Laghi di Pusiano e di Garlate,0,0,1,0,0,1,4,1,0,0,0,0,0,1,1,1,1,2,0,0,0,1,0,0,0,14
+03,Lombardia,014,Sondrio,SS03601,SS 036 -  del Lago di Como e dello Spluga,2,0,0,0,0,1,0,2,2,1,4,3,3,1,6,4,0,3,3,2,0,0,0,0,0,37
+03,Lombardia,014,Sondrio,SS03701,SS 037 -  del Maloja,0,0,0,0,0,0,1,1,0,0,0,1,0,0,1,0,0,0,0,1,0,0,0,0,0,5
+03,Lombardia,014,Sondrio,SS03801,SS 038 -  dello Stelvio,0,0,0,0,3,0,3,7,11,9,7,13,6,10,11,19,15,17,14,4,4,6,1,0,0,160
+03,Lombardia,014,Sondrio,SS03901,SS 039 -  del Passo di Aprica,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,2
+03,Lombardia,014,Sondrio,SS30001,SS 300 -  del Passo di Gavia,0,0,1,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0,1,0,0,0,0,0,5
+03,Lombardia,014,Sondrio,SS30101,SS 301 -  del Foscagno,0,0,0,0,0,0,0,1,0,1,1,2,1,1,1,0,0,2,3,1,1,0,0,0,0,15
+03,Lombardia,014,Sondrio,SS40201,SS 402 -  Valeriana,1,0,1,0,0,0,0,2,0,1,1,0,0,0,0,1,0,1,0,0,0,0,0,0,0,8
+03,Lombardia,014,Sondrio,SS40401,SS 404 -  di Val Masino,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+03,Lombardia,014,Sondrio,SS40501,SS 405 -  di Val Gerola,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,2
+03,Lombardia,015,Milano,0,0,0,1,0,0,0,0,0,1,3,3,0,2,1,1,0,3,2,1,2,1,2,0,0,1,0,24
+03,Lombardia,015,Milano,AA00101,A 01 -  Milano-Roma-Napoli (Autostrada del Sole),1,0,0,0,1,2,4,4,5,6,9,3,1,3,2,3,2,3,11,4,1,0,1,2,0,68
+03,Lombardia,015,Milano,AA00106,Raccordo A 01-Tangenziale Est di Milano,0,1,1,0,0,2,0,0,1,0,0,0,0,2,0,0,1,0,1,1,0,0,0,1,0,11
+03,Lombardia,015,Milano,AA00401,A 04 -  Torino-Trieste,7,3,4,2,4,2,6,7,6,13,8,11,10,7,12,13,14,16,17,17,12,1,3,4,1,200
+03,Lombardia,015,Milano,AA00701,A 07 -  Milano-Genova,1,1,0,0,1,1,0,5,1,2,2,1,0,2,1,3,3,2,2,2,1,3,2,1,0,37
+03,Lombardia,015,Milano,AA00801,A 08 -  Milano-Varese (Autostrada dei Laghi),1,3,3,3,2,0,2,8,7,5,6,5,5,3,2,2,1,8,7,2,3,2,3,3,1,87
+03,Lombardia,015,Milano,AA03501,A 35 -  BreBeMi,0,0,0,0,0,0,1,0,1,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,4
+03,Lombardia,015,Milano,AA03534,A 35 var -  Variante di Liscate,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,3
+03,Lombardia,015,Milano,AA05001,A 50 -  Tangenziale Ovest Milano,7,1,1,1,3,5,2,17,13,12,11,6,6,3,8,8,17,13,17,10,10,5,2,1,0,179
+03,Lombardia,015,Milano,AA05101,A 51 -  Tangenziale Est Milano,5,1,1,2,2,5,4,3,13,12,7,4,6,4,1,2,3,11,10,10,9,7,0,0,0,122
+03,Lombardia,015,Milano,AA05201,A 52 -  Tangenziale Nord Milano,1,1,0,0,0,3,3,10,6,5,3,5,4,4,4,3,4,7,9,9,0,0,0,2,0,83
+03,Lombardia,015,Milano,AA05801,A 58 -  Tangenziale Est Esterna di Milano,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0,0,3,0,0,1,0,0,0,0,7
+03,Lombardia,015,Milano,RA03501,Raccordo A/1-Piazzale Corvetto,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,4,0,1,0,0,0,0,0,6
+03,Lombardia,015,Milano,RA03601,Raccordo Molino Dorino (SS 011-SS 033),0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,3
+03,Lombardia,015,Milano,SS00901,SS 009 -  via Emilia,0,1,0,0,0,0,1,5,2,1,5,1,2,4,3,3,3,1,7,4,6,2,1,1,0,53
+03,Lombardia,015,Milano,SS01101,SS 011 -  Padana Superiore ,0,1,3,1,1,4,3,13,9,7,5,7,2,5,9,7,10,13,11,4,4,8,1,1,0,129
+03,Lombardia,015,Milano,SS03301,SS 033 -  del Sempione,0,3,0,1,1,2,3,4,3,5,5,1,3,4,5,2,6,11,3,6,6,7,5,1,1,88
+03,Lombardia,015,Milano,SS03501,SS 035 -  dei Giovi,2,2,1,1,1,0,1,3,6,6,5,4,3,5,8,9,10,10,13,3,1,3,0,2,0,99
+03,Lombardia,015,Milano,SS03601,SS 036 -  del Lago di Como e dello Spluga,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0,1,1,1,0,0,0,0,0,0,6
+03,Lombardia,015,Milano,SS23301,SS 233 -  Varesina,0,0,0,1,0,0,3,1,0,1,0,0,0,0,1,0,1,0,3,1,2,0,1,0,0,15
+03,Lombardia,015,Milano,SS33605,SS 336 dir -  Diramazione per l'Aeroporto della Malpensa,1,1,1,0,0,0,0,1,0,0,0,0,0,1,0,2,4,1,1,0,0,1,0,0,0,14
+03,Lombardia,015,Milano,SS33606,SS 336 dir/a -  dell'Aeroporto della Malpensa,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,2
+03,Lombardia,015,Milano,SS34101,SS 341 -  Gallaratese,0,0,0,0,0,0,0,0,2,1,1,0,1,0,1,1,1,1,1,3,1,0,0,0,1,15
+03,Lombardia,015,Milano,SS41201,SS 412 -  della Val Tidone,0,0,0,1,1,1,0,3,5,3,1,1,1,0,1,1,2,4,1,1,1,0,0,0,0,28
+03,Lombardia,015,Milano,SS41501,SS 415 -  Paullese,0,0,1,0,1,0,0,3,3,4,1,1,1,2,3,2,4,3,3,2,1,0,0,0,1,36
+03,Lombardia,015,Milano,SS49401,SS 494 -  Vigevanese,1,2,0,0,2,1,3,8,3,6,7,9,6,4,9,11,6,16,7,3,2,2,3,2,0,113
+03,Lombardia,015,Milano,SS52501,SS 525 -  del Brembo,0,0,1,2,1,1,0,0,0,0,1,2,0,0,1,0,1,0,0,0,2,0,0,0,1,13
+03,Lombardia,015,Milano,SS52601,SS 526 -  dell'Esticino,0,0,0,1,0,2,1,0,1,0,3,1,2,2,4,0,0,0,1,3,2,0,0,0,0,23
+03,Lombardia,015,Milano,SS52701,SS 527 -  Bustese,1,0,0,0,0,0,0,1,1,2,2,0,5,5,2,1,1,2,5,0,2,0,1,0,0,31
+03,Lombardia,016,Bergamo,AA00401,A 04 -  Torino-Trieste,6,1,1,1,2,6,3,6,9,6,3,4,6,3,3,6,5,5,3,5,5,1,1,5,1,97
+03,Lombardia,016,Bergamo,AA03501,A 35 -  BreBeMi,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,3
+03,Lombardia,016,Bergamo,SS01101,SS 011 -  Padana Superiore ,0,0,0,0,1,0,1,0,1,1,1,1,1,2,1,4,1,2,0,3,0,0,1,0,0,21
+03,Lombardia,016,Bergamo,SS04201,SS 042 -  del Tonale e della Mendola,0,1,1,0,2,1,4,0,6,2,5,7,1,3,13,9,7,3,3,9,3,6,2,1,0,89
+03,Lombardia,016,Bergamo,SS29401,SS 294 -  della Val di Scalve,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,2,0,0,0,0,0,0,0,0,3
+03,Lombardia,016,Bergamo,SS34201,SS 342 -  Briantea,0,1,0,2,1,0,2,1,4,7,1,2,4,3,2,1,5,3,2,6,2,3,0,1,0,53
+03,Lombardia,016,Bergamo,SS46901,SS 469 -  Sebina Occidentale,1,0,0,1,0,0,0,0,0,1,1,1,2,1,0,2,2,4,0,0,0,0,1,1,0,18
+03,Lombardia,016,Bergamo,SS47001,SS 470 -  della Valle Brembana,2,0,0,1,0,0,6,2,3,2,2,6,2,6,6,4,6,5,5,2,4,3,1,0,0,68
+03,Lombardia,016,Bergamo,SS47005,SS 470 dir -  della Valle Brembana,1,0,2,0,2,0,2,2,3,0,2,1,1,2,1,1,4,1,1,2,0,0,0,0,1,29
+03,Lombardia,016,Bergamo,SS47201,SS 472 -  Bergamina,0,0,0,1,0,0,0,1,0,1,0,2,1,3,0,2,2,0,2,0,0,1,1,0,0,17
+03,Lombardia,016,Bergamo,SS49801,SS 498 -  Soncinese,2,0,1,0,0,0,0,3,0,3,2,2,1,3,2,1,3,1,2,0,0,0,1,0,0,27
+03,Lombardia,016,Bergamo,SS52501,SS 525 -  del Brembo,2,1,0,1,1,0,2,3,0,4,0,3,2,0,1,4,3,4,2,1,1,1,1,1,0,38
+03,Lombardia,016,Bergamo,SS57301,SS 573 -  L'Ogliese,0,0,0,0,0,0,0,2,0,0,0,0,1,0,1,0,0,0,0,0,0,1,1,0,0,6
+03,Lombardia,016,Bergamo,SS59101,SS 591 -  Cremasca,1,0,0,1,1,0,0,1,2,0,4,0,0,1,1,1,3,1,3,0,3,2,0,0,0,25
+03,Lombardia,016,Bergamo,SS59102,SS 591 bis -  Nuova Cremasca,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,2,0,0,1,0,0,0,0,6
+03,Lombardia,016,Bergamo,SS63901,SS 639 -  dei Laghi di Pusiano e di Garlate,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,3
+03,Lombardia,016,Bergamo,SS67101,SS 671 -  della Val Seriana,2,4,2,3,1,2,3,6,13,10,6,10,5,11,13,13,11,9,15,12,2,7,3,0,0,163
+03,Lombardia,017,Brescia,AA00401,A 04 -  Torino-Trieste,2,2,2,6,2,6,6,4,8,7,11,8,6,8,8,4,5,10,9,5,4,3,2,3,0,131
+03,Lombardia,017,Brescia,AA02101,A 21 -  Torino-Piacenza-Brescia (Autostrada dei Vini),0,0,2,3,1,2,1,3,4,1,3,4,1,2,7,3,2,1,1,4,1,2,0,0,0,48
+03,Lombardia,017,Brescia,AA03501,A 35 -  BreBeMi,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,1,0,0,0,0,0,5
+03,Lombardia,017,Brescia,AA03521,A 35 racc -  Raccordo BreBeMi,1,0,0,0,0,0,0,0,1,0,0,0,1,1,0,1,1,0,0,0,0,1,0,1,0,8
+03,Lombardia,017,Brescia,RA02901,Raccordo Esterno di Brescia Est (Collegamento SS 011-SS 236),1,0,0,0,0,1,0,2,0,0,1,0,0,1,1,2,0,0,1,0,0,0,1,0,0,11
+03,Lombardia,017,Brescia,RA06801,Raccordo Ospitaletto-Montichiari,1,0,0,0,0,1,0,1,1,0,2,1,0,0,2,2,0,0,1,0,0,1,0,0,0,13
+03,Lombardia,017,Brescia,SS01101,SS 011 -  Padana Superiore ,3,1,0,0,5,1,0,1,1,1,3,2,4,5,3,4,4,10,3,1,1,0,1,1,0,55
+03,Lombardia,017,Brescia,SS03901,SS 039 -  del Passo di Aprica,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,1,1,0,0,0,0,1,0,0,6
+03,Lombardia,017,Brescia,SS04201,SS 042 -  del Tonale e della Mendola,0,1,1,0,0,1,0,2,2,3,0,5,3,1,3,5,6,4,4,2,0,0,1,1,0,45
+03,Lombardia,017,Brescia,SS04502,SS 045 bis -  Gardesana Occidentale,1,2,0,1,0,3,2,6,8,7,10,10,8,4,11,9,11,9,13,4,1,4,1,4,0,129
+03,Lombardia,017,Brescia,SS04503,SS 045 ter -  Gardesana Occidentale,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+03,Lombardia,017,Brescia,SS23501,SS 235 -  di Orzinuovi,0,1,1,0,0,0,1,0,0,0,1,1,1,1,0,1,2,3,4,4,0,0,0,1,0,22
+03,Lombardia,017,Brescia,SS23601,SS 236 -  Goitese,1,0,0,0,0,0,1,0,0,0,1,0,0,0,0,1,2,0,3,0,0,0,1,1,0,11
+03,Lombardia,017,Brescia,SS23701,SS 237 -  del Caffaro,1,1,0,1,0,0,0,0,2,0,3,2,3,1,6,7,4,2,2,0,0,0,2,0,0,37
+03,Lombardia,017,Brescia,SS29401,SS 294 -  della Val di Scalve,0,0,0,0,0,0,0,0,1,1,0,1,0,1,0,0,0,0,1,0,0,0,0,0,0,5
+03,Lombardia,017,Brescia,SS30001,SS 300 -  del Passo di Gavia,0,0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,3
+03,Lombardia,017,Brescia,SS34301,SS 343 -  Asolana,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1
+03,Lombardia,017,Brescia,SS34501,SS 345 -  delle Tre Valli,2,0,0,0,1,2,3,2,4,7,4,10,6,5,1,6,9,7,4,4,2,4,3,0,0,86
+03,Lombardia,017,Brescia,SS46901,SS 469 -  Sebina Occidentale,0,1,0,0,0,0,1,2,0,0,1,2,2,0,2,0,2,0,1,3,1,0,0,0,0,18
+03,Lombardia,017,Brescia,SS46934,SS 469 var -  Variante Palazzolo sull'Oglio-Capriolo,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1
+03,Lombardia,017,Brescia,SS51001,SS 510 -  Sebina Orientale,0,2,0,0,1,0,4,6,3,1,3,2,4,2,2,3,4,3,4,1,1,0,2,1,0,49
+03,Lombardia,017,Brescia,SS51002,SS 510 bis -  Sebina Orientale,0,0,0,0,0,0,0,0,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3
+03,Lombardia,017,Brescia,SS56701,SS 567 -  del Benaco,0,1,0,0,0,0,0,0,1,0,1,0,0,0,0,1,0,1,1,0,0,0,0,1,0,7
+03,Lombardia,017,Brescia,SS57201,SS 572 -  di Salò,0,0,1,2,0,0,0,0,0,4,4,4,3,2,5,4,3,1,3,0,3,1,1,1,0,42
+03,Lombardia,017,Brescia,SS57301,SS 573 -  L'Ogliese,0,0,0,0,0,1,0,3,1,1,1,4,1,0,1,3,0,0,0,3,0,0,0,0,0,19
+03,Lombardia,017,Brescia,SS66801,SS 668 -  Lenese,0,0,0,2,0,0,0,0,2,1,0,1,0,1,3,2,1,2,1,0,2,2,0,1,0,21
+03,Lombardia,017,Brescia,SS66901,SS 669 -  del Passo Crocedomini,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,1,0,0,0,0,0,0,0,0,0,3
+03,Lombardia,017,Brescia,TA00701,Tangenziale Sud di Brescia,3,2,0,4,1,3,2,2,6,3,2,3,2,5,1,3,4,7,10,3,1,2,1,1,1,72
+03,Lombardia,018,Pavia,AA00701,A 07 -  Milano-Genova,0,0,0,0,1,0,1,0,3,4,2,1,2,1,3,3,1,2,2,0,1,0,0,0,0,27
+03,Lombardia,018,Pavia,AA02101,A 21 -  Torino-Piacenza-Brescia (Autostrada dei Vini),2,2,0,0,3,1,1,1,1,4,1,0,3,5,3,0,0,2,1,3,2,2,0,1,0,38
+03,Lombardia,018,Pavia,RA00701,Raccordo Autostradale Pavia-Autostrada A/7 (Bereguardo-Pavia),0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,1,0,1,0,0,0,0,0,4
+03,Lombardia,018,Pavia,SS01001,SS 010 -  Padana Inferiore,0,0,0,0,0,0,2,1,1,1,0,2,3,4,3,2,5,1,5,0,0,0,2,1,0,33
+03,Lombardia,018,Pavia,SS03501,SS 035 -  dei Giovi,0,0,1,0,0,0,1,2,4,2,2,1,1,0,1,4,4,2,3,1,0,1,1,0,0,31
+03,Lombardia,018,Pavia,SS21101,SS 211 -  della Lomellina,0,0,0,0,0,2,0,0,0,0,0,0,2,0,1,2,0,0,0,0,0,0,0,0,0,7
+03,Lombardia,018,Pavia,SS23401,SS 234 -  Codognese,1,0,1,0,0,0,2,0,0,0,1,0,1,0,5,0,0,2,0,0,1,0,1,2,0,17
+03,Lombardia,018,Pavia,SS23501,SS 235 -  di Orzinuovi,1,0,0,0,1,1,0,0,4,1,2,1,1,2,4,0,3,2,1,0,0,1,0,0,0,25
+03,Lombardia,018,Pavia,SS41201,SS 412 -  della Val Tidone,0,0,0,0,0,1,2,1,0,1,1,0,1,0,2,1,2,3,1,2,0,0,0,0,0,18
+03,Lombardia,018,Pavia,SS46101,SS 461 -  del Passo del Penice,0,2,1,0,0,0,1,1,1,1,1,1,0,0,2,1,1,1,0,4,0,0,0,0,0,18
+03,Lombardia,018,Pavia,SS49401,SS 494 -  Vigevanese,2,0,0,0,0,0,0,0,2,1,0,0,1,1,3,1,1,3,3,2,3,0,0,1,0,24
+03,Lombardia,018,Pavia,SS52601,SS 526 -  dell'Esticino,1,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,6
+03,Lombardia,018,Pavia,SS59601,SS 596 -  dei Cairoli,1,0,0,0,0,0,1,0,0,1,0,1,1,3,2,1,2,0,1,1,0,0,0,0,0,15
+03,Lombardia,018,Pavia,SS59605,SS 596 dir -  dei Cairoli,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1
+03,Lombardia,018,Pavia,SS61701,SS 617 -  Bronese,0,1,1,0,0,0,0,1,1,0,1,1,0,0,0,1,0,3,0,1,0,0,0,0,0,11
+03,Lombardia,018,Pavia,TA00401,Tangenziale Pavia,0,0,0,0,0,0,0,2,2,0,1,1,1,3,1,1,1,0,0,0,2,2,1,0,0,18
+03,Lombardia,019,Cremona,AA02101,A 21 -  Torino-Piacenza-Brescia (Autostrada dei Vini),0,0,2,1,1,1,2,1,1,1,0,1,1,2,1,2,1,0,0,0,1,1,0,0,0,20
+03,Lombardia,019,Cremona,SS01001,SS 010 -  Padana Inferiore,0,0,1,0,1,0,1,1,1,4,2,2,1,2,0,7,1,1,3,1,0,0,0,0,0,29
+03,Lombardia,019,Cremona,SS04502,SS 045 bis -  Gardesana Occidentale,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,1,0,1,1,0,2,0,7
+03,Lombardia,019,Cremona,SS23401,SS 234 -  Codognese,0,0,0,0,0,0,0,0,1,1,0,0,3,1,0,0,0,1,1,1,0,1,0,1,0,11
+03,Lombardia,019,Cremona,SS23501,SS 235 -  di Orzinuovi,0,1,1,0,0,1,0,1,2,0,1,1,1,0,2,2,1,1,2,1,1,1,0,0,0,20
+03,Lombardia,019,Cremona,SS34301,SS 343 -  Asolana,0,0,0,0,0,1,0,0,0,0,0,2,2,2,0,1,0,1,0,0,0,1,0,0,0,10
+03,Lombardia,019,Cremona,SS35801,SS 358 -  di Castelnovo,0,0,0,0,0,1,0,1,1,1,0,2,1,2,1,0,1,1,1,0,0,0,0,0,0,13
+03,Lombardia,019,Cremona,SS41501,SS 415 -  Paullese,1,1,1,0,1,4,1,4,4,3,4,2,3,4,2,4,0,5,2,2,6,2,2,0,0,58
+03,Lombardia,019,Cremona,SS42001,SS 420 -  Sabbionetana,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+03,Lombardia,019,Cremona,SS47201,SS 472 -  Bergamina,0,0,1,0,2,0,1,0,1,2,4,1,1,1,1,4,1,3,0,0,0,0,0,0,0,23
+03,Lombardia,019,Cremona,SS49801,SS 498 -  Soncinese,1,0,0,0,0,1,0,2,1,1,1,3,1,1,1,0,1,4,0,3,1,0,1,0,0,23
+03,Lombardia,019,Cremona,SS59101,SS 591 -  Cremasca,0,0,0,0,0,0,1,1,2,0,0,2,1,2,4,2,3,2,0,0,0,0,1,0,0,21
+03,Lombardia,020,Mantova,AA02201,A 22 -  Brennero-Modena (Autostrada del Brennero),2,1,1,1,1,2,0,1,3,0,0,3,4,1,4,3,1,1,3,1,1,2,1,0,0,37
+03,Lombardia,020,Mantova,SS01001,SS 010 -  Padana Inferiore,0,0,0,0,0,2,1,3,1,2,1,5,3,2,3,7,0,0,1,1,0,0,0,2,0,34
+03,Lombardia,020,Mantova,SS01201,SS 012 -  dell'Abetone e del Brennero,0,0,0,0,0,0,0,1,0,1,0,0,1,3,1,3,1,0,2,3,0,0,0,0,0,16
+03,Lombardia,020,Mantova,SS06201,SS 062 -  della Cisa,1,0,1,0,0,1,0,0,1,1,2,5,1,1,1,3,0,4,3,0,0,0,1,0,0,26
+03,Lombardia,020,Mantova,SS23601,SS 236 -  Goitese,0,0,1,0,2,0,0,2,3,4,1,3,3,1,4,0,2,6,1,1,1,1,0,1,0,37
+03,Lombardia,020,Mantova,SS23602,SS 236 bis -  Goitese (Tangenziale Nord di Mantova),0,0,0,0,0,0,0,1,0,0,2,1,0,0,0,0,0,2,1,1,0,0,0,0,0,8
+03,Lombardia,020,Mantova,SS24901,SS 249 -  Gardesana Orientale,1,1,0,1,1,0,0,1,1,0,0,0,0,0,0,1,0,0,1,1,1,0,0,0,0,10
+03,Lombardia,020,Mantova,SS34301,SS 343 -  Asolana,0,2,0,0,0,0,0,0,1,0,1,0,2,1,0,1,1,0,1,0,0,0,0,0,0,10
+03,Lombardia,020,Mantova,SS35801,SS 358 -  di Castelnovo,0,0,0,0,1,0,0,0,1,0,0,1,3,1,2,0,0,1,4,0,0,1,0,0,0,15
+03,Lombardia,020,Mantova,SS41301,SS 413 -  Romana,0,0,0,0,0,0,0,2,4,1,2,2,5,3,0,1,0,3,0,2,0,0,2,0,0,27
+03,Lombardia,020,Mantova,SS42001,SS 420 -  Sabbionetana,0,0,0,0,0,0,0,2,1,1,2,0,2,0,3,1,0,1,1,1,0,0,0,0,0,15
+03,Lombardia,020,Mantova,SS48201,SS 482 -  Alto Polesana,1,0,0,0,0,1,0,2,1,2,3,2,1,1,2,1,4,4,2,1,0,1,2,0,0,31
+03,Lombardia,020,Mantova,SS49601,SS 496 -  Virgiliana,1,0,1,0,0,1,1,0,1,1,1,1,1,0,0,1,1,2,1,0,0,0,0,0,0,14
+03,Lombardia,097,Lecco,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+03,Lombardia,097,Lecco,SS03601,SS 036 -  del Lago di Como e dello Spluga,4,3,0,1,1,1,1,3,6,5,6,6,5,7,8,10,7,13,8,9,3,4,3,1,0,115
+03,Lombardia,097,Lecco,SS03621,SS 036 racc -  Raccordo Lecco-Valsassina,0,0,1,1,0,0,0,1,0,0,1,1,0,0,2,0,0,2,0,0,2,1,1,0,0,13
+03,Lombardia,097,Lecco,SS34201,SS 342 -  Briantea,1,0,0,0,0,2,0,1,1,1,0,0,3,1,3,1,1,7,1,1,1,0,1,0,0,26
+03,Lombardia,097,Lecco,SS34205,SS 342 dir -  Briantea,0,0,0,0,0,0,0,0,2,1,3,1,0,1,1,0,0,1,1,2,0,1,0,0,0,14
+03,Lombardia,097,Lecco,SS58301,SS 583 -  Lariana,0,0,0,0,0,0,0,1,0,0,0,1,4,0,2,1,2,0,0,1,0,0,0,0,0,12
+03,Lombardia,097,Lecco,SS63901,SS 639 -  dei Laghi di Pusiano e di Garlate,0,1,0,0,0,0,1,0,2,0,2,4,1,0,2,1,1,3,3,2,3,0,0,0,0,26
+03,Lombardia,098,Lodi,AA00101,A 01 -  Milano-Roma-Napoli (Autostrada del Sole),2,2,2,2,2,6,1,4,3,4,3,1,1,5,8,5,2,2,5,5,1,2,1,3,0,72
+03,Lombardia,098,Lodi,AA03534,A 35 var -  Variante di Liscate,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+03,Lombardia,098,Lodi,AA05801,A 58 -  Tangenziale Est Esterna di Milano,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,2
+03,Lombardia,098,Lodi,SS00901,SS 009 -  via Emilia,2,2,1,2,3,2,3,5,3,8,5,3,3,5,6,4,8,9,7,0,7,4,2,0,0,94
+03,Lombardia,098,Lodi,SS00905,SS 009 dir -  Tangenziale Est di Lodi,2,0,0,1,0,0,0,0,2,1,0,1,0,0,0,1,2,0,0,0,0,0,1,0,0,11
+03,Lombardia,098,Lodi,SS23401,SS 234 -  Codognese,1,1,2,0,0,1,0,3,0,0,1,2,1,1,1,1,1,5,3,1,0,0,0,0,0,25
+03,Lombardia,098,Lodi,SS23501,SS 235 -  di Orzinuovi,0,0,0,0,0,1,0,1,1,1,1,0,1,3,3,1,1,5,2,2,0,0,0,0,0,23
+03,Lombardia,098,Lodi,SS41201,SS 412 -  della Val Tidone,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1
+03,Lombardia,098,Lodi,SS41501,SS 415 -  Paullese,0,0,0,0,1,0,0,0,0,2,1,1,1,0,3,2,1,1,3,1,0,0,0,0,0,17
+03,Lombardia,098,Lodi,SS47201,SS 472 -  Bergamina,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,2
+03,Lombardia,098,Lodi,SS59101,SS 591 -  Cremasca,0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,3
+03,Lombardia,108,Monza e della Brianza,AA00401,A 04 -  Torino-Trieste,1,0,1,2,2,2,2,5,3,2,2,0,1,2,5,3,4,6,3,2,8,1,1,1,0,59
+03,Lombardia,108,Monza e della Brianza,AA03601,A 36 -  Pedemontana Lombarda,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1
+03,Lombardia,108,Monza e della Brianza,AA05101,A 51 -  Tangenziale Est Milano,1,0,0,2,1,2,0,1,5,2,0,0,2,5,1,1,2,2,5,4,0,2,2,1,0,41
+03,Lombardia,108,Monza e della Brianza,AA05201,A 52 -  Tangenziale Nord Milano,0,0,0,1,0,0,0,2,2,1,1,0,1,0,1,0,0,0,4,1,1,0,2,1,0,18
+03,Lombardia,108,Monza e della Brianza,AA05801,A 58 -  Tangenziale Est Esterna di Milano,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,2
+03,Lombardia,108,Monza e della Brianza,SS03501,SS 035 -  dei Giovi,1,1,1,0,1,2,4,4,5,7,4,3,2,2,2,1,2,6,4,3,1,2,2,1,1,62
+03,Lombardia,108,Monza e della Brianza,SS03601,SS 036 -  del Lago di Como e dello Spluga,5,2,2,8,4,3,4,14,15,0,10,5,11,5,7,8,7,11,12,4,5,2,4,2,1,151
+03,Lombardia,108,Monza e della Brianza,SS34205,SS 342 dir -  Briantea,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,1,0,1,0,0,0,0,0,0,5
+03,Lombardia,108,Monza e della Brianza,SS52701,SS 527 -  Bustese,1,0,0,0,0,1,0,2,2,0,3,0,3,3,4,3,2,4,4,2,1,1,0,1,0,37
+04,Trentino-Alto Adige,021,Bolzano,AA02201,A 22 -  Brennero-Modena (Autostrada del Brennero),1,0,0,1,2,0,2,4,5,7,9,7,2,6,4,4,4,1,4,3,2,1,0,0,0,69
+04,Trentino-Alto Adige,021,Bolzano,SS01201,SS 012 -  dell'Abetone e del Brennero,0,1,1,1,0,1,3,3,8,4,5,9,9,5,7,6,9,7,4,4,2,2,1,1,0,93
+04,Trentino-Alto Adige,021,Bolzano,SS03801,SS 038 -  dello Stelvio,1,0,0,0,1,1,1,3,2,4,6,4,8,5,7,5,8,6,9,4,0,1,2,0,1,79
+04,Trentino-Alto Adige,021,Bolzano,SS04001,SS 040 -  del Passo di Resia,0,0,1,0,1,0,0,0,1,1,1,2,0,4,0,1,3,1,1,0,0,1,0,1,0,19
+04,Trentino-Alto Adige,021,Bolzano,SS04101,SS 041 -  di Val Monastero,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1
+04,Trentino-Alto Adige,021,Bolzano,SS04201,SS 042 -  del Tonale e della Mendola,0,0,0,0,0,0,2,2,1,2,2,1,2,4,1,1,3,1,3,0,0,0,2,0,0,27
+04,Trentino-Alto Adige,021,Bolzano,SS04401,SS 044 -  del Passo di Giovo,0,0,0,2,0,1,3,0,1,3,2,1,3,3,4,0,3,2,2,0,1,0,0,0,0,31
+04,Trentino-Alto Adige,021,Bolzano,SS04402,SS 044 bis -  Passo del Rombo,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,3,0,1,0,0,0,0,0,0,0,5
+04,Trentino-Alto Adige,021,Bolzano,SS04801,SS 048 -  delle Dolomiti,0,0,0,0,0,0,0,0,1,0,2,2,0,1,1,0,0,2,1,0,0,0,0,0,0,10
+04,Trentino-Alto Adige,021,Bolzano,SS04901,SS 049 -  della Pusteria,0,1,0,0,0,1,2,5,5,4,7,4,3,5,11,3,4,11,6,3,0,1,0,1,1,78
+04,Trentino-Alto Adige,021,Bolzano,SS04902,SS 049 bis -  della Pusteria,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+04,Trentino-Alto Adige,021,Bolzano,SS05101,SS 051 -  di Alemagna,0,0,0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,3
+04,Trentino-Alto Adige,021,Bolzano,SS05201,SS 052 -  Carnica,0,0,0,0,0,0,0,0,0,0,2,0,0,1,1,0,0,1,1,0,0,0,0,0,0,6
+04,Trentino-Alto Adige,021,Bolzano,SS23801,SS 238 -  delle Palade,0,0,0,0,1,0,1,1,0,0,1,0,0,2,3,0,0,3,3,0,0,1,0,0,0,16
+04,Trentino-Alto Adige,021,Bolzano,SS24101,SS 241 -  di Val d'Ega e Passo di Costalunga,0,1,0,0,0,0,0,0,0,0,0,0,0,0,3,1,1,0,1,0,0,0,0,0,0,7
+04,Trentino-Alto Adige,021,Bolzano,SS24201,SS 242 -  di Val Gardena e Passo Sella,0,0,0,0,1,0,1,2,0,1,0,3,3,0,0,2,1,0,1,1,2,1,1,2,0,22
+04,Trentino-Alto Adige,021,Bolzano,SS24205,SS 242 dir -  di Val Gardena e Passo Sella,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,1,0,0,0,0,0,0,0,0,0,3
+04,Trentino-Alto Adige,021,Bolzano,SS24301,SS 243 -  del Passo Gardena,0,0,0,0,0,0,0,0,0,1,0,1,1,1,0,0,2,0,1,0,0,0,0,0,0,7
+04,Trentino-Alto Adige,021,Bolzano,SS24401,SS 244 -  di Val Badia,0,0,0,0,0,0,1,2,1,0,2,1,2,0,1,0,0,1,1,0,0,0,0,0,0,12
+04,Trentino-Alto Adige,021,Bolzano,SS50801,SS 508 -  di Val Sarentino e del Passo di Vizze,0,0,0,0,0,0,1,1,0,1,2,2,2,1,2,0,4,1,0,0,0,0,0,0,0,17
+04,Trentino-Alto Adige,021,Bolzano,SS62001,SS 620 -  del Passo di Lavazè,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,2
+04,Trentino-Alto Adige,021,Bolzano,SS62101,SS 621 -  della Valle Aurina,0,0,1,0,0,1,0,1,2,0,3,0,0,0,0,1,1,2,3,0,1,1,1,0,0,18
+04,Trentino-Alto Adige,022,Trento,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1
+04,Trentino-Alto Adige,022,Trento,AA02201,A 22 -  Brennero-Modena (Autostrada del Brennero),1,1,0,0,0,0,2,1,2,8,2,3,5,5,0,10,5,2,1,2,0,2,2,1,0,55
+04,Trentino-Alto Adige,022,Trento,SS01201,SS 012 -  dell'Abetone e del Brennero,4,1,1,1,0,0,1,3,7,4,8,6,6,9,4,8,9,15,6,6,5,7,2,1,0,114
+04,Trentino-Alto Adige,022,Trento,SS04201,SS 042 -  del Tonale e della Mendola,1,0,0,0,0,0,0,1,0,0,1,3,3,2,0,0,4,2,2,0,0,1,1,0,0,21
+04,Trentino-Alto Adige,022,Trento,SS04301,SS 043 -  della Val di Non,0,0,0,0,0,0,1,6,2,1,3,6,4,3,3,2,1,5,1,1,1,1,1,0,0,42
+04,Trentino-Alto Adige,022,Trento,SS04305,SS 043 dir -  della Val di Non,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,1,0,2,0,0,0,1,0,0,0,7
+04,Trentino-Alto Adige,022,Trento,SS04502,SS 045 bis -  Gardesana Occidentale,1,1,0,0,1,1,0,2,2,6,9,3,2,5,4,8,4,9,3,6,3,1,2,0,0,73
+04,Trentino-Alto Adige,022,Trento,SS04601,SS 046 -  del Pasubio,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,1,1,0,0,0,0,0,0,0,4
+04,Trentino-Alto Adige,022,Trento,SS04701,SS 047 -  della Valsugana,2,1,1,0,2,2,4,2,6,1,2,0,6,2,2,5,1,3,0,3,2,0,0,2,0,49
+04,Trentino-Alto Adige,022,Trento,SS04801,SS 048 -  delle Dolomiti,0,0,0,2,0,0,0,1,4,4,1,3,3,4,4,3,3,4,4,1,1,1,1,1,0,45
+04,Trentino-Alto Adige,022,Trento,SS04834,SS 048 var -  Variante di Predazzo,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1
+04,Trentino-Alto Adige,022,Trento,SS05001,SS 050 -  del Grappa e del Passo Rolle,0,0,0,0,0,0,0,0,0,2,1,1,1,2,2,2,1,1,0,0,0,0,0,0,0,13
+04,Trentino-Alto Adige,022,Trento,SS23701,SS 237 -  del Caffaro,0,0,0,0,1,0,1,0,2,1,2,0,1,4,1,3,4,3,1,1,0,3,2,0,0,30
+04,Trentino-Alto Adige,022,Trento,SS23705,SS 237 dir -  Diramazione Ca' Rossa,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1
+04,Trentino-Alto Adige,022,Trento,SS23801,SS 238 -  delle Palade,0,0,0,0,0,0,0,0,0,0,1,1,0,0,2,0,2,0,0,1,0,0,0,0,0,7
+04,Trentino-Alto Adige,022,Trento,SS23821,SS 238 racc -  delle Palade,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1
+04,Trentino-Alto Adige,022,Trento,SS23901,SS 239 -  di Campiglio,1,0,0,0,0,1,1,2,3,1,1,4,2,1,2,4,1,2,1,0,0,0,0,1,3,31
+04,Trentino-Alto Adige,022,Trento,SS24001,SS 240 -  di Loppio e di Val di Ledro,1,0,0,0,0,1,1,3,3,2,9,11,10,6,4,8,8,8,8,1,2,1,0,0,0,87
+04,Trentino-Alto Adige,022,Trento,SS24005,SS 240 dir -  di Loppio e di Val di Ledro,0,1,0,0,0,0,0,0,0,0,2,0,0,2,0,0,1,0,2,0,0,0,0,0,0,8
+04,Trentino-Alto Adige,022,Trento,SS24101,SS 241 -  di Val d'Ega e Passo di Costalunga,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,2,2,0,0,0,0,0,0,0,0,5
+04,Trentino-Alto Adige,022,Trento,SS24901,SS 249 -  Gardesana Orientale,1,0,0,1,0,0,0,0,0,0,0,1,2,1,2,0,1,0,0,0,0,0,0,0,0,9
+04,Trentino-Alto Adige,022,Trento,SS34601,SS 346 -  del Passo di San Pellegrino,0,0,0,0,0,0,0,1,1,0,0,0,1,2,0,0,0,0,0,0,0,0,0,0,0,5
+04,Trentino-Alto Adige,022,Trento,SS34701,SS 347 -  del Passo Cereda e del Passo Duran,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1
+04,Trentino-Alto Adige,022,Trento,SS34901,SS 349 -  di Val d'Assa e Pedemontana Costo,0,0,0,0,0,1,0,1,0,0,0,1,1,1,1,1,0,0,1,0,1,0,0,0,0,9
+04,Trentino-Alto Adige,022,Trento,SS34905,SS 349 dir -  di Val d'Assa e Pedemontana Costo,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1
+04,Trentino-Alto Adige,022,Trento,SS35001,SS 350 -  di Folgaria e di Val d'Astico,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,2,0,1,0,0,0,0,0,0,0,6
+04,Trentino-Alto Adige,022,Trento,SS42101,SS 421 -  dei Laghi di Molveno e Tenno,1,0,0,0,0,1,1,0,1,1,1,1,1,1,2,2,1,0,1,0,0,1,0,0,1,17
+04,Trentino-Alto Adige,022,Trento,SS61201,SS 612 -  della Val di Cembra,0,0,0,0,0,0,0,0,0,0,0,1,0,2,0,0,0,1,0,0,0,0,0,0,0,4
+04,Trentino-Alto Adige,022,Trento,SS62001,SS 620 -  del Passo di Lavazè,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,2
+04,Trentino-Alto Adige,022,Trento,SS64101,SS 641 -  del Passo Fedaia,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,2
+05,Veneto,023,Verona,AA00401,A 04 -  Torino-Trieste,4,4,0,2,1,0,6,8,3,7,6,2,5,5,1,6,6,6,6,5,1,1,2,4,0,91
+05,Veneto,023,Verona,AA02201,A 22 -  Brennero-Modena (Autostrada del Brennero),0,0,1,2,0,0,3,3,2,1,3,7,7,3,4,4,2,2,0,1,2,0,0,0,0,47
+05,Veneto,023,Verona,SS01001,SS 010 -  Padana Inferiore,0,2,1,0,1,1,0,2,1,2,3,1,4,3,3,4,5,6,9,4,0,1,0,1,0,54
+05,Veneto,023,Verona,SS01101,SS 011 -  Padana Superiore ,1,1,0,0,0,1,1,5,3,9,7,8,12,10,5,7,9,12,10,5,4,4,0,0,0,114
+05,Veneto,023,Verona,SS01105,SS 011 dir -  Peschiera-Affi (tratto Peschiera del Garda-ex SS 450),0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+05,Veneto,023,Verona,SS01201,SS 012 -  dell'Abetone e del Brennero,2,0,0,1,0,1,0,2,6,6,5,3,4,4,4,4,7,2,4,3,4,0,2,2,0,66
+05,Veneto,023,Verona,SS01234,SS 012 var -  Variante di Isola della Scala,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,2
+05,Veneto,023,Verona,SS06201,SS 062 -  della Cisa,0,1,0,0,0,0,1,0,2,0,1,0,2,5,2,3,1,3,4,1,3,2,0,1,0,32
+05,Veneto,023,Verona,SS24901,SS 249 -  Gardesana Orientale,0,1,1,0,0,1,0,6,5,6,11,7,9,5,9,9,7,5,11,5,3,3,2,1,0,107
+05,Veneto,023,Verona,SS43401,SS 434 -  Transpolesana,1,1,0,0,2,0,3,1,2,2,2,3,3,1,2,1,2,0,2,2,2,1,1,1,0,35
+05,Veneto,023,Verona,SS45001,SS 450 -  di Affi,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,1,0,2,0,1,0,1,7
+05,Veneto,023,Verona,SS50001,SS 500 -  di Lonigo,0,0,0,0,0,0,0,3,1,1,0,0,0,1,1,0,0,0,0,0,1,0,0,0,0,8
+05,Veneto,023,Verona,TA00501,Tangenziale Est di Verona,0,0,0,0,1,0,1,0,1,0,0,0,0,0,1,0,1,1,1,1,0,1,0,0,0,9
+05,Veneto,023,Verona,TA00601,Tangenziale Sud di Verona,1,0,0,0,0,0,0,5,3,2,0,0,3,3,1,0,2,1,1,0,0,1,0,0,0,23
+05,Veneto,024,Vicenza,AA00401,A 04 -  Torino-Trieste,1,1,1,0,1,3,2,2,4,6,3,2,2,5,3,1,3,4,1,0,2,2,2,1,0,52
+05,Veneto,024,Vicenza,AA03101,A 31 -  Rovigo-Piovene Rocchette (Autostrada della Valdastico),1,0,0,0,0,0,1,1,1,1,2,0,0,0,0,0,0,1,0,1,1,1,0,0,0,11
+05,Veneto,024,Vicenza,SS01101,SS 011 -  Padana Superiore ,2,2,0,0,0,2,1,2,2,1,6,4,4,5,5,5,1,7,3,6,4,3,1,0,0,66
+05,Veneto,024,Vicenza,SS04601,SS 046 -  del Pasubio,1,1,0,1,0,2,3,1,2,5,2,3,0,1,3,1,3,3,3,3,1,0,1,2,0,42
+05,Veneto,024,Vicenza,SS04701,SS 047 -  della Valsugana,0,0,0,0,0,2,5,2,4,3,4,8,0,3,4,3,3,4,6,1,5,0,4,2,0,63
+05,Veneto,024,Vicenza,SS05301,SS 053 -  Postumia,0,0,0,0,0,0,0,1,1,1,0,0,0,0,1,1,0,2,1,0,0,0,0,0,0,8
+05,Veneto,024,Vicenza,SS14101,SS 141 -  Strada Cadorna,0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,4
+05,Veneto,024,Vicenza,SS24501,SS 245 -  Castellana,0,0,0,0,0,1,1,1,0,0,0,0,0,0,2,0,1,1,2,0,1,0,0,1,0,11
+05,Veneto,024,Vicenza,SS24601,SS 246 -  di Recoaro,1,0,0,3,0,3,1,1,2,3,6,2,1,2,4,1,1,4,2,2,5,0,4,0,0,48
+05,Veneto,024,Vicenza,SS24701,SS 247 -  Riviera,1,1,1,0,0,0,0,1,2,4,5,1,2,2,1,1,2,4,4,4,1,2,0,0,0,39
+05,Veneto,024,Vicenza,SS24801,SS 248 -  Schiavonesca Marosticana,0,0,0,0,1,0,0,6,4,4,4,2,1,5,3,3,3,6,3,1,1,0,0,0,1,48
+05,Veneto,024,Vicenza,SS34901,SS 349 -  di Val d'Assa e Pedemontana Costo,2,1,0,0,0,1,0,2,0,3,5,3,3,2,2,7,8,5,3,2,3,1,2,0,0,55
+05,Veneto,024,Vicenza,SS34934,SS 349 var -  Variante Thiene-Schio,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1
+05,Veneto,024,Vicenza,SS35001,SS 350 -  di Folgaria e di Val d'Astico,0,0,0,0,0,0,0,1,0,0,3,2,2,2,1,1,2,4,4,0,0,0,1,0,0,23
+05,Veneto,024,Vicenza,SS50001,SS 500 -  di Lonigo,0,1,0,0,0,0,1,2,1,1,0,3,1,5,1,0,2,5,2,1,1,1,0,0,0,28
+05,Veneto,024,Vicenza,TA00801,Tangenziale Sud di Vicenza,0,0,0,1,1,0,1,1,2,0,2,0,0,0,1,1,0,0,1,1,0,0,1,0,0,13
+05,Veneto,025,Belluno,AA02701,A 27 -  Venezia-Belluno (Autostrada d'Alemagna),0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,2,0,0,2,0,0,0,0,0,0,7
+05,Veneto,025,Belluno,SS04801,SS 048 -  delle Dolomiti,0,0,0,0,0,0,0,0,1,3,0,3,1,3,0,2,2,1,1,1,0,0,0,0,0,18
+05,Veneto,025,Belluno,SS05001,SS 050 -  del Grappa e del Passo Rolle,0,0,2,0,0,3,0,2,4,4,4,1,4,5,5,6,3,5,5,2,2,4,0,0,0,61
+05,Veneto,025,Belluno,SS05002,SS 050 bis -  del Grappa e del Passo Rolle,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1
+05,Veneto,025,Belluno,SS05028,SS 050 bis/var -  del Grappa e del Passo Rolle (con Variante di Arsiè e Primolano),0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,2
+05,Veneto,025,Belluno,SS05101,SS 051 -  di Alemagna,1,0,0,1,1,0,0,3,3,3,5,3,8,4,5,5,5,2,5,3,1,2,2,0,0,62
+05,Veneto,025,Belluno,SS05102,SS 051 bis -  di Alemagna,0,0,0,0,0,0,0,1,0,1,1,0,1,2,1,0,2,1,0,0,0,1,0,0,0,11
+05,Veneto,025,Belluno,SS05201,SS 052 -  Carnica,1,0,0,0,0,0,1,1,0,2,2,0,1,2,1,1,2,1,1,0,0,0,1,0,0,17
+05,Veneto,025,Belluno,SS20301,SS 203 -  Agordina,1,2,0,0,0,2,0,0,1,0,2,5,3,1,3,2,2,5,1,2,0,1,1,0,0,34
+05,Veneto,025,Belluno,SS20305,SS 203 dir -  Agordina,0,0,0,0,0,0,1,0,1,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,4
+05,Veneto,025,Belluno,SS24401,SS 244 -  di Val Badia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1
+05,Veneto,025,Belluno,SS25101,SS 251 -  della Val di Zoldo e Val Cellina,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,0,1,1,0,0,0,0,0,0,0,5
+05,Veneto,025,Belluno,SS34601,SS 346 -  del Passo di San Pellegrino,0,0,0,0,0,0,0,0,2,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,4
+05,Veneto,025,Belluno,SS34701,SS 347 -  del Passo Cereda e del Passo Duran,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,2
+05,Veneto,025,Belluno,SS34801,SS 348 -  Feltrina,0,0,0,0,0,0,1,0,0,0,3,1,1,3,2,1,0,1,1,1,0,0,0,0,0,15
+05,Veneto,025,Belluno,SS35501,SS 355 -  di Val Degano,0,0,0,0,0,0,1,0,0,0,0,1,0,1,1,1,0,0,0,0,0,0,0,0,0,5
+05,Veneto,025,Belluno,SS42201,SS 422 -  dell'Alpago e Cansiglio,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,3
+05,Veneto,025,Belluno,SS42205,SS 422 dir -  dell'Alpago e Cansiglio,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,2
+05,Veneto,025,Belluno,SS47301,SS 473 -  di Croce d'Aune,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,2
+05,Veneto,025,Belluno,SS63801,SS 638 -  del Passo di Giau,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,3
+05,Veneto,026,Treviso,AA00401,A 04 -  Torino-Trieste,0,0,2,1,1,2,0,0,1,1,1,2,2,1,1,4,3,2,2,0,0,0,0,0,0,26
+05,Veneto,026,Treviso,AA02701,A 27 -  Venezia-Belluno (Autostrada d'Alemagna),1,0,1,0,0,0,0,1,1,2,1,2,3,2,1,3,0,5,4,5,1,0,1,0,0,34
+05,Veneto,026,Treviso,AA02801,A 28 -  Portogruaro-Pordenone-Conegliano,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,4
+05,Veneto,026,Treviso,AA05701,A 57 -  Tangenziale di Mestre,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,1,0,0,0,0,0,4
+05,Veneto,026,Treviso,SS01301,SS 013 -  Pontebbana,4,6,0,3,1,0,3,9,12,4,18,9,6,9,14,10,11,5,14,10,4,1,4,2,1,160
+05,Veneto,026,Treviso,SS05101,SS 051 -  di Alemagna,0,1,0,0,0,1,1,2,1,3,1,1,1,0,0,1,0,1,2,1,1,0,0,2,1,21
+05,Veneto,026,Treviso,SS05301,SS 053 -  Postumia,0,1,1,2,2,1,3,6,12,9,5,8,3,8,6,8,6,10,12,6,6,2,4,1,0,122
+05,Veneto,026,Treviso,SS14101,SS 141 -  Strada Cadorna,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+05,Veneto,026,Treviso,SS24501,SS 245 -  Castellana,0,0,0,0,0,1,1,1,2,2,2,1,2,1,0,3,0,3,3,2,0,1,1,1,0,27
+05,Veneto,026,Treviso,SS24801,SS 248 -  Schiavonesca Marosticana,1,2,0,0,0,1,0,3,8,1,4,5,6,2,4,1,2,3,5,4,2,5,1,2,0,62
+05,Veneto,026,Treviso,SS34801,SS 348 -  Feltrina,0,0,0,1,1,2,0,4,4,1,2,4,3,5,3,2,1,7,4,3,0,2,0,0,0,49
+05,Veneto,026,Treviso,SS42201,SS 422 -  dell'Alpago e Cansiglio,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,2,0,0,0,0,0,0,0,0,0,4
+05,Veneto,026,Treviso,SS51501,SS 515 -  Noalese,0,0,1,1,2,0,1,0,4,3,3,4,2,1,0,2,2,3,1,1,0,0,1,0,0,32
+05,Veneto,026,Treviso,SS63501,SS 635 -  del Passo di San Boldo,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1,0,2,3,2,1,0,1,0,0,0,12
+05,Veneto,026,Treviso,SS66701,SS 667 -  di Caerano,1,1,0,0,0,0,0,3,1,1,1,2,5,0,1,3,1,3,2,1,1,1,1,0,0,29
+05,Veneto,027,Venezia,AA00401,A 04 -  Torino-Trieste,4,3,1,2,1,3,3,4,8,1,5,0,2,3,1,5,5,1,1,3,1,1,1,1,0,60
+05,Veneto,027,Venezia,AA02801,A 28 -  Portogruaro-Pordenone-Conegliano,0,0,0,0,0,0,0,2,1,1,0,0,0,0,1,0,0,1,0,0,0,2,0,0,0,8
+05,Veneto,027,Venezia,AA05701,A 57 -  Tangenziale di Mestre,0,1,0,1,0,0,0,0,8,2,0,3,5,4,4,2,3,5,6,6,2,0,1,0,0,53
+05,Veneto,027,Venezia,RA03001,Raccordo di Marghera (SS 309/Tangenziale di Mestre-SS 011),0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,2,0,2,1,1,0,1,0,0,0,8
+05,Veneto,027,Venezia,RA03701,Raccordo Marco Polo (A 04-Aeroporto),1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,2
+05,Veneto,027,Venezia,SS01101,SS 011 -  Padana Superiore ,2,0,0,0,1,1,1,4,9,5,6,7,9,3,8,6,6,9,6,3,2,1,0,0,0,89
+05,Veneto,027,Venezia,SS01401,SS 014 -  della Venezia Giulia,0,6,1,1,0,0,0,5,3,9,10,6,8,5,4,4,5,14,3,5,6,4,1,5,0,105
+05,Veneto,027,Venezia,SS01402,SS 014 bis -  di Mestre,0,0,0,0,0,0,2,1,1,1,4,1,4,1,1,1,3,2,1,2,0,0,1,0,0,26
+05,Veneto,027,Venezia,SS01434,SS 014 var -  Variante di Portogruaro,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,1,0,1,0,0,0,0,0,6
+05,Veneto,027,Venezia,SS01436,SS 014 var/a -  Variante di Musile di Piave,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,1,0,0,0,3
+05,Veneto,027,Venezia,SS01437,SS 014 var/b -  Variante di San Donà di Piave,0,0,0,0,0,0,1,0,1,0,1,1,0,0,0,1,0,0,2,0,0,0,0,0,0,7
+05,Veneto,027,Venezia,SS05301,SS 053 -  Postumia,0,0,0,0,0,0,0,1,1,1,2,0,0,0,0,2,0,1,0,2,1,0,0,0,0,11
+05,Veneto,027,Venezia,SS24501,SS 245 -  Castellana,0,0,0,0,0,0,0,0,2,1,0,0,1,2,3,2,2,1,1,2,0,1,0,1,0,19
+05,Veneto,027,Venezia,SS25101,SS 251 -  della Val di Zoldo e Val Cellina,0,0,0,0,0,0,0,0,0,1,1,1,0,0,1,0,2,1,3,0,0,2,0,0,0,12
+05,Veneto,027,Venezia,SS30901,SS 309 -  Romea,4,0,1,0,0,0,3,6,6,6,4,8,2,6,7,5,8,9,5,2,1,2,1,1,0,87
+05,Veneto,027,Venezia,SS46301,SS 463 -  del Tagliamento,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,3
+05,Veneto,027,Venezia,SS51501,SS 515 -  Noalese,2,0,1,0,0,2,0,3,3,1,0,2,1,2,2,0,1,4,2,2,0,0,1,1,0,30
+05,Veneto,027,Venezia,SS51634,SS 516 R -  Piovese,0,0,0,1,0,0,0,0,2,1,1,1,0,1,0,0,0,0,1,0,0,1,0,0,0,9
+05,Veneto,028,Padova,AA00401,A 04 -  Torino-Trieste,1,0,0,2,2,2,0,4,5,5,1,2,0,0,2,1,2,1,5,1,4,0,4,1,0,45
+05,Veneto,028,Padova,AA01301,A 13 -  Bologna-Padova,2,1,2,1,1,2,1,1,4,2,1,1,1,3,4,7,2,2,5,3,3,1,0,2,1,53
+05,Veneto,028,Padova,AA01303,A 13 -  Raccordo Padova Sud,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,3
+05,Veneto,028,Padova,AA03101,A 31 -  Rovigo-Piovene Rocchette (Autostrada della Valdastico),0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1
+05,Veneto,028,Padova,SS01001,SS 010 -  Padana Inferiore,2,1,0,0,0,1,0,1,3,2,2,3,4,4,3,1,6,5,3,1,1,2,0,1,0,46
+05,Veneto,028,Padova,SS01101,SS 011 -  Padana Superiore ,0,0,0,0,1,1,0,2,1,4,0,2,0,1,0,0,4,2,5,0,2,1,0,0,0,26
+05,Veneto,028,Padova,SS01601,SS 016 -  Adriatica,0,1,0,0,0,0,1,2,5,5,2,3,5,2,1,4,5,8,6,6,3,2,2,0,0,63
+05,Veneto,028,Padova,SS04701,SS 047 -  della Valsugana,0,1,0,2,0,1,2,5,0,6,0,3,3,3,3,5,1,3,3,5,4,3,2,2,0,57
+05,Veneto,028,Padova,SS04721,SS 047 racc -  di Altichiero,1,0,0,0,0,0,0,1,2,0,1,1,2,3,2,1,0,0,1,1,1,0,0,0,0,17
+05,Veneto,028,Padova,SS05301,SS 053 -  Postumia,1,0,0,0,0,0,1,3,0,0,0,0,2,0,2,1,2,4,3,0,0,1,0,0,0,20
+05,Veneto,028,Padova,SS24501,SS 245 -  Castellana,0,0,0,0,0,0,0,1,2,1,0,0,1,0,0,2,1,2,0,2,0,0,0,0,0,12
+05,Veneto,028,Padova,SS24701,SS 247 -  Riviera,0,0,0,0,0,0,0,2,0,0,1,0,0,0,0,1,0,0,1,2,0,0,0,0,0,7
+05,Veneto,028,Padova,SS25001,SS 250 -  delle Terme Euganee,0,1,0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,5
+05,Veneto,028,Padova,SS30701,SS 307 -  del Santo,0,0,1,0,0,0,0,3,2,1,2,2,2,2,2,1,5,2,4,0,2,4,2,0,0,37
+05,Veneto,028,Padova,SS30901,SS 309 -  Romea,0,0,0,0,0,0,0,0,1,0,1,0,0,1,0,1,1,0,0,2,0,1,1,0,0,9
+05,Veneto,028,Padova,SS51501,SS 515 -  Noalese,0,0,1,0,0,0,0,1,0,1,3,0,0,0,1,0,2,0,0,0,1,1,0,1,0,12
+05,Veneto,028,Padova,SS51601,SS 516 -  Piovese,0,1,0,0,0,1,2,1,5,4,3,5,3,4,5,9,6,2,10,5,1,3,0,1,0,71
+05,Veneto,028,Padova,SS51605,SS 516 dir -  dei Vivai,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,3
+05,Veneto,028,Padova,SS51634,SS 516 R -  Piovese,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,1,1,0,0,1,1,0,0,0,7
+05,Veneto,029,Rovigo,AA01301,A 13 -  Bologna-Padova,0,1,1,2,0,1,0,1,0,1,0,1,2,0,1,1,2,1,2,1,2,0,0,0,0,20
+05,Veneto,029,Rovigo,SS01601,SS 016 -  Adriatica,1,1,0,2,1,0,1,4,3,0,3,2,1,2,3,2,3,5,7,1,2,0,1,1,0,46
+05,Veneto,029,Rovigo,SS30901,SS 309 -  Romea,0,0,1,0,0,0,1,1,0,1,0,0,1,1,1,0,0,4,1,1,0,0,2,0,0,15
+05,Veneto,029,Rovigo,SS43401,SS 434 -  Transpolesana,1,1,0,0,0,0,1,1,0,1,2,0,1,1,1,1,0,2,2,1,0,1,1,0,0,18
+05,Veneto,029,Rovigo,SS44301,SS 443 -  di Adria,1,0,0,1,0,0,1,0,1,1,2,3,0,0,0,0,1,0,0,2,0,1,0,0,0,14
+05,Veneto,029,Rovigo,SS48201,SS 482 -  Alto Polesana,0,0,0,1,0,0,0,0,1,1,2,2,2,1,0,1,0,1,0,1,1,0,0,0,0,14
+05,Veneto,029,Rovigo,SS49501,SS 495 -  di Codigoro,0,0,0,0,0,0,0,1,1,0,0,2,0,0,0,0,0,0,0,1,0,0,0,0,0,5
+05,Veneto,029,Rovigo,SS49901,SS 499 -  Rodigina,0,0,0,0,0,2,2,0,2,1,0,1,1,2,3,1,1,0,2,0,1,2,2,0,0,23
+05,Veneto,029,Rovigo,SS51634,SS 516 R -  Piovese,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,0,0,0,4
+06,Friuli-Venezia Giulia,030,Udine,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,2
+06,Friuli-Venezia Giulia,030,Udine,AA00401,A 04 -  Torino-Trieste,2,0,1,1,1,0,1,3,6,2,4,5,2,0,2,3,4,7,0,3,1,0,0,0,0,48
+06,Friuli-Venezia Giulia,030,Udine,AA02301,A 23 -  Palmanova-Tarvisio (Autostrada Alpe-Adria),0,0,0,0,0,0,0,4,0,1,4,3,1,1,2,2,2,1,5,1,1,1,1,1,0,31
+06,Friuli-Venezia Giulia,030,Udine,SS01301,SS 013 -  Pontebbana,1,2,1,2,0,1,1,7,2,6,7,2,3,2,8,8,5,8,8,6,5,4,3,0,0,92
+06,Friuli-Venezia Giulia,030,Udine,SS01401,SS 014 -  della Venezia Giulia,0,0,0,0,0,1,1,2,0,2,0,0,0,1,0,0,3,1,1,4,0,0,0,2,0,18
+06,Friuli-Venezia Giulia,030,Udine,SS05201,SS 052 -  Carnica,0,0,0,0,0,0,1,0,2,2,1,0,2,0,3,1,1,1,2,1,0,0,0,0,0,17
+06,Friuli-Venezia Giulia,030,Udine,SS05202,SS 052 bis -  Carnica,0,0,0,0,0,0,0,0,0,0,0,1,4,2,0,1,0,0,1,3,1,0,1,0,0,14
+06,Friuli-Venezia Giulia,030,Udine,SS05401,SS 054 -  del Friuli,0,0,0,0,0,0,1,3,1,2,0,1,1,1,3,2,1,2,3,1,0,0,0,0,0,22
+06,Friuli-Venezia Giulia,030,Udine,SS05601,SS 056 -  di Gorizia,1,0,0,0,0,0,1,0,1,2,2,1,0,0,1,1,1,2,2,2,0,0,0,0,0,17
+06,Friuli-Venezia Giulia,030,Udine,SS25201,SS 252 -  di Palmanova,1,0,1,0,0,0,1,0,1,5,1,1,1,0,0,2,2,3,0,2,0,0,0,0,0,21
+06,Friuli-Venezia Giulia,030,Udine,SS35101,SS 351 -  di Cervignano,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,3
+06,Friuli-Venezia Giulia,030,Udine,SS35201,SS 352 -  di Grado,1,0,0,0,0,0,1,0,0,2,2,0,1,2,3,0,1,3,1,2,0,0,1,1,0,21
+06,Friuli-Venezia Giulia,030,Udine,SS35301,SS 353 -  della  Bassa Friulana,0,0,0,0,0,0,0,3,0,1,1,0,1,2,1,0,1,1,0,1,0,0,0,0,0,12
+06,Friuli-Venezia Giulia,030,Udine,SS35401,SS 354 -  di Lignano,1,0,1,0,0,1,1,0,0,0,0,2,0,0,0,1,0,0,1,0,1,1,0,2,0,12
+06,Friuli-Venezia Giulia,030,Udine,SS35501,SS 355 -  di Val Degano,0,0,0,0,1,0,0,0,1,0,0,1,1,1,1,0,1,2,0,0,0,1,0,0,0,10
+06,Friuli-Venezia Giulia,030,Udine,SS35601,SS 356 -  di Cividale,0,0,0,0,0,0,0,1,2,1,1,4,1,1,0,2,3,4,4,4,1,0,0,0,0,29
+06,Friuli-Venezia Giulia,030,Udine,SS46301,SS 463 -  del Tagliamento,1,2,0,1,0,1,0,0,1,1,2,1,0,1,0,2,1,3,2,1,2,2,0,1,0,25
+06,Friuli-Venezia Giulia,030,Udine,SS46401,SS 464 -  di Spilimbergo,0,0,1,0,0,0,0,1,0,0,1,1,0,0,0,1,1,0,2,0,0,1,0,1,0,10
+06,Friuli-Venezia Giulia,030,Udine,SS46501,SS 465 -  della Forcella Lavardet e di Valle San Canciano,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,2
+06,Friuli-Venezia Giulia,030,Udine,SS51201,SS 512 -  del Lago di Cavazzo,0,0,0,1,0,0,1,0,0,2,3,0,2,0,2,0,0,1,1,0,0,0,0,0,0,13
+06,Friuli-Venezia Giulia,030,Udine,SS55201,SS 552 -  del Passo Rest,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1
+06,Friuli-Venezia Giulia,030,Udine,SS64601,SS 646 -  di Uccea,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1
+06,Friuli-Venezia Giulia,030,Udine,SS67601,SS 676 -  Tangenziale Sud di Udine,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,1,0,0,0,0,1,0,0,0,0,4
+06,Friuli-Venezia Giulia,031,Gorizia,0,0,0,0,0,0,0,0,0,1,3,0,2,1,0,0,1,0,1,3,0,0,0,0,0,0,0,12
+06,Friuli-Venezia Giulia,031,Gorizia,AA00401,A 04 -  Torino-Trieste,0,0,0,0,0,0,0,3,0,0,1,1,0,3,0,1,1,0,2,0,1,0,0,0,0,13
+06,Friuli-Venezia Giulia,031,Gorizia,AA03401,A 34 -  Villesse-Gorizia,0,0,0,0,0,0,0,0,2,1,0,2,0,0,0,0,0,0,0,0,1,0,0,0,0,6
+06,Friuli-Venezia Giulia,031,Gorizia,SS01401,SS 014 -  della Venezia Giulia,0,1,0,0,0,0,1,1,0,0,1,3,0,0,2,3,2,2,2,1,1,1,1,0,0,22
+06,Friuli-Venezia Giulia,031,Gorizia,SS01421,SS 014 racc -  della Venezia Giulia,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,2
+06,Friuli-Venezia Giulia,031,Gorizia,SS05501,SS 055 -  dell'Isonzo,0,1,0,0,0,0,0,0,0,0,4,1,0,0,0,0,0,0,1,1,0,0,0,0,0,8
+06,Friuli-Venezia Giulia,031,Gorizia,SS05601,SS 056 -  di Gorizia,0,0,0,0,0,0,1,1,0,3,0,1,0,0,0,0,0,1,0,1,0,2,0,0,0,10
+06,Friuli-Venezia Giulia,031,Gorizia,SS25201,SS 252 -  di Palmanova,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,2,0,0,0,0,0,0,0,4
+06,Friuli-Venezia Giulia,031,Gorizia,SS30501,SS 305 -  di Redipuglia,0,0,0,0,0,0,0,2,1,3,0,3,2,0,0,0,2,3,1,1,0,1,1,0,0,20
+06,Friuli-Venezia Giulia,031,Gorizia,SS35101,SS 351 -  di Cervignano,3,0,0,0,0,0,0,0,0,0,2,0,1,0,2,0,1,3,0,0,0,0,0,0,0,12
+06,Friuli-Venezia Giulia,031,Gorizia,SS35601,SS 356 -  di Cividale,0,0,0,0,0,0,0,0,0,1,0,0,2,0,0,0,0,0,2,1,0,0,0,0,0,6
+06,Friuli-Venezia Giulia,031,Gorizia,SS40901,SS 409 -  di Plessiva,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0,0,0,0,0,3
+06,Friuli-Venezia Giulia,031,Gorizia,SS51901,SS 519 -  di Jamiano,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+06,Friuli-Venezia Giulia,031,Gorizia,SS67701,SS 677 -  di Ronchi dei Legionari,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,2,0,1,0,0,1,0,0,0,0,6
+06,Friuli-Venezia Giulia,032,Trieste,AA00401,A 04 -  Torino-Trieste,0,0,0,0,0,0,0,0,0,1,1,1,2,0,0,0,2,1,3,1,1,0,0,0,0,13
+06,Friuli-Venezia Giulia,032,Trieste,NC32601,NSA 326 -  Raccordo Lacotisce-Rabuiese,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1
+06,Friuli-Venezia Giulia,032,Trieste,NC34401,NSA 344 -  Padriciano-Cattinara,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+06,Friuli-Venezia Giulia,032,Trieste,RA01301,Raccordo Autostradale A/4-Trieste (Trieste-Sistiana),1,0,0,0,1,0,2,1,1,1,1,3,0,2,2,3,2,0,2,0,1,0,0,0,0,23
+06,Friuli-Venezia Giulia,032,Trieste,RA01401,Raccordo Autostradale A/4-Trieste (Diramazione per Fernetti),0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1
+06,Friuli-Venezia Giulia,032,Trieste,SS01401,SS 014 -  della Venezia Giulia,1,0,0,0,0,1,1,0,2,1,4,1,4,2,2,2,3,4,6,1,2,1,0,0,0,38
+06,Friuli-Venezia Giulia,032,Trieste,SS01501,SS 015 -  via Flavia,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,1,0,0,0,1,0,1,0,0,6
+06,Friuli-Venezia Giulia,032,Trieste,SS05501,SS 055 -  dell'Isonzo,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,2
+06,Friuli-Venezia Giulia,032,Trieste,SS05801,SS 058 -  della Carniola,0,0,0,0,0,0,0,1,0,2,0,1,2,2,0,0,1,2,2,0,1,0,0,0,0,14
+06,Friuli-Venezia Giulia,032,Trieste,SS20201,SS 202 -  Triestina,3,0,0,0,0,0,1,2,2,1,4,2,0,2,0,0,1,0,3,0,0,2,0,0,0,23
+06,Friuli-Venezia Giulia,032,Trieste,SS20221,SS 202 racc -  di Sistiana,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1
+06,Friuli-Venezia Giulia,093,Pordenone,0,0,0,0,0,0,0,0,0,0,0,0,3,2,0,0,0,1,0,0,0,0,0,0,0,0,0,6
+06,Friuli-Venezia Giulia,093,Pordenone,AA02801,A 28 -  Portogruaro-Pordenone-Conegliano,0,0,0,0,3,0,1,0,2,0,0,1,0,0,2,0,1,1,0,1,1,0,2,0,0,15
+06,Friuli-Venezia Giulia,093,Pordenone,NC03001,NSA 030 -  di Montereale Valcellina,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1
+06,Friuli-Venezia Giulia,093,Pordenone,NC17701,NSA 177 -  Piandipan-Sequals,0,1,0,0,1,0,0,1,0,0,0,0,0,0,1,0,2,1,1,1,0,0,0,0,0,9
+06,Friuli-Venezia Giulia,093,Pordenone,SS01301,SS 013 -  Pontebbana,1,0,0,0,0,1,2,3,6,5,5,5,5,3,1,3,8,6,9,8,1,2,1,1,1,77
+06,Friuli-Venezia Giulia,093,Pordenone,SS25101,SS 251 -  della Val di Zoldo e Val Cellina,0,1,0,0,1,2,0,4,1,1,2,2,3,0,0,6,3,2,0,1,1,0,0,0,0,30
+06,Friuli-Venezia Giulia,093,Pordenone,SS46301,SS 463 -  del Tagliamento,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,1,1,0,0,0,0,5
+06,Friuli-Venezia Giulia,093,Pordenone,SS46401,SS 464 -  di Spilimbergo,0,0,0,1,0,0,1,1,0,1,0,2,1,1,2,1,1,1,3,3,0,0,0,0,0,19
+06,Friuli-Venezia Giulia,093,Pordenone,SS55201,SS 552 -  del Passo Rest,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,1,0,0,0,0,0,3
+07,Liguria,008,Imperia,AA01001,A 10 -  Genova-Ventimiglia (Autostrada dei Fiori),0,0,1,1,2,2,3,3,0,3,3,4,2,5,0,3,3,4,2,2,0,2,0,0,0,45
+07,Liguria,008,Imperia,SS00101,SS 001 -  via Aurelia,4,2,2,1,3,1,1,8,1,5,3,9,13,9,11,12,3,7,11,6,5,7,1,2,2,129
+07,Liguria,008,Imperia,SS00105,SS 001 dir -  dei Balzi Rossi,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,3
+07,Liguria,008,Imperia,SS02001,SS 020 -  del Colle di Tenda e di Valle Roja,1,0,0,0,0,0,0,0,0,1,1,2,4,1,2,0,0,1,3,1,0,0,0,0,0,17
+07,Liguria,008,Imperia,SS02801,SS 028 -  del Colle di Nava,0,0,0,0,0,1,0,1,1,1,0,0,1,0,1,0,1,0,1,0,1,1,0,0,0,10
+07,Liguria,008,Imperia,SS02834,SS 028 var -  Variante di Chiusavecchia,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+07,Liguria,008,Imperia,SS02836,SS 028 var/a -  Variante di Pieve di Teco,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+07,Liguria,008,Imperia,SS45301,SS 453 -  della Valle Arroscia,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+07,Liguria,008,Imperia,SS54801,SS 548 -  della Valle Argentina,0,0,0,1,0,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,1,0,0,0,0,5
+07,Liguria,008,Imperia,SS71801,SS 718 -  di Sanremo,1,0,0,0,0,0,0,0,1,0,1,2,0,0,0,0,1,0,2,0,0,0,0,0,0,8
+07,Liguria,008,Imperia,SS72001,SS 720 -  Variante di Taggia,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,3
+07,Liguria,009,Savona,AA00601,A 06 -  Torino-Savona (La Verdemare),1,1,2,0,0,0,1,6,5,5,3,3,6,3,1,0,5,3,3,3,1,0,1,0,0,53
+07,Liguria,009,Savona,AA01001,A 10 -  Genova-Ventimiglia (Autostrada dei Fiori),6,1,4,2,0,1,5,6,15,3,11,7,2,8,7,8,6,6,9,5,3,3,3,1,0,122
+07,Liguria,009,Savona,SS00101,SS 001 -  via Aurelia,9,3,2,2,4,1,1,12,17,22,27,31,22,16,20,17,14,18,20,27,13,3,3,5,2,311
+07,Liguria,009,Savona,SS00134,SS 001 var -  Variante di Varazze,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,2
+07,Liguria,009,Savona,SS02901,SS 029 -  del Colle di Cadibona,0,0,0,0,0,0,0,2,0,2,1,1,2,2,1,0,2,2,1,1,0,1,1,0,0,19
+07,Liguria,009,Savona,SS02934,SS 029 var -  Variante di Carcare e Collina Vispa,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,1,0,0,0,0,0,3
+07,Liguria,009,Savona,SS33401,SS 334 -  del Sassello,0,0,0,0,0,0,0,2,2,1,3,4,5,2,1,4,2,2,3,3,0,0,1,1,0,36
+07,Liguria,009,Savona,SS33901,SS 339 -  di Cengio,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1
+07,Liguria,009,Savona,SS45301,SS 453 -  della Valle Arroscia,0,0,0,0,0,0,0,2,2,1,1,0,1,0,0,1,1,1,1,0,1,0,0,0,0,12
+07,Liguria,009,Savona,SS49001,SS 490 -  del Colle del Melogno,0,0,0,0,1,0,0,1,1,1,0,0,1,0,0,0,3,0,0,1,0,0,0,0,0,9
+07,Liguria,009,Savona,SS54201,SS 542 -  di Pontinvrea,0,0,0,0,0,0,1,0,0,0,0,1,0,1,1,0,0,1,0,0,0,0,0,0,0,5
+07,Liguria,009,Savona,SS58201,SS 582 -  del Colle di S. Bernardo,0,0,0,0,0,0,0,0,1,0,1,2,1,0,0,0,0,0,1,1,0,0,0,0,0,7
+07,Liguria,009,Savona,SS71701,SS 717 -  di Villanova di Albenga,0,1,0,0,0,0,1,1,0,0,0,1,0,0,0,1,0,0,0,1,0,1,0,0,0,7
+07,Liguria,010,Genova,AA00701,A 07 -  Milano-Genova,3,2,0,1,1,1,0,3,9,5,7,6,6,7,5,6,2,5,8,4,1,3,0,3,0,88
+07,Liguria,010,Genova,AA01001,A 10 -  Genova-Ventimiglia (Autostrada dei Fiori),3,1,1,2,1,0,2,4,6,4,9,5,4,7,6,6,6,7,13,7,4,2,1,1,0,102
+07,Liguria,010,Genova,AA01201,A 12 -  Genova-Roma (tratto Genova-Rosignano),2,1,2,3,1,4,3,4,9,5,6,8,10,7,2,11,6,6,2,9,3,3,2,1,0,110
+07,Liguria,010,Genova,AA02601,A 26 -  Genova Voltri-Gravellona Toce (Autostrada dei Trafori),1,0,0,0,0,0,0,0,2,2,2,2,1,0,3,2,2,0,4,0,0,1,0,0,1,23
+07,Liguria,010,Genova,SS00101,SS 001 -  via Aurelia,2,0,1,1,0,1,3,5,11,4,5,5,8,1,9,2,6,8,6,9,5,0,1,2,3,98
+07,Liguria,010,Genova,SS03501,SS 035 -  dei Giovi,0,0,1,0,0,0,0,2,0,0,0,2,1,5,0,1,1,2,0,1,0,0,1,0,0,17
+07,Liguria,010,Genova,SS04501,SS 045 -  di Val Trebbia,0,0,1,0,0,0,0,1,1,0,2,2,0,1,1,0,2,1,1,2,0,0,0,0,0,15
+07,Liguria,010,Genova,SS22501,SS 225 -  della Fontanabuona,0,0,0,0,0,0,0,2,1,2,1,1,0,1,1,3,3,1,2,2,1,0,0,0,0,21
+07,Liguria,010,Genova,SS22601,SS 226 -  di Valle Scrivia,0,0,1,0,0,0,0,0,1,1,2,1,0,1,1,0,1,0,1,0,3,0,0,1,0,14
+07,Liguria,010,Genova,SS22701,SS 227 -  di Portofino,0,0,1,0,0,0,0,1,3,2,6,2,5,6,0,2,1,2,2,2,1,0,0,0,0,36
+07,Liguria,010,Genova,SS33301,SS 333 -  di Uscio,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,3
+07,Liguria,010,Genova,SS45601,SS 456 -  del Turchino,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,3
+07,Liguria,010,Genova,SS52301,SS 523 -  del Colle di Cento Croci,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,1,0,1,0,0,0,0,1,0,5
+07,Liguria,010,Genova,SS58601,SS 586 -  della Valle dell'Aveto,0,0,0,0,0,0,1,1,0,0,1,0,0,0,1,0,0,2,2,1,1,0,0,0,0,10
+07,Liguria,010,Genova,SS65401,SS 654 -  di Val Nure,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+07,Liguria,011,La Spezia,AA01201,A 12 -  Genova-Roma (tratto Genova-Rosignano),0,0,0,1,0,5,1,3,4,6,1,5,1,1,4,2,2,1,3,2,1,0,1,1,0,45
+07,Liguria,011,La Spezia,AA01501,A 15 -  Parma-La Spezia (Autostrada della Cisa),0,0,0,0,0,0,0,1,2,4,0,2,4,1,2,3,1,0,1,0,2,1,0,1,0,25
+07,Liguria,011,La Spezia,AA01505,A 15 -  Diramazione Santo Stefano di Magra,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1,4,0,0,0,0,0,0,0,7
+07,Liguria,011,La Spezia,RA01901,Raccordo La Spezia-Lerici,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,2
+07,Liguria,011,La Spezia,SS00101,SS 001 -  via Aurelia,1,0,0,0,1,0,1,0,0,1,4,3,6,5,5,3,3,3,6,4,2,0,1,0,0,49
+07,Liguria,011,La Spezia,SS00121,SS 001 racc -  Raccordo di La Spezia,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+07,Liguria,011,La Spezia,SS00136,SS 001 var/a -  Variante di La Spezia,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2
+07,Liguria,011,La Spezia,SS06201,SS 062 -  della Cisa,1,0,2,1,0,1,0,0,1,0,0,1,0,1,1,0,1,2,3,1,1,1,0,1,0,19
+07,Liguria,011,La Spezia,SS33001,SS 330 -  di Buonviaggio,2,0,0,0,0,0,0,0,2,1,1,0,0,0,0,2,1,3,0,0,0,0,0,0,0,12
+07,Liguria,011,La Spezia,SS33101,SS 331 -  di Lerici,0,0,0,0,0,1,2,4,2,0,1,3,1,1,2,1,0,2,3,2,0,1,1,1,1,29
+07,Liguria,011,La Spezia,SS37001,SS 370 -  Litoranea delle Cinque Terre,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,1,1,0,0,0,0,0,4
+07,Liguria,011,La Spezia,SS43201,SS 432 -  della Bocca di Magra,0,0,0,1,0,0,2,0,1,1,0,2,1,1,0,0,0,0,0,0,0,1,0,0,0,10
+07,Liguria,011,La Spezia,SS52301,SS 523 -  del Colle di Cento Croci,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,1,1,0,0,0,0,4
+07,Liguria,011,La Spezia,SS53001,SS 530 -  di Portovenere,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,3
+07,Liguria,011,La Spezia,SS56601,SS 566 -  di Val di Vara,1,0,0,1,0,0,0,0,0,0,1,1,0,0,0,0,1,1,0,0,0,0,0,0,0,6
+07,Liguria,011,La Spezia,SS56605,SS 566 dir -  di Val di Vara,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2
+08,Emilia Romagna,033,Piacenza,AA00101,A 01 -  Milano-Roma-Napoli (Autostrada del Sole),4,1,1,0,2,1,1,1,4,5,1,6,5,2,2,2,2,2,3,3,0,1,2,0,0,51
+08,Emilia Romagna,033,Piacenza,AA02101,A 21 -  Torino-Piacenza-Brescia (Autostrada dei Vini),0,1,1,0,1,2,2,1,2,1,1,4,2,2,1,3,1,1,1,1,0,1,1,1,1,32
+08,Emilia Romagna,033,Piacenza,AA02102,A 21 -  Diramazione Fiorenzuola d'Arda,0,0,0,0,0,0,0,0,0,1,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,3
+08,Emilia Romagna,033,Piacenza,SS00901,SS 009 -  via Emilia,1,2,1,0,2,0,0,3,1,0,1,1,2,1,2,5,3,5,3,3,0,3,2,1,1,43
+08,Emilia Romagna,033,Piacenza,SS01001,SS 010 -  Padana Inferiore,0,0,0,0,3,0,3,4,2,4,3,4,4,1,4,2,2,4,11,3,3,0,3,2,0,62
+08,Emilia Romagna,033,Piacenza,SS04501,SS 045 -  di Val Trebbia,0,0,0,0,0,0,0,2,1,0,0,3,5,1,0,0,5,2,0,1,1,0,0,0,0,21
+08,Emilia Romagna,033,Piacenza,SS41201,SS 412 -  della Val Tidone,0,1,0,0,0,2,0,0,1,2,0,2,0,1,1,1,2,0,3,1,0,2,0,0,0,19
+08,Emilia Romagna,033,Piacenza,SS46101,SS 461 -  del Passo del Penice,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1
+08,Emilia Romagna,033,Piacenza,SS46201,SS 462 -  della Val d'Arda,0,0,0,0,1,0,0,1,5,0,0,0,0,0,0,0,3,0,1,0,0,1,0,0,0,12
+08,Emilia Romagna,033,Piacenza,SS58701,SS 587 -  di Cortemaggiore,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,1,1,0,0,0,0,0,0,4
+08,Emilia Romagna,033,Piacenza,SS58801,SS 588 -  dei Due Ponti,0,0,0,0,0,0,0,0,1,0,2,0,1,1,0,0,0,0,0,0,1,0,0,0,0,6
+08,Emilia Romagna,033,Piacenza,SS65401,SS 654 -  di Val Nure,0,0,0,1,0,1,0,2,2,3,4,2,1,2,0,1,1,2,2,2,0,0,1,0,0,27
+08,Emilia Romagna,033,Piacenza,SS72501,SS 725 -  Tangenziale di Piacenza,1,0,0,1,0,0,0,0,0,0,0,1,0,1,0,0,1,2,1,0,0,0,0,0,0,8
+08,Emilia Romagna,034,Parma,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+08,Emilia Romagna,034,Parma,AA00101,A 01 -  Milano-Roma-Napoli (Autostrada del Sole),4,1,3,4,1,2,5,7,1,2,2,2,2,3,2,3,1,6,4,2,2,5,1,4,0,69
+08,Emilia Romagna,034,Parma,AA01501,A 15 -  Parma-La Spezia (Autostrada della Cisa),1,2,0,0,1,0,1,3,2,2,3,1,3,2,3,3,2,2,0,0,2,0,0,2,0,35
+08,Emilia Romagna,034,Parma,SS00901,SS 009 -  via Emilia,2,2,0,1,1,0,2,2,1,3,6,4,1,5,1,2,2,7,5,2,3,2,4,1,0,59
+08,Emilia Romagna,034,Parma,SS00934,SS 009 var -  Tangenziale Nord Ovest di Parma,1,0,0,1,0,0,1,1,3,0,2,0,3,5,0,1,3,4,2,2,2,1,1,0,0,33
+08,Emilia Romagna,034,Parma,SS00936,SS 009 var/a -  Tangenziale Sud di Parma,1,0,0,0,1,0,1,1,0,0,0,0,1,2,1,2,2,0,2,2,1,2,0,1,0,20
+08,Emilia Romagna,034,Parma,SS06201,SS 062 -  della Cisa,1,0,0,0,0,3,0,2,0,2,3,3,5,3,3,5,6,8,4,1,2,2,0,0,0,53
+08,Emilia Romagna,034,Parma,SS30801,SS 308 -  di Fondo Valle Taro,0,0,0,0,0,0,0,0,0,2,0,0,0,2,0,1,0,2,1,0,0,0,1,0,0,9
+08,Emilia Romagna,034,Parma,SS34301,SS 343 -  Asolana,0,0,1,0,2,0,0,0,2,1,2,3,4,2,1,2,1,1,1,0,3,0,0,0,0,26
+08,Emilia Romagna,034,Parma,SS35701,SS 357 -  di Fornovo,1,0,1,0,1,0,0,0,1,1,0,3,1,2,2,1,1,0,1,1,0,0,0,1,0,18
+08,Emilia Romagna,034,Parma,SS35901,SS 359 -  di Salsomaggiore e di Bardi,0,0,0,0,0,0,0,1,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,3
+08,Emilia Romagna,034,Parma,SS51301,SS 513 -  di Val d'Enza,1,0,0,0,1,0,0,0,2,1,3,1,2,0,4,0,3,2,2,3,0,0,0,0,0,25
+08,Emilia Romagna,034,Parma,SS52301,SS 523 -  del Colle di Cento Croci,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,2,0,1,0,0,1,0,0,0,0,6
+08,Emilia Romagna,034,Parma,SS58801,SS 588 -  dei Due Ponti,0,0,0,0,1,0,0,0,1,1,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,6
+08,Emilia Romagna,034,Parma,SS66501,SS 665 -  Massese,3,1,0,0,1,0,0,0,1,0,1,3,1,1,0,1,2,1,4,1,0,0,0,1,0,22
+08,Emilia Romagna,035,Reggio Emilia,AA00101,A 01 -  Milano-Roma-Napoli (Autostrada del Sole),5,3,2,3,4,7,2,1,3,0,3,5,2,3,6,8,7,7,1,4,2,2,3,3,0,86
+08,Emilia Romagna,035,Reggio Emilia,AA02201,A 22 -  Brennero-Modena (Autostrada del Brennero),0,0,1,0,0,0,1,1,0,0,1,0,1,0,0,1,0,0,0,1,0,0,0,0,0,7
+08,Emilia Romagna,035,Reggio Emilia,SS00901,SS 009 -  via Emilia,2,0,0,0,1,0,1,6,3,3,2,2,1,2,2,5,5,6,4,2,2,1,2,1,0,53
+08,Emilia Romagna,035,Reggio Emilia,SS06201,SS 062 -  della Cisa,0,0,0,0,0,0,0,0,2,0,2,1,3,1,0,2,1,1,2,2,1,1,0,1,0,20
+08,Emilia Romagna,035,Reggio Emilia,SS06234,SS 062 var -  Variante Cispadana,1,0,0,0,0,1,0,2,0,1,3,0,0,4,1,2,0,1,1,1,0,1,1,0,0,20
+08,Emilia Romagna,035,Reggio Emilia,SS06301,SS 063 -  del Valico del Cerreto,1,0,0,1,0,2,1,7,4,1,3,4,4,3,3,4,4,6,5,5,3,2,2,0,0,65
+08,Emilia Romagna,035,Reggio Emilia,SS35801,SS 358 -  di Castelnovo,1,0,2,0,1,0,0,2,4,0,2,0,4,2,2,2,4,5,0,3,0,1,0,0,0,35
+08,Emilia Romagna,035,Reggio Emilia,SS46701,SS 467 -  di Scandiano,0,2,0,1,1,0,0,1,0,0,2,0,2,1,3,1,0,0,3,1,2,1,1,0,0,22
+08,Emilia Romagna,035,Reggio Emilia,SS46801,SS 468 -  di Correggio,0,0,1,0,0,0,1,1,0,1,0,0,1,0,0,0,0,0,1,1,0,0,0,1,0,8
+08,Emilia Romagna,035,Reggio Emilia,SS48601,SS 486 -  di Montefiorino,0,0,0,0,1,2,0,3,3,0,3,0,0,0,0,3,0,2,0,1,0,0,1,0,0,19
+08,Emilia Romagna,035,Reggio Emilia,SS51301,SS 513 -  di Val d'Enza,0,1,0,0,0,0,0,0,0,2,2,1,0,1,1,0,1,0,1,0,2,0,0,1,1,14
+08,Emilia Romagna,035,Reggio Emilia,SS72201,SS 722 -  Tangenziale di Reggio Emilia,0,1,0,0,0,0,1,1,1,1,2,1,1,3,2,0,1,2,2,0,0,0,1,2,0,22
+08,Emilia Romagna,036,Modena,AA00101,A 01 -  Milano-Roma-Napoli (Autostrada del Sole),2,3,2,3,3,2,2,2,1,1,1,3,5,1,0,4,0,0,4,3,3,1,2,2,0,50
+08,Emilia Romagna,036,Modena,AA02201,A 22 -  Brennero-Modena (Autostrada del Brennero),0,1,0,0,1,0,3,2,1,4,3,2,2,0,0,0,4,4,3,0,0,0,0,0,0,30
+08,Emilia Romagna,036,Modena,SS00901,SS 009 -  via Emilia,1,2,1,0,0,0,1,3,2,0,2,3,1,1,4,5,4,3,1,1,1,0,0,2,0,38
+08,Emilia Romagna,036,Modena,SS01201,SS 012 -  dell'Abetone e del Brennero,1,1,1,0,0,2,6,10,9,5,3,9,7,6,12,11,9,13,10,6,3,5,2,1,0,132
+08,Emilia Romagna,036,Modena,SS01236,SS 012 var/a -  Variante di Mirandola,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+08,Emilia Romagna,036,Modena,SS25501,SS 255 -  di S. Matteo Decima,0,0,1,0,0,0,1,2,1,1,0,1,1,2,2,2,0,2,5,2,1,1,0,0,0,25
+08,Emilia Romagna,036,Modena,SS25534,SS 255 var 1 -  Tangenziale Rabin,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,3
+08,Emilia Romagna,036,Modena,SS32401,SS 324 -  del Passo delle Radici,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,1,1,0,0,0,0,0,0,0,0,4
+08,Emilia Romagna,036,Modena,SS41301,SS 413 -  Romana,0,0,0,2,1,0,2,3,2,0,1,1,5,6,4,2,3,4,3,4,3,2,0,0,0,48
+08,Emilia Romagna,036,Modena,SS46701,SS 467 -  di Scandiano,0,1,0,0,0,0,0,7,4,3,1,2,2,0,0,1,0,5,2,2,0,0,0,0,2,32
+08,Emilia Romagna,036,Modena,SS46801,SS 468 -  di Correggio,0,1,0,1,0,0,0,5,2,3,2,2,3,1,2,0,4,6,4,3,3,0,0,0,0,42
+08,Emilia Romagna,036,Modena,SS48601,SS 486 -  di Montefiorino,0,0,0,0,0,0,0,3,1,1,0,2,1,2,1,1,0,0,2,2,1,0,0,0,0,17
+08,Emilia Romagna,036,Modena,SS56801,SS 568 -  di Crevalcore,1,0,0,0,0,0,0,1,1,0,0,1,0,2,1,0,0,0,0,0,0,0,0,0,0,7
+08,Emilia Romagna,036,Modena,SS56901,SS 569 -  di Vignola,0,0,0,1,0,0,1,3,5,4,3,0,2,4,3,5,4,3,5,3,2,0,0,0,0,48
+08,Emilia Romagna,036,Modena,SS56902,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,2
+08,Emilia Romagna,036,Modena,SS62301,SS 623 -  del Passo Brasa,2,1,0,0,0,0,2,1,4,4,4,5,6,3,1,6,7,9,2,1,1,2,1,0,0,62
+08,Emilia Romagna,036,Modena,SS72401,SS 724 -  Tangenziale Nord di Modena e Diramazione per Sassuolo,0,3,0,0,0,2,0,3,6,1,1,2,4,2,1,1,3,5,5,6,0,3,1,1,0,50
+08,Emilia Romagna,036,Modena,SS72405,SS 724 dir -  Tangenziale Sud di Modena,0,1,0,0,0,0,0,0,2,0,1,0,0,0,1,0,0,1,1,0,0,1,0,1,0,9
+08,Emilia Romagna,037,Bologna,AA00101,A 01 -  Milano-Roma-Napoli (Autostrada del Sole),2,2,0,1,3,1,3,5,6,6,5,6,12,4,3,3,7,1,1,2,1,0,2,2,0,78
+08,Emilia Romagna,037,Bologna,AA01301,A 13 -  Bologna-Padova,2,3,0,0,2,2,0,1,2,4,1,0,2,1,4,2,1,1,4,2,0,0,3,2,1,40
+08,Emilia Romagna,037,Bologna,AA01401,A 14 -  Bologna-Taranto (Autostrada Adriatica),3,2,1,5,5,3,4,10,8,20,8,4,10,6,3,7,8,5,8,7,0,1,3,2,0,133
+08,Emilia Romagna,037,Bologna,AA01402,A 14 -  Ramo Bologna-Casalecchio,0,0,0,0,0,0,0,0,2,0,1,0,1,0,1,1,0,2,1,1,1,0,1,0,0,12
+08,Emilia Romagna,037,Bologna,RA00101,Raccordo Tangenziale Nord Città di Bologna (Casalecchio-Aeroporto-San Lazzaro),2,2,3,0,2,0,1,11,9,5,2,6,4,4,13,8,6,20,14,8,3,5,1,4,0,133
+08,Emilia Romagna,037,Bologna,RA00102,Raccordo Tangenziale Nord Città di Bologna (Crespellano/Lavino-Aeroporto),0,0,0,0,1,0,1,1,0,0,1,0,0,0,1,2,0,2,1,1,0,0,0,0,0,11
+08,Emilia Romagna,037,Bologna,RA04301,Raccordo Sasso Marconi (A01)-SS 064,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1
+08,Emilia Romagna,037,Bologna,SS00901,SS 009 -  via Emilia,1,0,1,0,0,1,2,2,6,3,9,5,5,7,5,7,7,8,8,5,4,3,4,2,1,96
+08,Emilia Romagna,037,Bologna,SS06401,SS 064 -  Porrettana,3,0,0,0,0,0,2,3,4,8,7,4,6,7,1,8,6,9,11,4,0,2,1,1,0,87
+08,Emilia Romagna,037,Bologna,SS06501,SS 065 -  della Futa,0,0,0,0,0,0,0,1,1,0,1,2,2,0,0,0,5,1,2,0,1,0,0,0,0,16
+08,Emilia Romagna,037,Bologna,SS25301,SS 253 -  S. Vitale,1,0,0,0,0,0,1,0,1,2,3,3,2,0,2,2,2,4,3,2,1,0,0,0,0,29
+08,Emilia Romagna,037,Bologna,SS25501,SS 255 -  di S. Matteo Decima,0,1,1,0,0,3,0,3,1,0,1,1,1,1,2,0,3,3,3,0,2,0,0,0,0,26
+08,Emilia Romagna,037,Bologna,SS32401,SS 324 -  del Passo delle Radici,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0,0,0,3
+08,Emilia Romagna,037,Bologna,SS32501,SS 325 -  di Val di Setta e Val di Bisenzio,0,1,0,0,0,0,0,0,0,0,1,1,1,0,0,0,2,2,0,0,0,0,0,0,0,8
+08,Emilia Romagna,037,Bologna,SS56801,SS 568 -  di Crevalcore,1,0,0,0,0,2,1,2,3,2,1,0,2,2,2,3,6,2,2,1,1,2,2,1,0,38
+08,Emilia Romagna,037,Bologna,SS56901,SS 569 -  di Vignola,1,0,0,0,1,1,0,7,8,3,4,1,5,1,8,2,10,11,6,5,1,3,0,0,0,78
+08,Emilia Romagna,037,Bologna,SS61001,SS 610 -  Selice o Montanara Imolese,0,0,0,0,0,2,0,0,2,1,3,0,0,2,1,2,2,2,2,0,0,1,0,1,1,22
+08,Emilia Romagna,037,Bologna,SS62301,SS 623 -  del Passo Brasa,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+08,Emilia Romagna,038,Ferrara,AA01301,A 13 -  Bologna-Padova,1,0,1,0,2,2,1,1,7,1,1,3,2,1,1,2,0,1,1,1,0,1,1,1,0,32
+08,Emilia Romagna,038,Ferrara,AA01323,A 13 -  Diramazione per Ferrara,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,0,0,0,0,0,0,0,0,3
+08,Emilia Romagna,038,Ferrara,RA00801,Raccordo Autostradale Ferrara-Porto Garibaldi,1,0,0,1,4,0,0,1,4,1,1,1,1,1,4,0,2,2,0,1,0,1,0,0,1,27
+08,Emilia Romagna,038,Ferrara,SS01601,SS 016 -  Adriatica,0,1,0,0,0,1,0,1,3,1,5,2,1,0,3,4,0,7,6,0,0,1,0,1,0,37
+08,Emilia Romagna,038,Ferrara,SS01636,SS 016 var/a -  Variante di Argenta,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,3
+08,Emilia Romagna,038,Ferrara,SS06401,SS 064 -  Porrettana,0,0,0,1,1,0,0,0,1,1,0,1,1,1,0,0,1,1,0,1,1,0,0,0,0,11
+08,Emilia Romagna,038,Ferrara,SS25501,SS 255 -  di S. Matteo Decima,1,0,1,0,0,1,0,5,1,3,4,1,5,2,1,5,5,4,2,1,2,0,0,0,0,44
+08,Emilia Romagna,038,Ferrara,SS30901,SS 309 -  Romea,0,0,0,0,0,1,1,0,3,3,1,1,4,1,1,3,7,4,4,6,0,3,0,0,0,43
+08,Emilia Romagna,038,Ferrara,SS46801,SS 468 -  di Correggio,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1
+08,Emilia Romagna,038,Ferrara,SS49501,SS 495 -  di Codigoro,0,1,0,1,1,0,1,0,2,2,1,2,2,0,3,1,3,1,2,0,0,0,0,0,0,23
+08,Emilia Romagna,038,Ferrara,SS49601,SS 496 -  Virgiliana,0,0,0,0,0,1,0,3,1,3,0,0,0,0,0,1,1,2,2,0,1,0,0,0,0,15
+08,Emilia Romagna,038,Ferrara,SS72301,SS 723 -  Tangenziale Ovest di Ferrara,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,3
+08,Emilia Romagna,039,Ravenna,AA01401,A 14 -  Bologna-Taranto (Autostrada Adriatica),0,0,2,3,0,0,0,1,2,4,1,0,5,3,1,3,3,1,6,0,1,0,1,0,1,38
+08,Emilia Romagna,039,Ravenna,AA01403,A 14 -  Diramazione per Ravenna,3,0,0,2,1,0,1,1,4,6,2,0,0,1,2,0,1,0,2,1,4,1,0,1,1,34
+08,Emilia Romagna,039,Ravenna,SS00302,SS 003 bis -  Tiberina,0,0,0,0,0,0,1,1,0,0,0,0,3,2,0,0,0,0,0,0,0,1,0,1,0,9
+08,Emilia Romagna,039,Ravenna,SS00901,SS 009 -  via Emilia,0,0,0,1,0,0,0,2,3,1,2,4,2,0,0,2,1,3,2,1,0,1,1,0,0,26
+08,Emilia Romagna,039,Ravenna,SS01601,SS 016 -  Adriatica,5,0,3,0,1,3,3,4,4,8,9,7,6,11,8,5,7,11,13,7,7,0,0,1,0,123
+08,Emilia Romagna,039,Ravenna,SS01634,SS 016 var -  Variante di Alfonsine,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1
+08,Emilia Romagna,039,Ravenna,SS06701,SS 067 -  Tosco Romagnola,1,1,2,1,0,2,0,0,2,5,0,0,1,0,0,0,0,2,2,1,0,1,0,0,0,21
+08,Emilia Romagna,039,Ravenna,SS07101,SS 071 -  Umbro Casentinese Romagnola,0,0,0,0,0,0,0,0,2,0,1,0,1,0,1,0,4,1,0,0,0,0,0,0,0,10
+08,Emilia Romagna,039,Ravenna,SS07102,SS 071 bis -  Umbro Casentinese Romagnola,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,2,0,0,1,0,0,0,0,0,0,6
+08,Emilia Romagna,039,Ravenna,SS25301,SS 253 -  S. Vitale,2,0,0,0,1,0,1,3,2,7,6,5,3,4,5,4,1,4,2,2,2,1,2,0,0,57
+08,Emilia Romagna,039,Ravenna,SS25401,SS 254 -  di Cervia,0,0,0,0,0,0,0,1,0,0,1,1,2,2,2,1,2,3,1,1,1,0,0,2,0,20
+08,Emilia Romagna,039,Ravenna,SS30201,SS 302 -  Brisighellese Ravennate,1,0,0,0,0,0,1,0,0,3,1,1,1,4,0,1,5,1,4,2,4,0,0,1,0,30
+08,Emilia Romagna,039,Ravenna,SS30601,SS 306 -  Casolana Riolese,0,0,0,0,0,0,0,1,3,1,3,1,0,2,0,0,0,0,1,0,0,0,0,0,0,12
+08,Emilia Romagna,039,Ravenna,SS30901,SS 309 -  Romea,0,0,0,0,0,0,0,2,2,0,1,0,0,5,1,1,2,1,0,0,0,0,1,0,0,16
+08,Emilia Romagna,039,Ravenna,SS30905,SS 309 dir -  Romea,0,0,0,0,1,0,0,0,1,0,0,0,1,2,1,1,0,0,0,0,0,0,2,0,0,9
+08,Emilia Romagna,039,Ravenna,SS61001,SS 610 -  Selice o Montanara Imolese,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,4
+08,Emilia Romagna,040,Forlì-Cesena,AA01401,A 14 -  Bologna-Taranto (Autostrada Adriatica),2,0,3,0,2,0,4,3,1,7,8,1,2,0,2,3,2,0,2,1,2,1,1,1,0,48
+08,Emilia Romagna,040,Forlì-Cesena,SS00302,SS 003 bis -  Tiberina,1,1,0,0,0,0,0,4,3,0,3,3,5,2,5,3,1,0,5,5,0,2,1,0,0,44
+08,Emilia Romagna,040,Forlì-Cesena,SS00901,SS 009 -  via Emilia,0,1,2,0,1,2,2,6,2,3,6,2,5,6,3,0,4,5,3,6,3,4,1,1,1,69
+08,Emilia Romagna,040,Forlì-Cesena,SS00903,SS 009 ter -  del Rabbi,0,0,0,1,0,0,0,1,2,0,0,2,3,0,2,2,0,1,2,1,0,1,0,0,0,18
+08,Emilia Romagna,040,Forlì-Cesena,SS01601,SS 016 -  Adriatica,0,0,1,0,0,1,0,2,0,0,0,1,0,0,0,0,0,3,1,2,0,1,1,0,0,13
+08,Emilia Romagna,040,Forlì-Cesena,SS06701,SS 067 -  Tosco Romagnola,0,1,0,1,0,0,2,2,3,3,2,5,6,2,2,2,4,1,2,2,1,2,1,0,0,44
+08,Emilia Romagna,040,Forlì-Cesena,SS07101,SS 071 -  Umbro Casentinese Romagnola,0,1,0,0,0,0,0,1,0,0,2,0,0,1,0,0,2,1,0,0,0,0,0,0,0,8
+08,Emilia Romagna,040,Forlì-Cesena,SS07102,SS 071 bis -  Umbro Casentinese Romagnola,0,0,1,0,0,0,0,0,0,1,0,1,0,0,1,0,0,0,0,0,0,1,0,0,0,5
+08,Emilia Romagna,040,Forlì-Cesena,SS25401,SS 254 -  di Cervia,0,0,1,0,0,0,0,0,0,0,0,2,2,1,0,0,2,1,1,0,0,1,1,2,0,14
+08,Emilia Romagna,040,Forlì-Cesena,SS30401,SS 304 -  di Cesena,0,1,0,0,1,0,0,0,1,0,0,0,2,1,1,2,2,1,2,0,0,0,0,0,0,14
+08,Emilia Romagna,040,Forlì-Cesena,SS31001,SS 310 -  del Bidente,0,0,0,0,0,1,0,1,1,1,3,0,2,2,0,1,2,1,4,1,0,0,0,0,0,20
+08,Emilia Romagna,040,Forlì-Cesena,SS72601,SS 726 -  Tangenziale di Cesena,0,0,0,0,0,0,0,2,1,2,1,0,0,0,1,1,2,0,0,0,0,0,0,0,0,10
+08,Emilia Romagna,040,Forlì-Cesena,SS72701,SS 727 -  Tangenziale di Forlì,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,1,1,1,0,0,0,0,0,0,5
+08,Emilia Romagna,040,Forlì-Cesena,SS72702,SS 727 bis -  Tangenziale di Forlì,0,0,0,0,1,0,2,1,3,0,0,1,0,0,1,2,0,1,0,1,2,0,0,0,0,15
+08,Emilia Romagna,099,Rimini,AA01401,A 14 -  Bologna-Taranto (Autostrada Adriatica),0,0,2,1,0,1,2,0,0,3,2,0,3,0,1,2,1,0,7,4,0,2,1,1,0,33
+08,Emilia Romagna,099,Rimini,SS00901,SS 009 -  via Emilia,1,3,1,0,1,0,2,3,5,5,3,1,3,0,5,2,3,4,3,0,2,2,1,1,0,51
+08,Emilia Romagna,099,Rimini,SS01601,SS 016 -  Adriatica,5,3,2,1,3,1,4,2,9,12,7,5,8,7,7,10,13,17,15,11,4,4,2,6,0,158
+08,Emilia Romagna,099,Rimini,SS07201,SS 072 -  di San Marino,0,1,1,0,0,1,1,0,1,1,0,0,1,1,3,2,2,1,0,1,0,0,0,0,0,17
+08,Emilia Romagna,099,Rimini,SS25801,SS 258 -  Marecchia,4,0,0,1,0,1,1,4,6,3,5,5,5,4,5,4,8,3,6,5,1,1,0,0,0,72
+09,Toscana,045,Massa-Carrara,AA01201,A 12 -  Genova-Roma (tratto Genova-Rosignano),2,0,0,0,0,0,0,1,1,1,0,1,1,3,0,1,0,0,3,1,0,1,0,0,0,16
+09,Toscana,045,Massa-Carrara,AA01501,A 15 -  Parma-La Spezia (Autostrada della Cisa),0,1,0,0,0,0,1,0,1,0,0,1,1,0,4,2,1,1,2,2,2,0,0,0,0,19
+09,Toscana,045,Massa-Carrara,SS00101,SS 001 -  via Aurelia,0,0,1,0,0,0,1,1,0,0,0,1,2,0,0,0,2,1,3,0,2,2,1,0,0,17
+09,Toscana,045,Massa-Carrara,SS06201,SS 062 -  della Cisa,0,0,0,1,0,0,0,1,2,0,2,4,1,0,1,0,0,2,3,0,1,0,1,0,0,19
+09,Toscana,045,Massa-Carrara,SS06301,SS 063 -  del Valico del Cerreto,1,0,0,0,0,0,0,0,1,0,2,0,1,1,0,1,1,0,0,0,0,1,0,0,0,9
+09,Toscana,045,Massa-Carrara,SS33001,SS 330 -  di Buonviaggio,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0,1,1,0,0,0,0,0,5
+09,Toscana,045,Massa-Carrara,SS44501,SS 445 -  della Garfagnana,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+09,Toscana,045,Massa-Carrara,SS66501,SS 665 -  Massese,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+09,Toscana,046,Lucca,AA01101,A 11 -  Firenze-Pisa Nord (Firenze Mare),2,1,0,0,2,0,4,1,1,4,0,0,2,1,1,1,2,2,3,1,2,3,0,2,0,35
+09,Toscana,046,Lucca,AA01112,A 11 / A 12 -  Diramazione Lucca-Viareggio,0,0,0,0,0,0,0,0,3,3,2,0,2,0,1,1,2,1,0,0,0,0,1,1,0,17
+09,Toscana,046,Lucca,AA01201,A 12 -  Genova-Roma (tratto Genova-Rosignano),1,0,0,0,0,2,0,0,4,6,2,4,2,0,3,3,2,2,2,0,2,0,0,0,0,35
+09,Toscana,046,Lucca,SS00101,SS 001 -  via Aurelia,0,0,0,2,2,1,3,4,5,3,7,7,8,7,4,7,2,6,12,4,4,4,0,1,1,94
+09,Toscana,046,Lucca,SS01201,SS 012 -  dell'Abetone e del Brennero,0,0,0,1,0,1,0,9,1,3,1,3,3,1,4,5,2,3,3,1,1,1,2,3,0,48
+09,Toscana,046,Lucca,SS01228,SS 012 radd -  dell'Abetone e del Brennero,1,0,0,0,0,0,0,0,1,0,0,0,0,1,1,0,0,0,0,1,1,1,0,0,0,7
+09,Toscana,046,Lucca,SS43501,SS 435 -  Lucchese,0,0,0,1,1,0,0,2,1,3,2,1,2,1,3,1,3,10,2,1,2,0,0,0,0,36
+09,Toscana,046,Lucca,SS43901,SS 439 -  Sarzanese Valdera,3,1,2,0,2,1,3,5,2,5,4,6,12,10,3,4,8,11,15,1,1,2,1,2,1,105
+09,Toscana,046,Lucca,SS44501,SS 445 -  della Garfagnana,1,0,0,0,0,0,0,2,1,2,1,0,0,1,2,0,0,4,0,3,0,0,0,0,0,17
+09,Toscana,047,Pistoia,AA01101,A 11 -  Firenze-Pisa Nord (Firenze Mare),1,1,3,0,5,0,0,1,1,3,3,1,1,3,2,1,2,3,1,2,0,4,1,3,0,42
+09,Toscana,047,Pistoia,SS01201,SS 012 -  dell'Abetone e del Brennero,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,1,1,0,0,0,0,0,0,4
+09,Toscana,047,Pistoia,SS06401,SS 064 -  Porrettana,0,0,0,0,0,1,2,0,0,2,2,1,2,5,1,2,0,0,0,0,0,0,0,0,1,19
+09,Toscana,047,Pistoia,SS06601,SS 066 -  Pistoiese,0,0,0,0,0,0,1,1,2,0,4,5,2,0,0,1,5,0,3,0,3,2,0,1,0,30
+09,Toscana,047,Pistoia,SS43501,SS 435 -  Lucchese,2,0,2,0,0,0,2,4,3,6,9,5,3,8,6,3,6,9,4,6,1,0,0,0,0,79
+09,Toscana,047,Pistoia,SS43601,SS 436 -  Francesca,0,0,0,0,0,1,0,2,2,0,1,6,0,2,1,2,1,2,6,1,1,0,0,0,0,28
+09,Toscana,047,Pistoia,SS63301,SS 633 -  Mammianese-Marlianese,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,3
+09,Toscana,047,Pistoia,SS71601,SS 716 -  Raccordo di Pistoia,0,0,0,0,0,1,0,2,1,0,0,0,2,1,1,1,0,2,2,0,0,0,0,0,0,13
+09,Toscana,048,Firenze,AA00101,A 01 -  Milano-Roma-Napoli (Autostrada del Sole),6,4,0,4,2,2,5,8,8,16,5,15,11,10,9,12,10,14,15,7,6,1,5,2,0,177
+09,Toscana,048,Firenze,AA01101,A 11 -  Firenze-Pisa Nord (Firenze Mare),0,0,0,0,1,1,1,1,3,2,1,0,1,0,0,0,0,2,8,0,0,3,0,0,0,24
+09,Toscana,048,Firenze,GC00101,S.G.C. Firenze-Pisa-Livorno (tratto Firenze-Livorno),3,3,3,3,1,1,2,5,15,5,4,5,3,9,6,4,4,6,10,8,3,2,0,0,0,105
+09,Toscana,048,Firenze,RA00301,Raccordo Autostradale Siena-Firenze,0,1,0,0,0,4,2,3,3,2,1,0,1,2,2,2,4,2,0,1,0,1,0,2,0,33
+09,Toscana,048,Firenze,SS00201,SS 002 -  via Cassia,0,0,0,0,0,0,2,2,3,0,1,1,0,2,3,3,2,0,1,1,0,0,0,0,0,21
+09,Toscana,048,Firenze,SS06501,SS 065 -  della Futa,0,0,0,0,0,0,2,2,1,5,4,3,1,1,2,2,3,2,2,0,1,0,0,0,1,32
+09,Toscana,048,Firenze,SS06601,SS 066 -  Pistoiese,0,0,0,0,0,0,1,6,4,2,0,0,2,1,1,0,3,3,2,2,3,1,0,2,9,42
+09,Toscana,048,Firenze,SS06701,SS 067 -  Tosco Romagnola,0,1,0,0,0,0,3,12,2,9,2,1,9,4,4,4,4,7,8,5,3,2,0,0,1,81
+09,Toscana,048,Firenze,SS06901,SS 069 -  di Val d'Arno,0,0,0,1,0,0,0,2,6,5,2,5,3,4,1,3,3,5,2,2,0,0,1,0,0,45
+09,Toscana,048,Firenze,SS07001,SS 070 -  della Consuma,0,0,0,0,0,0,0,0,0,1,0,3,1,2,0,0,2,2,1,0,1,0,0,0,0,13
+09,Toscana,048,Firenze,SS22201,SS 222 -  Chiantigiana,1,0,0,0,0,1,0,0,0,0,4,3,4,6,2,4,4,5,4,1,1,0,0,1,0,41
+09,Toscana,048,Firenze,SS30201,SS 302 -  Brisighellese Ravennate,0,0,0,0,0,0,0,2,1,1,3,1,1,3,2,1,2,1,2,1,2,0,0,0,1,24
+09,Toscana,048,Firenze,SS30601,SS 306 -  Casolana Riolese,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,2
+09,Toscana,048,Firenze,SS32501,SS 325 -  di Val di Setta e Val di Bisenzio,0,0,1,0,0,0,0,0,0,1,0,0,0,1,0,2,0,0,0,4,2,0,0,0,0,11
+09,Toscana,048,Firenze,SS42901,SS 429 -  di Val d'Elsa,1,0,0,0,0,1,0,1,1,2,1,3,2,0,3,3,2,0,3,1,1,0,0,0,0,25
+09,Toscana,048,Firenze,SS43601,SS 436 -  Francesca,0,0,0,0,0,1,0,0,0,0,2,0,0,1,0,1,3,1,2,0,0,0,0,0,0,11
+09,Toscana,048,Firenze,SS50301,SS 503 -  del Passo del Giogo,0,0,0,0,0,1,1,1,0,0,0,2,1,3,0,3,3,2,1,0,0,0,0,0,0,18
+09,Toscana,048,Firenze,SS55101,SS 551 -  Traversa del Mugello,0,0,0,0,0,1,1,1,6,1,3,5,2,6,0,0,1,4,5,0,1,0,1,0,1,39
+09,Toscana,048,Firenze,SS55601,SS 556 -  Londa-Stia,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,3
+09,Toscana,048,Firenze,SS61001,SS 610 -  Selice o Montanara Imolese,0,0,0,0,0,0,0,1,1,0,1,0,1,1,1,1,0,0,0,0,0,0,0,0,0,7
+09,Toscana,049,Livorno,AA01201,A 12 -  Genova-Roma (tratto Genova-Rosignano),1,0,0,0,1,0,1,0,2,1,2,2,0,1,0,1,1,0,0,0,1,0,0,0,0,14
+09,Toscana,049,Livorno,AA01212,A 12 -  Diramazione per Livorno,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1
+09,Toscana,049,Livorno,GC00101,S.G.C. Firenze-Pisa-Livorno (tratto Firenze-Livorno),0,1,1,0,1,0,0,2,0,0,2,1,0,0,0,1,1,1,1,1,1,0,0,1,0,15
+09,Toscana,049,Livorno,SS00101,SS 001 -  via Aurelia,1,3,1,3,0,1,4,3,10,7,7,8,11,5,5,7,3,12,8,6,4,6,2,2,0,119
+09,Toscana,049,Livorno,SS06702,SS 067 bis -  Tosco Romagnola,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,1,0,0,0,3
+09,Toscana,049,Livorno,SS06801,SS 068 -  di Val Cecina,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,4
+09,Toscana,049,Livorno,SS20601,SS 206 -  Pisana-Livornese,2,0,0,0,0,0,0,0,3,1,1,6,2,1,2,1,6,3,4,3,0,1,0,0,0,36
+09,Toscana,049,Livorno,SS32901,SS 329 -  del Passo Bocca di Valle,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,4
+09,Toscana,049,Livorno,SS39801,SS 398 -  di Val di Cornia,1,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,1,0,0,0,1,0,1,1,0,11
+09,Toscana,049,Livorno,SS55501,SS 555 -  delle Colline,0,0,0,0,0,0,0,1,0,2,0,0,0,1,0,1,0,0,0,1,1,0,0,0,0,7
+09,Toscana,050,Pisa,AA01101,A 11 -  Firenze-Pisa Nord (Firenze Mare),0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,1,0,4
+09,Toscana,050,Pisa,AA01201,A 12 -  Genova-Roma (tratto Genova-Rosignano),1,1,0,0,0,0,0,2,0,0,1,2,1,4,3,0,3,0,0,0,0,1,0,0,0,19
+09,Toscana,050,Pisa,GC00101,S.G.C. Firenze-Pisa-Livorno (tratto Firenze-Livorno),1,2,1,2,3,2,2,0,6,4,2,6,1,4,4,1,5,6,3,2,0,0,0,2,0,59
+09,Toscana,050,Pisa,GC00102,S.G.C. Firenze-Pisa-Livorno (Diramazione per Pisa),2,3,0,3,1,0,1,1,8,5,1,2,5,1,4,1,2,0,2,3,5,0,1,0,0,51
+09,Toscana,050,Pisa,SS00101,SS 001 -  via Aurelia,0,0,1,0,0,1,1,3,2,3,4,1,0,2,2,2,7,7,4,5,2,3,1,1,0,52
+09,Toscana,050,Pisa,SS01201,SS 012 -  dell'Abetone e del Brennero,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,3,0,0,0,0,0,0,5
+09,Toscana,050,Pisa,SS01228,SS 012 radd -  dell'Abetone e del Brennero,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,2
+09,Toscana,050,Pisa,SS06701,SS 067 -  Tosco Romagnola,5,2,3,0,1,0,2,7,14,8,10,11,8,6,6,5,5,7,12,10,7,0,0,2,0,131
+09,Toscana,050,Pisa,SS06702,SS 067 bis -  Tosco Romagnola,0,0,0,0,0,0,1,1,0,0,0,0,0,0,1,0,1,1,1,1,0,0,1,0,0,8
+09,Toscana,050,Pisa,SS06801,SS 068 -  di Val Cecina,0,0,0,0,0,0,1,1,3,0,2,0,3,2,0,1,1,4,1,1,0,0,0,1,0,21
+09,Toscana,050,Pisa,SS20601,SS 206 -  Pisana-Livornese,0,0,0,0,0,0,0,0,1,1,1,2,2,1,0,0,2,3,2,1,0,0,0,1,0,17
+09,Toscana,050,Pisa,SS22401,SS 224 -  di Marina di Pisa,0,0,0,1,0,0,1,0,0,2,1,3,0,3,1,1,1,2,2,0,1,2,0,0,0,21
+09,Toscana,050,Pisa,SS32901,SS 329 -  del Passo Bocca di Valle,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1
+09,Toscana,050,Pisa,SS43601,SS 436 -  Francesca,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+09,Toscana,050,Pisa,SS43901,SS 439 -  Sarzanese Valdera,0,3,1,1,0,0,0,5,9,5,6,5,5,3,0,4,5,7,4,3,1,1,0,1,1,70
+09,Toscana,050,Pisa,SS43905,SS 439 dir -  Sarzanese Valdera,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1
+09,Toscana,051,Arezzo,AA00101,A 01 -  Milano-Roma-Napoli (Autostrada del Sole),4,1,1,1,1,1,0,1,0,3,2,1,4,4,3,5,4,1,1,2,0,1,3,1,0,45
+09,Toscana,051,Arezzo,RA00601,Raccordo Autostradale Bettolle-Perugia,0,0,0,0,1,0,0,0,0,0,0,1,0,1,0,0,0,1,0,0,0,0,0,0,0,4
+09,Toscana,051,Arezzo,SS00302,SS 003 bis -  Tiberina,1,0,0,0,0,0,1,1,0,0,1,1,0,0,0,2,2,2,1,0,0,0,0,0,0,12
+09,Toscana,051,Arezzo,SS06901,SS 069 -  di Val d'Arno,1,0,0,0,1,0,0,1,1,1,6,0,2,2,2,3,1,3,6,3,3,0,0,0,0,36
+09,Toscana,051,Arezzo,SS07001,SS 070 -  della Consuma,0,0,0,0,0,0,0,1,0,1,0,0,0,0,2,0,3,2,2,0,0,0,0,0,0,11
+09,Toscana,051,Arezzo,SS07101,SS 071 -  Umbro Casentinese Romagnola,0,0,0,0,1,2,3,5,2,7,1,6,11,8,6,10,7,11,12,6,3,2,3,4,0,110
+09,Toscana,051,Arezzo,SS07301,SS 073 -  Senese Aretina,1,0,0,0,0,0,0,5,4,4,1,4,3,6,4,7,5,4,8,3,1,0,0,3,0,63
+09,Toscana,051,Arezzo,SS07502,SS 075 bis -  del Trasimeno,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1
+09,Toscana,051,Arezzo,SS20801,SS 208 -  Strada della Verna,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0,0,0,0,0,0,3
+09,Toscana,051,Arezzo,SS22101,SS 221 -  di Monterchi,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1
+09,Toscana,051,Arezzo,SS25801,SS 258 -  Marecchia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,2,0,0,0,0,0,0,3
+09,Toscana,051,Arezzo,SS31001,SS 310 -  del Bidente,0,0,0,0,0,0,0,2,0,2,0,0,0,1,0,0,0,1,1,1,0,1,0,0,0,9
+09,Toscana,051,Arezzo,SS32701,SS 327 -  di Foiano,1,1,1,1,0,0,1,1,2,0,1,0,0,1,1,4,1,1,4,1,2,2,0,0,0,26
+09,Toscana,051,Arezzo,SS40801,SS 408 -  di Montevarchi,0,0,0,0,0,0,1,0,0,0,0,0,0,2,0,0,0,1,0,0,1,0,0,0,0,5
+09,Toscana,051,Arezzo,SS54001,SS 540 -  Valdambra,0,0,0,0,0,0,0,1,0,0,1,1,0,0,1,0,0,0,1,0,0,0,1,0,0,6
+09,Toscana,051,Arezzo,SS55601,SS 556 -  Londa-Stia,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,2
+09,Toscana,051,Arezzo,SS67901,SS 679 -  Arezzo-Battifolle,0,0,0,1,0,0,0,1,1,0,0,0,1,0,1,0,1,1,1,0,0,0,0,0,0,8
+09,Toscana,051,Arezzo,SS68001,SS 680 -  San Zeno-Monte San Savino,0,0,0,0,0,0,0,1,0,0,0,0,2,0,0,0,1,1,0,1,0,0,0,0,0,6
+09,Toscana,052,Siena,AA00101,A 01 -  Milano-Roma-Napoli (Autostrada del Sole),2,0,0,2,0,3,1,0,1,0,2,2,3,1,3,0,4,4,0,0,0,0,0,2,1,31
+09,Toscana,052,Siena,RA00301,Raccordo Autostradale Siena-Firenze,1,0,0,1,0,0,1,3,1,1,5,4,1,0,2,1,0,0,1,3,0,2,1,2,0,30
+09,Toscana,052,Siena,SS00201,SS 002 -  via Cassia,1,1,0,1,0,0,1,2,2,4,3,4,2,2,2,0,3,7,5,2,2,0,1,2,0,47
+09,Toscana,052,Siena,SS06801,SS 068 -  di Val Cecina,0,0,0,0,0,0,0,1,0,0,0,0,1,1,1,1,1,1,0,0,1,0,1,0,0,9
+09,Toscana,052,Siena,SS07301,SS 073 -  Senese Aretina,0,0,0,0,0,0,1,4,2,4,3,2,3,1,0,1,3,2,3,0,1,0,0,0,0,30
+09,Toscana,052,Siena,SS14601,SS 146 -  di Chianciano,1,0,0,0,0,0,0,3,2,1,2,3,1,2,2,0,3,4,3,1,0,0,0,0,0,28
+09,Toscana,052,Siena,SS22201,SS 222 -  Chiantigiana,0,0,0,0,0,1,0,0,1,0,2,2,0,0,0,1,2,1,0,0,0,2,0,0,0,12
+09,Toscana,052,Siena,SS22301,SS 223 -  di Paganico,0,0,0,0,0,0,1,1,2,2,1,5,1,0,0,3,0,1,2,1,0,0,0,0,0,20
+09,Toscana,052,Siena,SS32101,SS 321 -  del Polacco,0,0,0,0,0,0,0,0,0,0,2,3,0,0,0,0,0,1,1,0,0,0,0,0,0,7
+09,Toscana,052,Siena,SS32601,SS 326 -  di Rapolano,2,0,0,0,0,0,0,2,1,2,3,5,1,0,1,1,1,1,1,2,0,0,0,0,0,23
+09,Toscana,052,Siena,SS32701,SS 327 -  di Foiano,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,1,0,2,1,0,0,0,0,7
+09,Toscana,052,Siena,SS40801,SS 408 -  di Montevarchi,0,0,0,0,0,0,0,1,1,0,2,1,0,1,0,0,2,0,1,0,0,0,0,0,0,9
+09,Toscana,052,Siena,SS42901,SS 429 -  di Val d'Elsa,0,0,0,0,0,1,0,2,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,5
+09,Toscana,052,Siena,SS43801,SS 438 -  Lauretana,0,0,0,0,0,0,0,0,1,0,0,0,2,1,0,2,0,0,0,0,0,0,0,0,0,6
+09,Toscana,052,Siena,SS44101,SS 441 -  Massetana,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,1,0,1,0,5
+09,Toscana,052,Siena,SS47801,SS 478 -  di Sarteano,1,0,0,0,0,0,0,1,0,0,0,0,1,0,1,0,0,0,1,1,0,0,0,0,0,6
+09,Toscana,052,Siena,SS48401,SS 484 -  di Castello di Brolio,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1
+09,Toscana,052,Siena,SS54101,SS 541 -  Traversa Maremmana,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,2,1,1,0,0,0,1,0,0,8
+09,Toscana,052,Siena,SS67401,SS 674 -  Tangenziale Ovest di Siena,0,0,0,0,0,0,1,1,0,1,3,0,0,0,1,0,0,1,0,0,1,0,0,0,0,9
+09,Toscana,052,Siena,SS71501,SS 715 -  Siena-Bettolle,0,0,1,0,1,1,0,4,2,2,0,5,2,0,0,1,1,2,1,0,1,0,0,0,0,24
+09,Toscana,053,Grosseto,SS00101,SS 001 -  via Aurelia,2,0,4,2,0,2,3,1,3,4,2,1,5,3,7,8,3,2,4,3,7,1,3,0,0,70
+09,Toscana,053,Grosseto,SS07401,SS 074 -  Maremmana,0,0,0,0,0,0,2,1,2,1,0,0,1,2,0,1,1,3,1,0,0,0,0,0,0,15
+09,Toscana,053,Grosseto,SS22301,SS 223 -  di Paganico,2,0,0,0,1,1,1,0,2,0,0,0,1,1,2,1,0,0,1,4,0,0,1,1,0,19
+09,Toscana,053,Grosseto,SS32201,SS 322 -  delle Collacchie,1,1,0,1,0,0,1,3,5,2,2,2,2,0,5,4,2,1,2,1,2,0,0,0,0,37
+09,Toscana,053,Grosseto,SS32301,SS 323 -  di Monte Amiata,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,4
+09,Toscana,053,Grosseto,SS43901,SS 439 -  Sarzanese Valdera,0,0,0,2,0,0,0,2,1,1,1,0,2,1,1,1,1,1,0,0,0,0,0,0,0,14
+09,Toscana,053,Grosseto,SS44001,SS 440 -  di Porto S. Stefano,0,0,0,1,0,0,1,3,0,0,2,1,4,0,0,1,1,4,0,0,0,1,0,0,0,19
+09,Toscana,053,Grosseto,SS44101,SS 441 -  Massetana,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,1,0,0,0,3
+09,Toscana,100,Prato,AA01101,A 11 -  Firenze-Pisa Nord (Firenze Mare),1,0,1,0,0,1,0,1,1,1,2,1,1,1,0,0,3,2,0,0,1,0,0,1,0,18
+09,Toscana,100,Prato,SS06601,SS 066 -  Pistoiese,0,2,0,0,0,0,0,1,2,1,1,1,1,1,3,1,1,0,0,1,0,0,0,0,0,16
+09,Toscana,100,Prato,SS32501,SS 325 -  di Val di Setta e Val di Bisenzio,0,0,0,0,0,0,0,3,1,1,0,2,0,6,2,3,1,5,2,1,0,0,1,2,0,30
+10,Umbria,054,Perugia,AA00101,A 01 -  Milano-Roma-Napoli (Autostrada del Sole),0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1
+10,Umbria,054,Perugia,RA00601,Raccordo Autostradale Bettolle-Perugia,0,0,1,1,0,1,0,1,6,5,7,8,5,4,2,3,1,4,5,2,2,0,0,1,0,59
+10,Umbria,054,Perugia,SS00301,SS 003 -  via Flaminia,2,1,2,0,0,0,1,1,4,3,5,4,5,3,6,2,4,3,2,2,1,4,1,1,0,57
+10,Umbria,054,Perugia,SS00302,SS 003 bis -  Tiberina,2,7,2,0,2,2,4,2,11,2,5,1,5,6,6,2,8,6,6,1,3,4,0,0,0,87
+10,Umbria,054,Perugia,SS07101,SS 071 -  Umbro Casentinese Romagnola,1,0,0,0,1,0,1,1,1,1,1,1,4,2,0,3,1,1,2,2,2,0,0,0,0,25
+10,Umbria,054,Perugia,SS07302,SS 073 bis -  di Bocca Trabaria,0,0,0,0,0,0,0,0,0,0,0,2,0,1,0,0,0,0,0,0,0,0,0,0,0,3
+10,Umbria,054,Perugia,SS07501,SS 075 -  Centrale Umbra,2,2,1,0,0,2,0,1,0,2,1,1,2,4,2,3,2,5,2,2,3,2,0,0,0,39
+10,Umbria,054,Perugia,SS07502,SS 075 bis -  del Trasimeno,0,0,0,1,0,0,0,1,3,0,0,0,0,2,1,3,4,5,1,0,0,1,0,2,0,24
+10,Umbria,054,Perugia,SS07522,SS 075 bis/racc -  del Trasimeno,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+10,Umbria,054,Perugia,SS07601,SS 076 -  della Val d'Esino,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,1,0,0,0,0,0,0,0,0,3
+10,Umbria,054,Perugia,SS07701,SS 077 -  della Val di Chienti,0,1,0,0,0,0,0,1,0,0,1,1,1,0,1,0,0,2,0,0,0,0,0,0,0,8
+10,Umbria,054,Perugia,SS07902,SS 079 bis -  Orvietana,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,2
+10,Umbria,054,Perugia,SS14701,SS 147 -  di Assisi,0,0,0,0,0,0,0,0,1,0,1,1,1,3,0,0,0,1,0,2,2,0,0,0,0,12
+10,Umbria,054,Perugia,SS14705,SS 147 dir -  di Assisi,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2
+10,Umbria,054,Perugia,SS20901,SS 209 -  Valnerina,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,1,0,0,0,0,0,0,0,3
+10,Umbria,054,Perugia,SS21901,SS 219 -  di Gubbio e Pian d'Assino,0,0,0,0,0,1,0,1,1,1,2,2,1,0,1,1,2,2,1,3,1,0,0,0,0,20
+10,Umbria,054,Perugia,SS22001,SS 220 -  Pievaiola,0,1,0,1,0,0,1,1,2,2,2,2,1,1,2,0,1,1,4,4,1,0,1,1,0,29
+10,Umbria,054,Perugia,SS22101,SS 221 -  di Monterchi,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,1,0,0,1,0,0,0,0,0,5
+10,Umbria,054,Perugia,SS25701,SS 257 -  Apecchiese,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1
+10,Umbria,054,Perugia,SS29801,SS 298 -  Eugubina,0,0,0,0,0,0,0,1,1,1,0,0,2,3,3,0,2,1,0,1,0,0,0,0,0,15
+10,Umbria,054,Perugia,SS31601,SS 316 -  dei Monti Martani,0,1,0,0,0,0,0,0,1,0,0,2,1,2,0,0,1,2,0,1,0,0,0,0,0,11
+10,Umbria,054,Perugia,SS31701,SS 317 -  Marscianese,0,0,0,0,0,0,0,0,2,0,1,1,1,0,0,0,1,2,0,0,0,0,0,1,0,9
+10,Umbria,054,Perugia,SS31801,SS 318 -  di Valfabbrica,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,1,2,0,0,1,0,0,0,0,6
+10,Umbria,054,Perugia,SS31901,SS 319 -  Sellanese,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1
+10,Umbria,054,Perugia,SS32001,SS 320 -  di Cascia,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+10,Umbria,054,Perugia,SS39701,SS 397 -  di Monte Molino,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,2
+10,Umbria,054,Perugia,SS41601,SS 416 -  del Niccone,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,1,1,1,0,0,0,0,0,0,0,5
+10,Umbria,054,Perugia,SS41801,SS 418 -  Spoletina,0,0,1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,3
+10,Umbria,054,Perugia,SS44401,SS 444 -  del Subasio,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,4
+10,Umbria,054,Perugia,SS44801,SS 448 -  di Baschi,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,2
+10,Umbria,054,Perugia,SS45201,SS 452 -  della Contessa,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,3
+10,Umbria,054,Perugia,SS59901,SS 599 -  del Trasimeno Inferiore,0,0,0,0,0,0,1,1,0,1,1,2,1,0,1,0,2,0,0,1,0,0,0,0,0,11
+10,Umbria,054,Perugia,SS68501,SS 685 -  delle Tre Valli Umbre,0,0,0,1,0,0,0,1,1,1,2,1,2,2,2,1,1,2,4,2,1,0,0,0,0,24
+10,Umbria,055,Terni,AA00101,A 01 -  Milano-Roma-Napoli (Autostrada del Sole),1,2,1,1,0,1,1,4,2,1,2,1,5,1,0,3,3,1,1,1,0,1,0,0,0,33
+10,Umbria,055,Terni,SS00301,SS 003 -  via Flaminia,0,0,0,0,0,0,1,0,1,2,1,1,0,1,0,1,2,0,3,0,0,0,0,0,0,13
+10,Umbria,055,Terni,SS00302,SS 003 bis -  Tiberina,0,0,0,0,0,0,0,0,1,0,3,6,2,1,3,1,2,2,0,0,0,0,0,0,0,21
+10,Umbria,055,Terni,SS00303,SS 003 ter -  di Narni e San Gemini,1,0,0,0,0,0,0,0,0,1,1,0,3,1,1,1,1,2,3,0,0,0,0,0,0,15
+10,Umbria,055,Terni,SS07101,SS 071 -  Umbro Casentinese Romagnola,0,0,0,0,0,0,1,1,2,2,2,2,4,1,0,0,0,2,3,1,0,0,0,0,0,21
+10,Umbria,055,Terni,SS07401,SS 074 -  Maremmana,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1
+10,Umbria,055,Terni,SS07901,SS 079 -  Ternana,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,2,0,0,0,0,0,0,0,0,4
+10,Umbria,055,Terni,SS07902,SS 079 bis -  Orvietana,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,2
+10,Umbria,055,Terni,SS07941,SS 079 bis -  Ternana,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+10,Umbria,055,Terni,SS20401,SS 204 -  Narnese,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,2
+10,Umbria,055,Terni,SS20501,SS 205 -  Amerina,0,1,1,0,2,0,0,3,0,2,2,1,1,2,0,0,3,3,1,1,0,1,0,0,0,24
+10,Umbria,055,Terni,SS20901,SS 209 -  Valnerina,0,0,0,0,0,0,1,0,2,1,2,4,3,1,0,0,3,3,0,1,0,0,0,0,0,21
+10,Umbria,055,Terni,SS31301,SS 313 -  di Passo Corese,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,3
+10,Umbria,055,Terni,SS31701,SS 317 -  Marscianese,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+10,Umbria,055,Terni,SS44801,SS 448 -  di Baschi,0,0,0,0,0,0,1,0,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,4
+10,Umbria,055,Terni,SS67501,SS 675 -  Umbro-Laziale,0,1,1,0,2,1,1,4,2,3,5,1,3,2,1,0,3,3,0,0,0,0,1,0,0,34
+11,Marche,041,Pesaro-Urbino,AA01401,A 14 -  Bologna-Taranto (Autostrada Adriatica),0,1,2,0,1,2,1,2,3,3,1,0,1,1,3,0,5,0,2,2,1,0,1,1,0,33
+11,Marche,041,Pesaro-Urbino,SS00301,SS 003 -  via Flaminia,1,0,0,0,0,3,3,0,3,3,3,2,3,4,0,3,1,9,7,3,0,2,0,0,0,50
+11,Marche,041,Pesaro-Urbino,SS01601,SS 016 -  Adriatica,1,0,0,0,0,2,2,4,5,3,5,9,1,0,5,5,3,5,10,5,2,5,1,2,0,75
+11,Marche,041,Pesaro-Urbino,SS07302,SS 073 bis -  di Bocca Trabaria,0,0,1,0,1,1,0,2,3,0,4,4,3,1,2,1,3,0,0,4,0,0,3,3,0,36
+11,Marche,041,Pesaro-Urbino,SS07336,SS 073 bis/var -  di Urbino,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+11,Marche,041,Pesaro-Urbino,SS25701,SS 257 -  Apecchiese,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,3,0,1,2,0,1,0,0,0,0,10
+11,Marche,041,Pesaro-Urbino,SS42301,SS 423 -  Urbinate,1,2,0,0,0,0,2,1,4,0,0,3,6,1,2,1,2,2,5,3,2,0,0,2,0,39
+11,Marche,041,Pesaro-Urbino,SS42401,SS 424 -  della Val Cesano,0,0,1,0,0,0,0,0,1,3,1,2,2,3,1,1,2,3,2,2,0,0,0,1,0,25
+11,Marche,041,Pesaro-Urbino,SS45201,SS 452 -  della Contessa,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1
+11,Marche,042,Ancona,AA01401,A 14 -  Bologna-Taranto (Autostrada Adriatica),0,0,0,2,0,0,4,3,2,0,3,2,3,2,5,3,3,1,1,2,3,1,0,0,0,40
+11,Marche,042,Ancona,SS01601,SS 016 -  Adriatica,6,0,1,2,1,2,3,2,13,7,8,6,3,3,6,4,6,9,12,4,3,2,1,2,0,106
+11,Marche,042,Ancona,SS07601,SS 076 -  della Val d'Esino,2,0,0,0,0,2,0,1,6,0,1,3,2,3,2,3,2,1,5,1,0,0,0,1,0,35
+11,Marche,042,Ancona,SS07705,SS 077 dir -  della Val di Chienti,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0,0,0,0,1,0,0,0,0,0,0,4
+11,Marche,042,Ancona,SS25601,SS 256 -  Muccese,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,2
+11,Marche,042,Ancona,SS36001,SS 360 -  Arceviese,0,0,0,0,0,1,2,0,0,2,2,0,2,2,2,2,0,1,1,1,0,0,1,0,0,19
+11,Marche,042,Ancona,SS36101,SS 361 -  Septempedana,2,0,0,1,0,1,1,0,2,1,1,4,2,1,0,1,1,3,1,1,1,0,0,0,0,24
+11,Marche,042,Ancona,SS36201,SS 362 -  Jesina,1,0,0,0,0,1,1,3,0,0,3,1,1,5,1,1,1,0,3,0,0,0,0,0,0,22
+11,Marche,042,Ancona,SS42401,SS 424 -  della Val Cesano,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,2,1,1,0,0,0,0,0,6
+11,Marche,042,Ancona,SS50201,SS 502 -  di Cingoli,0,0,0,0,0,0,0,0,0,0,2,1,0,0,0,0,0,1,0,0,0,0,0,0,0,4
+11,Marche,043,Macerata,AA01401,A 14 -  Bologna-Taranto (Autostrada Adriatica),0,0,1,1,0,0,1,2,0,0,0,1,0,0,1,1,0,0,0,0,0,2,0,0,0,10
+11,Marche,043,Macerata,SS01601,SS 016 -  Adriatica,1,3,1,0,0,0,2,2,2,1,5,2,4,6,1,0,1,2,1,4,2,1,0,1,0,42
+11,Marche,043,Macerata,SS07701,SS 077 -  della Val di Chienti,1,1,0,0,0,3,0,2,3,3,0,1,1,2,3,2,5,3,5,2,2,1,1,0,0,41
+11,Marche,043,Macerata,SS07705,SS 077 dir -  della Val di Chienti,0,0,0,1,0,0,0,2,2,2,2,3,4,1,1,2,0,2,1,2,4,2,0,0,1,32
+11,Marche,043,Macerata,SS07801,SS 078 -  Picena,0,0,1,1,0,1,2,0,4,3,1,2,1,1,0,0,1,1,1,2,0,0,0,1,0,23
+11,Marche,043,Macerata,SS20901,SS 209 -  Valnerina,0,0,0,0,0,0,0,0,0,2,0,1,0,0,1,0,0,1,0,0,0,0,0,0,0,5
+11,Marche,043,Macerata,SS21001,SS 210 -  Fermana Faleriense,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1
+11,Marche,043,Macerata,SS25601,SS 256 -  Muccese,0,0,0,0,0,0,0,2,4,1,2,2,0,0,4,0,1,4,1,0,2,0,0,0,0,23
+11,Marche,043,Macerata,SS36101,SS 361 -  Septempedana,0,0,0,0,0,0,1,1,3,2,1,1,5,0,1,4,1,4,5,1,1,2,1,1,0,35
+11,Marche,043,Macerata,SS36201,SS 362 -  Jesina,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,1,0,0,0,0,0,0,0,3
+11,Marche,043,Macerata,SS48501,SS 485 -  Corridonia Maceratese,2,0,0,0,2,0,0,2,2,0,2,5,1,2,1,1,1,4,3,0,2,2,1,0,0,33
+11,Marche,043,Macerata,SS50201,SS 502 -  di Cingoli,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,3
+11,Marche,043,Macerata,SS57101,SS 571 -  Helvia Recina,0,0,0,2,0,0,0,0,2,0,0,0,0,0,1,1,2,0,0,1,0,0,0,0,0,9
+11,Marche,044,Ascoli Piceno,AA01401,A 14 -  Bologna-Taranto (Autostrada Adriatica),1,1,1,1,0,0,1,1,2,5,1,2,4,1,3,3,1,2,1,1,0,2,1,0,0,35
+11,Marche,044,Ascoli Piceno,RA01101,Raccordo Autostradale Ascoli-Porto d'Ascoli,2,1,0,1,0,0,1,0,5,0,0,1,0,0,1,2,0,2,0,0,2,0,1,0,0,19
+11,Marche,044,Ascoli Piceno,SS00401,SS 004 -  via Salaria,4,1,0,2,0,1,2,4,5,4,0,2,5,5,1,3,3,1,2,3,1,0,3,1,0,53
+11,Marche,044,Ascoli Piceno,SS00421,SS 004 racc -  via Salaria,0,0,0,0,0,0,0,0,1,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,5
+11,Marche,044,Ascoli Piceno,SS01601,SS 016 -  Adriatica,0,0,0,1,0,1,0,5,2,1,2,4,3,4,1,2,1,1,8,3,1,2,2,0,0,44
+11,Marche,044,Ascoli Piceno,SS07801,SS 078 -  Picena,0,0,0,0,1,0,0,0,0,1,2,1,1,2,0,3,0,2,1,1,0,0,1,0,0,16
+11,Marche,044,Ascoli Piceno,SS08101,SS 081 -  Piceno Aprutina,0,0,0,0,0,0,0,0,1,1,0,2,1,0,0,0,0,1,0,0,1,0,0,0,0,7
+11,Marche,044,Ascoli Piceno,SS43301,SS 433 -  di Val d'Aso,0,0,0,0,0,0,1,0,0,1,0,1,2,0,0,0,0,0,0,1,1,0,0,0,0,7
+11,Marche,109,Fermo,AA01401,A 14 -  Bologna-Taranto (Autostrada Adriatica),1,0,1,0,2,1,3,2,3,2,2,3,2,1,2,4,2,2,2,3,0,0,3,0,0,41
+11,Marche,109,Fermo,SS01601,SS 016 -  Adriatica,3,2,2,0,0,0,1,3,4,5,5,2,1,4,4,3,1,3,3,4,3,1,2,2,0,58
+11,Marche,109,Fermo,SS07801,SS 078 -  Picena,0,0,0,0,0,0,1,1,0,1,0,2,0,0,1,0,0,0,0,0,0,0,0,0,0,6
+11,Marche,109,Fermo,SS21001,SS 210 -  Fermana Faleriense,2,0,1,0,0,0,0,1,1,1,3,9,4,4,1,1,4,5,6,6,5,0,0,0,1,55
+11,Marche,109,Fermo,SS43301,SS 433 -  di Val d'Aso,0,0,0,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,4
+12,Lazio,056,Viterbo,AA00101,A 01 -  Milano-Roma-Napoli (Autostrada del Sole),0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,2,0,0,0,1,1,1,0,0,7
+12,Lazio,056,Viterbo,SS00101,SS 001 -  via Aurelia,0,0,0,0,0,1,1,0,0,1,2,2,1,0,1,1,0,0,1,2,0,0,0,0,0,13
+12,Lazio,056,Viterbo,SS00102,SS 001 bis -  via Aurelia,0,0,0,0,0,0,0,1,0,1,0,0,2,0,1,1,2,2,1,0,0,0,0,0,0,11
+12,Lazio,056,Viterbo,SS00201,SS 002 -  via Cassia,0,1,1,3,0,0,1,7,9,3,5,7,7,7,6,2,6,10,5,4,1,0,1,2,1,89
+12,Lazio,056,Viterbo,SS00301,SS 003 -  via Flaminia,0,0,0,0,0,0,0,0,0,0,1,1,2,0,0,1,0,0,0,1,0,0,0,0,0,6
+12,Lazio,056,Viterbo,SS07401,SS 074 -  Maremmana,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,4
+12,Lazio,056,Viterbo,SS20401,SS 204 -  Narnese,0,0,0,0,0,0,0,2,1,0,0,0,0,0,0,1,1,1,2,1,0,0,1,1,0,11
+12,Lazio,056,Viterbo,SS31101,SS 311 -  Nepesina,0,0,0,0,0,1,1,0,0,2,3,0,2,0,1,0,1,0,0,0,1,0,2,0,0,14
+12,Lazio,056,Viterbo,SS31201,SS 312 -  Castrense,1,0,1,0,0,0,0,0,1,0,1,1,0,0,0,0,3,0,2,0,0,0,0,0,0,10
+12,Lazio,056,Viterbo,SS31501,SS 315 -  di Magliano Sabina,0,1,0,0,1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,4
+12,Lazio,056,Viterbo,SS48901,SS 489 -  di Gradoli,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1
+12,Lazio,056,Viterbo,SS49301,SS 493 -  via Claudia Braccianese,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1
+12,Lazio,056,Viterbo,SS67501,SS 675 -  Umbro-Laziale,0,0,0,0,1,2,0,1,2,0,1,2,0,2,2,1,1,1,3,1,0,2,1,1,0,24
+12,Lazio,057,Rieti,AA00101,A 01 -  Milano-Roma-Napoli (Autostrada del Sole),0,0,0,0,0,0,0,1,0,0,1,2,0,2,2,3,2,2,0,1,2,0,0,0,0,18
+12,Lazio,057,Rieti,AA02401,A 24 -  Roma-L'Aquila-Teramo,0,0,0,1,0,0,0,0,0,2,1,0,0,1,1,2,0,1,1,0,1,0,0,0,0,11
+12,Lazio,057,Rieti,AA02501,A 25 -  Torano-Pescara,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1
+12,Lazio,057,Rieti,SS00401,SS 004 -  via Salaria,1,0,0,0,0,1,2,0,5,4,2,0,1,5,5,4,3,8,1,1,2,0,0,1,0,46
+12,Lazio,057,Rieti,SS00402,SS 004 bis -  del Terminillo,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,1,1,1,0,0,0,5
+12,Lazio,057,Rieti,SS00405,SS 004 dir -  via Salaria,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+12,Lazio,057,Rieti,SS07901,SS 079 -  Ternana,1,0,0,0,0,1,1,0,0,0,0,0,0,0,2,0,0,1,0,1,1,0,0,0,0,8
+12,Lazio,057,Rieti,SS07934,SS 079 R -  Ternana,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1
+12,Lazio,057,Rieti,SS31301,SS 313 -  di Passo Corese,0,0,0,0,0,0,0,0,0,1,1,1,1,0,2,1,1,2,1,0,0,0,0,0,0,11
+12,Lazio,057,Rieti,SS31401,SS 314 -  Licinese,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,2
+12,Lazio,057,Rieti,SS47101,SS 471 -  di Leonessa,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,2
+12,Lazio,057,Rieti,SS57801,SS 578 -  Salto Cicolana,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,1,2,0,0,0,0,0,0,5
+12,Lazio,057,Rieti,SS65701,SS 657 -  Sabina,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,1,0,0,0,0,0,3
+12,Lazio,057,Rieti,SS70101,SS 701 -  del Nucleo Industriale di Rieti,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1
+12,Lazio,058,Roma,AA00101,A 01 -  Milano-Roma-Napoli (Autostrada del Sole),3,0,1,0,0,4,3,1,2,4,6,2,9,4,5,4,1,5,2,6,4,0,2,1,0,69
+12,Lazio,058,Roma,AA01202,A 12 -  Genova-Roma (tratto Roma-Civitavecchia-Tarquinia),1,0,1,1,0,1,3,3,4,7,0,2,3,8,2,3,1,3,3,3,3,3,2,5,0,62
+12,Lazio,058,Roma,AA02401,A 24 -  Roma-L'Aquila-Teramo,2,1,0,0,0,3,3,5,3,1,2,3,3,3,3,5,5,6,2,6,6,2,2,4,0,70
+12,Lazio,058,Roma,AA02402,A 24 -  Penetrazione urbana (GRA-Portonaccio),2,3,2,1,2,2,4,4,13,13,5,6,3,7,3,7,4,7,6,6,3,2,2,1,0,108
+12,Lazio,058,Roma,AA02421,A 24 -  Raccordo CAR (Centro Agro-Alimentare di Roma),0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2
+12,Lazio,058,Roma,AA09001,A 90 -  Grande Raccordo Anulare di Roma,22,12,16,22,14,19,28,55,44,43,38,34,35,40,30,47,33,51,36,37,22,23,18,14,0,733
+12,Lazio,058,Roma,AA09101,A 91 -  Roma-Fiumicino,1,0,0,2,2,3,4,3,6,3,0,3,1,1,4,4,3,8,8,6,1,4,3,0,0,70
+12,Lazio,058,Roma,DI00101,Diramazione Roma Nord (Fiano-Roma),0,1,0,0,1,1,1,1,0,2,3,1,3,0,2,1,1,2,1,0,5,0,3,0,0,29
+12,Lazio,058,Roma,DI00201,Diramazione Roma Sud (San Cesareo-Roma),0,2,1,1,1,0,0,3,4,8,2,2,0,2,1,4,1,2,6,3,3,2,1,1,0,50
+12,Lazio,058,Roma,SS00101,SS 001 -  via Aurelia,3,2,1,3,0,0,1,12,7,14,10,9,7,5,8,10,8,15,13,11,7,5,1,1,0,153
+12,Lazio,058,Roma,SS00201,SS 002 -  via Cassia,3,0,1,1,2,0,4,2,10,9,7,2,11,7,4,6,5,9,11,3,5,2,0,4,1,109
+12,Lazio,058,Roma,SS00202,SS 002 bis -  via Cassia Veientana,0,0,0,1,0,1,0,4,0,1,1,0,0,0,1,0,0,0,1,0,2,0,0,0,0,12
+12,Lazio,058,Roma,SS00301,SS 003 -  via Flaminia,3,1,1,1,1,1,2,6,4,7,9,4,9,10,3,11,3,5,3,8,3,4,1,2,0,102
+12,Lazio,058,Roma,SS00401,SS 004 -  via Salaria,2,2,1,2,0,0,4,6,4,4,8,6,8,7,5,8,5,13,8,3,4,2,3,4,0,109
+12,Lazio,058,Roma,SS00405,SS 004 dir -  via Salaria,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,3
+12,Lazio,058,Roma,SS00501,SS 005 -  via Tiburtina Valeria,5,2,0,2,1,3,9,6,7,5,2,3,4,2,4,10,3,6,7,8,2,4,3,2,0,100
+12,Lazio,058,Roma,SS00503,SS 005 ter -  via Tiburtina Valeria,0,0,1,0,0,1,0,1,0,0,0,0,0,2,0,0,0,0,1,1,0,0,0,0,0,7
+12,Lazio,058,Roma,SS00601,SS 006 -  via Casilina,8,1,2,2,4,3,9,9,13,11,9,7,13,5,4,10,13,14,15,10,7,7,6,5,0,187
+12,Lazio,058,Roma,SS00701,SS 007 -  via Appia,5,2,4,3,0,3,7,8,8,6,9,12,7,13,12,12,11,9,6,4,4,3,2,5,1,156
+12,Lazio,058,Roma,SS00705,SS 007 dir -  via Appia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1
+12,Lazio,058,Roma,SS00801,SS 008 -  via del Mare,1,2,0,0,0,1,2,2,1,2,4,2,2,3,2,1,4,3,1,2,2,0,2,1,0,40
+12,Lazio,058,Roma,SS00802,SS 008 bis -  via Ostiense,5,2,2,4,1,1,2,5,6,6,2,4,2,7,4,1,3,5,6,2,5,1,0,3,1,80
+12,Lazio,058,Roma,SS14001,SS 140 -  del Lago di Albano,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+12,Lazio,058,Roma,SS14005,SS 140 dir -  del Lago di Albano,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1
+12,Lazio,058,Roma,SS14801,SS 148 -  Pontina,1,4,2,2,0,4,9,4,7,9,7,9,3,6,7,6,8,9,7,3,8,4,6,2,0,127
+12,Lazio,058,Roma,SS15501,SS 155 -  di Fiuggi,0,0,0,0,0,0,0,0,4,1,0,5,3,2,1,3,2,4,3,2,2,1,1,1,0,35
+12,Lazio,058,Roma,SS20701,SS 207 -  Nettunense,2,0,2,0,4,3,4,2,5,6,7,7,5,9,3,4,6,9,8,10,4,4,2,3,1,110
+12,Lazio,058,Roma,SS21501,SS 215 -  Tuscolana,1,0,1,1,0,1,0,2,6,4,5,4,8,3,2,6,4,3,3,3,2,4,0,0,0,63
+12,Lazio,058,Roma,SS21601,SS 216 -  Maremmana III,2,0,0,0,1,0,0,0,1,2,1,1,1,0,0,4,1,3,0,2,2,0,0,2,0,23
+12,Lazio,058,Roma,SS21701,SS 217 -  via dei Laghi,1,1,0,0,0,1,1,2,3,8,2,0,0,2,3,1,1,2,2,1,4,0,0,0,0,35
+12,Lazio,058,Roma,SS21801,SS 218 -  via Rocca di Papa,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,2,0,0,0,2,0,0,0,0,4,10
+12,Lazio,058,Roma,SS29601,SS 296 -  della Scafa,0,1,0,0,0,0,3,3,1,0,1,2,0,4,3,2,4,0,2,1,3,1,1,1,0,33
+12,Lazio,058,Roma,SS29701,SS 297 -  del Lago Olimpico,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,2
+12,Lazio,058,Roma,SS41101,SS 411 -  Sublacense,0,0,0,0,0,0,2,1,0,4,2,1,0,1,1,2,0,3,0,0,0,1,1,0,0,19
+12,Lazio,058,Roma,SS49301,SS 493 -  via Claudia Braccianese,1,1,0,2,0,3,1,2,3,6,4,6,2,2,5,4,5,6,1,5,1,1,3,2,1,67
+12,Lazio,058,Roma,SS51101,SS 511 -  Anagnina,2,0,0,2,0,1,1,6,4,5,6,0,1,0,4,5,3,5,0,2,2,1,3,1,0,54
+12,Lazio,058,Roma,SS60001,SS 600 -  Ariana,0,0,0,0,0,0,1,1,0,1,1,2,2,2,4,4,1,3,4,2,5,1,0,0,0,34
+12,Lazio,058,Roma,SS60005,SS 600 dir -  Ariana,0,0,0,0,0,0,1,2,0,0,0,0,0,0,0,2,1,0,0,0,1,1,1,0,0,9
+12,Lazio,058,Roma,SS60101,SS 601 -  Ostia-Anzio,2,1,0,1,2,1,0,4,7,0,6,7,4,4,1,7,3,3,7,3,6,3,1,0,2,75
+12,Lazio,058,Roma,SS60901,SS 609 -  Carpinetana,2,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,2,0,0,0,1,0,1,0,0,8
+12,Lazio,058,Roma,SS63601,SS 636 -  di Palombara,0,1,0,0,0,0,1,0,2,2,1,3,5,4,1,0,1,1,1,3,2,0,1,0,0,29
+12,Lazio,058,Roma,SS69801,SS 698 -  del Porto di Civitavecchia,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,2
+12,Lazio,059,Latina,SS00701,SS 007 -  via Appia,2,1,0,0,1,5,4,4,11,8,5,6,15,9,8,5,8,5,9,5,5,1,3,3,0,123
+12,Lazio,059,Latina,SS00706,SS 007 dir/a -  del Tempio di Giove,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,2
+12,Lazio,059,Latina,SS00734,SS 007 var -  Variante Formia-Garigliano (Formia-Scauri-Minturno),1,0,0,0,0,0,0,2,2,1,3,1,0,0,1,0,1,0,0,0,0,1,0,0,0,13
+12,Lazio,059,Latina,SS08201,SS 082 -  della Valle del Liri,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1
+12,Lazio,059,Latina,SS14801,SS 148 -  Pontina,3,0,2,3,2,3,6,9,12,7,12,9,6,8,11,8,5,10,10,8,6,7,3,2,0,152
+12,Lazio,059,Latina,SS15601,SS 156 -  dei Monti Lepini,1,0,1,1,1,1,2,2,1,3,4,2,2,4,3,1,1,0,3,3,2,1,0,1,0,40
+12,Lazio,059,Latina,SS20701,SS 207 -  Nettunense,0,1,1,0,0,0,1,3,0,0,2,2,1,6,2,3,2,3,2,3,5,1,1,2,1,42
+12,Lazio,059,Latina,SS21301,SS 213 -  via Flacca,4,0,0,1,1,0,3,3,6,1,1,7,7,2,2,2,4,5,2,3,4,1,3,0,0,62
+12,Lazio,059,Latina,SS60901,SS 609 -  Carpinetana,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,1,1,0,4
+12,Lazio,059,Latina,SS63001,SS 630 -  Ausonia,0,0,0,0,0,0,2,1,0,2,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,9
+12,Lazio,059,Latina,SS63701,SS 637 -  di Frosinone e di Gaeta,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0,0,1,0,0,0,0,0,0,0,0,4
+12,Lazio,059,Latina,SS69901,SS 699 -  dell'Abbazia di Fossanova (SSV Terracina-Prossedi),0,0,0,0,0,0,1,0,1,1,0,0,1,0,0,1,0,1,0,0,1,0,0,0,0,7
+12,Lazio,060,Frosinone,AA00101,A 01 -  Milano-Roma-Napoli (Autostrada del Sole),4,3,5,1,1,4,11,5,4,5,9,5,9,5,5,13,5,13,5,4,6,2,1,6,0,131
+12,Lazio,060,Frosinone,SS00601,SS 006 -  via Casilina,0,1,2,0,1,0,1,3,11,6,6,3,4,5,4,6,5,9,7,8,8,3,0,0,1,94
+12,Lazio,060,Frosinone,SS08201,SS 082 -  della Valle del Liri,1,0,0,0,0,0,0,1,4,2,1,1,1,0,0,1,0,1,1,0,0,0,0,1,0,15
+12,Lazio,060,Frosinone,SS15501,SS 155 -  di Fiuggi,0,0,1,0,0,0,0,0,2,1,2,3,2,4,1,1,0,3,3,2,0,0,0,2,0,27
+12,Lazio,060,Frosinone,SS15521,SS 155 racc -  di Fiuggi,0,0,1,1,0,0,1,0,0,0,2,2,0,0,0,0,0,0,0,1,1,0,1,0,0,10
+12,Lazio,060,Frosinone,SS15601,SS 156 -  dei Monti Lepini,0,2,0,1,0,0,0,0,1,1,2,1,2,2,1,3,1,0,4,0,1,0,1,1,0,24
+12,Lazio,060,Frosinone,SS15605,SS 156 dir -  dei Monti Lepini,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,0,0,1,0,0,0,0,0,0,4
+12,Lazio,060,Frosinone,SS21401,SS 214 -  Maria e Isola Casamari,0,0,0,0,0,0,0,2,0,0,2,1,1,1,0,0,1,0,0,0,0,2,0,0,0,10
+12,Lazio,060,Frosinone,SS21434,SS 214 R -  Maria e Isola Casamari (SS 155-Castel Massimo),0,0,0,0,0,0,0,0,2,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,3
+12,Lazio,060,Frosinone,SS41101,SS 411 -  Sublacense,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1
+12,Lazio,060,Frosinone,SS43001,SS 430 -  della Valle del Garigliano,1,0,0,0,0,1,0,0,0,1,1,0,0,0,0,2,1,0,0,0,0,0,0,0,0,7
+12,Lazio,060,Frosinone,SS50901,SS 509 -  di Forca d'Acero,0,0,0,0,0,0,1,1,0,1,2,0,3,2,1,0,1,0,0,0,0,0,0,0,0,12
+12,Lazio,060,Frosinone,SS62701,SS 627 -  della Vandra,1,0,0,0,0,0,0,2,0,3,2,0,2,1,0,0,1,0,0,1,0,1,0,1,0,15
+12,Lazio,060,Frosinone,SS62801,SS 628 -  Leuciana,0,0,0,0,0,0,0,1,2,3,0,2,0,1,0,0,0,1,1,1,1,0,0,0,0,13
+12,Lazio,060,Frosinone,SS63001,SS 630 -  Ausonia,1,1,0,0,0,2,1,2,1,2,1,2,1,1,2,0,0,0,1,2,1,0,0,1,0,22
+12,Lazio,060,Frosinone,SS63701,SS 637 -  di Frosinone e di Gaeta,0,0,0,0,1,0,0,0,2,1,1,0,1,0,3,0,1,0,3,1,1,1,0,1,0,17
+12,Lazio,060,Frosinone,SS63705,SS 637 dir -  di Frosinone e di Gaeta,0,0,0,0,0,0,0,0,2,0,1,0,1,0,0,0,0,2,0,0,0,1,0,0,0,7
+12,Lazio,060,Frosinone,SS66601,SS 666 -  di Sora,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,2
+12,Lazio,060,Frosinone,SS69001,SS 690 -  Avezzano-Sora (Superstrada del Liri),0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+13,Abruzzo,066,L'Aquila,AA02401,A 24 -  Roma-L'Aquila-Teramo,0,1,0,0,1,0,0,2,0,2,1,0,3,3,1,1,2,3,1,1,1,0,0,1,0,24
+13,Abruzzo,066,L'Aquila,AA02501,A 25 -  Torano-Pescara,1,0,0,0,0,0,2,0,0,3,0,0,2,1,1,0,1,1,3,1,0,0,0,0,0,16
+13,Abruzzo,066,L'Aquila,SS00501,SS 005 -  via Tiburtina Valeria,1,0,0,0,0,0,0,1,0,1,2,0,4,3,1,3,1,3,3,0,1,2,0,0,0,26
+13,Abruzzo,066,L'Aquila,SS00502,SS 005 bis -  Vestina Sarentina,0,0,0,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,1,0,0,1,0,0,7
+13,Abruzzo,066,L'Aquila,SS00504,SS 005 quater -  via Tiburtina Valeria,0,0,0,0,0,1,0,1,1,0,1,0,0,1,0,0,0,0,0,0,1,0,0,0,0,6
+13,Abruzzo,066,L'Aquila,SS00505,SS 005 dir -  via Tiburtina Valeria,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,0,0,0,0,0,3
+13,Abruzzo,066,L'Aquila,SS01701,SS 017 -  dell'Appennino Abruzzese ed Appulo-Sannitico,0,1,0,1,2,3,2,2,2,6,2,4,4,4,4,2,0,8,4,1,1,2,3,0,0,58
+13,Abruzzo,066,L'Aquila,SS01702,SS 017 bis -  della Funivia del Gran Sasso e di Campo Imperatore,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0,2,1,1,1,0,0,0,0,8
+13,Abruzzo,066,L'Aquila,SS01703,SS 017 ter -  dell'Appennino Abruzzese ,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,2
+13,Abruzzo,066,L'Aquila,SS08001,SS 080 -  del Gran Sasso d'Italia,0,1,0,0,0,1,3,0,0,0,1,1,1,2,2,0,0,1,1,1,0,1,2,0,0,18
+13,Abruzzo,066,L'Aquila,SS08005,SS 080 dir -  del Gran Sasso d'Italia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1
+13,Abruzzo,066,L'Aquila,SS08201,SS 082 -  della Valle del Liri,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,2,0,0,0,0,0,3
+13,Abruzzo,066,L'Aquila,SS08301,SS 083 -  Marsicana,1,0,0,1,0,0,0,0,0,0,0,0,1,0,0,2,0,1,0,0,0,0,0,0,0,6
+13,Abruzzo,066,L'Aquila,SS15301,SS 153 -  della Valle del Tirino,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1
+13,Abruzzo,066,L'Aquila,SS26001,SS 260 -  Picente,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,1,0,0,1,0,0,0,0,4
+13,Abruzzo,066,L'Aquila,SS26101,SS 261 -  Subequana,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,3
+13,Abruzzo,066,L'Aquila,SS47901,SS 479 -  Sannite,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,2
+13,Abruzzo,066,L'Aquila,SS50901,SS 509 -  di Forca d'Acero,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+13,Abruzzo,066,L'Aquila,SS57801,SS 578 -  Salto Cicolana,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,3
+13,Abruzzo,066,L'Aquila,SS58401,SS 584 -  di Lucoli,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2
+13,Abruzzo,066,L'Aquila,SS61501,SS 615 -  di Monte Luco,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2
+13,Abruzzo,066,L'Aquila,SS65201,SS 652 -  di Fondo Valle Sangro,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1
+13,Abruzzo,066,L'Aquila,SS68401,SS 684 -  Tangenziale Sud di L'Aquila,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,2
+13,Abruzzo,066,L'Aquila,SS69001,SS 690 -  Avezzano-Sora (Superstrada del Liri),0,1,1,0,0,0,1,1,0,0,0,0,0,2,1,0,0,2,0,1,0,0,0,1,0,11
+13,Abruzzo,066,L'Aquila,SS69601,SS 696 -  del Parco Regionale Sirente-Velino,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3
+13,Abruzzo,066,L'Aquila,SS69605,SS 696 dir -  Vestina ,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,2
+13,Abruzzo,067,Teramo,AA01401,A 14 -  Bologna-Taranto (Autostrada Adriatica),2,0,2,1,0,0,0,2,0,3,3,3,3,1,0,3,1,3,2,1,4,3,0,3,0,40
+13,Abruzzo,067,Teramo,AA02401,A 24 -  Roma-L'Aquila-Teramo,0,0,0,0,0,0,1,1,2,2,2,0,0,3,0,0,0,1,0,0,0,0,0,0,0,12
+13,Abruzzo,067,Teramo,RA01101,Raccordo Autostradale Ascoli-Porto d'Ascoli,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,2
+13,Abruzzo,067,Teramo,SS01601,SS 016 -  Adriatica,4,1,1,3,0,0,6,3,3,6,9,7,9,6,4,3,4,9,10,7,4,3,1,0,0,103
+13,Abruzzo,067,Teramo,SS08001,SS 080 -  del Gran Sasso d'Italia,0,1,1,0,0,0,2,1,2,4,1,6,3,1,0,1,3,4,3,3,4,2,0,0,0,42
+13,Abruzzo,067,Teramo,SS08021,SS 080 racc -  di Teramo,2,0,0,2,0,1,1,0,1,0,6,1,0,1,1,2,0,1,1,1,1,0,0,0,0,22
+13,Abruzzo,067,Teramo,SS08034,SS 080 var -  Variante di Teramo,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,2
+13,Abruzzo,067,Teramo,SS08101,SS 081 -  Piceno Aprutina,0,0,0,0,0,0,0,0,1,1,0,1,0,0,2,0,1,2,1,0,0,0,0,0,0,9
+13,Abruzzo,067,Teramo,SS15001,SS 150 -  della Valle del Vomano,1,3,1,0,0,1,2,1,4,3,3,2,2,1,0,1,0,4,1,4,4,0,0,0,0,38
+13,Abruzzo,067,Teramo,SS25901,SS 259 -  Vibrata,0,1,1,0,0,0,1,0,2,2,1,3,2,1,0,0,6,1,1,2,0,2,1,2,0,29
+13,Abruzzo,067,Teramo,SS26201,SS 262 -  di Campli,0,1,0,0,1,0,0,0,1,0,2,1,1,0,0,0,0,1,0,0,0,0,0,0,0,8
+13,Abruzzo,067,Teramo,SS26205,SS 262 dir -  di Campli,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,5
+13,Abruzzo,067,Teramo,SS36501,SS 365 -  di Bisenti,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1
+13,Abruzzo,067,Teramo,SS49101,SS 491 -  di Isola del Gran Sasso,0,0,0,0,0,0,0,1,0,2,0,0,2,1,0,0,1,1,0,0,0,0,0,0,0,8
+13,Abruzzo,067,Teramo,SS55301,SS 553 -  di Atri,1,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,2,1,0,0,0,0,0,9
+13,Abruzzo,068,Pescara,AA01401,A 14 -  Bologna-Taranto (Autostrada Adriatica),0,1,0,0,0,0,1,0,0,0,2,0,1,2,0,1,1,1,0,3,0,1,0,0,0,14
+13,Abruzzo,068,Pescara,AA02501,A 25 -  Torano-Pescara,0,0,0,1,0,0,0,0,0,1,1,0,0,2,2,0,2,1,1,0,1,0,0,0,0,12
+13,Abruzzo,068,Pescara,RA01201,Raccordo Autostradale Chieti-Pescara,1,1,0,0,0,0,0,0,1,0,0,0,0,1,1,1,0,2,2,0,0,0,1,1,0,12
+13,Abruzzo,068,Pescara,SS00501,SS 005 -  via Tiburtina Valeria,0,0,0,0,0,0,0,0,1,2,3,2,1,1,3,2,2,1,0,1,2,1,1,0,0,23
+13,Abruzzo,068,Pescara,SS01601,SS 016 -  Adriatica,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,2,0,4
+13,Abruzzo,068,Pescara,SS01602,SS 016 bis -  Adriatica,0,0,0,0,0,0,0,1,3,0,3,2,1,3,0,2,1,1,0,0,1,0,0,0,1,19
+13,Abruzzo,068,Pescara,SS01608,SS 016 dir/c -  del Porto di Pescara,0,0,0,0,1,0,0,1,0,0,1,1,0,0,0,0,0,0,0,0,0,1,0,0,0,5
+13,Abruzzo,068,Pescara,SS01701,SS 017 -  dell'Appennino Abruzzese ed Appulo-Sannitico,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1
+13,Abruzzo,068,Pescara,SS08101,SS 081 -  Piceno Aprutina,1,0,0,0,0,0,0,0,4,5,2,2,0,1,1,1,3,1,3,0,2,0,3,0,0,29
+13,Abruzzo,068,Pescara,SS15101,SS 151 -  della Valle del Tavo,1,1,0,0,0,0,0,0,0,1,0,1,1,2,0,0,1,2,1,1,0,0,0,0,0,12
+13,Abruzzo,068,Pescara,SS48701,SS 487 -  di Caramanico Terme,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2
+13,Abruzzo,068,Pescara,SS60201,SS 602 -  di Forca di Penne,0,0,0,0,0,1,0,1,1,0,1,5,2,0,1,1,7,3,5,0,1,0,0,0,0,29
+13,Abruzzo,068,Pescara,SS71401,SS 714 -  Tangenziale di Pescara,1,1,0,0,0,1,0,2,0,2,1,1,2,1,4,3,0,2,1,0,0,0,1,1,0,24
+13,Abruzzo,068,Pescara,SS71405,SS 714 dir -  Tangenziale di Pescara,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,2
+13,Abruzzo,068,Pescara,SS71406,SS 714 dir/a -  Tangenziale di Pescara,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,2
+13,Abruzzo,069,Chieti,AA01401,A 14 -  Bologna-Taranto (Autostrada Adriatica),0,2,2,2,1,2,0,2,2,1,2,5,2,6,3,6,6,7,5,2,1,3,2,1,0,65
+13,Abruzzo,069,Chieti,AA02501,A 25 -  Torano-Pescara,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,2
+13,Abruzzo,069,Chieti,RA01201,Raccordo Autostradale Chieti-Pescara,0,0,1,0,1,2,0,2,1,2,0,0,2,0,1,4,0,0,2,1,0,2,1,1,0,23
+13,Abruzzo,069,Chieti,SS00501,SS 005 -  via Tiburtina Valeria,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,1,0,0,0,4
+13,Abruzzo,069,Chieti,SS00521,SS 005 racc -  via Tiburtina Valeria,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,2,0,0,0,0,0,0,4
+13,Abruzzo,069,Chieti,SS01601,SS 016 -  Adriatica,2,1,0,3,1,1,3,1,3,5,5,7,3,6,3,6,3,6,7,1,5,2,0,3,0,77
+13,Abruzzo,069,Chieti,SS08101,SS 081 -  Piceno Aprutina,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,3
+13,Abruzzo,069,Chieti,SS08401,SS 084 -  Frentana,1,0,0,0,0,1,3,2,2,1,2,1,2,1,0,3,2,0,1,1,2,1,1,0,1,28
+13,Abruzzo,069,Chieti,SS08601,SS 086 -  Istonia,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,3
+13,Abruzzo,069,Chieti,SS26301,SS 263 -  di Val di Foro e di Bocca di Valle,0,0,0,1,0,0,2,0,0,1,1,3,3,1,1,2,0,3,2,0,1,2,0,0,0,23
+13,Abruzzo,069,Chieti,SS36301,SS 363 -  di Guardiagrele ,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,2
+13,Abruzzo,069,Chieti,SS36401,SS 364 -  di Atessa,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,2
+13,Abruzzo,069,Chieti,SS52401,SS 524 -  Lanciano-Fossacesia,0,0,0,0,0,0,1,0,0,1,2,0,0,0,0,0,0,1,0,0,1,0,0,0,0,6
+13,Abruzzo,069,Chieti,SS53801,SS 538 -  Marrucina,0,0,0,0,0,0,2,0,2,0,0,5,0,0,0,0,2,1,1,0,2,0,0,1,0,16
+13,Abruzzo,069,Chieti,SS53901,SS 539 -  di Manoppello,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1
+13,Abruzzo,069,Chieti,SS64901,SS 649 -  di Fondo Valle Alento,1,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,5
+13,Abruzzo,069,Chieti,SS64905,SS 649 dir -  di Fondo Valle Alento,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,1,0,0,0,0,0,0,0,4
+13,Abruzzo,069,Chieti,SS65001,SS 650 -  di Fondo Valle Trigno,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1
+13,Abruzzo,069,Chieti,SS65201,SS 652 -  di Fondo Valle Sangro,0,1,1,0,0,1,0,0,2,1,0,4,2,0,1,0,0,1,0,0,0,2,0,0,0,16
+13,Abruzzo,069,Chieti,SS65601,SS 656 -  Val Pescara Chieti,0,0,0,1,0,0,0,1,1,0,1,1,0,2,1,0,0,1,0,0,0,0,0,0,0,9
+13,Abruzzo,069,Chieti,SS71401,SS 714 -  Tangenziale di Pescara,0,0,0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,1,0,0,1,0,0,0,0,5
+13,Abruzzo,069,Chieti,SS71407,SS 714 dir/b -  Tangenziale di Pescara,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+14,Molise,070,Campobasso,AA01401,A 14 -  Bologna-Taranto (Autostrada Adriatica),0,0,0,2,1,0,0,0,0,1,0,0,2,1,3,1,2,0,0,0,2,0,1,0,0,16
+14,Molise,070,Campobasso,SS01601,SS 016 -  Adriatica,0,0,0,0,1,0,0,0,1,0,0,0,0,0,1,2,1,1,0,0,0,0,0,0,0,7
+14,Molise,070,Campobasso,SS01603,SS 016 ter -  Adriatica,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,0,0,3
+14,Molise,070,Campobasso,SS01701,SS 017 -  dell'Appennino Abruzzese ed Appulo-Sannitico,0,0,0,0,0,0,0,0,1,1,0,1,1,1,0,2,0,0,2,0,0,0,0,0,0,9
+14,Molise,070,Campobasso,SS08701,SS 087 -  Sannitica,0,1,1,0,0,0,0,1,4,0,1,2,1,3,0,1,1,1,3,1,0,0,0,0,0,21
+14,Molise,070,Campobasso,SS15701,SS 157 -  della Valle del Biferno,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,3
+14,Molise,070,Campobasso,SS15805,SS 158 dir -  della Valle del Volturno,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+14,Molise,070,Campobasso,SS21201,SS 212 -  della Val Fortore,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0,0,0,0,0,0,0,0,3
+14,Molise,070,Campobasso,SS37601,SS 376 -  dei Tre Titoli,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1
+14,Molise,070,Campobasso,SS48001,SS 480 -  di Ururi,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,2
+14,Molise,070,Campobasso,SS48301,SS 483 -  Termolese,0,0,1,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3
+14,Molise,070,Campobasso,SS64501,SS 645 -  Fondo Valle del Tappino,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,2
+14,Molise,070,Campobasso,SS64701,SS 647 -  Fondo Valle del Biferno,0,0,0,0,0,0,0,0,0,2,1,1,0,2,1,2,0,1,1,1,1,1,1,0,0,15
+14,Molise,070,Campobasso,SS64707,SS 647 dir/b -  Fondo Valle del Biferno,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,2
+14,Molise,070,Campobasso,SS65001,SS 650 -  di Fondo Valle Trigno,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1
+14,Molise,070,Campobasso,SS70901,SS 709 -  Tangenziale di Termoli,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,2
+14,Molise,070,Campobasso,SS71001,SS 710 -  Tangenziale Est di Campobasso,1,0,0,0,0,0,0,1,0,0,1,0,0,2,1,1,0,2,0,0,0,0,0,0,0,9
+14,Molise,070,Campobasso,SS71101,SS 711 -  Tangenziale Ovest di Campobasso,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,2
+14,Molise,094,Isernia,SS00605,SS 006 dir -  via Casilina,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,1,0,0,0,0,0,0,3
+14,Molise,094,Isernia,SS01701,SS 017 -  dell'Appennino Abruzzese ed Appulo-Sannitico,2,0,0,0,0,0,0,2,0,2,0,0,1,1,0,1,3,0,1,0,0,0,0,0,0,13
+14,Molise,094,Isernia,SS01736,SS 017 var/a -  Isernia-Castel di Sangro (dei Tre Confini),0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1
+14,Molise,094,Isernia,SS08501,SS 085 -  Venafrana,0,1,1,0,1,0,3,1,0,2,2,3,1,0,1,2,1,1,1,0,1,0,0,1,0,23
+14,Molise,094,Isernia,SS08534,SS 085 var -  Variante di Venafro,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1
+14,Molise,094,Isernia,SS08601,SS 086 -  Istonia,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,2
+14,Molise,094,Isernia,SS15801,SS 158 -  della Valle del Volturno,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,1,0,1,0,0,0,1,0,0,0,5
+14,Molise,094,Isernia,SS61801,SS 618 -  Molesana,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+14,Molise,094,Isernia,SS62701,SS 627 -  della Vandra,0,0,0,0,0,2,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3
+14,Molise,094,Isernia,SS65001,SS 650 -  di Fondo Valle Trigno,0,0,0,1,1,0,0,1,0,1,0,0,0,0,0,1,0,0,0,0,0,1,1,0,0,7
+14,Molise,094,Isernia,SS65201,SS 652 -  di Fondo Valle Sangro,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+15,Campania,061,Caserta,AA00101,A 01 -  Milano-Roma-Napoli (Autostrada del Sole),2,5,1,0,3,4,3,2,7,5,9,2,4,4,4,5,5,7,2,1,4,3,3,4,1,90
+15,Campania,061,Caserta,AA03001,A 30 -  Caserta-Salerno,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,1,1,0,0,0,0,0,0,5
+15,Campania,061,Caserta,SS00601,SS 006 -  via Casilina,0,0,0,0,0,0,0,1,1,1,0,1,0,1,0,1,2,1,1,2,0,0,1,0,0,13
+15,Campania,061,Caserta,SS00701,SS 007 -  via Appia,3,2,0,0,2,1,2,3,3,1,4,4,1,2,2,1,2,4,1,0,2,3,4,1,1,49
+15,Campania,061,Caserta,SS00702,SS 007 bis -  di Terra di Lavoro,2,1,0,1,0,0,1,1,2,1,3,1,1,1,2,0,0,0,1,4,0,1,1,0,0,24
+15,Campania,061,Caserta,SS00704,SS 007 quater -  via Domiziana,3,1,0,2,1,1,0,4,2,4,5,5,5,3,2,3,1,6,5,2,2,2,2,0,1,62
+15,Campania,061,Caserta,SS00717,SS 007 quater/dir -  di Ischitella Lido,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+15,Campania,061,Caserta,SS08734,SS 087 R -  Sannitica,1,2,1,1,0,0,0,1,1,0,2,2,1,0,2,1,2,5,1,0,0,1,2,1,0,27
+15,Campania,061,Caserta,SS15801,SS 158 -  della Valle del Volturno,0,0,0,0,0,0,0,0,0,0,1,0,2,0,0,0,0,3,1,4,0,0,0,0,0,11
+15,Campania,061,Caserta,SS16201,SS 162 -  della Valle Caudina,0,0,0,0,0,0,0,0,1,0,0,0,0,1,1,1,0,0,0,0,0,1,1,0,0,6
+15,Campania,061,Caserta,SS26401,SS 264 -  del Basso Volturno,0,0,0,0,0,0,0,0,2,2,1,0,0,0,0,1,0,0,1,2,1,0,0,0,0,10
+15,Campania,061,Caserta,SS26501,SS 265 -  dei Ponti della Valle,2,2,2,0,0,4,0,2,0,2,3,5,3,4,6,3,2,4,1,3,2,3,1,4,0,58
+15,Campania,061,Caserta,SS37201,SS 372 -  Telesina,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,4
+15,Campania,061,Caserta,SS43001,SS 430 -  della Valle del Garigliano,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+15,Campania,061,Caserta,SS60801,SS 608 -  di Teano,0,0,0,0,0,0,0,0,2,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,4
+15,Campania,061,Caserta,SS70001,SS 700 -  della Reggia di Caserta,1,0,0,1,0,0,0,0,0,0,0,0,2,0,1,1,1,0,1,1,0,0,0,0,0,9
+15,Campania,062,Benevento,RA00901,Raccordo Autostradale di Benevento,0,1,0,0,0,0,0,0,0,2,0,0,0,1,0,0,0,1,1,2,0,0,0,0,0,8
+15,Campania,062,Benevento,SS00701,SS 007 -  via Appia,0,1,1,0,0,0,0,0,4,3,2,6,1,3,0,0,1,1,5,4,2,0,1,1,0,36
+15,Campania,062,Benevento,SS08701,SS 087 -  Sannitica,0,0,1,1,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1,0,0,0,0,0,6
+15,Campania,062,Benevento,SS08734,SS 087 R -  Sannitica,1,1,0,0,0,1,0,0,0,2,1,0,0,0,2,0,0,2,0,1,0,1,0,0,0,12
+15,Campania,062,Benevento,SS09002,SS 090 bis -  delle Puglie,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,3,0,0,0,0,0,0,5
+15,Campania,062,Benevento,SS21201,SS 212 -  della Val Fortore,0,0,0,0,0,0,0,0,1,0,1,0,1,0,0,0,0,0,1,0,1,0,0,0,0,5
+15,Campania,062,Benevento,SS26501,SS 265 -  dei Ponti della Valle,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1
+15,Campania,062,Benevento,SS37201,SS 372 -  Telesina,0,0,0,0,0,0,0,1,0,0,1,0,1,1,1,0,1,3,0,0,0,0,1,0,0,10
+15,Campania,062,Benevento,SS37401,SS 374 -  di Summonte e di Montevergine,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1
+15,Campania,063,Napoli,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+15,Campania,063,Napoli,AA00101,A 01 -  Milano-Roma-Napoli (Autostrada del Sole),6,3,1,5,1,0,1,5,7,5,5,3,4,3,2,5,4,8,4,0,1,1,3,5,0,82
+15,Campania,063,Napoli,AA00105,A 01 -  Diramazione Capodichino,1,0,0,0,0,0,2,0,3,0,3,0,2,2,0,0,2,4,2,1,1,1,1,0,0,25
+15,Campania,063,Napoli,AA00301,A 03 -  Napoli-Salerno,5,0,2,2,2,3,6,3,7,2,3,5,4,9,6,3,7,7,3,2,6,7,2,4,0,100
+15,Campania,063,Napoli,AA01601,A 16 -  Napoli-Canosa (Autostrada dei due Mari),1,1,1,1,1,0,0,0,1,2,0,1,0,0,2,3,2,1,0,0,1,1,0,2,0,21
+15,Campania,063,Napoli,AA03001,A 30 -  Caserta-Salerno,2,1,0,1,0,1,0,4,2,1,3,2,4,3,2,0,0,1,6,0,0,3,0,1,0,37
+15,Campania,063,Napoli,SS00702,SS 007 bis -  di Terra di Lavoro,1,0,0,0,0,3,2,1,1,2,0,1,2,5,2,3,1,2,2,0,2,1,0,0,0,31
+15,Campania,063,Napoli,SS00704,SS 007 quater -  via Domiziana,0,3,0,0,0,0,1,0,1,2,1,2,1,0,1,0,2,2,1,2,4,0,2,1,0,26
+15,Campania,063,Napoli,SS08734,SS 087 R -  Sannitica,1,0,0,0,0,0,0,0,3,1,2,1,0,1,3,1,0,5,2,1,0,1,2,0,0,24
+15,Campania,063,Napoli,SS14501,SS 145 -  Sorrentina,1,1,2,4,1,1,3,6,8,9,6,7,8,2,3,6,2,7,4,3,2,2,3,5,0,96
+15,Campania,063,Napoli,SS14534,SS 145 var -  Galleria Santa Maria a Pozzano,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,1,0,0,0,0,0,0,0,0,0,4
+15,Campania,063,Napoli,SS16201,SS 162 -  della Valle Caudina,5,4,1,0,1,0,3,5,6,7,3,7,9,3,5,3,7,5,4,6,3,5,2,1,0,95
+15,Campania,063,Napoli,SS16205,SS 162 dir -  del Centro Direzionale,2,0,0,0,1,1,1,2,1,0,0,2,1,0,1,2,1,0,2,1,0,2,1,0,0,21
+15,Campania,063,Napoli,SS16221,SS 162 racc -  del Nucleo Industriale di Pomigliano d'Arco,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1
+15,Campania,063,Napoli,SS16301,SS 163 -  Amalfitana,0,0,0,1,0,0,0,1,0,0,0,3,1,0,0,1,0,1,0,0,0,0,0,1,0,9
+15,Campania,063,Napoli,SS26801,SS 268 -  del Vesuvio,0,1,0,0,0,0,0,0,1,2,0,0,0,3,1,1,1,1,1,0,1,0,0,1,0,14
+15,Campania,063,Napoli,SS26901,SS 269 -  del Faito,0,0,0,0,0,0,0,0,0,2,1,0,0,1,1,0,0,1,1,1,0,1,0,0,0,9
+15,Campania,063,Napoli,SS27001,SS 270 -  dell'Ischia Verde,0,3,0,1,0,1,2,1,5,1,1,4,3,5,2,1,1,3,2,0,5,0,2,1,3,47
+15,Campania,063,Napoli,SS36601,SS 366 -  di Agerola ,1,0,0,0,1,0,0,2,0,2,1,0,0,0,1,0,2,0,3,0,0,0,0,0,0,13
+15,Campania,063,Napoli,SS36701,SS 367 -  Nolana Sarnese,1,0,0,0,0,0,0,0,1,0,0,0,0,1,1,1,0,0,1,0,0,0,0,0,0,6
+15,Campania,063,Napoli,SS68601,SS 686 -  di Quarto,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1
+15,Campania,063,Napoli,TA00301,Tangenziale Est-Ovest Napoli,3,4,3,1,1,1,3,8,8,10,7,7,4,4,7,8,10,4,8,8,7,5,2,1,0,124
+15,Campania,064,Avellino,AA01601,A 16 -  Napoli-Canosa (Autostrada dei due Mari),1,2,1,0,0,0,1,1,3,4,1,3,5,4,2,5,3,9,1,1,3,0,2,1,0,53
+15,Campania,064,Avellino,RA00201,Raccordo Autostradale Salerno-Avellino,1,1,0,0,1,0,0,2,0,1,0,1,3,0,2,1,2,2,1,3,1,2,0,0,0,24
+15,Campania,064,Avellino,SS00701,SS 007 -  via Appia,1,0,0,0,0,1,0,2,1,0,0,1,1,0,2,3,0,2,0,2,0,1,1,0,0,18
+15,Campania,064,Avellino,SS00702,SS 007 bis -  di Terra di Lavoro,0,0,1,1,0,0,1,0,1,3,1,3,0,1,2,0,2,2,0,6,1,2,0,0,1,28
+15,Campania,064,Avellino,SS00708,SS 007 dir/c -  via Appia,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,2
+15,Campania,064,Avellino,SS08801,SS 088 -  dei due Principati,0,0,0,0,0,0,0,0,0,1,0,0,0,2,0,1,2,2,0,1,0,0,0,0,0,9
+15,Campania,064,Avellino,SS09001,SS 090 -  delle Puglie,0,1,0,0,0,0,0,1,0,1,2,1,1,2,0,0,2,2,2,2,4,0,0,0,0,21
+15,Campania,064,Avellino,SS09002,SS 090 bis -  delle Puglie,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1
+15,Campania,064,Avellino,SS09005,SS 090 dir -  delle Puglie,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+15,Campania,064,Avellino,SS09101,SS 091 -  della Valle del Sele,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,1,2,2,0,1,0,1,0,1,10
+15,Campania,064,Avellino,SS09102,SS 091 bis -  Irpina,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1
+15,Campania,064,Avellino,SS16401,SS 164 -  delle Croci di Acerno,0,0,0,0,0,0,0,1,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,3
+15,Campania,064,Avellino,SS30301,SS 303 -  del Formicoso,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,2,0,0,0,0,3
+15,Campania,064,Avellino,SS36801,SS 368 -  del Lago Laceno,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1
+15,Campania,064,Avellino,SS37405,SS 374 dir -  di Montevergine,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1
+15,Campania,064,Avellino,SS40001,SS 400 -  di Castelvetere,0,1,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,3
+15,Campania,064,Avellino,SS40101,SS 401 -  dell'Alto Ofanto e del Vulture,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+15,Campania,064,Avellino,SS40301,SS 403 -  del Vallo di Lauro,1,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,1,0,0,0,0,0,0,0,0,4
+15,Campania,064,Avellino,SS41401,SS 414 -  di Montecalvo Irpino,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1
+15,Campania,064,Avellino,SS42501,SS 425 -  di S. Angelo dei Lombardi,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1
+15,Campania,064,Avellino,SS42801,SS 428 -  di Villamaina,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1
+15,Campania,064,Avellino,SS57401,SS 574 -  del Monte Terminio,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1
+15,Campania,065,Salerno,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1
+15,Campania,065,Salerno,AA00301,A 03 -  Napoli-Salerno,0,0,0,1,0,3,0,2,3,2,2,2,2,2,2,3,2,5,1,1,3,3,1,2,0,42
+15,Campania,065,Salerno,AA00302,A 03 -  Salerno-Reggio Calabria,3,3,4,4,3,1,8,7,8,3,2,6,7,2,5,5,5,7,8,7,4,6,3,2,0,113
+15,Campania,065,Salerno,AA03001,A 30 -  Caserta-Salerno,0,1,2,0,1,0,2,3,0,1,1,1,1,1,2,1,1,1,5,3,2,4,0,0,0,33
+15,Campania,065,Salerno,RA00201,Raccordo Autostradale Salerno-Avellino,2,0,1,1,0,1,0,1,6,3,2,3,2,2,0,1,4,2,1,1,1,1,2,2,0,39
+15,Campania,065,Salerno,RA00501,Raccordo Autostradale Scalo Sicignano-Potenza,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,2
+15,Campania,065,Salerno,SS01801,SS 018 -  Tirrena-Inferiore,1,6,2,5,1,2,2,4,9,5,9,8,4,13,7,7,8,8,12,8,5,9,4,3,1,143
+15,Campania,065,Salerno,SS01901,SS 019 -  delle Calabrie,1,0,0,1,1,2,1,1,3,3,2,7,6,8,1,2,2,3,2,3,3,0,1,0,0,53
+15,Campania,065,Salerno,SS01903,SS 019 ter -  Dorsale Aulettese,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,1,0,1,0,0,0,0,0,0,4
+15,Campania,065,Salerno,SS08801,SS 088 -  dei due Principati,0,0,1,0,0,0,0,2,0,1,2,3,0,1,0,2,2,1,1,3,1,1,1,0,0,22
+15,Campania,065,Salerno,SS09101,SS 091 -  della Valle del Sele,0,0,0,0,0,0,0,0,0,2,0,2,0,1,0,0,1,0,0,0,1,0,1,0,0,8
+15,Campania,065,Salerno,SS09401,SS 094 -  del Varco di Pietrastretta,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+15,Campania,065,Salerno,SS09501,SS 095 -  di Brienza,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,2
+15,Campania,065,Salerno,SS10301,SS 103 -  di Val d'Agri,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3
+15,Campania,065,Salerno,SS10401,SS 104 -  Sapri-Jonio,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1
+15,Campania,065,Salerno,SS16301,SS 163 -  Amalfitana,4,2,1,0,0,0,0,2,1,3,5,4,2,3,5,4,3,2,3,3,3,0,0,0,0,50
+15,Campania,065,Salerno,SS16401,SS 164 -  delle Croci di Acerno,0,0,0,0,0,0,1,0,3,2,0,1,1,2,1,0,0,0,2,1,0,0,0,0,0,14
+15,Campania,065,Salerno,SS16601,SS 166 -  degli Alburni,0,0,0,0,0,0,1,1,0,0,0,0,0,1,0,2,0,0,0,0,2,0,1,1,0,9
+15,Campania,065,Salerno,SS26601,SS 266 -  Nocerina,0,1,1,0,0,0,0,0,1,0,1,0,1,2,2,1,2,0,1,0,2,0,0,2,0,17
+15,Campania,065,Salerno,SS26701,SS 267 -  del Cilento,0,2,0,0,0,1,1,2,1,2,0,0,2,3,7,1,1,0,0,2,2,0,0,0,0,27
+15,Campania,065,Salerno,SS36601,SS 366 -  di Agerola ,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+15,Campania,065,Salerno,SS36701,SS 367 -  Nolana Sarnese,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,1,0,0,0,0,0,4
+15,Campania,065,Salerno,SS37301,SS 373 -  di Ravello,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1
+15,Campania,065,Salerno,SS40734,SS 407 R -  Basentana,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,2
+15,Campania,065,Salerno,SS42601,SS 426 -  di Polla ,0,0,0,0,0,0,0,0,0,1,0,1,2,1,0,0,0,0,0,1,0,0,0,0,0,6
+15,Campania,065,Salerno,SS44701,SS 447 -  di Palinuro,1,0,0,0,0,0,0,0,0,0,1,2,2,2,0,0,0,0,2,1,0,0,1,0,0,12
+15,Campania,065,Salerno,SS44721,SS 447 racc -  di Palinuro,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+15,Campania,065,Salerno,SS48801,SS 488 -  di Rocca d'Aspide,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,0,1,0,0,0,0,4
+15,Campania,065,Salerno,SS51701,SS 517 -  Bussentina,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,2,0,0,0,0,0,5
+15,Campania,065,Salerno,SS51734,SS 517 var -  Bussentina,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,1,0,0,4
+15,Campania,065,Salerno,SS56201,SS 562 -  del Golfo di Policastro,0,0,0,0,0,0,1,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,5
+15,Campania,065,Salerno,SS59801,SS 598 -  di Fondo Valle d'Agri,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,2
+15,Campania,065,Salerno,SS69101,SS 691 -  Fondo Valle Sele (SSV Contursi-Lioni),0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,2
+16,Puglia,071,Foggia,AA01401,A 14 -  Bologna-Taranto (Autostrada Adriatica),2,0,0,0,1,0,1,0,0,2,0,0,2,1,2,2,1,0,2,0,1,1,1,0,0,19
+16,Puglia,071,Foggia,AA01601,A 16 -  Napoli-Canosa (Autostrada dei due Mari),1,0,0,1,1,0,0,1,0,1,0,1,0,0,0,1,2,0,0,0,0,0,0,1,0,10
+16,Puglia,071,Foggia,SS01601,SS 016 -  Adriatica,1,2,0,0,0,2,5,2,2,6,0,7,2,1,5,0,4,1,1,2,1,5,1,2,0,52
+16,Puglia,071,Foggia,SS01603,SS 016 ter -  Adriatica,0,0,0,0,0,0,0,0,1,0,1,0,0,0,1,1,0,1,0,0,0,0,0,0,0,5
+16,Puglia,071,Foggia,SS01701,SS 017 -  dell'Appennino Abruzzese ed Appulo-Sannitico,0,0,0,0,0,0,0,0,2,2,1,0,0,0,1,0,0,1,1,0,1,0,0,0,0,9
+16,Puglia,071,Foggia,SS08901,SS 089 -  Garganica,0,0,0,0,0,0,1,2,0,2,3,2,3,1,1,1,2,0,1,2,0,1,2,0,0,24
+16,Puglia,071,Foggia,SS08907,SS 089 dir/b -  Garganica,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1
+16,Puglia,071,Foggia,SS09001,SS 090 -  delle Puglie,0,0,0,1,0,0,0,0,0,1,0,1,1,0,1,0,0,0,0,1,1,0,0,0,0,7
+16,Puglia,071,Foggia,SS09103,SS 091 ter -  Diramazione Irpina,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1
+16,Puglia,071,Foggia,SS15901,SS 159 -  delle Saline,0,0,0,0,1,0,0,1,0,1,1,0,0,0,1,1,0,0,0,1,0,0,0,0,0,7
+16,Puglia,071,Foggia,SS16001,SS 160 -  di Lucera,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,1,0,6
+16,Puglia,071,Foggia,SS16101,SS 161 -  di Ortanova,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,2
+16,Puglia,071,Foggia,SS27201,SS 272 -  di S. Giovanni Rotondo,1,0,0,0,0,2,1,1,1,1,1,1,1,1,3,1,0,0,2,0,0,2,1,0,0,20
+16,Puglia,071,Foggia,SS52801,SS 528 -  della Foresta Umbra,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1
+16,Puglia,071,Foggia,SS52901,SS 529 -  dell'Ofanto,1,0,0,0,0,0,0,0,0,0,1,0,2,1,2,1,1,1,1,0,1,0,0,0,0,12
+16,Puglia,071,Foggia,SS54401,SS 544 -  di Trinitapoli,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,3
+16,Puglia,071,Foggia,SS54501,SS 545 -  Rivolese,0,0,0,0,0,0,0,0,1,1,0,1,0,0,0,2,2,0,0,0,1,0,0,0,0,8
+16,Puglia,071,Foggia,SS65501,SS 655 -  Bradanica,0,0,0,0,1,0,1,0,0,1,1,0,0,0,0,1,0,0,1,0,1,0,0,0,0,7
+16,Puglia,071,Foggia,SS67301,SS 673 -  Tangenziale di Foggia,1,1,0,0,0,0,0,0,0,0,3,1,1,1,0,5,1,1,1,3,0,0,2,0,0,21
+16,Puglia,071,Foggia,SS68801,SS 688 -  di Mattinata,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+16,Puglia,071,Foggia,SS69301,SS 693 -  dei Laghi di Lesina e di Varano,0,0,1,0,0,0,0,2,0,0,0,1,0,0,0,0,1,0,2,1,0,1,0,0,0,9
+16,Puglia,072,Bari,AA01401,A 14 -  Bologna-Taranto (Autostrada Adriatica),0,0,0,0,0,0,1,0,0,0,1,4,2,1,3,0,4,1,0,0,0,1,1,1,0,20
+16,Puglia,072,Bari,AA01421,A 14 -  Raccordo per Tangenziale di Bari,0,0,0,0,0,0,1,0,1,0,0,0,0,1,0,0,0,0,0,0,1,0,0,1,0,5
+16,Puglia,072,Bari,SS01601,SS 016 -  Adriatica,3,6,7,6,3,6,5,11,18,10,11,11,5,12,6,4,11,4,24,10,6,8,6,5,0,198
+16,Puglia,072,Bari,SS09601,SS 096 -  Barese,0,1,1,0,0,2,0,3,3,5,2,1,7,3,4,1,3,8,8,5,1,2,2,0,0,62
+16,Puglia,072,Bari,SS09701,SS 097 -  delle Murge,0,1,0,0,0,0,0,0,1,1,1,0,1,0,0,0,0,0,0,0,0,0,1,0,0,6
+16,Puglia,072,Bari,SS09801,SS 098 -  Andriese Coratina,1,1,1,0,0,0,1,2,1,3,1,3,3,0,2,2,3,3,1,0,0,0,0,1,0,29
+16,Puglia,072,Bari,SS09901,SS 099 -  di Matera,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,3
+16,Puglia,072,Bari,SS10001,SS 100 -  di Gioia del Colle,2,1,0,0,1,1,0,2,4,4,2,0,3,3,2,2,5,2,4,2,0,2,3,1,0,46
+16,Puglia,072,Bari,SS17001,SS 170 -  di Castel del Monte,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,3
+16,Puglia,072,Bari,SS17101,SS 171 -  di Santeramo,0,0,0,0,0,1,1,0,2,0,0,0,0,1,0,1,3,3,0,2,1,1,0,0,0,16
+16,Puglia,072,Bari,SS17201,SS 172 -  dei Trulli,1,1,0,1,0,0,0,2,3,1,1,0,2,1,1,1,2,1,1,1,1,1,4,0,0,26
+16,Puglia,072,Bari,SS17205,SS 172 dir -  dei Trulli,0,0,0,0,0,1,1,0,0,1,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,5
+16,Puglia,072,Bari,SS27101,SS 271 -  di Cassano,3,0,0,0,0,0,0,0,0,0,3,3,3,0,1,2,1,0,2,0,2,2,0,1,1,24
+16,Puglia,072,Bari,SS37701,SS 377 -  delle Grotte,2,0,1,2,0,2,0,0,1,3,1,2,3,3,1,1,1,3,2,1,0,0,0,0,0,29
+16,Puglia,072,Bari,SS37801,SS 378 -  di Altamura,0,1,0,0,0,0,0,0,0,3,2,2,0,0,0,1,1,2,1,0,0,1,0,2,1,17
+16,Puglia,072,Bari,SS60401,SS 604 -  di Alberobello,0,0,0,0,0,0,0,0,2,0,0,0,0,1,1,0,0,0,0,2,0,0,0,0,0,6
+16,Puglia,072,Bari,SS63401,SS 634 -  delle Grotte Orientali,0,0,0,0,1,1,0,2,3,3,1,1,2,5,0,0,0,2,3,1,0,0,0,0,0,25
+16,Puglia,073,Taranto,AA01401,A 14 -  Bologna-Taranto (Autostrada Adriatica),0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,2
+16,Puglia,073,Taranto,SS00701,SS 007 -  via Appia,4,1,0,3,0,0,0,6,0,5,1,4,6,5,1,3,4,2,6,4,4,1,1,2,0,63
+16,Puglia,073,Taranto,SS00703,SS 007 ter -  Salentina,2,0,1,1,0,2,2,0,3,1,8,3,2,2,1,1,3,1,2,1,2,2,1,0,0,41
+16,Puglia,073,Taranto,SS10001,SS 100 -  di Gioia del Colle,0,0,0,0,0,0,0,1,0,0,1,0,0,3,1,0,0,1,0,0,0,1,0,0,0,8
+16,Puglia,073,Taranto,SS10601,SS 106 -  Jonica,0,0,0,0,0,1,1,1,0,1,0,0,1,0,1,2,0,3,1,1,0,0,0,0,0,13
+16,Puglia,073,Taranto,SS10605,SS 106 dir -  Jonica,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+16,Puglia,073,Taranto,SS17201,SS 172 -  dei Trulli,0,1,1,0,0,1,0,3,0,1,3,3,3,0,3,0,4,3,0,4,1,2,0,0,0,33
+16,Puglia,073,Taranto,SS17401,SS 174 -  Salentina di Manduria,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,1,0,0,0,0,0,0,0,0,0,3
+16,Puglia,073,Taranto,SS17501,SS 175 -  della Valle del Bradano,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1
+16,Puglia,073,Taranto,SS58001,SS 580 -  di Ginosa,0,0,0,0,0,0,1,0,1,0,0,1,0,3,0,0,0,2,1,0,0,1,0,1,0,11
+16,Puglia,073,Taranto,SS58101,SS 581 -  di Massafra,0,1,0,0,0,1,0,1,0,2,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,9
+16,Puglia,074,Brindisi,SS00701,SS 007 -  via Appia,0,0,1,1,0,0,0,3,2,2,1,2,3,0,3,0,1,1,1,3,0,0,1,2,0,27
+16,Puglia,074,Brindisi,SS00703,SS 007 ter -  Salentina,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,2
+16,Puglia,074,Brindisi,SS01601,SS 016 -  Adriatica,2,0,1,1,1,2,0,2,0,0,2,4,2,2,3,2,1,1,1,1,3,2,2,0,0,35
+16,Puglia,074,Brindisi,SS17205,SS 172 dir -  dei Trulli,2,0,1,1,0,0,0,0,1,0,0,0,1,0,2,0,0,2,0,1,1,1,0,0,0,13
+16,Puglia,074,Brindisi,SS37901,SS 379 -  Egnazia e delle Terme di Torre Canne,5,1,0,0,1,1,0,5,1,0,0,2,2,2,3,1,3,1,1,0,0,2,1,0,0,32
+16,Puglia,074,Brindisi,SS58101,SS 581 -  di Massafra,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,1,0,0,1,0,0,1,0,0,0,5
+16,Puglia,074,Brindisi,SS60301,SS 603 -  di S. Giorgio Jonico,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+16,Puglia,074,Brindisi,SS60501,SS 605 -  di Mesagne,0,0,0,1,0,0,0,0,0,1,0,0,0,1,2,1,1,0,0,0,1,1,0,0,0,9
+16,Puglia,074,Brindisi,SS61301,SS 613 -  Brindisi-Lecce,0,0,0,0,0,1,1,1,0,2,2,0,1,2,2,1,0,1,1,1,1,1,0,0,0,18
+16,Puglia,075,Lecce,SS00703,SS 007 ter -  Salentina,0,0,1,0,0,0,1,3,2,2,2,0,0,1,0,1,0,2,2,0,1,2,0,0,0,20
+16,Puglia,075,Lecce,SS01601,SS 016 -  Adriatica,2,2,0,1,0,1,0,2,2,2,1,1,2,2,2,1,1,1,2,1,1,3,2,1,0,33
+16,Puglia,075,Lecce,SS10101,SS 101 -  Salentina di Gallipoli,1,0,1,1,0,1,2,5,0,1,2,5,3,2,1,0,1,1,1,0,0,1,0,1,0,30
+16,Puglia,075,Lecce,SS17301,SS 173 -  delle Terme Salentine,0,0,1,0,0,0,0,0,0,0,2,0,1,1,0,0,2,0,1,2,0,0,0,0,0,10
+16,Puglia,075,Lecce,SS17401,SS 174 -  Salentina di Manduria,0,0,0,0,0,1,1,0,0,0,1,1,0,1,0,0,0,2,0,0,0,0,0,0,0,7
+16,Puglia,075,Lecce,SS27401,SS 274 -  Salentina Meridionale,0,0,0,0,0,0,1,1,2,1,0,0,0,2,0,0,1,0,1,1,1,1,0,0,0,12
+16,Puglia,075,Lecce,SS27501,SS 275 -  di S. Maria di Leuca,0,1,1,0,1,0,1,0,1,2,2,5,0,1,1,2,0,2,4,1,3,0,0,0,0,28
+16,Puglia,075,Lecce,SS45901,SS 459 -  di Parabita,0,1,0,0,0,0,0,1,2,1,1,2,1,0,0,0,0,2,0,1,0,0,0,0,0,12
+16,Puglia,075,Lecce,SS47401,SS 474 -  di Taurisano,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,2
+16,Puglia,075,Lecce,SS47501,SS 475 -  di Casarano,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,2
+16,Puglia,075,Lecce,SS47601,SS 476 -  di Galatina,0,1,0,0,0,1,1,0,1,1,0,2,0,1,1,0,0,1,3,1,0,0,0,0,0,14
+16,Puglia,075,Lecce,SS49701,SS 497 -  di Maglie e di S. Cesarea Terme,0,0,0,0,1,1,2,1,1,1,0,0,0,2,1,0,0,1,0,0,0,2,0,0,0,13
+16,Puglia,075,Lecce,SS54301,SS 543 -  del Lido di Lecce,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,2
+16,Puglia,075,Lecce,SS60501,SS 605 -  di Mesagne,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,2
+16,Puglia,075,Lecce,SS61101,SS 611 -  di Otranto,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,3
+16,Puglia,075,Lecce,SS61301,SS 613 -  Brindisi-Lecce,0,1,0,1,1,2,1,0,0,0,3,1,2,2,3,1,1,2,3,0,0,1,0,1,0,26
+16,Puglia,075,Lecce,SS66401,SS 664 -  Mediana del Salento,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+16,Puglia,075,Lecce,SS69401,SS 694 -  Tangenziale Ovest di Lecce,0,0,0,1,0,0,1,0,0,0,0,1,1,3,1,1,1,0,0,0,0,0,0,0,0,10
+16,Puglia,075,Lecce,SS69501,SS 695 -  Tangenziale Sud di Otranto,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1
+16,Puglia,110,Barletta-Andria-Trani,AA01401,A 14 -  Bologna-Taranto (Autostrada Adriatica),0,0,2,0,0,0,0,2,0,1,2,0,1,0,0,0,0,3,1,0,0,0,0,0,0,12
+16,Puglia,110,Barletta-Andria-Trani,NC11301,NSA 113 -  ex SS 016 Adriatica,0,0,0,0,0,1,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,4
+16,Puglia,110,Barletta-Andria-Trani,SS01601,SS 016 -  Adriatica,3,0,1,1,2,4,2,1,0,0,3,6,4,5,0,2,1,2,4,1,2,3,0,0,0,47
+16,Puglia,110,Barletta-Andria-Trani,SS09301,SS 093 -  Appulo Lucana,0,0,0,0,0,0,1,1,1,3,0,0,2,0,0,1,1,0,1,0,0,0,0,0,0,11
+16,Puglia,110,Barletta-Andria-Trani,SS09701,SS 097 -  delle Murge,0,0,0,0,0,0,0,0,1,2,0,0,2,0,0,1,1,0,1,0,1,0,0,0,0,9
+16,Puglia,110,Barletta-Andria-Trani,SS09801,SS 098 -  Andriese Coratina,0,0,0,0,0,0,0,1,0,2,2,0,1,2,1,1,0,0,1,1,1,0,1,0,0,14
+16,Puglia,110,Barletta-Andria-Trani,SS15901,SS 159 -  delle Saline,1,0,1,0,0,0,0,0,0,0,0,1,1,0,1,0,1,1,0,1,1,0,1,1,0,11
+16,Puglia,110,Barletta-Andria-Trani,SS16801,SS 168 -  di Venosa,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,1,0,0,0,4
+16,Puglia,110,Barletta-Andria-Trani,SS17001,SS 170 -  di Castel del Monte,0,1,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,4
+16,Puglia,110,Barletta-Andria-Trani,SS17006,SS 170 dir/a -  di Castel del Monte,1,0,0,0,0,0,1,1,0,1,1,1,1,0,2,1,1,0,0,0,1,0,0,1,0,13
+16,Puglia,110,Barletta-Andria-Trani,SS37801,SS 378 -  di Altamura,0,0,0,0,0,0,0,0,1,0,1,0,0,1,0,0,1,0,0,1,0,0,0,1,0,6
+16,Puglia,110,Barletta-Andria-Trani,SS54401,SS 544 -  di Trinitapoli,0,0,0,1,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,3
+17,Basilicata,076,Potenza,AA00302,A 03 -  Salerno-Reggio Calabria,0,1,1,0,0,0,0,2,2,3,1,1,1,0,1,1,1,1,0,2,1,0,0,0,0,19
+17,Basilicata,076,Potenza,RA00501,Raccordo Autostradale Scalo Sicignano-Potenza,0,0,0,0,0,0,1,0,0,0,0,0,2,1,0,2,0,3,0,0,0,1,1,0,0,11
+17,Basilicata,076,Potenza,SS00701,SS 007 -  via Appia,0,1,1,0,0,0,0,0,0,0,0,2,0,0,1,0,0,0,1,1,1,0,0,0,0,8
+17,Basilicata,076,Potenza,SS01801,SS 018 -  Tirrena-Inferiore,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,4
+17,Basilicata,076,Potenza,SS01901,SS 019 -  delle Calabrie,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,1,1,1,0,0,0,0,5
+17,Basilicata,076,Potenza,SS09201,SS 092 -  dell'Appennino Meridionale,0,0,1,0,0,0,0,1,1,0,0,0,1,1,0,0,1,0,1,0,1,0,0,0,0,8
+17,Basilicata,076,Potenza,SS09301,SS 093 -  Appulo Lucana,1,1,0,0,0,2,0,0,0,0,1,3,0,3,0,1,0,0,1,3,0,0,1,0,0,17
+17,Basilicata,076,Potenza,SS09401,SS 094 -  del Varco di Pietrastretta,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,1,0,0,0,0,0,4
+17,Basilicata,076,Potenza,SS09405,SS 094 dir -  del Varco di Pietrastretta ,0,0,0,0,0,0,0,0,0,0,0,2,0,0,1,0,0,0,0,0,1,0,0,0,0,4
+17,Basilicata,076,Potenza,SS09501,SS 095 -  di Brienza,0,1,0,0,0,0,0,0,1,0,1,0,2,1,1,0,1,0,0,1,0,0,0,0,0,9
+17,Basilicata,076,Potenza,SS09534,SS 095 var -  Variante Tito-Brienza,0,0,0,0,0,0,0,1,0,2,0,0,0,0,1,1,0,0,0,0,0,1,0,0,0,6
+17,Basilicata,076,Potenza,SS09601,SS 096 -  Barese,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,3
+17,Basilicata,076,Potenza,SS09602,SS 096 bis -  Barese,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+17,Basilicata,076,Potenza,SS10301,SS 103 -  di Val d'Agri,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,2,0,0,0,0,0,4
+17,Basilicata,076,Potenza,SS16801,SS 168 -  di Venosa,0,0,0,0,0,0,0,2,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,4
+17,Basilicata,076,Potenza,SS16901,SS 169 -  di Genzano,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,3
+17,Basilicata,076,Potenza,SS27601,SS 276 -  dell'Alto Agri,0,0,0,0,0,0,0,0,1,1,0,2,1,0,0,0,0,0,1,0,0,0,0,1,0,7
+17,Basilicata,076,Potenza,SS30301,SS 303 -  del Formicoso,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,2
+17,Basilicata,076,Potenza,SS38101,SS 381 -  del Passo delle Crocelle e di Valle Cupa,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+17,Basilicata,076,Potenza,SS40101,SS 401 -  dell'Alto Ofanto e del Vulture,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1
+17,Basilicata,076,Potenza,SS40105,SS 401 dir -  dell'Alto Ofanto e del Vulture,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1
+17,Basilicata,076,Potenza,SS40701,SS 407 -  Basentana,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,2
+17,Basilicata,076,Potenza,SS58501,SS 585 -  Fondo Valle del Noce,1,0,2,0,1,0,1,0,0,1,0,2,1,1,1,0,1,0,0,0,0,0,0,0,0,12
+17,Basilicata,076,Potenza,SS59801,SS 598 -  di Fondo Valle d'Agri,1,0,0,0,0,1,0,0,3,0,0,0,0,0,0,1,1,3,1,2,0,0,0,0,0,13
+17,Basilicata,076,Potenza,SS65301,SS 653 -  della Valle del Sinni,1,0,0,0,0,0,2,0,0,0,0,0,0,0,1,0,0,0,0,3,0,0,0,0,0,7
+17,Basilicata,076,Potenza,SS65501,SS 655 -  Bradanica,0,0,0,0,0,0,0,0,0,0,2,0,0,0,2,0,0,1,0,0,0,0,0,0,0,5
+17,Basilicata,076,Potenza,SS65801,SS 658 -  Melfi-Potenza,0,0,0,0,0,1,0,0,1,3,2,1,1,1,1,1,1,1,0,0,0,0,0,0,0,14
+17,Basilicata,077,Matera,SS00701,SS 007 -  via Appia,1,0,0,1,0,0,0,1,0,4,1,2,1,2,0,1,1,4,1,1,2,0,0,1,0,24
+17,Basilicata,077,Matera,SS00721,SS 007 racc -  via Appia,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1
+17,Basilicata,077,Matera,SS09201,SS 092 -  dell'Appennino Meridionale,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+17,Basilicata,077,Matera,SS09602,SS 096 bis -  Barese,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+17,Basilicata,077,Matera,SS09901,SS 099 -  di Matera,0,0,1,0,1,0,0,1,0,0,0,0,2,0,0,0,2,0,0,2,0,1,0,0,0,10
+17,Basilicata,077,Matera,SS10301,SS 103 -  di Val d'Agri,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,3
+17,Basilicata,077,Matera,SS10601,SS 106 -  Jonica,0,0,0,1,0,0,1,2,0,0,1,1,4,2,3,0,0,2,3,2,0,0,3,0,0,25
+17,Basilicata,077,Matera,SS17501,SS 175 -  della Valle del Bradano,0,0,0,0,0,1,0,0,0,0,2,2,0,0,0,1,1,2,0,0,1,1,0,0,0,11
+17,Basilicata,077,Matera,SS17601,SS 176 -  della Valle del Basento,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,2
+17,Basilicata,077,Matera,SS27101,SS 271 -  di Cassano,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1
+17,Basilicata,077,Matera,SS27701,SS 277 -  di Calle,1,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3
+17,Basilicata,077,Matera,SS38001,SS 380 -  dei Tre Confini,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,3
+17,Basilicata,077,Matera,SS40701,SS 407 -  Basentana,0,0,1,0,0,2,0,0,0,1,1,2,0,3,0,2,0,1,0,1,0,0,0,0,0,14
+17,Basilicata,077,Matera,SS59801,SS 598 -  di Fondo Valle d'Agri,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1,1,1,0,1,0,0,0,0,0,6
+17,Basilicata,077,Matera,SS65301,SS 653 -  della Valle del Sinni,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,2
+17,Basilicata,077,Matera,SS65501,SS 655 -  Bradanica,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1
+18,Calabria,078,Cosenza,AA00302,A 03 -  Salerno-Reggio Calabria,2,1,0,2,1,3,4,1,3,5,7,2,7,6,2,5,6,2,7,6,1,2,0,7,0,82
+18,Calabria,078,Cosenza,SS01801,SS 018 -  Tirrena-Inferiore,4,2,2,1,0,2,2,7,2,5,9,7,9,6,4,5,7,17,10,3,10,2,2,2,0,120
+18,Calabria,078,Cosenza,SS01823,SS 018 racc/ter -  Tirrena-Inferiore,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1
+18,Calabria,078,Cosenza,SS01901,SS 019 -  delle Calabrie,0,1,0,0,0,0,1,0,0,4,0,3,2,0,1,1,2,4,2,1,1,2,0,0,0,25
+18,Calabria,078,Cosenza,SS09241,SS 092 (2° tratto) -  dell'Appennino Meridionale,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,1,0,0,1,0,0,0,0,6
+18,Calabria,078,Cosenza,SS10501,SS 105 -  di Castrovillari,0,0,0,0,0,0,0,0,1,0,2,0,1,2,0,0,0,0,1,2,0,0,0,1,0,10
+18,Calabria,078,Cosenza,SS10601,SS 106 -  Jonica,1,1,0,0,1,3,2,3,5,3,5,2,0,3,1,2,4,8,5,1,3,2,0,0,0,55
+18,Calabria,078,Cosenza,SS10602,SS 106 bis -  Jonica,0,0,0,0,0,0,0,1,2,0,0,0,1,1,0,0,0,0,1,0,0,0,0,0,0,6
+18,Calabria,078,Cosenza,SS10628,SS 106 radd -  Jonica,0,0,2,0,0,0,1,0,1,2,1,4,4,2,1,1,2,5,0,4,0,1,0,2,0,33
+18,Calabria,078,Cosenza,SS10701,SS 107 -  Silana Crotonese,1,1,0,0,1,1,0,0,2,1,2,2,5,5,5,5,1,3,1,5,2,2,1,0,0,46
+18,Calabria,078,Cosenza,SS10801,SS 108 -  Silana di Cariati,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,2,0,0,0,0,0,0,5
+18,Calabria,078,Cosenza,SS17701,SS 177 -  Silana di Rossano,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+18,Calabria,078,Cosenza,SS17801,SS 178 -  del Lago Arvo,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,2
+18,Calabria,078,Cosenza,SS27801,SS 278 -  di Potame,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1
+18,Calabria,078,Cosenza,SS27901,SS 279 -  Silana di Rose,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,0,0,0,3
+18,Calabria,078,Cosenza,SS28301,SS 283 -  delle Terme Luigiane,1,0,0,1,0,0,0,0,0,0,2,2,0,0,0,0,0,2,2,0,1,0,0,0,0,11
+18,Calabria,078,Cosenza,SS53101,SS 531 -  di Cropalati,0,0,0,0,0,0,0,0,0,0,3,1,0,1,0,0,0,0,1,0,0,0,1,0,0,7
+18,Calabria,078,Cosenza,SS53301,SS 533 -  di Fagnano,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+18,Calabria,078,Cosenza,SS53401,SS 534 -  di Cammarata e degli Stombi,0,0,0,0,0,0,0,0,0,2,0,0,0,1,0,1,1,0,0,0,0,0,0,0,0,5
+18,Calabria,078,Cosenza,SS53434,SS 534 R -  di Cammarata e degli Stombi (vecchio tratto Firmo-A 03),0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+18,Calabria,078,Cosenza,SS55901,SS 559 -  di Luzzi,0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,1,0,0,1,0,0,0,0,0,5
+18,Calabria,078,Cosenza,SS66001,SS 660 -  di Acri,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,1,0,0,0,1,0,4
+18,Calabria,079,Catanzaro,AA00302,A 03 -  Salerno-Reggio Calabria,1,0,1,0,1,2,1,2,5,1,1,0,2,4,0,2,2,1,0,0,3,1,1,0,0,31
+18,Calabria,079,Catanzaro,SS01801,SS 018 -  Tirrena-Inferiore,0,0,0,0,0,1,0,0,2,1,1,0,3,1,0,0,1,1,0,0,1,0,2,0,0,14
+18,Calabria,079,Catanzaro,SS01805,SS 018 dir -  Tirrena-Inferiore,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,1,0,1,0,0,0,0,4
+18,Calabria,079,Catanzaro,SS01821,SS 018 racc -  Tirrena-Inferiore,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+18,Calabria,079,Catanzaro,SS01901,SS 019 -  delle Calabrie,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,2
+18,Calabria,079,Catanzaro,SS01902,SS 019 bis -  delle Calabrie,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,2
+18,Calabria,079,Catanzaro,SS01904,SS 019 quater -  delle Calabrie,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,2
+18,Calabria,079,Catanzaro,SS01905,SS 019 dir -  delle Calabrie,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,3
+18,Calabria,079,Catanzaro,SS10601,SS 106 -  Jonica,2,4,0,2,2,4,3,4,4,5,7,2,3,2,6,4,2,4,3,3,1,2,2,0,0,71
+18,Calabria,079,Catanzaro,SS10636,SS 106 var/a -  Variante di Catanzaro Lido,0,0,0,0,0,0,0,1,1,0,0,0,1,1,1,0,0,1,1,1,0,0,0,0,0,8
+18,Calabria,079,Catanzaro,SS10901,SS 109 -  della Piccola Sila,0,0,0,0,0,0,0,1,0,0,1,0,0,1,0,1,0,0,1,0,0,0,0,1,0,6
+18,Calabria,079,Catanzaro,SS10902,SS 109 bis -  della Piccola Sila,1,0,0,0,0,0,1,0,0,1,0,1,1,0,0,1,2,0,0,1,2,0,0,0,0,11
+18,Calabria,079,Catanzaro,SS17905,SS 179 dir -  del Lago Ampollino,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1
+18,Calabria,079,Catanzaro,SS18001,SS 180 -  di Cropani,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,2
+18,Calabria,079,Catanzaro,SS18101,SS 181 -  di Maida e Squillace,0,0,0,0,1,0,0,0,0,1,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,4
+18,Calabria,079,Catanzaro,SS18201,SS 182 -  delle Serre Calabre,1,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,2,0,0,0,0,0,5
+18,Calabria,079,Catanzaro,SS28001,SS 280 -  dei Due Mari,1,1,0,0,1,0,0,0,2,2,3,1,1,3,4,4,2,5,2,2,2,1,4,1,0,42
+18,Calabria,079,Catanzaro,SS38201,SS 382 -  di Chiaravalle,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,2
+18,Calabria,079,Catanzaro,SS38401,SS 384 -  di Girifalco,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,2
+18,Calabria,080,Reggio Calabria,AA00302,A 03 -  Salerno-Reggio Calabria,0,3,0,0,1,1,6,3,5,8,10,4,4,6,2,3,6,6,4,3,2,2,2,2,0,83
+18,Calabria,080,Reggio Calabria,NC28101,NSA 281 -  Gallico-Gambarie,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,2
+18,Calabria,080,Reggio Calabria,RA00401,Raccordo Autostradale di Reggio Calabria,0,0,0,0,2,0,0,2,3,1,3,1,4,8,3,4,2,1,2,2,3,4,2,2,0,49
+18,Calabria,080,Reggio Calabria,SS01801,SS 018 -  Tirrena-Inferiore,0,2,0,0,1,0,0,3,0,2,1,2,1,1,1,0,5,7,1,1,3,1,0,1,1,34
+18,Calabria,080,Reggio Calabria,SS10601,SS 106 -  Jonica,1,2,0,3,0,0,4,3,7,4,7,9,6,7,4,12,7,13,12,4,6,4,3,3,0,121
+18,Calabria,080,Reggio Calabria,SS10637,SS 106 var/b -  Jonica,0,0,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3
+18,Calabria,080,Reggio Calabria,SS11001,SS 110 -  di Monte Cucco e di Monte Pecoraro,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+18,Calabria,080,Reggio Calabria,SS11101,SS 111 -  di Gioia Tauro e Locri,0,0,0,0,0,0,0,0,1,0,0,0,0,3,0,0,0,0,2,0,1,0,0,0,0,7
+18,Calabria,080,Reggio Calabria,SS11201,SS 112 -  d'Aspromonte,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,5
+18,Calabria,080,Reggio Calabria,SS11202,SS 112 bis -  d'Aspromonte,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,2
+18,Calabria,080,Reggio Calabria,SS18301,SS 183 -  Aspromonte Jonio,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,2
+18,Calabria,080,Reggio Calabria,SS18401,SS 184 -  delle Gambarie,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1
+18,Calabria,080,Reggio Calabria,SS28101,SS 281 -  del Passo di Limina,0,0,0,0,0,0,0,0,2,0,0,0,1,1,1,0,1,1,1,0,0,0,0,0,0,8
+18,Calabria,080,Reggio Calabria,SS53601,SS 536 -  di Acquaro,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,0,0,0,0,0,3
+18,Calabria,080,Reggio Calabria,SS68201,SS 682 -  Jonio-Tirreno,0,0,0,0,0,0,0,0,1,0,0,1,0,2,1,1,0,1,0,0,1,0,0,0,0,8
+18,Calabria,101,Crotone,SS10601,SS 106 -  Jonica,2,6,1,0,2,1,2,5,1,2,3,3,1,4,4,4,6,2,3,1,1,0,1,1,0,56
+18,Calabria,101,Crotone,SS10701,SS 107 -  Silana Crotonese,0,0,2,0,0,0,0,1,0,0,2,0,3,2,4,2,2,1,2,0,0,0,0,0,0,21
+18,Calabria,101,Crotone,SS10901,SS 109 -  della Piccola Sila,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,2
+18,Calabria,101,Crotone,SS10903,SS 109 ter -  della Piccola Sila,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,2
+18,Calabria,101,Crotone,SS49201,SS 492 -  di Savelli,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,2
+18,Calabria,102,Vibo Valentia,AA00302,A 03 -  Salerno-Reggio Calabria,1,0,0,0,0,0,1,0,0,0,0,0,1,1,2,0,0,0,0,1,0,0,0,0,0,7
+18,Calabria,102,Vibo Valentia,SS01801,SS 018 -  Tirrena-Inferiore,0,1,1,0,0,0,2,1,0,1,2,2,3,3,3,1,1,4,3,2,0,0,0,1,1,32
+18,Calabria,102,Vibo Valentia,SS11001,SS 110 -  di Monte Cucco e di Monte Pecoraro,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+18,Calabria,102,Vibo Valentia,SS18201,SS 182 -  delle Serre Calabre,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,1,0,1,0,0,0,5
+18,Calabria,102,Vibo Valentia,SS52201,SS 522 -  di Tropea,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,1,0,1,0,0,0,0,0,4
+18,Calabria,102,Vibo Valentia,SS60601,SS 606 -  di Vibo Valentia,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,1,0,0,0,4
+19,Sicilia,081,Trapani,AA02901,A 29 -  Palermo-Mazara del Vallo,1,0,1,0,0,0,0,0,3,0,3,2,1,0,4,2,2,0,1,1,1,0,0,0,0,22
+19,Sicilia,081,Trapani,AA02905,A 29 dir -  Diramazione Alcamo-Trapani,0,0,1,0,0,0,0,0,0,3,0,0,3,2,0,4,2,2,0,0,0,2,0,2,0,21
+19,Sicilia,081,Trapani,AA02906,A 29 dir/a -  Diramazione per Birgi,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,3
+19,Sicilia,081,Trapani,SS11301,SS 113 -  Settentrionale Sicula,0,0,1,0,0,1,0,0,1,2,0,0,2,1,2,0,0,0,1,1,0,1,1,1,0,15
+19,Sicilia,081,Trapani,SS11501,SS 115 -  Sud Occidentale Sicula,2,3,0,1,2,0,3,3,1,2,2,2,6,5,4,1,3,7,3,5,2,3,2,1,1,64
+19,Sicilia,081,Trapani,SS11505,SS 115 dir -  Sud Occidentale Sicula,0,0,0,0,0,0,0,2,0,1,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,5
+19,Sicilia,081,Trapani,SS11901,SS 119 -  di Gibellina ,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,1,0,0,0,0,0,0,0,3
+19,Sicilia,081,Trapani,SS18701,SS 187 -  di Castellammare del Golfo,0,0,1,1,0,0,0,2,0,1,3,0,2,1,2,0,3,1,2,1,1,1,0,1,0,23
+19,Sicilia,081,Trapani,SS18801,SS 188 -  Centro Occidentale Sicula,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,1,3,0,0,0,0,6
+19,Sicilia,081,Trapani,SS18806,SS 188 dir/a -  Centro Occidentale Sicula,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1
+19,Sicilia,081,Trapani,SS62401,SS 624 -  Palermo-Sciacca,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+19,Sicilia,081,Trapani,SS73101,SS 731 -  Bretella di Castellammare del Golfo,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1
+19,Sicilia,082,Palermo,AA01901,A 19 -  Palermo-Catania,1,1,3,0,3,3,2,3,5,2,3,7,2,5,7,8,4,2,4,2,3,1,1,1,0,73
+19,Sicilia,082,Palermo,AA01905,A 19 dir -  Diramazione per via Giafar,0,3,0,1,1,0,0,1,1,2,1,0,0,1,1,1,1,0,1,1,0,2,1,2,0,21
+19,Sicilia,082,Palermo,AA02001,A 20 -  Messina-Palermo,1,1,0,0,0,0,0,1,0,0,1,1,0,1,3,0,0,1,2,1,0,0,1,0,0,14
+19,Sicilia,082,Palermo,AA02901,A 29 -  Palermo-Mazara del Vallo,0,3,2,1,1,2,0,5,3,4,1,8,7,5,2,2,4,3,4,2,0,3,1,4,0,67
+19,Sicilia,082,Palermo,AA02921,A 29 racc -  Diramazione per Punta Raisi,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,2
+19,Sicilia,082,Palermo,AA02922,A 29 racc/bis - Raccordo per via Belgio,0,1,0,0,1,0,0,0,0,1,1,0,0,0,1,1,0,1,1,2,2,0,0,1,0,13
+19,Sicilia,082,Palermo,SS11301,SS 113 -  Settentrionale Sicula,2,2,2,8,2,0,1,6,1,1,5,7,8,7,7,7,3,7,7,2,2,2,3,4,0,96
+19,Sicilia,082,Palermo,SS11801,SS 118 -  Corleonese-Agrigentina,0,0,0,0,0,1,0,0,1,0,0,0,2,2,0,1,0,1,0,0,0,0,0,0,0,8
+19,Sicilia,082,Palermo,SS12001,SS 120 -  dell'Etna e delle Madonie,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,1,0,1,0,0,0,0,4
+19,Sicilia,082,Palermo,SS12101,SS 121 -  Catanese,1,0,1,1,0,0,1,0,1,1,4,4,3,1,3,2,2,1,1,2,0,1,2,1,0,33
+19,Sicilia,082,Palermo,SS18601,SS 186 -  di Monreale,1,0,0,0,1,0,2,0,1,1,2,1,1,2,0,3,2,0,3,3,2,0,0,2,0,27
+19,Sicilia,082,Palermo,SS18701,SS 187 -  di Castellammare del Golfo,1,0,0,1,0,0,1,0,0,1,0,1,0,1,0,0,0,0,2,0,0,0,0,0,0,8
+19,Sicilia,082,Palermo,SS18801,SS 188 -  Centro Occidentale Sicula,0,0,0,0,0,0,0,0,1,2,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,4
+19,Sicilia,082,Palermo,SS18808,SS 188 dir/c -  Centro Occidentale Sicula,0,0,0,0,0,1,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,4
+19,Sicilia,082,Palermo,SS18901,SS 189 -  della Valle del Platani,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,5
+19,Sicilia,082,Palermo,SS28501,SS 285 -  di Caccamo,0,0,0,0,1,0,0,1,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,4
+19,Sicilia,082,Palermo,SS28601,SS 286 -  di Castelbuono,0,1,0,0,0,0,0,0,1,0,2,0,2,0,1,0,0,0,2,0,0,0,0,0,0,9
+19,Sicilia,082,Palermo,SS29001,SS 290 -  di Alimena,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,3
+19,Sicilia,082,Palermo,SS62401,SS 624 -  Palermo-Sciacca,0,0,0,0,0,1,0,2,0,2,1,3,1,0,0,1,1,0,1,1,1,1,1,2,0,19
+19,Sicilia,082,Palermo,SS64301,SS 643 -  di Polizzi,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,2
+19,Sicilia,083,Messina,AA01801,A 18 -  Messina-Catania,2,2,1,1,0,1,1,2,3,1,2,4,2,2,1,2,1,2,2,0,2,0,1,0,0,35
+19,Sicilia,083,Messina,AA02001,A 20 -  Messina-Palermo,3,1,0,2,2,1,2,11,11,10,6,8,15,11,11,7,7,9,6,5,7,3,3,0,0,141
+19,Sicilia,083,Messina,SS11301,SS 113 -  Settentrionale Sicula,3,1,0,4,2,3,3,4,5,1,7,6,5,3,5,4,1,10,4,2,4,3,1,1,1,83
+19,Sicilia,083,Messina,SS11305,SS 113 dir -  Settentrionale Sicula,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,2,0,0,0,0,4
+19,Sicilia,083,Messina,SS11401,SS 114 -  Orientale Sicula ,0,0,1,0,0,2,3,1,2,3,1,2,1,1,3,6,4,3,4,1,0,2,0,1,1,42
+19,Sicilia,083,Messina,SS11601,SS 116 -  Randazzo Capo d'Orlando,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,1,0,0,0,0,0,1,0,6
+19,Sicilia,083,Messina,SS11701,SS 117 -  Centrale Sicula,0,1,0,0,0,1,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,4
+19,Sicilia,083,Messina,SS12001,SS 120 -  dell'Etna e delle Madonie,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1
+19,Sicilia,083,Messina,SS18501,SS 185 -  di Sella Mandrazzi,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1
+19,Sicilia,084,Agrigento,SS11501,SS 115 -  Sud Occidentale Sicula,0,2,2,1,0,0,2,2,2,4,3,0,4,3,1,1,2,4,3,2,3,0,0,0,0,41
+19,Sicilia,084,Agrigento,SS11503,SS 115 ter -  Sud Occidentale Sicula,1,0,0,0,0,0,0,0,0,1,1,0,0,0,1,0,0,0,1,0,0,0,0,0,0,5
+19,Sicilia,084,Agrigento,SS11504,SS 115 quater -  Sud Occidentale Sicula,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3
+19,Sicilia,084,Agrigento,SS11801,SS 118 -  Corleonese-Agrigentina,0,0,0,0,0,0,1,1,0,0,0,0,2,1,0,1,1,2,0,2,0,0,1,0,0,12
+19,Sicilia,084,Agrigento,SS12201,SS 122 -  Agrigentina,0,0,0,0,0,0,0,1,0,0,0,1,2,2,0,0,0,1,0,0,0,0,0,0,0,7
+19,Sicilia,084,Agrigento,SS12203,SS 122 ter -  Tangenziale Est di Canicattì,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,3
+19,Sicilia,084,Agrigento,SS12301,SS 123 -  di Licata,0,0,0,0,0,0,0,0,1,0,0,0,0,1,1,0,0,2,0,0,0,0,0,0,0,5
+19,Sicilia,084,Agrigento,SS18801,SS 188 -  Centro Occidentale Sicula,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+19,Sicilia,084,Agrigento,SS18901,SS 189 -  della Valle del Platani,0,0,0,0,0,0,1,0,0,1,0,1,1,0,1,1,1,1,1,0,0,0,0,0,0,9
+19,Sicilia,084,Agrigento,SS38601,SS 386 -  di Ribera,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1
+19,Sicilia,084,Agrigento,SS41001,SS 410 -  di Naro,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+19,Sicilia,084,Agrigento,SS41005,SS 410 dir -  di Naro,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,2
+19,Sicilia,084,Agrigento,SS55701,SS 557 -  di Campobello di Licata,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1
+19,Sicilia,084,Agrigento,SS64001,SS 640 -  di Porto Empedocle,0,0,0,1,1,0,0,1,0,0,0,1,0,0,0,0,0,0,2,0,1,2,1,0,0,10
+19,Sicilia,085,Caltanissetta,AA01901,A 19 -  Palermo-Catania,0,0,0,0,0,0,0,1,0,0,2,0,3,0,0,0,0,0,0,0,0,0,0,0,0,6
+19,Sicilia,085,Caltanissetta,SS11501,SS 115 -  Sud Occidentale Sicula,0,0,0,0,1,0,2,2,3,2,1,5,3,3,2,3,2,3,2,0,0,0,0,0,0,34
+19,Sicilia,085,Caltanissetta,SS11702,SS 117 bis -  Centrale Sicula,0,0,0,0,1,1,0,0,0,2,1,0,0,0,0,1,1,0,0,0,0,2,0,0,0,9
+19,Sicilia,085,Caltanissetta,SS12201,SS 122 -  Agrigentina,0,0,0,0,0,0,0,0,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,3
+19,Sicilia,085,Caltanissetta,SS18901,SS 189 -  della Valle del Platani,0,0,0,0,0,2,0,0,0,0,1,1,2,0,0,1,0,0,1,0,0,0,0,0,0,8
+19,Sicilia,085,Caltanissetta,SS19001,SS 190 -  delle Solfare,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,2,1,1,1,0,0,0,7
+19,Sicilia,085,Caltanissetta,SS19101,SS 191 -  di Pietraperzia,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+19,Sicilia,085,Caltanissetta,SS62601,SS 626 -  della Valle del Salso,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,1,2,0,1,0,0,0,0,0,0,6
+19,Sicilia,085,Caltanissetta,SS64001,SS 640 -  di Porto Empedocle,0,0,1,1,0,0,0,0,1,0,0,1,0,1,0,1,1,1,1,1,0,0,0,0,0,10
+19,Sicilia,085,Caltanissetta,SS64005,SS 640 dir -  Raccordo di Pietraperzia (SSV Caltanissetta-Pietraperzia),0,0,0,0,0,0,0,0,1,0,0,1,1,2,0,0,1,2,0,0,0,0,0,0,0,8
+19,Sicilia,086,Enna,AA01901,A 19 -  Palermo-Catania,0,1,1,1,1,1,1,2,2,0,1,0,1,0,1,2,1,0,2,0,1,0,0,0,0,19
+19,Sicilia,086,Enna,SS11701,SS 117 -  Centrale Sicula,0,0,0,0,0,0,0,0,0,1,1,0,3,0,2,0,0,0,0,0,0,0,0,0,0,7
+19,Sicilia,086,Enna,SS11702,SS 117 bis -  Centrale Sicula,0,0,0,0,1,0,0,1,2,0,1,3,1,2,0,2,2,0,4,1,0,1,0,0,0,21
+19,Sicilia,086,Enna,SS12001,SS 120 -  dell'Etna e delle Madonie,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,4
+19,Sicilia,086,Enna,SS12101,SS 121 -  Catanese,0,1,1,0,0,1,0,1,0,1,0,1,1,1,2,0,0,0,1,0,0,1,0,0,0,12
+19,Sicilia,086,Enna,SS19101,SS 191 -  di Pietraperzia,1,0,0,0,0,0,1,0,1,0,0,0,0,1,0,0,1,1,0,1,1,1,1,0,0,10
+19,Sicilia,086,Enna,SS19201,SS 192 -  della Valle del Dittaino,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,3
+19,Sicilia,086,Enna,SS28801,SS 288 -  di Aidone,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,3
+19,Sicilia,086,Enna,SS29001,SS 290 -  di Alimena,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,2
+19,Sicilia,086,Enna,SS56001,SS 560 -  di Marcatobianco,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1
+19,Sicilia,086,Enna,SS56101,SS 561 -  Pergusina,0,0,0,0,0,0,1,0,1,0,1,0,1,1,0,0,1,1,1,2,0,0,0,1,0,11
+19,Sicilia,086,Enna,SS57501,SS 575 -  di Troina,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+19,Sicilia,086,Enna,SS62601,SS 626 -  della Valle del Salso,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,3
+19,Sicilia,087,Catania,AA01801,A 18 -  Messina-Catania,2,4,5,0,3,0,2,1,7,0,4,3,4,5,8,2,4,4,2,2,1,2,0,1,0,66
+19,Sicilia,087,Catania,AA01802,A 18 -  Catania-Siracusa,0,0,0,0,0,0,0,0,0,2,1,0,1,0,1,0,0,0,0,1,0,0,0,0,0,6
+19,Sicilia,087,Catania,AA01805,A 18 dir -  Diramazione di Catania,1,0,0,0,0,0,0,0,3,2,3,3,1,7,4,1,0,2,1,1,1,0,0,0,0,30
+19,Sicilia,087,Catania,AA01901,A 19 -  Palermo-Catania,0,0,0,0,0,1,0,1,0,1,0,0,0,1,1,0,1,0,2,0,1,0,0,0,0,9
+19,Sicilia,087,Catania,RA01501,Tangenziale Ovest di Catania,2,3,2,0,1,1,1,5,4,3,3,2,4,8,4,3,0,5,12,2,2,3,0,3,0,73
+19,Sicilia,087,Catania,SS11401,SS 114 -  Orientale Sicula ,1,2,2,0,1,2,0,2,3,6,5,1,2,1,1,5,1,6,5,3,1,1,0,0,0,51
+19,Sicilia,087,Catania,SS11702,SS 117 bis -  Centrale Sicula,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1
+19,Sicilia,087,Catania,SS12001,SS 120 -  dell'Etna e delle Madonie,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,1,1,1,1,0,0,0,0,0,0,6
+19,Sicilia,087,Catania,SS12101,SS 121 -  Catanese,0,0,1,0,0,0,3,3,1,4,1,1,2,0,3,3,2,2,1,0,2,0,1,0,2,32
+19,Sicilia,087,Catania,SS12401,SS 124 -  Siracusana,0,1,0,0,0,0,0,0,1,0,0,0,2,1,1,1,0,1,1,0,0,1,0,0,0,10
+19,Sicilia,087,Catania,SS19201,SS 192 -  della Valle del Dittaino,0,0,0,0,1,0,1,0,0,1,1,1,1,1,1,0,0,1,0,0,1,0,0,0,0,10
+19,Sicilia,087,Catania,SS19401,SS 194 -  Ragusana,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,2
+19,Sicilia,087,Catania,SS28401,SS 284 -  Occidentale Etnea,0,1,0,0,0,0,1,1,1,1,1,0,2,2,2,1,1,1,1,0,1,1,0,1,0,19
+19,Sicilia,087,Catania,SS28801,SS 288 -  di Aidone,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,4
+19,Sicilia,087,Catania,SS38501,SS 385 -  di Palagonia,0,0,0,0,0,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,0,0,0,0,5
+19,Sicilia,087,Catania,SS41701,SS 417 -  di Caltagirone,0,0,0,1,1,2,3,4,1,2,1,2,1,0,0,1,3,1,1,0,0,0,0,0,0,24
+19,Sicilia,087,Catania,SS51401,SS 514 -  di Chiaramonte,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,4
+19,Sicilia,088,Ragusa,SS11501,SS 115 -  Sud Occidentale Sicula,2,1,1,0,1,1,0,6,3,4,2,3,1,5,2,1,3,1,4,3,1,1,1,0,0,47
+19,Sicilia,088,Ragusa,SS19401,SS 194 -  Ragusana,0,0,0,0,0,1,0,0,1,0,0,1,1,0,0,1,0,0,0,1,0,0,0,0,0,6
+19,Sicilia,088,Ragusa,SS51401,SS 514 -  di Chiaramonte,0,1,1,0,1,0,0,0,2,0,0,0,1,0,1,0,0,2,0,0,1,1,0,0,0,11
+19,Sicilia,089,Siracusa,AA01802,A 18 -  Catania-Siracusa,1,0,0,0,1,0,0,0,0,1,2,3,3,1,1,2,1,3,2,0,2,2,0,0,0,25
+19,Sicilia,089,Siracusa,AA01803,A 18 -  Siracusa-Gela,0,0,1,0,0,0,2,1,0,1,0,1,2,0,2,0,1,0,0,0,0,1,0,0,0,12
+19,Sicilia,089,Siracusa,SS11401,SS 114 -  Orientale Sicula ,0,0,1,1,1,0,0,0,2,2,2,0,2,1,2,1,2,1,1,1,1,0,2,1,0,24
+19,Sicilia,089,Siracusa,SS11405,SS 114 dir -  della Costa Saracena,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1
+19,Sicilia,089,Siracusa,SS11501,SS 115 -  Sud Occidentale Sicula,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,1,0,0,0,0,0,6
+19,Sicilia,089,Siracusa,SS12401,SS 124 -  Siracusana,0,0,0,0,1,0,0,1,0,0,0,0,1,0,0,0,0,0,1,0,1,0,0,1,0,6
+19,Sicilia,089,Siracusa,SS19301,SS 193 -  di Augusta,0,0,0,0,0,0,0,0,1,0,1,1,1,0,0,0,0,0,0,1,1,0,0,0,0,6
+19,Sicilia,089,Siracusa,SS19401,SS 194 -  Ragusana,0,0,0,0,0,0,0,0,3,0,0,0,1,0,2,1,1,1,0,0,0,0,0,1,0,10
+19,Sicilia,089,Siracusa,SS28701,SS 287 -  di Noto,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,2
+19,Sicilia,089,Siracusa,SS38501,SS 385 -  di Palagonia,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0,0,0,6
+20,Sardegna,090,Sassari,SS12701,SS 127 -  Settentrionale Sarda,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,2
+20,Sardegna,090,Sassari,SS12702,SS 127 bis -  Settentrionale Sarda,0,0,0,0,0,0,0,0,1,1,0,0,1,3,1,2,2,1,0,0,0,0,0,0,0,12
+20,Sardegna,090,Sassari,SS12802,SS 128 bis -  Centrale Sarda,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,0,0,2,0,0,0,0,0,0,0,5
+20,Sardegna,090,Sassari,SS13101,SS 131 -  Carlo Felice,0,0,0,2,1,1,0,1,4,8,3,6,4,2,6,3,7,3,2,5,3,2,1,1,0,65
+20,Sardegna,090,Sassari,SS13401,SS 134 -  di Castelsardo,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+20,Sardegna,090,Sassari,SS19901,SS 199 -  di Monti,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1
+20,Sardegna,090,Sassari,SS20001,SS 200 -  dell'Anglona,0,0,0,1,0,1,0,1,3,0,1,0,2,0,0,0,0,0,3,0,1,1,0,0,0,14
+20,Sardegna,090,Sassari,SS29101,SS 291 -  della Nurra,0,1,2,0,0,0,2,0,1,1,1,1,1,1,0,2,2,3,1,0,1,1,0,2,0,23
+20,Sardegna,090,Sassari,SS29201,SS 292 -  Nord Occidentale Sarda,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,2
+20,Sardegna,090,Sassari,SS29205,SS 292 dir -  Nord Occidentale Sarda,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1
+20,Sardegna,090,Sassari,SS59701,SS 597 -  di Logudoro,0,1,0,0,0,0,0,1,0,0,2,0,1,1,1,1,0,0,1,0,0,0,0,1,0,10
+20,Sardegna,090,Sassari,SS67201,SS 672 -  Sassari-Tempio,0,0,0,0,0,0,0,0,2,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,4
+20,Sardegna,091,Nuoro,SS12501,SS 125 -  Orientale Sarda,0,0,0,0,1,0,1,1,1,1,1,0,0,2,2,1,1,2,1,0,0,1,0,0,0,16
+20,Sardegna,091,Nuoro,SS12801,SS 128 -  Centrale Sarda,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,1,0,0,0,0,0,0,0,0,3
+20,Sardegna,091,Nuoro,SS12901,SS 129 -  Trasversale Sarda,0,0,0,0,0,0,3,1,0,1,3,1,4,5,1,1,4,2,2,1,2,0,0,0,0,31
+20,Sardegna,091,Nuoro,SS12902,SS 129 bis -  Trasversale Sarda,0,0,0,0,0,0,0,0,1,0,0,0,0,0,2,0,1,0,1,1,0,0,0,0,0,6
+20,Sardegna,091,Nuoro,SS13101,SS 131 -  Carlo Felice,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,2,0,0,0,0,0,4
+20,Sardegna,091,Nuoro,SS13139,SS 131 dir/centr -  Nuorese,0,1,0,0,1,0,0,6,2,1,4,0,3,1,3,0,4,5,2,3,3,0,0,0,0,39
+20,Sardegna,091,Nuoro,SS29501,SS 295 -  di Aritzo,0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,1,0,0,0,0,0,0,0,0,4
+20,Sardegna,091,Nuoro,SS38801,SS 388 -  del Tirso e del Mandrolisai,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,2
+20,Sardegna,091,Nuoro,SS38901,SS 389 -  di Buddusò e del Correboi,0,0,0,0,0,0,0,0,0,0,0,1,0,1,3,0,0,0,0,0,0,0,0,0,0,5
+20,Sardegna,091,Nuoro,SS38934,SS 389 var -  Nuoro-Lanusei,0,0,0,1,0,0,0,0,0,0,1,0,0,1,0,0,0,0,1,0,1,0,0,0,0,5
+20,Sardegna,092,Cagliari,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1
+20,Sardegna,092,Cagliari,NC38201,NSA 382 - ex SS 554 Cagliaritana (tratto Quartuccio-Lungomare di Cagliari),0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,2
+20,Sardegna,092,Cagliari,SS12501,SS 125 -  Orientale Sarda,0,0,1,0,0,0,1,0,1,0,1,2,2,1,0,2,6,2,0,1,0,1,0,1,0,22
+20,Sardegna,092,Cagliari,SS12534,SS 125 var -  Orientale Sarda,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1
+20,Sardegna,092,Cagliari,SS12801,SS 128 -  Centrale Sarda,0,0,0,1,0,0,0,0,1,2,1,0,1,1,0,1,1,0,0,1,1,0,0,0,0,11
+20,Sardegna,092,Cagliari,SS13001,SS 130 -  Iglesiente,2,0,0,0,0,0,1,4,10,4,0,2,5,2,1,1,2,0,2,2,1,3,1,0,0,43
+20,Sardegna,092,Cagliari,SS13005,SS 130 dir -  Iglesiente,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,2
+20,Sardegna,092,Cagliari,SS13101,SS 131 -  Carlo Felice,2,1,0,0,0,2,0,2,0,2,1,2,2,4,2,0,2,4,0,1,2,2,0,0,0,31
+20,Sardegna,092,Cagliari,SS13105,SS 131 dir -  Carlo Felice,2,0,2,0,0,0,0,1,6,4,1,2,2,2,6,0,4,4,3,4,4,3,0,0,0,50
+20,Sardegna,092,Cagliari,SS19501,SS 195 -  Sulcitana,0,0,0,1,1,1,0,2,1,3,0,2,2,3,4,3,2,4,3,2,3,0,2,1,0,40
+20,Sardegna,092,Cagliari,SS19521,SS 195 racc -  via S. Paolo,0,0,0,0,1,0,1,0,4,1,1,0,0,3,1,0,1,0,2,1,0,2,0,0,0,18
+20,Sardegna,092,Cagliari,SS19601,SS 196 -  di Villacidro,0,0,0,0,0,0,1,1,1,0,1,0,0,0,0,0,0,0,0,1,0,0,1,0,0,6
+20,Sardegna,092,Cagliari,SS19605,SS 196 dir -  di Villacidro,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,2
+20,Sardegna,092,Cagliari,SS19701,SS 197 -  di San Gavino e del Flumini,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1
+20,Sardegna,092,Cagliari,SS19801,SS 198 -  di Seui e Lanusei,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1
+20,Sardegna,092,Cagliari,SS29301,SS 293 -  di Giba,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,2
+20,Sardegna,092,Cagliari,SS38701,SS 387 -  del Gerrei,0,0,0,0,0,0,0,2,2,1,1,0,2,0,0,0,0,1,0,0,0,0,2,2,0,13
+20,Sardegna,092,Cagliari,SS46601,SS 466 -  di Sibiola,0,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,3
+20,Sardegna,092,Cagliari,SS54701,SS 547 -  di Guasila,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,2
+20,Sardegna,092,Cagliari,SS55401,SS 554 -  Cagliaritana,1,2,0,0,0,1,1,2,2,3,2,2,2,5,4,1,3,2,2,2,1,2,1,2,0,43
+20,Sardegna,095,Oristano,SS12601,SS 126 -  Sud Occidentale Sarda,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+20,Sardegna,095,Oristano,SS12801,SS 128 -  Centrale Sarda,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1
+20,Sardegna,095,Oristano,SS12902,SS 129 bis -  Trasversale Sarda,0,0,1,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,1,0,0,0,0,1,0,5
+20,Sardegna,095,Oristano,SS13101,SS 131 -  Carlo Felice,0,0,0,1,0,0,0,1,0,1,1,1,2,2,1,1,2,1,0,3,1,2,1,2,0,23
+20,Sardegna,095,Oristano,SS13139,SS 131 dir/centr -  Nuorese,0,0,0,0,1,1,0,2,0,0,1,0,0,0,0,1,0,0,0,1,1,1,0,0,0,9
+20,Sardegna,095,Oristano,SS29201,SS 292 -  Nord Occidentale Sarda,1,0,0,0,1,0,0,0,0,2,2,0,1,1,0,4,0,1,1,1,2,0,0,0,0,17
+20,Sardegna,095,Oristano,SS38801,SS 388 -  del Tirso e del Mandrolisai,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1,0,1,0,0,1,0,5
+20,Sardegna,095,Oristano,SS44201,SS 442 -  di Laconi e di Uras,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,1,1,0,0,0,0,0,0,4
+20,Sardegna,104,Olbia-Tempio,SS12501,SS 125 -  Orientale Sarda,2,0,0,0,0,0,0,4,4,4,4,0,0,3,1,1,2,1,2,5,3,1,1,0,0,38
+20,Sardegna,104,Olbia-Tempio,SS12701,SS 127 -  Settentrionale Sarda,0,0,0,0,0,1,0,2,1,2,0,2,1,3,1,1,0,0,2,2,1,0,0,0,0,19
+20,Sardegna,104,Olbia-Tempio,SS13139,SS 131 dir/centr -  Nuorese,1,0,0,0,1,0,0,0,0,3,0,2,1,1,2,1,1,0,4,1,1,0,0,0,0,19
+20,Sardegna,104,Olbia-Tempio,SS13301,SS 133 -  di Palau,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,2,1,0,1,0,0,0,0,0,5
+20,Sardegna,104,Olbia-Tempio,SS13302,SS 133 bis -  di Palau,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,2
+20,Sardegna,104,Olbia-Tempio,SS19901,SS 199 -  di Monti,0,0,0,0,0,0,0,1,1,0,0,0,1,1,0,1,2,2,2,2,0,0,0,0,0,13
+20,Sardegna,104,Olbia-Tempio,SS38901,SS 389 -  di Buddusò e del Correboi,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,3
+20,Sardegna,104,Olbia-Tempio,SS38906,SS 389 dir/a -  di Buddusò e del Correboi,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,2
+20,Sardegna,104,Olbia-Tempio,SS39201,SS 392 -  del Lago del Coghinas,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+20,Sardegna,104,Olbia-Tempio,SS59701,SS 597 -  di Logudoro,1,0,0,0,0,0,0,0,1,0,1,0,1,0,1,0,0,0,1,1,1,0,0,0,0,8
+20,Sardegna,105,Ogliastra,SS12501,SS 125 -  Orientale Sarda,0,1,0,0,0,0,0,0,1,1,2,2,0,0,0,2,1,0,1,0,1,0,1,0,1,14
+20,Sardegna,105,Ogliastra,SS12505,SS 125 dir -  Orientale Sarda,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,0,0,0,0,1,0,0,4
+20,Sardegna,105,Ogliastra,SS12534,SS 125 var -  Orientale Sarda,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+20,Sardegna,105,Ogliastra,SS19801,SS 198 -  di Seui e Lanusei,0,0,0,0,0,0,0,0,0,3,2,0,2,0,4,0,1,0,0,0,0,0,0,0,0,12
+20,Sardegna,105,Ogliastra,SS38901,SS 389 -  di Buddusò e del Correboi,0,0,0,0,0,0,0,0,0,0,1,0,2,0,0,0,0,0,2,1,0,0,0,0,0,6
+20,Sardegna,105,Ogliastra,SS38934,SS 389 var -  Nuoro-Lanusei,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,1,0,1,4
+20,Sardegna,105,Ogliastra,SS39001,SS 390 -  di Bari Sardo,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,0,0,0,0,3
+20,Sardegna,106,Medio Campidano,SS12601,SS 126 -  Sud Occidentale Sarda,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,1,0,0,0,0,1,0,1,0,5
+20,Sardegna,106,Medio Campidano,SS13101,SS 131 -  Carlo Felice,0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,1,3,1,0,1,2,0,0,0,0,11
+20,Sardegna,106,Medio Campidano,SS19601,SS 196 -  di Villacidro,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,1,0,2,2,0,0,1,0,0,8
+20,Sardegna,106,Medio Campidano,SS19605,SS 196 dir -  di Villacidro,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3
+20,Sardegna,106,Medio Campidano,SS19701,SS 197 -  di San Gavino e del Flumini,0,0,0,0,0,0,1,0,1,0,1,1,0,2,0,0,0,2,1,0,0,0,0,1,0,10
+20,Sardegna,106,Medio Campidano,SS29301,SS 293 -  di Giba,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,2
+20,Sardegna,106,Medio Campidano,SS54701,SS 547 -  di Guasila,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+20,Sardegna,107,Carbonia-Iglesias,SS12601,SS 126 -  Sud Occidentale Sarda,0,0,0,1,1,0,1,1,1,0,2,1,0,3,1,3,2,2,0,0,2,0,2,3,1,27
+20,Sardegna,107,Carbonia-Iglesias,SS12605,SS 126 dir -  Sud Occidentale Sarda,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+20,Sardegna,107,Carbonia-Iglesias,SS13001,SS 130 -  Iglesiente,0,0,1,0,0,0,0,1,1,0,1,2,1,0,0,0,1,1,1,0,0,0,0,0,0,10
+20,Sardegna,107,Carbonia-Iglesias,SS19501,SS 195 -  Sulcitana,0,0,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,3
+20,Sardegna,107,Carbonia-Iglesias,SS29301,SS 293 -  di Giba,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1
