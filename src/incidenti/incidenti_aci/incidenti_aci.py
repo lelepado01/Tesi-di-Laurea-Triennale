@@ -17,4 +17,3 @@ data_autostrade = pd.read_csv("dataset/incidenti/aci/autostrade/localizzazione_2
 print(data_autostrade['NOME STRADA'].value_counts())
 
 # PROBLEMA: i dati sono già elaborati
-
