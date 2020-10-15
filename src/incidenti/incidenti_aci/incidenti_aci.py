@@ -15,3 +15,6 @@ print(data[data['provincia'] == 'Milano']['nome strada'].value_counts())
 data_autostrade = pd.read_csv("dataset/incidenti/aci/autostrade/localizzazione_2018.csv")
 
 print(data_autostrade['NOME STRADA'].value_counts())
+
+# PROBLEMA: i dati sono già elaborati
+

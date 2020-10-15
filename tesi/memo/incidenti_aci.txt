@@ -1,0 +1,13 @@
+
+Ho trovato vari dataset di dati dell'ACI, che contengono info su incidenti in autostrade o
+strade provinciali (meno completi).
+
+I dati sulle autostrade contengono anche ora, giorno della settimana e mese.
+
+Sono tutti dati in formato ods, che converto in csv per poterlo importare in python.
+
+DOMANDE: 
+    - come cambiano gli incidenti per autostrade in base al mese/giono?
+    - è possibile realizzare una mappa con le autostrade più pericolose?
+    - fare la stessa cosa con i comuni (magari solo in lombardia)?
+    - 
