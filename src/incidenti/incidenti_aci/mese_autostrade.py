@@ -65,7 +65,7 @@ roma = sum_columns(roma)
 #aosta = aosta / sum(aosta)
 #roma =  roma / sum(roma)
 
-#pd.DataFrame([milano, rimini], index=['Milano', 'Rimini']).transpose().plot.bar()
+#pd.DataFrame([milano, aosta], index=['Milano', 'Aosta']).transpose().plot.bar()
 #pd.DataFrame([milano, roma], index=['Milano', 'Roma']).transpose().plot.bar()
 #plt.show()
 
@@ -91,6 +91,8 @@ adriatica = sum_columns(adriatica, normalize=True)
 a1 = sum_columns(a1, normalize=True)
 aurelia =  sum_columns(aurelia, normalize=True)
 
-pd.DataFrame([a1, adriatica, aurelia], ['A1', 'Adriatica', 'Aurelia']).transpose().plot()
-plt.xlabel("Differenza tra incidenti mensili")
-plt.show()
+#pd.DataFrame([a1, adriatica, aurelia], ['A1', 'Adriatica', 'Aurelia']).transpose().plot()
+#plt.xlabel("Differenza tra incidenti mensili")
+#plt.show()
+
+# Intorno a milano Avvengono più incidenti se inverno?
