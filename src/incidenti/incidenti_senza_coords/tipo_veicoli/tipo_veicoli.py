@@ -38,11 +38,14 @@ strade_urbane = label_utils.join_labels(strade_urbane, "dataset/incidenti/Classi
 #strade_urbane.plot.barh()
 #plt.show()
 
-uniti = pd.DataFrame([
-    autostrade_veicoli, strade_urbane
-], index=['Autostrade', 'Strade urbane']).transpose()
+strade_extraurbane = data[(data['localizzazione_incidente'] == 4) | (data['localizzazione_incidente'] == 5) | (data['localizzazione_incidente'] == 6)]['tipo_veicolo_a']
+strade_extraurbane = label_utils.join_labels(strade_extraurbane, "dataset/incidenti/Classificazioni/tipo_veicoli__b_.csv").value_counts(normalize=True).sort_index()
 
-uniti.plot.barh()
+uniti = pd.DataFrame([
+    autostrade_veicoli, strade_urbane, strade_extraurbane
+], index=['Autostrade', 'Strade urbane', 'Strade Extra-Urbane']).transpose()
+
+uniti.dropna().plot.bar()
 plt.tight_layout()
 plt.show()
 
