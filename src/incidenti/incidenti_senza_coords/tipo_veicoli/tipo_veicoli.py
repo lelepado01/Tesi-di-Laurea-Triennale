@@ -94,8 +94,6 @@ tipo_veicoli = label_utils.join_labels(tipo_veicoli, "dataset/incidenti/Classifi
 #plt.tight_layout()
 #plt.show()
 
-# TODO: i maggiori incidenti da donne in strade urbane vale per ogni anno?
-
 def get_gender_ratio(data) -> pd.DataFrame: 
     strade_urbane = data[(data['localizzazione_incidente'] == 1) | (data['localizzazione_incidente'] == 2) | (data['localizzazione_incidente'] == 3)]['veicolo__a___sesso_conducente']
     strade_extraurbane = data[(data['localizzazione_incidente'] == 4) | (data['localizzazione_incidente'] == 5) | (data['localizzazione_incidente'] == 6)]['veicolo__a___sesso_conducente']
@@ -136,4 +134,4 @@ plt.show()
 
 # sembra che la tendenza rimanga negli anni
 
-# Realizzare grafo per visualizzare
+# TODO: Realizzare grafo per visualizzare
