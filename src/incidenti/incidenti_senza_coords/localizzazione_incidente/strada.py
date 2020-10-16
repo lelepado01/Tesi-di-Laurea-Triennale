@@ -75,6 +75,7 @@ natura_incidente_labels = label_utils.join_labels(
 
 # GRAFO 3
 #natura_incidente_labels.plot.barh()
+#plt.tight_layout()
 #plt.show()
 
 # Scontri frontali / laterali sono molto frequenti
@@ -85,8 +86,13 @@ intersezione_labels = label_utils.join_labels(
     "dataset/incidenti/Classificazioni/intersezione_o_non_interse3.csv"
     ).value_counts().sort_index()
 
+#print(intersezione_labels)
+
+intersezione_labels = intersezione_labels[intersezione_labels > 200]
+
 # GRAFO 4
 #intersezione_labels.plot.barh()
+#plt.tight_layout()
 #plt.show()
 
 # Quali tipi di incroci producono quali tipi di incidenti?
