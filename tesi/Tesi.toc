@@ -16,7 +16,9 @@
 \contentsline {subsection}{\numberline {3.1.4}Quanto influiscono le ore di punta su''incidentalit\'a?}{15}{subsection.3.1.4}% 
 \contentsline {subsection}{\numberline {3.1.5}\'E possibile accentuare le ore di punta mattutine?}{17}{subsection.3.1.5}% 
 \contentsline {subsection}{\numberline {3.1.6}Si ha la stessa tendenza di notte?}{18}{subsection.3.1.6}% 
-\contentsline {section}{\numberline {3.2}Dati ACI}{19}{section.3.2}% 
-\contentsline {subsection}{\numberline {3.2.1}Quali sono le autostrade con pi\'u incidenti?}{20}{subsection.3.2.1}% 
-\contentsline {subsection}{\numberline {3.2.2}In quali mesi avvengono pi\'u incidenti?}{21}{subsection.3.2.2}% 
-\contentsline {chapter}{\numberline {4}Dati su Meteo}{23}{chapter.4}% 
+\contentsline {subsection}{\numberline {3.1.7}Quanto influiscono le vacanze estive sull'incidentalit\'a?}{19}{subsection.3.1.7}% 
+\contentsline {subsection}{\numberline {3.1.8}\'E possibile individuare la tendenza inversa in localit\'a di mare?}{20}{subsection.3.1.8}% 
+\contentsline {section}{\numberline {3.2}Dati ACI}{21}{section.3.2}% 
+\contentsline {subsection}{\numberline {3.2.1}Quali sono le autostrade con pi\'u incidenti?}{22}{subsection.3.2.1}% 
+\contentsline {subsection}{\numberline {3.2.2}In quali mesi avvengono pi\'u incidenti?}{23}{subsection.3.2.2}% 
+\contentsline {chapter}{\numberline {4}Dati su Meteo}{25}{chapter.4}% 

@@ -10,7 +10,7 @@ data = pd.read_csv(path, sep="\t")
 # GRAFO 1
 mese = data['mese']
 #print(mese.mean())
-incidenti_al_mese = mese.value_counts().sort_index()
+#incidenti_al_mese = mese.value_counts().sort_index()
 #incidenti_al_mese.plot.bar()
 #plt.show()
 
@@ -18,11 +18,11 @@ incidenti_al_mese = mese.value_counts().sort_index()
 # Per febbraio, quanto influisce il fatto che ha 3 giorni in meno? -> 28 giorni
 
 # Calcolo numero di incidenti al giorno
-incidenti_al_giorno_per_mese = mese.value_counts().sort_index()
-giorni_al_mese = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-
-for index in range(0, len(incidenti_al_giorno_per_mese)): 
-    incidenti_al_giorno_per_mese.iloc[index] /= giorni_al_mese[index]
+#incidenti_al_giorno_per_mese = mese.value_counts().sort_index()
+#giorni_al_mese = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+#
+#for index in range(0, len(incidenti_al_giorno_per_mese)): 
+#    incidenti_al_giorno_per_mese.iloc[index] /= giorni_al_mese[index]
 
 # GRAFO 2 
 #incidenti_al_giorno_per_mese.plot.bar(xlabel="incidenti al giorno ogni mese")
@@ -42,7 +42,7 @@ def get_incidenti_al_giorno_per_mese(file_path : str):
 
     return incidenti_al_giorno
 
-incidenti_2013 = get_incidenti_al_giorno_per_mese("dataset/incidenti/incidenti_2013.txt")
+#incidenti_2013 = get_incidenti_al_giorno_per_mese("dataset/incidenti/incidenti_2013.txt")
 #incidenti_2013.plot.bar()
 #plt.show()
 
@@ -66,19 +66,19 @@ def get_incidenti_al_giorno_per_trimestre(file_path : str):
 
 # TODO: fix dei dataset 2014 e 2017
 
-df = pd.DataFrame([
-    #get_incidenti_al_giorno_per_trimestre("dataset/incidenti/incidenti_2014.txt"),
-    get_incidenti_al_giorno_per_trimestre("dataset/incidenti/incidenti_2015.txt"),
-    get_incidenti_al_giorno_per_trimestre("dataset/incidenti/incidenti_2016.txt"),
-    #get_incidenti_al_giorno_per_trimestre("dataset/incidenti/incidenti_2017.txt"),
-    get_incidenti_al_giorno_per_trimestre("dataset/incidenti/incidenti_2018.txt")
-    ], index = [
-        #"2014", 
-        "2015", 
-        "2016", 
-        #"2017", 
-        "2018"
-    ]).transpose()
+#df = pd.DataFrame([
+#    #get_incidenti_al_giorno_per_trimestre("dataset/incidenti/incidenti_2014.txt"),
+#    get_incidenti_al_giorno_per_trimestre("dataset/incidenti/incidenti_2015.txt"),
+#    get_incidenti_al_giorno_per_trimestre("dataset/incidenti/incidenti_2016.txt"),
+#    #get_incidenti_al_giorno_per_trimestre("dataset/incidenti/incidenti_2017.txt"),
+#    get_incidenti_al_giorno_per_trimestre("dataset/incidenti/incidenti_2018.txt")
+#    ], index = [
+#        #"2014", 
+#        "2015", 
+#        "2016", 
+#        #"2017", 
+#        "2018"
+#    ]).transpose()
 
 # GRAFO 3
 #df.plot.bar(xlabel="incidenti per trimestre")
@@ -90,3 +90,7 @@ df = pd.DataFrame([
 
 # Perchè?
 # Il primo trimestre ha un basso numero di incidenti probabilmente perchè è inverno
+
+milano_mese = data[data['provincia'] == 15]['mese'].value_counts().sort_index()
+milano_mese.plot.bar()
+plt.show()
