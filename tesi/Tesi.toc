@@ -15,7 +15,8 @@
 \contentsline {subsection}{\numberline {3.1.3}Come cambia l'et\'a del conducente al cambiare della strada?}{14}{subsection.3.1.3}% 
 \contentsline {subsection}{\numberline {3.1.4}Quanto influiscono le ore di punta su''incidentalit\'a?}{15}{subsection.3.1.4}% 
 \contentsline {subsection}{\numberline {3.1.5}\'E possibile accentuare le ore di punta mattutine?}{17}{subsection.3.1.5}% 
-\contentsline {section}{\numberline {3.2}Dati ACI}{18}{section.3.2}% 
-\contentsline {subsection}{\numberline {3.2.1}Quali sono le autostrade con pi\'u incidenti?}{19}{subsection.3.2.1}% 
-\contentsline {subsection}{\numberline {3.2.2}In quali mesi avvengono pi\'u incidenti?}{20}{subsection.3.2.2}% 
-\contentsline {chapter}{\numberline {4}Dati su Meteo}{22}{chapter.4}% 
+\contentsline {subsection}{\numberline {3.1.6}Si ha la stessa tendenza di notte?}{18}{subsection.3.1.6}% 
+\contentsline {section}{\numberline {3.2}Dati ACI}{19}{section.3.2}% 
+\contentsline {subsection}{\numberline {3.2.1}Quali sono le autostrade con pi\'u incidenti?}{20}{subsection.3.2.1}% 
+\contentsline {subsection}{\numberline {3.2.2}In quali mesi avvengono pi\'u incidenti?}{21}{subsection.3.2.2}% 
+\contentsline {chapter}{\numberline {4}Dati su Meteo}{23}{chapter.4}% 
