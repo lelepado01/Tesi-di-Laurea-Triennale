@@ -1,6 +1,9 @@
 
 DOMANDE: 
-    - Se mi sposto tra autostrade o SS o in città, come cambiano i veicoli coinvolti? SI
+    - Se mi sposto tra autostrade o SS o in città, come cambiano i veicoli coinvolti? 
+            SI
+    - Il numero uomo/donna cambia per diverse strade? 
+            SI ma non troppo
     - Eseguire osservazione per trovare rapporto uomini/donne alla guida e vedere quanto cambia 
         il numero di incidenti
     - Eseguire anche per il numero di persone a bordo?

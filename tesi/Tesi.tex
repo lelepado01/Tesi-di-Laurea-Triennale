@@ -68,7 +68,7 @@
 
 Si \'e iniziato controllando i dati trovati, in particolare come questi siano distributi.
 Si nota subito che gli incidenti a Milano sono per buona parte uniformemente distributi, 
-con più alta concentrazione in alcuni punti di interesse, come Piazzale Loreto, Zona Navigli 
+con pi\'u alta concentrazione in alcuni punti di interesse, come Piazzale Loreto, Zona Navigli 
 e Monumentale, e Corso Ventidue Marzo.
 
 \begin{figure}[!h]
@@ -97,7 +97,13 @@ si nota comunque che i trasporti pubblici coprono la maggior parte di Milano.
 Se a questi ultimi vengono sovrapposti i dati sugli incidenti, 
 si pu\'o notare che la maggior parte dei luoghi con alta concentrazione di incidenti sono 
 attraversati da linee di autobus. Nel caso di Corso Ventidue Marzo, si ha anche una linea di tram.
+
+
 %...
+
+
+
+\newpage
 \subsection{Il Pav\'e influisce sull'incidentalit\'a?} Spesso le linee di tram coincidono con
 strade in pav\'e
 %...
@@ -160,6 +166,49 @@ ma in pi\'u mette a disposizione il luogo dell'incidente, come autostrada o stra
 \newpage
 \section{Dati Istat}
 
+Il dataset Istat contiene molte informazioni riguardanti i conducenti dei veicoli coinvolti 
+nell'incidente, oltre al tipo di veicoli.
+
+\newpage
+\subsection{Come cambia il tipo di veicolo al cambiare del tipo di strada?}
+
+\begin{figure}[!ht]
+    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/tipo_veicoli/differenza_strade.png}
+    \caption{Incidenti per tipo di veicolo nel 2010}
+    \label{fig:differenza_strade}
+\end{figure}
+
+\'E possibile notare che, nonostante le auto private siano di gran lunga il tipo di veicolo 
+pi\'u coinvolto in incidenti, nelle autostrade non sono presenti incidenti con velocipedi, 
+anche il numero di incidenti con motocicli \'e ridotto, mentre cresce molto nelle strade urbane.
+
+\newpage
+\subsection{Come cambia il sesso del conducente al cambiare della strada?}
+
+\begin{figure}[!ht]
+    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/tipo_veicoli/uomo-donna.png}
+    \caption{Sesso del conducente per tipo di veicolo nel 2010}
+    \label{fig:differenza_uomo_donna}
+\end{figure}
+
+Il numero di incidenti per genere \'e tende ad essere 75\% circa uomini e 25\% donne.
+Nelle strade  urbane, la percentuale di incidenti con conducente donna aumenta leggermente nel 2010, 
+questo vale per tutti gli anni?
+
+%...
+
+
+\newpage
+\subsection{Come cambia l'et\'a del conducente al cambiare della strada?}
+
+\begin{figure}[!ht]
+    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/tipo_veicoli/differenza_eta.png}
+    \caption{Fascia di et\'a del conducente per tipo di veicolo nel 2010}
+    \label{fig:differenza_eta}
+\end{figure}
+
+Risultati non troppo interessanti\dots
+
 
 \newpage
 \section{Dati ACI}
@@ -172,7 +221,7 @@ ma in pi\'u mette a disposizione il luogo dell'incidente, come autostrada o stra
     \label{fig:incidenti_autostrade}
 \end{figure}
 
-Si pu\'o notare subito che le autostrade con più incidenti sono anche quelle più trafficate, come 
+Si pu\'o notare subito che le autostrade con pi\'u incidenti sono anche quelle pi\'u trafficate, come 
 l'Autostrada del Sole e l'Adriatica.
 
 
@@ -193,10 +242,10 @@ dell'incidente.
 Le curve sono state normalizzate per bilanciare il volume di incidenti maggiori per 
 l'autostrada Adriatica.
 L'Adriatica e l'Aurelia, autostrade utilizzate molto durante i mesi caldi, hanno un picco di 
-incidenti in Luglio e Agosto, mentre l'A1, ha picco più basso in Agosto, probabilmente 
-perchè bilanciato dagli incidenti in inverno intorno a Milano.
+incidenti in Luglio e Agosto, mentre l'A1, ha picco pi\'u basso in Agosto, probabilmente 
+perch\'e bilanciato dagli incidenti in inverno intorno a Milano.
 
-% controllare se avvengono più incidenti in inverno intorno a milano
+% controllare se avvengono pi\'u incidenti in inverno intorno a milano
 Infatti se si prendono solo i dati della A1 nella provincia di Milano, si nota 
 che in Maggio e Settembre avvengono la maggior parte degli incidenti.
 Invece sull'Adriatica prevalgono incidenti in Luglio e Agosto.
