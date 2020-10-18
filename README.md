@@ -65,3 +65,17 @@
 
 - Devo tradurre i commenti / i nomi delle variabili in inglese?
 - Trascrivere commenti importanti da file a latex, che ordine devo tenere per i capitoli? 
+- Trovare mappa con Pavè a milano
+
+### Risultati da Trascrivere in Tesi: 
+
+- [x] Atm + Incidenti
+- [ ] Autovelox + Incidenti
+- [ ] Ciclabili + Incidenti
+- [ ] Meteo
+- [ ] Incidenti ACI
+- [x] Mese Incidenti
+- [x] Ora Incidenti
+- [ ] Strada Incidenti
+- [ ] Tipo Veicoli
+- [ ] Conducente Veicolo
