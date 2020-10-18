@@ -63,6 +63,8 @@ legend = pd.read_csv('dataset/incidenti/Classificazioni/intersezione_o_non_inter
 legend = legend['Descrizione']
 
 incidenti_pedoni.plot.bar()
+plt.tight_layout()
+plt.xlabel("")
 #plt.legend((1, 2, 3, 7, 8), ('Incrocio', 'Rotatoria', 'Intersez. segnalata', 'Rettilineo', 'Curva'))
 plt.show()
 
