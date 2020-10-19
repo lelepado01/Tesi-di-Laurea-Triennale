@@ -14,18 +14,20 @@
 \contentsline {section}{\numberline {3.2}Dati Istat su conducente}{13}{section.3.2}% 
 \contentsline {subsection}{\numberline {3.2.1}Come cambia il sesso del conducente al cambiare della strada?}{14}{subsection.3.2.1}% 
 \contentsline {subsection}{\numberline {3.2.2}Come cambia l'et\'a del conducente al cambiare della strada?}{15}{subsection.3.2.2}% 
-\contentsline {section}{\numberline {3.3}Dati Istat su orari e mesi}{16}{section.3.3}% 
-\contentsline {subsection}{\numberline {3.3.1}Quanto influiscono le ore di punta sull'incidentalit\'a?}{17}{subsection.3.3.1}% 
-\contentsline {subsection}{\numberline {3.3.2}\'E possibile accentuare le ore di punta mattutine?}{19}{subsection.3.3.2}% 
-\contentsline {subsection}{\numberline {3.3.3}Si ha la stessa tendenza di notte?}{20}{subsection.3.3.3}% 
-\contentsline {subsection}{\numberline {3.3.4}Quanto influiscono le vacanze estive sull'incidentalit\'a?}{21}{subsection.3.3.4}% 
-\contentsline {subsection}{\numberline {3.3.5}\'E possibile individuare la tendenza inversa in localit\'a di mare?}{22}{subsection.3.3.5}% 
-\contentsline {section}{\numberline {3.4}Dati Istat su tipi di incidenti e incroci}{23}{section.3.4}% 
-\contentsline {subsection}{\numberline {3.4.1}Quali incidenti avvengono con pi\'u frequenza?}{24}{subsection.3.4.1}% 
-\contentsline {subsection}{\numberline {3.4.2}Quali tipi di incroci provocano pi\'u incidenti?}{25}{subsection.3.4.2}% 
-\contentsline {subsection}{\numberline {3.4.3}Esistono incroci che favoriscono incidenti con pedoni?}{26}{subsection.3.4.3}% 
-\contentsline {subsection}{\numberline {3.4.4}Ci sono caratteristiche interessanti dei pedoni coinvolti?}{27}{subsection.3.4.4}% 
-\contentsline {section}{\numberline {3.5}Dati ACI}{28}{section.3.5}% 
-\contentsline {subsection}{\numberline {3.5.1}Quali sono le autostrade con pi\'u incidenti?}{29}{subsection.3.5.1}% 
-\contentsline {subsection}{\numberline {3.5.2}In quali mesi avvengono pi\'u incidenti?}{30}{subsection.3.5.2}% 
-\contentsline {chapter}{\numberline {4}Dati su Meteo}{32}{chapter.4}% 
+\contentsline {subsection}{\numberline {3.2.3}Il numero di passeggeri influisce sull'incidentalit\'a?}{16}{subsection.3.2.3}% 
+\contentsline {subsection}{\numberline {3.2.4}Il conducente se da solo si distrae con il telefono cellulare?}{16}{subsection.3.2.4}% 
+\contentsline {section}{\numberline {3.3}Dati Istat su orari e mesi}{17}{section.3.3}% 
+\contentsline {subsection}{\numberline {3.3.1}Quanto influiscono le ore di punta sull'incidentalit\'a?}{18}{subsection.3.3.1}% 
+\contentsline {subsection}{\numberline {3.3.2}\'E possibile accentuare le ore di punta mattutine?}{20}{subsection.3.3.2}% 
+\contentsline {subsection}{\numberline {3.3.3}Si ha la stessa tendenza di notte?}{21}{subsection.3.3.3}% 
+\contentsline {subsection}{\numberline {3.3.4}Quanto influiscono le vacanze estive sull'incidentalit\'a?}{22}{subsection.3.3.4}% 
+\contentsline {subsection}{\numberline {3.3.5}\'E possibile individuare la tendenza inversa in localit\'a di mare?}{23}{subsection.3.3.5}% 
+\contentsline {section}{\numberline {3.4}Dati Istat su tipi di incidenti e incroci}{24}{section.3.4}% 
+\contentsline {subsection}{\numberline {3.4.1}Quali incidenti avvengono con pi\'u frequenza?}{25}{subsection.3.4.1}% 
+\contentsline {subsection}{\numberline {3.4.2}Quali tipi di incroci provocano pi\'u incidenti?}{26}{subsection.3.4.2}% 
+\contentsline {subsection}{\numberline {3.4.3}Esistono incroci che favoriscono incidenti con pedoni?}{27}{subsection.3.4.3}% 
+\contentsline {subsection}{\numberline {3.4.4}Ci sono caratteristiche interessanti dei pedoni coinvolti?}{28}{subsection.3.4.4}% 
+\contentsline {section}{\numberline {3.5}Dati ACI}{29}{section.3.5}% 
+\contentsline {subsection}{\numberline {3.5.1}Quali sono le autostrade con pi\'u incidenti?}{30}{subsection.3.5.1}% 
+\contentsline {subsection}{\numberline {3.5.2}In quali mesi avvengono pi\'u incidenti?}{31}{subsection.3.5.2}% 
+\contentsline {chapter}{\numberline {4}Dati su Meteo}{33}{chapter.4}% 
