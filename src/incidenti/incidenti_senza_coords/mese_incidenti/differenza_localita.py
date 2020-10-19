@@ -108,16 +108,15 @@ def get_provincia(prov : int) -> pd.DataFrame:
 
     return pd.DataFrame([aosta_2010, aosta_2011, aosta_2012, aosta_2013, aosta_2015, aosta_2016, aosta_2018], ['2010', '2011', '2012', '2013', '2015', '2016', '2018']).transpose()
 
+plt.subplot(3,1,1)
 provs = get_provincia(7)
 provs.plot.bar()
 plt.xticks(rotation=0)
-plt.show()
-
+plt.subplot(3,1,2)
 provs = get_provincia(15)
 provs.plot.bar()
 plt.xticks(rotation=0)
-plt.show()
-
+plt.subplot(3,1,3)
 provs = get_provincia(99)
 provs.plot.bar()
 plt.xticks(rotation=0)

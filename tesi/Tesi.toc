@@ -26,8 +26,8 @@
 \contentsline {subsection}{\numberline {3.4.1}Quali incidenti avvengono con pi\'u frequenza?}{25}{subsection.3.4.1}% 
 \contentsline {subsection}{\numberline {3.4.2}Quali tipi di incroci provocano pi\'u incidenti?}{26}{subsection.3.4.2}% 
 \contentsline {subsection}{\numberline {3.4.3}Esistono incroci che favoriscono incidenti con pedoni?}{27}{subsection.3.4.3}% 
-\contentsline {subsection}{\numberline {3.4.4}Ci sono caratteristiche interessanti dei pedoni coinvolti?}{28}{subsection.3.4.4}% 
-\contentsline {section}{\numberline {3.5}Dati ACI}{29}{section.3.5}% 
-\contentsline {subsection}{\numberline {3.5.1}Quali sono le autostrade con pi\'u incidenti?}{30}{subsection.3.5.1}% 
-\contentsline {subsection}{\numberline {3.5.2}In quali mesi avvengono pi\'u incidenti?}{31}{subsection.3.5.2}% 
-\contentsline {chapter}{\numberline {4}Dati su Meteo}{33}{chapter.4}% 
+\contentsline {subsection}{\numberline {3.4.4}Ci sono caratteristiche interessanti dei pedoni coinvolti?}{29}{subsection.3.4.4}% 
+\contentsline {section}{\numberline {3.5}Dati ACI}{32}{section.3.5}% 
+\contentsline {subsection}{\numberline {3.5.1}Quali sono le autostrade con pi\'u incidenti?}{33}{subsection.3.5.1}% 
+\contentsline {subsection}{\numberline {3.5.2}In quali mesi avvengono pi\'u incidenti?}{34}{subsection.3.5.2}% 
+\contentsline {chapter}{\numberline {4}Dati su Meteo}{36}{chapter.4}% 
