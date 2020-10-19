@@ -75,6 +75,7 @@ indici_autovelox = [59, 60, 44, 28, 27, 47, 64, 61, 63, 66, 40, 41, 42, 43, 26, 
 
 installati = gp.read_file("dataset/autovelox/autovelox_2014.csv").set_crs(epsg=3857)
 installati = gp.GeoDataFrame(geometry=gp.points_from_xy(installati['field_1'], installati['field_2']))
+
 #print(installati)
 
 ax = installati.plot(figsize=(11,9))
