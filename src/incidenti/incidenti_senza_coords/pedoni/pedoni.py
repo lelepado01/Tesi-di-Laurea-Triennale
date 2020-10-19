@@ -53,11 +53,11 @@ def get_people(dataset : pd.DataFrame, campi):
 
     return pd.Series(res)
 
-fields.remove('intersezione_o_non_interse1')
-pedoni_feriti = get_people(incidenti_pedoni, fields)
-incidenti_pedoni = pd.DataFrame([incidenti_pedoni['intersezione_o_non_interse1'], pedoni_feriti], ['tipo_incrocio', 'pedoni_feriti']).transpose()
-incidenti_pedoni = incidenti_pedoni[incidenti_pedoni['pedoni_feriti'] != 0].value_counts()
-incidenti_pedoni = incidenti_pedoni[incidenti_pedoni > 50]
+#fields.remove('intersezione_o_non_interse1')
+#pedoni_feriti = get_people(incidenti_pedoni, fields)
+#incidenti_pedoni = pd.DataFrame([incidenti_pedoni['intersezione_o_non_interse1'], pedoni_feriti], ['tipo_incrocio', 'pedoni_feriti']).transpose()
+#incidenti_pedoni = incidenti_pedoni[incidenti_pedoni['pedoni_feriti'] != 0].value_counts()
+#incidenti_pedoni = incidenti_pedoni[incidenti_pedoni > 50]
 #incidenti_labels = label_utils.join_labels(incidenti_pedoni['tipo_incrocio'], 'dataset/incidenti/Classificazioni/intersezione_o_non_interse3.csv')
 #incidenti_pedoni = pd.DataFrame([incidenti_labels, incidenti_pedoni], ['tipo_incrocio', 'pedoni_feriti']).transpose().value_counts()
 #print(incidenti_pedoni)
@@ -76,34 +76,35 @@ custom_lines = [Line2D([0], [0], color=(0, 0, 0, 0), lw=4),
 #lines = ax.plot(data)
 #ax.legend(custom_lines, ['Cold', 'Medium', 'Hot'])
 
-incidenti_pedoni.plot.bar()
-plt.tight_layout()
-plt.xticks(rotation=0)
-plt.xlabel("(Tipo Incrocio, Numero di pedoni)")
-plt.legend(custom_lines, ['Incrocio - 7', 'Rotatoria - 2', 'Intersez. segnalata - 3',  'Incrocio - 1'])
-plt.show()
+#incidenti_pedoni.plot.bar()
+#plt.tight_layout()
+#plt.xticks(rotation=0)
+#plt.xlabel("(Tipo Incrocio, Numero di pedoni)")
+#plt.legend(custom_lines, ['Incrocio - 7', 'Rotatoria - 2', 'Intersez. segnalata - 3',  'Incrocio - 1'])
+#plt.show()
 
 # Età dei pedoni feriti?
 
-#pedoni_morti = data['pedone_morto_1__et_']
-#pedoni_morti = pedoni_morti[pedoni_morti != '  '].astype(int)
-#pedoni_morti = label_utils.join_labels(pedoni_morti, 'dataset/incidenti/Classificazioni/veicolo__a___et__conducente.csv')
-#pedoni_morti = pedoni_morti.value_counts().sort_index()
-#
-#pedoni_feriti = data['pedone_ferito_1__et_']
-#pedoni_feriti = pedoni_feriti[pedoni_feriti != '  '].astype(int)
-#pedoni_feriti = label_utils.join_labels(pedoni_feriti, 'dataset/incidenti/Classificazioni/veicolo__a___et__conducente.csv')
-#pedoni_feriti = pedoni_feriti.value_counts().sort_index()
+pedoni_morti = data['pedone_morto_1__et_']
+pedoni_morti = pedoni_morti[pedoni_morti != '  '].astype(int)
+pedoni_morti = label_utils.join_labels(pedoni_morti, 'dataset/incidenti/Classificazioni/veicolo__a___et__conducente.csv')
+pedoni_morti = pedoni_morti.value_counts().sort_index()
 
-#plt.subplot(121)
-#plt.tight_layout()
-#plt.plot(pedoni_feriti)
-#plt.xticks(rotation=90)
-#plt.title("Età Pedoni Feriti")
-#plt.subplot(122)
-#plt.tight_layout()
-#plt.xticks(rotation=90)
-#plt.plot(pedoni_morti)
-#plt.title("Età Pedoni Morti")
-#plt.show()
+pedoni_feriti = data['pedone_ferito_1__et_']
+pedoni_feriti = pedoni_feriti[pedoni_feriti != '  '].astype(int)
+pedoni_feriti = label_utils.join_labels(pedoni_feriti, 'dataset/incidenti/Classificazioni/veicolo__a___et__conducente.csv')
+pedoni_feriti = pedoni_feriti.value_counts().sort_index()
 
+anni_per_fascia = 
+
+plt.subplot(121)
+plt.tight_layout()
+plt.plot(pedoni_feriti)
+plt.xticks(rotation=90)
+plt.title("Età Pedoni Feriti")
+plt.subplot(122)
+plt.tight_layout()
+plt.xticks(rotation=90)
+plt.plot(pedoni_morti)
+plt.title("Età Pedoni Morti")
+plt.show()
