@@ -95,7 +95,22 @@ pedoni_feriti = pedoni_feriti[pedoni_feriti != '  '].astype(int)
 pedoni_feriti = label_utils.join_labels(pedoni_feriti, 'dataset/incidenti/Classificazioni/veicolo__a___et__conducente.csv')
 pedoni_feriti = pedoni_feriti.value_counts().sort_index()
 
-anni_per_fascia = 
+anni_per_fascia_feriti = pd.Series([5,5,3,3,4,5,15,10,5,5,5,20,1])
+anni_per_fascia_morti = pd.Series([5,5,3,4,5,15,10,5,5,20,1])
+# Ipotizzo fino a 80 anni
+
+#print(pedoni_morti)
+#print(anni_per_fascia)
+
+import numpy as np
+
+pedoni_feriti_vals = pedoni_feriti.values / anni_per_fascia_feriti.to_numpy()
+pedoni_morti_vals = pedoni_morti.values / anni_per_fascia_morti.to_numpy()
+
+pedoni_feriti = pd.Series(pedoni_feriti_vals, index=pedoni_feriti.index)
+pedoni_morti = pd.Series(pedoni_morti_vals, index=pedoni_morti.index)
+
+#print(pedoni_feriti)
 
 plt.subplot(121)
 plt.tight_layout()
