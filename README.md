@@ -79,3 +79,4 @@
 - [ ] Strada Incidenti
 - [ ] Tipo Veicoli
 - [ ] Conducente Veicolo
+- [ ] Pedoni
