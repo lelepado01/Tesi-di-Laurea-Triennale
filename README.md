@@ -81,4 +81,4 @@
 - [ ] Tipo Veicoli
 - [x] Conducente Veicolo
 - [x] Pedoni
-- [ ] Incidenti per Trimestre
+- [x] Incidenti per Trimestre
