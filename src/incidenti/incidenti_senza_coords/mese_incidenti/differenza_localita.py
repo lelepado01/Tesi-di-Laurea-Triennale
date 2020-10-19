@@ -79,8 +79,6 @@ aosta_2010 = data[data['provincia'] == 7]['mese'].value_counts().sort_index()
 # (Non ho febbraio, non ci sono stati incidenti) 
 # Sono comunque pochi dati
 
-# TODO: quando ho pochi dati, controlla la tendenza con gli altri anni
-
 # Controllo la  tendenza per tutti gli anni che ho disponibili (AOSTA)
 
 incidenti_2011 = pd.read_csv("dataset/incidenti/incidenti_2011.txt", sep="\t")

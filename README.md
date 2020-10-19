@@ -66,6 +66,7 @@
 - Devo tradurre i commenti / i nomi delle variabili in inglese?
 - Trascrivere commenti importanti da file a latex, che ordine devo tenere per i capitoli? 
 - Trovare mappa con Pavè a milano
+- Campione conducenti veicoli
 
 ### Risultati da Trascrivere in Tesi: 
 
@@ -73,11 +74,11 @@
 - [ ] Autovelox + Incidenti
 - [ ] Ciclabili + Incidenti
 - [ ] Meteo
-- [ ] Incidenti ACI
+- [ ] Incidenti ACI (i dati che ho trovato sulle autostrade sono confermati dai dati istat)
 - [x] Mese Incidenti
 - [x] Ora Incidenti
-- [ ] Strada Incidenti
+- [x] Strada Incidenti
 - [ ] Tipo Veicoli
-- [ ] Conducente Veicolo
-- [ ] Pedoni
+- [x] Conducente Veicolo
+- [x] Pedoni
 - [ ] Incidenti per Trimestre
