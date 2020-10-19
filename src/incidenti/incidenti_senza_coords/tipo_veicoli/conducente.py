@@ -11,10 +11,10 @@ data = pd.read_csv("dataset/incidenti/incidenti_2010.txt", sep="\t")
 
 # Il sesso o l'età del conducente influenza gli incidenti?
 
-eta = data['veicolo__a___et__conducente'].append(data['veicolo__b___et__conducente']).append(data['veicolo__c___et__conducente'])
-sesso = data['veicolo__a___sesso_conducente'].append(data['veicolo__b___sesso_conducente']).append(data['veicolo__c___sesso_conducente'])
-eta = eta[eta != '  ']
-sesso = sesso[sesso != ' ']
+#eta = data['veicolo__a___et__conducente'].append(data['veicolo__b___et__conducente']).append(data['veicolo__c___et__conducente'])
+#sesso = data['veicolo__a___sesso_conducente'].append(data['veicolo__b___sesso_conducente']).append(data['veicolo__c___sesso_conducente'])
+#eta = eta[eta != '  ']
+#sesso = sesso[sesso != ' ']
 #print(eta.value_counts())
 #print(sesso.value_counts())
 
@@ -25,10 +25,10 @@ sesso = sesso[sesso != ' ']
 # ai 65+ 
 
 # GRAFO 2
-sesso = label_utils.join_labels(sesso.astype(int), "dataset/incidenti/Classificazioni/veicolo__a___sesso_conducente.csv")
-print(sesso)
-sesso.value_counts(normalize=True).plot.pie()
-plt.show()
+#sesso = label_utils.join_labels(sesso.astype(int), "dataset/incidenti/Classificazioni/veicolo__a___sesso_conducente.csv")
+##print(sesso)
+#sesso.value_counts(normalize=True).plot.pie()
+#plt.show()
 # Il numero di conducenti maschi è quasi 75%
 # Potrebbe essere dovuto al maggiore volume di guidatori maschi?
 
@@ -39,7 +39,7 @@ def count_people(row) -> int:
 
     count = 0
     for field in campi: 
-        if row[field] != '  ':  
+        if row[field] != '  ' and row[field] != ' ':  
             count += 1
 
     return count
@@ -63,3 +63,19 @@ def get_people_in_vehicles(dataset : pd.DataFrame):
 # ma sono molto più frequenti incidenti con solo il conducente a bordo
 # Il fatto di avere altre persone a bordo rende il conducente più attento?
 
+passenger_count_milano = get_people_in_vehicles(data[data['provincia'] == 15])
+passenger_count_milano = passenger_count_milano[passenger_count_milano != 0]
+passenger_count_milano = passenger_count_milano.value_counts(normalize=True).sort_index()#.plot.bar(xlabel="Numero Passeggeri")
+passenger_count_rimini = get_people_in_vehicles(data[data['provincia'] == 99])
+passenger_count_rimini = passenger_count_rimini[passenger_count_rimini != 0]
+passenger_count_rimini = passenger_count_rimini.value_counts(normalize=True).sort_index()#.plot.bar(xlabel="Numero Passeggeri")
+
+pd.DataFrame([passenger_count_milano, passenger_count_rimini], ['Milano','Rimini']).plot.bar()
+plt.tight_layout()
+plt.xticks(rotation=0)
+plt.show()
+
+#eta = data[data['provincia'] == 15]['veicolo__a___et__conducente']
+#eta = label_utils.join_labels(eta, 'dataset/incidenti/Classificazioni/veicolo__a___et__conducente.csv').value_counts().sort_index()
+#eta.plot()
+#plt.show()
