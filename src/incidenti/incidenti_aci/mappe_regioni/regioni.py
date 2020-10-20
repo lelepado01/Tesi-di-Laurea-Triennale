@@ -35,18 +35,15 @@ regioni = gp.GeoDataFrame(res, geometry=regioni['geometry'].transpose())
 # MAPPA non associa su regione, ma su indice PROBLEMA
 #print(regioni[['Regione', 'Inc']])
 
-#regioni.plot(column='Inc', cmap='OrRd')
-#plt.show()
+from matplotlib.lines import Line2D
 
-prov = gp.read_file("dataset/regioni/provincia.geojson")#.sort_values(by='prov_name')
-print(prov.columns)
-
-res = get_sum_of_fields(incidenti, "PROVINCIA", 'Inc')#.sort_values(by='PROVINCIA')
-prov = gp.GeoDataFrame(res, geometry=prov['geometry'].transpose())
-
-print(prov['Inc'])
-
-prov.plot(column='Inc', cmap='OrRd')
+regioni.plot(column='Inc', cmap='OrRd')
+plt.axis('off')
+plt.legend([
+    Line2D([],[],color=(214/255, 0,0,1),linewidth=5), 
+    Line2D([],[],color=(1, 168/255,150/255,1),linewidth=5), 
+    Line2D([],[],color=(1, 221/255,171/255,1),linewidth=5)
+], [max(regioni['Inc']), '1000', min(regioni['Inc'])])
 plt.show()
 
 # Voglio avere un punto centrale per ogni regione in modo da poter fare plot
