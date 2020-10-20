@@ -54,6 +54,10 @@
 
     [Mappa con vie in pavé](https://blog.urbanfile.org/2018/05/02/milano-arredo-urbano-il-pave-risorsa-da-preservare-o-problema-da-eliminare/)
 
+- Autostrade
+
+    [Mappa con Autostrade](http://dati.mit.gov.it/catalog/dataset/grafo-stradale-anas)
+
 - Presenza di trasporto merci
 
 - Posso usare direttamente il dataset sugli incidenti per: 
@@ -71,6 +75,7 @@
 - Trascrivere commenti importanti da file a latex, che ordine devo tenere per i capitoli? 
 - Trovare mappa con Pavè a milano
 - Campione conducenti veicoli
+- Dataset con autostrade è troppo grande, non posso caricarlo su git, e richiede tanta pulizia
 
 ### Risultati da Trascrivere in Tesi: 
 
