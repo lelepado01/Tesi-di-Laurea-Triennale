@@ -13,20 +13,22 @@ regioni = gp.read_file(path)
 
 incidenti = pd.read_csv('dataset/incidenti/aci/strade_provinciali/aci_2014.csv')
 
-res = pd.DataFrame()
+res = {}
+index = 0
+for reg in incidenti['REGIONE'].unique():
+    res[index] = [reg, 0]
+    index += 1
 
-for reg in incidenti['REGIONE'].unique(): 
-    #print(incidenti[incidenti['REGIONE'] == reg].iloc[0])
-    res = res.append(incidenti[incidenti['REGIONE'] == reg].iloc[0])
+index = 0
+for reg in incidenti['REGIONE'].unique():
+    for row in incidenti[incidenti['REGIONE'] == reg]['Inc']:
+        res[index] = [res[index][0], res[index][1] + row]
+    index += 1
 
-res.index = range(0, len(res)) 
-res = res[['REGIONE', 'Inc']]
-#print(res)
-
+res = pd.DataFrame(res, index=['Regione', 'Inc']).transpose()
 regioni = gp.GeoDataFrame(res, geometry=regioni['geometry'].transpose())
-#print(regioni)
 
-regioni.plot(column='Inc', legend=True)
+regioni.plot(column='Inc', cmap='OrRd', legend=True)
 plt.show()
 
 # Voglio avere un punto centrale per ogni regione in modo da poter fare plot
