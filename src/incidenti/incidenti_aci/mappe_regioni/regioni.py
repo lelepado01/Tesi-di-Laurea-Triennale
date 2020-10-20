@@ -7,33 +7,46 @@ import geopandas as gp
 import pandas as pd
 import matplotlib.pyplot as plt
 
-path = "dataset/regioni/regioni.geojson"
+def get_sum_of_fields(data : pd.DataFrame, select_field : str, field_to_sum : str) -> pd.Series: 
+    res = {}
+    index = 0
+    for reg in incidenti[select_field].unique():
+        res[index] = [reg, 0]
+        index += 1
 
+    index = 0
+    for reg in incidenti[select_field].unique():
+        for row in incidenti[incidenti[select_field] == reg][field_to_sum]:
+            res[index] = [res[index][0], res[index][1] + row]
+        index += 1
+
+    return pd.DataFrame(res, index=[select_field, field_to_sum]).transpose()
+
+
+path = "dataset/regioni/regioni.geojson"
 regioni = gp.read_file(path)
 
 incidenti = pd.read_csv('dataset/incidenti/aci/strade_provinciali/aci_2014.csv')
 
-res = {}
-index = 0
-for reg in incidenti['REGIONE'].unique():
-    res[index] = [reg, 0]
-    index += 1
-
-index = 0
-for reg in incidenti['REGIONE'].unique():
-    for row in incidenti[incidenti['REGIONE'] == reg]['Inc']:
-        res[index] = [res[index][0], res[index][1] + row]
-    index += 1
-
-#print(regioni)
-res = pd.DataFrame(res, index=['Regione', 'Inc']).transpose()
+res = get_sum_of_fields(incidenti, 'REGIONE', 'Inc')
 #print(res)
 regioni = gp.GeoDataFrame(res, geometry=regioni['geometry'].transpose())
 
 # MAPPA non associa su regione, ma su indice PROBLEMA
 #print(regioni[['Regione', 'Inc']])
 
-regioni.plot(column='Inc', cmap='OrRd')
+#regioni.plot(column='Inc', cmap='OrRd')
+#plt.show()
+
+prov = gp.read_file("dataset/regioni/provincia.geojson")#.sort_values(by='prov_name')
+print(prov.columns)
+
+res = get_sum_of_fields(incidenti, "PROVINCIA", 'Inc')#.sort_values(by='PROVINCIA')
+prov = gp.GeoDataFrame(res, geometry=prov['geometry'].transpose())
+
+print(prov['Inc'])
+
+prov.plot(column='Inc', cmap='OrRd')
 plt.show()
 
 # Voglio avere un punto centrale per ogni regione in modo da poter fare plot
