@@ -50,6 +50,10 @@
 
     [Percorsi piste ciclabili](https://geoportale.comune.milano.it/sit/cerca-nel-catalogo/)
 
+- Presenza di Pavé
+
+    [Mappa con vie in pavé](https://blog.urbanfile.org/2018/05/02/milano-arredo-urbano-il-pave-risorsa-da-preservare-o-problema-da-eliminare/)
+
 - Presenza di trasporto merci
 
 - Posso usare direttamente il dataset sugli incidenti per: 
@@ -78,7 +82,7 @@
 - [x] Mese Incidenti
 - [x] Ora Incidenti
 - [x] Strada Incidenti
-- [ ] Tipo Veicoli
+- [x] Tipo Veicoli
 - [x] Conducente Veicolo
 - [x] Pedoni
 - [x] Incidenti per Trimestre
