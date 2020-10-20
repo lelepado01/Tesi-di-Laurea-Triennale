@@ -25,10 +25,15 @@ for reg in incidenti['REGIONE'].unique():
         res[index] = [res[index][0], res[index][1] + row]
     index += 1
 
+#print(regioni)
 res = pd.DataFrame(res, index=['Regione', 'Inc']).transpose()
+#print(res)
 regioni = gp.GeoDataFrame(res, geometry=regioni['geometry'].transpose())
 
-regioni.plot(column='Inc', cmap='OrRd', legend=True)
+# MAPPA non associa su regione, ma su indice PROBLEMA
+#print(regioni[['Regione', 'Inc']])
+
+regioni.plot(column='Inc', cmap='OrRd')
 plt.show()
 
 # Voglio avere un punto centrale per ogni regione in modo da poter fare plot
