@@ -26,7 +26,7 @@ res = res[['REGIONE', 'Inc']]
 regioni = gp.GeoDataFrame(res, geometry=regioni['geometry'].transpose())
 #print(regioni)
 
-regioni.plot()
+regioni.plot(column='Inc', legend=True)
 plt.show()
 
 # Voglio avere un punto centrale per ogni regione in modo da poter fare plot
