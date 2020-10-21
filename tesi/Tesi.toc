@@ -1,33 +1,35 @@
 \babel@toc {italian}{}
 \babel@toc {italian}{}
-\contentsline {chapter}{\numberline {1}Introduzione}{2}{chapter.1}% 
-\contentsline {chapter}{\numberline {2}Dati Geolocalizzati}{3}{chapter.2}% 
-\contentsline {section}{\numberline {2.1}Incidenti}{4}{section.2.1}% 
-\contentsline {section}{\numberline {2.2}Incidenti e Linee dei Trasporti Pubblici}{5}{section.2.2}% 
-\contentsline {subsection}{\numberline {2.2.1}Il Pav\'e influisce sull'incidentalit\'a?}{6}{subsection.2.2.1}% 
-\contentsline {section}{\numberline {2.3}Incidenti e Piste Ciclabili}{7}{section.2.3}% 
-\contentsline {section}{\numberline {2.4}Incidenti e Autovelox}{8}{section.2.4}% 
-\contentsline {section}{\numberline {2.5}Incidenti e Meteo}{9}{section.2.5}% 
-\contentsline {chapter}{\numberline {3}Dati su Incidenti}{10}{chapter.3}% 
-\contentsline {section}{\numberline {3.1}Dati Istat su veicoli}{11}{section.3.1}% 
-\contentsline {subsection}{\numberline {3.1.1}Come cambia il tipo di veicolo al cambiare del tipo di strada?}{12}{subsection.3.1.1}% 
-\contentsline {section}{\numberline {3.2}Dati Istat su conducente}{13}{section.3.2}% 
-\contentsline {subsection}{\numberline {3.2.1}Come cambia il sesso del conducente al cambiare della strada?}{14}{subsection.3.2.1}% 
-\contentsline {subsection}{\numberline {3.2.2}Come cambia l'et\'a del conducente al cambiare della strada?}{15}{subsection.3.2.2}% 
-\contentsline {subsection}{\numberline {3.2.3}Il numero di passeggeri influisce sull'incidentalit\'a?}{16}{subsection.3.2.3}% 
-\contentsline {subsection}{\numberline {3.2.4}Il conducente se da solo si distrae con il telefono cellulare?}{16}{subsection.3.2.4}% 
-\contentsline {section}{\numberline {3.3}Dati Istat su orari e mesi}{17}{section.3.3}% 
-\contentsline {subsection}{\numberline {3.3.1}Quanto influiscono le ore di punta sull'incidentalit\'a?}{18}{subsection.3.3.1}% 
-\contentsline {subsection}{\numberline {3.3.2}\'E possibile accentuare le ore di punta mattutine?}{20}{subsection.3.3.2}% 
-\contentsline {subsection}{\numberline {3.3.3}Si ha la stessa tendenza di notte?}{21}{subsection.3.3.3}% 
-\contentsline {subsection}{\numberline {3.3.4}Quanto influiscono le vacanze estive sull'incidentalit\'a?}{22}{subsection.3.3.4}% 
-\contentsline {subsection}{\numberline {3.3.5}\'E possibile individuare la tendenza inversa in localit\'a di mare?}{23}{subsection.3.3.5}% 
-\contentsline {section}{\numberline {3.4}Dati Istat su tipi di incidenti e incroci}{24}{section.3.4}% 
-\contentsline {subsection}{\numberline {3.4.1}Quali incidenti avvengono con pi\'u frequenza?}{25}{subsection.3.4.1}% 
-\contentsline {subsection}{\numberline {3.4.2}Quali tipi di incroci provocano pi\'u incidenti?}{26}{subsection.3.4.2}% 
-\contentsline {subsection}{\numberline {3.4.3}Esistono incroci che favoriscono incidenti con pedoni?}{27}{subsection.3.4.3}% 
-\contentsline {subsection}{\numberline {3.4.4}Ci sono caratteristiche interessanti dei pedoni coinvolti?}{29}{subsection.3.4.4}% 
-\contentsline {section}{\numberline {3.5}Dati ACI}{32}{section.3.5}% 
-\contentsline {subsection}{\numberline {3.5.1}Quali sono le autostrade con pi\'u incidenti?}{33}{subsection.3.5.1}% 
-\contentsline {subsection}{\numberline {3.5.2}In quali mesi avvengono pi\'u incidenti?}{34}{subsection.3.5.2}% 
-\contentsline {chapter}{\numberline {4}Dati su Meteo}{36}{chapter.4}% 
+\contentsline {chapter}{\numberline {1}Introduzione}{3}{chapter.1}% 
+\contentsline {chapter}{\numberline {2}Dati Geolocalizzati}{4}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Incidenti}{5}{section.2.1}% 
+\contentsline {section}{\numberline {2.2}Incidenti e Linee dei Trasporti Pubblici}{6}{section.2.2}% 
+\contentsline {subsection}{\numberline {2.2.1}Il Pav\'e influisce sull'incidentalit\'a?}{7}{subsection.2.2.1}% 
+\contentsline {section}{\numberline {2.3}Incidenti e Piste Ciclabili}{8}{section.2.3}% 
+\contentsline {section}{\numberline {2.4}Incidenti e Autovelox}{9}{section.2.4}% 
+\contentsline {section}{\numberline {2.5}Incidenti e Meteo}{10}{section.2.5}% 
+\contentsline {chapter}{\numberline {3}Dati su Incidenti}{11}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Dati Istat su veicoli}{12}{section.3.1}% 
+\contentsline {subsection}{\numberline {3.1.1}Come cambia il tipo di veicolo al cambiare del tipo di strada?}{13}{subsection.3.1.1}% 
+\contentsline {section}{\numberline {3.2}Dati Istat su conducente}{14}{section.3.2}% 
+\contentsline {subsection}{\numberline {3.2.1}Come cambia il sesso del conducente al cambiare della strada?}{15}{subsection.3.2.1}% 
+\contentsline {subsection}{\numberline {3.2.2}Come cambia l'et\'a del conducente al cambiare della strada?}{16}{subsection.3.2.2}% 
+\contentsline {subsection}{\numberline {3.2.3}Il numero di passeggeri influisce sull'incidentalit\'a?}{17}{subsection.3.2.3}% 
+\contentsline {subsection}{\numberline {3.2.4}Il conducente se da solo si distrae con il telefono cellulare?}{17}{subsection.3.2.4}% 
+\contentsline {section}{\numberline {3.3}Dati Istat su orari e mesi}{18}{section.3.3}% 
+\contentsline {subsection}{\numberline {3.3.1}Quanto influiscono le ore di punta sull'incidentalit\'a?}{19}{subsection.3.3.1}% 
+\contentsline {subsection}{\numberline {3.3.2}\'E possibile accentuare le ore di punta mattutine?}{21}{subsection.3.3.2}% 
+\contentsline {subsection}{\numberline {3.3.3}Si ha la stessa tendenza di notte?}{22}{subsection.3.3.3}% 
+\contentsline {subsection}{\numberline {3.3.4}Quanto influiscono le vacanze estive sull'incidentalit\'a?}{23}{subsection.3.3.4}% 
+\contentsline {subsection}{\numberline {3.3.5}\'E possibile individuare la tendenza inversa in localit\'a di mare?}{24}{subsection.3.3.5}% 
+\contentsline {section}{\numberline {3.4}Dati Istat su tipi di incidenti e incroci}{25}{section.3.4}% 
+\contentsline {subsection}{\numberline {3.4.1}Quali incidenti avvengono con pi\'u frequenza?}{26}{subsection.3.4.1}% 
+\contentsline {subsection}{\numberline {3.4.2}Quali tipi di incroci provocano pi\'u incidenti?}{27}{subsection.3.4.2}% 
+\contentsline {subsection}{\numberline {3.4.3}Esistono incroci che favoriscono incidenti con pedoni?}{28}{subsection.3.4.3}% 
+\contentsline {subsection}{\numberline {3.4.4}Ci sono caratteristiche interessanti dei pedoni coinvolti?}{30}{subsection.3.4.4}% 
+\contentsline {section}{\numberline {3.5}Dati ACI}{33}{section.3.5}% 
+\contentsline {subsection}{\numberline {3.5.1}Quali sono le autostrade con pi\'u incidenti?}{34}{subsection.3.5.1}% 
+\contentsline {subsection}{\numberline {3.5.2}Autostrade pericolose a Milano?}{35}{subsection.3.5.2}% 
+\contentsline {subsection}{\numberline {3.5.3}In quali mesi avvengono pi\'u incidenti?}{36}{subsection.3.5.3}% 
+\contentsline {subsection}{\numberline {3.5.4}In Quali orari avvengono incidenti sulle autostrade?}{37}{subsection.3.5.4}% 
+\contentsline {chapter}{\numberline {4}Dati su Meteo}{39}{chapter.4}% 
