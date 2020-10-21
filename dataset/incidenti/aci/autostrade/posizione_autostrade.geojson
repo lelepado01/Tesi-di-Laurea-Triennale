@@ -220,6 +220,18 @@
         "type": "Feature",
         "properties": {
             "shape": "Marker",
+            "name": "SS 526 -  dell'Esticino",
+            "category": "default"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [8.96553, 45.322703]
+        },
+        "id": "0db8b353-dd43-48df-9b41-d9e3d2613365"
+    }, {
+        "type": "Feature",
+        "properties": {
+            "shape": "Marker",
             "name": "SS 527 -  Bustese",
             "category": "default"
         },

@@ -47,18 +47,16 @@ import geopandas as gp
 import contextily as cx
 
 strade = gp.read_file("dataset/incidenti/aci/autostrade/posizione_autostrade.geojson").to_crs(epsg=3857)
-#strade.index = strade['name']
-#print(len(strade))
+strade.index = strade['name']
 
 # TODO: standard per bubble chart
 
-#strade = gp.GeoDataFrame(incidenti['18'], geometry=strade['geometry'])
-#print(incidenti)
+strade = gp.GeoDataFrame(incidenti[ore], geometry=strade['geometry'])
 
-#ax = strade.plot(figsize=(11,9), markersize=strade['18'] * 100, alpha=0.5, color='orange')
-#plt.ylim((5.68 * pow(10, 6), 5.72 * pow(10,6)))
-#cx.add_basemap(ax=ax)
-#plt.show()
+ax = strade.plot(figsize=(11,9), markersize=strade[ore].sum() * 10, alpha=0.5, color='orange')
+plt.ylim((5.68 * pow(10, 6), 5.72 * pow(10,6)))
+cx.add_basemap(ax=ax)
+plt.show()
 
 fields = [
     'A 01 -  Milano-Roma-Napoli (Autostrada del Sole)', 
