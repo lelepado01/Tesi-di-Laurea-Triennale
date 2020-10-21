@@ -476,6 +476,40 @@ Dati non sorprendenti\dots
 \section{Dati ACI}
 
 \newpage
+\subsection{Esiste correlazione tra incidenti e feriti?}
+
+E allo stesso modo, esiste correlazione tra morti e incidenti, o tra morti e feriti?\\
+Ovviamente si attende un esito positivo a queste domande.
+L'indice di correlazione utilizzato \'e il coefficiente di Pearson.
+%TODO: formula?
+\begin{center}
+    \begin{tabular}{ |c|c|c| } 
+    \hline
+    Incidenti & Incidenti & Feriti \\ 
+    Feriti & Morti & Morti \\ 
+    \hline
+    0.9827 & 0.8205 & 0.8332 \\ 
+    \hline
+    \end{tabular}
+\end{center}
+
+Il coefficiente di Pearson, per quanto riguarda Incidenti e Feriti, 
+\'e molto vicino a uno, quindi i due campioni sono strettamente correlati.
+I coefficienti riguardanti i morti sono meno vicini uno, probabilmente per il minor numero 
+di incidenti mortali, che rendono il campione pi\'u ristretto
+
+\begin{figure}[!ht]
+    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/comuni/corr_incidenti_feriti.png}
+    \caption{Correlazione tra numero di feriti e incidenti}
+    \label{fig:corr_incidenti_feriti}
+\end{figure}
+
+Tracciando il grafo dei primi trenta valori del dataset ACI, 
+\'e chiaramente visibile la correlazione tra numero di incidenti e numero di feriti.
+
+
+
+\newpage
 \subsection{Quali sono le autostrade con pi\'u incidenti?}
 \begin{figure}[!ht]
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/autostrade/autostrade.png}
@@ -488,6 +522,7 @@ l'Autostrada del Sole e l'Adriatica.
 
 
 %...
+
 
 \newpage
 \subsection{Autostrade pericolose a Milano?}

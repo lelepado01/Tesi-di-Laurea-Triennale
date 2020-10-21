@@ -11,3 +11,4 @@ DOMANDE:
     - è possibile realizzare una mappa con le autostrade più pericolose?
     - fare la stessa cosa con i comuni (magari solo in lombardia)?
     - intorno a milano avvengono più incidenti in inverno?
+    - Quali autostrade sono usate in agosto per le vacanze (cambiano per anno?)
