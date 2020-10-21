@@ -15,3 +15,12 @@ def sum_columns(data : pd.DataFrame, normalize = False, name=None) -> pd.Series:
         res = res / sum(res)
 
     return res
+
+def sum_field_by_column(data : pd.DataFrame, select_field : str, column_to_sum : str) -> pd.DataFrame: 
+    res = pd.DataFrame()
+    for field in data[select_field].unique(): 
+        res = res.append(
+            sum_columns(data[data[select_field] == field][column_to_sum], name=field), 
+        )
+    
+    return res
