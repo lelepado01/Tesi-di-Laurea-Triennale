@@ -35,16 +35,30 @@ def sum_field(data):
     for combination in two_cols_unique(data[['NOME STRADA', 'Anno']]): 
         filtered_data = filter_with(filter_with(data, 'NOME STRADA', combination[0]), 'Anno', combination[1])
         d = {
-            'NOME STRADA' : combination[0], 
-            'ANNO' : combination[1], 
+            'Nome e Anno' : combination,
             'Inc' : sum(filtered_data['Agosto'])
         }
         res = res.append(d, ignore_index=True)
 
     return res
 
+def f(data):
+    res = [] 
+    for d in data: 
+        res.append('2018' not in str(d))
+
+    return pd.Series(res)
+
+
 agosto = sum_field(data)
-agosto.sort_values(by='Inc', ascending=False).head(20).plot()
+agosto = agosto[f(agosto['Nome e Anno'])]
+agosto = agosto.sort_values(by='Inc', ascending=False).head(20)
+
+#print(agosto)
+
+plt.bar(agosto['Nome e Anno'].astype(str), agosto['Inc'])
+plt.xticks(rotation=90)
+plt.tight_layout()
 plt.show()
 
 
