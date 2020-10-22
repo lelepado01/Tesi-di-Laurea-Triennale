@@ -16,11 +16,11 @@ for year in range(2011, 2012):
 
 
 #print(aci_utils.two_cols_unique(data[['NOME STRADA', 'Anno']]))
-agosto = aci_utils.sum_field_by_two_columns(agosto, 'NOME STRADA', 'Anno', 'Agosto')
-agosto = agosto[aci_utils.filter_by_value(agosto['NOME STRADA_Anno'], '2011')]
-agosto = agosto.sort_values(by='Value', ascending=False).head(20)
+#agosto = aci_utils.sum_field_by_two_columns(agosto, 'NOME STRADA', 'Anno', 'Agosto')
+#agosto = agosto[aci_utils.filter_by_value(agosto['NOME STRADA_Anno'], '2011')]
+#agosto = agosto.sort_values(by='Value', ascending=False).head(20)
 
-print(agosto)
+#print(agosto)
 
 #plt.barh(agosto['Nome e Anno'].astype(str), agosto['Inc'])
 #plt.xticks(rotation=90)
