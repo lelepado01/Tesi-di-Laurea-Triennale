@@ -7,8 +7,7 @@ I dati sulle autostrade contengono anche ora, giorno della settimana e mese.
 Sono tutti dati in formato ods, che converto in csv per poterlo importare in python.
 
 DOMANDE: 
-    - come cambiano gli incidenti per autostrade in base al mese/giono?
     - è possibile realizzare una mappa con le autostrade più pericolose?
-    - fare la stessa cosa con i comuni (magari solo in lombardia)?
-    - intorno a milano avvengono più incidenti in inverno?
+    - intorno a milano avvengono più incidenti in inverno? SI , scrivi su tesi
     - Quali autostrade sono usate in agosto per le vacanze (cambiano per anno?)
+    - Tipo di  incidente  influenza numero di morti/feriti
