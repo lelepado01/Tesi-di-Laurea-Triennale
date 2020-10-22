@@ -31,3 +31,19 @@ tipo_incidenti = data[['natura_incidente', 'feriti']]
 #plt.show()
 
 
+tamponamento = tipo_incidenti[tipo_incidenti['natura_incidente'] == 4]['feriti'].value_counts(normalize=True)
+frontale = tipo_incidenti[tipo_incidenti['natura_incidente'] == 1]['feriti'].value_counts(normalize=True)
+pedoni = tipo_incidenti[tipo_incidenti['natura_incidente'] == 5]['feriti'].value_counts(normalize=True)
+sbandamento = tipo_incidenti[tipo_incidenti['natura_incidente'] == 10]['feriti'].value_counts(normalize=True)
+tamponamento = tamponamento[tamponamento > 0.01]
+frontale = frontale[frontale > 0.01]
+pedoni = pedoni[pedoni > 0.01]
+sbandamento = sbandamento[sbandamento > 0.01]
+#print(tamponamento.value_counts())
+#print(frontale.value_counts())
+
+pd.DataFrame(
+    [tamponamento, frontale, pedoni, sbandamento], 
+    ['tamponamento', 'frontale', 'pedoni', 'sbandamento']
+).transpose().plot.bar()
+plt.show()
