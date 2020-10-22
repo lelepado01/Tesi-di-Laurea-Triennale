@@ -11,3 +11,4 @@ data = pd.read_csv("dataset/incidenti/aci/autostrade/localizzazione_2012.csv")
 tipo = data[['ScFRONTALE', 'ScFRONTLAT-ScLAT', 'TAMPONAMENTO','InvPEDONI', 'FUORIUSCITA']]
 
 print(tipo)
+

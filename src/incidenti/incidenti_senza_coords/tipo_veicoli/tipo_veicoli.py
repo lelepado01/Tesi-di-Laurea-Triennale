@@ -9,8 +9,8 @@ path = "dataset/incidenti/incidenti_2010.txt"
 
 data = pd.read_csv(path, sep="\t")
 
-tipo_veicoli = data['tipo_veicolo_a']
-tipo_veicoli = label_utils.join_labels(tipo_veicoli, "dataset/incidenti/Classificazioni/tipo_veicoli__b_.csv").value_counts().sort_index()
+#tipo_veicoli = data['tipo_veicolo_a']
+#tipo_veicoli = label_utils.join_labels(tipo_veicoli, "dataset/incidenti/Classificazioni/tipo_veicoli__b_.csv").value_counts().sort_index()
 #print(tipo_veicoli)
 
 #tipo_veicoli.plot.barh()
@@ -94,29 +94,29 @@ tipo_veicoli = label_utils.join_labels(tipo_veicoli, "dataset/incidenti/Classifi
 #plt.tight_layout()
 #plt.show()
 
-def get_gender_ratio(data) -> pd.DataFrame: 
-    strade_urbane = data[(data['localizzazione_incidente'] == 1) | (data['localizzazione_incidente'] == 2) | (data['localizzazione_incidente'] == 3)]['veicolo__a___sesso_conducente']
-    strade_extraurbane = data[(data['localizzazione_incidente'] == 4) | (data['localizzazione_incidente'] == 5) | (data['localizzazione_incidente'] == 6)]['veicolo__a___sesso_conducente']
-    autostrade = data[data['localizzazione_incidente'] == 7]['veicolo__a___sesso_conducente']
+# def get_gender_ratio(data) -> pd.DataFrame: 
+#     strade_urbane = data[(data['localizzazione_incidente'] == 1) | (data['localizzazione_incidente'] == 2) | (data['localizzazione_incidente'] == 3)]['veicolo__a___sesso_conducente']
+#     strade_extraurbane = data[(data['localizzazione_incidente'] == 4) | (data['localizzazione_incidente'] == 5) | (data['localizzazione_incidente'] == 6)]['veicolo__a___sesso_conducente']
+#     autostrade = data[data['localizzazione_incidente'] == 7]['veicolo__a___sesso_conducente']
 
-    strade_urbane = strade_urbane[strade_urbane != ' '].astype(int)
-    strade_extraurbane = strade_extraurbane[strade_extraurbane != ' '].astype(int)
-    autostrade = autostrade[autostrade != ' '].astype(int)
+#     strade_urbane = strade_urbane[strade_urbane != ' '].astype(int)
+#     strade_extraurbane = strade_extraurbane[strade_extraurbane != ' '].astype(int)
+#     autostrade = autostrade[autostrade != ' '].astype(int)
 
-    strade_extraurbane = label_utils.join_labels(strade_extraurbane, "dataset/incidenti/Classificazioni/veicolo__a___sesso_conducente.csv").value_counts(normalize=True).sort_index()
-    strade_urbane = label_utils.join_labels(strade_urbane, "dataset/incidenti/Classificazioni/veicolo__a___sesso_conducente.csv").value_counts(normalize=True).sort_index()
-    autostrade = label_utils.join_labels(autostrade, "dataset/incidenti/Classificazioni/veicolo__a___sesso_conducente.csv").value_counts(normalize=True).sort_index()
+#     strade_extraurbane = label_utils.join_labels(strade_extraurbane, "dataset/incidenti/Classificazioni/veicolo__a___sesso_conducente.csv").value_counts(normalize=True).sort_index()
+#     strade_urbane = label_utils.join_labels(strade_urbane, "dataset/incidenti/Classificazioni/veicolo__a___sesso_conducente.csv").value_counts(normalize=True).sort_index()
+#     autostrade = label_utils.join_labels(autostrade, "dataset/incidenti/Classificazioni/veicolo__a___sesso_conducente.csv").value_counts(normalize=True).sort_index()
 
-    return pd.DataFrame(
-        [strade_extraurbane, strade_urbane, autostrade], 
-        index=['Autostrade', 'Strade urbane', 'Strade Extra-Urbane']
-        ).transpose()
+#     return pd.DataFrame(
+#         [strade_extraurbane, strade_urbane, autostrade], 
+#         index=['Autostrade', 'Strade urbane', 'Strade Extra-Urbane']
+#         ).transpose()
 
-plt.subplot(211)
-gen_2011 = get_gender_ratio(pd.read_csv("dataset/incidenti/incidenti_2011.txt", sep='\t'))
+# plt.subplot(211)
+# gen_2011 = get_gender_ratio(pd.read_csv("dataset/incidenti/incidenti_2011.txt", sep='\t'))
 
-plt.bar(gen_2011.transpose().index, gen_2011.transpose(), alpha=0.3)
-plt.tight_layout()
+# plt.bar(gen_2011.transpose().index, gen_2011.transpose(), alpha=0.3)
+# plt.tight_layout()
 #gen_2012 = get_gender_ratio(pd.read_csv("dataset/incidenti/incidenti_2012.txt", sep='\t'))
 #plt.subplot(212)
 #for field in gen_2012.columns: 
@@ -130,8 +130,5 @@ plt.tight_layout()
 #plt.subplot(214)
 #gen_2015 = get_gender_ratio(pd.read_csv("dataset/incidenti/incidenti_2015.txt", sep='\t', encoding='latin1')).plot.bar()
 
-plt.show()
+#plt.show()
 
-# sembra che la tendenza rimanga negli anni
-
-# TODO: Realizzare grafo per visualizzare
