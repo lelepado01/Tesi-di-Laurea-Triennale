@@ -1,10 +1,13 @@
 
 import pandas as pd
 
-def sum_columns(data : pd.DataFrame, normalize = False, name=None) -> pd.Series: 
+def sum_columns(data, normalize = False, name=None) -> pd.Series: 
     res = {}
-    for col in data.columns: 
-        res[col] = sum(data[col])
+    if data is pd.DataFrame: 
+        for col in data.columns: 
+            res[col] = sum(data[col])
+    else: 
+        res['val'] = data.sum()
 
     if name is None:
         res = pd.Series(res).transpose()

@@ -54,15 +54,60 @@ for year in range(2011, 2019):
 
 
 #print(two_cols_unique(data[['NOME STRADA', 'Anno']]))
-agosto = sum_field(agosto)
-#agosto = agosto[f(agosto['Nome e Anno'], '2018', inverted=True)]
-agosto = agosto.sort_values(by='Inc', ascending=False).head(20)
+#agosto = sum_field(agosto)
+#agosto = agosto[f(agosto['Nome e Anno'], '2018')]
+#agosto = agosto.sort_values(by='Inc', ascending=False).head(20)
 
 #print(agosto)
 
-plt.barh(agosto['Nome e Anno'].astype(str), agosto['Inc'])
-plt.xticks(rotation=90)
+#plt.barh(agosto['Nome e Anno'].astype(str), agosto['Inc'])
+#plt.xticks(rotation=90)
+#plt.tight_layout()
+#plt.show()
+
+import sys
+sys.path.append('src')
+import aci_utils
+
+agosto_2018 = pd.read_csv(path + "2014.csv")
+agosto_2018 = agosto_2018[['NOME STRADA', 'Agosto']]
+agosto_2018 = aci_utils.sum_field_by_column(agosto_2018, 'NOME STRADA', 'Agosto')
+agosto_2018 = agosto_2018.sort_values(by='val', ascending=False).head(15)
+
+agosto_2018.plot.barh()
 plt.tight_layout()
+plt.legend("")
 plt.show()
+
+agosto_2018 = pd.read_csv(path + "2013.csv")
+agosto_2018 = agosto_2018[['NOME STRADA', 'Agosto']]
+agosto_2018 = aci_utils.sum_field_by_column(agosto_2018, 'NOME STRADA', 'Agosto')
+agosto_2018 = agosto_2018.sort_values(by='val', ascending=False).head(15)
+
+agosto_2018.plot.barh()
+plt.tight_layout()
+plt.legend("")
+plt.show()
+
+agosto_2018 = pd.read_csv(path + "2012.csv")
+agosto_2018 = agosto_2018[['NOME STRADA', 'Agosto']]
+agosto_2018 = aci_utils.sum_field_by_column(agosto_2018, 'NOME STRADA', 'Agosto')
+agosto_2018 = agosto_2018.sort_values(by='val', ascending=False).head(15)
+
+agosto_2018.plot.barh()
+plt.tight_layout()
+plt.legend("")
+plt.show()
+
+agosto_2018 = pd.read_csv(path + "2011.csv")
+agosto_2018 = agosto_2018[['NOME STRADA', 'Agosto']]
+agosto_2018 = aci_utils.sum_field_by_column(agosto_2018, 'NOME STRADA', 'Agosto')
+agosto_2018 = agosto_2018.sort_values(by='val', ascending=False).head(15)
+
+agosto_2018.plot.barh()
+plt.tight_layout()
+plt.legend("")
+plt.show()
+
 
 
