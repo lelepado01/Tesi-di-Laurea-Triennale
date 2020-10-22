@@ -4,14 +4,6 @@ import matplotlib.pyplot as plt
 
 path = "dataset/incidenti/aci/autostrade/mesi_"
 
-agosto = pd.DataFrame()
-
-for year in range(2011, 2019):
-    data = pd.read_csv(path + str(year) + ".csv")
-    data['Anno'] = [year] * len(data)
-    agosto = agosto.append(data[['NOME STRADA', 'Anno', 'Agosto']])
-
-
 def two_cols_unique(data) -> list: 
     res = []
 
@@ -42,21 +34,33 @@ def sum_field(data):
 
     return res
 
-def f(data):
+def f(data, key : str, inverted = False):
     res = [] 
     for d in data: 
-        res.append('2018' not in str(d))
+        if inverted: 
+            res.append(key not in str(d))
+        else: 
+            res.append(key in str(d))
 
     return pd.Series(res)
 
 
-agosto = sum_field(data)
-agosto = agosto[f(agosto['Nome e Anno'])]
+agosto = pd.DataFrame()
+
+for year in range(2011, 2019):
+    data = pd.read_csv(path + str(year) + ".csv")
+    data['Anno'] = [year] * len(data)
+    agosto = agosto.append(data[['NOME STRADA', 'Anno', 'Agosto']])
+
+
+#print(two_cols_unique(data[['NOME STRADA', 'Anno']]))
+agosto = sum_field(agosto)
+#agosto = agosto[f(agosto['Nome e Anno'], '2018', inverted=True)]
 agosto = agosto.sort_values(by='Inc', ascending=False).head(20)
 
 #print(agosto)
 
-plt.bar(agosto['Nome e Anno'].astype(str), agosto['Inc'])
+plt.barh(agosto['Nome e Anno'].astype(str), agosto['Inc'])
 plt.xticks(rotation=90)
 plt.tight_layout()
 plt.show()
