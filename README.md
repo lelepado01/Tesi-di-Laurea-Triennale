@@ -83,7 +83,7 @@
 - [ ] Autovelox + Incidenti
 - [ ] Ciclabili + Incidenti
 - [ ] Meteo
-- [ ] Incidenti ACI (i dati che ho trovato sulle autostrade sono confermati dai dati istat)
+- [x] Incidenti ACI (i dati che ho trovato sulle autostrade sono confermati dai dati istat)
 - [x] Mese Incidenti
 - [x] Ora Incidenti
 - [x] Strada Incidenti

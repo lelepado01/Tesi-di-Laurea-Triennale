@@ -8,5 +8,3 @@ Sono tutti dati in formato ods, che converto in csv per poterlo importare in pyt
 
 DOMANDE: 
     - è possibile realizzare una mappa con le autostrade più pericolose?
-    - intorno a milano avvengono più incidenti in inverno? SI , scrivi su tesi
-    - Tipo di incidente influenza numero di morti/feriti? scrivi su tesi

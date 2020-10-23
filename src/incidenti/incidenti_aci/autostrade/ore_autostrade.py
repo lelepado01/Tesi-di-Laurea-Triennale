@@ -49,8 +49,6 @@ import contextily as cx
 strade = gp.read_file("dataset/incidenti/aci/autostrade/posizione_autostrade.geojson").to_crs(epsg=3857)
 strade.index = strade['name']
 
-# TODO: standard per bubble chart
-
 strade = gp.GeoDataFrame(incidenti[ore], geometry=strade['geometry'])
 
 ax = strade.plot(figsize=(11,9), markersize=strade[ore].sum() * 10, alpha=0.5, color='orange')
