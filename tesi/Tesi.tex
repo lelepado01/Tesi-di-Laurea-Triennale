@@ -11,6 +11,8 @@
 \usepackage[english,italian]{babel}
 \usepackage[hyphens]{url}
 
+\usepackage{todonotes}
+
 % Per generare il file PDF aderente alle specifiche PDF/A-1b. Verificarne poi la validità.
 %\usepackage[a-1b]{pdfx}
 
@@ -56,22 +58,32 @@
 
 \tableofcontents
 
+\listoftodos
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Introduzione}
 % Non Ho idea di come si debba introdurre la tesi... :|
 
+\todo{atrent: pensare all'outiline della tesi}
+
+\section{origine dei dati}
+
+
+
+\section{scopo del lavoro}
+
 % o sections (dipende dal documentclass)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Dati Geolocalizzati}
-\clearpage
+%\clearpage
 \section{Incidenti}
 
 Controllando i dati trovati, in particolare come questi siano distributi, 
-si nota subito che gli incidenti a Milano sono per buona parte uniformemente sparsi in tutta la citt\'a, 
+si nota subito che gli incidenti a Milano sono per buona parte uniformemente sparsi in tutta la città, 
 con pi\'u alta concentrazione in alcuni punti di interesse, come Piazzale Loreto, Zona Navigli 
 e Monumentale, e Corso Ventidue Marzo.
 
-\begin{figure}[!h]
+\begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/geo_incidenti.png}
     \caption{Distribuzione di incidenti a Milano}
     \label{fig:geo_incidenti}
