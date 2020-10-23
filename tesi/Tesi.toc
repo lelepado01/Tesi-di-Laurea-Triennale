@@ -25,14 +25,15 @@
 \contentsline {section}{\numberline {3.4}Dati Istat su tipi di incidenti e incroci}{25}{section.3.4}% 
 \contentsline {subsection}{\numberline {3.4.1}Quali incidenti avvengono con pi\'u frequenza?}{26}{subsection.3.4.1}% 
 \contentsline {subsection}{\numberline {3.4.2}Quali tipi di incroci provocano pi\'u incidenti?}{27}{subsection.3.4.2}% 
-\contentsline {subsection}{\numberline {3.4.3}Esistono incroci che favoriscono incidenti con pedoni?}{28}{subsection.3.4.3}% 
-\contentsline {subsection}{\numberline {3.4.4}Ci sono caratteristiche interessanti dei pedoni coinvolti?}{30}{subsection.3.4.4}% 
-\contentsline {section}{\numberline {3.5}Dati ACI}{33}{section.3.5}% 
-\contentsline {subsection}{\numberline {3.5.1}Esiste correlazione tra incidenti e feriti?}{34}{subsection.3.5.1}% 
-\contentsline {subsection}{\numberline {3.5.2}Quali sono le autostrade con pi\'u incidenti?}{35}{subsection.3.5.2}% 
-\contentsline {subsection}{\numberline {3.5.3}Autostrade pericolose a Milano?}{36}{subsection.3.5.3}% 
-\contentsline {subsection}{\numberline {3.5.4}In quali mesi avvengono pi\'u incidenti?}{37}{subsection.3.5.4}% 
-\contentsline {subsection}{\numberline {3.5.5}In Quali orari avvengono incidenti sulle autostrade?}{38}{subsection.3.5.5}% 
-\contentsline {subsection}{\numberline {3.5.6}Quali autostrade sono utilizzate di pi\'u per viaggiare in Agosto?}{39}{subsection.3.5.6}% 
-\contentsline {subsection}{\numberline {3.5.7}Le autostrade pi\'u utilizzate cambiano a seconda dell'anno?}{40}{subsection.3.5.7}% 
-\contentsline {chapter}{\numberline {4}Dati su Meteo}{42}{chapter.4}% 
+\contentsline {subsection}{\numberline {3.4.3}Esistono tipi di incidenti che provocano pi\'u feriti?}{28}{subsection.3.4.3}% 
+\contentsline {subsection}{\numberline {3.4.4}Esistono incroci che favoriscono incidenti con pedoni?}{30}{subsection.3.4.4}% 
+\contentsline {subsection}{\numberline {3.4.5}Ci sono caratteristiche interessanti dei pedoni coinvolti?}{31}{subsection.3.4.5}% 
+\contentsline {section}{\numberline {3.5}Dati ACI}{34}{section.3.5}% 
+\contentsline {subsection}{\numberline {3.5.1}Esiste correlazione tra incidenti e feriti?}{35}{subsection.3.5.1}% 
+\contentsline {subsection}{\numberline {3.5.2}Quali sono le autostrade con pi\'u incidenti?}{36}{subsection.3.5.2}% 
+\contentsline {subsection}{\numberline {3.5.3}Autostrade pericolose a Milano?}{37}{subsection.3.5.3}% 
+\contentsline {subsection}{\numberline {3.5.4}In quali mesi avvengono pi\'u incidenti?}{38}{subsection.3.5.4}% 
+\contentsline {subsection}{\numberline {3.5.5}In Quali orari avvengono incidenti sulle autostrade?}{39}{subsection.3.5.5}% 
+\contentsline {subsection}{\numberline {3.5.6}Quali autostrade sono utilizzate di pi\'u per viaggiare in Agosto?}{40}{subsection.3.5.6}% 
+\contentsline {subsection}{\numberline {3.5.7}Le autostrade pi\'u utilizzate cambiano a seconda dell'anno?}{41}{subsection.3.5.7}% 
+\contentsline {chapter}{\numberline {4}Dati su Meteo}{43}{chapter.4}% 
