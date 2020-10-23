@@ -73,11 +73,19 @@
 
 ### Todo
 
-- Devo tradurre i commenti / i nomi delle variabili in inglese?
-- Trascrivere commenti importanti da file a latex, che ordine devo tenere per i capitoli? 
-- Trovare mappa con Pavè a milano
+- Che ordine devo tenere per i capitoli? 
 - Campione conducenti veicoli
-- Dataset con autostrade è troppo grande, non posso caricarlo su git, e richiede tanta pulizia
+- Introduzione: spiego il progetto, come ho trovato i dati, cosa faccio con i dati, dove voglio arrivare
+- Cambiare nome dei sottocapitoli
+- Citare tutte le immagini
+- 3.1.1 migliora grafo
+- 3.2.2 controlla
+- 3.3.1 rapporta al traffico dell'orario
+- 3.3.3 rapporta con il traffico dell'area c
+- 3.13  cambia grafo a plot + analisi di incrementi/decrementi
+- 3.4.4 cambia grafo a matrice
+- 3.4.5 cambia in aspetti salienti, controlla con la popolazione
+- Grafi migliori
 
 ### Risultati da Trascrivere in Tesi: 
 
