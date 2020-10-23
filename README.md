@@ -8,6 +8,8 @@
 
 [Dati su Incidenti GEO (The Submarine)](https://www.google.com/maps/d/u/0/viewer?mid=1mXi6rbgjNHopZg7ZtpC-uZHY2f9wZ-58&ll=45.46373804532758%2C9.174953786724828&z=13)
 
+[Articolo The Submarine](https://thesubmarine.it/2018/06/20/mappa-incidenti-stradali-milano/)
+
 [Dati su Incidenti con Strada Provinciale (ACI)](http://www.aci.it/fileadmin/documenti/ACI/Trasparenza/Open_Data/Old_A_LOCALIZZAZIONE_INCIDENTI_STRADALI_STRADE_PROVINCIA.pdf) (2013 non disponibile)
 
 [Dati su Incidenti con Autostrada (ACI)](http://www.aci.it/fileadmin/documenti/ACI/Trasparenza/Open_Data/Catalogo_localizzazione_in_formato_Open_2019.pdf) 
