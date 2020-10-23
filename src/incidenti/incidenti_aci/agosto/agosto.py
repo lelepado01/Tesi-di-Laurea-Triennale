@@ -26,15 +26,19 @@ for year in range(2011, 2012):
     #plt.tight_layout()
     #plt.show()
 
+index = 1
 for year in range(2011, 2019): 
     agosto_2018 = pd.read_csv(path + str(year)+".csv")
     agosto_2018 = agosto_2018[['NOME STRADA', 'Agosto']]
     agosto_2018 = aci_utils.sum_field_by_column(agosto_2018, 'NOME STRADA', 'Agosto')
     agosto_2018 = agosto_2018.sort_values(by='val', ascending=False).head(5)   
     
-    agosto_2018.plot.barh()
-    plt.tight_layout()
+    plt.subplot(8,1,index)
+    #plt.title(str(year))
+    index += 1
+    plt.barh(agosto_2018.index, agosto_2018['val'])
+    #plt.tight_layout()
     plt.legend("")
-    plt.savefig("autostrada_" + str(year) + ".png")
+    
+plt.show()
 
-# TODO: aggiungere a tesi
