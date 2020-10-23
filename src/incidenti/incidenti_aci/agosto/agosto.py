@@ -16,25 +16,25 @@ for year in range(2011, 2012):
 
 
 #print(aci_utils.two_cols_unique(data[['NOME STRADA', 'Anno']]))
-#agosto = aci_utils.sum_field_by_two_columns(agosto, 'NOME STRADA', 'Anno', 'Agosto')
-#agosto = agosto[aci_utils.filter_by_value(agosto['NOME STRADA_Anno'], '2011')]
-#agosto = agosto.sort_values(by='Value', ascending=False).head(20)
 
-#print(agosto)
+    #agosto = aci_utils.sum_field_by_two_columns(agosto, 'NOME STRADA', 'Anno', 'Agosto')
+    #agosto = agosto[aci_utils.filter_by_value(agosto['NOME STRADA_Anno'], str(year))]
+    #agosto = agosto.sort_values(by='Value', ascending=False).head(5)
+#
+    #plt.barh(agosto['Nome e Anno'].astype(str), agosto['Inc'])
+    #plt.xticks(rotation=90)
+    #plt.tight_layout()
+    #plt.show()
 
-#plt.barh(agosto['Nome e Anno'].astype(str), agosto['Inc'])
-#plt.xticks(rotation=90)
-#plt.tight_layout()
-#plt.show()
-
-#agosto_2018 = pd.read_csv(path + "2014.csv")
-#agosto_2018 = agosto_2018[['NOME STRADA', 'Agosto']]
-#agosto_2018 = aci_utils.sum_field_by_column(agosto_2018, 'NOME STRADA', 'Agosto')
-#agosto_2018 = agosto_2018.sort_values(by='val', ascending=False).head(15)
-
-#agosto_2018.plot.barh()
-#plt.tight_layout()
-#plt.legend("")
-#plt.show()
+for year in range(2011, 2019): 
+    agosto_2018 = pd.read_csv(path + str(year)+".csv")
+    agosto_2018 = agosto_2018[['NOME STRADA', 'Agosto']]
+    agosto_2018 = aci_utils.sum_field_by_column(agosto_2018, 'NOME STRADA', 'Agosto')
+    agosto_2018 = agosto_2018.sort_values(by='val', ascending=False).head(5)   
+    
+    agosto_2018.plot.barh()
+    plt.tight_layout()
+    plt.legend("")
+    plt.savefig("autostrada_" + str(year) + ".png")
 
 # TODO: aggiungere a tesi
