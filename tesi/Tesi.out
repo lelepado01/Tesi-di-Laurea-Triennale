@@ -1,0 +1,42 @@
+\BOOKMARK [0][-]{chapter.1}{Introduzione}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Origine dei dati}{chapter.1}% 2
+\BOOKMARK [2][-]{subsection.1.1.1}{Dati riguardanti incidenti}{section.1.1}% 3
+\BOOKMARK [2][-]{subsection.1.1.2}{Dati riguardanti autovelox}{section.1.1}% 4
+\BOOKMARK [1][-]{section.1.2}{Scopo del lavoro}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.3}{Dati mancanti}{chapter.1}% 6
+\BOOKMARK [0][-]{chapter.2}{Dati Geolocalizzati}{}% 7
+\BOOKMARK [1][-]{section.2.1}{Incidenti}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.2}{Incidenti e Linee dei Trasporti Pubblici}{chapter.2}% 9
+\BOOKMARK [2][-]{subsection.2.2.1}{Il Pav\350 influisce sull'incidentalit\341?}{section.2.2}% 10
+\BOOKMARK [1][-]{section.2.3}{Incidenti e Piste Ciclabili}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.4}{Incidenti e Autovelox}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.5}{Incidenti e Meteo}{chapter.2}% 13
+\BOOKMARK [0][-]{chapter.3}{Dati su Incidenti}{}% 14
+\BOOKMARK [1][-]{section.3.1}{Dati Istat su veicoli}{chapter.3}% 15
+\BOOKMARK [2][-]{subsection.3.1.1}{Come cambia il tipo di veicolo al cambiare del tipo di strada?}{section.3.1}% 16
+\BOOKMARK [1][-]{section.3.2}{Dati Istat su conducente}{chapter.3}% 17
+\BOOKMARK [2][-]{subsection.3.2.1}{Come cambia il sesso del conducente al cambiare della strada?}{section.3.2}% 18
+\BOOKMARK [2][-]{subsection.3.2.2}{Come cambia l'et\341 del conducente al cambiare della strada?}{section.3.2}% 19
+\BOOKMARK [2][-]{subsection.3.2.3}{Il numero di passeggeri influisce sull'incidentalit\341?}{section.3.2}% 20
+\BOOKMARK [2][-]{subsection.3.2.4}{Il conducente se da solo si distrae con il telefono cellulare?}{section.3.2}% 21
+\BOOKMARK [1][-]{section.3.3}{Dati Istat su orari e mesi}{chapter.3}% 22
+\BOOKMARK [2][-]{subsection.3.3.1}{Quanto influiscono le ore di punta sull'incidentalit\341?}{section.3.3}% 23
+\BOOKMARK [2][-]{subsection.3.3.2}{\350 possibile accentuare le ore di punta mattutine?}{section.3.3}% 24
+\BOOKMARK [2][-]{subsection.3.3.3}{Si ha la stessa tendenza di notte?}{section.3.3}% 25
+\BOOKMARK [2][-]{subsection.3.3.4}{Quanto influiscono le vacanze estive sull'incidentalit\341?}{section.3.3}% 26
+\BOOKMARK [2][-]{subsection.3.3.5}{\350 possibile individuare la tendenza inversa in localit\341 di mare?}{section.3.3}% 27
+\BOOKMARK [1][-]{section.3.4}{Dati Istat su tipi di incidenti e incroci}{chapter.3}% 28
+\BOOKMARK [2][-]{subsection.3.4.1}{Quali incidenti avvengono con pi\371 frequenza?}{section.3.4}% 29
+\BOOKMARK [2][-]{subsection.3.4.2}{Quali tipi di incroci provocano pi\371 incidenti?}{section.3.4}% 30
+\BOOKMARK [2][-]{subsection.3.4.3}{Esistono tipi di incidenti che provocano pi\371 feriti?}{section.3.4}% 31
+\BOOKMARK [2][-]{subsection.3.4.4}{Esistono incroci che favoriscono incidenti con pedoni?}{section.3.4}% 32
+\BOOKMARK [2][-]{subsection.3.4.5}{Ci sono caratteristiche interessanti dei pedoni coinvolti?}{section.3.4}% 33
+\BOOKMARK [1][-]{section.3.5}{Dati ACI}{chapter.3}% 34
+\BOOKMARK [2][-]{subsection.3.5.1}{Esiste correlazione tra incidenti e feriti?}{section.3.5}% 35
+\BOOKMARK [2][-]{subsection.3.5.2}{Quali sono le autostrade con pi\371 incidenti?}{section.3.5}% 36
+\BOOKMARK [2][-]{subsection.3.5.3}{Autostrade pericolose a Milano?}{section.3.5}% 37
+\BOOKMARK [2][-]{subsection.3.5.4}{In quali mesi avvengono pi\371 incidenti?}{section.3.5}% 38
+\BOOKMARK [2][-]{subsection.3.5.5}{In Quali orari avvengono incidenti sulle autostrade?}{section.3.5}% 39
+\BOOKMARK [2][-]{subsection.3.5.6}{Quali autostrade sono utilizzate di pi\371 per viaggiare in Agosto?}{section.3.5}% 40
+\BOOKMARK [2][-]{subsection.3.5.7}{Le autostrade pi\371 utilizzate cambiano a seconda dell'anno?}{section.3.5}% 41
+\BOOKMARK [0][-]{chapter.4}{Dati su Meteo}{}% 42
