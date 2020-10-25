@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.24)  24 OCT 2020 12:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.24)  25 OCT 2020 17:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -561,37 +561,27 @@ File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count284
 \l__pdf_internal_box=\box56
 )
-(./Tesi.aux
-
-LaTeX Warning: Label `fig:week_weekend' multiply defined.
-
-
-LaTeX Warning: Label `fig:sesso_morti_feriti' multiply defined.
-
-
-LaTeX Warning: Label `fig:milano_adriatica' multiply defined.
-
-)
+(./Tesi.aux)
 \openout1 = `Tesi.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Info: Redefining \it@ocap on input line 24.
-LaTeX Info: Redefining \it@ccap on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Info: Redefining \it@ocap on input line 25.
+LaTeX Info: Redefining \it@ccap on input line 25.
 
 
 File italian.ldf warning: 
@@ -599,7 +589,7 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
-italian.ldf    on input line 24.
+italian.ldf    on input line 25.
 
 (/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -625,7 +615,7 @@ e
 ))
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box58
-Package hyperref Info: Link coloring OFF on input line 24.
+Package hyperref Info: Link coloring OFF on input line 25.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -639,17 +629,17 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count291
 )
-LaTeX Info: Redefining \ref on input line 24.
-LaTeX Info: Redefining \pageref on input line 24.
-LaTeX Info: Redefining \nameref on input line 24.
+LaTeX Info: Redefining \ref on input line 25.
+LaTeX Info: Redefining \pageref on input line 25.
+LaTeX Info: Redefining \nameref on input line 25.
  (./Tesi.out) (./Tesi.out)
 \@outlinefile=\write4
 \openout4 = `Tesi.out'.
 
-<Logo.jpg, id=199, 398.4486pt x 156.585pt>
+<Logo.jpg, id=224, 398.4486pt x 156.585pt>
 File: Logo.jpg Graphic file (type jpg)
 <use Logo.jpg>
-Package pdftex.def Info: Logo.jpg  used on input line 29.
+Package pdftex.def Info: Logo.jpg  used on input line 30.
 (pdftex.def)             Requested size: 345.0pt x 135.58273pt.
  [1
 
@@ -663,31 +653,31 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.37 ...incidenti e feriti?}{39}{subsection.3.5.1}
+l.37 ...con più frequenza?}{22}{subsection.3.4.1}
                                                   % [1
 
 ])
 \tf@toc=\write5
 \openout5 = `Tesi.toc'.
 
- [2]
-No file Tesi.tdo.
+ [2] (./Tesi.tdo)
 \tf@tdo=\write6
 \openout6 = `Tesi.tdo'.
+
 
 [3
 
 ]
 Capitolo 1.
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 76.
+ine 77.
 
-Overfull \hbox (3.71124pt too wide) in paragraph at lines 103--103
+Overfull \hbox (3.71124pt too wide) in paragraph at lines 104--104
 \OT1/cmr/m/n/10 lox[]2014.csv[]  
  []
 
 
-Overfull \hbox (3.71124pt too wide) in paragraph at lines 103--103
+Overfull \hbox (3.71124pt too wide) in paragraph at lines 104--104
 \OT1/cmr/m/n/10 lox[]2014.csv[]  
  []
 
@@ -695,472 +685,413 @@ Overfull \hbox (3.71124pt too wide) in paragraph at lines 103--103
 
 ] [5]
 Capitolo 2.
-<../src/incidenti/geo_incidenti.png, id=279, 452.69125pt x 409.53pt>
+<../src/incidenti/geo_incidenti.png, id=321, 452.69125pt x 409.53pt>
 File: ../src/incidenti/geo_incidenti.png Graphic file (type png)
 <use ../src/incidenti/geo_incidenti.png>
 Package pdftex.def Info: ../src/incidenti/geo_incidenti.png  used on input line
- 127.
+ 145.
 (pdftex.def)             Requested size: 345.0pt x 312.10213pt.
-[6
-
-] [7 <../src/incidenti/geo_incidenti.png>]
-<../src/atm/mappa_2.png, id=292, 910.40125pt x 807.015pt>
+<../src/atm/mappa_2.png, id=324, 910.40125pt x 807.015pt>
 File: ../src/atm/mappa_2.png Graphic file (type png)
 <use ../src/atm/mappa_2.png>
-Package pdftex.def Info: ../src/atm/mappa_2.png  used on input line 144.
+Package pdftex.def Info: ../src/atm/mappa_2.png  used on input line 164.
 (pdftex.def)             Requested size: 345.0pt x 305.81921pt.
-<../src/atm/navigli.png, id=293, 987.69pt x 789.95125pt>
+<../src/atm/navigli.png, id=326, 987.69pt x 789.95125pt>
 File: ../src/atm/navigli.png Graphic file (type png)
 <use ../src/atm/navigli.png>
-Package pdftex.def Info: ../src/atm/navigli.png  used on input line 164.
+Package pdftex.def Info: ../src/atm/navigli.png  used on input line 186.
 (pdftex.def)             Requested size: 345.0pt x 275.92055pt.
-<../src/atm/22_marzo.png, id=294, 846.16125pt x 827.09pt>
+<../src/atm/22_marzo.png, id=328, 846.16125pt x 827.09pt>
 File: ../src/atm/22_marzo.png Graphic file (type png)
 <use ../src/atm/22_marzo.png>
-Package pdftex.def Info: ../src/atm/22_marzo.png  used on input line 173.
+Package pdftex.def Info: ../src/atm/22_marzo.png  used on input line 197.
 (pdftex.def)             Requested size: 345.0pt x 337.21603pt.
- [8
-
- <../src/atm/mappa_2.png>]
-[9 <../src/atm/navigli.png>] [10 <../src/atm/22_marzo.png>]
-<../dataset/pave/Cartina_Milano_Strade_Pavimentazione_Pavé_2.jpg, id=313, 1422
+<../dataset/pave/Cartina_Milano_Strade_Pavimentazione_Pavé_2.jpg, id=330, 1422
 .31375pt x 1066.98625pt>
 File: ../dataset/pave/Cartina_Milano_Strade_Pavimentazione_Pavé_2.jpg Graphic 
 file (type jpg)
 <use ../dataset/pave/Cartina_Milano_Strade_Pavimentazione_Pavé_2.jpg>
 Package pdftex.def Info: ../dataset/pave/Cartina_Milano_Strade_Pavimentazione_P
-avé_2.jpg  used on input line 187.
+avé_2.jpg  used on input line 213.
 (pdftex.def)             Requested size: 345.0pt x 258.80084pt.
- [11
+[6
 
- <../dataset/pave/Cartina_Milano_Strade_Pavimentazione_Pavé_2.jpg>] [12
-
-]
-<../src/autovelox/autovelox_2014.png, id=324, 762.85pt x 795.97375pt>
+] [7 <../src/incidenti/geo_incidenti.png>] [8 <../src/atm/mappa_2.png>]
+[9 <../src/atm/navigli.png>] [10 <../src/atm/22_marzo.png>]
+<../src/autovelox/autovelox_2014.png, id=362, 762.85pt x 795.97375pt>
 File: ../src/autovelox/autovelox_2014.png Graphic file (type png)
 <use ../src/autovelox/autovelox_2014.png>
 Package pdftex.def Info: ../src/autovelox/autovelox_2014.png  used on input lin
-e 213.
+e 240.
 (pdftex.def)             Requested size: 345.0pt x 359.97028pt.
-<../src/autovelox/mappa_3.png, id=325, 954.56625pt x 817.0525pt>
+<../src/autovelox/mappa_3.png, id=364, 954.56625pt x 817.0525pt>
 File: ../src/autovelox/mappa_3.png Graphic file (type png)
 <use ../src/autovelox/mappa_3.png>
-Package pdftex.def Info: ../src/autovelox/mappa_3.png  used on input line 222.
+Package pdftex.def Info: ../src/autovelox/mappa_3.png  used on input line 251.
 (pdftex.def)             Requested size: 345.0pt x 295.29813pt.
- [13
-
- <../src/autovelox/autovelox_2014.png>] [14 <../src/autovelox/mappa_3.png>] [15
-
-]
+ [11 <../dataset/pave/Cartina_Milano_Strade_Pavimentazione_Pavé_2.jpg>] [12 <.
+./src/autovelox/autovelox_2014.png>] [13 <../src/autovelox/mappa_3.png>]
 Capitolo 3.
-[16
-
-
-] [17
-
-]
 <../src/incidenti/incidenti_senza_coords/tipo_veicoli/differenza_strade.png, id
-=351, 630.355pt x 657.45625pt>
+=383, 630.355pt x 657.45625pt>
 File: ../src/incidenti/incidenti_senza_coords/tipo_veicoli/differenza_strade.pn
 g Graphic file (type png)
 <use ../src/incidenti/incidenti_senza_coords/tipo_veicoli/differenza_strade.png
 >
 Package pdftex.def Info: ../src/incidenti/incidenti_senza_coords/tipo_veicoli/d
-ifferenza_strade.png  used on input line 253.
+ifferenza_strade.png  used on input line 284.
 (pdftex.def)             Requested size: 345.0pt x 359.83643pt.
- [18
-
- <../src/incidenti/incidenti_senza_coords/tipo_veicoli/differenza_strade.png>] 
-[19
-
-]
-<../src/incidenti/incidenti_senza_coords/tipo_veicoli/uomo-donna.png, id=363, 6
+<../src/incidenti/incidenti_senza_coords/tipo_veicoli/uomo-donna.png, id=385, 6
 31.35875pt x 469.755pt>
 File: ../src/incidenti/incidenti_senza_coords/tipo_veicoli/uomo-donna.png Graph
 ic file (type png)
 <use ../src/incidenti/incidenti_senza_coords/tipo_veicoli/uomo-donna.png>
 Package pdftex.def Info: ../src/incidenti/incidenti_senza_coords/tipo_veicoli/u
-omo-donna.png  used on input line 270.
+omo-donna.png  used on input line 303.
 (pdftex.def)             Requested size: 345.0pt x 256.69594pt.
- [20
-
- <../src/incidenti/incidenti_senza_coords/tipo_veicoli/uomo-donna.png>]
-<../src/incidenti/incidenti_senza_coords/tipo_veicoli/differenza_eta.png, id=37
-0, 632.3625pt x 470.75874pt>
+<../src/incidenti/incidenti_senza_coords/tipo_veicoli/differenza_eta.png, id=38
+7, 632.3625pt x 470.75874pt>
 File: ../src/incidenti/incidenti_senza_coords/tipo_veicoli/differenza_eta.png G
 raphic file (type png)
 <use ../src/incidenti/incidenti_senza_coords/tipo_veicoli/differenza_eta.png>
 Package pdftex.def Info: ../src/incidenti/incidenti_senza_coords/tipo_veicoli/d
-ifferenza_eta.png  used on input line 286.
+ifferenza_eta.png  used on input line 321.
 (pdftex.def)             Requested size: 345.0pt x 256.83498pt.
- [21
+[14
 
- <../src/incidenti/incidenti_senza_coords/tipo_veicoli/differenza_eta.png>]
-<../src/incidenti/incidenti_senza_coords/tipo_veicoli/passeggeri.png, id=377, 6
+] [15 <../src/incidenti/incidenti_senza_coords/tipo_veicoli/differenza_strade.p
+ng>] [16 <../src/incidenti/incidenti_senza_coords/tipo_veicoli/uomo-donna.png> 
+<../src/incidenti/incidenti_senza_coords/tipo_veicoli/differenza_eta.png>]
+<../src/incidenti/incidenti_senza_coords/tipo_veicoli/passeggeri.png, id=406, 6
 30.355pt x 438.63875pt>
 File: ../src/incidenti/incidenti_senza_coords/tipo_veicoli/passeggeri.png Graph
 ic file (type png)
 <use ../src/incidenti/incidenti_senza_coords/tipo_veicoli/passeggeri.png>
 Package pdftex.def Info: ../src/incidenti/incidenti_senza_coords/tipo_veicoli/p
-asseggeri.png  used on input line 299.
+asseggeri.png  used on input line 336.
 (pdftex.def)             Requested size: 345.0pt x 240.07407pt.
- [22
 
- <../src/incidenti/incidenti_senza_coords/tipo_veicoli/passeggeri.png>] [23
-
-] [24
-
-]
-<../src/incidenti/incidenti_senza_coords/ore_punta/week_weekend.png, id=393, 59
+[17 <../src/incidenti/incidenti_senza_coords/tipo_veicoli/passeggeri.png>]
+<../src/incidenti/incidenti_senza_coords/ore_punta/week_weekend.png, id=413, 59
 7.23125pt x 449.68pt>
 File: ../src/incidenti/incidenti_senza_coords/ore_punta/week_weekend.png Graphi
 c file (type png)
 <use ../src/incidenti/incidenti_senza_coords/ore_punta/week_weekend.png>
 Package pdftex.def Info: ../src/incidenti/incidenti_senza_coords/ore_punta/week
-_weekend.png  used on input line 330.
+_weekend.png  used on input line 367.
 (pdftex.def)             Requested size: 345.0pt x 259.76476pt.
-<../src/incidenti/incidenti_senza_coords/ore_punta/ore_punta_mattina.png, id=39
+<../src/incidenti/incidenti_senza_coords/ore_punta/ore_punta_mattina.png, id=41
 4, 964.60374pt x 723.70375pt>
 File: ../src/incidenti/incidenti_senza_coords/ore_punta/ore_punta_mattina.png G
 raphic file (type png)
 <use ../src/incidenti/incidenti_senza_coords/ore_punta/ore_punta_mattina.png>
 Package pdftex.def Info: ../src/incidenti/incidenti_senza_coords/ore_punta/ore_
-punta_mattina.png  used on input line 341.
+punta_mattina.png  used on input line 378.
 (pdftex.def)             Requested size: 345.0pt x 258.83255pt.
-<../src/incidenti/incidenti_senza_coords/ore_punta/ore_punta_sera.png, id=395, 
+<../src/incidenti/incidenti_senza_coords/ore_punta/ore_punta_sera.png, id=415, 
 961.5925pt x 728.7225pt>
 File: ../src/incidenti/incidenti_senza_coords/ore_punta/ore_punta_sera.png Grap
 hic file (type png)
 <use ../src/incidenti/incidenti_senza_coords/ore_punta/ore_punta_sera.png>
 Package pdftex.def Info: ../src/incidenti/incidenti_senza_coords/ore_punta/ore_
-punta_sera.png  used on input line 347.
+punta_sera.png  used on input line 384.
 (pdftex.def)             Requested size: 345.0pt x 261.45035pt.
- [25
-
- <../src/incidenti/incidenti_senza_coords/ore_punta/week_weekend.png>] [26 <../
-src/incidenti/incidenti_senza_coords/ore_punta/ore_punta_mattina.png> <../src/i
-ncidenti/incidenti_senza_coords/ore_punta/ore_punta_sera.png>]
 <../src/incidenti/incidenti_senza_coords/ore_punta/week_weekend_milano.png, id=
-410, 570.13pt x 435.6275pt>
+416, 570.13pt x 435.6275pt>
 File: ../src/incidenti/incidenti_senza_coords/ore_punta/week_weekend_milano.png
  Graphic file (type png)
 <use ../src/incidenti/incidenti_senza_coords/ore_punta/week_weekend_milano.png>
 
 Package pdftex.def Info: ../src/incidenti/incidenti_senza_coords/ore_punta/week
-_weekend_milano.png  used on input line 368.
+_weekend_milano.png  used on input line 405.
 (pdftex.def)             Requested size: 345.0pt x 263.6053pt.
- [27
 
- <../src/incidenti/incidenti_senza_coords/ore_punta/week_weekend_milano.png>]
+Overfull \hbox (25.32233pt too wide) in paragraph at lines 415--415
+\OT1/cmr/m/n/10 fig:week[]weekend[]  
+ []
+
+
+Overfull \hbox (25.32233pt too wide) in paragraph at lines 415--415
+\OT1/cmr/m/n/10 fig:week[]weekend[]  
+ []
+
 <../src/incidenti/incidenti_senza_coords/ore_punta/ore_notte.png, id=417, 846.1
 6125pt x 647.41875pt>
 File: ../src/incidenti/incidenti_senza_coords/ore_punta/ore_notte.png Graphic f
 ile (type png)
 <use ../src/incidenti/incidenti_senza_coords/ore_punta/ore_notte.png>
 Package pdftex.def Info: ../src/incidenti/incidenti_senza_coords/ore_punta/ore_
-notte.png  used on input line 382.
+notte.png  used on input line 420.
 (pdftex.def)             Requested size: 345.0pt x 263.96158pt.
- [28
-
- <../src/incidenti/incidenti_senza_coords/ore_punta/ore_notte.png>]
-<../src/incidenti/incidenti_senza_coords/mese_incidenti/milano_mese.png, id=424
+<../src/incidenti/incidenti_senza_coords/mese_incidenti/milano_mese.png, id=418
 , 559.08875pt x 430.60875pt>
 File: ../src/incidenti/incidenti_senza_coords/mese_incidenti/milano_mese.png Gr
 aphic file (type png)
 <use ../src/incidenti/incidenti_senza_coords/mese_incidenti/milano_mese.png>
 Package pdftex.def Info: ../src/incidenti/incidenti_senza_coords/mese_incidenti
-/milano_mese.png  used on input line 393.
+/milano_mese.png  used on input line 431.
 (pdftex.def)             Requested size: 345.0pt x 265.72624pt.
-[29
-
- <../src/incidenti/incidenti_senza_coords/mese_incidenti/milano_mese.png>]
+[18 <../src/incidenti/incidenti_senza_coords/ore_punta/week_weekend.png>]
+[19 <../src/incidenti/incidenti_senza_coords/ore_punta/ore_punta_mattina.png> <
+../src/incidenti/incidenti_senza_coords/ore_punta/ore_punta_sera.png>] [20 <../
+src/incidenti/incidenti_senza_coords/ore_punta/week_weekend_milano.png> <../src
+/incidenti/incidenti_senza_coords/ore_punta/ore_notte.png>]
 <../src/incidenti/incidenti_senza_coords/mese_incidenti/milano_rimini.png, id=4
-31, 565.11125pt x 447.6725pt>
+43, 565.11125pt x 447.6725pt>
 File: ../src/incidenti/incidenti_senza_coords/mese_incidenti/milano_rimini.png 
 Graphic file (type png)
 <use ../src/incidenti/incidenti_senza_coords/mese_incidenti/milano_rimini.png>
 Package pdftex.def Info: ../src/incidenti/incidenti_senza_coords/mese_incidenti
-/milano_rimini.png  used on input line 406.
+/milano_rimini.png  used on input line 444.
 (pdftex.def)             Requested size: 345.0pt x 273.30524pt.
-<../src/incidenti/incidenti_senza_coords/mese_incidenti/valle_aosta.png, id=432
+<../src/incidenti/incidenti_senza_coords/mese_incidenti/valle_aosta.png, id=444
 , 575.14874pt x 450.68375pt>
 File: ../src/incidenti/incidenti_senza_coords/mese_incidenti/valle_aosta.png Gr
 aphic file (type png)
 <use ../src/incidenti/incidenti_senza_coords/mese_incidenti/valle_aosta.png>
 Package pdftex.def Info: ../src/incidenti/incidenti_senza_coords/mese_incidenti
-/valle_aosta.png  used on input line 418.
+/valle_aosta.png  used on input line 456.
 (pdftex.def)             Requested size: 345.0pt x 270.35043pt.
 <../src/incidenti/incidenti_senza_coords/mese_incidenti/aosta_timestre.png, id=
-433, 587.19376pt x 432.61626pt>
+445, 587.19376pt x 432.61626pt>
 File: ../src/incidenti/incidenti_senza_coords/mese_incidenti/aosta_timestre.png
  Graphic file (type png)
 <use ../src/incidenti/incidenti_senza_coords/mese_incidenti/aosta_timestre.png>
 
 Package pdftex.def Info: ../src/incidenti/incidenti_senza_coords/mese_incidenti
-/aosta_timestre.png  used on input line 428.
+/aosta_timestre.png  used on input line 466.
 (pdftex.def)             Requested size: 345.0pt x 254.17859pt.
 <../src/incidenti/incidenti_senza_coords/mese_incidenti/milano_trimestre.png, i
-d=434, 561.09625pt x 430.60875pt>
+d=446, 561.09625pt x 430.60875pt>
 File: ../src/incidenti/incidenti_senza_coords/mese_incidenti/milano_trimestre.p
 ng Graphic file (type png)
 <use ../src/incidenti/incidenti_senza_coords/mese_incidenti/milano_trimestre.pn
 g>
 Package pdftex.def Info: ../src/incidenti/incidenti_senza_coords/mese_incidenti
-/milano_trimestre.png  used on input line 440.
+/milano_trimestre.png  used on input line 478.
 (pdftex.def)             Requested size: 345.0pt x 264.76695pt.
 <../src/incidenti/incidenti_senza_coords/mese_incidenti/rimini_trimestre.png, i
-d=435, 561.09625pt x 430.60875pt>
+d=447, 561.09625pt x 430.60875pt>
 File: ../src/incidenti/incidenti_senza_coords/mese_incidenti/rimini_trimestre.p
 ng Graphic file (type png)
 <use ../src/incidenti/incidenti_senza_coords/mese_incidenti/rimini_trimestre.pn
 g>
 Package pdftex.def Info: ../src/incidenti/incidenti_senza_coords/mese_incidenti
-/rimini_trimestre.png  used on input line 446.
+/rimini_trimestre.png  used on input line 484.
 (pdftex.def)             Requested size: 345.0pt x 264.76695pt.
-
-[30
-
- <../src/incidenti/incidenti_senza_coords/mese_incidenti/milano_rimini.png>] [3
-1 <../src/incidenti/incidenti_senza_coords/mese_incidenti/valle_aosta.png> <../
-src/incidenti/incidenti_senza_coords/mese_incidenti/aosta_timestre.png>]
-[32 <../src/incidenti/incidenti_senza_coords/mese_incidenti/milano_trimestre.pn
-g> <../src/incidenti/incidenti_senza_coords/mese_incidenti/rimini_trimestre.png
->] [33
-
-]
 <../src/incidenti/incidenti_senza_coords/localizzazione_incidente/tipo_incident
-e.png, id=463, 627.34375pt x 467.7475pt>
+e.png, id=448, 627.34375pt x 467.7475pt>
 File: ../src/incidenti/incidenti_senza_coords/localizzazione_incidente/tipo_inc
 idente.png Graphic file (type png)
 <use ../src/incidenti/incidenti_senza_coords/localizzazione_incidente/tipo_inci
 dente.png>
 Package pdftex.def Info: ../src/incidenti/incidenti_senza_coords/localizzazione
-_incidente/tipo_incidente.png  used on input line 463.
+_incidente/tipo_incidente.png  used on input line 501.
 (pdftex.def)             Requested size: 345.0pt x 257.2405pt.
- [34
-
- <../src/incidenti/incidenti_senza_coords/localizzazione_incidente/tipo_inciden
-te.png>]
+ [21 <../src/incidenti/incidenti_senza_coords/mese_incidenti/milano_mese.png>]
 <../src/incidenti/incidenti_senza_coords/localizzazione_incidente/intersezioni.
-png, id=471, 627.34375pt x 464.73625pt>
+png, id=455, 627.34375pt x 464.73625pt>
 File: ../src/incidenti/incidenti_senza_coords/localizzazione_incidente/intersez
 ioni.png Graphic file (type png)
 <use ../src/incidenti/incidenti_senza_coords/localizzazione_incidente/intersezi
 oni.png>
 Package pdftex.def Info: ../src/incidenti/incidenti_senza_coords/localizzazione
-_incidente/intersezioni.png  used on input line 474.
+_incidente/intersezioni.png  used on input line 512.
 (pdftex.def)             Requested size: 345.0pt x 255.58444pt.
- [35
-
- <../src/incidenti/incidenti_senza_coords/localizzazione_incidente/intersezioni
-.png>]
 <../src/incidenti/incidenti_senza_coords/natura_incidente/numero_feriti.png, id
-=478, 573.14125pt x 428.60126pt>
+=456, 573.14125pt x 428.60126pt>
 File: ../src/incidenti/incidenti_senza_coords/natura_incidente/numero_feriti.pn
 g Graphic file (type png)
 <use ../src/incidenti/incidenti_senza_coords/natura_incidente/numero_feriti.png
 >
 Package pdftex.def Info: ../src/incidenti/incidenti_senza_coords/natura_inciden
-te/numero_feriti.png  used on input line 487.
+te/numero_feriti.png  used on input line 525.
 (pdftex.def)             Requested size: 345.0pt x 257.99985pt.
- [36
-
- <../src/incidenti/incidenti_senza_coords/natura_incidente/numero_feriti.png>]
-<../src/incidenti/incidenti_senza_coords/pedoni/pedoni_incroci.png, id=486, 628
+<../src/incidenti/incidenti_senza_coords/pedoni/pedoni_incroci.png, id=457, 628
 .3475pt x 442.65375pt>
 File: ../src/incidenti/incidenti_senza_coords/pedoni/pedoni_incroci.png Graphic
  file (type png)
 <use ../src/incidenti/incidenti_senza_coords/pedoni/pedoni_incroci.png>
 Package pdftex.def Info: ../src/incidenti/incidenti_senza_coords/pedoni/pedoni_
-incroci.png  used on input line 501.
+incroci.png  used on input line 539.
 (pdftex.def)             Requested size: 345.0pt x 243.04153pt.
- [37
-
- <../src/incidenti/incidenti_senza_coords/pedoni/pedoni_incroci.png>]
-<../src/incidenti/incidenti_senza_coords/pedoni/eta_pedoni.png, id=493, 842.146
+<../src/incidenti/incidenti_senza_coords/pedoni/eta_pedoni.png, id=458, 842.146
 26pt x 471.7625pt>
 File: ../src/incidenti/incidenti_senza_coords/pedoni/eta_pedoni.png Graphic fil
 e (type png)
 <use ../src/incidenti/incidenti_senza_coords/pedoni/eta_pedoni.png>
 Package pdftex.def Info: ../src/incidenti/incidenti_senza_coords/pedoni/eta_ped
-oni.png  used on input line 516.
+oni.png  used on input line 554.
 (pdftex.def)             Requested size: 345.0pt x 193.2655pt.
-<../src/incidenti/incidenti_senza_coords/pedoni/eta_pedoni_norm.png, id=494, 62
+ [22 <../src/incidenti/incidenti_senza_coords/mese_incidenti/milano_rimini.png>
+] [23 <../src/incidenti/incidenti_senza_coords/mese_incidenti/valle_aosta.png> 
+<../src/incidenti/incidenti_senza_coords/mese_incidenti/aosta_timestre.png>] [2
+4 <../src/incidenti/incidenti_senza_coords/mese_incidenti/milano_trimestre.png>
+ <../src/incidenti/incidenti_senza_coords/mese_incidenti/rimini_trimestre.png>]
+ [25 <../src/incidenti/incidenti_senza_coords/localizzazione_incidente/tipo_inc
+idente.png> <../src/incidenti/incidenti_senza_coords/localizzazione_incidente/i
+ntersezioni.png>]
+[26 <../src/incidenti/incidenti_senza_coords/natura_incidente/numero_feriti.png
+> <../src/incidenti/incidenti_senza_coords/pedoni/pedoni_incroci.png>]
+<../src/incidenti/incidenti_senza_coords/pedoni/eta_pedoni_norm.png, id=499, 62
 1.32124pt x 475.7775pt>
 File: ../src/incidenti/incidenti_senza_coords/pedoni/eta_pedoni_norm.png Graphi
 c file (type png)
 <use ../src/incidenti/incidenti_senza_coords/pedoni/eta_pedoni_norm.png>
 Package pdftex.def Info: ../src/incidenti/incidenti_senza_coords/pedoni/eta_ped
-oni_norm.png  used on input line 528.
+oni_norm.png  used on input line 566.
 (pdftex.def)             Requested size: 345.0pt x 264.18304pt.
-<../src/incidenti/incidenti_senza_coords/pedoni/sesso_morti_feriti.png, id=495,
+<../src/incidenti/incidenti_senza_coords/pedoni/sesso_morti_feriti.png, id=500,
  611.28375pt x 357.335pt>
 File: ../src/incidenti/incidenti_senza_coords/pedoni/sesso_morti_feriti.png Gra
 phic file (type png)
 <use ../src/incidenti/incidenti_senza_coords/pedoni/sesso_morti_feriti.png>
 Package pdftex.def Info: ../src/incidenti/incidenti_senza_coords/pedoni/sesso_m
-orti_feriti.png  used on input line 537.
+orti_feriti.png  used on input line 575.
 (pdftex.def)             Requested size: 345.0pt x 201.6711pt.
- [38
-
- <../src/incidenti/incidenti_senza_coords/pedoni/eta_pedoni.png>] [39 <../src/i
-ncidenti/incidenti_senza_coords/pedoni/eta_pedoni_norm.png> <../src/incidenti/i
-ncidenti_senza_coords/pedoni/sesso_morti_feriti.png>] [40
-
-]
-<../src/incidenti/incidenti_aci/comuni/corr_incidenti_feriti.png, id=514, 629.3
+<../src/incidenti/incidenti_aci/comuni/corr_incidenti_feriti.png, id=501, 629.3
 5126pt x 471.7625pt>
 File: ../src/incidenti/incidenti_aci/comuni/corr_incidenti_feriti.png Graphic f
 ile (type png)
 <use ../src/incidenti/incidenti_aci/comuni/corr_incidenti_feriti.png>
 Package pdftex.def Info: ../src/incidenti/incidenti_aci/comuni/corr_incidenti_f
-eriti.png  used on input line 576.
+eriti.png  used on input line 614.
 (pdftex.def)             Requested size: 345.0pt x 258.61354pt.
- [41
-
- <../src/incidenti/incidenti_aci/comuni/corr_incidenti_feriti.png>]
-<../src/incidenti/incidenti_aci/autostrade/autostrade.png, id=521, 842.14626pt 
+<../src/incidenti/incidenti_aci/autostrade/autostrade.png, id=502, 842.14626pt 
 x 692.5875pt>
 File: ../src/incidenti/incidenti_aci/autostrade/autostrade.png Graphic file (ty
 pe png)
 <use ../src/incidenti/incidenti_aci/autostrade/autostrade.png>
 Package pdftex.def Info: ../src/incidenti/incidenti_aci/autostrade/autostrade.p
-ng  used on input line 589.
+ng  used on input line 627.
 (pdftex.def)             Requested size: 345.0pt x 283.73021pt.
- [42
-
- <../src/incidenti/incidenti_aci/autostrade/autostrade.png>]
-<../src/incidenti/incidenti_aci/autostrade/incidenti_bubble_chart.png, id=529, 
+ [27 <../src/incidenti/incidenti_senza_coords/pedoni/eta_pedoni.png>] [28 <../s
+rc/incidenti/incidenti_senza_coords/pedoni/eta_pedoni_norm.png> <../src/inciden
+ti/incidenti_senza_coords/pedoni/sesso_morti_feriti.png>]
+<../src/incidenti/incidenti_aci/autostrade/incidenti_bubble_chart.png, id=517, 
 819.06pt x 788.9475pt>
 File: ../src/incidenti/incidenti_aci/autostrade/incidenti_bubble_chart.png Grap
 hic file (type png)
 <use ../src/incidenti/incidenti_aci/autostrade/incidenti_bubble_chart.png>
 Package pdftex.def Info: ../src/incidenti/incidenti_aci/autostrade/incidenti_bu
-bble_chart.png  used on input line 605.
+bble_chart.png  used on input line 643.
 (pdftex.def)             Requested size: 345.0pt x 332.31876pt.
- [43
-
- <../src/incidenti/incidenti_aci/autostrade/incidenti_bubble_chart.png>]
-<../src/incidenti/incidenti_aci/autostrade/mesi_autostrade.png, id=536, 582.175
+<../src/incidenti/incidenti_aci/autostrade/mesi_autostrade.png, id=518, 582.175
 pt x 444.66125pt>
 File: ../src/incidenti/incidenti_aci/autostrade/mesi_autostrade.png Graphic fil
 e (type png)
 <use ../src/incidenti/incidenti_aci/autostrade/mesi_autostrade.png>
 Package pdftex.def Info: ../src/incidenti/incidenti_aci/autostrade/mesi_autostr
-ade.png  used on input line 617.
+ade.png  used on input line 655.
 (pdftex.def)             Requested size: 345.0pt x 263.51488pt.
-<../src/incidenti/incidenti_aci/autostrade/milano_adriatica.png, id=537, 632.36
+<../src/incidenti/incidenti_aci/autostrade/milano_adriatica.png, id=519, 632.36
 25pt x 469.755pt>
 File: ../src/incidenti/incidenti_aci/autostrade/milano_adriatica.png Graphic fi
 le (type png)
 <use ../src/incidenti/incidenti_aci/autostrade/milano_adriatica.png>
 Package pdftex.def Info: ../src/incidenti/incidenti_aci/autostrade/milano_adria
-tica.png  used on input line 633.
+tica.png  used on input line 671.
 (pdftex.def)             Requested size: 345.0pt x 256.28737pt.
- [44
-
- <../src/incidenti/incidenti_aci/autostrade/mesi_autostrade.png>] [45 <../src/i
-ncidenti/incidenti_aci/autostrade/milano_adriatica.png>]
-<../src/incidenti/incidenti_aci/autostrade/tangenziali_autostrade.png, id=550, 
+<../src/incidenti/incidenti_aci/autostrade/tangenziali_autostrade.png, id=520, 
 1513.655pt x 688.5725pt>
 File: ../src/incidenti/incidenti_aci/autostrade/tangenziali_autostrade.png Grap
 hic file (type png)
 <use ../src/incidenti/incidenti_aci/autostrade/tangenziali_autostrade.png>
 Package pdftex.def Info: ../src/incidenti/incidenti_aci/autostrade/tangenziali_
-autostrade.png  used on input line 645.
+autostrade.png  used on input line 683.
 (pdftex.def)             Requested size: 345.0pt x 156.93942pt.
-<../src/incidenti/incidenti_aci/autostrade/legenda_autostrade.png, id=551, 403.
+<../src/incidenti/incidenti_aci/autostrade/legenda_autostrade.png, id=521, 403.
 5075pt x 100.375pt>
 File: ../src/incidenti/incidenti_aci/autostrade/legenda_autostrade.png Graphic 
 file (type png)
 <use ../src/incidenti/incidenti_aci/autostrade/legenda_autostrade.png>
 Package pdftex.def Info: ../src/incidenti/incidenti_aci/autostrade/legenda_auto
-strade.png  used on input line 651.
+strade.png  used on input line 689.
 (pdftex.def)             Requested size: 207.0021pt x 51.49382pt.
-<../src/incidenti/incidenti_aci/autostrade/legenda_tangenziali.png, id=552, 290
+<../src/incidenti/incidenti_aci/autostrade/legenda_tangenziali.png, id=522, 290
 .08376pt x 80.3pt>
 File: ../src/incidenti/incidenti_aci/autostrade/legenda_tangenziali.png Graphic
  file (type png)
 <use ../src/incidenti/incidenti_aci/autostrade/legenda_tangenziali.png>
 Package pdftex.def Info: ../src/incidenti/incidenti_aci/autostrade/legenda_tang
-enziali.png  used on input line 653.
+enziali.png  used on input line 691.
 (pdftex.def)             Requested size: 172.5pt x 47.75151pt.
 
-Overfull \hbox (36.72432pt too wide) in paragraph at lines 651--655
+Overfull \hbox (36.72432pt too wide) in paragraph at lines 689--693
 [][] [][]
  []
 
-[46
-
- <../src/incidenti/incidenti_aci/autostrade/tangenziali_autostrade.png> <../src
-/incidenti/incidenti_aci/autostrade/legenda_autostrade.png> <../src/incidenti/i
-ncidenti_aci/autostrade/legenda_tangenziali.png>]
-<../src/incidenti/incidenti_aci/agosto/autostrade_anno_agosto.png, id=562, 667.
+<../src/incidenti/incidenti_aci/agosto/autostrade_anno_agosto.png, id=523, 667.
 49374pt x 523.9575pt>
 File: ../src/incidenti/incidenti_aci/agosto/autostrade_anno_agosto.png Graphic 
 file (type png)
 <use ../src/incidenti/incidenti_aci/agosto/autostrade_anno_agosto.png>
 Package pdftex.def Info: ../src/incidenti/incidenti_aci/agosto/autostrade_anno_
-agosto.png  used on input line 666.
+agosto.png  used on input line 704.
 (pdftex.def)             Requested size: 345.0pt x 270.82051pt.
-<../src/incidenti/incidenti_aci/agosto/adriatica.png, id=563, 276.03125pt x 233
+[29 <../src/incidenti/incidenti_aci/comuni/corr_incidenti_feriti.png>] [30 <../
+src/incidenti/incidenti_aci/autostrade/autostrade.png>] [31 <../src/incidenti/i
+ncidenti_aci/autostrade/incidenti_bubble_chart.png>] [32 <../src/incidenti/inci
+denti_aci/autostrade/mesi_autostrade.png> <../src/incidenti/incidenti_aci/autos
+trade/milano_adriatica.png>]
+<../src/incidenti/incidenti_aci/agosto/adriatica.png, id=552, 276.03125pt x 233
 .87375pt>
 File: ../src/incidenti/incidenti_aci/agosto/adriatica.png Graphic file (type pn
 g)
 <use ../src/incidenti/incidenti_aci/agosto/adriatica.png>
 Package pdftex.def Info: ../src/incidenti/incidenti_aci/agosto/adriatica.png  u
-sed on input line 680.
+sed on input line 718.
 (pdftex.def)             Requested size: 345.0pt x 292.34143pt.
- [47
-
- <../src/incidenti/incidenti_aci/agosto/autostrade_anno_agosto.png>] [48 <../sr
-c/incidenti/incidenti_aci/agosto/adriatica.png>]
-<../src/incidenti/incidenti_aci/agosto/autostrade.png, id=577, 995.72pt x 851.1
+<../src/incidenti/incidenti_aci/agosto/autostrade.png, id=553, 995.72pt x 851.1
 8pt>
 File: ../src/incidenti/incidenti_aci/agosto/autostrade.png Graphic file (type p
 ng)
 <use ../src/incidenti/incidenti_aci/agosto/autostrade.png>
 Package pdftex.def Info: ../src/incidenti/incidenti_aci/agosto/autostrade.png  
-used on input line 692.
+used on input line 730.
 (pdftex.def)             Requested size: 345.0pt x 294.91724pt.
- [49
-
- <../src/incidenti/incidenti_aci/agosto/autostrade.png>]
+ [33 <../src/incidenti/incidenti_aci/autostrade/tangenziali_autostrade.png> <..
+/src/incidenti/incidenti_aci/autostrade/legenda_autostrade.png> <../src/inciden
+ti/incidenti_aci/autostrade/legenda_tangenziali.png>] [34 <../src/incidenti/inc
+identi_aci/agosto/autostrade_anno_agosto.png>]
+[35 <../src/incidenti/incidenti_aci/agosto/adriatica.png>] [36 <../src/incident
+i/incidenti_aci/agosto/autostrade.png>]
 Capitolo 4.
-No file Tesi.bbl.
-[50
-
+(./Tesi.bbl [37
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 716.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 716.
+
+LaTeX Warning: Empty `thebibliography' environment on input line 3.
+
+) [38
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 754.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 754.
  (./Tesi.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 716.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 716.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 754.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 754.
 Package rerunfilecheck Info: File `Tesi.out' has not changed.
-(rerunfilecheck)             Checksum: 13903CE54BB0294BA13CBF84AD51EA6E;3709.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
+(rerunfilecheck)             Checksum: 3CBC4E8ACF8A4D029D1E959B32B9AB49;4227.
  ) 
 Here is how much of TeX's memory you used:
- 17693 strings out of 480608
- 348017 string characters out of 5903629
- 593969 words of memory out of 5000000
- 33050 multiletter control sequences out of 15000+600000
- 535068 words of font info for 33 fonts, out of 8000000 for 9000
+ 17742 strings out of 480608
+ 349138 string characters out of 5903629
+ 598309 words of memory out of 5000000
+ 33095 multiletter control sequences out of 15000+600000
+ 535414 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,9n,83p,794b,961s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
 /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Tesi.pdf (51 pages, 32119087 bytes).
+sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
+r/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on Tesi.pdf (39 pages, 32128414 bytes).
 PDF statistics:
- 640 PDF objects out of 1000 (max. 8388607)
- 481 compressed objects within 5 object streams
- 136 named destinations out of 1000 (max. 500000)
- 650 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 645 PDF objects out of 1000 (max. 8388607)
+ 497 compressed objects within 5 object streams
+ 135 named destinations out of 1000 (max. 500000)
+ 698 words of extra memory for PDF output out of 10000 (max. 10000000)
 
