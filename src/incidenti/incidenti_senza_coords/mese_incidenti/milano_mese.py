@@ -16,9 +16,7 @@ media = milano_mese.mean()
 
 plt.xlabel("Mese")
 plt.ylabel("Incidenti al mese (2010)")
-
-plt.plot([-1, 100], [media, media], color='#e85929', label='Media')
+plt.plot([-1, 100], [media, media], color='#c0d147', label='Media')
 plt.text(11.7,media - 0.1,'Media')
-
-milano_mese.plot.bar(width=0.8, color='#e8b829')
+milano_mese.plot.bar(width=0.8, color='#5747d1')
 plt.show()
