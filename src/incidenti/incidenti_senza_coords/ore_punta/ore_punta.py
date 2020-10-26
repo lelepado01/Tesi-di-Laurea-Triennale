@@ -78,7 +78,9 @@ uniti = pd.DataFrame([
 # Si nota differenza anche alle 7, anche se su taglia di campione molto piccola...
 
 ora_week = data[data['giorno_settimana'] < 6]
-ora_weekend = data[data['giorno_settimana'] > 5]#['ora'].value_counts().sort_index()
+ora_weekend = data[data['giorno_settimana'] > 5]
+ora_week = ora_week[ora_week['ora'] != 25]
+ora_weekend = ora_weekend[ora_weekend['ora'] != 25]
 
 ora_week = ora_week[ora_week['provincia'] == 15]['ora'].value_counts().sort_index()
 ora_weekend = ora_weekend[ora_weekend['provincia'] == 15]['ora'].value_counts().sort_index()
@@ -89,4 +91,5 @@ uniti = pd.DataFrame([
 ], index=['week', 'weekend']).transpose()
 
 uniti.plot()
+plt.fill_betweenx(uniti['weekend'], uniti['weekend'].index, color='orange')
 plt.show()
