@@ -81,6 +81,7 @@ aosta_2010 = data[data['provincia'] == 7]['mese'].value_counts().sort_index()
 
 # Controllo la  tendenza per tutti gli anni che ho disponibili (AOSTA)
 
+incidenti_2010 = pd.read_csv("dataset/incidenti/incidenti_2010.txt", sep="\t")
 incidenti_2011 = pd.read_csv("dataset/incidenti/incidenti_2011.txt", sep="\t")
 incidenti_2012 = pd.read_csv("dataset/incidenti/incidenti_2012.txt", sep="\t")
 incidenti_2013 = pd.read_csv("dataset/incidenti/incidenti_2013.txt", sep="\t")
@@ -98,7 +99,7 @@ def get_trimestre(data : pd.Series) -> pd.Series:
     return pd.Series(res.values(), res.keys())
 
 def get_provincia(prov : int) -> pd.DataFrame: 
-    aosta_2010 = get_trimestre(data[data['provincia'] == prov]['mese'].value_counts().sort_index())
+    aosta_2010 = get_trimestre(incidenti_2010[incidenti_2010['provincia'] == prov]['mese'].value_counts().sort_index())
     aosta_2011 = get_trimestre(incidenti_2011[incidenti_2011['provincia'] == prov]['mese'].value_counts().sort_index())
     aosta_2012 = get_trimestre(incidenti_2012[incidenti_2012['provincia'] == prov]['mese'].value_counts().sort_index())
     aosta_2013 = get_trimestre(incidenti_2013[incidenti_2013['provincia'] == prov]['mese'].value_counts().sort_index())

@@ -78,7 +78,6 @@
 - Introduzione: spiego il progetto, come ho trovato i dati, cosa faccio con i dati, dove voglio arrivare
 - Cambiare nome dei sottocapitoli
 - Citare tutte le immagini
-- 3.1.1 migliora grafo
 - 3.2.2 controlla
 - 3.3.1 rapporta al traffico dell'orario
 - 3.3.3 rapporta con il traffico dell'area c
