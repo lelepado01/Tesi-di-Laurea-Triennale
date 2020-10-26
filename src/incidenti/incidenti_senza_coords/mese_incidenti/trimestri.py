@@ -33,7 +33,7 @@ def get_provincia(prov : int) -> pd.DataFrame:
 
     return pd.DataFrame([aosta_2010, aosta_2011, aosta_2012, aosta_2013, aosta_2015, aosta_2016, aosta_2018], ['2010', '2011', '2012', '2013', '2015', '2016', '2018']).transpose()
 
-provs = get_provincia(99)
+provs = get_provincia(7)
 
 index = 0
 for giorni in giorni_al_trimestre: 
@@ -44,6 +44,6 @@ provs.plot(linewidth=1)
 plt.xticks([1,2,3,4])
 plt.legend(bbox_to_anchor=(1,1), loc="upper left")
 plt.xlabel("Trimestre")
-plt.ylabel("Incidenti al giorno a Rimini")
+plt.ylabel("Incidenti al giorno in Valle d'Aosta")
 plt.tight_layout()
 plt.show()
