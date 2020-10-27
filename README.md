@@ -85,6 +85,8 @@
 - 3.4.4 cambia grafo a matrice
 - 3.4.5 cambia in aspetti salienti, controlla con la popolazione
 - Grafi migliori
+- Trascrivi dati in milano_mesi
+- Trascrivi dati in milano_rimini
 
 ### Risultati da Trascrivere in Tesi: 
 

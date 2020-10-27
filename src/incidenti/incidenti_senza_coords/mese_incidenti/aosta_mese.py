@@ -14,9 +14,53 @@ for giorni_in_mese in [31, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]:
 
 media = aosta_mese.mean()
 
-plt.xlabel("Mese")
-plt.ylabel("Incidenti al giorno (2010)")
-plt.plot([-1, 100], [media, media], color='#c0d147', label='Media')
-plt.text(10.7,media-0.01,'Media')
-aosta_mese.plot.bar(width=0.8, color='#5747d1')
-plt.show()
+# plt.xlabel("Mese")
+# plt.ylabel("Incidenti al giorno (2010)")
+# plt.plot([-1, 100], [media, media], color='#c0d147', label='Media')
+# plt.text(10.7,media-0.01,'Media')
+# aosta_mese.plot.bar(width=0.8, color='#5747d1')
+# plt.show()
+
+
+# TODO; scrivi in tesi
+# Calcolo perc di incremento
+
+def variazione_perc(x : float, y : float) -> float: 
+    return (y / x) * 100 -100
+
+path = "dataset/incidenti/incidenti_"
+for year in range(2010, 2014):
+    dati = pd.read_csv(path + str(year) + ".txt", sep='\t')
+    aosta_mese = dati[dati['provincia'] == 7]['mese'].value_counts().sort_index()
+
+    ls = []
+    if year == 2010: 
+        ls = [31, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    else: 
+        ls = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    
+    index = 0
+    for giorni_in_mese in ls:
+        aosta_mese.iloc[index] /= giorni_in_mese
+        index += 1
+
+    media = aosta_mese.mean()
+    agosto = aosta_mese.iloc[0]
+
+    print(str(year) + ": " + str(variazione_perc(media, agosto)))
+
+# Per aosta sembra che il campione di incidenti non sia abbastanza grande 
+# (Agosto)
+# 2010: -2.931966979789351
+# 2011: 124.00301687564817
+# 2012: 52.25170795185204
+# 2013: -15.211783618079167
+
+# Per Gennaio?
+# 2010: 78.47993168232281
+# 2011: -32.12029791647025
+# 2012: -41.44165078774922
+# 2013: -24.632696549403704
+
+# Direi che il comportamento non  è consistente 
+# (anche se a gennaio scende sempre, 2010 è outlier)
