@@ -28,7 +28,6 @@ rimini_media = rimini_mese.mean()
 #plt.tight_layout()
 #plt.show()
 
-# TODO; scrivi in tesi
 # Calcolo perc di incremento
 
 def variazione_perc(x : float, y : float) -> float: 

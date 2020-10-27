@@ -21,7 +21,6 @@ media = milano_mese.mean()
 #milano_mese.plot.bar(width=0.8, color='#5747d1')
 #plt.show()
 
-# TODO: riporta nella tesi
 # Quanto scendono gli incidenti in Agosto (Numericamente) 
 # Lo faccio per ogni anno
 

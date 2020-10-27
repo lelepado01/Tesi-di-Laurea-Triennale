@@ -83,10 +83,8 @@
 - 3.3.3 rapporta con il traffico dell'area c
 - 3.13  cambia grafo a plot + analisi di incrementi/decrementi
 - 3.4.4 cambia grafo a matrice
-- 3.4.5 cambia in aspetti salienti, controlla con la popolazione
+- 3.4.5 controlla con la popolazione
 - Grafi migliori
-- Trascrivi dati in milano_mesi
-- Trascrivi dati in milano_rimini
 
 ### Risultati da Trascrivere in Tesi: 
 

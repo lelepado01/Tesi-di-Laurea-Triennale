@@ -22,7 +22,6 @@ media = aosta_mese.mean()
 # plt.show()
 
 
-# TODO; scrivi in tesi
 # Calcolo perc di incremento
 
 def variazione_perc(x : float, y : float) -> float: 
