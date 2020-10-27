@@ -51,16 +51,16 @@ for year in range(2010, 2014):
 
 # Per aosta sembra che il campione di incidenti non sia abbastanza grande 
 # (Agosto)
-# 2010: -2.931966979789351
-# 2011: 124.00301687564817
-# 2012: 52.25170795185204
-# 2013: -15.211783618079167
+# 2010: -2.93 
+# 2011: 124.0 
+# 2012: 52.25 
+# 2013: -15.21
 
 # Per Gennaio?
-# 2010: 78.47993168232281
-# 2011: -32.12029791647025
-# 2012: -41.44165078774922
-# 2013: -24.632696549403704
+# 2010: 78.48 
+# 2011: -32.12
+# 2012: -41.44
+# 2013: -24.63
 
 # Direi che il comportamento non  è consistente 
 # (anche se a gennaio scende sempre, 2010 è outlier)
