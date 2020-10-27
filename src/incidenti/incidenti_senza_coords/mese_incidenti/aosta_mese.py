@@ -15,7 +15,7 @@ for giorni_in_mese in [31, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]:
 media = aosta_mese.mean()
 
 plt.xlabel("Mese")
-plt.ylabel("Incidenti al mese (2010)")
+plt.ylabel("Incidenti al giorno (2010)")
 plt.plot([-1, 100], [media, media], color='#c0d147', label='Media')
 plt.text(10.7,media-0.01,'Media')
 aosta_mese.plot.bar(width=0.8, color='#5747d1')

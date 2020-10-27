@@ -18,7 +18,7 @@ milano_media = milano_mese.mean()
 rimini_media = rimini_mese.mean()
 
 plt.xlabel("Mese")
-plt.ylabel("Incidenti al mese (2010)")
+plt.ylabel("Incidenti al giorno (2010)")
 plt.plot([-1, 15], [milano_media, milano_media], color='#c0d147', label='Media Milano')
 plt.plot([-1, 15], [rimini_media, rimini_media], color='#c0d147', label='Media Rimini')
 plt.text(11.7,milano_media - 0.1,'Media Milano')
