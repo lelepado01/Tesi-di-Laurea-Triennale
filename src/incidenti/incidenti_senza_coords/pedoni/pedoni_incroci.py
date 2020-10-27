@@ -42,4 +42,5 @@ incidenti_labels = label_utils.join_labels(incidenti_pedoni['tipo_incrocio'], 'd
 incidenti_pedoni = pd.DataFrame([incidenti_labels, incidenti_pedoni['pedoni_feriti']], ['tipo_incrocio', 'pedoni_feriti']).transpose()
 print(pd.crosstab(incidenti_pedoni['tipo_incrocio'], incidenti_pedoni['pedoni_feriti']))
 
-# TODO: mettere in grafo o in tabella
+#pd.crosstab(incidenti_pedoni['tipo_incrocio'], incidenti_pedoni['pedoni_feriti']).plot()
+#plt.show()
