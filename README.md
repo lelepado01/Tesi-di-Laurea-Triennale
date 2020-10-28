@@ -81,7 +81,6 @@
 - 3.2.2 controlla
 - 3.3.1 rapporta al traffico dell'orario
 - 3.3.3 rapporta con il traffico dell'area c
-- 3.4.4 cambia grafo a matrice
 - 3.4.5 controlla con la popolazione
 - Grafi migliori
 
