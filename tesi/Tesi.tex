@@ -391,11 +391,11 @@ percentuale di incidenti in cui è presente solo il conducente rimane molto simi
 \section{Dati Istat su orari e mesi}
 
 %\clearpage
-\subsection{Quanto influiscono le ore di punta sull'incidentalit\'a?}
+\subsection{Correlazione tra incidentalità e orario}
 
 Per prima cosa, con un semplice conto degli incidenti durante il weekend 
 e confrontandolo con il numero di quelli avvenuti durante la 
-settimana lavorativa, si osserva che nel weekend avvengon più incidenti 
+settimana lavorativa, si osserva che nel weekend avvengono più incidenti 
 durante la sera e la notte, mentre durante la settimana in giornata.
 
 \begin{figure}
@@ -404,10 +404,13 @@ durante la sera e la notte, mentre durante la settimana in giornata.
     \label{fig:week_weekend}
 \end{figure}
 
-Per quanto riguarda gli orari di punta, 
-sono state prese in considerazione due fasce orarie, la prima, 
-mattutina dalle 7:00 alle 10:00, e la seconda pomeridiana, 
-dalle 17:00 alle 19:00
+Per quanto riguarda gli orari di punta, sono state prese in considerazione due fasce orarie, la prima, 
+mattutina dalle 7:00 alle 10:00, e la seconda pomeridiana, dalle 17:00 alle 19:00.
+L'incremento durante la fascia oraria pomeridiana è subito osservabile; più precisamente si 
+ha un incremento del 117.1\% di incidenti rispetto alla media durante la settimana lavorativa. 
+Durante il weekend invece, si osserva comunque un'incremento, ma solamente del 83\%.
+
+\todo{Tabella con tutti gli orari di punta}
 
 % Tolti perchè ripetevano dati già visti
 %\begin{figure}
@@ -432,10 +435,15 @@ avvengono molti più sinistri, mentre nella fascia mattutina,
 il numero non sembra variare molto dalla media di incidenti durante il giorno.
 
 %\clearpage
-\subsection{è possibile accentuare le ore di punta mattutine?}
+\subsection{Correlazione di incidentalità con orari della mattina}
 
 Se si selezionano solo gli incidenti nella provincia di Milano, è possibile individuare 
-il secondo picco di incidenti, quello durante le ore di punta mattutine
+il secondo picco di incidenti, quello durante le ore di punta mattutine.
+In particolare si ha un incremento del 102\% alle 8:00 rispetto alla media, nelle 
+giornate lavorative;
+d'altro canto, durante il weekend, il numero di incidenti cala del 10\% rispetto alla media.
+
+\todo{Tabella con percentuali}
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/ore_punta/week_weekend_milano.png}
@@ -446,7 +454,7 @@ il secondo picco di incidenti, quello durante le ore di punta mattutine
 %...
 
 %\clearpage
-\subsection{Si ha la stessa tendenza di notte?}
+\subsection{Correlazione tra incidentalità e orari notturni}
 
 \todo{reference a immagine fig:week\_weekend}
 Come individuato dal primo grafo in \textit{week\_weekend}, durante le 
