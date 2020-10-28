@@ -88,8 +88,18 @@ for year in range(2010, 2019):
 
     df = df.append(pd.DataFrame([year, len(data), l], index=['anno', 'numero', 'sample_size']).transpose(), ignore_index=True)
 
-print(df)
+i = [*range(2010, 2019)]
+i.remove(2017)
+df.index = i
 
-df['numero'].plot()
-df['sample_size'].plot()
+#print(df)
+
+df['numero'].plot(label='Incidenti con solo conducente', color='#4bccc9')
+df['sample_size'].plot(label='Taglia del campione', color='#4b8dcc')
+plt.fill_between(df['sample_size'].index, df['sample_size'], color='#4b8dcc')
+plt.fill_between(df['numero'].index, df['numero'], color='#4bccc9')
+plt.xlabel("Anno")
+plt.ylabel("Numero di Incidenti")
+plt.legend(bbox_to_anchor=(1,1), loc="upper left")
+plt.tight_layout()
 plt.show()
