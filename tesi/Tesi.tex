@@ -98,6 +98,7 @@ indicano anche il nome della rispettiva via.
 \subsection{Dati riguardanti autovelox}
 Un primo dataset individuato, che riguardasse delle posizioni degli autovelox fissi, 
 è stato una mappa GoogleMyMaps
+% non riesco a compilare se metto questo link
 %\footnote{\url{https://www.google.com/maps/d/viewer?mid=1CBgMTvIDnbGo22-Y1f3rVcbeX4C0v_w1&ll=45.365557951599605%2C10.03650113755961&z=8}} 
 creata da un utente anonimo, dunque senza un modo di provare l'autenticità dei dati.
 
@@ -170,17 +171,15 @@ la maggior parte delle linee dei tram a Milano sono pavimentate in pavè, è pos
 \section{Incidenti}
 
 Controllando i dati trovati, in particolare come questi siano distributi, 
-si nota subito che gli incidenti a Milano sono per buona parte uniformemente sparsi in tutta la città, 
+si nota subito dalla mappa \ref{fig:geo-incidenti} che gli incidenti a Milano sono per buona parte uniformemente sparsi in tutta la città, 
 con più alta concentrazione in alcuni punti di interesse, come Piazzale Loreto, Zona Navigli 
 e Monumentale, e Corso Ventidue Marzo.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/geo_incidenti.png}
     \caption{Distribuzione di incidenti a Milano}
-    \label{fig:geo_incidenti}
+    \label{fig:geo-incidenti}
 \end{figure}
-%\ref{fig:geo_incidenti}
-
 
 %...
 
@@ -191,27 +190,27 @@ e Monumentale, e Corso Ventidue Marzo.
 Il dataset dei tragitti dei trasporti pubblici copre molta più superficie rispetto a 
 quello degli incidenti.
 Dopo aver eliminato alcune linee di autobus che risultavano troppo in periferia, 
-si nota comunque che i trasporti pubblici coprono la maggior parte di Milano.
+si ottiene la figura \ref{fig:geo-trasporti}: 
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/atm/mappa_2.png}
     \caption{Linee Autobus e Tram a Milano}
-    \label{fig:geo_trasporti}
+    \label{fig:geo-trasporti}
 \end{figure}
-%\ref{fig:geo_trasporti}
 
-
+Nonstante la rimozione di parte dei tragitti, i trasporti pubblici coprono 
+la maggior parte della città.
 Se a questi ultimi vengono sovrapposti i dati sugli incidenti, 
-si pu\'o notare che la maggior parte dei luoghi con alta concentrazione di incidenti sono 
+si può notare che la maggior parte dei luoghi con alta concentrazione di incidenti sono 
 attraversati da linee di autobus. Nel caso di Corso Ventidue Marzo, si ha anche una linea di tram.
 
 
 %...
 
 
-Dalla sovrapposizione delle mappe, si pu\'o notare anche che, alcune strade con alta incidentalità 
-sono parallele a linee di autobus. Un esempio è quello di zona Navigli, 
-dove le vie interessate sono:
+Dalla sovrapposizione delle mappe, si può notare anche che, alcune strade con alta incidentalità 
+sono parallele a linee di autobus. 
+Un esempio è quello di zona Navigli, in figura \ref{fig:navigli}, dove le vie interessate sono:
 Viale Gian Galeazzo e Viale Beatrice D'Este, parallele a Viale Col di Lana e Viale Bligny.
 La stessa cosa si pu\'o notare su Viale Gabriele D'Annunzio e Viale Gorizia e Coni Zugna.
 
@@ -220,19 +219,15 @@ La stessa cosa si pu\'o notare su Viale Gabriele D'Annunzio e Viale Gorizia e Co
     \caption{Linee Autobus e Tram a Milano}
     \label{fig:navigli}
 \end{figure}
-%\ref{fig:navigli}
 
-
-Anche vicino a corso Ventidue Marzo si pu\'o notare lo stesso fenomeno, 
-tra Viale Bianca Maria e Viale Premuda.
+Anche vicino a corso Ventidue Marzo, nella mappa \ref{fig:22-marzo} si può 
+notare lo stesso fenomeno, tra Viale Bianca Maria e Viale Premuda.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/atm/22_marzo.png}
     \caption{Linee Autobus e Tram a Milano}
-    \label{fig:22_marzo}
+    \label{fig:22-marzo}
 \end{figure}
-%\ref{fig:22_marzo}
-
 
 %...
 
@@ -240,16 +235,17 @@ tra Viale Bianca Maria e Viale Premuda.
 \subsection{Correlazione tra pavè e incidentalità}
 
 Spesso le linee di tram coincidono con strade in pavè
+\todo{lelepado: Aggiungere mappa con linee tram}
 %...
 Servirebbe una mappa delle strade in pavè a Milano..
 
+%\ref{fig:pave-milano}
 \begin{figure}
     \includegraphics[width=\linewidth]{../dataset/pave/Cartina_Milano_Strade_Pavimentazione_Pavé_2.jpg}
     \caption{Cartina con strade in pavè a Milano}
-    \label{fig:pave_milano}
+    \label{fig:pave-milano}
 \end{figure}
 
-%\ref{fig:pave_milano}
 
 %\clearpage
 \section{Incidenti e Piste  Ciclabili}
@@ -265,14 +261,13 @@ Alcuni dati sull'installazione di autovelox esistono per l'anno 2014, tuttavia i
 riguardo agli incidenti sono solo riguardanti l'anno 2016, in quanto Istat non ha rilasciato 
 le posizioni degli incidenti in altre annate.
 
-Gli autovelox installati nel 2014, presenti nel dataset, sono rappresentati nella seguente mappa.
+Gli autovelox installati nel 2014, presenti nel dataset, 
+sono rappresentati nella mappa \ref{fig:autovelox-2014}.
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/autovelox/autovelox_2014.png}
     \caption{Autovelox installati nel 2014}
-    \label{fig:autovelox_2014}
+    \label{fig:autovelox-2014}
 \end{figure}
-
-%\ref{fig:autovelox_2014}
 
 \'E comunque possibile sovrapporre i dataset, per vedere se gli autovelox hanno un qualche tipo di 
 effetto sugli incidenti.
@@ -283,7 +278,7 @@ effetto sugli incidenti.
     \label{fig:autovelox}
 \end{figure}
 
-%\ref{fig:autovelox}
+Nella mappa \ref{fig:autovelox}\dots
 
 %...
 
@@ -313,11 +308,10 @@ nell'incidente, oltre al tipo di veicoli.
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/tipo_veicoli/differenza_strade.png}
     \caption{Incidenti per tipo di veicolo nel 2010}
-    \label{fig:differenza_strade}
+    \label{fig:differenza-strade}
 \end{figure}
 
-%\ref{fig:differenza_strade}
-
+Dal grafo \ref{fig:differenza-strade}
 è possibile notare che, nonostante le auto private siano di gran lunga il tipo di veicolo 
 più coinvolto in incidenti, nelle autostrade non sono presenti incidenti con velocipedi, 
 anche il numero di incidenti con motocicli è ridotto, mentre cresce molto nelle strade urbane.
@@ -332,17 +326,16 @@ anche il numero di incidenti con motocicli è ridotto, mentre cresce molto nelle
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/tipo_veicoli/uomo-donna.png}
     \caption{Sesso del conducente per tipo di veicolo nel 2010}
-    \label{fig:differenza_uomo_donna}
+    \label{fig:differenza-uomo-donna}
 \end{figure}
 
-%\ref{fig:differenza_uomo_donna}
-
+Il grafo \ref{fig:differenza-uomo-donna} mostra che non c'è molta differenza tra i vari tipi di 
+strada, per quanto riguarda il sesso del coducente.\\
 Il numero di incidenti per genere è tende ad essere 75\% circa uomini e 25\% donne.
 Nelle strade  urbane, la percentuale di incidenti con conducente donna aumenta leggermente nel 2010, 
 questo vale per tutti gli anni?
 
-\todo{lelepado: stima della percentuale di conducenti maschi/femmine}
-
+\todo{lelepado: stima un campione della percentuale di conducenti maschi/femmine}
 
 %\clearpage
 \subsection{L'età del conducente dipende dalla strada?}
@@ -350,11 +343,13 @@ questo vale per tutti gli anni?
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/tipo_veicoli/differenza_eta.png}
     \caption{Fascia di età del conducente per tipo di veicolo nel 2010}
-    \label{fig:differenza_eta}
+    \label{fig:differenza-eta}
 \end{figure}
 
-\todo{lelepado: Aggiustare per popolazione standard}
+Il grafo \ref{fig:differenza-eta} indica che non c'è molta differenza di età del conducente, 
+al cambiare del tipo di strada.
 
+\todo{lelepado: Aggiustare per popolazione standard}
 
 Risultati non troppo interessanti\dots
 
@@ -366,10 +361,11 @@ Risultati non troppo interessanti\dots
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/tipo_veicoli/passeggeri.png}
     \caption{Numero di passeggeri in incidenti per Milano e Rimini}
-    \label{fig:passeggeri_milano_rimini}
+    \label{fig:passeggeri-milano-rimini}
 \end{figure}
 
-La maggior parte degli incidenti sembra avvenire quando in macchina è presente solo il conducente.
+La figura \ref{fig:passeggeri-milano-rimini} mostra che la maggior parte degli incidenti 
+sembra avvenire quando in macchina è presente solo il conducente.
 Si sono prese in considerazione le provincie di Milano e Rimini, per controllare se la località 
 marittima influisse sul numero di incidenti, ma sembra che quest'ultima abbia una percentuale 
 ancora più alta di incidenti in cui è presente solo il conducente, rispetto a Milano.
@@ -388,11 +384,9 @@ in cui l'uso del cellulare in macchina ancora non era frequente, rispetto agli a
     \label{fig:incremento-incidenti}
 \end{figure}
 
-...
 \todo{atrent: esempio di spiegazione figura}
 in figura \ref{fig:incremento-incidenti} si vede come li numero di incidenti è aumentato, ma la percentuale di quelli con singolo conducente è diminuita...
 ...
-
 
 Curiosamente, nel grafo è presente un'ampia curva, a indicare un'aumento di incidenti 
 a partire dal 2014. Tuttavia dopo il 2015 il numero di incidenti tende a diminuire, il che 
@@ -416,12 +410,13 @@ durante la sera e la notte, mentre durante la settimana in giornata.
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/ore_punta/week_weekend.png}
     \caption{Incidenti per ora}
-    \label{fig:week_weekend}
+    \label{fig:week-weekend}
 \end{figure}
 
 Per quanto riguarda gli orari di punta, sono state prese in considerazione due fasce orarie, la prima, 
 mattutina dalle 7:00 alle 10:00, e la seconda pomeridiana, dalle 17:00 alle 19:00.
-L'incremento durante la fascia oraria pomeridiana è subito osservabile; più precisamente si 
+L'incremento durante la fascia oraria pomeridiana è subito osservabile nella figura 
+\ref{fig:week-weekend}; più precisamente si 
 ha un incremento del 117.1\% di incidenti rispetto alla media durante la settimana lavorativa. 
 Durante il weekend invece, si osserva comunque un'incremento, ma solamente del 83\%.
 
@@ -440,7 +435,6 @@ Durante il weekend invece, si osserva comunque un'incremento, ma solamente del 8
 %    \label{fig:punta_sera}
 %\end{figure}
 
-
 Va sottolineato che i grafi indicano gli incidenti normalizzati per numero di 
 giorni, 
 quindi gli incidenti totali della settimana sono divisi per cinque giorni, 
@@ -452,10 +446,10 @@ il numero non sembra variare molto dalla media di incidenti durante il giorno.
 %\clearpage
 \subsection{Correlazione tra incidentalità e orari della mattina}
 
-Se si selezionano solo gli incidenti nella provincia di Milano, è possibile individuare 
+Se si selezionano solo gli incidenti nella provincia di Milano, mostrati nel grafo 
+\ref{fig:week-weekend-milano}, è possibile individuare 
 il secondo picco di incidenti, quello durante le ore di punta mattutine.
-In particolare si ha un incremento del 102\% alle 8:00 rispetto alla media, nelle 
-giornate lavorative;
+In particolare si ha un incremento del 102\% alle 8:00 rispetto alla media, nelle giornate lavorative;
 d'altro canto, durante il weekend, il numero di incidenti cala del 10\% rispetto alla media.
 
 \todo{Tabella con percentuali}
@@ -463,7 +457,7 @@ d'altro canto, durante il weekend, il numero di incidenti cala del 10\% rispetto
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/ore_punta/week_weekend_milano.png}
     \caption{Incidenti per ora a Milano}
-    \label{fig:week_weekend_milano}
+    \label{fig:week-weekend-milano}
 \end{figure}
 
 %...
@@ -471,14 +465,14 @@ d'altro canto, durante il weekend, il numero di incidenti cala del 10\% rispetto
 %\clearpage
 \subsection{Correlazione tra incidentalità e orari notturni}
 
-\todo{reference a immagine fig:week\_weekend}
-Come individuato dal primo grafo in \textit{week\_weekend}, durante le 
+Come individuato dal primo grafo \ref{week-weekend}, durante le 
 ore notturne si ha la tendenza opposta.
+Nella figura \ref{fig:ore-notte}, \dots
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/ore_punta/ore_notte.png}
     \caption{Incidenti durante ore serali o notturne}
-    \label{fig:ore_notte}
+    \label{fig:ore-notte}
 \end{figure}
 
 %...
@@ -489,10 +483,11 @@ ore notturne si ha la tendenza opposta.
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/milano_mese.png}
     \caption{Incidenti per mese in Milano}
-    \label{fig:milano_mese}
+    \label{fig:milano-mese}
 \end{figure}
 
-Si nota un chiaro calo di incidenti nel mese di Agosto in provincia di Milano.
+Nel grafo \ref{fig:milano-mese} si nota un chiaro calo di incidenti 
+nel mese di Agosto in provincia di Milano.
 \'E possibile controllare il decremento del numero di incidenti, anche per gli altri anni, 
 in cui sono disponibili dati.
 
@@ -512,11 +507,13 @@ in cui sono disponibili dati.
 
 Per quanto riguarda gli anni successivi, il dataset non dispone più di un campo che indichi il mese 
 dell'incidente, ma è disponibile soltanto il trimestre.
+La figura \ref{fig:milano-trimestri} mostra la quantità di incidenti per trimestre per ogni 
+anno a partire dal 2010 fino al 2018.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/trimestri.png}
     \caption{Incidenti a Milano per trimestre}
-    \label{fig:milano_trimestri}
+    \label{fig:milano-trimestri}
 \end{figure}
 
 Per quanto possano esserci molti fattori che contribuiscono a questa tendenza, 
@@ -528,11 +525,11 @@ quello che influisce di più devono essere le partenze per le vacanze.
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/milano_rimini.png}
     \caption{Incidenti per mese in Milano e Rimini}
-    \label{fig:milano_rimini}
+    \label{fig:milano-rimini}
 \end{figure}
 
 L'unica località in cui si è riscontrata la tendenza inversa è in provincia 
-di Rimini.
+di Rimini, raffigurata nel grafo \ref{fig:milano-rimini}.
 
 \todo{Aggiungere altre località}
 
@@ -550,8 +547,8 @@ di Rimini.
     \end{tabular}
 \end{center}
 
-Tuttavia, osservando il grafo equivalente della Valle d'Aosta, è possibile notare 
-un notevole incremento di incidenti sia in Gennaio che in Agosto, possibili 
+Tuttavia, osservando il grafo equivalente della Valle d'Aosta, in figura \ref{fig:aosta}, 
+è possibile notare un notevole incremento di incidenti sia in Gennaio che in Agosto, possibili 
 conseguenze, rispettivamente, dell'inizio della stagione sciistica ed estiva.
 
 \begin{figure}
@@ -576,7 +573,8 @@ Questa tendenza avviene ogni anno?
     \end{tabular}
 \end{center}
 
-Il comportamento degli incidenti in Valle d'Aosta è molto inconsistente, soprattutto in Agosto.
+Il comportamento degli incidenti in Valle d'Aosta, mostrato in figura \ref{fig:aosta-trimestre} 
+è molto inconsistente, soprattutto in Agosto.
 Va specificato che la taglia del campione con cui si sta lavorando, per questa provincia, 
 è molto piccolo, e sicuramente influisce sulle percentuali di incremento e decremento 
 degli incidenti.\\
@@ -587,28 +585,30 @@ questo mese è sempre in decremento, in modo molto consistente, rispetto alla me
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/aosta_timestre.png}
     \caption{Incidenti per trimestre in Valle d'Aosta}
-    \label{fig:aosta_trimestre}
+    \label{fig:aosta-trimestre}
 \end{figure}
 
-La prima cosa che è possibile notare, è che il picco di Gennaio del 2010 è 
+La prima cosa che è possibile notare nel grafo, è che il picco di Gennaio del 2010 è 
 in linea con la tendenza del trimestre invernale. 
 Tuttavia, si osserva anche che dall'anno 2015 c'è un ampio gap nel numero di 
 incidenti. 
-è un cambio di metro di misurazione? 
+\'E un cambio di metro di misurazione? 
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/milano_trimestre.png}
     \caption{Incidenti per trimestre a Milano}
-    \label{fig:milano_trimestre}
+    \label{fig:milano-trimestre}
 \end{figure}
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/rimini_trimestre.png}
     \caption{Incidenti per trimestre a Rimini}
-    \label{fig:rimini_trimestre}
+    \label{fig:rimini-trimestre}
 \end{figure}
 
-I grafi equivalenti di Milano e Rimini mostrano la stessa tendenza di incremento del numero 
+I grafi equivalenti di Milano e Rimini, nelle figure 
+\ref{fig:milano-trimestre} e \ref{fig:rimini-trimestre} rispettivamente, 
+mostrano la stessa tendenza di incremento del numero 
 di incidenti, ma a Milano, in particolare, il gap sembra essersi 'creato' nel 2013.
 
 %...
@@ -622,9 +622,10 @@ di incidenti, ma a Milano, in particolare, il gap sembra essersi 'creato' nel 20
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/localizzazione_incidente/tipo_incidente.png}
     \caption{Tipologia di incidente}
-    \label{fig:tipo_incidente}
+    \label{fig:tipo-incidente}
 \end{figure}
 
+Nella figura \ref{fig:tipo-incidente}\dots
 Sono molto frequenti scontri frontali, laterali e tamponamenti.
 
 %\clearpage
@@ -633,10 +634,11 @@ Sono molto frequenti scontri frontali, laterali e tamponamenti.
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/localizzazione_incidente/intersezioni.png}
     \caption{Tipologia di intersezioni}
-    \label{fig:tipo_intersezioni}
+    \label{fig:tipo-intersezioni}
 \end{figure}
 
-La maggior parte degli incidenti avviene nei rettilinei e negli incroci.\\
+Dal grafo \ref{fig:tipo-intersezioni}, 
+si nota che la maggior parte degli incidenti avviene nei rettilinei e negli incroci.\\
 Bisognerebbe conoscere il numero totale di rettilinei, e di incroci di ogni altro tipo, in 
 modo da mettere in relazione i dati assoluti del grafo.
 
@@ -648,21 +650,25 @@ modo da mettere in relazione i dati assoluti del grafo.
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/natura_incidente/numero_feriti.png}
     \caption{Numero di feriti in base alla natura dell'incidente}
-    \label{fig:numero_feriti}
+    \label{fig:numero-feriti}
 \end{figure}
 
-Si nota che esistono tipologie di sinistri che favoriscono la presenza di un solo ferito, 
-come gli incidenti con pedone. Al contrario, incidenti come il tamponamento e frontale, 
+Nella figura \ref{fig:numero-feriti} si nota che esistono tipologie di sinistri che 
+favoriscono la presenza di un solo ferito, come gli incidenti con pedone. 
+Al contrario, incidenti come il tamponamento e frontale, 
 hanno un'alta percentuale di situazioni con due o più feriti.
 
 
 %\clearpage
 \subsection{Incroci che favoriscono incidenti con pedoni}
 
+La figura \ref{fig:pedoni-intersezioni} mostra il numero di incidenti con pedoni coinvolti, 
+ordinati in base alla tipologia di intersezioni e al numero di persone coinvolte.
+
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/pedoni/pedoni_incroci.png}
     \caption{Tipologia di intersezioni e pedoni coinvolti}
-    \label{fig:pedoni_intersezioni}
+    \label{fig:pedoni-intersezioni}
 \end{figure}
 
 Tra i tipi di strada che favoriscono incidenti con pedoni spiccano i rettilinei, 
@@ -677,10 +683,11 @@ tratti di strada di questo tipo.
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/pedoni/eta_pedoni.png}
     \caption{Fasce di età dei pedoni coinvolti in incidenti}
-    \label{fig:eta_pedoni}
+    \label{fig:eta-pedoni}
 \end{figure}
 
-La fascia di età più colpita dagli incidenti è quella dei 65 anni, 
+Dal grafo \ref{fig:eta-pedoni} si osserva che la fascia di età più colpita dagli 
+incidenti è quella dei 65 anni, 
 va comunque detto che questo gruppo probabilmente contiene la maggior parte degli individui.
 Se si normalizza per anni contenuti in ogni fascia, ipotizzando un numero
 costante di persone di ogni età, si ottiene un grafo, per quanto riguarda i pedoni 
@@ -694,8 +701,10 @@ La normalizzazione tiene conto che la fascia di età '65 anni e oltre' vale vent
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/pedoni/sesso_morti_feriti.png}
     \caption{Pedoni coinvolti in incidenti per genere}
-    \label{fig:sesso_morti_feriti}
+    \label{fig:sesso-morti-feriti}
 \end{figure}
+
+%\ref{fig:sesso-morti-feriti}
 
 Dati non sorprendenti\dots
 
@@ -733,12 +742,11 @@ di incidenti mortali, che rendono il campione più ristretto
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/comuni/corr_incidenti_feriti.png}
     \caption{Correlazione tra numero di feriti e incidenti}
-    \label{fig:corr_incidenti_feriti}
+    \label{fig:corr-incidenti-feriti}
 \end{figure}
 
-Tracciando il grafo dei primi trenta valori del dataset ACI, 
+Tracciando il grafo \ref{fig:corr-incidenti-feriti}, dei primi trenta valori del dataset ACI, 
 è chiaramente visibile la correlazione tra numero di incidenti e numero di feriti.
-
 
 
 %\clearpage
@@ -746,11 +754,11 @@ Tracciando il grafo dei primi trenta valori del dataset ACI,
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/autostrade/autostrade.png}
     \caption{Autostrade con più incidenti nel 2018}
-    \label{fig:incidenti_autostrade}
+    \label{fig:incidenti-autostrade}
 \end{figure}
 
-Si pu\'o notare subito che le autostrade con più incidenti sono anche quelle più trafficate, come 
-l'Autostrada del Sole e l'Adriatica.
+Si pu\'o notare subito, dalla figura \ref{fig:incidenti-autostrade} che le autostrade con 
+più incidenti sono anche quelle più trafficate, come l'Autostrada del Sole e l'Adriatica.
 
 
 %...
@@ -762,9 +770,10 @@ l'Autostrada del Sole e l'Adriatica.
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/autostrade/incidenti_bubble_chart.png}
     \caption{Autostrade con più incidenti nel 2012}
-    \label{fig:bubble_incidenti_milano}
+    \label{fig:bubble-incidenti-milano}
 \end{figure}
 
+% \ref{fig:bubble-incidenti-milano}
 
 
 %...
@@ -774,10 +783,10 @@ l'Autostrada del Sole e l'Adriatica.
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/autostrade/mesi_autostrade.png}
     \caption{Incidenti per mese nel 2018}
-    \label{fig:incidenti_per_mese}
+    \label{fig:incidenti-per-mese}
 \end{figure}
 
-Le curve sono state normalizzate per bilanciare il volume di incidenti maggiori per 
+Le curve nel grafo \ref{fig:incidenti-per-mese} sono state normalizzate per bilanciare il volume di incidenti maggiori per 
 l'autostrada Adriatica.
 L'Adriatica e l'Aurelia, autostrade utilizzate molto durante i mesi caldi, hanno un picco di 
 incidenti in Luglio e Agosto, mentre l'A1, ha picco più basso in Agosto, probabilmente 
@@ -786,11 +795,12 @@ perchè bilanciato dagli incidenti in inverno intorno a Milano.
 % controllare se avvengono più incidenti in inverno intorno a milano
 Infatti se si prendono solo i dati della A1 nella provincia di Milano, si nota 
 che in Maggio e Settembre avvengono la maggior parte degli incidenti.
-Invece sull'Adriatica prevalgono incidenti in Luglio e Agosto.
+Invece sull'Adriatica, raffigurata nel grafo \ref{fig:milano-adriatica}, 
+prevalgono incidenti in Luglio e Agosto.
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/autostrade/milano_adriatica.png}
     \caption{Incidenti in provincia di Milano e sull'Adriatica}
-    \label{fig:milano_adriatica}
+    \label{fig:milano-adriatica}
 \end{figure}
 
 %...
@@ -802,18 +812,22 @@ Invece sull'Adriatica prevalgono incidenti in Luglio e Agosto.
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/autostrade/tangenziali_autostrade.png}
     \caption{Incidenti nelle principali autostrade di Milano}
-    \label{fig:tangenziali_autostrade}
+    \label{fig:tangenziali-autostrade}
 \end{figure}
 
 \begin{figure}
     \includegraphics[width=0.6\linewidth]{../src/incidenti/incidenti_aci/autostrade/legenda_autostrade.png}
-    \label{fig:legenda_autostrade}
+    \label{fig:legenda-autostrade}
     \includegraphics[width=0.5\linewidth]{../src/incidenti/incidenti_aci/autostrade/legenda_tangenziali.png}
-    \label{fig:legenda_tangenziali}
+    \label{fig:legenda-tangenziali}
 \end{figure}
 
-Il grafo conferma per alcune autostrade i picchi di incidenti per il traffico durante orari 
-di punta, in particolare è molto visibile per la Torino$-$Trieste e per la Tangenziale ovest.
+% \ref{fig:legenda-autostrade}
+% \ref{fig:legenda-tangenziali}
+
+Il grafo \ref{fig:tangenziali-autostrade} conferma per alcune autostrade i picchi di 
+incidenti per il traffico durante orari di punta, 
+in particolare è molto visibile per la Torino$-$Trieste e per la Tangenziale ovest.
 
 %...
 
@@ -830,10 +844,10 @@ che provocano il numero di incienti a cambiare di anno in anno?
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/agosto/autostrade_anno_agosto.png}
     \caption{Autostrade con più incidenti per anno, in Agosto}
-    \label{fig:autostrade_anno_agosto}
+    \label{fig:autostrade-anno-agosto}
 \end{figure}
 
-Il grafo rappresenta in quali autostrade sono avvenuti più incidenti in base al mese di Agosto
+Il grafo \ref{fig:autostrade-anno-agosto} rappresenta in quali autostrade sono avvenuti più incidenti in base al mese di Agosto
 del rispettivo anno.
 Non è sorprendente che le autostrade caratterizzate da un alto numero di bollini rossi e neri 
 siano anche le più pericolose.
@@ -841,11 +855,11 @@ In particolare spiccano la SS16 Adriatica e SS1 Aurelia, non è difficile trovar
 queste ultime infatti sono Strade Statali molto lunghe e con corsie di marcia non separate, 
 per non parlare del fatto che entrambe le strade passano attraverso un alto numero di centri abitati, 
 
-\begin{figure}
-    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/agosto/adriatica.png}
-    \caption{SS16 Adriatica vicino Foggia}
-    \label{fig:adriatica}
-\end{figure}
+% \begin{figure}
+%     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/agosto/adriatica.png}
+%     \caption{SS16 Adriatica vicino Foggia}
+%     \label{fig:adriatica}
+% \end{figure}
 
 %\clearpage
 \subsection{Le autostrade più utilizzate cambiano a seconda dell'anno?}
@@ -856,10 +870,11 @@ a seconda dell'anno, il numero di incidenti rispecchia questo cambiamento?
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/agosto/autostrade.png}
     \caption{Incidenti in Strade per anno}
-    \label{fig:autostrade_anno}
+    \label{fig:autostrade-anno}
 \end{figure}
 
-Controllando le prime cinque strade per incidentalità ogni anno, si ottiene un'immagine 
+Controllando le prime cinque strade per incidentalità ogni anno, 
+raffigurate nel grafo \ref{fig:autostrade-anno}, si ottiene un'immagine 
 abbastanza stabile, in quanto gli itinerari in testa alla classifica sono sempre gli stessi.
 Si nota, che la strada statale Adriatica è sempre in prima posizione, 
 con una media di $171.5$ incidenti nel mese di Agosto.
