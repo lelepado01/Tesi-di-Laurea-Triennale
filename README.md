@@ -60,7 +60,17 @@
 
     [Mappa con Autostrade](http://dati.mit.gov.it/catalog/dataset/grafo-stradale-anas)
 
-- Presenza di trasporto merci
+- Traffico per ora
+
+    [Scrape di google maps ogni tot](https://www.google.com/maps/@45.4696946,9.1595385,13.09z/data=!5m1!1e1)
+    : Servirebbe un modo per salvare tutti i dati per ogni ora
+
+    [Maps](https://developers.google.com/maps/documentation/javascript/trafficlayer#maps_layer_traffic-javascript)
+    : Sembra che maps non fornisca i dati sul traffico tipico, ma solo quello in tempo reale
+
+    [Azure o Here](https://stackoverflow.com/questions/50987451/get-traffic-data)
+
+    [Azure](https://stackoverflow.com/questions/58661346/how-to-get-raw-traffic-flow-data)
 
 - Posso usare direttamente il dataset sugli incidenti per: 
     - Stagione
