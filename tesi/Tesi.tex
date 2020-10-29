@@ -36,7 +36,7 @@
 \end{center}
 \vspace{12mm}
 \begin{center}
-{\huge{\bf Studio sull'incidentalit\'a stradale}}\\
+{\huge{\bf Studio sull'incidentalità stradale}}\\
 \vspace{4mm}
 {\huge{\bf tramite dataset aperti}}\\
 \end{center}
@@ -97,7 +97,8 @@ indicano anche il nome della rispettiva via.
 
 \subsection{Dati riguardanti autovelox}
 Un primo dataset individuato, che riguardasse delle posizioni degli autovelox fissi, 
-è stato una mappa GoogleMyMaps\footnote{\url{https://www.google.com/maps/d/viewer?mid=1CBgMTvIDnbGo22-Y1f3rVcbeX4C0v_w1&ll=45.365557951599605%2C10.03650113755961&z=8}} 
+è stato una mappa GoogleMyMaps
+%\footnote{\url{https://www.google.com/maps/d/viewer?mid=1CBgMTvIDnbGo22-Y1f3rVcbeX4C0v_w1&ll=45.365557951599605%2C10.03650113755961&z=8}} 
 creata da un utente anonimo, dunque senza un modo di provare l'autenticità dei dati.
 
 Il dataset utilizzato, invece, è stato ottenuto tramite OpenStreetMaps, ricavando solo gli autovelox 
@@ -108,7 +109,7 @@ specifiche per OpenStreetMaps, eseguendo la seguente query:
 \todo{lelepado: aggiungere listings per codice}
 [out:json];\\
 node({{bbox}})["highway"="speed\_camera"];\\
-out meta;
+out metà;
 
 Il dataset ricavato non permette di capire quando gli autovelox siano stati installati.
 Tuttavia il sito web ztlmilano\footnote{\url{https://www.ztlmilano.it/Autovelox-Milano}} 
@@ -154,7 +155,7 @@ riguardanti il pavè a Milano, infatti la cartina è stata realizzata tramite co
 
 Il dataset che potrebbe avvicinarsi di più ad ottenere le informazioni cercate potrebbe essere 
 quello riguardante i percorsi dei trasporti tranviari. Basandosi su queste informazioni, e assumendo che 
-la maggior parte delle linee dei tram a Milano sono pavimentate in pavè, è possibile ottenere un dataset con taglia  discreta.
+la maggior parte delle linee dei tram a Milano sono pavimentate in pavè, è possibile ottenere un dataset con taglia discreta.
 
 \'E anche possibile confrontare il dataset ottenuto con la mappa di xxxx.
 % Non molto simili...
@@ -256,7 +257,7 @@ Servirebbe una mappa delle strade in pavè a Milano..
 %\clearpage
 \section{Incidenti e Autovelox}
 
-Per sapere se gli autovelox hanno influenza sull'incidentalit\'a, 
+Per sapere se gli autovelox hanno influenza sull'incidentalità, 
 bisognerebbe innanzi tutto sapere quando sono stati posizionati i dispositivi, e solo a quel punto, 
 avendo dati su incidenti prima e dopo l'installazione, sarebbe possibile trarre conclusioni.
 
@@ -348,7 +349,7 @@ questo vale per tutti gli anni?
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/tipo_veicoli/differenza_eta.png}
-    \caption{Fascia di et\'a del conducente per tipo di veicolo nel 2010}
+    \caption{Fascia di età del conducente per tipo di veicolo nel 2010}
     \label{fig:differenza_eta}
 \end{figure}
 
@@ -369,7 +370,7 @@ Risultati non troppo interessanti\dots
 \end{figure}
 
 La maggior parte degli incidenti sembra avvenire quando in macchina è presente solo il conducente.
-Si sono prese in considerazione le provincie di Milano e Rimini, per controllare se la localit\'a 
+Si sono prese in considerazione le provincie di Milano e Rimini, per controllare se la località 
 marittima influisse sul numero di incidenti, ma sembra che quest'ultima abbia una percentuale 
 ancora più alta di incidenti in cui è presente solo il conducente, rispetto a Milano.
 
@@ -512,7 +513,11 @@ in cui sono disponibili dati.
 Per quanto riguarda gli anni successivi, il dataset non dispone più di un campo che indichi il mese 
 dell'incidente, ma è disponibile soltanto il trimestre.
 
-\todo{Aggiungo tabella per trimestre?}
+\begin{figure}
+    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/trimestri.png}
+    \caption{Incidenti a Milano per trimestre}
+    \label{fig:milano_trimestri}
+\end{figure}
 
 Per quanto possano esserci molti fattori che contribuiscono a questa tendenza, 
 quello che influisce di più devono essere le partenze per le vacanze.
@@ -526,7 +531,7 @@ quello che influisce di più devono essere le partenze per le vacanze.
     \label{fig:milano_rimini}
 \end{figure}
 
-L'unica localit\'a in cui si è riscontrata la tendenza inversa è in provincia 
+L'unica località in cui si è riscontrata la tendenza inversa è in provincia 
 di Rimini.
 
 \todo{Aggiungere altre località}
@@ -661,7 +666,7 @@ hanno un'alta percentuale di situazioni con due o più feriti.
 \end{figure}
 
 Tra i tipi di strada che favoriscono incidenti con pedoni spiccano i rettilinei, 
-probabilmente in parte per l'alta velocit\'a dei veicoli, ma anche per l'alto volume di
+probabilmente in parte per l'alta velocità dei veicoli, ma anche per l'alto volume di
 tratti di strada di questo tipo.
 
 %...
@@ -671,16 +676,16 @@ tratti di strada di questo tipo.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/pedoni/eta_pedoni.png}
-    \caption{Fasce di et\'a dei pedoni coinvolti in incidenti}
+    \caption{Fasce di età dei pedoni coinvolti in incidenti}
     \label{fig:eta_pedoni}
 \end{figure}
 
-La fascia di et\'a più colpita dagli incidenti è quella dei 65 anni, 
+La fascia di età più colpita dagli incidenti è quella dei 65 anni, 
 va comunque detto che questo gruppo probabilmente contiene la maggior parte degli individui.
 Se si normalizza per anni contenuti in ogni fascia, ipotizzando un numero
-costante di persone di ogni et\'a, si ottiene un grafo, per quanto riguarda i pedoni 
+costante di persone di ogni età, si ottiene un grafo, per quanto riguarda i pedoni 
 feriti, molto differente. \\
-La normalizzazione tiene conto che la fascia di et\'a '65 anni e oltre' vale venti anni.
+La normalizzazione tiene conto che la fascia di età '65 anni e oltre' vale venti anni.
 
 \todo{Aggiustare per popolazione standard}
 
@@ -845,7 +850,7 @@ per non parlare del fatto che entrambe le strade passano attraverso un alto nume
 %\clearpage
 \subsection{Le autostrade più utilizzate cambiano a seconda dell'anno?}
 
-Il numero di persone in vacanza nelle localit\'a del centro e sud italia cambiano 
+Il numero di persone in vacanza nelle località del centro e sud italia cambiano 
 a seconda dell'anno, il numero di incidenti rispecchia questo cambiamento?
 
 \begin{figure}
@@ -854,13 +859,13 @@ a seconda dell'anno, il numero di incidenti rispecchia questo cambiamento?
     \label{fig:autostrade_anno}
 \end{figure}
 
-Controllando le prime cinque strade per incidentalit\'a ogni anno, si ottiene un'immagine 
+Controllando le prime cinque strade per incidentalità ogni anno, si ottiene un'immagine 
 abbastanza stabile, in quanto gli itinerari in testa alla classifica sono sempre gli stessi.
 Si nota, che la strada statale Adriatica è sempre in prima posizione, 
 con una media di $171.5$ incidenti nel mese di Agosto.
 Le posizioni successive invece cambiano a seconda dell'anno, in particolare per\'o, l'autostrada 
 A4 (Torino-Trieste) ha progressivamente aumentato il numero di incidenti, evento possibilmente 
-dovuto all'aumento di popolarit\'a delle vacanze in montagna.
+dovuto all'aumento di popolarita delle vacanze in montagna.
 % Posso provarlo con dati istat a
 % https://www.istat.it/it/archivio/178695
 

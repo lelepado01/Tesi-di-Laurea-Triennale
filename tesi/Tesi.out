@@ -1,0 +1,48 @@
+\BOOKMARK [0][-]{chapter.1}{Introduzione}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Origine dei dati}{chapter.1}% 2
+\BOOKMARK [2][-]{subsection.1.1.1}{Dati riguardanti incidenti}{section.1.1}% 3
+\BOOKMARK [2][-]{subsection.1.1.2}{Dati riguardanti autovelox}{section.1.1}% 4
+\BOOKMARK [2][-]{subsection.1.1.3}{Dati riguardanti il meteo}{section.1.1}% 5
+\BOOKMARK [2][-]{subsection.1.1.4}{Dati riguardanti trasporti pubblici}{section.1.1}% 6
+\BOOKMARK [2][-]{subsection.1.1.5}{Dati riguardanti piste ciclabili}{section.1.1}% 7
+\BOOKMARK [2][-]{subsection.1.1.6}{Dati riguardanti autostrade e manto stradale}{section.1.1}% 8
+\BOOKMARK [1][-]{section.1.2}{Scopo del lavoro}{chapter.1}% 9
+\BOOKMARK [1][-]{section.1.3}{Dati mancanti}{chapter.1}% 10
+\BOOKMARK [2][-]{subsection.1.3.1}{Dati riguardanti pav\350}{section.1.3}% 11
+\BOOKMARK [2][-]{subsection.1.3.2}{Dati riguardanti traffico stradale}{section.1.3}% 12
+\BOOKMARK [0][-]{chapter.2}{Dati Geolocalizzati}{}% 13
+\BOOKMARK [1][-]{section.2.1}{Incidenti}{chapter.2}% 14
+\BOOKMARK [1][-]{section.2.2}{Incidenti e Linee dei Trasporti Pubblici}{chapter.2}% 15
+\BOOKMARK [2][-]{subsection.2.2.1}{Correlazione tra pav\350 e incidentalit\340}{section.2.2}% 16
+\BOOKMARK [1][-]{section.2.3}{Incidenti e Piste Ciclabili}{chapter.2}% 17
+\BOOKMARK [1][-]{section.2.4}{Incidenti e Autovelox}{chapter.2}% 18
+\BOOKMARK [1][-]{section.2.5}{Incidenti e Meteo}{chapter.2}% 19
+\BOOKMARK [0][-]{chapter.3}{Dati su Incidenti}{}% 20
+\BOOKMARK [1][-]{section.3.1}{Dati Istat su veicoli}{chapter.3}% 21
+\BOOKMARK [2][-]{subsection.3.1.1}{Il tipo di veicolo dipende dalla strada?}{section.3.1}% 22
+\BOOKMARK [1][-]{section.3.2}{Dati Istat su conducente}{chapter.3}% 23
+\BOOKMARK [2][-]{subsection.3.2.1}{Il sesso dei conducenti cambia in base alla strada?}{section.3.2}% 24
+\BOOKMARK [2][-]{subsection.3.2.2}{L'et\340 del conducente dipende dalla strada?}{section.3.2}% 25
+\BOOKMARK [2][-]{subsection.3.2.3}{Il numero di passeggeri influisce sull'incidentalit\340?}{section.3.2}% 26
+\BOOKMARK [2][-]{subsection.3.2.4}{L'uso del telefono cellulare ha influenzato il numero di incidenti?}{section.3.2}% 27
+\BOOKMARK [1][-]{section.3.3}{Dati Istat su orari e mesi}{chapter.3}% 28
+\BOOKMARK [2][-]{subsection.3.3.1}{Correlazione tra incidentalit\340 e orario}{section.3.3}% 29
+\BOOKMARK [2][-]{subsection.3.3.2}{Correlazione tra incidentalit\340 e orari della mattina}{section.3.3}% 30
+\BOOKMARK [2][-]{subsection.3.3.3}{Correlazione tra incidentalit\340 e orari notturni}{section.3.3}% 31
+\BOOKMARK [2][-]{subsection.3.3.4}{Quanto influiscono le vacanze estive sull'incidentalit\340?}{section.3.3}% 32
+\BOOKMARK [2][-]{subsection.3.3.5}{In localit\340 di mare gli incidenti aumentano in estate?}{section.3.3}% 33
+\BOOKMARK [1][-]{section.3.4}{Dati Istat su tipi di incidenti e incroci}{chapter.3}% 34
+\BOOKMARK [2][-]{subsection.3.4.1}{Le tipologie di incidenti pi\371 frequenti}{section.3.4}% 35
+\BOOKMARK [2][-]{subsection.3.4.2}{Gli incroci pi\371 pericolosi}{section.3.4}% 36
+\BOOKMARK [2][-]{subsection.3.4.3}{Le tipologie di incidenti che provocano pi\371 feriti}{section.3.4}% 37
+\BOOKMARK [2][-]{subsection.3.4.4}{Incroci che favoriscono incidenti con pedoni}{section.3.4}% 38
+\BOOKMARK [2][-]{subsection.3.4.5}{Aspetti salienti sui pedoni coinvolti in incidenti}{section.3.4}% 39
+\BOOKMARK [1][-]{section.3.5}{Dati ACI}{chapter.3}% 40
+\BOOKMARK [2][-]{subsection.3.5.1}{Esiste correlazione tra incidenti e feriti?}{section.3.5}% 41
+\BOOKMARK [2][-]{subsection.3.5.2}{Le autostrade pi\371 pericolose}{section.3.5}% 42
+\BOOKMARK [2][-]{subsection.3.5.3}{Le strade pericolose in provincia di Milano}{section.3.5}% 43
+\BOOKMARK [2][-]{subsection.3.5.4}{Correlazione tra mesi dell'anno e incidentalit\340}{section.3.5}% 44
+\BOOKMARK [2][-]{subsection.3.5.5}{In Quali orari avvengono incidenti sulle autostrade?}{section.3.5}% 45
+\BOOKMARK [2][-]{subsection.3.5.6}{Quali autostrade sono utilizzate di pi\371 per viaggiare in Agosto?}{section.3.5}% 46
+\BOOKMARK [2][-]{subsection.3.5.7}{Le autostrade pi\371 utilizzate cambiano a seconda dell'anno?}{section.3.5}% 47
+\BOOKMARK [0][-]{chapter.4}{Dati su Meteo}{}% 48
