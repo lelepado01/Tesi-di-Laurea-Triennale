@@ -21,6 +21,8 @@ ora_notte_weekend = ora_notte_weekend.reindex([23,24,1,2,3,4,5,6])
 ora_notte_week /= 5 * 52 
 ora_notte_weekend /= 2 * 52
 
+# TODO: separa le barre e prova fill a retina
+
 ora_notte_weekend.plot.bar(color='#6262d1', width=bar_width)
 ora_notte_week.plot.bar(color='#d1d162', width=bar_width)
 

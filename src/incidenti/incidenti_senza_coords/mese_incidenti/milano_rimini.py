@@ -17,6 +17,8 @@ for giorni_in_mese in [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]:
 milano_media = milano_mese.mean()
 rimini_media = rimini_mese.mean()
 
+# TODO: separa le barre e prova fill a retina
+
 #plt.xlabel("Mese")
 #plt.ylabel("Incidenti al giorno (2010)")
 #plt.plot([-1, 15], [milano_media, milano_media], color='#c0d147', label='Media Milano')

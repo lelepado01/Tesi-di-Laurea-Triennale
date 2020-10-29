@@ -137,3 +137,6 @@ pedoni_morti_norm = pd.Series(pedoni_morti_vals, index=pedoni_morti.index)
 #plt.fill_between(pedoni_morti_norm.index, pedoni_morti_norm, color='#75d8d3')
 #plt.title("Pedoni morti Normalizzati per età")
 #plt.show()
+
+
+# TODO: heatmap

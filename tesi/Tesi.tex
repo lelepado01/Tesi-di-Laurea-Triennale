@@ -67,7 +67,6 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Introduzione}
-\todo{TOREAD atrent}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Origine dei dati}
@@ -75,66 +74,68 @@
 \subsection{Dati riguardanti incidenti}
 La maggior parte dei dati utilizzati in questo lavoro provengono 
 dall'Istituto nazionale di statistica, 
-in particolare dall'archivio di dati non geolocalizzati su incidenti stradali in Italia.
+in particolare dall'archivio\footnote{\url{https://https://www.istat.it/it/archivio/87539}} 
+di dati non geolocalizzati su incidenti stradali in Italia.
 Questo dataset contiene un'ampia gamma di campi, tra cui ora, 
 mese, giorno della settimana in cui è avvenuto l'incidente, 
 ma anche dati sui passeggeri, la natura dell'incidente e il tipo di strada. 
 Particolarmente interessanti sono anche i campi riguardanti il tipo di incrocio a cui è 
 avvenuto il sinistro, come rettilineo, rotonda o semaforo.
 
-\todo{lele: Metto i link per citare fonti online?
-atrent: io li metto in footnote}
-Per quanto riguarda i dati geolocalizzati, la fonte è invece il sito web TheSubmarine\footnote{\url{https://thesubmarine.it}},
+Per quanto riguarda i dati geolocalizzati, 
+la fonte è invece il sito web TheSubmarine\footnote{\url{https://thesubmarine.it/2018/06/20/mappa-incidenti-stradali-milano/}},
 che in un articolo riguardante l'incidentalità a Milano, 
 ha ottenuto dall'ente Istat la pubblicazione di una parte degli 
 incidenti avvenuti nella città nel 2016, con la relativa posizione.
 Il dataset in questione è abbastanza povero, e contiene solamente l'incidente con la 
 propria posizione, indicata tramite coordinate geografiche.
 
-\todo{Migliorare, ho chiesto sulla sezione servizi del sito}
 L'ultimo dataset, trovato dopo veloce cosultazione con un dipendente Istat, è stato 
-il dataset ACI.
+il dataset ACI\footnote{\url{http://www.aci.it/fileadmin/documenti/ACI/Trasparenza/Open_Data/Catalogo_localizzazione_in_formato_Open_2019.pdf}}.
 \'E stato consigliato in quanto, questi dati, specifici a autostrade e strade statali, 
 indicano anche il nome della rispettiva via.
 
 \subsection{Dati riguardanti autovelox}
 Un primo dataset individuato, che riguardasse delle posizioni degli autovelox fissi, 
-è stato una mappa GoogleMyMaps creata da un utente anonimo, 
-dunque senza un modo di provare l'autenticità dei dati.
+è stato una mappa GoogleMyMaps\footnote{\url{https://www.google.com/maps/d/viewer?mid=1CBgMTvIDnbGo22-Y1f3rVcbeX4C0v_w1&ll=45.365557951599605%2C10.03650113755961&z=8}} 
+creata da un utente anonimo, dunque senza un modo di provare l'autenticità dei dati.
 
 Il dataset utilizzato, invece, è stato ottenuto tramite OpenStreetMaps, ricavando solo gli autovelox 
 in Milano. 
-Per restringere il campo di ricerca a solo Milano, si è fatto uso delle Overpass API, specifiche per 
-OpenStreetMaps, eseguendo la seguente query: 
+Per restringere il campo di ricerca a solo Milano, si è fatto uso delle Overpass API\footnote{\url{https://overpass-turbo.eu/}}, 
+specifiche per OpenStreetMaps, eseguendo la seguente query: 
 
-\todo{Package per visualizzare codice?}
+\todo{lelepado: aggiungere listings per codice}
 [out:json];\\
 node({{bbox}})["highway"="speed\_camera"];\\
 out meta;
 
 Il dataset ricavato non permette di capire quando gli autovelox siano stati installati.
-% Non è una fonte molto sicura
-Tuttavia il sito web ztlmilano contiene un articolo nel quale specifica una lista di 
+Tuttavia il sito web ztlmilano\footnote{\url{https://www.ztlmilano.it/Autovelox-Milano}} 
+contiene un articolo nel quale specifica una lista di 
 autovelox installati nel 2014, considerando che il dataset di OpenStreetMaps è aggiornato, 
 è possibile ricavare la posizione precisa di questi ultimi.
-\todo{Codice utilizzato per autovelox\_2014.csv}
+\todo{lelepado: Codice utilizzato per autovelox\_2014.csv}
 
 \subsection{Dati riguardanti il meteo}
-\todo{non so ancora se usarli}
+\todo{lelepado: non so ancora se usarli}
 
 \subsection{Dati riguardanti trasporti pubblici}
 I dati riguardanti i trasporti pubblici trovati hanno due provenienze, i primi sono 
-dati riferiti alle linee ATM, scaricati sul sito del comune di milano.
+dati riferiti alle linee ATM, scaricati sul sito del comune di milano
+\footnote{\url{https://dati.comune.milano.it/dataset/ds532-atm-composizione-percorsi-linee-di-superficie-urbane}}.
 Dallo stesso sito proviene anche il dataset riguardante gli autobus turistici, che 
-contiene in particolare le aree di sosta di questi ultimi.
+contiene in particolare le aree di sosta di questi ultimi
+\footnote{\url{https://dati.comune.milano.it/dataset/ds740_sosta_bus_gt_turistici}}.
 
 \subsection{Dati riguardanti piste ciclabili}
 Oltre al sito principale del comune di Milano, esiste un secondo sito web dedicato 
 unicamente ai dati geolocalizzati. Su questo sito è disponibile un dataset contenente 
-i percorsi delle piste ciclabili di Milano.
+i percorsi delle piste ciclabili di Milano
+\footnote{\url{https://geoportale.comune.milano.it/sit/cerca-nel-catalogo/}}.
 
 \subsection{Dati riguardanti autostrade e manto stradale}
-\todo{devo guardare il dataset del manto stradale che ho trovato}
+\todo{lelepado: devo guardare il dataset del manto stradale che ho trovato}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Scopo del lavoro}
@@ -144,9 +145,12 @@ i percorsi delle piste ciclabili di Milano.
 
 \subsection{Dati riguardanti pavè}
 Non sembra che esista un dataset contenente la composizione del manto stradale di Milano.
-\todo{aggiungere siti e parole chiave}
+\todo{lelepado: aggiungere siti e parole chiave}
 
-\todo{mappa trovata}
+Una possibile risorsa trovata è una mappa utilizzata in un articolo del blog urbanfile
+\footnote{\url{https://blog.urbanfile.org/2018/05/02/milano-arredo-urbano-il-pave-risorsa-da-preservare-o-problema-da-eliminare/}}.
+Dopo una rapida consultazione tuttavia, non risulta esserci alcun dataset contenente informazioni 
+riguardanti il pavè a Milano, infatti la cartina è stata realizzata tramite conoscenza personale dell'autore dell'articolo.
 
 Il dataset che potrebbe avvicinarsi di più ad ottenere le informazioni cercate potrebbe essere 
 quello riguardante i percorsi dei trasporti tranviari. Basandosi su queste informazioni, e assumendo che 
@@ -156,7 +160,7 @@ la maggior parte delle linee dei tram a Milano sono pavimentate in pavè, è pos
 % Non molto simili...
 
 \subsection{Dati riguardanti traffico stradale}
-\todo{devo ancora cercare se c'è un dataset sul traffico}
+\todo{lelepado: devo ancora cercare se c'è un dataset sul traffico}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -260,10 +264,6 @@ Alcuni dati sull'installazione di autovelox esistono per l'anno 2014, tuttavia i
 riguardo agli incidenti sono solo riguardanti l'anno 2016, in quanto Istat non ha rilasciato 
 le posizioni degli incidenti in altre annate.
 
-% TODO: devo scrivere come ho ricavato le posizioni degli autovelox installati nel 2014?
-% (sono individuati tramite label) 
-
-
 Gli autovelox installati nel 2014, presenti nel dataset, sono rappresentati nella seguente mappa.
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/autovelox/autovelox_2014.png}
@@ -273,7 +273,7 @@ Gli autovelox installati nel 2014, presenti nel dataset, sono rappresentati nell
 
 %\ref{fig:autovelox_2014}
 
-è comunque possibile sovrapporre i dataset, per vedere se gli autovelox hanno un qualche tipo di 
+\'E comunque possibile sovrapporre i dataset, per vedere se gli autovelox hanno un qualche tipo di 
 effetto sugli incidenti.
 
 \begin{figure}
@@ -340,7 +340,7 @@ Il numero di incidenti per genere è tende ad essere 75\% circa uomini e 25\% do
 Nelle strade  urbane, la percentuale di incidenti con conducente donna aumenta leggermente nel 2010, 
 questo vale per tutti gli anni?
 
-%TODO: stima della percentuale di conducenti maschi/femmine
+\todo{lelepado: stima della percentuale di conducenti maschi/femmine}
 
 
 %\clearpage
@@ -352,7 +352,7 @@ questo vale per tutti gli anni?
     \label{fig:differenza_eta}
 \end{figure}
 
-\todo{Aggiustare per popolazione standard}
+\todo{lelepado: Aggiustare per popolazione standard}
 
 
 Risultati non troppo interessanti\dots
@@ -373,7 +373,7 @@ Si sono prese in considerazione le provincie di Milano e Rimini, per controllare
 marittima influisse sul numero di incidenti, ma sembra che quest'ultima abbia una percentuale 
 ancora più alta di incidenti in cui è presente solo il conducente, rispetto a Milano.
 
-\todo{Realizzare campione di automobili con numero di passeggeri a bordo}
+\todo{lelepado: Realizzare campione di automobili con numero di passeggeri a bordo}
 
 %\clearpage
 \subsection{L'uso del telefono cellulare ha influenzato il numero di incidenti?}
@@ -499,12 +499,12 @@ in cui sono disponibili dati.
     \def\arraystretch{1.5}%  
     \begin{tabular}{ |c|c| } 
     \hline
-    Anno & Incremento in Agosto \\ 
+    Anno & Decremento in Agosto \\ 
     \hline
-    2010 & -47.4\%  \\ 
-    2011 & -35.14\% \\
-    2012 & -45.46\% \\
-    2013 & -41.37 \% \\
+    2010 & 47.4\%  \\ 
+    2011 & 35.14\% \\
+    2012 & 45.46\% \\
+    2013 & 41.37 \% \\
     \hline
     \end{tabular}
 \end{center}
