@@ -226,7 +226,7 @@ tra Viale Bianca Maria e Viale Premuda.
 %...
 
 %\clearpage
-\subsection{Il Pavè influisce sull'incidentalit\'a?}
+\subsection{Correlazione tra pavè e incidentalità}
 Spesso le linee di tram coincidono con strade in pavè
 %...
 Servirebbe una mappa delle strade in pavè a Milano..
@@ -300,7 +300,7 @@ Il dataset Istat contiene molte informazioni riguardanti i conducenti dei veicol
 nell'incidente, oltre al tipo di veicoli.
 
 %\clearpage
-\subsection{Come cambia il tipo di veicolo al cambiare del tipo di strada?}
+\subsection{Il tipo di veicolo dipende dalla strada?}
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/tipo_veicoli/differenza_strade.png}
@@ -319,7 +319,7 @@ anche il numero di incidenti con motocicli è ridotto, mentre cresce molto nelle
 \section{Dati Istat su conducente}
 
 %\clearpage
-\subsection{Come cambia il sesso del conducente al cambiare della strada?}
+\subsection{Il sesso dei conducenti cambia in base alla strada?}
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/tipo_veicoli/uomo-donna.png}
@@ -337,7 +337,7 @@ questo vale per tutti gli anni?
 
 
 %\clearpage
-\subsection{Come cambia l'età del conducente al cambiare della strada?}
+\subsection{L'età del conducente dipende dalla strada?}
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/tipo_veicoli/differenza_eta.png}
@@ -345,6 +345,7 @@ questo vale per tutti gli anni?
     \label{fig:differenza_eta}
 \end{figure}
 
+\todo{Aggiustare per popolazione standard}
 
 
 Risultati non troppo interessanti\dots
@@ -368,7 +369,7 @@ ancora più alta di incidenti in cui è presente solo il conducente, rispetto a 
 \todo{Realizzare campione di automobili con numero di passeggeri a bordo}
 
 %\clearpage
-\subsection{Il conducente se da solo si distrae con il telefono cellulare?}
+\subsection{L'uso del telefono cellulare ha influenzato il numero di incidenti?}
 
 Per quanto non siano disponibili dati su questo ambito, si potrebbe confrontare gli anni tra 2010 e 2013, 
 in cui l'uso del cellulare in macchina ancora non era frequente, rispetto agli anni più recenti.
@@ -435,7 +436,7 @@ avvengono molti più sinistri, mentre nella fascia mattutina,
 il numero non sembra variare molto dalla media di incidenti durante il giorno.
 
 %\clearpage
-\subsection{Correlazione di incidentalità con orari della mattina}
+\subsection{Correlazione tra incidentalità e orari della mattina}
 
 Se si selezionano solo gli incidenti nella provincia di Milano, è possibile individuare 
 il secondo picco di incidenti, quello durante le ore di punta mattutine.
@@ -469,7 +470,7 @@ ore notturne si ha la tendenza opposta.
 %...
 
 %\clearpage
-\subsection{Quanto influiscono le vacanze estive sull'incidentalit\'a?}
+\subsection{Quanto influiscono le vacanze estive sull'incidentalità?}
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/milano_mese.png}
@@ -504,7 +505,7 @@ Per quanto possano esserci molti fattori che contribuiscono a questa tendenza,
 quello che influisce di più devono essere le partenze per le vacanze.
 
 %\clearpage
-\subsection{è possibile individuare la tendenza inversa in localit\'a  di mare?}
+\subsection{In località di mare gli incidenti aumentano in estate?}
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/milano_rimini.png}
@@ -514,6 +515,8 @@ quello che influisce di più devono essere le partenze per le vacanze.
 
 L'unica localit\'a in cui si è riscontrata la tendenza inversa è in provincia 
 di Rimini.
+
+\todo{Aggiungere altre località}
 
 \begin{center}
     \def\arraystretch{1.5}%  
@@ -596,7 +599,7 @@ di incidenti, ma a Milano, in particolare, il gap sembra essersi 'creato' nel 20
 \section{Dati Istat su tipi di incidenti e incroci}
 
 %\clearpage
-\subsection{Quali incidenti avvengono con più frequenza?}
+\subsection{Le tipologie di incidenti più frequenti}
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/localizzazione_incidente/tipo_incidente.png}
@@ -607,7 +610,7 @@ di incidenti, ma a Milano, in particolare, il gap sembra essersi 'creato' nel 20
 Sono molto frequenti scontri frontali, laterali e tamponamenti.
 
 %\clearpage
-\subsection{Quali tipi di incroci provocano più incidenti?}
+\subsection{Gli incroci più pericolosi}
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/localizzazione_incidente/intersezioni.png}
@@ -615,12 +618,14 @@ Sono molto frequenti scontri frontali, laterali e tamponamenti.
     \label{fig:tipo_intersezioni}
 \end{figure}
 
-La maggior parte degli incidenti avviene nei rettilinei e negli incroci.
+La maggior parte degli incidenti avviene nei rettilinei e negli incroci.\\
+Bisognerebbe conoscere il numero totale di rettilinei, e di incroci di ogni altro tipo, in 
+modo da mettere in relazione i dati assoluti del grafo.
 
 %...
 
 %\clearpage
-\subsection{Esistono tipi di incidenti che provocano più feriti?}
+\subsection{Le tipologie di incidenti che provocano più feriti}
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/natura_incidente/numero_feriti.png}
@@ -634,7 +639,7 @@ hanno un'alta percentuale di situazioni con due o più feriti.
 
 
 %\clearpage
-\subsection{Esistono incroci che favoriscono incidenti con pedoni?}
+\subsection{Incroci che favoriscono incidenti con pedoni}
 
 \todo{Da togliere}
 \begin{figure}
@@ -673,7 +678,7 @@ tratti di strada di questo tipo.
 %...
 
 %\clearpage
-\subsection{Ci sono aspetti salienti sui pedoni coinvolti?}
+\subsection{Aspetti salienti sui pedoni coinvolti in incidenti}
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/pedoni/eta_pedoni.png}
@@ -687,6 +692,9 @@ Se si normalizza per anni contenuti in ogni fascia, ipotizzando un numero
 costante di persone di ogni et\'a, si ottiene un grafo, per quanto riguarda i pedoni 
 feriti, molto differente. \\
 La normalizzazione tiene conto che la fascia di et\'a '65 anni e oltre' vale venti anni.
+
+\todo{Aggiustare per popolazione standard}
+
 %...
 
 \begin{figure}
@@ -740,7 +748,7 @@ Tracciando il grafo dei primi trenta valori del dataset ACI,
 
 
 %\clearpage
-\subsection{Quali sono le autostrade con più incidenti?}
+\subsection{Le autostrade più pericolose}
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/autostrade/autostrade.png}
     \caption{Autostrade con più incidenti nel 2018}
@@ -755,7 +763,7 @@ l'Autostrada del Sole e l'Adriatica.
 
 
 %\clearpage
-\subsection{Autostrade pericolose a Milano?}
+\subsection{Le strade pericolose in provincia di Milano}
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/autostrade/incidenti_bubble_chart.png}
@@ -768,7 +776,7 @@ l'Autostrada del Sole e l'Adriatica.
 %...
 
 %\clearpage
-\subsection{In quali mesi avvengono più incidenti?}
+\subsection{Correlazione tra mesi dell'anno e incidentalità}
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/autostrade/mesi_autostrade.png}
     \caption{Incidenti per mese nel 2018}
@@ -817,6 +825,13 @@ di punta, in particolare è molto visibile per la Torino$-$Trieste e per la Tang
 
 %\clearpage
 \subsection{Quali autostrade sono utilizzate di più per viaggiare in Agosto?}
+
+Non è un segreto che, nel mese di agosto, si ha la maggior parte delle partenze per le vacanze per 
+gli Italiani. In genere, per quanto riguarda le partenze in macchina, la tendenza è quella di spostarsi verso sud, 
+per raggiungere le località balneari.\\
+Spesso, ciò risulta in vari bollini rossi e neri per le autostrade. 
+Ci sono mode che cambiano in base all'anno, 
+che provocano il numero di incienti a cambiare di anno in anno? 
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/agosto/autostrade_anno_agosto.png}
