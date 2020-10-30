@@ -24,6 +24,9 @@
 
 \usepackage{refcheck}
 
+\usepackage{color, colortbl}
+
+\definecolor{TableTableGray}{gray}{0.9}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
@@ -498,8 +501,10 @@ in cui sono disponibili dati.
     Anno & Decremento in Agosto \\ 
     \hline
     2010 & 47.4\%  \\ 
+    \rowcolor{TableGray}
     2011 & 35.14\% \\
     2012 & 45.46\% \\
+    \rowcolor{TableGray}
     2013 & 41.37 \% \\
     \hline
     \end{tabular}
@@ -539,8 +544,10 @@ di Rimini, raffigurata nel grafo \ref{fig:milano-rimini}.
     \hline
     Anno & Agosto & Luglio \\ 
     \hline
+    \rowcolor{TableGray}
     2010 & 63.75\% & 101.72\% \\ 
     2011 & 60.49\% & 54.6 \%  \\
+    \rowcolor{TableGray}
     2012 & 45.93\% & 75.97\%  \\
     2013 & 51.82\% & 116.37\% \\
     \hline
@@ -565,8 +572,10 @@ Questa tendenza avviene ogni anno?
     \hline
     Anno & Agosto & Gennaio \\ 
     \hline
+    \rowcolor{TableGray}
     2010 & -2.93 \% & 78.48\%  \\ 
     2011 & 124.0 \% & -32.12\% \\
+    \rowcolor{TableGray}
     2012 & 52.25 \% & -41.44\% \\
     2013 & -15.21\% & -24.63\% \\
     \hline
@@ -703,18 +712,24 @@ Infatti le percentuali di individui per fascia sono
     \hline
     Fascia & Percentuale Popolazione \\ 
     \hline
+    \rowcolor{TableGray}
     0-5     & 3.9 \% \\ 
     6-9     & 4.5 \% \\
+    \rowcolor{TableGray}
     10-14   & 4.8 \% \\
     15-17   & 3.1 \% \\
+    \rowcolor{TableGray}
     18-20   & 2.8 \% \\ 
     21-24   & 4   \% \\
+    \rowcolor{TableGray}
     25-29   & 5.3 \% \\
     30-44   & 19  \% \\
+    \rowcolor{TableGray}
     45-54   & 18.2\% \\ 
     55-59   & 7.3 \% \\
+    \rowcolor{TableGray}
     60-64   & 6.4 \% \\
-    65\plus & 19.3\% \\
+    65$+$   & 19.3\% \\
     \hline
     \end{tabular}
 \end{center}
@@ -759,6 +774,8 @@ più incidentalità nel per ogni anno.
     \caption{Incidenti per regione nel 2014}
     \label{fig:incidenti-per-regione}
 \end{figure}
+
+
 
 %\clearpage
 \subsection{Esiste correlazione tra incidenti e feriti?}
