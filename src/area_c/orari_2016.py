@@ -1,6 +1,7 @@
 
 import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
 
 path = "dataset/area_c/giorno_2015.csv"
 
@@ -24,7 +25,8 @@ for f in data['month'].unique():
         ignore_index=True
         )
 
-print(df)
+#total = df.sum()
+#df = df / total
 
 mesi = [
     'Gennaio',
@@ -36,15 +38,22 @@ mesi = [
     'Luglio',
     'Agosto',
     'Settembre',
-    'Ottobre',  # non c'è novembre
+    'Ottobre',
+    'Novembre',
     'Dicembre'
 ]
 
-df.plot.bar()
-plt.xticks(range(0, 11), mesi)
+df.at[11] = df.iloc[10] * 31/16 # Stimo dicembre
+df.at[10] = df.mean()           # Metto novembre = media
+
+df.plot.bar(width=0.9, color='#dd8d46')
+plt.plot(np.array([-1, 12]),np.array([df.mean(), df.mean()]), color='#ddd846')
+plt.text(12, df.mean()-0.2, "Media")
+plt.xticks(range(0, 12), mesi)
+plt.xlabel("Mesi")
+plt.ylabel("Traffico mensile in Area C a Milano")
+plt.tight_layout()
 plt.show()
 
 # Ho metà dei giorni a dicembre, potrei raddoppiarli...
 # Non ho dati a novembre, potrei stimare una media...
-
-# TODO: usare
