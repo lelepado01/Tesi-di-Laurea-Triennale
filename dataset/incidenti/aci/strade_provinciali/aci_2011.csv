@@ -1,4 +1,4 @@
-CodReg,Regione,Prov,provincia,CODICE,nome strada,UnivCom,comune,Inc,Mor,Fer,Inc2R,IncMezziP
+CodReg,REGIONE,Prov,provincia,CODICE,nome strada,UnivCom,comune,Inc,Mor,Fer,Inc2R,IncMezziP
 01,Piemonte,001,Torino,SP04101TO,SP 041 -  di Agliè,001001,Agliè,4,0,6,1,0
 01,Piemonte,001,Torino,SP13901TO,SP 139 -  di Villafranca,001002,Airasca,2,1,2,0,0
 01,Piemonte,001,Torino,SP08001TO,SP 080 -  di Caravino,001004,Albiano d'Ivrea,1,0,1,0,1

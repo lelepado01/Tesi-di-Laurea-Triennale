@@ -127,10 +127,14 @@ def annotate_heatmap(im, data=None, valfmt="{x:.2f}",
 """
 USAGE: 
 
+import sys
+sys.path.append('src')
+import heatmap as H
+
 fig, ax = plt.subplots()
 
-im, cbar = heatmap(tab, tab.index, [1,2,3,4], ax=ax, cmap="YlGn", cbarlabel="Incidenti all'anno (2011)")
-texts = annotate_heatmap(im, valfmt="{x}")
+im, cbar = H.heatmap(tab, tab.index, [1,2,3,4], ax=ax, cmap="YlGn", cbarlabel="Incidenti all'anno (2011)")
+texts = H.annotate_heatmap(im, valfmt="{x}")
 
 fig.tight_layout()
 plt.show()

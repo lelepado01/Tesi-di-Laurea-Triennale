@@ -1,4 +1,4 @@
-CodReg,Regione,Prov,provincia,CODICE,nome strada,UnivCom,comune,Inc,Mor,Fer,N_Vei,Inc2R,IncMezziP
+CodReg,REGIONE,Prov,provincia,CODICE,nome strada,UnivCom,comune,Inc,Mor,Fer,N_Vei,Inc2R,IncMezziP
 01,Piemonte,001,Torino,SP05401TO,SP 054 -  di Cuceglio,001001,Agliè,1,0,1,2,0,0
 01,Piemonte,001,Torino,SP13901TO,SP 139 -  di Villafranca,001002,Airasca,2,0,3,4,0,0
 01,Piemonte,001,Torino,SP00101TO,SP 001 -  delle Valli di Lanzo,001003,Ala di Stura,1,0,1,1,0,0
