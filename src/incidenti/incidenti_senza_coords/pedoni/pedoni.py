@@ -76,67 +76,9 @@ custom_lines = [Line2D([0], [0], color=(0, 0, 0, 0), lw=4),
 #lines = ax.plot(data)
 #ax.legend(custom_lines, ['Cold', 'Medium', 'Hot'])
 
-incidenti_pedoni.plot.bar()
-plt.tight_layout()
-plt.xticks(rotation=0)
-plt.xlabel("(Tipo Incrocio, Numero di pedoni)")
-plt.legend(custom_lines, ['Incrocio - 7', 'Rotatoria - 2', 'Intersez. segnalata - 3',  'Incrocio - 1'])
-plt.show()
-
-# Età dei pedoni feriti?
-
-pedoni_morti = data['pedone_morto_1__et_']
-pedoni_morti = pedoni_morti[pedoni_morti != '  '].astype(int)
-pedoni_morti = label_utils.join_labels(pedoni_morti, 'dataset/incidenti/Classificazioni/veicolo__a___et__conducente.csv')
-pedoni_morti = pedoni_morti.value_counts().sort_index()
-
-pedoni_feriti = data['pedone_ferito_1__et_']
-pedoni_feriti = pedoni_feriti[pedoni_feriti != '  '].astype(int)
-pedoni_feriti = label_utils.join_labels(pedoni_feriti, 'dataset/incidenti/Classificazioni/veicolo__a___et__conducente.csv')
-pedoni_feriti = pedoni_feriti.value_counts().sort_index()
-
-anni_per_fascia_feriti = pd.Series([5,5,3,3,4,5,15,10,5,5,5,20,1])
-anni_per_fascia_morti = pd.Series([5,5,3,4,5,15,10,5,5,20,1])
-# Ipotizzo fino a 80 anni
-
-#print(pedoni_morti)
-#print(anni_per_fascia)
-
-import numpy as np
-
-pedoni_feriti_vals = pedoni_feriti.values / anni_per_fascia_feriti.to_numpy()
-pedoni_morti_vals = pedoni_morti.values / anni_per_fascia_morti.to_numpy()
-
-pedoni_feriti_norm = pd.Series(pedoni_feriti_vals, index=pedoni_feriti.index)
-pedoni_morti_norm = pd.Series(pedoni_morti_vals, index=pedoni_morti.index)
-
-#print(pedoni_feriti)
-
-#plt.subplot(221)
-#plt.tight_layout()
-#plt.plot(pedoni_feriti, color="#75d8a1")
-#plt.fill_between(pedoni_feriti.index, pedoni_feriti, color="#75d8a1")
-#plt.xticks(rotation=90)
-#plt.title("Età Pedoni Feriti")
-#plt.subplot(222)
-#plt.tight_layout()
-#plt.xticks(rotation=90)
-#plt.plot(pedoni_morti, color="#75d8a1")
-#plt.fill_between(pedoni_morti.index, pedoni_morti, color="#75d8a1")
-#plt.title("Età Pedoni Morti")
-#plt.subplot(223)
-#plt.tight_layout()
-#plt.plot(pedoni_feriti_norm, color="#75d8d3")
-#plt.fill_between(pedoni_feriti_norm.index, pedoni_feriti_norm, color="#75d8d3")
-#plt.xticks(rotation=90)
-#plt.title("Pedoni feriti normalizzati per età")
-#plt.subplot(224)
-#plt.tight_layout()
-#plt.xticks(rotation=90)
-#plt.plot(pedoni_morti_norm, color="#75d8d3")
-#plt.fill_between(pedoni_morti_norm.index, pedoni_morti_norm, color='#75d8d3')
-#plt.title("Pedoni morti Normalizzati per età")
-#plt.show()
-
-
-# TODO: heatmap
+# incidenti_pedoni.plot.bar()
+# plt.tight_layout()
+# plt.xticks(rotation=0)
+# plt.xlabel("(Tipo Incrocio, Numero di pedoni)")
+# plt.legend(custom_lines, ['Incrocio - 7', 'Rotatoria - 2', 'Intersez. segnalata - 3',  'Incrocio - 1'])
+# plt.show()
