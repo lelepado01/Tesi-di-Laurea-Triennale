@@ -22,22 +22,6 @@ fields = ['INC','FER']
 #print(provincia['MOR'].corr(provincia['FER'])) = 0.8332572834970239
 # Correlazione più debole, ma comunque presente
 
-df = pd.DataFrame()
-for f in data['PROVINCIA'].unique():
-    df = df.append(pd.DataFrame([f, data[data['PROVINCIA'] == f]['INC'].sum(), data[data['PROVINCIA'] == f]['FER'].sum()]).transpose(), ignore_index=True)
-
-df.set_index(df[0], inplace=True)
-df =  df[[1,2]]
-#print(df)
-
-df[1].plot(label='Feriti')
-df[2].plot(label='Incidenti')
-plt.xticks(rotation=90)
-plt.legend()
-plt.tight_layout()
-plt.show()
-
-
 # provincia = provincia.sort_values(by='Inc', ascending=False).head(10)
 # provincia.plot()
 # plt.show()
