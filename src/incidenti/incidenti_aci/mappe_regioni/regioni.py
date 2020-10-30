@@ -22,13 +22,29 @@ def get_sum_of_fields(data : pd.DataFrame, select_field : str, field_to_sum : st
 path = "dataset/regioni/regioni.geojson"
 regioni = gp.read_file(path)
 
-incidenti_2011 = get_sum_of_fields(pd.read_csv('dataset/incidenti/aci/strade_provinciali/aci_2011.csv'), 'REGIONE', 'Inc').sort_values('REGIONE', ascending=False)
-incidenti_2012 = get_sum_of_fields(pd.read_csv('dataset/incidenti/aci/strade_provinciali/aci_2012.csv'), 'REGIONE', 'Inc').sort_values('REGIONE', ascending=False)
-incidenti_2014 = get_sum_of_fields(pd.read_csv('dataset/incidenti/aci/strade_provinciali/aci_2014.csv'), 'REGIONE', 'Inc').sort_values('REGIONE', ascending=False)
-incidenti_2015 = get_sum_of_fields(pd.read_csv('dataset/incidenti/aci/strade_provinciali/aci_2015.csv'), 'REGIONE', 'Inc').sort_values('REGIONE', ascending=False)
-incidenti_2016 = get_sum_of_fields(pd.read_csv('dataset/incidenti/aci/strade_provinciali/aci_2016.csv'), 'REGIONE', 'Inc').sort_values('REGIONE', ascending=False)
-incidenti_2017 = get_sum_of_fields(pd.read_csv('dataset/incidenti/aci/strade_provinciali/aci_2017.csv'), 'REGIONE', 'Inc').sort_values('REGIONE', ascending=False)
-incidenti_2018 = get_sum_of_fields(pd.read_csv('dataset/incidenti/aci/strade_provinciali/aci_2018.csv'), 'REGIONE', 'Inc').sort_values('REGIONE', ascending=False)
+incidenti_2011 = get_sum_of_fields(pd.read_csv('dataset/incidenti/aci/strade_provinciali/aci_2011.csv'), 'REGIONE', 'Inc').sort_values('REGIONE',inplace=False, ascending=True)
+incidenti_2012 = get_sum_of_fields(pd.read_csv('dataset/incidenti/aci/strade_provinciali/aci_2012.csv'), 'REGIONE', 'Inc').sort_values('REGIONE',inplace=False, ascending=True)
+incidenti_2014 = get_sum_of_fields(pd.read_csv('dataset/incidenti/aci/strade_provinciali/aci_2014.csv'), 'REGIONE', 'Inc').sort_values('REGIONE',inplace=False, ascending=True)
+incidenti_2015 = get_sum_of_fields(pd.read_csv('dataset/incidenti/aci/strade_provinciali/aci_2015.csv'), 'REGIONE', 'Inc').sort_values('REGIONE',inplace=False, ascending=True)
+incidenti_2016 = get_sum_of_fields(pd.read_csv('dataset/incidenti/aci/strade_provinciali/aci_2016.csv'), 'REGIONE', 'Inc').sort_values('REGIONE',inplace=False, ascending=True)
+incidenti_2017 = get_sum_of_fields(pd.read_csv('dataset/incidenti/aci/strade_provinciali/aci_2017.csv'), 'REGIONE', 'Inc').sort_values('REGIONE',inplace=False, ascending=True)
+incidenti_2018 = get_sum_of_fields(pd.read_csv('dataset/incidenti/aci/strade_provinciali/aci_2018.csv'), 'REGIONE', 'Inc').sort_values('REGIONE',inplace=False, ascending=True)
+
+incidenti_2011.set_index(incidenti_2011['REGIONE'], inplace=True)
+incidenti_2012.set_index(incidenti_2012['REGIONE'], inplace=True)
+incidenti_2014.set_index(incidenti_2014['REGIONE'], inplace=True)
+incidenti_2015.set_index(incidenti_2015['REGIONE'], inplace=True)
+incidenti_2016.set_index(incidenti_2016['REGIONE'], inplace=True)
+incidenti_2017.set_index(incidenti_2017['REGIONE'], inplace=True)
+incidenti_2018.set_index(incidenti_2018['REGIONE'], inplace=True)
+
+# incidenti_2011 = incidenti_2011['Inc']
+# incidenti_2012 = incidenti_2012['Inc']
+# incidenti_2014 = incidenti_2014['Inc']
+# incidenti_2015 = incidenti_2015['Inc']
+# incidenti_2016 = incidenti_2016['Inc']
+# incidenti_2017 = incidenti_2017['Inc']
+# incidenti_2018 = incidenti_2018['Inc']
 
 df = pd.DataFrame([
     incidenti_2011['Inc'],
@@ -39,7 +55,6 @@ df = pd.DataFrame([
     incidenti_2017['Inc'],
     incidenti_2018['Inc']
 ], [2011,2012,2014,2015,2016,2017,2018])
-df.columns = incidenti_2011['REGIONE']
 
 df = df.transpose()
 
@@ -49,12 +64,10 @@ import heatmap as H
 
 fig, ax = plt.subplots()
 
-im, cbar = H.heatmap(df, df.index, [2011,2012,2014,2015,2016,2017,2018], ax=ax, cmap="YlGn", cbarlabel="Incidenti all'anno (2011)")
+im, cbar = H.heatmap(df, df.index, [2011,2012,2014,2015,2016,2017,2018], ax=ax, cmap="YlGn", xticks_rotated=True, cbarlabel="Incidenti all'anno per regione")
 #texts = H.annotate_heatmap(im, valfmt="{x}")
 
 plt.show()
-
-# TODO: non è corretto perchè df è creato cambiando ordine dei dati
 
 #print(res)
 # regioni = gp.GeoDataFrame(res, geometry=regioni['geometry'].transpose())
