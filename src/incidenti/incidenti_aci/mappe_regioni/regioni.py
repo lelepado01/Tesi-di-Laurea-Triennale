@@ -37,7 +37,8 @@ regioni = gp.GeoDataFrame(res, geometry=regioni['geometry'].transpose())
 
 from matplotlib.lines import Line2D
 
-regioni.plot(column='Inc', cmap='OrRd')
+regioni.plot(column='Inc', cmap='OrRd', legend=True)
+#plt.title("Incidenti per regione nel 2014")
 plt.axis('off')
 plt.legend([
     Line2D([],[],color=(214/255, 0,0,1),linewidth=5), 
