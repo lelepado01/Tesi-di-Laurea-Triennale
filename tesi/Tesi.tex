@@ -581,7 +581,6 @@ degli incidenti.\\
 Nonostane ciò, se si assume che Gennaio 2010 sia un outlier, il numero di incidenti in 
 questo mese è sempre in decremento, in modo molto consistente, rispetto alla media.
 
-\todo{Affianco i tre grafi dei trimestri?}
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/aosta_timestre.png}
     \caption{Incidenti per trimestre in Valle d'Aosta}
@@ -687,12 +686,39 @@ tratti di strada di questo tipo.
 \end{figure}
 
 Dal grafo \ref{fig:eta-pedoni} si osserva che la fascia di età più colpita dagli 
-incidenti è quella dei 65 anni, 
-va comunque detto che questo gruppo probabilmente contiene la maggior parte degli individui.
+incidenti è quella dei 65 anni, va comunque detto che questo gruppo probabilmente 
+contiene la maggior parte degli individui.
 Se si normalizza per anni contenuti in ogni fascia, ipotizzando un numero
 costante di persone di ogni età, si ottiene un grafo, per quanto riguarda i pedoni 
 feriti, molto differente. \\
 La normalizzazione tiene conto che la fascia di età '65 anni e oltre' vale venti anni.
+
+Tuttavia, non è detto che in Italia il numero di individui con la stessa età sia costante.
+Infatti le percentuali di individui per fascia sono
+\footnote{\url{https://www.tuttitalia.it/statistiche/popolazione-eta-sesso-stato-civile-2019/}}: 
+
+\begin{center}
+    \def\arraystretch{1.5}%  
+    \begin{tabular}{ |c|c| } 
+    \hline
+    Fascia & Percentuale Popolazione \\ 
+    \hline
+    0-5   & 3.9 \% \\ 
+    6-9   & 4.5 \% \\
+    10-14 & 4.8 \% \\
+    15-17 & 3.1 \% \\
+    18-20 & 2.8 \%\\ 
+    21-24 & 4   \% \\
+    25-29 & 5.3 \% \\
+    30-44 & 35.2\% \\
+    45-54 & 7.3 \% \\ 
+    55-59 & 6.4 \% \\
+    60-64 & 19.3\% \\
+    65\plus &  \\
+    \hline
+    \end{tabular}
+\end{center}
+
 
 \todo{Aggiustare per popolazione standard}
 
