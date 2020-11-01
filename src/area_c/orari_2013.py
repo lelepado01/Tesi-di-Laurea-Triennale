@@ -37,25 +37,28 @@ data = data[data['ora'] != 25]
 
 ora_week_milano = data[data['provincia'] == 15]['ora'].value_counts().sort_index()
 
-ora_week_milano_norm = ora_week_milano * ora_perc
+ora_week_milano_norm = ora_week_milano * (1 - ora_perc)
 
 plt.subplot(3,1,1)
 plt.plot(ora_perc, color='#ddbd08')
 plt.fill_between(ora_perc.index, ora_perc, color='#ddbd08')
-plt.xticks(range(0,25))
+plt.xticks(range(1,25))
+plt.ylabel("Percentuale")
 plt.title("Percentuale di traffico totale")
 plt.tight_layout()
 plt.subplot(3,1,2)
 plt.plot(ora_week_milano, color='#dd5308')
 plt.fill_between(ora_week_milano.index, ora_week_milano, color='#dd5308')
 plt.title("Numero di incidenti a Milano")
-plt.xticks(range(0,25))
+plt.ylabel("Numero incidenti")
+plt.xticks(range(1,25))
 plt.tight_layout()
 plt.subplot(3,1,3)
 plt.plot(ora_week_milano_norm, color='#93dd08')
 plt.fill_between(ora_week_milano_norm.index, ora_week_milano_norm, color='#93dd08')
 plt.title("Numero di incidenti a Milano normalizzati per traffico")
-plt.xticks(range(0,25))
+plt.ylabel("Numero incidenti pesati")
+plt.xticks(range(1,25))
 plt.tight_layout()
 plt.show()
 
