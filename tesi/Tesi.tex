@@ -551,8 +551,8 @@ Un modo per testare questa teoria è controllare se il traffico durante il mese 
 tuttavia, non è stato trovato alcun dataset riguardante il volume di automobili nelle strade della città.
 La soluzione adottata, è quella di stimare il traffico sulla base degli accessi in area C, i cui dati 
 sono disponibili a partire dal 2011.
-A supporto dell'ipotesi iniziale, nella figura \ref{fig:stima-traffico-mensile}, è visibile un calo di accessi all'area C durante il 
-mese di Agosto.
+A supporto dell'ipotesi iniziale, nella figura \ref{fig:stima-traffico-mensile}, 
+è visibile un calo di accessi all'area C durante il mese di Agosto.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/area_c/stima_traffico_mensile.png}
@@ -560,8 +560,24 @@ mese di Agosto.
     \label{fig:stima-traffico-mensile}
 \end{figure}
 
-\todo{lelepado: grafo con mesi incidenti e traffico}
+Una volta ottenuta una stima del traffico per mese, è possibile applicare questa misurazione 
+al numero di incidenti mensili.
 
+\begin{figure}
+    \includegraphics[width=\linewidth]{../src/area_c/incidenti_traffico_mese.png}
+    \caption{Incidenti al mese, tenendo conto del traffico nello stesso periodo}
+    \label{fig:incidenti-traffico-mese}
+\end{figure}
+
+L'immagine \ref{fig:incidenti-traffico-mese} contiene due grafi, 
+il primo riguardante la frazione di traffico annuale che interessa ogni mese; 
+mentre il secondo raffigura il numero di incidenti mensili, rispetto al numero di incidenti pesati 
+tramite la percentuale di traffico mensile.
+Dunque, più la curva verde si avvicina alla linea degli incidenti, più il mese ha avuto sinstri 
+non direttamente dovuti al traffico.
+In particolare si nota che, in Agosto, nonostante un ampia discesa degli accessi all'area C, 
+il numero di incidenti siano rimasti alti, e le due linee sono vicine.
+D'altra parte, per Maggio e Giugno, le linee si separano per il concetto inverso.
 
 %\clearpage
 \subsection{In località di mare gli incidenti aumentano in estate?}

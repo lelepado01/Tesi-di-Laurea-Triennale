@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-path = "dataset/area_c/giorno_2013.csv"
+path = "dataset/area_c/orari_2012.csv"
 
 data = pd.read_csv(path, sep=';')
 
@@ -40,29 +40,21 @@ mesi = [
     'Dicembre'
 ]
 
-df.at[11] = df.iloc[10] * 31/16 # Stimo dicembre
-df.at[10] = df.mean()           # Metto novembre = media
+perc_traffico = df / df.sum()
 
-# df.plot.bar(width=0.9, color='#dd8d46')
-# plt.plot(np.array([-1, 12]),np.array([df.mean(), df.mean()]), color='#ddd846')
-# plt.text(12, df.mean()-0.2, "Media")
-# plt.xticks(range(0, 12), mesi)
-# plt.xlabel("Mesi")
-# plt.ylabel("Traffico mensile in Area C a Milano")
-# plt.tight_layout()
-# plt.show()
+# print(perc_traffico)
 
-total = df.sum()
-perc_traffico = df / total
+perc_traffico.plot.bar(width=0.9, color='#dd8d46')
+plt.plot(np.array([-1, 12]),np.array([perc_traffico.mean(), perc_traffico.mean()]), color='#ddd846')
+plt.text(11, df.mean()-0.2, "Media")
+plt.xlabel("Mesi")
+plt.ylabel("Traffico mensile in Area C a Milano")
+plt.xticks(range(0, 12), mesi)
+plt.tight_layout()
+plt.show()
 
-# Ho metà dei giorni a dicembre, potrei raddoppiarli...
-# Non ho dati a novembre, potrei stimare una media...
-
-incidenti = pd.read_csv("dataset/incidenti/incidenti_2013.txt", sep='\t', encoding='latin1')
+incidenti = pd.read_csv("dataset/incidenti/incidenti_2012.txt", sep='\t')
 mesi_incidenti = incidenti['mese'].value_counts().sort_index()
-
-# mesi_incidenti.plot.bar()
-# plt.show()
 
 perc_traffico = pd.DataFrame(perc_traffico)
 perc_traffico.index = range(1,13)
@@ -72,19 +64,21 @@ mesi_norm = mesi_incidenti * (1-perc_traffico[0])
 # print(perc_traffico)
 # print(mesi_norm)
 
-# plt.subplot(3,1,1)
-# plt.plot(mesi_incidenti)
-# plt.fill_between(mesi_incidenti.index, mesi_incidenti)
-# plt.title("Incidenti al Mese")
-# plt.tight_layout()
-# plt.subplot(3,1,2)
-# plt.plot(perc_traffico)
-# plt.fill_between(perc_traffico.index, perc_traffico[0])
+# plt.subplot(2,1,1)
+# plt.plot(perc_traffico, color='#ddbd08')
+# plt.fill_between(perc_traffico.index, perc_traffico[0], color='#ddbd08')
 # plt.title("Percentuale di traffico nel mese rispetto al totale annuale")
+# plt.xticks(range(1,13))
 # plt.tight_layout()
-# plt.subplot(3,1,3)
-# plt.title("Incidenti tenendo conto del traffico")
-# plt.plot(mesi_norm)
-# plt.fill_between(mesi_norm.index, mesi_norm)
+
+# plt.subplot(2,1,2)
+# plt.plot(mesi_incidenti, color='#dd5308', label="Incidenti al mese")
+# plt.fill_between(mesi_incidenti.index, mesi_incidenti, color='#dd5308')
+# plt.title("Incidenti normalizzati per traffico mensile")
+# plt.plot(mesi_norm, color='#93dd08', label="Incidenti normalizzati")
+# plt.fill_between(mesi_norm.index, mesi_norm, color='#93dd08')
+# plt.title("Incidenti al mese")
+# plt.legend()
+# plt.xticks(range(1,13))
 # plt.tight_layout()
 # plt.show()
