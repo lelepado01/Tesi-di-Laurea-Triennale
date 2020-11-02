@@ -135,7 +135,47 @@ Tuttavia il sito web ztlmilano\footnote{\url{https://www.ztlmilano.it/Autovelox-
 contiene un articolo nel quale specifica una lista di 
 autovelox installati nel 2014, considerando che il dataset di OpenStreetMaps è aggiornato, 
 è possibile ricavare la posizione precisa di questi ultimi.
-\todo{lelepado: Codice utilizzato per autovelox\_2014.csv}
+
+La lista di Ztl Milano contiene i seguenti autovelox: 
+
+\begin{center}
+    \def\arraystretch{1.5}%  
+    \begin{tabular}{ |c|c| } 
+    \hline
+    Numero & Localizzazione dell'autovelox \\ 
+    \hline
+    \rowcolor{TableGray}
+    1   &   Viale Monteceneri  dir. Lugano\\
+    2   &   Viale Monteceneri dir. Serra\\
+    \rowcolor{TableGray}
+    3   &   Cavalcavia del Ghisallo\\
+    4   &   Viale Serra \\
+    \rowcolor{TableGray}
+    5   &   Viale Serra\\
+    6   &   Via Fermi\\
+    \rowcolor{TableGray}
+    7   &   Viale Fulvio Testi direz. perif.\\
+    8   &   Viale Fulvio Testi direz. centro\\
+    \rowcolor{TableGray}
+    9   &   Viale Palmanova  direz. centro\\
+    10  &   Viale Palmanova\\
+    \rowcolor{TableGray}
+    11  &   Via Ferrari direz. Ripamonti\\
+    12  &   Via Ferrari\\
+    \rowcolor{TableGray}
+    13  &   Via Chiesa Rossa\\
+    14  &   Via dei Missaglia direz. centro\\
+    \rowcolor{TableGray}
+    15  &   Via dei Missaglia direz. periferia\\
+    16  &   Viale Famagosta\\
+    \rowcolor{TableGray}
+    17  &   Via Parri\\
+    18  &   Via Parri\\
+    \hline
+    \end{tabular}
+\end{center}
+
+Il campi della tabella ripetuti sono dovuti al fatto che alcuni autovelox sono stati installati in entrambe le direzioni.
 
 \subsection{Dati riguardanti il meteo}
 \todo{lelepado: non so ancora se usarli}
@@ -279,24 +319,54 @@ Alcuni dati sull'installazione di autovelox esistono per l'anno 2014, tuttavia i
 riguardo agli incidenti sono solo riguardanti l'anno 2016, in quanto Istat non ha rilasciato 
 le posizioni degli incidenti in altre annate.
 
-Gli autovelox installati nel 2014, presenti nel dataset, 
-sono rappresentati nella mappa \ref{fig:autovelox-2014}.
+\todo{reference alla tabella di autovelox ZTLMilano}
+Sapendo le posizioni degli autovelox, con un po' di lavoro manuale, è possibile ricondursi alla 
+posizione effettiva sulla mappa.
+Per fare ciò, la soluzione più veloce è stata quella di enumerare, 
+come raffigurato nella mappa \ref{fig:autovelox-indici} tutti gli autovelox sulla mappa, 
+e confrontarli con le vie della tabella.
+
+\begin{lstlisting}
+    path = "dataset/autovelox/autovelox_milano.geojson"
+    autovelox = gp.read_file(path).to_crs(epsg=3857)
+    layer_autovelox = autovelox.plot(figsize=(11,9), color="red")
+    
+    index = 0
+    for lat, lon in geo_utils.parse_geojson_point_list(autovelox['geometry'].astype(str)):
+    layer_autovelox.text(lat, lon, s=index)
+    index += 1
+    
+    cx.add_basemap(ax=layer_autovelox)
+    plt.show()
+\end{lstlisting}
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{../src/autovelox/autovelox.png}
+    \caption{Autovelox enumerati per facilitarne l'identificazione nel dataset}
+    \label{fig:autovelox-indici}
+\end{figure}
+
+Una volta identificate le linee corrette del dataset, è possibile separarli dal datset completo.
+Gli autovelox installati nel 2014, sono rappresentati nella mappa \ref{fig:autovelox-2014}.
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/autovelox/autovelox_2014.png}
     \caption{Autovelox installati nel 2014}
     \label{fig:autovelox-2014}
 \end{figure}
 
-\'E comunque possibile sovrapporre i dataset, per vedere se gli autovelox hanno un qualche tipo di 
-effetto sugli incidenti.
+Per quanto non si disponga delle informazioni sugli incidenti prima e dopo dell'installazione, 
+è comunque possibile sovrapporre i dataset, per vedere se gli autovelox hanno un qualche tipo di 
+effetto sugli incidenti, visto che i dati sui sinistri risalgono al 2016.
 
 \begin{figure}
-    \includegraphics[width=\linewidth]{../src/autovelox/mappa_3.png}
+    \includegraphics[width=\linewidth]{../src/autovelox/autovelox_incidenti_2014.py}
     \caption{Autovelox e Incidenti a Milano}
-    \label{fig:autovelox}
+    \label{fig:autovelox-incidenti}
 \end{figure}
 
-Nella mappa \ref{fig:autovelox}\dots
+Nella mappa \ref{fig:autovelox-incidenti} si notano alcuni punti in cui si verificano meno incidenti, 
+per esempio 
+\todo{lelepado: finire, serve indice numerico}
 
 %...
 

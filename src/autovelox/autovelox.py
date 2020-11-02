@@ -47,16 +47,16 @@ autovelox = gp.read_file(path).to_crs(epsg=3857)
 #print(autovelox['alt_name'].unique())
 #print(autovelox['direction'].unique())
 
-#layer_autovelox = autovelox.plot(figsize=(11,9), color="red")
-#layer_autovelox.set_title("Autovelox Milano")
-#
-#index = 0
-#for lat, lon in geo_utils.parse_geojson_point_list(autovelox['geometry'].astype(str)):
-#    layer_autovelox.text(lat, lon, s=index)
-#    index += 1
-#
-#cx.add_basemap(ax=layer_autovelox)
-#plt.show()
+layer_autovelox = autovelox.plot(figsize=(11,9), color="red")
+layer_autovelox.set_title("Autovelox Milano")
+
+index = 0
+for lat, lon in geo_utils.parse_geojson_point_list(autovelox['geometry'].astype(str)):
+   layer_autovelox.text(lat, lon, s=index)
+   index += 1
+
+cx.add_basemap(ax=layer_autovelox)
+plt.show()
 
 # Gli indici mi permettono di individuare quali sono gli autovelox installati nel 2014: 
 # 46, 50
