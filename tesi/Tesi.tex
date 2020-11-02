@@ -695,21 +695,21 @@ province di Brescia e Palermo.
 \end{figure}
 
 \begin{figure}
-    \includegraphics[width=0.4\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/milano_rimini.png}
-    \caption{Incidenti per mese a Milano e Rimini}
-    \label{fig:milano-rimini}
+    \includegraphics[width=0.5\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/milano_rimini.png}
+    \includegraphics[width=0.5\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/palermo_milano.png}
+    \caption{Incidenti per mese a Milano, Rimini e Palermo}
+    \label{fig:palermo-rimini-milano}
 \end{figure}
 
-\begin{figure}
-    \includegraphics[width=0.4\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/palermo_milano.png}
-    \caption{Incidenti per mese a Milano e Palermo}
-    \label{fig:palermo-milano}
-\end{figure}
+% \begin{figure}
+    
+% \end{figure}
 
 Sono state ricavate alcune località in cui si è riscontrata la tendenza inversa, come in provincia 
-di Rimini, raffigurata nel grafo \ref{fig:milano-rimini}.
-Lo stesso procedimento si è anche realizzato per Palermo, nella figura \ref{fig:rimini-palermo-milano}, 
+di Rimini.
+Lo stesso procedimento è anche stato realizzato per Palermo, 
 dove a Luglio e Agosto, il numero di incidenti supera addirittura il volume di Milano.
+Entrambi i grafi sono osservabili nella figura \ref{fig:rimini-palermo-milano}.
 
 Nella seguente tabella, sono indicati gli incrementi per anno del numero di incidenti a Rimini.
 L'incremento constante per ogni anno, conferma che questo fenomeno è un trend annuale.
@@ -825,8 +825,11 @@ Sono molto frequenti scontri frontali, laterali e tamponamenti.
 
 Dal grafo \ref{fig:tipo-intersezioni}, 
 si nota che la maggior parte degli incidenti avviene nei rettilinei e negli incroci.\\
-Bisognerebbe conoscere il numero totale di rettilinei, e di incroci di ogni altro tipo, in 
-modo da mettere in relazione i dati assoluti del grafo.
+Per rendere questa affermazione più attendibile, 
+bisognerebbe conoscere il numero totale di rettilinei, e di incroci di ogni altro tipo, in 
+modo da mettere in relazione i dati assoluti del grafo. 
+D'altro canto i risultati trovati sono plausibili, in quanto spesso le automobili raggiungono 
+velocità più alta nei rettilinei rispetto a qualsiasi altro tipo di incrocio.
 
 %...
 
@@ -842,8 +845,7 @@ modo da mettere in relazione i dati assoluti del grafo.
 Nella figura \ref{fig:numero-feriti} si nota che esistono tipologie di sinistri che 
 favoriscono la presenza di un solo ferito, come gli incidenti con pedone. 
 Al contrario, incidenti come il tamponamento e frontale, 
-hanno un'alta percentuale di situazioni con due o più feriti.
-
+hanno una più alta percentuale di situazioni con due o più feriti.
 
 %\clearpage
 \subsection{Incroci che favoriscono incidenti con pedoni}
@@ -857,7 +859,8 @@ ordinati in base alla tipologia di intersezioni e al numero di persone coinvolte
     \label{fig:pedoni-intersezioni}
 \end{figure}
 
-Tra i tipi di strada che favoriscono incidenti con pedoni spiccano i rettilinei, 
+Come nel grafo \ref{fig:tipo-intersezioni} spicca che 
+tra i tipi di strada che favoriscono incidenti con pedoni spiccano i rettilinei, 
 probabilmente in parte per l'alta velocità dei veicoli, ma anche per l'alto volume di
 tratti di strada di questo tipo.
 
@@ -919,7 +922,8 @@ Infatti le percentuali di individui per fascia sono
     \label{fig:eta-pedoni-norm}
 \end{figure}
 
-\ref{fig:eta-pedoni-norm}
+\todo{lelepado: sto facendo giusto a moltiplicare per 1-percentuale?}
+Una volta aver corretto il grafo, si ottiene la figura \ref{fig:eta-pedoni-norm}\dots
 
 
 %...
@@ -959,12 +963,10 @@ più incidentalità nel per ogni anno.
     \label{fig:regione-heatmap}
 \end{figure}
 
-Per quanto riguarda, invece, il numero di incidenti per ogni anno, dalla heatmap \ref{fig:regione-heatmap} 
-si nota che non cambia molto di anno in anno, e le regioni con maggiore numero di incidenti rimangono +
+Per quanto riguarda, invece, il numero di incidenti per ogni anno, 
+dalla heatmap \ref{fig:regione-heatmap} 
+si nota che non cambia molto di anno in anno, e le regioni con maggiore numero di incidenti rimangono 
 sempre Lombardia e Veneto.
-
-%...
-
 
 
 %\clearpage

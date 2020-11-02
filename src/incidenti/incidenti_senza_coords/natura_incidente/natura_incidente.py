@@ -42,8 +42,14 @@ sbandamento = sbandamento[sbandamento > 0.01]
 #print(tamponamento.value_counts())
 #print(frontale.value_counts())
 
-pd.DataFrame(
+df = pd.DataFrame(
     [tamponamento, frontale, pedoni, sbandamento], 
     ['tamponamento', 'frontale', 'pedoni', 'sbandamento']
-).transpose().plot.bar()
+)#.transpose()
+df = df[[1,2,3,4]].transpose()
+
+df.plot.bar(width=0.8)
+plt.xticks(rotation=0)
+plt.xlabel("Numero di feriti")
+plt.ylabel("Percentuale di feriti rispetto al totale del tipo di incidente")
 plt.show()
