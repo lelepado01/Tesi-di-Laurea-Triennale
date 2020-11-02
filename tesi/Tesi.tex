@@ -394,6 +394,9 @@ nell'incidente, oltre al tipo di veicoli.
 \subsection{Il tipo di veicolo dipende dalla strada?}
 
 \begin{lstlisting}
+path = "dataset/incidenti/incidenti_2010.txt"
+data = pd.read_csv(path, sep="\t")
+
 tipo_veicoli = data['tipo_veicolo_a'].value_counts(normalize=True).sort_index()
 autostrade_veicoli = data[data['localizzazione_incidente'] == 7]['tipo_veicolo_a']
 autostrade_veicoli = label_utils.join_labels(autostrade_veicoli, "dataset/incidenti/Classificazioni/tipo_veicoli__b_.csv").value_counts(normalize=True).sort_index()
@@ -416,18 +419,18 @@ plt.tight_layout()
 plt.show()
 \end{lstlisting}
 
-\begin{figure}
-    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/tipo_veicoli/differenza_strade.png}
-    \caption{Incidenti per tipo di veicolo nel 2010}
-    \label{fig:differenza-strade}
-\end{figure}
-
 Il grafo \ref{fig:differenza-strade} rappresenta quali sono i veicoli coinvolti con più frequenza 
 in sinistri, per tre tipi di strade diverse. Le percentuali sono calcolate per gruppo, quindi sommando 
 tutte le righe di, per esempio Autostrade, si ottiene $1$.\\
 Nonostante le auto private siano di gran lunga il tipo di veicolo 
 più coinvolto in incidenti, nelle autostrade non sono presenti molti incidenti con motocicli, 
 mentre cresce molto il numero di questi nelle strade urbane.
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/tipo_veicoli/differenza_strade.png}
+    \caption{Incidenti per tipo di veicolo nel 2010}
+    \label{fig:differenza-strade}
+\end{figure}
 
 %\clearpage
 \section{Dati Istat su conducente}
