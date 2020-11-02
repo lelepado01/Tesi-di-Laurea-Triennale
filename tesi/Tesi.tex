@@ -537,19 +537,6 @@ Durante il weekend invece, si osserva comunque un'incremento, ma solamente del 8
 
 \todo{Tabella con tutti gli orari di punta}
 
-% Tolti perchè ripetevano dati già visti
-%\begin{figure}
-%\includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/ore_punta/ore_punta_mattina.png}
-%\caption{Ore di punta Mattutine}
-%\label{fig:punta_mattina}
-%\end{figure}
-%
-%\begin{figure}
-%    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/ore_punta/ore_punta_sera.png}
-%    \caption{Ore di punta serali}
-%    \label{fig:punta_sera}
-%\end{figure}
-
 Va sottolineato che i grafi indicano gli incidenti normalizzati per numero di 
 giorni, 
 quindi gli incidenti totali della settimana sono divisi per cinque giorni, 
@@ -656,8 +643,11 @@ anno a partire dal 2010 fino al 2018.
     \label{fig:milano-trimestri}
 \end{figure}
 
-Per quanto possano esserci molti fattori che contribuiscono a questa tendenza, 
-quello che influisce di più devono essere le partenze per le vacanze.
+Anche nel caso dei trimestri, quello estivo ha decisamente un numero minore di incidenti, 
+nonostante il numero sia probabilmente alzato per la presenza di Giugno e Luglio.
+
+Per quanto possano esserci molti fattori che contribuiscono a questa tendenza di decremento di sinistri, 
+quello che influisce di più devono essere le partenze per le vacanze estive.
 
 Un modo per testare questa teoria è controllare se il traffico durante il mese di Agosto cala a Milano, 
 tuttavia, non è stato trovato alcun dataset riguardante il volume di automobili nelle strade della città.
@@ -694,16 +684,31 @@ D'altra parte, per Maggio e Giugno, le linee si separano per il concetto inverso
 %\clearpage
 \subsection{In località di mare gli incidenti aumentano in estate?}
 
+Dalla figura \ref{fig:mesi-estivi} si nota che le province con maggiore incidentalità 
+cambiano in Agosto rispetto a tutto l'anno. In particolare, ad aumentare in volume sono le 
+province di Brescia e Palermo.
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/mesi_estivi.png}
+    \caption{Prime 10 province per incidenti in Agosto rispetto a tutto l'anno}
+    \label{fig:mesi-estivi}
+\end{figure}
+
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/milano_rimini.png}
-    \caption{Incidenti per mese in Milano e Rimini}
+    \caption{Incidenti per mese a Milano e Rimini}
     \label{fig:milano-rimini}
 \end{figure}
 
-L'unica località in cui si è riscontrata la tendenza inversa è in provincia 
+Si sono ricavate alcune località in cui si è riscontrata la tendenza inversa, come in provincia 
 di Rimini, raffigurata nel grafo \ref{fig:milano-rimini}.
+Lo stesso procedimento si è anche realizzato per Palermo, nella figura \ref{fig:rimini-palermo-milano}
 
-\todo{Aggiungere altre località}
+\begin{figure}
+    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/rimini_palermo_milano.png}
+    \caption{Incidenti per mese a Milano, Palermo e Rimini}
+    \label{fig:rimini-palermo-milano}
+\end{figure}
 
 \begin{center}
     \def\arraystretch{1.5}%  
