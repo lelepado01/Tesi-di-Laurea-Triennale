@@ -34,8 +34,6 @@ pavimentazione = data['pavimentazione']
 # Per volume le strade pavimentate hanno più incidenti...
 # Per caso influisce fatto che alcune strade hanno pavimentazione a blocchi (PAVE')?
 
-# TODO: trovare / creare mappa con pave a milano e confrontare con mappa incidenti
-
 segnaletica = data['segnaletica']
 #print(segnaletica.unique())
 
