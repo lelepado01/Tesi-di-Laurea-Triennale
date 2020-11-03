@@ -54,8 +54,20 @@ gennaio.index = gennaio['REGIONE']
 agosto = agosto['Agosto']
 gennaio = gennaio['Gennaio']
 
-plt.bar(agosto.index, agosto, label='Agosto',  color='#d8758c')
-plt.bar(gennaio.index, gennaio, label='Gennaio', alpha=0.9, color='#75d8c1')
+red_ls = ['#d693a3']*20
+red_ls[3:8] = ['#f65578']*6
+red_ls[5] = '#d693a3'
+red_ls[10] = '#f65578'
+red_ls[14] = '#f65578'
+
+blue_ls = ['#95c6d8']*20
+blue_ls[3:8] = ['#70b8ff']*6
+blue_ls[5] = '#95c6d8'
+blue_ls[10] = '#70b8ff'
+blue_ls[14] = '#70b8ff'
+
+plt.bar(agosto.index, agosto, label='Agosto',  color=red_ls)
+plt.bar(gennaio.index, gennaio, label='Gennaio', alpha=0.9, color=blue_ls)
 plt.xticks(rotation=90)
 plt.ylabel("Incidenti al mese (2014)")
 plt.legend()
