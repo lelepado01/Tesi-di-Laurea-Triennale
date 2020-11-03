@@ -101,9 +101,11 @@ adriatica = data[data['CODICE'] == 'SS01601']
 a1 = data[data['CODICE'] == 'AA00101']
 a1_milano = a1[a1['PROVINCIA'] == 'Milano'][mesi]
 
+a1 = sum_columns(a1[mesi], normalize=True)
 a1_milano = sum_columns(a1_milano[mesi], normalize=True)
 adriatica = sum_columns(adriatica[mesi], normalize=True)
 
-pd.DataFrame([a1_milano, adriatica], ['Milano', 'Adriatica']).transpose().plot.bar()
+df = pd.DataFrame([a1, adriatica], ['A1', 'Adriatica']).transpose().plot.bar(width=0.8)
+plt.ylabel("Percentuale di incidenti al mese (2018)")
 plt.tight_layout()
 plt.show()
