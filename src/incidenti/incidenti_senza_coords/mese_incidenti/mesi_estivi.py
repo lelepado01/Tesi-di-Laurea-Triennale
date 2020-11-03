@@ -17,12 +17,20 @@ mesi = label_utils.join_labels(data['provincia'], 'dataset/incidenti/Classificaz
 #mesi = mesi / mesi.sum()
 # print(mesi.head(10))
 
+agosto_ls = ['#99deef']*12
+agosto_ls[:4] = ['#25caf4']*4
+
+mesi_ls = ['#7296ea']*12
+mesi_ls[:2] = ['#2b65ee']*2
+mesi_ls[7] = '#2b65ee'
+mesi_ls[9] = '#2b65ee'
+
 plt.subplot(2,1,1)
-agosto_label.plot.bar(width=0.8, color='#4aceef')
+agosto_label.plot.bar(width=0.9, color=agosto_ls)
 plt.ylabel("Incidenti in Agosto (2011)")
 plt.tight_layout()
 plt.subplot(2,1,2)
-mesi.plot.bar(width=0.8, color='#4a7bef')
+mesi.plot.bar(width=0.9, color=mesi_ls)
 plt.ylabel("Incidenti all'anno (2011)")
 plt.tight_layout()
 plt.show()

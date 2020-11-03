@@ -21,7 +21,7 @@ pd.DataFrame([milano_mese, palermo_mese], ['Milano', 'Palermo']).transpose().plo
     color={
         'Milano': '#4566c1',
         'Palermo': '#66c145'
-    },
+    }
 )
 
 plt.xlabel("Mese")
