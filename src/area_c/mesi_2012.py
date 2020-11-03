@@ -44,7 +44,10 @@ perc_traffico = df / df.sum()
 
 # print(perc_traffico)
 
-perc_traffico.plot.bar(width=0.9, color='#dd8d46')
+color_ls = ['#dbad85']*12
+color_ls[5:7] = ['#dd8d46']*3
+
+perc_traffico.plot.bar(width=0.9, color=color_ls)
 plt.plot(np.array([-1, 12]),np.array([perc_traffico.mean(), perc_traffico.mean()]), color='#ddd846')
 plt.text(11, df.mean()-0.2, "Media")
 plt.xlabel("Mesi")

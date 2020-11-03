@@ -16,11 +16,12 @@ incidenti_2017 = pd.read_csv("dataset/incidenti/incidenti_2017.txt", sep="\t", e
 incidenti_2018 = pd.read_csv("dataset/incidenti/incidenti_2018.txt", sep="\t", encoding='latin1')
 
 def get_trimestre(data : pd.Series) -> pd.Series: 
-    res = {1 : 0, 2 : 0, 3 : 0, 4 : 0}
-    index = 0
-    for _, row in data.iteritems(): 
-        res[(index % 4) + 1] += row
-        index += 1
+    res = {
+        1 : data.transpose()[0:3].sum(), 
+        2 : data.transpose()[3:6].sum(), 
+        3 : data.transpose()[6:9].sum(), 
+        4 : data.transpose()[9:13].sum()
+        }
 
     return pd.Series(res.values(), res.keys())
 
@@ -51,12 +52,16 @@ import sys
 sys.path.append('src')
 import heatmap as H
 
+# plt.subplot(1,2,1)
 fig, ax = plt.subplots()
 
 im, cbar = H.heatmap(provs, provs.index, [1,2,3,4], ax=ax, cmap="YlGn", cbarlabel="Incidenti al trimestre")
 
 plt.xlabel("Trimestre")
 fig.tight_layout()
+
+# plt.subplot(1,2,2)
+#plt.plot(provs['2018'])
 plt.show()
 
 # provs.plot(linewidth=1)
