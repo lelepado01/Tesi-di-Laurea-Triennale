@@ -22,7 +22,7 @@ field_incidenti = 'Agosto'
 path = "dataset/regioni/regioni.geojson"
 regioni = gp.read_file(path)
 
-data = pd.read_csv('dataset/incidenti/aci/autostrade/mesi_2014.csv')
+data = pd.read_csv('dataset/incidenti/aci/autostrade/mesi_2012.csv')
 #data = data[data['INC'] != '0,0'].astype({'INC': int})
 
 # incidenti = get_sum_of_fields(data, 'REGIONE', field_incidenti)
