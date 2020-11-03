@@ -14,12 +14,15 @@ for giorni_in_mese in [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]:
 
 media = milano_mese.mean()
 
-#plt.xlabel("Mese")
-#plt.ylabel("Incidenti al giorno (2010)")
-#plt.plot([-1, 100], [media, media], color='#c0d147', label='Media')
-#plt.text(11.7,media - 0.1,'Media')
-#milano_mese.plot.bar(width=0.8, color='#5747d1')
-#plt.show()
+color_ls = ['#928ace']*12
+color_ls[7] = '#5747d1'
+
+plt.xlabel("Mese")
+plt.ylabel("Incidenti al giorno (2010)")
+plt.plot([-1, 100], [media, media], color='#c0d147', label='Media')
+plt.text(11.7,media - 0.1,'Media')
+milano_mese.plot.bar(width=0.8, color=color_ls)
+plt.show()
 
 # Quanto scendono gli incidenti in Agosto (Numericamente) 
 # Lo faccio per ogni anno
@@ -42,20 +45,20 @@ var_2010 = variazione_perc(media, agosto)
 
 # Vale per tutti gli anni?
 
-path = "dataset/incidenti/incidenti_"
-for year in range(2011, 2014):
-    dati = pd.read_csv(path + str(year) + ".txt", sep='\t', encoding='latin1')
-    milano_mese = dati[dati['provincia'] == 15]['mese'].value_counts().sort_index()
+# path = "dataset/incidenti/incidenti_"
+# for year in range(2011, 2014):
+#     dati = pd.read_csv(path + str(year) + ".txt", sep='\t', encoding='latin1')
+#     milano_mese = dati[dati['provincia'] == 15]['mese'].value_counts().sort_index()
 
-    index = 0
-    for giorni_in_mese in [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]:
-        milano_mese.iloc[index] /= giorni_in_mese
-        index += 1
+#     index = 0
+#     for giorni_in_mese in [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]:
+#         milano_mese.iloc[index] /= giorni_in_mese
+#         index += 1
 
-    media = milano_mese.mean()
-    agosto = milano_mese.iloc[7]
+#     media = milano_mese.mean()
+#     agosto = milano_mese.iloc[7]
 
-    print(str(year) + ": " + str(variazione_perc(media, agosto)))
+#     print(str(year) + ": " + str(variazione_perc(media, agosto)))
 
 # 2011: -35.14
 # 2012: -45.46
