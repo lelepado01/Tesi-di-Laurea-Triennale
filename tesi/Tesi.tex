@@ -119,8 +119,7 @@ indicano anche il nome della rispettiva via.
 \subsection{Dati riguardanti autovelox}
 Un primo dataset individuato, che riguardasse delle posizioni degli autovelox fissi, 
 è stato una mappa GoogleMyMaps
-% non riesco a compilare se metto questo link
-%\footnote{\url{https://www.google.com/maps/d/viewer?mid=1CBgMTvIDnbGo22-Y1f3rVcbeX4C0v_w1&ll=45.365557951599605%2C10.03650113755961&z=8}} 
+\footnote{\url{https://www.google.com/maps/d/viewer?mid=1CBgMTvIDnbGo22-Y1f3rVcbeX4C0v_w1&ll=45.365557951599605\%2C10.03650113755961&z=8}} 
 creata da un utente anonimo, dunque senza un modo di provare l'autenticità dei dati.
 
 Il dataset utilizzato, invece, è stato ottenuto tramite OpenStreetMaps, ricavando solo gli autovelox 
@@ -176,6 +175,17 @@ La lista di Ztl Milano contiene i seguenti autovelox:
 \end{center}
 
 Il campi della tabella ripetuti sono dovuti al fatto che alcuni autovelox sono stati installati in entrambe le direzioni.
+
+\subsection{Dati riguardanti patentati}
+
+I dati sulle persone con patente per regione, che è stato utilizzato per stimare il traffico 
+regionale, proviene dal sito del Ministero delle Infrastrutture e Trasporti 
+\footnote{\url{http://dati.mit.gov.it/catalog/dataset/patenti}}.
+Tuttavia, questo dataset è diviso in vari file seconda della regione e, vista la quantità 
+non necessaria di informazioni, si è preferito usare dati provienienti da un'infografica che 
+sintetizza il dataset in questione
+\footnote{\url{https://www.mit.gov.it/sites/default/files/media/notizia/2017-07/INFOGRAFICA\%20Dati\%20sintesi\%20patenti\%20Italia.pdf}}.
+In particolare, da questo pdf si è mantenuto solamente il numero di patenti per regione.
 
 \subsection{Dati riguardanti il meteo}
 \todo{lelepado: non so ancora se usarli}
@@ -1008,6 +1018,7 @@ Nella seguente tabella sono riportate le medie di incidenti annuali per regione,
 e quella di patentati per regione.
 
 \begin{center}
+    \def\arraystretch{1.5}%  
     \begin{tabular}{ |c|c|c| } 
     \hline
     Zona & Media di Incidenti annuali & Patentati (in Milioni) \\ 
@@ -1072,6 +1083,7 @@ L'indice di correlazione utilizzato è il coefficiente di Pearson.
 
 \todo{lelepado: aggiungo la formula?}
 \begin{center}
+    \def\arraystretch{1.5}%  
     \begin{tabular}{ |c|c|c| } 
     \hline
     Incidenti & Incidenti & Feriti \\ 

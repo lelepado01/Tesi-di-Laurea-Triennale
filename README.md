@@ -60,6 +60,10 @@
 
     [Mappa con Autostrade](http://dati.mit.gov.it/catalog/dataset/grafo-stradale-anas)
 
+- Patenti
+
+    [Infografica](https://www.mit.gov.it/sites/default/files/media/notizia/2017-07/INFOGRAFICA%20Dati%20sintesi%20patenti%20Italia.pdf)
+
 - Traffico per ora
 
     [Scrape di google maps ogni tot](https://www.google.com/maps/@45.4696946,9.1595385,13.09z/data=!5m1!1e1)
@@ -83,16 +87,9 @@
 
 ### Todo
 
-- Che ordine devo tenere per i capitoli? 
 - Campione conducenti veicoli
 - Introduzione: spiego il progetto, come ho trovato i dati, cosa faccio con i dati, dove voglio arrivare
-- Cambiare nome dei sottocapitoli
-- Citare tutte le immagini
-- 3.2.2 controlla
-- 3.3.1 rapporta al traffico dell'orario
-- 3.3.3 rapporta con il traffico dell'area c
-- 3.4.5 controlla con la popolazione
-- Grafi migliori
+- Introduzione: come ho trovato dati patenti
 
 ### Risultati da Trascrivere in Tesi: 
 
