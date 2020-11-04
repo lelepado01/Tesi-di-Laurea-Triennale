@@ -991,7 +991,32 @@ In figura \ref{fig:incidenti-per-mese}, si osserva che la maggior parte degli in
 per quanto riguarda le autostrade, avvengono tra Luglio e Agosto, dunque è corretto che,  
 nella maggior parte delle regioni, il volume di sinistri per quest'ultimo sia maggiore rispetto a Gennaio. 
 
+I grafi precedenti, soprattutto le heatmap regionali, non tengono conto del volume del traffico.
+Non avendo informazioni riguardanti il traffico in tutta Italia, si sono stimate queste informazioni 
+tramite il numero di patentati per regione.
 
+\begin{figure}
+    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/mappe_regioni/incidenti_patenti.png}
+    \caption{Incidenti e patentati per regione}
+    \label{fig:incidenti-patentati}
+\end{figure}
+
+Se si visualizza il rapporto tra incidenti e patentati per regione (figura \ref{fig:incidenti-patentati}), 
+si osserva una chiara distinzione tra nord, centro e sud Italia.
+A cosa è dovuta questa ampia disparità?
+
+\todo{tabella con dati del rapporto}
+
+Il grafo \ref{fig:incidenti-patentati-bar} è stato suddiviso tra regioni del nord, centro e sud, per facilitare 
+la lettura, e indica le percentuali di incidenti e patentati per la rispettiva regione. 
+\'E subito osservabile che, nella maggior parte delle regioni del centro, la percentuale di incidenti 
+supera quella di patentati, mentre nel sud Italia accade il fenomeno opposto.
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/mappe_regioni/incidenti_patenti_bar.png}
+    \caption{Incidenti e patentati per regione}
+    \label{fig:incidenti-patentati-bar}
+\end{figure}
 
 \subsection{Incidenti in Lombardia}
 
