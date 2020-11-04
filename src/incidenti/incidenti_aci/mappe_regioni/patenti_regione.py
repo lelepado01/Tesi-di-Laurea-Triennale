@@ -38,8 +38,38 @@ regioni = gp.read_file('dataset/regioni/regioni.geojson').to_crs(epsg=3857)
 regioni.index = regioni['reg_name']
 regioni = regioni.sort_index()
 
-inc_reg = gp.GeoDataFrame(incidenti_norm, geometry=regioni['geometry'])
-inc_reg.plot(column=0, cmap='OrRd')
-plt.title("Incidenti per regione / Patentati per regione")
-plt.axis('off')
+# inc_reg = gp.GeoDataFrame(incidenti_norm, geometry=regioni['geometry'])
+# inc_reg.plot(column=0, cmap='OrRd')
+# plt.title("Incidenti per regione / Patentati per regione")
+# plt.axis('off')
+# plt.show()
+
+order = [
+    'Piemonte', 'Valle d\'Aosta', 'Liguria', 'Lombardia', 
+    'Trentino-Alto Adige', 'Veneto', 'Friuli-Venezia Giulia', 'Emilia Romagna', 
+    'Toscana', 'Umbria', 'Marche', 'Lazio', 
+    'Abruzzo', 'Molise', 'Campania', 'Puglia', 'Basilicata', 'Calabria', 
+    'Sicilia', 'Sardegna'
+]
+
+color_ls = ['#2eaad3'] * 8
+color_ls = color_ls + ['#2e57d3'] * 4
+color_ls = color_ls + ['#2ed3aa'] * 8
+color_ls = [color_ls, color_ls]
+
+patenti = patenti.reindex(order)
+patenti = patenti['NUMERO'] / patenti['NUMERO'].sum()
+incidenti = incidenti.reindex(order)
+incidenti = incidenti['TOTALE'] / incidenti['TOTALE'].sum()
+
+df = pd.DataFrame([patenti, incidenti], ['Patentati', 'Incidenti']).transpose()
+
+df.plot.bar(width=0.9)
+plt.text(2, 0.18, "Nord Italia")
+plt.text(8, 0.13, "Centro Italia")
+plt.text(15, 0.10, "Sud Italia")
+plt.xticks(rotation=90)
+plt.xlabel("")
+plt.ylabel("Percentuale di incidenti e patentati per regione")
+plt.tight_layout()
 plt.show()
