@@ -336,7 +336,7 @@ Per fare ciò, la soluzione più veloce è stata quella di enumerare,
 come raffigurato nella mappa \ref{fig:autovelox-indici} tutti gli autovelox sulla mappa, 
 e confrontarli con le vie della tabella.
 
-\begin{lstlisting}
+\begin{lstlisting}[language=Python]
     path = "dataset/autovelox/autovelox_milano.geojson"
     autovelox = gp.read_file(path).to_crs(epsg=3857)
     layer_autovelox = autovelox.plot(figsize=(11,9), color="red")
@@ -403,30 +403,16 @@ nell'incidente, oltre al tipo di veicoli.
 %\clearpage
 \subsection{Il tipo di veicolo dipende dalla strada?}
 
-\begin{lstlisting}
-path = "dataset/incidenti/incidenti_2010.txt"
-data = pd.read_csv(path, sep="\t")
 
-tipo_veicoli = data['tipo_veicolo_a'].value_counts(normalize=True).sort_index()
-autostrade_veicoli = data[data['localizzazione_incidente'] == 7]['tipo_veicolo_a']
-autostrade_veicoli = label_utils.join_labels(autostrade_veicoli, "dataset/incidenti/Classificazioni/tipo_veicoli__b_.csv").value_counts(normalize=True).sort_index()
+\begin{lstlisting}[language=Python]
+    strade_urbane = data[(data['localizzazione_incidente'] == 1) | (data['localizzazione_incidente'] == 2) | (data['localizzazione_incidente'] == 3)]['tipo_veicolo_a']
+    strade_urbane = label_utils.join_labels(strade_urbane, "dataset/incidenti/Classificazioni/tipo_veicoli__b_.csv").value_counts(normalize=True).sort_index()
 
-strade_urbane = data[(data['localizzazione_incidente'] == 1) | (data['localizzazione_incidente'] == 2) | (data['localizzazione_incidente'] == 3)]['tipo_veicolo_a']
-strade_urbane = label_utils.join_labels(strade_urbane, "dataset/incidenti/Classificazioni/tipo_veicoli__b_.csv").value_counts(normalize=True).sort_index()
+    strade_extraurbane = data[(data['localizzazione_incidente'] == 4) | (data['localizzazione_incidente'] == 5) | (data['localizzazione_incidente'] == 6)]['tipo_veicolo_a']
+    strade_extraurbane = label_utils.join_labels(strade_extraurbane, "dataset/incidenti/Classificazioni/tipo_veicoli__b_.csv").value_counts(normalize=True).sort_index()
 
-strade_extraurbane = data[(data['localizzazione_incidente'] == 4) | (data['localizzazione_incidente'] == 5) | (data['localizzazione_incidente'] == 6)]['tipo_veicolo_a']
-strade_extraurbane = label_utils.join_labels(strade_extraurbane, "dataset/incidenti/Classificazioni/tipo_veicoli__b_.csv").value_counts(normalize=True).sort_index()
-
-uniti = pd.DataFrame([
-   autostrade_veicoli, strade_urbane, strade_extraurbane
-], index=['Autostrade', 'Strade urbane', 'Strade Extra-Urbane']).transpose()
-
-uniti[uniti > 0.001].dropna().transpose().plot.barh(width=1)
-plt.xlabel("Percentuale del tipo di veicolo")
-plt.yticks()
-plt.legend(bbox_to_anchor=(1,1), loc="upper left")
-plt.tight_layout()
-plt.show()
+    # Dove 1,2,3 sono gli ID dei diversi tipi di strade urbane, 
+    # mentre 4,5,6 gli ID delle strade extraurbane
 \end{lstlisting}
 
 Il grafo \ref{fig:differenza-strade} rappresenta quali sono i veicoli coinvolti con più frequenza 
@@ -548,6 +534,15 @@ Durante il weekend invece, si osserva comunque un'incremento, ma solamente del 8
 Va sottolineato che i grafi indicano gli incidenti normalizzati per numero di 
 giorni, quindi gli incidenti totali della settimana sono divisi per cinque giorni, 
 mentre quelli del weekend per due.
+
+\begin{lstlisting}[language=Python]
+    ora_weekend = data[data['giorno_settimana'] > 5]['ora'].value_counts().sort_index()
+    ora_week = data[data['giorno_settimana'] < 6]['ora'].value_counts().sort_index()
+
+    ora_week /= 5 * 52
+    ora_weekend /= 2 * 52
+\end{lstlisting}
+
 Si pu\'o osservare che nella fascia oraria delle 18:00, 
 avvengono molti più sinistri, mentre nella fascia mattutina, 
 il numero non sembra variare molto dalla media di incidenti durante il giorno.
@@ -889,6 +884,14 @@ Se si normalizza per anni contenuti in ogni fascia, ipotizzando un numero
 costante di persone di ogni età, si ottiene un grafo, per quanto riguarda i pedoni 
 feriti, molto differente. \\
 La normalizzazione tiene conto che la fascia di età '65 anni e oltre' vale venti anni.
+
+\begin{lstlisting}[language=Python]
+    anni_per_fascia_feriti = pd.Series([5,5,3,3,4,5,15,10,5,5,5,20,1])
+    anni_per_fascia_morti = pd.Series([5,5,3,4,5,15,10,5,5,20,1])
+    
+    pedoni_feriti = pedoni_feriti.values / np.array(anni_per_fascia_feriti)
+    pedoni_morti = pedoni_morti.values / np.array(anni_per_fascia_morti)
+\end{lstlisting}
 
 Tuttavia, non è detto che in Italia il numero di individui con la stessa età sia costante.
 Infatti le percentuali di individui per fascia sono
