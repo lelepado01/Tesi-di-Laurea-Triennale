@@ -1139,7 +1139,17 @@ E allo stesso modo, esiste correlazione tra morti e incidenti, o tra morti e fer
 Ovviamente si attende un esito positivo a queste domande.
 L'indice di correlazione utilizzato è il coefficiente di Pearson.
 
-\todo{lelepado: aggiungo la formula?}
+\begin{lstlisting}
+    data = pd.read_csv("dataset/incidenti/aci/autostrade/comuni_2018.csv")
+    inc = data['INC']
+    fer = data['FER']
+    mor = data['MOR']
+
+    print(inc.corr(fer))
+    print(inc.corr(mor))
+    print(fer.corr(mor))
+\end{lstlisting}
+
 \begin{center}
     \def\arraystretch{1.5}%  
     \begin{tabular}{ |c|c|c| } 
@@ -1147,15 +1157,15 @@ L'indice di correlazione utilizzato è il coefficiente di Pearson.
     Incidenti & Incidenti & Feriti \\ 
     Feriti & Morti & Morti \\ 
     \hline
-    0.9827 & 0.8205 & 0.8332 \\ 
+    0.9836 & 0.3385 & 0.3355 \\ 
     \hline
     \end{tabular}
 \end{center}
 
 Il coefficiente di Pearson, per quanto riguarda Incidenti e Feriti, 
 è molto vicino a uno, quindi i due campioni sono strettamente correlati.
-I coefficienti riguardanti i morti sono meno vicini uno, probabilmente per il minor numero 
-di incidenti mortali, che rendono il campione più ristretto
+I coefficienti riguardanti i morti sono molto meno vicini a uno, probabilmente per il minor numero 
+di incidenti mortali, che rendono il campione più ristretto.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/comuni/corr_incidenti_feriti.png}
