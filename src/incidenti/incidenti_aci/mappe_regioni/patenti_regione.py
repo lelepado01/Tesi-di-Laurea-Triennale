@@ -18,7 +18,7 @@ def get_sum_of_fields(data : pd.DataFrame, select_field : str, field_to_sum : st
     return pd.DataFrame(res, index=[select_field, field_to_sum]).transpose()
 
 patenti = pd.read_csv("dataset/patenti/patenti_mit.csv")
-incidenti = pd.read_csv("dataset/incidenti/aci/autostrade/mesi_2012.csv")
+incidenti = pd.read_csv("dataset/incidenti/aci/autostrade/mesi_2018.csv")
 
 incidenti = get_sum_of_fields(incidenti, 'REGIONE', 'TOTALE')
 
@@ -38,11 +38,11 @@ regioni = gp.read_file('dataset/regioni/regioni.geojson').to_crs(epsg=3857)
 regioni.index = regioni['reg_name']
 regioni = regioni.sort_index()
 
-# inc_reg = gp.GeoDataFrame(incidenti_norm, geometry=regioni['geometry'])
-# inc_reg.plot(column=0, cmap='OrRd')
-# plt.title("Incidenti per regione / Patentati per regione")
-# plt.axis('off')
-# plt.show()
+inc_reg = gp.GeoDataFrame(incidenti_norm, geometry=regioni['geometry'])
+inc_reg.plot(column=0, cmap='OrRd')
+plt.title("Incidenti per regione / Patentati per regione")
+plt.axis('off')
+plt.show()
 
 order = [
     'Piemonte', 'Valle d\'Aosta', 'Liguria', 'Lombardia', 
@@ -75,33 +75,33 @@ order = [
 # plt.show()
 
 
-nord = incidenti.loc[['Piemonte', 'Valle d\'Aosta', 'Liguria', 'Lombardia', 
-    'Trentino-Alto Adige', 'Veneto', 'Friuli-Venezia Giulia', 'Emilia Romagna']]
+# nord = incidenti.loc[['Piemonte', 'Valle d\'Aosta', 'Liguria', 'Lombardia', 
+#     'Trentino-Alto Adige', 'Veneto', 'Friuli-Venezia Giulia', 'Emilia Romagna']]
 
-centro = incidenti.loc[['Toscana', 'Umbria', 'Marche', 'Lazio']]
+# centro = incidenti.loc[['Toscana', 'Umbria', 'Marche', 'Lazio']]
 
-sud = incidenti.loc[['Abruzzo', 'Molise', 'Campania', 'Puglia', 'Basilicata', 'Calabria', 
-    'Sicilia', 'Sardegna']]
+# sud = incidenti.loc[['Abruzzo', 'Molise', 'Campania', 'Puglia', 'Basilicata', 'Calabria', 
+#     'Sicilia', 'Sardegna']]
 
 # print(nord['TOTALE'].mean())
 # print(centro['TOTALE'].mean())
 # print(sud['TOTALE'].mean())
 
-ita = pd.DataFrame([nord['TOTALE'], centro['TOTALE'], sud['TOTALE']], ['Nord', 'Centro', 'Sud']).transpose()
+# ita = pd.DataFrame([nord['TOTALE'], centro['TOTALE'], sud['TOTALE']], ['Nord', 'Centro', 'Sud']).transpose()
 
-nord_p = patenti.loc[['Piemonte', 'Valle d\'Aosta', 'Liguria', 'Lombardia', 
-    'Trentino-Alto Adige', 'Veneto', 'Friuli-Venezia Giulia', 'Emilia Romagna']]
+# nord_p = patenti.loc[['Piemonte', 'Valle d\'Aosta', 'Liguria', 'Lombardia', 
+#     'Trentino-Alto Adige', 'Veneto', 'Friuli-Venezia Giulia', 'Emilia Romagna']]
 
-centro_p = patenti.loc[['Toscana', 'Umbria', 'Marche', 'Lazio']]
+# centro_p = patenti.loc[['Toscana', 'Umbria', 'Marche', 'Lazio']]
 
-sud_p = patenti.loc[['Abruzzo', 'Molise', 'Campania', 'Puglia', 'Basilicata', 'Calabria', 
-    'Sicilia', 'Sardegna']]
+# sud_p = patenti.loc[['Abruzzo', 'Molise', 'Campania', 'Puglia', 'Basilicata', 'Calabria', 
+#     'Sicilia', 'Sardegna']]
 
-print(nord_p['NUMERO'].mean())
-print(centro_p['NUMERO'].mean())
-print(sud_p['NUMERO'].mean())
+# print(nord_p['NUMERO'].mean())
+# print(centro_p['NUMERO'].mean())
+# print(sud_p['NUMERO'].mean())
 
-ita_p = pd.DataFrame([nord_p['NUMERO'], centro_p['NUMERO'], sud_p['NUMERO']], ['Nord', 'Centro', 'Sud']).transpose()
+# ita_p = pd.DataFrame([nord_p['NUMERO'], centro_p['NUMERO'], sud_p['NUMERO']], ['Nord', 'Centro', 'Sud']).transpose()
 
 # plt.subplot(1,2,1)
 # plt.boxplot(nord['TOTALE'], positions=[1], widths=[0.6])
