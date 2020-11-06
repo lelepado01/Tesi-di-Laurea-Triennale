@@ -215,7 +215,12 @@ i percorsi delle piste ciclabili di Milano
 
 \subsection{Dati riguardanti pavè}
 Non sembra che esista un dataset contenente la composizione del manto stradale di Milano.
-\todo{lelepado: aggiungere siti e parole chiave}
+I dati in questione sono stati cercati sui principali siti di opendata
+\footnote{\url{https://dati.comune.milano.it/dataset}}
+\footnote{\url{https://www.dati.lombardia.it/}}
+\footnote{\url{https://www.dati.gov.it/}}
+tramite parole chiave come \textit{strada}, \textit{manto stradale}, \textit{pave}, 
+\textit{composizione strada}.
 
 Una possibile risorsa trovata è una mappa utilizzata in un articolo del blog urbanfile
 \footnote{\url{https://blog.urbanfile.org/2018/05/02/milano-arredo-urbano-il-pave-risorsa-da-preservare-o-problema-da-eliminare/}}.
@@ -226,12 +231,32 @@ Il dataset che potrebbe avvicinarsi di più ad ottenere le informazioni cercate 
 quello riguardante i percorsi dei trasporti tranviari. Basandosi su queste informazioni, e assumendo che 
 la maggior parte delle linee dei tram a Milano sono pavimentate in pavè, è possibile ottenere un dataset con taglia discreta.
 
-\'E anche possibile confrontare il dataset ottenuto con la mappa di xxxx.
-% Non molto simili...
+\'E possibile confrontare il dataset ottenuto con la mappa di Urbanfile e, 
+per quanto alcune linee coincidano, non trovo somiglianza sufficiente per giustificare la stima.
 
 \subsection{Dati riguardanti traffico stradale}
-\todo{lelepado: devo ancora cercare se c'è un dataset sul traffico}
+Per quanto riguarda i dati sul traffico stradale, anche in questo caso non è stato trovato un 
+dataset, sia nei siti di cui si è parlato in precedenza, sia su quello di autostrade
+\footnote{\url{http://www.autostrade.it/it/home}}.
 
+Il primo tentativo, per avere una stima del traffico è stato la realizzazione di uno script per 
+fare scraping da Google Maps. Quest'ultimo infatti mostra sia il traffico in tempo reale, sia 
+il traffico stimato a una determinata ora. Tuttavia, leggendo nella documentazione, si è scoperto che 
+non è possibile ottenere dati sul traffico stimato, per mancanza di API. 
+Per quanto fosse stato possibile realizzare comunque uno script per individuare le linee 
+rosse, arancioni e verdi, si è optato per la ricerca di un altro dataset.
+
+Dunque si è deciso di utilizzare i dati riguardanti gli ingressi in area C a Milano, 
+trovati sul sito del comune di Milano
+\footnote{\url{https://dati.comune.milano.it/dataset}}.
+
+%...
+
+Un'altro dataset utilizzato per stimare il numero di automobili, è quello contenente il numero di 
+patentati per regione, trovato nel sito del Ministero dei Trasporti
+\footnote{\url{dati.mit.gov.it/catalog/dataset/patenti}}.
+I dati, riguardanti i patentati fino al 2019, sono divisi in file per regione e contengono anche 
+informazioni riguardanti la provincia e data di conseguimento, altre al tipo di patente ottenuta.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Dati Geolocalizzati}
