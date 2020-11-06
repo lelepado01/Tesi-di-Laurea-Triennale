@@ -2,7 +2,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-path = "dataset/incidenti/incidenti_2010.txt"
+path = "dataset/incidenti/incidenti_2013.txt"
 data = pd.read_csv(path, sep="\t")
 
 milano_mese = data[data['provincia'] == 15]['mese'].value_counts().sort_index()
@@ -18,7 +18,7 @@ color_ls = ['#928ace']*12
 color_ls[7] = '#5747d1'
 
 plt.xlabel("Mese")
-plt.ylabel("Incidenti al giorno (2010)")
+plt.ylabel("Incidenti al giorno (2013)")
 plt.plot([-1, 100], [media, media], color='#c0d147', label='Media')
 plt.text(11.7,media - 0.1,'Media')
 milano_mese.plot.bar(width=0.8, color=color_ls)

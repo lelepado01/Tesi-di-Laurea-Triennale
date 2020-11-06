@@ -2,7 +2,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-path = "dataset/incidenti/incidenti_2010.txt"
+path = "dataset/incidenti/incidenti_2013.txt"
 data = pd.read_csv(path, sep="\t")
 
 milano_mese = data[data['provincia'] == 15]['mese'].value_counts().sort_index()
@@ -25,7 +25,7 @@ pd.DataFrame([milano_mese, rimini_mese], ['Milano', 'Rimini']).transpose().plot.
     }
 )
 plt.xlabel("Mese")
-plt.ylabel("Incidenti al giorno (2010)")
+plt.ylabel("Incidenti al giorno (2013)")
 plt.xticks(range(0,12), ["Gennaio","Febbraio","Marzo","Aprile","Maggio","Giugno","Luglio","Agosto","Settembre","Ottobre","Novembre","Dicembre"])
 plt.plot([-1, 15], [milano_media, milano_media], color='#c0d147')
 plt.plot([-1, 15], [rimini_media, rimini_media], color='#c0d147')

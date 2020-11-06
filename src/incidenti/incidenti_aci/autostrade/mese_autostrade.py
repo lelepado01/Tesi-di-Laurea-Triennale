@@ -34,14 +34,14 @@ def sum_columns(data : pd.DataFrame, normalize = False) -> pd.Series:
 
     return res
 
-#res = {}
-#for prov in lombardia['PROVINCIA'].unique(): 
+# res = {}
+# for prov in lombardia['PROVINCIA'].unique(): 
 #    res[prov] = sum(lombardia[lombardia['PROVINCIA'] == prov]['TOTALE'])
 
-#lombardia = get_sum_fields(data, 'REGIONE', 'TOTALE')
-#lombardia.plot.bar()
-#plt.tight_layout()
-#plt.show()
+# lombardia = get_sum_fields(data, 'REGIONE', 'TOTALE')
+# lombardia.plot.bar()
+# plt.tight_layout()
+# plt.show()
 
 # Per come sono organizzati, i dati sono un po' scomodi
 
@@ -60,52 +60,52 @@ aosta = sum_columns(aosta)
 roma = sum_columns(roma)
 
 # Normalizzo
-#rimini = rimini / sum(rimini)
-#milano = milano / sum(milano)
-#aosta = aosta / sum(aosta)
-#roma =  roma / sum(roma)
+# rimini = rimini / sum(rimini)
+# milano = milano / sum(milano)
+# aosta = aosta / sum(aosta)
+# roma =  roma / sum(roma)
 
-#pd.DataFrame([milano, aosta], index=['Milano', 'Aosta']).transpose().plot.bar()
-#pd.DataFrame([milano, roma], index=['Milano', 'Roma']).transpose().plot.bar()
-#plt.show()
+# pd.DataFrame([milano, aosta], index=['Milano', 'Aosta']).transpose().plot.bar()
+# pd.DataFrame([milano, roma], index=['Milano', 'Roma']).transpose().plot.bar()
+# plt.show()
 
 #print(sum_columns(rimini))
 
 # Quali sono le autostrade con più incidenti?
 
-#autostrade = get_sum_fields(data, 'NOME STRADA', 'TOTALE').sort_values(ascending=True)
-#autostrade[autostrade > 400].plot.barh()
-#plt.tight_layout()
-#plt.xlabel("Autostrade con più incidenti totali")
-#plt.show()
+# autostrade = get_sum_fields(data, 'NOME STRADA', 'TOTALE').sort_values(ascending=True)
+# autostrade[autostrade > 400].plot.barh(width=0.8, color='#85c44a')
+# plt.xlabel("Autostrade con più incidenti totali (2018)")
+# plt.tight_layout()
+# plt.show()
 
 #print(autostrade)
 
 # E in quali mesi avvengono questi incidenti?
 
-#adriatica = data[data['CODICE'] == 'SS01601'][mesi]
-#a1 = data[data['CODICE'] == 'AA00101'][mesi]
-#aurelia = data[data['CODICE'] == 'SS00101'][mesi]
-#
-#adriatica = sum_columns(adriatica, normalize=True)
-#a1 = sum_columns(a1, normalize=True)
-#aurelia =  sum_columns(aurelia, normalize=True)
+# adriatica = data[data['CODICE'] == 'SS01601'][mesi]
+# a1 = data[data['CODICE'] == 'AA00101'][mesi]
+# aurelia = data[data['CODICE'] == 'SS00101'][mesi]
 
-#pd.DataFrame([a1, adriatica, aurelia], ['A1', 'Adriatica', 'Aurelia']).transpose().plot()
-#plt.xlabel("Differenza tra incidenti mensili")
-#plt.show()
+# adriatica = sum_columns(adriatica, normalize=True)
+# a1 = sum_columns(a1, normalize=True)
+# aurelia =  sum_columns(aurelia, normalize=True)
+
+# pd.DataFrame([a1, adriatica, aurelia], ['A1', 'Adriatica', 'Aurelia']).transpose().plot()
+# plt.xlabel("Differenza tra incidenti mensili")
+# plt.show()
 
 # Intorno a milano Avvengono più incidenti se inverno?
 
-adriatica = data[data['CODICE'] == 'SS01601']
-a1 = data[data['CODICE'] == 'AA00101']
-a1_milano = a1[a1['PROVINCIA'] == 'Milano'][mesi]
+# adriatica = data[data['CODICE'] == 'SS01601']
+# a1 = data[data['CODICE'] == 'AA00101']
+# a1_milano = a1[a1['PROVINCIA'] == 'Milano'][mesi]
 
-a1 = sum_columns(a1[mesi], normalize=True)
-a1_milano = sum_columns(a1_milano[mesi], normalize=True)
-adriatica = sum_columns(adriatica[mesi], normalize=True)
+# a1 = sum_columns(a1[mesi], normalize=True)
+# a1_milano = sum_columns(a1_milano[mesi], normalize=True)
+# adriatica = sum_columns(adriatica[mesi], normalize=True)
 
-df = pd.DataFrame([a1, adriatica], ['A1', 'Adriatica']).transpose().plot.bar(width=0.8)
-plt.ylabel("Percentuale di incidenti al mese (2018)")
-plt.tight_layout()
-plt.show()
+# df = pd.DataFrame([a1, adriatica], ['A1', 'Adriatica']).transpose().plot.bar(width=0.8)
+# plt.ylabel("Percentuale di incidenti al mese (2018)")
+# plt.tight_layout()
+# plt.show()
