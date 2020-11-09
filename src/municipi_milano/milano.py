@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from matplotlib.pyplot import legend
 
 
-data = gp.read_file("dataset/milano/Municipi.shx").to_crs(epsg=3857)
+data = gp.read_file("dataset/milano_municipi/Municipi.shx").to_crs(epsg=3857)
 
 incidenti = gp.read_file("dataset/incidenti/inc_strad_milano_2016.geojson").to_crs(epsg=3857)
 
