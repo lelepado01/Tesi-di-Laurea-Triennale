@@ -22,35 +22,8 @@ pedoni_feriti = pedoni_feriti.value_counts().sort_index()
 #anni_per_fascia_feriti = pd.Series([5,5,3,3,4,5,15,10,5,5,5,20,1])
 #anni_per_fascia_morti = pd.Series([5,5,3,4,5,15,10,5,5,20,1])
 
-popolazione_std_feriti = [
-    3.9 ,
-    4.5 ,
-    4.8 ,
-    3.1 ,
-    2.8 ,
-    4   ,
-    5.3 ,
-    19,
-    16.2,
-    7.3 ,
-    6.4 ,
-    19.3, 
-    0
-]
-
-popolazione_std_morti = [
-    3.9 ,
-    4.8 ,
-    3.1 ,
-    4   ,
-    5.3 ,
-    19,
-    16.2,
-    7.3 ,
-    6.4 ,
-    19.3, 
-    0
-]
+popolazione_std_feriti = [3.9 ,4.5 ,4.8 ,3.1 ,2.8 ,4 ,5.3 ,19,16.2,7.3 ,6.4 ,19.3, 0]
+popolazione_std_morti = [3.9 ,4.8 ,3.1 ,4,5.3 ,19,16.2,7.3 ,6.4 ,19.3, 0]
 
 # print(pedoni_morti)
 # print(popolazione_std)

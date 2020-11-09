@@ -1092,7 +1092,19 @@ Infatti le percentuali di individui per fascia sono
     \end{tabular}
 \end{center}
 
-\todo{aggiungere codice per questa normalizzazione}
+\begin{lstlisting}
+    # Ho due liste di popolazione standard 
+    # perchè nei morti manca una fascia di età
+
+    popolazione_std_feriti = [3.9 ,4.5 ,4.8 ,3.1 ,2.8 ,4 ,5.3 ,19,16.2,7.3 ,6.4 ,19.3, 0]
+    popolazione_std_morti = [3.9 ,4.8 ,3.1 ,4,5.3 ,19,16.2,7.3 ,6.4 ,19.3, 0]
+
+    pedoni_feriti_vals = pedoni_feriti.values / np.array(popolazione_std_feriti)
+    pedoni_morti_vals = pedoni_morti.values / np.array(popolazione_std_morti)
+
+    pedoni_feriti_norm = pd.Series(pedoni_feriti_vals, index=pedoni_feriti.index)
+    pedoni_morti_norm = pd.Series(pedoni_morti_vals, index=pedoni_morti.index)
+\end{lstlisting}
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/pedoni/eta_pedoni_norm.png}
@@ -1100,11 +1112,12 @@ Infatti le percentuali di individui per fascia sono
     \label{fig:eta-pedoni-norm}
 \end{figure}
 
-Una volta aver corretto il grafo, si ottiene la figura \ref{fig:eta-pedoni-norm}\dots
+Una volta aver corretto l'immagine precendente, si ottiene la figura \ref{fig:eta-pedoni-norm} dove, 
+soprattutto nel grafo di destra, è presente una curva particolarmente alta nelle fasce più anziane.
+Anche nel grafo dei feriti è presente la stessa curva, ma per il volume di persone, la fascia 
+dei 30-44 anni, che contiene quattordici anni di età invece che cinque, come 
+la maggior parte delle altre fasce, è molto più alta.
 
-\todo{finire}
-
-%...
 
 % \begin{figure}
 %     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/pedoni/sesso_morti_feriti.png}
