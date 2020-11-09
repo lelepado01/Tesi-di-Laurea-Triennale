@@ -282,15 +282,58 @@ determinata zona.\\
 Nella figura \ref{fig:heatmap-municipi}, si è divisa la città di Milano in base al comune, ed è 
 chiaramente visibile che il centro ha la maggior parte degli incidenti.
 
-
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/municipi_milano/incidenti_municipio.png}
     \caption{Incidenti a Milano per municipio}
     \label{fig:heatmap-municipi}
 \end{figure}
 
+\todo{I dati su municipi vanno aggiunti all'introduzione}
 
+Tuttavia, non tutte le zone hanno la stessa superficie. Avendo a disposizione l'area delle varie zone, 
+è possibile calcolare la media di incidenti al chilometro quadrato per zona.
 
+\begin{lstlisting}    
+    inc = gp.GeoSeries(df).sort_index()
+
+    area = pd.Series(data['AREA'], index=data['MUNICIPIO'])
+    incidenti = pd.Series(inc, index=inc.index)
+
+    incidenti_per_zona = (incidenti / area) * 1000000 # trasformazione in chilometri quadri
+\end{lstlisting}
+
+\begin{center}
+    \def\arraystretch{1.5}%  
+    \begin{tabular}{ |c|c| } 
+    \hline
+    Numero della zona & Nome della zona \\ 
+    \hline
+    \rowcolor{TableGray}
+    1   &   Centro Storico\\
+    2   &   Greco, Padova\\
+    \rowcolor{TableGray}
+    3   &   Venezia, Città Studi\\
+    4   &   Vittoria, Vigentina \\
+    \rowcolor{TableGray}
+    5   &   Ticinese, Gratosoglio\\
+    6   &   Inganni, Barona\\
+    \rowcolor{TableGray}
+    7   &   Baggio, Forze Armate\\
+    8   &   Gallaratese, Sempione\\
+    \rowcolor{TableGray}
+    9   &   Niguarda, Dergano\\
+    \hline
+    \end{tabular}
+\end{center}
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{../src/municipi_milano/incidenti_superf.png}
+    \caption{Incidenti a Milano per zona e in base alla superficie della zona}
+    \label{fig:incidenti-chilometro}
+\end{figure}
+
+Nella figura \ref{fig:incidenti-chilometro} spicca, sia nel grafo di sinistra che in quello di destra, 
+la zona 1, cioè quella del centro, vista la superficie minore rispetto agli altri municipi.
 
 
 %\clearpage

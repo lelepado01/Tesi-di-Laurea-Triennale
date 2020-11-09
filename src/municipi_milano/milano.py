@@ -37,7 +37,7 @@ area = pd.Series(data['AREA'], index=data['MUNICIPIO'])
 incidenti = pd.Series(inc, index=inc.index)
 # print(area)
 # print(incidenti)
-incidenti_per_zona = (pd.Series(incidenti) / area) * 1000000
+incidenti_per_zona = (incidenti / area) * 1000000
 #print(incidenti_per_zona)
 
 plt.subplot(1,2,1)
