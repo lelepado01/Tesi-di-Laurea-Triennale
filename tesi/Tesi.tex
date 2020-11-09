@@ -216,7 +216,16 @@ i percorsi delle piste ciclabili di Milano
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Scopo del lavoro}
 
-\todo{lelepado: scopo del lavoro}
+Lo scopo di questo lavoro, è mostrare che tipo di analisi è possibile realizzare, 
+avendo a disposizione 
+una buona quantità di dati liberi, e come queste analisi possono influenzare le decisioni delle 
+persone, come per esempio la scelta di una nuova casa, mettendo in luce aspetti non ancora 
+tenuti in considerazione, o che semplicemente non sono disponibili da fonti 
+come quotidiani o siti internet.
+
+Proseguendo l'esempio fatto in precedenza, ci si potrebbe domandare quali sono le zone di Milano 
+più soggette a incidenti, o con maggiore coinvolgimento di pedoni, o ancora se la tipologia di strada 
+influenza il numero di incidenti.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Dati mancanti}
@@ -339,8 +348,36 @@ Tuttavia, non tutte le zone hanno la stessa superficie. Avendo a disposizione l'
 Nella figura \ref{fig:incidenti-chilometro} spicca, sia nel grafo di sinistra che in quello di destra, 
 la zona 1, cioè quella del centro, vista la superficie minore rispetto agli altri municipi.
 
-\todo{Confrontare gli incidenti per chilometro della zona con altri punti di interesse, es. Loreto}
+Una volta creata una tendenza della zona, è possibile confrontare i risultati ottenuti con i numeri 
+di incidenti in zone più precise, per esempio attorno a piazzale Loreto.
 
+\begin{figure}
+    \includegraphics[width=\linewidth]{../src/municipi_milano/zona_loreto.png}
+    \caption{Zona presa in considerazione per piazzale Loreto}
+    \label{fig:zona-loreto}
+\end{figure}
+
+\begin{lstlisting}
+
+    loreto = geometry.Polygon([p1, p2, p4, p3])
+
+    loreto_incidenti = 0
+    for point in incidenti['geometry']: 
+        point = geometry.Point(point)
+
+        if loreto.contains(point): 
+            loreto_incidenti += 1
+
+    area_loreto = loreto.area * data['AREA'].iloc[0] / geometry.Polygon(data['geometry'].iloc[0]).area
+    area_loreto_inc = loreto_incidenti * 1000000 / area_loreto
+
+\end{lstlisting}
+
+Il numero di incidenti che risultano, nell'area considerata in figura \ref{fig:zona-loreto}, 
+sono 231.06, considerando che il massimo ottenuto per zona, il centro storico arriva attorno a 120, 
+è possibile assumere che piazzale loreto sia una zona ad alta incidentalità.
+
+\todo{lelepado: faccio altre zone?}
 
 %\clearpage
 \section{Incidenti e Linee dei Trasporti Pubblici}

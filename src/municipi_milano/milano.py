@@ -85,7 +85,9 @@ area_loreto = loreto.area * data['AREA'].iloc[0] / geometry.Polygon(data['geomet
 # print(loreto_incidenti)
 # print(area_loreto)
 
-print(loreto_incidenti * 1000000 / area_loreto)
+area_loreto_inc = loreto_incidenti * 1000000 / area_loreto
+
+#print(area_loreto_inc)# = 231.06
 
 
 df = gp.GeoDataFrame(geometry=[loreto]).set_crs(epsg=3857)
