@@ -68,5 +68,3 @@ plt.show()
 
 # Per l'analisi di questi mi serve un modo per trovare velocemente il punto dell'autovelox
 # (non so quale indice ha un determinato punto sulla mappa)
-
-# TODO: zoomma su punti di interesse
