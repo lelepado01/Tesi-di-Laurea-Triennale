@@ -408,7 +408,7 @@ La stessa cosa si pu\'o notare su Viale Gabriele D'Annunzio e Viale Gorizia e Co
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/atm/navigli.png}
-    \caption{Linee Autobus e Tram a Milano}
+    \caption{Linee Autobus e Tram a Milano nella zona Navigli}
     \label{fig:navigli}
 \end{figure}
 
@@ -417,7 +417,7 @@ notare lo stesso fenomeno, tra Viale Bianca Maria e Viale Premuda.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/atm/22_marzo.png}
-    \caption{Linee Autobus e Tram a Milano}
+    \caption{Linee Autobus e Tram a Milano vicino a Corso 22 Marzo}
     \label{fig:22-marzo}
 \end{figure}
 
@@ -459,7 +459,20 @@ di appartenenza, è giustificabile in quanto si è presa in considerazione solo 
 e 289.32 nell'altra zona. Nel secondo caso il numero di incidenti è molto alto.
 
 \todo{spiegare ipotesi}
-\todo{Fare zona 22 marzo}
+
+Lo stesso procedimento è stato realizzato per corso 22 Marzo, le zone utilizzate sono 
+raffigurate nel'immagine \ref{fig:zona-22marzo-rect}. 
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{../src/atm/zona_22marzo_rect.png}
+    \caption{Sezioni di Milano prese in considerazione per contare gli incidenti intorno a corso 22 Marzo}
+    \label{fig:zona-22marzo-rect}
+\end{figure}
+
+In questo caso, per viale Bianca Maria, dove non è presente una linea di trasporti pubblici, 
+il numero di incidenti è 254.31, mentre per viale Premuda per cui passa una linea tranviaria, 
+il numero scende a 93.96.
+
 
 %\clearpage
 \subsection{Correlazione tra pavè e incidentalità}
@@ -1128,7 +1141,7 @@ Infatti le percentuali di individui per fascia sono
 
 \begin{lstlisting}
     # Ho due liste di popolazione standard 
-    # perchè nei morti manca una fascia di età
+    # perche nei morti manca una fascia di eta
 
     popolazione_std_feriti = [3.9 ,4.5 ,4.8 ,3.1 ,2.8 ,4 ,5.3 ,19,16.2,7.3 ,6.4 ,19.3, 0]
     popolazione_std_morti = [3.9 ,4.8 ,3.1 ,4,5.3 ,19,16.2,7.3 ,6.4 ,19.3, 0]
