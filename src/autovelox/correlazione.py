@@ -13,7 +13,7 @@ autovelox_2014 = gp.GeoDataFrame(geometry=gp.points_from_xy(
 
 incidenti = gp.read_file("dataset/incidenti/inc_strad_milano_2016.geojson").to_crs(epsg=3857)
 
-MAX_DIST = 1500
+MAX_DIST = 1500 # -> ~= 1 Km
 
 df = {}
 for i in autovelox_2014.index: 
@@ -34,7 +34,7 @@ autovelox_2014['incidenti_vicini'] = gp.GeoSeries(df)
 # print(df)
 
 x = incidenti.plot(alpha=0.01)
-ax = autovelox_2014.plot(ax = x, markersize=autovelox_2014['incidenti_vicini'], alpha=0.4, color='orange')
+ax = autovelox_2014.plot(ax = x, markersize=autovelox_2014['incidenti_vicini'], alpha=0.4, color='orange', legend=True)
 cx.add_basemap(ax = ax)
 plt.show()
 
@@ -55,3 +55,23 @@ plt.show()
 # 13  POINT (1018605.612 5698871.816)               296
 # 14  POINT (1028650.638 5700506.610)               149
 # 15  POINT (1028636.645 5700511.898)               149
+
+
+# df = {}
+# for i, inc_point in zip(incidenti.index, incidenti['geometry']): 
+#     inc_point = geometry.Point(inc_point)
+#     point = autovelox_2014['geometry'].iloc[0] 
+#     autovelox_point = geometry.Point(point)
+
+#     df[i] = autovelox_point.distance(inc_point) < MAX_DIST
+            
+# # print(df)
+
+
+# incidenti['IN'] = gp.GeoSeries(df)
+
+# x = incidenti.plot(alpha=0.03, column='IN')
+# #ax = autovelox_2014.plot(ax = x, markersize=autovelox_2014['incidenti_vicini'], alpha=0.4, color='orange')
+# cx.add_basemap(ax = x)
+# plt.show()
+
