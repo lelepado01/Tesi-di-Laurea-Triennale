@@ -558,27 +558,57 @@ vicino, più precisamente nel raggio di un chilometro, a ogni autovelox.
 Va precisato che le 'bolle' non indicano il raggio di conteggio degli incidenti, ma 
 l'entità del numero dei sinistri trovati.
 
-\todo{tabella dei valori di incidenti}
-
 \begin{center}
     \def\arraystretch{1.5}% 
-    \begin{tabular}{ |c|c|c|c| }
+    \begin{tabular}{ |c|c|c| }
         \hline
-        Zona dell'Autovelox & Incidenti Totali & Incidenti per Km \\ 
+        Autovelox & Incidenti Totali & Incidenti per $Km^2$ \\ 
         \hline
         \rowcolor{TableGray}
-        2018 & Uomo & 77\%  & 73\% \\
-        2018 & Donna & 23\% & 27\% \\
+        0    &    194   &      61.78\\
+        1    &    202   &      64.33\\
         \rowcolor{TableGray}
-        2016 & Uomo & 75.8\%  & 71.9\% \\
-        2016 & Donna & 24.2\% & 28.1\% \\
+        2    &    208   &      66.24\\
+        3    &    212   &      67.51\\
         \rowcolor{TableGray}
-        2014 & Uomo & 74.2\%  & 70.7\% \\
-        2014 & Donna & 25.8\% & 29.3\% \\
+        4    &    166   &      52.86\\
+        5    &     95   &      30.25\\
+        \rowcolor{TableGray}
+        6    &    100   &      31.84\\
+        7    &    180   &      57.32\\
+        \rowcolor{TableGray}
+        8    &     23   &       7.32\\
+        9    &     57   &      18.15\\
+        \rowcolor{TableGray}
+        10   &    291   &      92.67\\
+        11   &    290   &      92.35\\
+        \rowcolor{TableGray}
+        12   &    296   &      94.26\\
+        13   &    296   &      94.26\\
+        \rowcolor{TableGray}
+        14   &    149   &      47.45\\
+        15   &    149   &      47.45\\
         \hline
     \end{tabular}
 \end{center}
 
+Una volta trovati gli incidenti totali, è possile calcolare gli incidenti sulla base dell'area utilizzata.
+Nel seguente codice, al dataset autovelox sono aggiunte due colonne, una contenente gli incidenti totali, 
+l'altra contenente gli incidenti per chilometro.
+
+\begin{lstlisting}
+    autovelox_2014['incidenti_vicini'] = gp.GeoSeries(df)
+    autovelox_2014['incidenti_pesati'] = autovelox_2014['incidenti_vicini'] / 3.14
+\end{lstlisting}
+
+Questa ultima colonna, in particolare, è divisa per 3.14 perchè l'area del cerchio è data dalla formula: 
+
+\begin{center}
+    $Area\, = \pi * r^2$
+\end{center}
+
+Poichè si sta utilizzando raggio di circa un chilometro, e si vuole ottenere il numero di incidenti per chilometro 
+quadrato, l'area ottentuta è 3.14.
 
 %\clearpage
 \section{Incidenti e Meteo}
