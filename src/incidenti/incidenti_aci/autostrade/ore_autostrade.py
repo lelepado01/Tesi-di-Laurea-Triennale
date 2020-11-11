@@ -42,6 +42,7 @@ for i in range(10,25):
     inc = incidenti[str(i)] + inc
 
 strade = gp.GeoDataFrame(inc, geometry=strade['geometry'])
+print(strade)
 
 ax = strade.plot(figsize=(11,9), column= 0, alpha=0.5, legend=True)
 plt.ylim((5.68 * pow(10, 6), 5.72 * pow(10,6)))
