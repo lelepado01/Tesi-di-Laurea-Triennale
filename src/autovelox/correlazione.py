@@ -29,12 +29,18 @@ for i, point in zip(autovelox_2014.index, autovelox_2014['geometry']):
             df[i] += 1
             
 autovelox_2014['incidenti_vicini'] = gp.GeoSeries(df)
+autovelox_2014['incidenti_pesati'] = autovelox_2014['incidenti_vicini'] / 3.14
 
-# print(autovelox_2014)
+print(autovelox_2014)
 # print(df)
 
 x = incidenti.plot(alpha=0.01)
 ax = autovelox_2014.plot(ax = x, markersize=autovelox_2014['incidenti_vicini'], alpha=0.4, color='orange', legend=True)
+
+for v, p in zip(autovelox_2014['incidenti_vicini'], autovelox_2014['geometry']): 
+    p = geometry.Point(p)
+    plt.text(p.x, p.y, v)
+
 cx.add_basemap(ax = ax)
 plt.show()
 
