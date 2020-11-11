@@ -359,7 +359,6 @@ di incidenti in zone più precise, per esempio attorno a piazzale Loreto.
 \end{figure}
 
 \begin{lstlisting}
-
     loreto = geometry.Polygon([p1, p2, p4, p3])
 
     loreto_incidenti = 0
@@ -371,7 +370,6 @@ di incidenti in zone più precise, per esempio attorno a piazzale Loreto.
 
     area_loreto = loreto.area * data['AREA'].iloc[0] / geometry.Polygon(data['geometry'].iloc[0]).area
     area_loreto_inc = loreto_incidenti * 1000000 / area_loreto
-
 \end{lstlisting}
 
 Il numero di incidenti che risultano, nell'area considerata in figura \ref{fig:zona-loreto}, 
@@ -635,10 +633,7 @@ nell'incidente, oltre al tipo di veicoli.
 
 \begin{lstlisting}[language=Python]
     strade_urbane = data[(data['localizzazione_incidente'] == 1) | (data['localizzazione_incidente'] == 2) | (data['localizzazione_incidente'] == 3)]['tipo_veicolo_a']
-    strade_urbane = label_utils.join_labels(strade_urbane, "dataset/incidenti/Classificazioni/tipo_veicoli__b_.csv").value_counts(normalize=True).sort_index()
-
     strade_extraurbane = data[(data['localizzazione_incidente'] == 4) | (data['localizzazione_incidente'] == 5) | (data['localizzazione_incidente'] == 6)]['tipo_veicolo_a']
-    strade_extraurbane = label_utils.join_labels(strade_extraurbane, "dataset/incidenti/Classificazioni/tipo_veicoli__b_.csv").value_counts(normalize=True).sort_index()
 
     # Dove 1,2,3 sono gli ID dei diversi tipi di strade urbane, 
     # mentre 4,5,6 gli ID delle strade extraurbane
@@ -1191,17 +1186,11 @@ Infatti le percentuali di individui per fascia sono
 \end{center}
 
 \begin{lstlisting}
-    # Ho due liste di popolazione standard 
-    # perche nei morti manca una fascia di eta
-
     popolazione_std_feriti = [3.9 ,4.5 ,4.8 ,3.1 ,2.8 ,4 ,5.3 ,19,16.2,7.3 ,6.4 ,19.3, 0]
     popolazione_std_morti = [3.9 ,4.8 ,3.1 ,4,5.3 ,19,16.2,7.3 ,6.4 ,19.3, 0]
 
     pedoni_feriti_vals = pedoni_feriti.values / np.array(popolazione_std_feriti)
     pedoni_morti_vals = pedoni_morti.values / np.array(popolazione_std_morti)
-
-    pedoni_feriti_norm = pd.Series(pedoni_feriti_vals, index=pedoni_feriti.index)
-    pedoni_morti_norm = pd.Series(pedoni_morti_vals, index=pedoni_morti.index)
 \end{lstlisting}
 
 \begin{figure}
@@ -1375,11 +1364,10 @@ L'indice di correlazione utilizzato è il coefficiente di Pearson.
     inc = data['INC']
     fer = data['FER']
     mor = data['MOR']
-
-    print(inc.corr(fer))
-    print(inc.corr(mor))
-    print(fer.corr(mor))
 \end{lstlisting}
+
+Una volta divisi i dati, è possibile calcolare l'indice tramite il metodo \textit{corr()}, i risultati 
+sono riportati nella seguente tabella.
 
 \begin{center}
     \def\arraystretch{1.5}%  
