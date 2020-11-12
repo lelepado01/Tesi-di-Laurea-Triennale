@@ -94,8 +94,8 @@
 
 \subsection{Dati riguardanti incidenti}
 La maggior parte dei dati utilizzati in questo lavoro provengono 
-dall'Istituto nazionale di statistica, 
-in particolare dall'archivio\footnote{\url{https://https://www.istat.it/it/archivio/87539}} 
+dall'Istituto nazionale di statistica, in particolare dall'archivio
+\footnote{\url{https://https://www.istat.it/it/archivio/87539}} 
 di dati non geolocalizzati su incidenti stradali in Italia.
 Questo dataset contiene un'ampia gamma di campi, tra cui ora, 
 mese, giorno della settimana in cui è avvenuto l'incidente, 
@@ -104,15 +104,16 @@ Particolarmente interessanti sono anche i campi riguardanti il tipo di incrocio 
 avvenuto il sinistro, come rettilineo, rotonda o semaforo.
 
 Per quanto riguarda i dati geolocalizzati, 
-la fonte è invece il sito web TheSubmarine\footnote{\url{https://thesubmarine.it/2018/06/20/mappa-incidenti-stradali-milano/}},
+la fonte è invece il sito web TheSubmarine
+\footnote{\url{https://thesubmarine.it/2018/06/20/mappa-incidenti-stradali-milano/}},
 che in un articolo riguardante l'incidentalità a Milano, 
 ha ottenuto dall'ente Istat la pubblicazione di una parte degli 
 incidenti avvenuti nella città nel 2016, con la relativa posizione.
 Il dataset in questione è abbastanza povero, e contiene solamente l'incidente con la 
 propria posizione, indicata tramite coordinate geografiche.
 
-L'ultimo dataset, trovato dopo veloce cosultazione con un dipendente Istat, è stato 
-il dataset ACI\footnote{\url{http://www.aci.it/fileadmin/documenti/ACI/Trasparenza/Open_Data/Catalogo_localizzazione_in_formato_Open_2019.pdf}}.
+L'ultimo dataset, trovato dopo veloce cosultazione con un dipendente Istat, è stato il dataset ACI
+\footnote{\url{http://www.aci.it/fileadmin/documenti/ACI/Trasparenza/Open_Data/Catalogo_localizzazione_in_formato_Open_2019.pdf}}.
 \'E stato consigliato in quanto, questi dati, specifici a autostrade e strade statali, 
 indicano anche il nome della rispettiva via.
 
@@ -130,7 +131,8 @@ specifiche per OpenStreetMaps, eseguendo la seguente query:
 \lstinputlisting{../src/codice_per_dati/overpass_query.txt}
 
 Il dataset ricavato non permette di capire quando gli autovelox siano stati installati.
-Tuttavia il sito web ztlmilano\footnote{\url{https://www.ztlmilano.it/Autovelox-Milano}} 
+Tuttavia il sito web ztlmilano
+\footnote{\url{https://www.ztlmilano.it/Autovelox-Milano}} 
 contiene un articolo nel quale specifica una lista di 
 autovelox installati nel 2014, considerando che il dataset di OpenStreetMaps è aggiornato, 
 è possibile ricavare la posizione precisa di questi ultimi.
@@ -212,7 +214,19 @@ i percorsi delle piste ciclabili di Milano
 \footnote{\url{https://geoportale.comune.milano.it/sit/cerca-nel-catalogo/}}.
 
 \subsection{Dati riguardanti autostrade e manto stradale}
-\todo{lelepado: devo guardare il dataset del manto stradale che ho trovato}
+
+Il primo dataset individuato, riguardante il manto  stradale, è stato quello di ANAS
+\footnote{\url{http://dati.mit.gov.it/catalog/dataset/grafo-stradale-anas}}, 
+tuttavia questo consisteva in un file molto grande e difficile da elaborare.
+
+Si è dunque tentato di utilizzare la mappa presente sul geoportale del comune di Milano
+\footnote{\url{https://geoportale.comune.milano.it/}}, 
+contenente anch'esso troppe strade in quanto traccia l'intero manto stradale del comune.
+
+Entrambi questi dataset non risolvevano il problema del dataset mancante sul pavè.
+
+Come ultima risorsa, si è deciso di tracciare alcune mappe in geojson utilizzando Geojson.io
+\footnote{\url{https://geojson.io/}}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Scopo del lavoro}
@@ -271,15 +285,31 @@ rosse, arancioni e verdi, si è optato per la ricerca di un altro dataset.
 
 Dunque si è deciso di utilizzare i dati riguardanti gli ingressi in area C a Milano, 
 trovati sul sito del comune di Milano
-\footnote{\url{https://dati.comune.milano.it/dataset}}.
+\footnote{\url{https://dati.comune.milano.it/dataset}}, 
+nonostante non permetta una stima perfetta.
 
-%...
+Sul sito del comune di Milano sono disponibili vari file, tra questi si è utilizzata la tipologia 
+contenente orari e data dell'accesso.
 
 Un'altro dataset utilizzato per stimare il numero di automobili, è quello contenente il numero di 
 patentati per regione, trovato nel sito del Ministero dei Trasporti
 \footnote{\url{dati.mit.gov.it/catalog/dataset/patenti}}.
 I dati, riguardanti i patentati fino al 2019, sono divisi in file per regione e contengono anche 
 informazioni riguardanti la provincia e data di conseguimento, altre al tipo di patente ottenuta.
+
+\subsection{Dati riguardanti l'area C}
+
+Oltre a utilizzare i dati riguardo agli accessi, si è fatto uso anche di una mappa 
+raffigurante i varchi di entrata e i limiti dell'area C, proveniente dal sito del comune di Milano
+\footnote{\url{https://www.comune.milano.it/aree-tematiche/mobilita/area-c}}.
+
+\subsection{Dati riguardanti il turismo}
+
+I dati sul turismo in Italia, sono stati presi dall'archivio istat sul tema
+\footnote{\url{https://www.istat.it/it/archivio/16777}}, 
+e in particolare le tabelle contenenti tasso di turismo e turismo nei mesi non estivi.
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Dati Geolocalizzati}
