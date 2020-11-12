@@ -381,7 +381,30 @@ Il numero di incidenti che risultano, nell'area considerata in figura \ref{fig:z
 sono 231.06, considerando che il massimo ottenuto per zona, il centro storico arriva attorno a 120, 
 è possibile assumere che piazzale loreto sia una zona ad alta incidentalità.
 
-\todo{lelepado: faccio altre zone?}
+Andrebbe anche spiegato il fatto che il centro storico sia una delle zone con maggiore incidentalità, 
+non dovrebbe essere abbassata della presenza dell'area C?
+
+\begin{figure}
+    \includegraphics[width=0.5\linewidth]{../dataset/area_c/perimetro_area_c.jpg}
+    \includegraphics[width=0.5\linewidth]{../src/area_c/area_c_incidenti.png}
+    \caption{Perimetro dell'area C e incidenti nella stessa zona}
+    \label{fig:perimetro-area-c}
+\end{figure}
+
+Dopo più attenta osservazione del perimetro dell'area C, visibile in figura \ref{fig:perimetro-area-c}, 
+si nota che la maggior parte degli incidenti avvengono sulla circonvallazione interna, 
+situata fuori dall'area C, che è compresa nell'area 0 di Milano nella mappa \ref{fig:heatmap-municipi}.
+
+Se si prende in considerazione solamente l'area C, il numero di incidenti scende a 46.83 per chilometro quadrato.
+
+\begin{lstlisting}
+    area_c = geometry.Polygon(gp.read_file("dataset/area_c/area_c.geojson").to_crs(epsg=3857)['geometry'].iloc[0])
+
+    inc = 0
+    for point in incidenti['geometry']: 
+        if area_c.contains(geometry.Point(point)): 
+            inc += 1
+\end{lstlisting}
 
 %\clearpage
 \section{Incidenti e Linee dei Trasporti Pubblici}
