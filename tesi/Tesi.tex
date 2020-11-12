@@ -1475,12 +1475,12 @@ più incidenti sono anche quelle più trafficate, come l'Autostrada del Sole e l
 \subsection{Le strade pericolose in provincia di Milano}
 
 \begin{figure}
-    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/autostrade/incidenti_bubble_chart.png}
+    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/autostrade/incidenti_line_chart.png}
     \caption{Autostrade con più incidenti nel 2012}
-    \label{fig:bubble-incidenti-milano}
+    \label{fig:line-incidenti-milano}
 \end{figure}
 
-Per realizzare la figura \ref{fig:bubble-incidenti-milano}, sono state prese in considerazione alcune 
+Per realizzare la figura \ref{fig:line-incidenti-milano}, sono state prese in considerazione alcune 
 tra le autostrade e strade statali più trafficate e si è segnata la posizione approssimata.
 
 \begin{lstlisting}
@@ -1491,7 +1491,6 @@ tra le autostrade e strade statali più trafficate e si è segnata la posizione 
     ax = strade.plot(markersize=strade[ore].sum() * 10, alpha=0.5)
 \end{lstlisting}
 
-\todo{rifare ma utilizzare linee e non punti}
 
 %\clearpage
 \subsection{Correlazione tra mesi dell'anno e incidentalità}
