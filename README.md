@@ -76,6 +76,10 @@
 
     [Azure](https://stackoverflow.com/questions/58661346/how-to-get-raw-traffic-flow-data)
 
+- Turismo
+
+    [Istat](https://www.istat.it/it/archivio/16777)
+
 - Posso usare direttamente il dataset sugli incidenti per: 
     - Stagione
     - Traffico
@@ -94,7 +98,7 @@
 ### Risultati da Trascrivere in Tesi: 
 
 - [x] Atm + Incidenti
-- [ ] Autovelox + Incidenti
+- [x] Autovelox + Incidenti
 - [ ] Ciclabili + Incidenti
 - [ ] Meteo
 - [x] Incidenti ACI (i dati che ho trovato sulle autostrade sono confermati dai dati istat)
