@@ -15,9 +15,9 @@ percorsi_atm = gp.read_file(path).to_crs(epsg=3857)
 #print(percorsi_atm)
 
 # MAPPA 1
-#layer_percorsi = percorsi_atm.plot(color="red", figsize=(11,9))
-#cx.add_basemap(ax=layer_percorsi)
-#plt.show()
+# layer_percorsi = percorsi_atm.plot(color="red", figsize=(11,9))
+# cx.add_basemap(ax=layer_percorsi)
+# plt.show()
 
 # facendo cosi, la zona del centro diventa molto piccola perchè do importanza alla periferia 
 # (senza linee atm)
@@ -59,9 +59,11 @@ percorsi_ridotti = percorsi_atm[geo_utils.remove_lines_out_of_range(
 # la mappa che ottengo è più 'zoommata'
 
 # MAPPA 2
-#layer_percorsi_ridotti = percorsi_ridotti.plot(color="red", figsize=(11,9))
-#cx.add_basemap(ax=layer_percorsi_ridotti)
-#plt.show()
+layer_percorsi_ridotti = percorsi_ridotti.plot(color="red", figsize=(11,9), alpha=0.7, linewidth=0.7)
+cx.add_basemap(ax=layer_percorsi_ridotti)
+plt.ylim((5.685 * 10**6, 5.705 * 10**6))
+plt.xlim((1.013 * 10**6, 1.032 * 10**6))
+plt.show()
 
 # ora posso aggiungere il traffico
 
@@ -107,22 +109,22 @@ incidenti = gp.read_file(path_incidenti).to_crs(epsg=3857)
 # 
 # Inoltre a saltare all'occhio è anche piazzale Loreto, che è intersezione di tre linee
 
-import map_utils
+# import map_utils
 
-scale = pow(10, 6)
-# Navigli
-bounds = [1.020 * scale, 1.025 * scale, 5.691 * scale, 5.695 * scale]
-mappa = map_utils.CustomMap(bounds=bounds)
-mappa.add_layer(incidenti)
-mappa.add_layer(percorsi_ridotti, alpha=0.5, color = "orange")
-mappa.set_label("Linee Autobus e Incidenti")
-#mappa.draw() 
+# scale = pow(10, 6)
+# # Navigli
+# bounds = [1.020 * scale, 1.025 * scale, 5.691 * scale, 5.695 * scale]
+# mappa = map_utils.CustomMap(bounds=bounds)
+# mappa.add_layer(incidenti)
+# mappa.add_layer(percorsi_ridotti, alpha=0.5, color = "orange")
+# mappa.set_label("Linee Autobus e Incidenti")
+# #mappa.draw() 
 
-# Corso 22 Marzo
-bounds = [1.024 * scale, 1.028 * scale, 5.693 * scale, 5.697 * scale]
-mappa.set_bounds(bounds)
-#mappa.draw()
+# # Corso 22 Marzo
+# bounds = [1.024 * scale, 1.028 * scale, 5.693 * scale, 5.697 * scale]
+# mappa.set_bounds(bounds)
+# #mappa.draw()
 
-bounds = [1.025 * scale, 1.027 * scale, 5.697 * scale, 5.700 * scale]
-mappa.set_bounds(bounds)
-mappa.draw()
+# bounds = [1.025 * scale, 1.027 * scale, 5.697 * scale, 5.700 * scale]
+# mappa.set_bounds(bounds)
+# mappa.draw()
