@@ -16,17 +16,17 @@ for f in data['hour'].unique():
 
 ora_media = ora.mean()
 
-#ora_perc = ora / ora.sum()
-#ora_perc.index = range(1,25)
-# ora_perc_inc = ora / ora_media *100 -100
+accessi_area_c_per_ora = ora / ora.sum()
+accessi_area_c_per_ora.index = range(1,25)
+# perc_ora_inc = ora / ora_media *100 -100
 
-# print(ora_perc)
-# print(ora_perc_inc)
+# print(accessi_area_c_per_ora)
+# print(perc_ora_inc)
 
 # plt.subplot(2,1,1)
-# plt.plot(ora_perc)
+# plt.plot(accessi_area_c_per_ora)
 # # plt.subplot(2,1,2)
-# # plt.plot(ora_perc_inc)
+# # plt.plot(perc_ora_inc)
 # plt.show()
 
 
@@ -35,31 +35,32 @@ path = "dataset/incidenti/incidenti_2010.txt"
 data = pd.read_csv(path, sep="\t")
 data = data[data['ora'] != 25]
 
-ora_week_milano = data[data['provincia'] == 15]['ora'].value_counts().sort_index()
+incidenti_per_ora = data[data['provincia'] == 15]['ora'].value_counts().sort_index()
 
-#ora_week_milano_norm = ora_week_milano * (1 - ora_perc)
-ora_week_milano_norm = ora_week_milano / ora
+#incidenti_per_ora_norm = incidenti_per_ora * (1 - accessi_area_c_per_ora)
+incidenti_per_ora_norm = incidenti_per_ora / ora
 
-plt.subplot(3,1,1)
-plt.plot(ora, color='#ddbd08')
-plt.fill_between(ora.index, ora, color='#ddbd08')
-plt.xticks(range(1,25))
-plt.ylabel("Percentuale")
-plt.title("Percentuale di traffico totale")
-plt.tight_layout()
-plt.subplot(3,1,2)
-plt.plot(ora_week_milano, color='#dd5308', label="Incidenti per orario")
-plt.fill_between(ora_week_milano.index, ora_week_milano, color='#dd5308')
-plt.subplot(3,1,3)
-plt.plot(ora_week_milano_norm, color='#93dd08', label="Incidenti normalizzati")
-plt.fill_between(ora_week_milano_norm.index, ora_week_milano_norm, color='#93dd08')
-plt.title("Numero di incidenti a Milano")
-plt.ylabel("Numero incidenti")
-plt.xticks(range(1,25))
-plt.tight_layout()
-plt.show()
+print(accessi_area_c_per_ora.corr(incidenti_per_ora))
 
-# print(ora_perc.corr(ora_week_milano_norm))
+# plt.subplot(3,1,1)
+# plt.plot(ora, color='#ddbd08')
+# plt.fill_between(ora.index, ora, color='#ddbd08')
+# plt.xticks(range(1,25))
+# plt.ylabel("Percentuale")
+# plt.title("Percentuale di traffico totale")
+# plt.tight_layout()
+# plt.subplot(3,1,2)
+# plt.plot(incidenti_per_ora, color='#dd5308', label="Incidenti per orario")
+# plt.fill_between(incidenti_per_ora.index, incidenti_per_ora, color='#dd5308')
+# plt.subplot(3,1,3)
+# plt.plot(incidenti_per_ora_norm, color='#93dd08', label="Incidenti normalizzati")
+# plt.fill_between(incidenti_per_ora_norm.index, incidenti_per_ora_norm, color='#93dd08')
+# plt.title("Numero di incidenti a Milano")
+# plt.ylabel("Numero incidenti")
+# plt.xticks(range(1,25))
+# plt.tight_layout()
+# plt.show()
+
 
 # Non cambia molto, prova a normalizzarlo con percentuale di 
 # incremento rispetto alla media
