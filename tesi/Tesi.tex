@@ -309,6 +309,15 @@ I dati sul turismo in Italia, sono stati presi dall'archivio istat sul tema
 \footnote{\url{https://www.istat.it/it/archivio/16777}}, 
 e in particolare le tabelle contenenti tasso di turismo e turismo nei mesi non estivi.
 
+\subsection{Immagini del traffico}
+
+Le immagini raffiguranti il traffico in tempo reale sono prese da google maps
+\footnote{\url{https://www.google.com/maps/}}, 
+tuttavia questi snapshot contengono molti punti di interesse che coprono informazioni importanti, 
+come i nomi delle strade.
+
+Per rimuovere i punti di interesse, si sono utilizzate le API di google maps, tramite il sito Jsfiddle
+\footnote{https://jsfiddle.net/}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -478,6 +487,17 @@ notare lo stesso fenomeno, tra Viale Bianca Maria e Viale Premuda.
     \caption{Linee dei trasporti pubblici e condizioni traffico vicino a Corso 22 Marzo}
     \label{fig:22-marzo}
 \end{figure}
+
+Le immagini del traffico sono state realizzate tramite le API di Google Maps:  
+
+\begin{lstlisting}[language='JavaScript']
+const styles = {
+  hide: [
+    {
+      featureType: "poi", // poi indica i punti di interesse
+      stylers: [{ visibility: "off" }],
+    }
+\end{lstlisting}
 
 Per confutare l'ipotesi, si sono usati i dati ricavati in precedenza, 
 di incindenti per chilometro per zona di Milano. 
