@@ -89,13 +89,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Introduzione}
 
+\todo{atrent: manca una parte introduttiva vera e propria, in cui spieghi lo scopo del lavoro (estrarre conclusioni interessanti a partire da dati open) e poi spieghi cosa ti prefiggi di ``calcolare'', cioè dichiara un elenco di ``domande'' (in senso ampio) a cui vuoi dare risposta}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Origine dei dati}
 
-\subsection{Dati riguardanti incidenti}
+\subsection{Dati riguardanti incidenti}\todo{atrent: questa sezione entra già nel tecnico}
 La maggior parte dei dati utilizzati in questo lavoro provengono 
-dall'Istituto nazionale di statistica, in particolare dall'archivio
-\footnote{\url{https://https://www.istat.it/it/archivio/87539}} 
+dall'Istituto nazionale di statistica, in particolare dall'archivio\footnote{\url{https://https://www.istat.it/it/archivio/87539}}\todo{atrent: non va lo spazio tra la parola e la footnote} 
 di dati non geolocalizzati su incidenti stradali in Italia.
 Questo dataset contiene un'ampia gamma di campi, tra cui ora, 
 mese, giorno della settimana in cui è avvenuto l'incidente, 
@@ -112,7 +113,7 @@ incidenti avvenuti nella città nel 2016, con la relativa posizione.
 Il dataset in questione è abbastanza povero, e contiene solamente l'incidente con la 
 propria posizione, indicata tramite coordinate geografiche.
 
-L'ultimo dataset, trovato dopo veloce cosultazione con un dipendente Istat, è stato il dataset ACI
+L'ultimo dataset, trovato dopo veloce cosultazione\todo{attenzione allo spelling!} con un dipendente Istat, è stato il dataset ACI
 \footnote{\url{http://www.aci.it/fileadmin/documenti/ACI/Trasparenza/Open_Data/Catalogo_localizzazione_in_formato_Open_2019.pdf}}.
 \'E stato consigliato in quanto, questi dati, specifici a autostrade e strade statali, 
 indicano anche il nome della rispettiva via.
@@ -180,7 +181,7 @@ La lista di Ztl Milano contiene i seguenti autovelox:
 Il campi della tabella ripetuti sono dovuti al fatto che alcuni autovelox sono stati installati in entrambe le direzioni.
 
 \subsection{Dati riguardanti patentati}
-
+\todo{atrent: in generale (cioè vale un po' ovunque) manca una critica alla qualità dei dati e alla loro significatività (in questo caso ad esempio bisogna domandarsi quanto questo dataset sia un proxy del traffico)}
 I dati sulle persone con patente per regione, che è stato utilizzato per stimare il traffico 
 regionale, proviene dal sito del Ministero delle Infrastrutture e Trasporti 
 \footnote{\url{http://dati.mit.gov.it/catalog/dataset/patenti}}.
@@ -217,7 +218,7 @@ i percorsi delle piste ciclabili di Milano
 
 Il primo dataset individuato, riguardante il manto  stradale, è stato quello di ANAS
 \footnote{\url{http://dati.mit.gov.it/catalog/dataset/grafo-stradale-anas}}, 
-tuttavia questo consisteva in un file molto grande e difficile da elaborare.
+tuttavia questo consisteva in un file molto grande e difficile da elaborare.\todo{atrent: io non lo direi, non c'è file che non si possa elaborare...}
 
 Si è dunque tentato di utilizzare la mappa presente sul geoportale del comune di Milano
 \footnote{\url{https://geoportale.comune.milano.it/}}, 
@@ -229,7 +230,7 @@ Come ultima risorsa, si è deciso di tracciare alcune mappe in geojson utilizzan
 \footnote{\url{https://geojson.io/}}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Scopo del lavoro}
+\section{Scopo del lavoro}\todo{atrent: ah ecco! questa parte va in cima}
 
 Lo scopo di questo lavoro, è mostrare che tipo di analisi è possibile realizzare, 
 avendo a disposizione 
@@ -281,7 +282,7 @@ fare scraping da Google Maps. Quest'ultimo infatti mostra sia il traffico in tem
 il traffico stimato a una determinata ora. Tuttavia, leggendo nella documentazione, si è scoperto che 
 non è possibile ottenere dati sul traffico stimato, per mancanza di API. 
 Per quanto fosse stato possibile realizzare comunque uno script per individuare le linee 
-rosse, arancioni e verdi, si è optato per la ricerca di un altro dataset.
+rosse, arancioni e verdi, si è optato per la ricerca di un altro dataset.\todo{atrent: terminologia poco tecnica...}
 
 Dunque si è deciso di utilizzare i dati riguardanti gli ingressi in area C a Milano, 
 trovati sul sito del comune di Milano
@@ -388,7 +389,7 @@ Tuttavia, non tutte le zone hanno la stessa superficie. Avendo a disposizione l'
     \includegraphics[width=\linewidth]{../src/municipi_milano/incidenti_superf.png}
     \caption{Incidenti a Milano per zona e in base alla superficie della zona}
     \label{fig:incidenti-chilometro}
-\end{figure}
+\end{figure}\todo{atrent: ma questi grafici li hai generati tu?}
 
 Nella figura \ref{fig:incidenti-chilometro} spicca, sia nel grafo di sinistra che in quello di destra, 
 la zona 1, cioè quella del centro, vista la superficie minore rispetto agli altri municipi.
@@ -414,7 +415,7 @@ di incidenti in zone più precise, per esempio attorno a piazzale Loreto.
 
     area_loreto = loreto.area * data['AREA'].iloc[0] / geometry.Polygon(data['geometry'].iloc[0]).area
     area_loreto_inc = loreto_incidenti * 1000000 / area_loreto
-\end{lstlisting}
+\end{lstlisting}\todo{atrent: non trovo questo snippet nei sorgenti, come mai?}
 
 Il numero di incidenti che risultano, nell'area considerata in figura \ref{fig:zona-loreto}, 
 sono 231.06, considerando che il massimo ottenuto per zona, il centro storico arriva attorno a 120, 
@@ -457,7 +458,7 @@ si ottiene la figura \ref{fig:geo-trasporti}:
     \includegraphics[width=\linewidth]{../src/atm/linee_atm.png}
     \caption{Linee Autobus e Tram a Milano}
     \label{fig:geo-trasporti}
-\end{figure}
+\end{figure}\todo{atrent: vale un po' ovunque, attenzione alle unità di misura e alle scale degli assi}
 
 Nonstante la rimozione di parte dei tragitti, i trasporti pubblici coprono 
 la maggior parte della città.
@@ -486,7 +487,7 @@ notare lo stesso fenomeno, tra Viale Bianca Maria e Viale Premuda.
     \includegraphics[width=0.55\linewidth]{../src/codice_per_dati/googleMaps/22_marzo.png}
     \caption{Linee dei trasporti pubblici e condizioni traffico vicino a Corso 22 Marzo}
     \label{fig:22-marzo}
-\end{figure}
+\end{figure}\todo{atrent: conclusione traibile solo a occhio o sei riuscito a dare un valore numerico?}
 
 Le immagini del traffico sono state realizzate tramite le API di Google Maps:  
 
@@ -505,6 +506,8 @@ Nella zona dei navigli, si è poi presa in considerazione la sezione \ref{fig:zo
 perchè sono presenti molti incidenti in viale Papiniano e viale Beatrice d'Este, 
 e un numero minore nella via parallela sottostante, in cui è anche presente 
 una linea di trasporti pubblici.
+
+\todo{atrent: vale in generale, manca bibliografia scientifica, ti dovresti confrontare con un po' di accademia sugli studi di incidentalità, come vengono calcolati i vari fattori?}
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/atm/zona_navigli_rect.png}
@@ -568,7 +571,7 @@ corsie ciascuna; con l'aumentare dello spazio, infine, inevitabilmente la veloci
 \todo{ci sono vie con la tendenza opposta?}
 
 %\clearpage
-\subsection{Correlazione tra pavè e incidentalità}
+\subsection{Correlazione tra pavè e incidentalità}\todo{atrent: vale ovunque tu parli di ``correlazione'', il termine è tecnico e se lo usi devi poi dare dei valori di correlazione (appunto) statistica, cioè attenzione a dire in generale ``è VISIBILE la correlazione tra...'', il ``visibile'' ti può aiutare a concentrarti su un subset di dati, ma poi devi dare dei numeri}
 
 Spesso le linee di tram coincidono con strade in pavè, è vero per Milano? 
 Tramite la mappa \ref{fig:tram-pave-milano} è possibile confrontarle: 
@@ -754,7 +757,7 @@ mentre cresce molto il numero di questi nelle strade urbane.
 \section{Dati Istat su conducente}
 
 %\clearpage
-\subsection{Il sesso dei conducenti cambia in base alla strada?}
+\subsection{Il sesso dei conducenti cambia in base alla strada?}\todo{atrent: rephrase, così sembra umoristico ;)}
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/tipo_veicoli/uomo-donna.png}
@@ -926,7 +929,7 @@ e infine il numero di incidenti a Milano, pesati in base al traffico.\\
 Gli ultimi due grafi sono estremamente simili, ciò è dovuto al fatto che il volume di traffico e 
 il volume di incidenti siano fattori altamente correlati, il che comporta che non ci siano molte 
 situazioni in cui il numero di incidenti sia alto in orari con poco traffico.\\
-Correlazione tra percentuale traffico e incidenti: $0.905$
+Correlazione tra percentuale traffico e incidenti: $0.905$\todo{atrent: ecco, qui giusto, vale sempre, esplicitare il fattore di correlazione e magari anche la query e i dataset esatti usati per calcolarla, in modo che sia riproducibile da altri}
 
 %...
 
