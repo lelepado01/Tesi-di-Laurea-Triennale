@@ -440,7 +440,7 @@ Dopo più attenta osservazione del perimetro dell'area C, visibile in figura \re
 si nota che la maggior parte degli incidenti avvengono sulla circonvallazione interna, 
 situata fuori dall'area C, che è compresa nell'area 0 di Milano nella mappa \ref{fig:heatmap-municipi}.
 
-Se si prende in considerazione solamente l'area C, il numero di incidenti scende a 46.83 per chilometro quadrato.
+Se si prende in considerazione solamente l'area C, il numero di incidenti scende a $46.83$ per chilometro quadrato.
 
 \begin{lstlisting}
     area_c = geometry.Polygon(gp.read_file("dataset/area_c/area_c.geojson").to_crs(epsg=3857)['geometry'].iloc[0])
@@ -517,7 +517,9 @@ perchè sono presenti molti incidenti in viale Papiniano e viale Beatrice d'Este
 e un numero minore nella via parallela sottostante, in cui è anche presente 
 una linea di trasporti pubblici.
 
-\todo{atrent: vale in generale, manca bibliografia scientifica, ti dovresti confrontare con un po' di accademia sugli studi di incidentalità, come vengono calcolati i vari fattori?}
+\todo{atrent: vale in generale, manca bibliografia scientifica, 
+ti dovresti confrontare con un po' di accademia sugli studi di incidentalità, 
+come vengono calcolati i vari fattori?}
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/atm/zona_navigli_rect.png}
@@ -545,10 +547,10 @@ una linea di trasporti pubblici.
             inc_s += 1
 \end{lstlisting}
 
-Il risultato, conferma che sono presenti 167.09 incidenti per chilometro 
+Il risultato, conferma che sono presenti $167.09$ incidenti per chilometro 
 nel viale in cui sono presenti trasporti pubblici, che per quanto non sia nella media per la zona 
 di appartenenza, è giustificabile in quanto si è presa in considerazione solo la strada, 
-e 289.32 nell'altra zona. Nel secondo caso il numero di incidenti è molto alto.
+e $289.32$ nell'altra zona. Nel secondo caso il numero di incidenti è molto alto.
 
 Non è detto che il maggior numero di incidenti sia causato dalla linea degli autobus, 
 in particolare, va tenuta in considerazione la topologia delle due vie parallele.
@@ -568,8 +570,8 @@ raffigurate nel'immagine \ref{fig:zona-22marzo-rect}.
 \end{figure}
 
 In questo caso, per viale Bianca Maria, dove non è presente una linea di trasporti pubblici, 
-il numero di incidenti è 254.31, mentre per viale Premuda per cui passa una linea tranviaria, 
-il numero scende a 93.96.
+il numero di incidenti è $254.31$, mentre per viale Premuda per cui passa una linea tranviaria, 
+il numero scende a $93.96$.
 
 Anche per questa zona, le due vie prese in considerazione sono molto diverse; 
 viale Premuda è una via a due carreggiate separate, ognuna con una corsia e un solo senso di marcia, 
@@ -608,7 +610,7 @@ Per creare una stima, si sono convertite le vie principali della cartina trovata
 in geojson, il risultato è visibile nella mappa \ref{fig:mappa-pave}.
 
 \begin{figure}
-    \includegraphics[width=0.48\linewidth]{../src/pave/mappa_pave.png}
+    \includegraphics[width=\linewidth]{../src/pave/mappa_pave.png}
     \caption{Principali strade a Milano in pavè}
     \label{fig:mappa-pave}
 \end{figure}
@@ -641,7 +643,7 @@ che contiene tutto il territorio del centro.
 Per ovviare a questo problema, si è creato un campione di strade asfaltate, prese circa nella stessa zona 
 di Milano, queste strade sono raffigurate nella mappa\dots
 
-
+\todo{creare campione di strade asfaltate e terminare capitolo}
 
 %\clearpage
 \section{Incidenti e Piste  Ciclabili}
