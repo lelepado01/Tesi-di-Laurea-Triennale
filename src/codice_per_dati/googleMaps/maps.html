@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<!--
+  L'API Key non è mia, è quella di trial della documentazione, 
+  e google maps blocca ogni accesso che non sia dal loro sito o jsfiddle
+  (https://jsfiddle.net/)
+-->
+
+<html>
+  <head>
+    <title>Hiding Map Features With Styling</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <!-- jsFiddle will insert css and js -->
+  </head>
+  <body>
+    <div id="style-selector-control" class="map-control">
+      <input
+        type="radio"
+        name="show-hide"
+        id="hide-poi"
+        class="selector-control"
+      />
+      <label for="hide-poi">Hide</label>
+      <input
+        type="radio"
+        name="show-hide"
+        id="show-poi"
+        class="selector-control"
+        checked="checked"
+      />
+      <label for="show-poi">Show</label>
+    </div>
+    <div id="map"></div>
+  </body>
+</html>
