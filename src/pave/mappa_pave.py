@@ -25,6 +25,8 @@ area_pave = 0
 for rect in pave['geometry']: 
     area_pave += geometry.Polygon(rect).area
 
+print(area_pave)
+
 #print(inc_in_pave * 10**6 / area_pave) # = 229.45
 
 # Sembra un numero alto, ma bisognerebbe avere un campione di strade normali per vedere se il numero di incidenti è piu alto
