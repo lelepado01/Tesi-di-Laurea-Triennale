@@ -640,10 +640,22 @@ Tuttavia, bisogna tenere in considerazione che il dataset che è appena stato cr
 strade, senza alcuna zona morta, come edifici, a differenza dell'area utilizzata del centro storico, 
 che contiene tutto il territorio del centro.
 
-Per ovviare a questo problema, si è creato un campione di strade asfaltate, prese circa nella stessa zona 
-di Milano, queste strade sono raffigurate nella mappa\dots
+Per ovviare a questo problema, si è creato un campione di strade asfaltate, prese circa 
+nella stessa zona di Milano, queste strade sono raffigurate nella mappa \ref{fig:mappa-asfalto}. 
+Si è inoltre tentato di tenere i due campioni di strade il più simili possibili, sia per zona, 
+sia per area totale del dataset.
 
-\todo{creare campione di strade asfaltate e terminare capitolo}
+\begin{figure}
+    \includegraphics[width=\linewidth]{../src/pave/mappa_asfalto.png}
+    \caption{Campione di strade asfaltate a Milano}
+    \label{fig:mappa-asfalto}
+\end{figure}
+
+Eseguendo lo stesso calcolo realizzato per le strade in pavè, risulta che il numero di incidenti per 
+chilometro quadrato, nel campione creato, è di $220.89$ incidenti.
+Tuttavia, nel campione delle strade asfaltata sono stati presi vari tratti provenienti dalla circonvallazione 
+interna e altre zone trafficate, mentre il campione di strade in pavè contiene, per mancanza di altri dati, 
+molte strade del centro storico inevitabilmente meno trafficate.
 
 %\clearpage
 \section{Incidenti e Piste  Ciclabili}
