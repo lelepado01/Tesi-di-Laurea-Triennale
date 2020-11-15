@@ -28,7 +28,7 @@ ora_media = ora.mean()
 accessi_area_c_per_ora =  ora.drop(index=24)
 
 plt.subplot(2,1,1)
-plt.fill_between(accessi_area_c_per_ora.index, accessi_area_c_per_ora, color='#ddbd08')
+plt.fill_between(accessi_area_c_per_ora.index, accessi_area_c_per_ora / accessi_area_c_per_ora.sum(), color='#ddbd08')
 plt.xticks(range(0,24))
 plt.ylabel("Percentuale")
 plt.title("Traffico in Area C")

@@ -47,21 +47,21 @@ perc_traffico = df / df.sum()
 color_ls = ['#dbad85']*12
 color_ls[5:7] = ['#dd8d46']*3
 
-perc_traffico.plot.bar(width=0.9, color=color_ls)
-plt.plot(np.array([-1, 12]),np.array([perc_traffico.mean(), perc_traffico.mean()]), color='#ddd846')
-plt.text(11, df.mean()-0.2, "Media")
-plt.xlabel("Mesi")
-plt.ylabel("Traffico mensile in Area C a Milano")
-plt.xticks(range(0, 12), mesi)
-plt.tight_layout()
-plt.show()
+# perc_traffico.plot.bar(width=0.9, color=color_ls)
+# plt.plot(np.array([-1, 12]),np.array([perc_traffico.mean(), perc_traffico.mean()]), color='#ddd846')
+# plt.text(11, df.mean()-0.2, "Media")
+# plt.xlabel("Mesi")
+# plt.ylabel("Traffico mensile in Area C a Milano")
+# plt.xticks(range(0, 12), mesi)
+# plt.tight_layout()
+# plt.show()
 
 incidenti = pd.read_csv("dataset/incidenti/incidenti_2012.txt", sep='\t')
 mesi_incidenti = incidenti['mese'].value_counts().sort_index()
 
 perc_traffico = pd.DataFrame(perc_traffico)
 perc_traffico.index = range(1,13)
-mesi_norm = mesi_incidenti * (1-perc_traffico[0])
+#mesi_norm = mesi_incidenti * (1-perc_traffico[0])
 
 # print(mesi_incidenti)
 # print(perc_traffico)
@@ -85,3 +85,17 @@ mesi_norm = mesi_incidenti * (1-perc_traffico[0])
 # plt.xticks(range(1,13))
 # plt.tight_layout()
 # plt.show()
+
+
+
+plt.subplot(2,1,1)
+plt.plot(perc_traffico, color='#ddbd08')
+plt.fill_between(perc_traffico.index, perc_traffico[0], color='#ddbd08')
+plt.title("Percentuale di traffico nel mese rispetto al totale annuale")
+plt.xticks(range(1,13))
+plt.tight_layout()
+
+plt.subplot(2,1,2)
+
+plt.tight_layout()
+plt.show()
