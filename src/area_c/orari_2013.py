@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-path = "dataset/area_c/orari_2013.csv"
+path = "dataset/area_c/orari_2016.csv"
 
 data = pd.read_csv(path, sep=';')
 
@@ -14,57 +14,46 @@ for f in data['hour'].unique():
         ignore_index=True
         )
 
-# ora_media = ora.mean()
+ora_media = ora.mean()
 
-# accessi_area_c_per_ora = ora / ora.sum()
-# accessi_area_c_per_ora.index = range(1,25)
-# perc_ora_inc = ora / ora_media *100 -100
+#accessi_area_c_per_ora = ora / ora.sum()
+accessi_area_c_per_ora =  ora.drop(index=24)
 
-# print(accessi_area_c_per_ora)
-# print(perc_ora_inc)
+path = "dataset/incidenti/incidenti_2016.txt"
 
-# plt.subplot(2,1,1)
-# plt.plot(accessi_area_c_per_ora)
-# # plt.subplot(2,1,2)
-# # plt.plot(perc_ora_inc)
-# plt.show()
+incidenti = pd.read_csv(path, sep="\t", encoding='latin1')
+incidenti = incidenti[incidenti['Ora'] != 25]
 
+incidenti_per_ora = incidenti[incidenti['provincia'] == 15]['Ora'].value_counts().sort_index()
 
-path = "dataset/incidenti/incidenti_2010.txt"
-
-incidenti = pd.read_csv(path, sep="\t")
-incidenti = incidenti[incidenti['ora'] != 25]
-
-incidenti_per_ora = incidenti[incidenti['provincia'] == 15]['ora']#.value_counts().sort_index()
-
-
+incidenti_per_ora.index = range(0,24)
+#incidenti_per_ora = incidenti_per_ora / incidenti_per_ora.sum()
 #incidenti_per_ora_norm = incidenti_per_ora * (1 - accessi_area_c_per_ora)
-#incidenti_per_ora_norm = incidenti_per_ora / ora
-
-#print(accessi_area_c_per_ora.corr(incidenti_per_ora))
-
-print(ora.corr(incidenti_per_ora.value_counts()))
-
 
 # plt.subplot(3,1,1)
-# plt.plot(ora, color='#ddbd08')
-# plt.fill_between(ora.index, ora, color='#ddbd08')
-# plt.xticks(range(1,25))
+# plt.plot(accessi_area_c_per_ora, color='#ddbd08')
+# plt.fill_between(accessi_area_c_per_ora.index, accessi_area_c_per_ora, color='#ddbd08')
+# plt.xticks(range(0,24))
 # plt.ylabel("Percentuale")
 # plt.title("Percentuale di traffico totale")
 # plt.tight_layout()
+
 # plt.subplot(3,1,2)
 # plt.plot(incidenti_per_ora, color='#dd5308', label="Incidenti per orario")
 # plt.fill_between(incidenti_per_ora.index, incidenti_per_ora, color='#dd5308')
-# plt.subplot(3,1,3)
+# plt.xticks(range(0,24))
+
+# # plt.subplot(3,1,3)
 # plt.plot(incidenti_per_ora_norm, color='#93dd08', label="Incidenti normalizzati")
 # plt.fill_between(incidenti_per_ora_norm.index, incidenti_per_ora_norm, color='#93dd08')
 # plt.title("Numero di incidenti a Milano")
 # plt.ylabel("Numero incidenti")
-# plt.xticks(range(1,25))
+# plt.xticks(range(0,24))
 # plt.tight_layout()
 # plt.show()
 
-
 # Non cambia molto, prova a normalizzarlo con percentuale di 
 # incremento rispetto alla media
+
+# Calcolo correlazione: 
+# print(ora.corr(incidenti_per_ora.value_counts()))

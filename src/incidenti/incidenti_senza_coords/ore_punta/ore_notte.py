@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 path = "dataset/incidenti/incidenti_2010.txt"
 
-bar_width = 0.8
+bar_width = 0.96
 
 data = pd.read_csv(path, sep="\t")
 data = data[data['ora'] != 25]
@@ -21,10 +21,13 @@ ora_notte_weekend = ora_notte_weekend.reindex([23,24,1,2,3,4,5,6])
 ora_notte_week /= 5 * 52 
 ora_notte_weekend /= 2 * 52
 
-# TODO: separa le barre e prova fill a retina
+pd.DataFrame(
+    [ora_notte_week, ora_notte_weekend], 
+    ['Week', 'Weekend']
+).transpose().plot.bar(color=['#d1d162', '#6262d1'], width=bar_width)
 
-ora_notte_weekend.plot.bar(color='#6262d1', width=bar_width)
-ora_notte_week.plot.bar(color='#d1d162', width=bar_width)
+# ora_notte_weekend.plot.bar(color='#', width=bar_width)
+# ora_notte_week.plot.bar(color='#', width=bar_width)
 
 plt.xlabel("Principali ore della notte")
 plt.ylabel("Incidenti per giorno")

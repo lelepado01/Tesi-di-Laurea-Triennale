@@ -984,12 +984,12 @@ Per quanto un dataset contenente questi dati non sia stato trovato,
 in quanto a partire dal 2011, è disponibile il numero degli accessi all'area C.
 
 \begin{figure}
-    \includegraphics[width=\linewidth]{../src/area_c/incidenti_traffico_ora.png}
-    \caption{Incidenti e traffico a Milano}
-    \label{fig:incidenti-traffico-ora}
+    \includegraphics[width=\linewidth]{../src/area_c/rapporto_incidenti_traffico.png}
+    \caption{Rapporto tra incidenti e traffico per orario a Milano}
+    \label{fig:rapporto-incidenti-traffico}
 \end{figure}
 
-L'immagine \ref{fig:incidenti-traffico-ora} contiene, a partire dall'alto, 
+L'immagine \ref{fig:rapporto-incidenti-traffico} contiene, a partire dall'alto, 
 la percentuale traffico in area C a una determinata ora, il numero di incidenti a Milano, 
 e infine il numero di incidenti a Milano, pesati in base al traffico.\\
 Gli ultimi due grafi sono estremamente simili, ciò è dovuto al fatto che il volume di traffico e 
@@ -997,6 +997,7 @@ il volume di incidenti siano fattori altamente correlati, il che comporta che no
 situazioni in cui il numero di incidenti sia alto in orari con poco traffico.\\
 
 \begin{lstlisting}
+    # eseguito con dati del 2016
     accessi_area_c_per_ora = pd.Series()
     for f in data['hour'].unique():
         accessi_area_c_per_ora = accessi_area_c_per_ora.append(
@@ -1009,19 +1010,20 @@ situazioni in cui il numero di incidenti sia alto in orari con poco traffico.\\
     correlazione = accessi_area_c_per_ora.corr(incidenti_per_ora)
 \end{lstlisting}
 
-Correlazione tra traffico in area C a Milano e incidenti per orario è $0.837$
+Correlazione tra traffico in area C a Milano e incidenti per orario è $0.877$
 
 \todo{lelepado: La correlazione è stata realizzata con i valori cumulati delle ore, 
 non con il campione, perchè gli accessi in area C sono già parzialmente cumulati, va bene?}
 
 %\clearpage
-\subsection{Correlazione tra incidentalità e orari notturni}
+\subsection{Incidentalità in orari notturni}
 
 Come individuato dal primo grafo \ref{fig:week-weekend}, durante le 
-ore notturne si ha la tendenza opposta.
-Nella figura \ref{fig:ore-notte}, \dots
-
-\todo{finire correlazione incidenti e orari notturni}
+ore notturne si ha il comportamento di incidenti tra settimana lavorativa e weekend opposta.
+Nella figura \ref{fig:ore-notte}, sono raffigurate le principali ore della notte, divise tra 
+settimana lavorativa e weekend.
+Chiaramente, durante il weekend si hanno un maggior numero di incidenti 
+negli orari serali e notturni.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/ore_punta/ore_notte.png}
@@ -1029,7 +1031,7 @@ Nella figura \ref{fig:ore-notte}, \dots
     \label{fig:ore-notte}
 \end{figure}
 
-%...
+\todo{confrontare con traffico serale in area c?}
 
 %\clearpage
 \subsection{Quanto influiscono le vacanze estive sull'incidentalità?}
