@@ -14,10 +14,10 @@ for f in data['hour'].unique():
         ignore_index=True
         )
 
-ora_media = ora.mean()
+# ora_media = ora.mean()
 
-accessi_area_c_per_ora = ora / ora.sum()
-accessi_area_c_per_ora.index = range(1,25)
+# accessi_area_c_per_ora = ora / ora.sum()
+# accessi_area_c_per_ora.index = range(1,25)
 # perc_ora_inc = ora / ora_media *100 -100
 
 # print(accessi_area_c_per_ora)
@@ -32,15 +32,19 @@ accessi_area_c_per_ora.index = range(1,25)
 
 path = "dataset/incidenti/incidenti_2010.txt"
 
-data = pd.read_csv(path, sep="\t")
-data = data[data['ora'] != 25]
+incidenti = pd.read_csv(path, sep="\t")
+incidenti = incidenti[incidenti['ora'] != 25]
 
-incidenti_per_ora = data[data['provincia'] == 15]['ora'].value_counts().sort_index()
+incidenti_per_ora = incidenti[incidenti['provincia'] == 15]['ora']#.value_counts().sort_index()
+
 
 #incidenti_per_ora_norm = incidenti_per_ora * (1 - accessi_area_c_per_ora)
-incidenti_per_ora_norm = incidenti_per_ora / ora
+#incidenti_per_ora_norm = incidenti_per_ora / ora
 
-print(accessi_area_c_per_ora.corr(incidenti_per_ora))
+#print(accessi_area_c_per_ora.corr(incidenti_per_ora))
+
+print(ora.corr(incidenti_per_ora.value_counts()))
+
 
 # plt.subplot(3,1,1)
 # plt.plot(ora, color='#ddbd08')

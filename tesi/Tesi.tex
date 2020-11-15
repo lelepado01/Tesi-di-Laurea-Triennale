@@ -923,7 +923,7 @@ percentuale di incidenti in cui è presente solo il conducente rimane molto simi
 \section{Dati Istat su orari e mesi}
 
 %\clearpage
-\subsection{Correlazione tra incidentalità e orario}
+\subsection{Incremento dell'incidentalità in diversi orari}
 
 Per prima cosa, con un semplice conto degli incidenti durante il weekend 
 e confrontandolo con il numero di quelli avvenuti durante la 
@@ -960,7 +960,7 @@ avvengono molti più sinistri, mentre nella fascia mattutina,
 il numero non sembra variare molto dalla media di incidenti durante il giorno.
 
 %\clearpage
-\subsection{Correlazione tra incidentalità e orari della mattina}
+\subsection{Incremento dell'incidentalità nelle fasce orarie della mattina}
 
 Se si selezionano solo gli incidenti nella provincia di Milano, mostrati nel grafo 
 \ref{fig:week-weekend-milano}, è possibile individuare 
@@ -997,17 +997,22 @@ il volume di incidenti siano fattori altamente correlati, il che comporta che no
 situazioni in cui il numero di incidenti sia alto in orari con poco traffico.\\
 
 \begin{lstlisting}
-    accessi_area_c_per_ora_perc = ora / ora.sum()
-    accessi_area_c_per_ora_perc.index = range(1,25)
+    accessi_area_c_per_ora = pd.Series()
+    for f in data['hour'].unique():
+        accessi_area_c_per_ora = accessi_area_c_per_ora.append(
+            pd.Series(data[data['hour'] == f]['totale'].sum()), 
+            ignore_index=True
+            )
 
     incidenti_per_ora = data[data['provincia'] == 15]['ora'].value_counts().sort_index()
 
-    correlazione = accessi_area_c_per_ora_perc.corr(incidenti_per_ora)
+    correlazione = accessi_area_c_per_ora.corr(incidenti_per_ora)
 \end{lstlisting}
 
-Correlazione tra traffico in area C a Milano e incidenti: $0.816$
+Correlazione tra traffico in area C a Milano e incidenti per orario è $0.837$
 
-%...
+\todo{lelepado: La correlazione è stata realizzata con i valori cumulati delle ore, 
+non con il campione, perchè gli accessi in area C sono già parzialmente cumulati, va bene?}
 
 %\clearpage
 \subsection{Correlazione tra incidentalità e orari notturni}
