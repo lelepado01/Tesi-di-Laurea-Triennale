@@ -1574,15 +1574,31 @@ I coefficienti riguardanti i morti sono molto meno vicini a uno, probabilmente p
 di incidenti mortali, che rendono il campione più ristretto.
 
 \begin{figure}
-    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/comuni/corr_incidenti_feriti.png}
+    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/provincia/corr_incidenti_feriti.png}
     \caption{Correlazione tra numero di feriti e incidenti}
     \label{fig:corr-incidenti-feriti}
 \end{figure}
 
 Tracciando il grafo \ref{fig:corr-incidenti-feriti}, dei primi trenta valori del dataset ACI, 
 è chiaramente visibile la correlazione tra numero di incidenti e numero di feriti.
+L'unico dubbio che possa sorgere è che il numero di feriti sia maggiore del numero di incidenti, 
+tuttavia controllando il dataset, ogni riga contiene un numero di feriti maggiore. 
 
-\todo{descrivere grafo correlazione}
+\begin{center}
+    \def\arraystretch{1.5}%  
+    \begin{tabular}{ |c|c|c|c| } 
+    \hline
+    Provincia & Comune & Incidenti & Feriti \\ 
+    \hline
+    \rowcolor{TableGray}
+    Torino & Brandizzo & 5 & 10\\
+    Torino & Chivasso & 12 & 18\\
+    \rowcolor{TableGray}
+    Torino & Rondissone & 6 & 12\\
+    Torino & Settimo Torinese & 25 & 40\\
+    \hline
+    \end{tabular}
+\end{center}
 
 %\clearpage
 \subsection{Le autostrade più pericolose}
