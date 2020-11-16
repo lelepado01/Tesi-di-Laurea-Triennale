@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 path = "dataset/incidenti/incidenti_2016.txt"
 
-bar_width = 0.96
+bar_width = 0.9
 
 data = pd.read_csv(path, sep="\t", encoding='latin1')
 data = data[data['Ora'] != 25]
@@ -21,6 +21,9 @@ ora_notte_weekend = ora_notte_weekend.reindex([23,24,1,2,3,4,5,6])
 ora_notte_week /= 5 * 52 
 ora_notte_weekend /= 2 * 52
 
+ora_notte_week = ora_notte_week.rename(index={24:0})
+ora_notte_weekend = ora_notte_weekend.rename(index={24:0})
+
 pd.DataFrame(
     [ora_notte_week, ora_notte_weekend], 
     ['Week', 'Weekend']
@@ -32,6 +35,7 @@ pd.DataFrame(
 plt.xlabel("Principali ore della notte")
 plt.ylabel("Incidenti per giorno (2016)")
 plt.legend(['week', 'weekend'])
+plt.xticks(rotation=0)
 
 plt.show()
 
