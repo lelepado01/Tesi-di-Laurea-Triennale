@@ -1630,13 +1630,57 @@ tuttavia controllando il dataset, ogni riga contiene un numero di feriti maggior
     \label{fig:incidenti-autostrade}
 \end{figure}
 
-Si pu\'o notare subito, dalla figura \ref{fig:incidenti-autostrade} che le autostrade con 
+Si pu\'o notare subito, dalla figura \ref{fig:incidenti-autostrade} che, nel 2018, le autostrade con 
 più incidenti sono anche quelle più trafficate, come l'Autostrada del Sole e l'Adriatica.
 
-\todo{descrivere grafo autostrade}
+Una domanda che sorge spontanea è se le autostrade con più incidenti cambiano al cambiare dell'anno.\\
+Un'altra questione potrebbe essere quella delle differenze di incidenti al cambiare dei mesi, 
+o dell'orario.\\
+Infine ci si potrebbe chiedere se esistono differenze sostanziali, per anno, tra i flussi di 
+famiglie che si dirigono in vacanza in Agosto. Per esempio se esistono delle mete 
+popolari solo in determinati stagioni, o se i flussi sono equivalenti di anno in anno.
 
-%\clearpage
-\subsection{Correlazione tra mesi dell'anno e incidentalità}
+
+\subsection{Le autostrade più utilizzate cambiano a seconda dell'anno?}
+
+Il numero di persone in vacanza nelle località del centro e sud italia cambiano 
+a seconda dell'anno, il numero di incidenti rispecchia questo cambiamento?
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/agosto/autostrade.png}
+    \caption{Incidenti in Strade per anno}
+    \label{fig:autostrade-anno}
+\end{figure}
+
+Controllando le prime cinque strade per incidentalità ogni anno, 
+raffigurate nel grafo \ref{fig:autostrade-anno}, si ottiene un'immagine 
+abbastanza stabile, in quanto gli itinerari in testa alla classifica sono sempre gli stessi.
+Si nota, che la strada statale Adriatica è sempre in prima posizione, 
+con una media di $171.5$ incidenti nel mese di Agosto.
+Le posizioni successive invece cambiano a seconda dell'anno, in particolare per\'o, l'autostrada 
+A4 (Torino-Trieste) ha progressivamente aumentato il numero di incidenti, evento possibilmente 
+dovuto all'aumento di popolarita delle vacanze in montagna.
+
+Facendo utilizzo del dataset istat riguardante il turismo in Italia, e in particolare sfruttando 
+due indicatori, Tasso di Turisticità
+\footnote{Tasso di Turisticità: indica il numero di turisti presenti ogni 100.000 abitanti} 
+e turismo in mesi non estivi,
+è stato possibile realizzare il grafo \ref{fig:turismo}, contenente questi indici, 
+nel periodo a partire dall'anno 1995 fino al 2018.
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{../src/turismo/turismo.png}
+    \caption{Turismo nelle principali località estive e invernali}
+    \label{fig:turismo}
+\end{figure}
+
+Ciò che si può concludere, oltre al fatto che le zone di montagna hanno 
+un tasso di turisticità particolarmente alto; 
+è che, a partire dal 2015, è presente un aumento di turisti nelle località del 
+nord Italia, che non è visibile nelle altre regioni.
+
+
+\subsection{L'incidentalità su autostrade dipende dai mesi dell'anno?}
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/autostrade/mesi_autostrade.png}
     \caption{Incidenti per mese nel 2018}
@@ -1649,9 +1693,8 @@ L'Adriatica e l'Aurelia, autostrade utilizzate molto durante i mesi caldi, hanno
 incidenti in Luglio e Agosto, mentre l'A1, ha picco più basso in Agosto, probabilmente 
 perchè bilanciato dagli incidenti in inverno intorno a Milano.
 
-% controllare se avvengono più incidenti in inverno intorno a milano
-Se si prendono i dati della A1, si nota 
-che in Agosto, Settembre e Ottobre il numero degli incidenti diminuisce.
+Se si prendono i dati della A1, si nota che in Agosto, Settembre e Ottobre il numero degli 
+incidenti diminuisce.
 Invece sull'Adriatica, raffigurata nel grafo \ref{fig:milano-adriatica}, 
 prevalgono incidenti in Luglio e Agosto.
 
@@ -1718,44 +1761,6 @@ dell'alto numero di incidenti,
 queste ultime infatti sono Strade Statali molto lunghe e con corsie di marcia non separate, 
 per non parlare del fatto che entrambe le strade passano attraverso un alto numero di centri abitati, 
 
-%\clearpage
-\subsection{Le autostrade più utilizzate cambiano a seconda dell'anno?}
-
-Il numero di persone in vacanza nelle località del centro e sud italia cambiano 
-a seconda dell'anno, il numero di incidenti rispecchia questo cambiamento?
-
-\begin{figure}
-    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/agosto/autostrade.png}
-    \caption{Incidenti in Strade per anno}
-    \label{fig:autostrade-anno}
-\end{figure}
-
-Controllando le prime cinque strade per incidentalità ogni anno, 
-raffigurate nel grafo \ref{fig:autostrade-anno}, si ottiene un'immagine 
-abbastanza stabile, in quanto gli itinerari in testa alla classifica sono sempre gli stessi.
-Si nota, che la strada statale Adriatica è sempre in prima posizione, 
-con una media di $171.5$ incidenti nel mese di Agosto.
-Le posizioni successive invece cambiano a seconda dell'anno, in particolare per\'o, l'autostrada 
-A4 (Torino-Trieste) ha progressivamente aumentato il numero di incidenti, evento possibilmente 
-dovuto all'aumento di popolarita delle vacanze in montagna.
-
-Facendo utilizzo del dataset istat riguardante il turismo in Italia, e in particolare sfruttando 
-due indicatori, Tasso di Turisticità
-\footnote{Tasso di Turisticità: indica il numero di turisti presenti ogni 100.000 abitanti} 
-e turismo in mesi non estivi,
-è stato possibile realizzare il grafo \ref{fig:turismo}, contenente questi indici, 
-nel periodo a partire dall'anno 1995 fino al 2018.
-
-\begin{figure}
-    \includegraphics[width=\linewidth]{../src/turismo/turismo.png}
-    \caption{Turismo nelle principali località estive e invernali}
-    \label{fig:turismo}
-\end{figure}
-
-Ciò che si può concludere, oltre al fatto che le zone di montagna hanno 
-un tasso di turisticità particolarmente alto; 
-è che, a partire dal 2015, è presente un aumento di turisti nelle località del 
-nord Italia, che non è visibile nelle altre regioni.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\clearpage
