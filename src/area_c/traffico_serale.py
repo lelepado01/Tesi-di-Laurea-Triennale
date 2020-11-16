@@ -15,19 +15,42 @@ def is_weekend(year, month, day) -> pd.Series:
 
     return s
 
-# print(len(orari_serali))
 
 weekend_days = orari_serali
+week_days = orari_serali
+days = is_weekend(orari_serali['year'], orari_serali['month'], orari_serali['day'])
 
-weekend_days = orari_serali[is_weekend(orari_serali['year'], orari_serali['month'], orari_serali['day'])]
-
-# print(weekend_days)
+weekend_days.index = range(0, len(weekend_days))
+week_days.index = range(0, len(week_days))
+i = 0
+for d in days: 
+    if not d: 
+        weekend_days = weekend_days.drop(index=i)
+    else: 
+        week_days = week_days.drop(index=i)
+    i+= 1
 
 traffico = {}
-for f in orari_serali['hour'].unique():
-    traffico[f] = orari_serali[orari_serali['hour'] == f]['totale'].sum()
+for f in weekend_days['hour'].unique():
+    traffico[f] = weekend_days[weekend_days['hour'] == f]['totale'].sum()
 
-traffico = pd.DataFrame(traffico, index=['incidenti']).transpose()
+traffico_weekend = pd.DataFrame(traffico, index=['Traffico in weekend']).transpose()
 
-traffico.plot.bar()
+traffico = {}
+for f in weekend_days['hour'].unique():
+    traffico[f] = week_days[week_days['hour'] == f]['totale'].sum()
+
+traffico_week = pd.DataFrame(traffico, index=['Traffico in settimana']).transpose()
+
+traffico_weekend = traffico_weekend * 2 / 7
+traffico_week = traffico_week * 5 / 7
+
+traffico_weekend = traffico_weekend.reindex([23,0,1,2,3,4,5,6])
+traffico_week = traffico_week.reindex([23,0,1,2,3,4,5,6])
+
+traffico_weekend['Traffico in settimana'] = traffico_week['Traffico in settimana']
+traffico_weekend.plot.bar(width=0.9)
+plt.ylabel("Accessi in area C")
+plt.xticks(rotation=0)
+plt.tight_layout()
 plt.show()
