@@ -1,6 +1,10 @@
 
-import pandas as pd
 import matplotlib.pyplot as plt
+import pandas as pd
+import sys
+sys.path.append("src")
+
+import heatmap as H
 
 def sum_columns(data : pd.DataFrame, normalize = False, name=None) -> pd.Series: 
     res = {}
@@ -21,8 +25,6 @@ def sum_columns(data : pd.DataFrame, normalize = False, name=None) -> pd.Series:
 data = pd.read_csv('dataset/incidenti/aci/autostrade/ore_2018.csv')
 ore = ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24']
 
-import geopandas as gp
-import contextily as cx
 milano = data[data['PROVINCIA'] == 'Milano']
 
 incidenti = pd.DataFrame()
@@ -31,23 +33,31 @@ for field in milano['NOME STRADA'].unique():
         sum_columns(milano[milano['NOME STRADA'] == field][ore], name=field), 
     )
 
-strade = gp.read_file("dataset/autostrade/autostrade_milano_linee.geojson").to_crs(epsg=3857)
-strade.index = strade['name']
 
-# print(incidenti)
-inc = incidenti['01']
-for i in ['02', '03', '04', '05', '06', '07', '08', '09']:
-    inc = incidenti[i] + inc
-for i in range(10,25): 
-    inc = incidenti[str(i)] + inc
+fields = [
+    'A 01 -  Milano-Roma-Napoli (Autostrada del Sole)', 
+    'A 04 -  Torino-Trieste',     
+    'A 07 -  Milano-Genova',     
+    'A 08 -  Milano-Varese (Autostrada dei Laghi)',
+    'A 50 -  Tangenziale Ovest Milano',    
+    'A 51 -  Tangenziale Est Milano',    
+    'A 52 -  Tangenziale Nord Milano'
+    ]  
 
-strade = gp.GeoDataFrame(inc, geometry=strade['geometry'])
-# print(strade)
+incidenti = incidenti.drop(index='0')
 
-# ax = strade.plot(figsize=(11,9), column= 0, cmap='hot_r' ,legend=True, linewidth=1.5)
-# plt.ylim((5.68 * pow(10, 6), 5.72 * pow(10,6)))
-# plt.xlim((pow(10, 6), 1.04 * pow(10,6)))
-# plt.xlabel("Incidenti nelle strade principali a Milano (2018)")
-# cx.add_basemap(ax=ax)
-# plt.show()
+incidenti_1 = pd.DataFrame()
+for i in [0, 2,3, 5,9,10,11]:
+    incidenti_1 = incidenti_1.append(incidenti.iloc[i])
 
+fig, ax = plt.subplots()
+
+im, cbar = H.heatmap(
+    incidenti_1, 
+    incidenti_1.index, 
+    range(0,24), 
+    ax=ax, 
+    cmap="YlGn", 
+    cbarlabel="Incidenti per autostrada (2018)")
+
+plt.show()
