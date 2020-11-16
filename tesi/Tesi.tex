@@ -1512,6 +1512,28 @@ Quali potrebbero essere le motivazioni di questa disparità?
 Come già accennato in precendenza, una delle motivazioni principali 
 deve essere la destinazione lavorativa della popolazione.
 
+
+%\clearpage
+\subsection{Le strade pericolose in provincia di Milano}
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/autostrade/incidenti_line_chart.png}
+    \caption{Autostrade con più incidenti nel 2012}
+    \label{fig:line-incidenti-milano}
+\end{figure}
+
+Per realizzare la figura \ref{fig:line-incidenti-milano}, sono state prese in considerazione alcune 
+tra le autostrade e strade statali più trafficate e si è segnata la posizione approssimata.
+
+\begin{lstlisting}
+    strade = gp.read_file("dataset/incidenti/aci/autostrade/posizione_autostrade.geojson").to_crs(epsg=3857)
+    strade.index = strade['name']
+
+    strade = gp.GeoDataFrame(incidenti[ore], geometry=strade['geometry'])
+    ax = strade.plot(markersize=strade[ore].sum() * 10, alpha=0.5)
+\end{lstlisting}
+
+
 \subsection{Incidenti per provincia}
 
 \begin{figure}
@@ -1612,28 +1634,6 @@ Si pu\'o notare subito, dalla figura \ref{fig:incidenti-autostrade} che le autos
 più incidenti sono anche quelle più trafficate, come l'Autostrada del Sole e l'Adriatica.
 
 \todo{descrivere grafo autostrade}
-
-
-%\clearpage
-\subsection{Le strade pericolose in provincia di Milano}
-
-\begin{figure}
-    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/autostrade/incidenti_line_chart.png}
-    \caption{Autostrade con più incidenti nel 2012}
-    \label{fig:line-incidenti-milano}
-\end{figure}
-
-Per realizzare la figura \ref{fig:line-incidenti-milano}, sono state prese in considerazione alcune 
-tra le autostrade e strade statali più trafficate e si è segnata la posizione approssimata.
-
-\begin{lstlisting}
-    strade = gp.read_file("dataset/incidenti/aci/autostrade/posizione_autostrade.geojson").to_crs(epsg=3857)
-    strade.index = strade['name']
-
-    strade = gp.GeoDataFrame(incidenti[ore], geometry=strade['geometry'])
-    ax = strade.plot(markersize=strade[ore].sum() * 10, alpha=0.5)
-\end{lstlisting}
-
 
 %\clearpage
 \subsection{Correlazione tra mesi dell'anno e incidentalità}
