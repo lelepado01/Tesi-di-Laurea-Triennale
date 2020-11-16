@@ -940,16 +940,16 @@ Per quanto riguarda gli orari di punta, sono state prese in considerazione due f
 mattutina dalle 7:00 alle 10:00, e la seconda pomeridiana, dalle 17:00 alle 19:00.
 L'incremento durante la fascia oraria pomeridiana è subito osservabile nella figura 
 \ref{fig:week-weekend}; più precisamente si 
-ha un incremento del 117.1\% di incidenti rispetto alla media durante la settimana lavorativa. 
-Durante il weekend invece, si osserva comunque un'incremento, ma solamente del 83\%.
+ha un incremento del 95.2\% di incidenti rispetto alla media durante la settimana lavorativa. 
+Durante il weekend invece, si osserva comunque un'incremento, ma solamente del 61.1\%.
 
 Va sottolineato che i grafi indicano gli incidenti normalizzati per numero di 
 giorni, quindi gli incidenti totali della settimana sono divisi per cinque giorni, 
 mentre quelli del weekend per due.
 
 \begin{lstlisting}[language=Python]
-    ora_weekend = data[data['giorno_settimana'] > 5]['ora'].value_counts().sort_index()
-    ora_week = data[data['giorno_settimana'] < 6]['ora'].value_counts().sort_index()
+    ora_weekend = data[data['giorno'] > 5]['Ora'].value_counts().sort_index()
+    ora_week = data[data['giorno'] < 6]['Ora'].value_counts().sort_index()
 
     ora_week /= 5 * 52
     ora_weekend /= 2 * 52
@@ -965,8 +965,8 @@ il numero non sembra variare molto dalla media di incidenti durante il giorno.
 Se si selezionano solo gli incidenti nella provincia di Milano, mostrati nel grafo 
 \ref{fig:week-weekend-milano}, è possibile individuare 
 il secondo picco di incidenti, quello durante le ore di punta mattutine.
-In particolare si ha un incremento del 102\% alle 8:00 rispetto alla media, nelle giornate lavorative;
-d'altro canto, durante il weekend, il numero di incidenti cala del 10\% rispetto alla media.
+In particolare si ha un incremento del 34.3\% alle 8:00 rispetto alla media, nelle giornate lavorative;
+d'altro canto, durante il weekend, il numero di incidenti cala del 58.5\% rispetto alla media.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/ore_punta/week_weekend_milano.png}
@@ -1018,7 +1018,7 @@ non con il campione, perchè gli accessi in area C sono già parzialmente cumula
 %\clearpage
 \subsection{Incidentalità in orari notturni}
 
-Come individuato dal primo grafo \ref{fig:week-weekend}, durante le 
+Come individuato nel grafo \ref{fig:week-weekend}, durante le 
 ore notturne si ha il comportamento di incidenti tra settimana lavorativa e weekend opposta.
 Nella figura \ref{fig:ore-notte}, sono raffigurate le principali ore della notte, divise tra 
 settimana lavorativa e weekend.
@@ -1031,7 +1031,7 @@ negli orari serali e notturni.
     \label{fig:ore-notte}
 \end{figure}
 
-\todo{confrontare con traffico serale in area c?}
+Il traffico, stimato tramite gli accessi all'area C, confermano la tendenza?
 
 %\clearpage
 \subsection{Quanto influiscono le vacanze estive sull'incidentalità?}
