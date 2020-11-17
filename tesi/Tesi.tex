@@ -285,14 +285,30 @@ proveniente dal sito del comune di Milano
 \subsection{Dati riguardanti il turismo}
 
 I dati sul turismo in Italia, sono stati presi dall'archivio istat sul tema
-\footnote{\url{https://www.istat.it/it/archivio/16777}}, 
-e in particolare le tabelle contenenti tasso di turismo e turismo nei mesi non estivi. 
+\footnote{\url{https://www.istat.it/it/archivio/16777}}.
 
 I dati originali sono in formato xls, contenente informazioni a partire dal 1995 fino al 2019, 
 sia regione per regione, sia divise per nord, centro e sud.
+Sono anche presenti più tabelle, ognuna rafficurante un particolare indicatore, 
+come produttività del lavoro, turismo nei mesi non estivi, tasso di turisticità e valore aggiunto del turismo.
 
 Per realizzare la stima, sono stati necessari i dati regione per regione, 
-a partire dal 2010 fino al 2018, convertiti in formato csv. 
+a partire dal 2010 fino al 2018, convertiti in formato csv, si sono scelti gli indicatori di 
+turismo nei mesi non estivi, e tasso di turisticità. 
+
+\subsection{Immagini del traffico}
+
+Le immagini raffiguranti il traffico in tempo reale sono prese da Google Maps
+\footnote{\url{https://www.google.com/maps/}}, 
+tuttavia questi snapshot contengono molti punti di interesse che coprono informazioni importanti, 
+come i nomi delle strade.
+
+Per rimuovere i punti di interesse, si sono utilizzate le API di google maps, 
+tramite il sito Jsfiddle
+\footnote{https://jsfiddle.net/}.
+
+Si sono infine realizzati degli screenshot della zona dei Navigli e dell'incrocio tra viale 
+Bianca Maria e viale 22 Marzo.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Dati mancanti}
@@ -350,17 +366,6 @@ patentati per regione, trovato nel sito del Ministero dei Trasporti
 I dati, riguardanti i patentati fino al 2019, sono divisi in file per regione e contengono anche 
 informazioni riguardanti la provincia e data di conseguimento della patente, 
 oltre al tipo di ceritificato ottenuto.
-
-
-\subsection{Immagini del traffico}
-
-Le immagini raffiguranti il traffico in tempo reale sono prese da google maps
-\footnote{\url{https://www.google.com/maps/}}, 
-tuttavia questi snapshot contengono molti punti di interesse che coprono informazioni importanti, 
-come i nomi delle strade.
-
-Per rimuovere i punti di interesse, si sono utilizzate le API di google maps, tramite il sito Jsfiddle
-\footnote{https://jsfiddle.net/}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
