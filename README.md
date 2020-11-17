@@ -91,10 +91,6 @@
 
 ### Todo
 
-- Campione conducenti veicoli
-- Introduzione: spiego il progetto, come ho trovato i dati, cosa faccio con i dati, dove voglio arrivare
-- Introduzione: come ho trovato dati patenti
-
 ### Risultati da Trascrivere in Tesi: 
 
 - [x] Atm + Incidenti

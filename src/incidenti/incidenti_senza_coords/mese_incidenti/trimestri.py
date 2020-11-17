@@ -39,7 +39,7 @@ def get_provincia(prov : int) -> pd.DataFrame:
     return pd.DataFrame(
         [aosta_2010, aosta_2011, aosta_2012, aosta_2013, aosta_2014, aosta_2015, aosta_2016, aosta_2017, aosta_2018], 
         ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018']
-        )#.transpose()
+        ).transpose()
 
 provs = get_provincia(15)
 
@@ -48,26 +48,32 @@ for giorni in giorni_al_trimestre:
     provs.iloc[index] /= giorni
     index += 1
 
-import sys
-sys.path.append('src')
-import heatmap as H
+# from scipy.interpolate import spline
 
-# plt.subplot(1,2,1)
-fig, ax = plt.subplots()
+# ysmoothed = gaussian_filter1d(provs, sigma=2)
 
-im, cbar = H.heatmap(provs, provs.index, [1,2,3,4], ax=ax, cmap="YlGn", cbarlabel="Incidenti al trimestre")
-
+plt.plot(provs.index, provs, markevery=0.1, linewidth=1)
+plt.xticks([1,2,3,4])
+plt.legend(bbox_to_anchor=(1,1), loc="upper left")
 plt.xlabel("Trimestre")
-fig.tight_layout()
-
-# plt.subplot(1,2,2)
-#plt.plot(provs['2018'])
+plt.ylabel("Incidenti al trimestre a Milano")
+plt.tight_layout()
 plt.show()
 
-# provs.plot(linewidth=1)
-# plt.xticks([1,2,3,4])
-# plt.legend(bbox_to_anchor=(1,1), loc="upper left")
+
+############################
+# Codice per Heatmap
+# 
+# import sys
+# sys.path.append('src')
+# import heatmap as H
+
+# fig, ax = plt.subplots()
+
+# im, cbar = H.heatmap(provs, provs.index, [1,2,3,4], ax=ax, cmap="YlGn", cbarlabel="Incidenti al trimestre")
+
 # plt.xlabel("Trimestre")
-# plt.ylabel("Incidenti al giorno")
-# plt.tight_layout()
+# fig.tight_layout()
 # plt.show()
+# 
+############################
