@@ -273,6 +273,27 @@ autostrade, tangenziali e strade statali.
 Allo stesso modo, Geojson.io è stato utile a tracciare alcune aree in centro a Milano, per confrontare 
 gli incidenti su pavè agli incidenti su asfalto.
 
+\subsection{Dati riguardanti l'area C}
+
+Oltre a utilizzare i dati riguardo agli accessi all'area C, si è fatto uso anche di una mappa 
+raffigurante i varchi di entrata e i limiti del centro storico, 
+proveniente dal sito del comune di Milano
+\footnote{\url{https://www.comune.milano.it/aree-tematiche/mobilita/area-c}}.
+
+\todo{lelepado: devo metterla questa? è solamente un'immagine}
+
+\subsection{Dati riguardanti il turismo}
+
+I dati sul turismo in Italia, sono stati presi dall'archivio istat sul tema
+\footnote{\url{https://www.istat.it/it/archivio/16777}}, 
+e in particolare le tabelle contenenti tasso di turismo e turismo nei mesi non estivi. 
+
+I dati originali sono in formato xls, contenente informazioni a partire dal 1995 fino al 2019, 
+sia regione per regione, sia divise per nord, centro e sud.
+
+Per realizzare la stima, sono stati necessari i dati regione per regione, 
+a partire dal 2010 fino al 2018, convertiti in formato csv. 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Dati mancanti}
 
@@ -319,26 +340,17 @@ trovati sul sito del comune di Milano
 \footnote{\url{https://dati.comune.milano.it/dataset}}, 
 nonostante non permetta una stima perfetta.
 
-Sul sito del comune di Milano sono disponibili vari file, tra questi si è utilizzata la tipologia 
-contenente orari e data dell'accesso.
+Sul sito del comune di Milano sono disponibili varie tipologie di file, 
+ceh suddividono i dati in base a, per esempio, orario, mese, località. 
+Tra questi si è utilizzata la tipologia contenente orari e data dell'accesso.
 
 Un'altro dataset utilizzato per stimare il numero di automobili, è quello contenente il numero di 
 patentati per regione, trovato nel sito del Ministero dei Trasporti
 \footnote{\url{dati.mit.gov.it/catalog/dataset/patenti}}.
 I dati, riguardanti i patentati fino al 2019, sono divisi in file per regione e contengono anche 
-informazioni riguardanti la provincia e data di conseguimento, altre al tipo di patente ottenuta.
+informazioni riguardanti la provincia e data di conseguimento della patente, 
+oltre al tipo di ceritificato ottenuto.
 
-\subsection{Dati riguardanti l'area C}
-
-Oltre a utilizzare i dati riguardo agli accessi, si è fatto uso anche di una mappa 
-raffigurante i varchi di entrata e i limiti dell'area C, proveniente dal sito del comune di Milano
-\footnote{\url{https://www.comune.milano.it/aree-tematiche/mobilita/area-c}}.
-
-\subsection{Dati riguardanti il turismo}
-
-I dati sul turismo in Italia, sono stati presi dall'archivio istat sul tema
-\footnote{\url{https://www.istat.it/it/archivio/16777}}, 
-e in particolare le tabelle contenenti tasso di turismo e turismo nei mesi non estivi.
 
 \subsection{Immagini del traffico}
 
