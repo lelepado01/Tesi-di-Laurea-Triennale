@@ -7,7 +7,7 @@ sys.path.append('src')
 
 import label_utils
 
-data = pd.read_csv("dataset/incidenti/incidenti_2011.txt", sep="\t")
+data = pd.read_csv("dataset/incidenti/incidenti_2012.txt", sep="\t")
 agosto = data[data['mese'] == 8]['provincia']
 agosto_label = label_utils.join_labels(agosto, 'dataset/incidenti/Classificazioni/provincia.csv').value_counts().head(10)
 #agosto_label = agosto_label / agosto_label.sum()

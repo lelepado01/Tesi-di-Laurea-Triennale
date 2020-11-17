@@ -2,7 +2,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-path = "dataset/incidenti/incidenti_2010.txt"
+path = "dataset/incidenti/incidenti_2013.txt"
 data = pd.read_csv(path, sep="\t")
 
 aosta_mese = data[data['provincia'] == 7]['mese'].value_counts().sort_index()
@@ -14,14 +14,14 @@ for giorni_in_mese in [31, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]:
 
 media = aosta_mese.mean()
 
-color_ls = ['#7670a9']*12
-color_ls[0] = '#5747d1'
-print(color_ls)
+color_ls = ['#5747d1']*12
+# color_ls[0] = '#5747d1'7670a9
+# print(color_ls)
 
 plt.xlabel("Mese")
-plt.ylabel("Incidenti al giorno (2010)")
+plt.ylabel("Incidenti al giorno (2013)")
 plt.plot([-1, 12], [media, media], color='#c0d147', label='Media')
-plt.text(10.7,media-0.01,'Media')
+plt.text(11.7,media-0.01,'Media')
 aosta_mese.plot.bar(width=0.8, color=color_ls)
 plt.show()
 

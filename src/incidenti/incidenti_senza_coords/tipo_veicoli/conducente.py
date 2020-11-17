@@ -71,7 +71,7 @@ passenger_count_rimini = passenger_count_rimini[passenger_count_rimini != 0]
 passenger_count_rimini = passenger_count_rimini.value_counts(normalize=True).sort_index()#.plot.bar(xlabel="Numero Passeggeri")
 
 plt.subplot(1,2,1)
-plt.pie(passenger_count_milano, labels=passenger_count_milano.index, colors=['#ffcc99','#66b3ff','#99ff99','#ff9999'])
+plt.pie(passenger_count_milano, labels=passenger_count_milano.index, colors=['#ffcc99','#66b3ff','#99ff99','#ff9999'], autopct='%1.1f%%', pctdistance=0.85)
 plt.gca().add_patch(plt.Circle((0,0), 0.7, color='white'))
 plt.text(-0.2, 0, "Milano")
 plt.tight_layout()
@@ -81,7 +81,7 @@ ls[2] = '\n3'
 ls[3] = '  4'
 
 plt.subplot(1,2,2)
-plt.pie(passenger_count_rimini, labels=ls, colors=['#ffcc99','#66b3ff','#99ff99','#ff9999'])
+plt.pie(passenger_count_rimini, labels=ls, colors=['#ffcc99','#66b3ff','#99ff99','#ff9999'], pctdistance=0.85)
 plt.gca().add_patch(plt.Circle((0,0), 0.7, color='white'))
 plt.text(-0.18,0, "Rimini")
 plt.tight_layout()
