@@ -210,6 +210,7 @@ Il campi della tabella ripetuti sono dovuti al fatto che alcuni autovelox sono s
 
 \subsection{Dati riguardanti patentati}
 \todo{atrent: in generale (cioè vale un po' ovunque) manca una critica alla qualità dei dati e alla loro significatività (in questo caso ad esempio bisogna domandarsi quanto questo dataset sia un proxy del traffico)}
+
 I dati sulle persone con patente per regione, che è stato utilizzato per stimare il traffico 
 regionale, proviene dal sito del Ministero delle Infrastrutture e Trasporti 
 \footnote{\url{http://dati.mit.gov.it/catalog/dataset/patenti}}.
@@ -219,11 +220,23 @@ sintetizza il dataset in questione
 \footnote{\url{https://www.mit.gov.it/sites/default/files/media/notizia/2017-07/INFOGRAFICA\%20Dati\%20sintesi\%20patenti\%20Italia.pdf}}.
 In particolare, da questo pdf si è mantenuto solamente il numero di patenti per regione.
 
+\'E anche necessario chiedersi quanto il numero dei patentati per regione sia uno stimatore 
+valido per il traffico\dots
+\todo{finire}
+
 \subsection{Dati riguardanti le zone di Milano}
 
 I dati con zone geolocalizzate di Milano provengono dal geoportale del comune di Milano
-\footnote{\url{https://geoportale.comune.milano.it/}}, e contengono i poligoni che costituiscono i municipi 
-della città, oltre a informazioni sulla superficie e il perimetro delle zone.
+\footnote{\url{https://geoportale.comune.milano.it/}}, e contengono i poligoni che costituiscono 
+i municipi della città, 
+oltre a informazioni sulla superficie e il perimetro delle zone.
+
+Questi dati sono utili a determinare, a grandi linee, quali sono le zone con più incidenti 
+a Milano, tuttavia il risultato ottenuto non sarà mai preciso, 
+soprattutto per l'ampiezza delle sezioni.
+Un altro problema, è che le zone non contengono solamente la superficie stradale, ma anche 
+abitazioni e terreni, in cui non avverranno mai incidenti. 
+Ciò rende inutile la misura dell'area della zona.
 
 \subsection{Dati riguardanti il meteo}
 \todo{lelepado: non so ancora se usarli}
@@ -255,7 +268,10 @@ contenente anch'esso troppe strade in quanto traccia l'intero manto stradale del
 Entrambi questi dataset non risolvevano il problema del dataset mancante sul pavè.
 
 Come ultima risorsa, si è deciso di tracciare alcune mappe in geojson utilizzando Geojson.io
-\footnote{\url{https://geojson.io/}}.
+\footnote{\url{https://geojson.io/}}, in particolare nella zona di Milano, per le principali 
+autostrade, tangenziali e strade statali. 
+Allo stesso modo, Geojson.io è stato utile a tracciare alcune aree in centro a Milano, per confrontare 
+gli incidenti su pavè agli incidenti su asfalto.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Dati mancanti}
@@ -279,7 +295,12 @@ quello riguardante i percorsi dei trasporti tranviari. Basandosi su queste infor
 la maggior parte delle linee dei tram a Milano sono pavimentate in pavè, è possibile ottenere un dataset con taglia discreta.
 
 \'E possibile confrontare il dataset ottenuto con la mappa di Urbanfile e, 
-per quanto alcune linee coincidano, non trovo somiglianza sufficiente per giustificare la stima.
+per quanto alcune linee coincidano, non si è trovata somiglianza sufficiente 
+per giustificare la stima.
+
+Come ultima spiaggia, si è deciso di tracciare una mappa utilizzando Geojson.io
+\footnote{\url{https://geojson.io/}}, come già fatto per le autostrade a Milano, 
+basandosi sulla cartina di Urbanfile. 
 
 \subsection{Dati riguardanti traffico stradale}
 Per quanto riguarda i dati sul traffico stradale, anche in questo caso non è stato trovato un 
