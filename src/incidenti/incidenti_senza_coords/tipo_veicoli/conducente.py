@@ -70,12 +70,36 @@ passenger_count_rimini = get_people_in_vehicles(data[data['provincia'] == 99])
 passenger_count_rimini = passenger_count_rimini[passenger_count_rimini != 0]
 passenger_count_rimini = passenger_count_rimini.value_counts(normalize=True).sort_index()#.plot.bar(xlabel="Numero Passeggeri")
 
-pd.DataFrame([passenger_count_milano, passenger_count_rimini], ['Milano','Rimini']).plot.bar()
+plt.subplot(1,2,1)
+plt.pie(passenger_count_milano, labels=passenger_count_milano.index, colors=['#ffcc99','#66b3ff','#99ff99','#ff9999'])
+plt.gca().add_patch(plt.Circle((0,0), 0.7, color='white'))
+plt.text(-0.2, 0, "Milano")
 plt.tight_layout()
-plt.xticks(rotation=0)
+
+ls : list = passenger_count_rimini.index.tolist()
+ls[2] = '\n3'
+ls[3] = '  4'
+
+plt.subplot(1,2,2)
+plt.pie(passenger_count_rimini, labels=ls, colors=['#ffcc99','#66b3ff','#99ff99','#ff9999'])
+plt.gca().add_patch(plt.Circle((0,0), 0.7, color='white'))
+plt.text(-0.18,0, "Rimini")
+plt.tight_layout()
 plt.show()
 
 #eta = data[data['provincia'] == 15]['veicolo__a___et__conducente']
 #eta = label_utils.join_labels(eta, 'dataset/incidenti/Classificazioni/veicolo__a___et__conducente.csv').value_counts().sort_index()
 #eta.plot()
 #plt.show()
+
+
+# fig1, ax1 = plt.subplots()
+# ax1.pie(passenger_count_milano, autopct='%1.1f%%')
+# #draw circle
+# centre_circle = plt.Circle((0,0),0.70,fc='white')
+# fig = plt.gcf()
+# fig.gca().add_artist(centre_circle)
+# # Equal aspect ratio ensures that pie is drawn as a circle
+# ax1.axis('equal')  
+# plt.tight_layout()
+# plt.show()
