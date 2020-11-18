@@ -7,25 +7,6 @@ import aci_utils
 
 path = "dataset/incidenti/aci/autostrade/mesi_"
 
-agosto = pd.DataFrame()
-
-for year in range(2011, 2012):
-    data = pd.read_csv(path + str(year) + ".csv")
-    data['Anno'] = [year] * len(data)
-    agosto = agosto.append(data[['NOME STRADA', 'Anno', 'Agosto']])
-
-
-#print(aci_utils.two_cols_unique(data[['NOME STRADA', 'Anno']]))
-
-    #agosto = aci_utils.sum_field_by_two_columns(agosto, 'NOME STRADA', 'Anno', 'Agosto')
-    #agosto = agosto[aci_utils.filter_by_value(agosto['NOME STRADA_Anno'], str(year))]
-    #agosto = agosto.sort_values(by='Value', ascending=False).head(5)
-#
-    #plt.barh(agosto['Nome e Anno'].astype(str), agosto['Inc'])
-    #plt.xticks(rotation=90)
-    #plt.tight_layout()
-    #plt.show()
-
 s = 0
 index = 1
 for year in range(2011, 2019): 
