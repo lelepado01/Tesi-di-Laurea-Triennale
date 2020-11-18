@@ -17,8 +17,14 @@ meteo_2010 = mgu.get_weather_by_year(meteo, 2013)
 
 meteo_per_mese = pd.Series() 
 for month in range(1,13): 
-    media = mgu.get_weather_by_month(meteo_2010, month)['Humidity'].mean()
+    media = mgu.get_weather_by_month(meteo_2010, month)['Temperature'].mean()
     meteo_per_mese = meteo_per_mese.append(pd.Series(media, index=[month]))
+
+umid = pd.Series() 
+for month in range(1,13): 
+    media = mgu.get_weather_by_month(meteo_2010, month)['Humidity'].mean()
+    umid = umid.append(pd.Series(media, index=[month]))
+
 
 
 # inc = inc / inc.sum()
@@ -27,36 +33,41 @@ for month in range(1,13):
 inc = inc.sort_index()
 meteo_per_mese = meteo_per_mese.sort_index()
 
-# ax = plt.subplot(121)
-# ax.bar(inc.index, inc, color='#8f6ab5')
-# plt.ylabel("Incidenti per mese (2013)")
-# plt.xticks(range(1,13))
+ax = plt.subplot(311)
+ax.bar(inc.index, inc, color='#86ba5d', width=0.9)
+plt.ylabel("Incidenti per mese (2013)")
+plt.xticks(range(1,13))
 
-# plt.subplot(122)
-# plt.ylabel("Temperatura media per mese (°C)")
-# plt.bar(meteo_per_mese.index, meteo_per_mese, color='#6ab58f')
-# plt.xticks(range(1,13))
-# plt.show()
+plt.subplot(312)
+plt.ylabel("Temperatura media (°C)")
+plt.bar(meteo_per_mese.index, meteo_per_mese, color='#5d86ba', width=0.9)
+plt.xticks(range(1,13))
 
-for year in [2010, 2011, 2012, 2013]: 
-    meteo_2010 = mgu.get_weather_by_year(meteo, 2013)
+plt.subplot(313)
+plt.ylabel("Umidità media")
+plt.bar(umid.index, umid, color='#ba5d86', width=0.9)
+plt.xticks(range(1,13))
+plt.show()
 
-    meteo_per_mese = pd.Series() 
-    for month in range(1,13): 
-        media = mgu.get_weather_by_month(meteo_2010, month)['Humidity'].mean()
-        meteo_per_mese = meteo_per_mese.append(pd.Series(media, index=[month]))
+# for year in [2010, 2011, 2012, 2013]: 
+#     meteo_2010 = mgu.get_weather_by_year(meteo, 2013)
 
-    incidenti = pd.read_csv("dataset/incidenti/incidenti_" + str(year) +".txt", sep="\t")
+#     meteo_per_mese = pd.Series() 
+#     for month in range(1,13): 
+#         media = mgu.get_weather_by_month(meteo_2010, month)['Humidity'].mean()
+#         meteo_per_mese = meteo_per_mese.append(pd.Series(media, index=[month]))
 
-    inc = pd.Series()
-    for m in incidenti['mese'].unique(): 
-        inc = inc.append(pd.Series(len(incidenti[incidenti['mese'] == m]), index=[m]))
+#     incidenti = pd.read_csv("dataset/incidenti/incidenti_" + str(year) +".txt", sep="\t")
+
+#     inc = pd.Series()
+#     for m in incidenti['mese'].unique(): 
+#         inc = inc.append(pd.Series(len(incidenti[incidenti['mese'] == m]), index=[m]))
 
 
-    # print(meteo_per_mese)
-    # print(inc)
+#     # print(meteo_per_mese)
+#     # print(inc)
 
-    print(str(year) + ": " + str(meteo_per_mese.corr(inc)))
+#     print(str(year) + ": " + str(meteo_per_mese.corr(inc)))
 
 
 # TEMP

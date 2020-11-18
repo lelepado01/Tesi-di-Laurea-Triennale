@@ -1825,18 +1825,23 @@ per non parlare del fatto che entrambe le strade passano attraverso un alto nume
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/meteo/milano/temp_incidenti.png}
-    \caption{Incidenti e temperature medi per mese nel 2013}
+    \caption{Incidenti, temperature e umidità medi per mese nel 2013}
     \label{fig:incidenti-temp}
 \end{figure}
 
-La figura \ref{fig:incidenti-temp} mostra, nel grafo di sinistra, il numero di incidenti 
-avvenuti per mese, mentre il grafo di destra indica la temperatura media.
+La figura \ref{fig:incidenti-temp} mostra, partendo dall'alto, il numero di incidenti 
+avvenuti per mese, la temperatura media per mese, e infine l'umidità media.
 Non è stato possibile eseguire la stessa operazione con dati più recenti, per mancanza del 
 campo 'mese', convertito in trimestre a partire dal 2014.
 Allo stesso modo non è stato possibile eseguire un'analisi più precisa, per mancanza di dati 
 riguardanti il giorno del mese, e disponibili solo per il giorno della settimana.
 
-Senza conoscere gli incidenti giorno per giorno non è possibile avere un 
+Senza conoscere gli incidenti giorno per giorno, non è possibile avere una stima della 
+correlazione tra i diversi indici del meteo e i sinistri.
+Il meglio che è possibile realizzare è un calcolo della correlazione per mese e, per 
+avere la maggiore quantità di dati possibile, è stato eseguito per tutti gli 
+anni disponibili.
+I risultati sono riportati nella tabella sottostante: 
 
 \begin{center}
     \def\arraystretch{1.5}%  
@@ -1853,6 +1858,10 @@ Senza conoscere gli incidenti giorno per giorno non è possibile avere un
     \hline
     \end{tabular}
 \end{center}
+
+Per le annate a disposizione, i dati sono consistenti tra loro, e indicano la presenza di 
+correlazione lineare tra temperature e incidenti, mentre si ha correlazione inversa per quanto 
+riguarda l'umidità.
 
 
 \bibliographystyle{plain}
