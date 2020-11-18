@@ -2,7 +2,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-data = pd.read_csv("dataset/incidenti/aci/autostrade/mesi_2012.csv")
+data = pd.read_csv("dataset/incidenti/aci/autostrade/mesi_2018.csv")
 
 lombardia = data[data['REGIONE'] == 'Lombardia'][['PROVINCIA', 'TOTALE']]
 
@@ -36,7 +36,7 @@ a1 = sum_columns(a1[mesi], normalize=True)
 a1_milano = sum_columns(a1_milano[mesi], normalize=True)
 adriatica = sum_columns(adriatica[mesi], normalize=True)
 
-df = pd.DataFrame([a1, adriatica], ['A1 Milano', 'Adriatica']).transpose().plot.bar(width=0.8)
-plt.ylabel("Percentuale di incidenti al mese (2014)")
+df = pd.DataFrame([a1, adriatica], ['A1 Milano', 'Adriatica']).transpose().plot.bar(width=0.9, color=['#a1cc61', '#61a1cc'])
+plt.ylabel("Percentuale di incidenti al mese (2018)")
 plt.tight_layout()
 plt.show()
