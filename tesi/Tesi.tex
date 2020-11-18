@@ -1825,9 +1825,35 @@ per non parlare del fatto che entrambe le strade passano attraverso un alto nume
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/meteo/milano/temp_incidenti.png}
-    \caption{Incidenti e temperature medi per mese nel 2010}
-    \label{fig:autostrade-anno-agosto}
+    \caption{Incidenti e temperature medi per mese nel 2013}
+    \label{fig:incidenti-temp}
 \end{figure}
+
+La figura \ref{fig:incidenti-temp} mostra, nel grafo di sinistra, il numero di incidenti 
+avvenuti per mese, mentre il grafo di destra indica la temperatura media.
+Non è stato possibile eseguire la stessa operazione con dati più recenti, per mancanza del 
+campo 'mese', convertito in trimestre a partire dal 2014.
+Allo stesso modo non è stato possibile eseguire un'analisi più precisa, per mancanza di dati 
+riguardanti il giorno del mese, e disponibili solo per il giorno della settimana.
+
+Senza conoscere gli incidenti giorno per giorno non è possibile avere un 
+
+\begin{center}
+    \def\arraystretch{1.5}%  
+    \begin{tabular}{ |c|c|c|c| } 
+    \hline
+    Anno & Temperatura & Velocità del Vento & Umidità \\ 
+    \hline
+    \rowcolor{TableGray}
+    2010 & 0.768 & 0.585 & -0.626 \\
+    2011 & 0.900 & 0.626 & -0.730 \\
+    \rowcolor{TableGray}
+    2012 & 0.732 & 0.501 & -0.609 \\
+    2013 & 0.658 & 0.465 & -0.516 \\
+    \hline
+    \end{tabular}
+\end{center}
+
 
 \bibliographystyle{plain}
 \bibliography{Biblio}
