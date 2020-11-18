@@ -154,17 +154,19 @@ creata da un utente anonimo, dunque senza un modo di provare l'autenticità dei 
 
 Il dataset utilizzato, invece, è stato ottenuto tramite OpenStreetMaps, ricavando solo gli autovelox 
 in Milano. 
-Per restringere il campo di ricerca a solo Milano, si è fatto uso delle Overpass API\footnote{\url{https://overpass-turbo.eu/}}, 
+Per restringere il campo di ricerca a solo Milano, si è fatto uso delle Overpass API
+\footnote{\url{https://overpass-turbo.eu/}}, 
 specifiche per OpenStreetMaps, eseguendo la seguente query: 
 
 \lstinputlisting{../src/codice_per_dati/overpass_query.txt}
 
-Il dataset ricavato non permette di capire quando gli autovelox siano stati installati.
+Il dataset ricavato, purtroppo, non permette di capire quando gli autovelox siano stati 
+installati, fattore importante per capirne l'effetto sul traffico e sugli incidenti.
 Tuttavia il sito web ztlmilano
 \footnote{\url{https://www.ztlmilano.it/Autovelox-Milano}} 
 contiene un articolo nel quale specifica una lista di 
-autovelox installati nel 2014, considerando che il dataset di OpenStreetMaps è aggiornato, 
-è possibile ricavare la posizione precisa di questi ultimi.
+autovelox installati nel 2014, considerando che il dataset di OpenStreetMaps sia aggiornato 
+fino ad oggi, è possibile ricavare la posizione precisa di questi ultimi.
 
 La lista di Ztl Milano contiene i seguenti autovelox: 
 
@@ -209,7 +211,9 @@ La lista di Ztl Milano contiene i seguenti autovelox:
 Il campi della tabella ripetuti sono dovuti al fatto che alcuni autovelox sono stati installati in entrambe le direzioni.
 
 \subsection{Dati riguardanti patentati}
-\todo{atrent: in generale (cioè vale un po' ovunque) manca una critica alla qualità dei dati e alla loro significatività (in questo caso ad esempio bisogna domandarsi quanto questo dataset sia un proxy del traffico)}
+\todo{atrent: in generale (cioè vale un po' ovunque) manca una critica alla qualità dei dati 
+e alla loro significatività (in questo caso ad esempio bisogna domandarsi quanto questo 
+dataset sia un proxy del traffico)}
 
 I dati sulle persone con patente per regione, che è stato utilizzato per stimare il traffico 
 regionale, proviene dal sito del Ministero delle Infrastrutture e Trasporti 
@@ -221,8 +225,9 @@ sintetizza il dataset in questione
 In particolare, da questo pdf si è mantenuto solamente il numero di patenti per regione.
 
 \'E anche necessario chiedersi quanto il numero dei patentati per regione sia uno stimatore 
-valido per il traffico\dots
-\todo{finire}
+valido per il traffico, tenendo conto del fatto che molte persone non vivono nella regione 
+in cui hanno ottenuto la patente, e altre potrebbero spostarsi ogni giorno in altri 
+luoghi per questioni di lavoro.
 
 \subsection{Dati riguardanti le zone di Milano}
 
@@ -1162,14 +1167,16 @@ al numero di incidenti mensili.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/area_c/incidenti_traffico_mese.png}
-    \caption{Incidenti al mese, tenendo conto del traffico nello stesso periodo}
+    \caption{Incidenti al mese, tenendo conto del traffico nello stesso periodo (2012)}
     \label{fig:incidenti-traffico-mese}
 \end{figure}
 
 L'immagine \ref{fig:incidenti-traffico-mese} contiene due grafi, 
 il primo riguardante la frazione di traffico annuale che interessa ogni mese; 
 mentre il secondo raffigura il numero di incidenti mensili, rispetto al numero di incidenti pesati 
-tramite la percentuale di traffico mensile.
+tramite la percentuale di traffico mensile
+\footnote{Si è utilizzato l'anno 2012 perchè è il primo anno contenente tutti i dati completi, 
+tutti gli altri anni hanno mesi o campi mancanti}.
 Dunque, più la curva verde si avvicina alla linea degli incidenti, più il mese ha avuto sinstri 
 non direttamente dovuti al traffico.
 In particolare si nota che, in Agosto, nonostante un ampia discesa degli accessi all'area C, 
@@ -1322,9 +1329,10 @@ di incidenti, ma a Milano, in particolare, il gap sembra essersi 'creato' nel 20
 \end{figure}
 
 Nella figura \ref{fig:tipo-incidente} è possibile osservare quali sono gli incidenti più frequenti in un 
-anno, in particolare nel 2018.
+anno, in questo caso nel 2018.
 In particolare sono molto frequenti scontri frontali, laterali e tamponamenti. 
-Gli incidenti frontali-laterali sono i più rappresentati probabilmente per l'ampiezza della categoria.
+Gli incidenti frontali-laterali sono i più rappresentati probabilmente per l'ampiezza della 
+categoria.
 
 %\clearpage
 \subsection{Gli incroci più pericolosi}
@@ -1374,10 +1382,8 @@ tra i tipi di strada che favoriscono incidenti con pedoni spiccano i rettilinei,
 probabilmente in parte per l'alta velocità dei veicoli, ma anche per l'alto volume di
 tratti di strada di questo tipo.
 
-%...
-
 %\clearpage
-\subsection{Aspetti salienti sui pedoni coinvolti in incidenti}
+\subsection{Età dei pedoni coinvolti in incidenti}
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/pedoni/eta_pedoni.png}
@@ -1453,19 +1459,10 @@ Anche nel grafo dei feriti è presente la stessa curva, ma per il volume di pers
 dei 30-44 anni, che contiene quattordici anni di età invece che cinque, come 
 la maggior parte delle altre fasce, è molto più alta.
 
-
-% \begin{figure}
-%     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/pedoni/sesso_morti_feriti.png}
-%     \caption{Pedoni coinvolti in incidenti per genere}
-%     \label{fig:sesso-morti-feriti}
-% \end{figure}
-%\ref{fig:sesso-morti-feriti}
-% Dati non sorprendenti\dots
-
-%...
-
-
-
+L'incremento di feriti nelle fasce più anziane, si può speculare sia dovuto al fatto che 
+questi ultimi sono più propensi all'essere feriti in un incidente. 
+Tuttavia, è anche possibile che uno dei fattori maggiormente influenti sia il volume di 
+pedoni in queste fasce di età.
 
 %\clearpage
 \section{Dati ACI}
