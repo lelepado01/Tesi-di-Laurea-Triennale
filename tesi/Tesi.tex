@@ -747,8 +747,8 @@ le posizioni degli incidenti in altre annate.
 Sapendo le posizioni degli autovelox, con un po' di lavoro manuale, è possibile ricondursi alla 
 posizione effettiva sulla mappa.
 Per fare ciò, la soluzione più veloce è stata quella di enumerare, 
-come raffigurato nella mappa \ref{fig:autovelox-indici} tutti gli autovelox sulla mappa, 
-e confrontarli con le vie della tabella.
+come raffigurato nella mappa sul lato sinistro della figura \ref{fig:autovelox-indici}, 
+tutti gli autovelox sulla mappa, e confrontarli con le vie della tabella.
 
 \begin{lstlisting}[language=Python]
     path = "dataset/autovelox/autovelox_milano.geojson"
@@ -765,18 +765,15 @@ e confrontarli con le vie della tabella.
 \end{lstlisting}
 
 \begin{figure}
-    \includegraphics[width=\linewidth]{../src/autovelox/autovelox_indici.png}
+    \includegraphics[width=0.5\linewidth]{../src/autovelox/autovelox_indici.png}
+    \includegraphics[width=0.5\linewidth]{../src/autovelox/autovelox_2014.png}
     \caption{Autovelox enumerati per facilitarne l'identificazione nel dataset}
     \label{fig:autovelox-indici}
 \end{figure}
 
 Una volta identificate le linee corrette del dataset, è possibile separarli dal datset completo.
-Gli autovelox installati nel 2014, sono rappresentati nella mappa \ref{fig:autovelox-2014}.
-\begin{figure}
-    \includegraphics[width=\linewidth]{../src/autovelox/autovelox_2014.png}
-    \caption{Autovelox installati nel 2014}
-    \label{fig:autovelox-2014}
-\end{figure}
+Gli autovelox installati nel 2014, sono rappresentati nella mappa sul lato destro della 
+figura \ref{fig:autovelox-indici}.
 
 Per quanto non si disponga delle informazioni sugli incidenti prima e dopo dell'installazione, 
 è comunque possibile sovrapporre i dataset, per vedere se gli autovelox hanno un qualche tipo di 
@@ -885,7 +882,7 @@ mentre cresce molto il numero di questi nelle strade urbane.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/tipo_veicoli/differenza_strade.png}
-    \caption{Incidenti per tipo di veicolo nel 2010}
+    \caption{Incidenti per tipo di veicolo nel 2018}
     \label{fig:differenza-strade}
 \end{figure}
 
@@ -897,7 +894,7 @@ mentre cresce molto il numero di questi nelle strade urbane.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/tipo_veicoli/uomo-donna.png}
-    \caption{Sesso del conducente per tipo di veicolo nel 2010}
+    \caption{Sesso del conducente per tipo di veicolo nel 2018}
     \label{fig:differenza-uomo-donna}
 \end{figure}
 
