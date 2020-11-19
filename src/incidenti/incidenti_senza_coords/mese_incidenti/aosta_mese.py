@@ -3,14 +3,16 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 path = "dataset/incidenti/incidenti_2013.txt"
-data = pd.read_csv(path, sep="\t")
+data = pd.read_csv(path, sep="\t", encoding='latin1')
 
 aosta_mese = data[data['provincia'] == 7]['mese'].value_counts().sort_index()
 
 index = 0
-for giorni_in_mese in [31, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]:
+for giorni_in_mese in [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]:
     aosta_mese.iloc[index] /= giorni_in_mese
     index += 1
+
+print(aosta_mese)
 
 media = aosta_mese.mean()
 
