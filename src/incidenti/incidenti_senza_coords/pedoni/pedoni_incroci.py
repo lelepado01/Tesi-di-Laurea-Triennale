@@ -188,6 +188,6 @@ fig, ax = plt.subplots()
 im, cbar = heatmap(tab, tab.index, [1,2,3,4], ax=ax,
                    cmap="YlGn", cbarlabel="Incidenti all'anno (2011)")
 texts = annotate_heatmap(im, valfmt="{x}")
-plt.xlabel("Numero di pedoni coinvolti")
+plt.title("Pedoni coinvolti", fontdict = {'fontsize' : 10})
 fig.tight_layout()
 plt.show()

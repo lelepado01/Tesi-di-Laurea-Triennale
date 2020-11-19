@@ -52,28 +52,28 @@ for giorni in giorni_al_trimestre:
 
 # ysmoothed = gaussian_filter1d(provs, sigma=2)
 
-plt.plot(provs.index, provs, markevery=0.1, linewidth=1)
-plt.xticks([1,2,3,4])
-plt.legend(bbox_to_anchor=(1,1), loc="upper left")
-plt.xlabel("Trimestre")
-plt.ylabel("Incidenti al trimestre a Milano")
-plt.tight_layout()
-plt.show()
+# plt.plot(provs.index, provs, markevery=0.1, linewidth=1)
+# plt.xticks([1,2,3,4])
+# plt.legend(bbox_to_anchor=(1,1), loc="upper left")
+# plt.xlabel("Trimestre")
+# plt.ylabel("Incidenti al trimestre a Milano")
+# plt.tight_layout()
+# plt.show()
 
 
 ############################
 # Codice per Heatmap
 # 
-# import sys
-# sys.path.append('src')
-# import heatmap as H
+import sys
+sys.path.append('src')
+import heatmap as H
 
-# fig, ax = plt.subplots()
+fig, ax = plt.subplots()
 
-# im, cbar = H.heatmap(provs, provs.index, [1,2,3,4], ax=ax, cmap="YlGn", cbarlabel="Incidenti al trimestre")
+im, cbar = H.heatmap(provs, provs.index, range(2010, 2019), ax=ax, cmap="YlGn", cbarlabel="")
 
-# plt.xlabel("Trimestre")
-# fig.tight_layout()
-# plt.show()
+fig.tight_layout()
+plt.ylabel("Trimestre", fontdict={'fontsize': 10})
+plt.show()
 # 
 ############################

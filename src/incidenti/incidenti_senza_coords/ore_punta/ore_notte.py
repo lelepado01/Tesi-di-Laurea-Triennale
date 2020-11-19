@@ -32,7 +32,6 @@ pd.DataFrame(
 # ora_notte_weekend.plot.bar(color='#', width=bar_width)
 # ora_notte_week.plot.bar(color='#', width=bar_width)
 
-plt.xlabel("Principali ore della notte")
 plt.ylabel("Incidenti per giorno (2016)")
 plt.legend(['week', 'weekend'])
 plt.xticks(rotation=0)
