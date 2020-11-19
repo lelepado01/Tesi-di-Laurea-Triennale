@@ -52,69 +52,73 @@ order = [
     'Sicilia', 'Sardegna'
 ]
 
-# color_ls = ['#2eaad3'] * 8
-# color_ls = color_ls + ['#2e57d3'] * 4
-# color_ls = color_ls + ['#2ed3aa'] * 8
-# color_ls = [color_ls, color_ls]
+color_ls2 = ['#ce717a'] * 8
+color_ls2 = color_ls2 + ['#ce717a'] * 4
+color_ls2 = color_ls2 + ['#ce717a'] * 8
 
-# patenti = patenti.reindex(order)
-# patenti = patenti['NUMERO'] / patenti['NUMERO'].sum()
-# incidenti = incidenti.reindex(order)
-# incidenti = incidenti['TOTALE'] / incidenti['TOTALE'].sum()
+color_ls = ['#cec571'] * 8
+color_ls = color_ls + ['#cec571'] * 4
+color_ls = color_ls + ['#cec571'] * 8
+color_ls = [color_ls, color_ls2]
 
-# df = pd.DataFrame([patenti, incidenti], ['Patentati', 'Incidenti']).transpose()
+patenti = patenti.reindex(order)
+patenti = patenti['NUMERO'] / patenti['NUMERO'].sum()
+incidenti = incidenti.reindex(order)
+incidenti = incidenti['TOTALE'] / incidenti['TOTALE'].sum()
 
-# df.plot.bar(width=0.9)
-# plt.text(2, 0.18, "Nord Italia")
-# plt.text(8, 0.13, "Centro Italia")
-# plt.text(15, 0.10, "Sud Italia")
-# plt.xticks(rotation=90)
-# plt.xlabel("")
-# plt.ylabel("Percentuale di incidenti e patentati per regione")
-# plt.tight_layout()
-# plt.show()
+df = pd.DataFrame([patenti, incidenti], ['Patentati', 'Incidenti']).transpose()
+
+df.plot.bar(width=0.9, color=color_ls)
+plt.text(2, 0.18, "Nord Italia")
+plt.text(8, 0.13, "Centro Italia")
+plt.text(15, 0.10, "Sud Italia")
+plt.xticks(rotation=90)
+plt.xlabel("")
+plt.ylabel("Percentuale di incidenti e patentati per regione")
+plt.tight_layout()
+plt.show()
 
 
-nord = incidenti.loc[['Piemonte', 'Valle d\'Aosta', 'Liguria', 'Lombardia', 
-    'Trentino-Alto Adige', 'Veneto', 'Friuli-Venezia Giulia', 'Emilia Romagna']]
+# nord = incidenti.loc[['Piemonte', 'Valle d\'Aosta', 'Liguria', 'Lombardia', 
+#     'Trentino-Alto Adige', 'Veneto', 'Friuli-Venezia Giulia', 'Emilia Romagna']]
 
-centro = incidenti.loc[['Toscana', 'Umbria', 'Marche', 'Lazio']]
+# centro = incidenti.loc[['Toscana', 'Umbria', 'Marche', 'Lazio']]
 
-sud = incidenti.loc[['Abruzzo', 'Molise', 'Campania', 'Puglia', 'Basilicata', 'Calabria', 
-    'Sicilia', 'Sardegna']]
+# sud = incidenti.loc[['Abruzzo', 'Molise', 'Campania', 'Puglia', 'Basilicata', 'Calabria', 
+#     'Sicilia', 'Sardegna']]
 
 # print(nord['TOTALE'].mean())
 # print(centro['TOTALE'].mean())
 # print(sud['TOTALE'].mean())
 
-ita = pd.DataFrame([nord['TOTALE'], centro['TOTALE'], sud['TOTALE']], ['Nord', 'Centro', 'Sud']).transpose()
+# ita = pd.DataFrame([nord['TOTALE'], centro['TOTALE'], sud['TOTALE']], ['Nord', 'Centro', 'Sud']).transpose()
 
-nord_p = patenti.loc[['Piemonte', 'Valle d\'Aosta', 'Liguria', 'Lombardia', 
-    'Trentino-Alto Adige', 'Veneto', 'Friuli-Venezia Giulia', 'Emilia Romagna']]
+# nord_p = patenti.loc[['Piemonte', 'Valle d\'Aosta', 'Liguria', 'Lombardia', 
+#     'Trentino-Alto Adige', 'Veneto', 'Friuli-Venezia Giulia', 'Emilia Romagna']]
 
-centro_p = patenti.loc[['Toscana', 'Umbria', 'Marche', 'Lazio']]
+# centro_p = patenti.loc[['Toscana', 'Umbria', 'Marche', 'Lazio']]
 
-sud_p = patenti.loc[['Abruzzo', 'Molise', 'Campania', 'Puglia', 'Basilicata', 'Calabria', 
-    'Sicilia', 'Sardegna']]
+# sud_p = patenti.loc[['Abruzzo', 'Molise', 'Campania', 'Puglia', 'Basilicata', 'Calabria', 
+#     'Sicilia', 'Sardegna']]
 
-# print(nord_p['NUMERO'].mean())
-# print(centro_p['NUMERO'].mean())
-# print(sud_p['NUMERO'].mean())
+# # print(nord_p['NUMERO'].mean())
+# # print(centro_p['NUMERO'].mean())
+# # print(sud_p['NUMERO'].mean())
 
-ita_p = pd.DataFrame([nord_p['NUMERO'], centro_p['NUMERO'], sud_p['NUMERO']], ['Nord', 'Centro', 'Sud']).transpose()
+# ita_p = pd.DataFrame([nord_p['NUMERO'], centro_p['NUMERO'], sud_p['NUMERO']], ['Nord', 'Centro', 'Sud']).transpose()
 
-plt.subplot(1,2,1)
-plt.boxplot(nord['TOTALE'], positions=[1], widths=[0.6])
-plt.boxplot(centro['TOTALE'], positions=[2], widths=[0.6])
-plt.boxplot(sud['TOTALE'], positions=[3], widths=[0.6])
-plt.xticks(range(1,4), ['Nord', 'Centro', 'Sud'], rotation=90)
-plt.title("Incidenti all'anno (2018)")
-plt.tight_layout()
-plt.subplot(1,2,2)
-plt.boxplot(nord_p['NUMERO'], positions=[1], widths=[0.6])
-plt.boxplot(centro_p['NUMERO'], positions=[2], widths=[0.6])
-plt.boxplot(sud_p['NUMERO'], positions=[3], widths=[0.6])
-plt.xticks(range(1,4), ['Nord', 'Centro', 'Sud'], rotation=90)
-plt.title("Patentati (2019)")
-plt.tight_layout()
-plt.show()
+# plt.subplot(1,2,1)
+# plt.boxplot(nord['TOTALE'], positions=[1], widths=[0.6])
+# plt.boxplot(centro['TOTALE'], positions=[2], widths=[0.6])
+# plt.boxplot(sud['TOTALE'], positions=[3], widths=[0.6])
+# plt.xticks(range(1,4), ['Nord', 'Centro', 'Sud'], rotation=90)
+# plt.title("Incidenti all'anno (2018)")
+# plt.tight_layout()
+# plt.subplot(1,2,2)
+# plt.boxplot(nord_p['NUMERO'], positions=[1], widths=[0.6])
+# plt.boxplot(centro_p['NUMERO'], positions=[2], widths=[0.6])
+# plt.boxplot(sud_p['NUMERO'], positions=[3], widths=[0.6])
+# plt.xticks(range(1,4), ['Nord', 'Centro', 'Sud'], rotation=90)
+# plt.title("Patentati (2019)")
+# plt.tight_layout()
+# plt.show()

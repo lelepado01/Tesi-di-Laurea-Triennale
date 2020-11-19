@@ -30,8 +30,8 @@ provincia = sum_field_by_column(data, 'PROVINCIA', fields[0], fields[1]).transpo
 # Correlazione più debole, ma comunque presente
 
 provincia = provincia.sort_values(by=0).head(20).sort_index()
-plt.fill_between(provincia.index, provincia[1],label='Feriti', color='#475cc1')
-plt.fill_between(provincia.index, provincia[0], label='Incidenti', color='#4799c1')
+plt.fill_between(provincia.index, provincia[1],label='Feriti', color='#71ceaf')
+plt.fill_between(provincia.index, provincia[0], label='Incidenti', color='#7190ce')
 plt.legend()
 plt.xticks(range(0,20), provincia.index, rotation=90)
 plt.ylabel("Numero di incidenti e feriti (2018)")

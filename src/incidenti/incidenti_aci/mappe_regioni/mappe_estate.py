@@ -34,36 +34,36 @@ regioni.index = regioni['reg_name']
 
 regioni = gp.GeoDataFrame(incidenti[field_incidenti], geometry=regioni['geometry'].transpose())
 
-from matplotlib.lines import Line2D
+#from matplotlib.lines import Line2D
 
-regioni.plot(column=field_incidenti, cmap='OrRd', legend=True)
+#regioni.plot(column=field_incidenti, cmap='OrRd', legend=True)
 # plt.title("Incidenti per regione nel 2014")
-plt.axis('off')
-plt.legend([
-    Line2D([],[],color='#a52317',linewidth=5), 
-    Line2D([],[],color='#d6584d',linewidth=5), 
-    Line2D([],[],color='#f7aca5',linewidth=5)
-], [max(regioni[field_incidenti]), int(regioni[field_incidenti].mean()), min(regioni[field_incidenti])])
-plt.show()
+# plt.axis('off')
+# plt.legend([
+#     Line2D([],[],color='#a52317',linewidth=5), 
+#     Line2D([],[],color='#d6584d',linewidth=5), 
+#     Line2D([],[],color='#f7aca5',linewidth=5)
+# ], [max(regioni[field_incidenti]), int(regioni[field_incidenti].mean()), min(regioni[field_incidenti])])
+# plt.show()
 
-# agosto = get_sum_of_fields(data, 'REGIONE', 'Agosto')
-# gennaio = get_sum_of_fields(data, 'REGIONE', 'Gennaio')
+agosto = get_sum_of_fields(data, 'REGIONE', 'Agosto')
+gennaio = get_sum_of_fields(data, 'REGIONE', 'Gennaio')
 
-# agosto.index = agosto['REGIONE']
-# gennaio.index = gennaio['REGIONE']
-# agosto = agosto['Agosto']
-# gennaio = gennaio['Gennaio']
+agosto.index = agosto['REGIONE']
+gennaio.index = gennaio['REGIONE']
+agosto = agosto['Agosto']
+gennaio = gennaio['Gennaio']
 
-# red_ls = ['#f65578']*20
-# blue_ls = ['#70b8ff']*20
+red_ls = ['#ce7182']*20
+blue_ls = ['#cebd71']*20
 
-# order = [
-#     'Piemonte', 'Valle d\'Aosta', 'Liguria', 'Lombardia', 
-#     'Trentino-Alto Adige', 'Veneto', 'Friuli-Venezia Giulia', 'Emilia Romagna', 
-#     'Toscana', 'Umbria', 'Marche', 'Lazio', 
-#     'Abruzzo', 'Molise', 'Campania', 'Puglia', 'Basilicata', 'Calabria', 
-#     'Sicilia', 'Sardegna'
-# ]
+order = [
+    'Piemonte', 'Valle d\'Aosta', 'Liguria', 'Lombardia', 
+    'Trentino-Alto Adige', 'Veneto', 'Friuli-Venezia Giulia', 'Emilia Romagna', 
+    'Toscana', 'Umbria', 'Marche', 'Lazio', 
+    'Abruzzo', 'Molise', 'Campania', 'Puglia', 'Basilicata', 'Calabria', 
+    'Sicilia', 'Sardegna'
+]
 
 # nord = incidenti.loc[['Piemonte', 'Valle d\'Aosta', 'Liguria', 'Lombardia', 
 #     'Trentino-Alto Adige', 'Veneto', 'Friuli-Venezia Giulia', 'Emilia Romagna']]
@@ -73,17 +73,18 @@ plt.show()
 # sud = incidenti.loc[['Abruzzo', 'Molise', 'Campania', 'Puglia', 'Basilicata', 'Calabria', 
 #     'Sicilia', 'Sardegna']]
 
-# agosto = agosto.reindex(order)
-# gennaio = gennaio.reindex(order)
+agosto = agosto.reindex(order)
+gennaio = gennaio.reindex(order)
 
-# pd.DataFrame([agosto, gennaio], ['Agosto', 'Gennaio']).transpose().plot.bar(width=0.9, color=[red_ls, blue_ls])
+pd.DataFrame([agosto, gennaio], ['Agosto', 'Gennaio']).transpose().plot.bar(width=0.9, color=[red_ls, blue_ls])
 
-# plt.text(2, 490, "Nord Italia")
-# plt.text(8, 320, "Centro Italia")
-# plt.text(15, 230, "Sud Italia")
+plt.text(2, 490, "Nord Italia")
+plt.text(8, 320, "Centro Italia")
+plt.text(15, 230, "Sud Italia")
 
-# plt.xticks(rotation=90)
-# plt.ylabel("Incidenti al mese (2018)")
-# plt.legend()
-# plt.tight_layout()
-# plt.show()
+plt.xticks(rotation=90)
+plt.ylabel("Incidenti al mese (2018)")
+plt.xlabel("")
+plt.legend()
+plt.tight_layout()
+plt.show()
