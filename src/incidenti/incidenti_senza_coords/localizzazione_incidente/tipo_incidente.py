@@ -19,7 +19,7 @@ natura_incidente_labels = label_utils.join_labels(
     ).value_counts().sort_index()
 
 # GRAFO 3
-natura_incidente_labels.plot.barh(color='#ba754e', width=0.9)
+natura_incidente_labels.plot.barh(color='#5da3c1', width=0.9)
 plt.xlabel("Incidenti all'anno (2018)")
 plt.tight_layout()
 plt.show()
