@@ -244,7 +244,26 @@ abitazioni e terreni, in cui non avverranno mai incidenti.
 Ciò rende inutile la misura dell'area della zona.
 
 \subsection{Dati riguardanti il meteo}
-\todo{lelepado: non so ancora se usarli}
+
+Per quanto riguarda i dati su meteo, si è tentato di utilizzare le informazioni provenienti dalle 
+centraline Ansa, tuttavia, dopo veloce analisi, visibile in figura \ref{fig:centraline-ansa}, 
+si è notato i dataset non contengono tutte le stazioni.
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{../src/meteo/centraline_ansa.png}
+    \caption{Centraline Ansa a Milano}
+    \label{fig:centraline-ansa}
+\end{figure}
+
+\todo{aggiungere centraline ansa mancanti}
+
+Inoltre, per mancanza di dati precisi sul giorno degli incidenti, avere un'informazione così 
+precisa sul meteo è superfluo.
+Si è dunque optato per un dataset contenente temperature, umidità, e velocità del vento, 
+trovato sul sito Zenodo
+\footnote{\url{https://zenodo.org/record/3992354}}.
+
+Il dataset contiene i campi specificati, misurati ogni ora, a partire dal 2008, fino al 2018.
 
 \subsection{Dati riguardanti trasporti pubblici}
 I dati riguardanti i trasporti pubblici trovati hanno due provenienze, i primi sono 

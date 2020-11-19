@@ -38,6 +38,8 @@
 
     [Dati presi da ilmeteo](https://www.ilmeteo.it/portale/archivio-meteo/Milano/2010/)
 
+    [Dati Milano Generali](https://zenodo.org/record/3992354)
+
 - Linee Autobus (ATM)
 
     [Linee di superficie](https://dati.comune.milano.it/dataset/ds532-atm-composizione-percorsi-linee-di-superficie-urbane)
