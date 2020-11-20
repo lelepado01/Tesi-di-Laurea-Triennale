@@ -1,8 +1,20 @@
 
-TODO: 
+Risorse: 
 
  - ricerca di risorse su turismo per confrontare i miei esiti
     Turismo 2018
         https://www.unive.it/pag/fileadmin/user_upload/centri/CISET/documenti/BANKITALIA/2019/MTSantoro_ISTAT_Treviso_2019.pdf
  - ricerca risorse su traffico 
  - '' su incidenti italia / milano
+    Quattroruote (dati aci 2019)
+        https://www.quattroruote.it/news/sicurezza/2020/11/18/aci_classifica_peggiori_strade_italia_2019_incidenti_vittime_.html
+    Studi di aci
+        http://www.aci.it/laci/studi-e-ricerche/dati-e-statistiche/incidentalita.html
+    Su più anni
+        http://www.aci.it/fileadmin/documenti/studi_e_ricerche/dati_statistiche/incidenti/Incidenti_Stradali_dal_1930.pdf
+
+
+Spunti: 
+
+ - Indice di mortalità
+ 
