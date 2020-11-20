@@ -4,23 +4,23 @@ import matplotlib.pyplot as plt
 
 data = pd.read_csv("dataset/incidenti/incidenti_2018.txt", sep="\t", encoding='latin1')
 
-incr = 'intersezione_o_non_interse3'
+incroci = 'intersezione_o_non_interse3'
 morti = ['morti_entro_24_ore', 'morti_entro_30_giorni']
 
 data['morti'] = data[morti[0]] + data[morti[1]]
 
 df = {}
-for inc in data[incr].unique(): 
+for inc in data[incroci].unique(): 
     df[inc] = 0
 
-for inc, morti in zip(data[incr], data['morti']): 
+for inc, morti in zip(data[incroci], data['morti']): 
     df[inc] += morti
 
-indice_mort = pd.Series(df.values(),index =  df.keys()).sort_index()
+indice_mortalita = pd.Series(df.values(),index =  df.keys()).sort_index()
 
-num_incr = data[incr].value_counts().sort_index()
+num_incroci = data[incroci].value_counts().sort_index()
 
-mortalita = pd.DataFrame([indice_mort * 100 / num_incr], 
+mortalita = pd.DataFrame([indice_mortalita * 100 / num_incroci], 
     index=['indice']
 ).transpose()
 

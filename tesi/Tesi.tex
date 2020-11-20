@@ -1359,6 +1359,27 @@ velocità più alta nei rettilinei rispetto a qualsiasi altro tipo di incrocio.
     \label{fig:tipo-intersezioni}
 \end{figure}
 
+
+\begin{lstlisting}
+    incroci = 'intersezione_o_non_interse3'
+    
+    df = {}
+    for inc in data[incroci].unique(): 
+        df[inc] = 0
+
+    for inc, morti in zip(data[incroci], data['morti']): 
+        df[inc] += morti
+
+    indice_mortalita = pd.Series(df.values(),index =  df.keys()).sort_index()
+
+    num_incroci = data[incroci].value_counts().sort_index()
+
+    mortalita = pd.DataFrame([indice_mortalita * 100 / num_incroci], 
+        index=['indice']
+    ).transpose()
+\end{lstlisting}
+
+
 \begin{center}
     \def\arraystretch{1.5}%  
     \begin{tabular}{ |c|c|c| } 
@@ -1366,23 +1387,23 @@ velocità più alta nei rettilinei rispetto a qualsiasi altro tipo di incrocio.
     Tipo di Incrocio & Indice di Mortalità & Indice di Feriti \\ 
     \hline
     \rowcolor{TableGray}
-    Incrocio                & 0.877017 \\
-    Rotatoria               & 0.822454 \\
+    Incrocio                & 0.88 \\
+    Rotatoria               & 0.82 \\
     \rowcolor{TableGray}
-    Intersez. segnalata     & 1.240372 \\
-    Intersez. con semaforo  & 0.903527 \\
+    Intersez. segnalata     & 1.24 \\
+    Intersez. con semaforo  & 0.9 \\
     \rowcolor{TableGray}
-    Intersez. non segnalata & 1.362683 \\
-    Passaggio a livello     & 4.000000 \\
+    Intersez. non segnalata & 1.36 \\
+    Passaggio a livello     & 4.0 \\
     \rowcolor{TableGray}
-    Rettilineo              & 2.331726 \\
-    Curva                   & 3.395127 \\
+    Rettilineo              & 2.33 \\
+    Curva                   & 3.39 \\
     \rowcolor{TableGray}
-    Dosso                   & 2.816901 \\
-    Pendenza                & 3.901734 \\
+    Dosso                   & 2.82 \\
+    Pendenza                & 3.9 \\
     \rowcolor{TableGray}
-    Galleria ill.           & 2.063492 \\
-    Galleria non ill.       & 5.813953 \\
+    Galleria ill.           & 2.06 \\
+    Galleria non ill.       & 5.81 \\
     \hline
     \end{tabular}
 \end{center}
