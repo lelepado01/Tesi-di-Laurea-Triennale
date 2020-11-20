@@ -32,4 +32,12 @@ import label_utils
 
 mortalita['incrocio'] = label_utils.join_labels(mortalita['incrocio'], "dataset/incidenti/Classificazioni/intersezione_o_non_interse3.csv")
 
-print(mortalita)
+mortalita.index = mortalita['incrocio']
+mortalita = mortalita['indice']
+
+mortalita = mortalita.sort_index()
+
+mortalita.plot.barh(color = '#aa6677', width=0.9)
+plt.ylabel("")
+plt.tight_layout()
+plt.show()

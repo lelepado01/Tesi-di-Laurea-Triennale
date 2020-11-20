@@ -18,9 +18,10 @@ intersezione_labels = label_utils.join_labels(
 
 #print(intersezione_labels)
 
-intersezione_labels = intersezione_labels[intersezione_labels > 200]
+# intersezione_labels = intersezione_labels[intersezione_labels > 200]
 
 intersezione_labels /= intersezione_labels.sum()
+intersezione_labels = intersezione_labels.sort_index()
 
 ######################
 
@@ -63,7 +64,7 @@ df = pd.DataFrame([intersezione_labels, mortalita], ['Numero di incidenti', 'Ind
 ######################
 
 # GRAFO 4
-df.plot.barh(color=['#92ba4e', '#ff0000'], width=0.9, alpha=0.5)
-plt.xlabel("Incidenti all'anno (2018)")
+intersezione_labels.plot.barh(color=['#77aa66'], width=0.9)
+# plt.xlabel("Incidenti all'anno (2018)")
 plt.tight_layout()
 plt.show()
