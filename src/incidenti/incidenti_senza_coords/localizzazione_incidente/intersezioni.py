@@ -65,6 +65,7 @@ df = pd.DataFrame([intersezione_labels, mortalita], ['Numero di incidenti', 'Ind
 
 # GRAFO 4
 intersezione_labels.plot.barh(color=['#77aa66'], width=0.9)
-# plt.xlabel("Incidenti all'anno (2018)")
+plt.xlabel("Percercentuale di incidenti totali per tipo di incrocio (2018)")
+plt.ylabel("")
 plt.tight_layout()
 plt.show()

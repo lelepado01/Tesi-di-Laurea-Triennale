@@ -38,6 +38,7 @@ mortalita = mortalita['indice']
 mortalita = mortalita.sort_index()
 
 mortalita.plot.barh(color = '#aa6677', width=0.9)
+plt.xlabel("Indice di Mortalità per tipo di incrocio (2018)")
 plt.ylabel("")
 plt.tight_layout()
 plt.show()
