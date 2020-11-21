@@ -6,14 +6,14 @@ sys.path.append("src")
 
 import meteo.meteo_generale_utils as mgu
 
-incidenti = pd.read_csv("dataset/incidenti/incidenti_2013.txt", sep="\t")
+incidenti = pd.read_csv("dataset/incidenti/incidenti_2011.txt", sep="\t")
 
 inc = pd.Series()
 for m in incidenti['mese'].unique(): 
     inc = inc.append(pd.Series(len(incidenti[incidenti['mese'] == m]), index=[m]))
 
 meteo = pd.read_csv("dataset/meteo/meteo_milano_generale_2008_2019.csv")
-meteo_2010 = mgu.get_weather_by_year(meteo, 2013)
+meteo_2010 = mgu.get_weather_by_year(meteo, 2011)
 
 meteo_per_mese = pd.Series() 
 for month in range(1,13): 
@@ -35,7 +35,7 @@ meteo_per_mese = meteo_per_mese.sort_index()
 
 ax = plt.subplot(311)
 ax.bar(inc.index, inc, color='#86ba5d', width=0.9)
-plt.ylabel("Incidenti per mese (2013)")
+plt.ylabel("Incidenti per mese (2011)")
 plt.xticks(range(1,13))
 
 plt.subplot(312)
