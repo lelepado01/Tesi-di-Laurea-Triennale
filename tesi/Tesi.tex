@@ -89,8 +89,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Introduzione}
 
-\todo{atrent: manca una parte introduttiva vera e propria, in cui spieghi lo scopo del lavoro (estrarre conclusioni interessanti a partire da dati open) e poi spieghi cosa ti prefiggi di ``calcolare'', cioè dichiara un elenco di ``domande'' (in senso ampio) a cui vuoi dare risposta}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Scopo del lavoro}
 
@@ -116,13 +114,10 @@ Altre questioni interessanti potrebbero essere:
 Quali sono le strade più pericolose in Italia? 
 Si ha più probabilità di essere coinvolti in un sinistro in città o su una strada extraurbana? 
 
-\todo{lelepado: così può andare?}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Origine dei dati}
 
 \subsection{Dati riguardanti incidenti}
-\todo{atrent: questa sezione entra già nel tecnico}
 La maggior parte dei dati utilizzati in questo lavoro provengono 
 dall'Istituto nazionale di statistica, in particolare dall'archivio
 \footnote{\url{https://www.istat.it/it/archivio/87539}}
@@ -212,9 +207,6 @@ La lista di Ztlmilano contiene i seguenti autovelox:
 Il campi della tabella ripetuti sono dovuti al fatto che alcuni autovelox sono stati installati in entrambe le direzioni.
 
 \subsection{Dati riguardanti patentati}
-\todo{atrent: in generale (cioè vale un po' ovunque) manca una critica alla qualità dei dati 
-e alla loro significatività (in questo caso ad esempio bisogna domandarsi quanto questo 
-dataset sia un proxy del traffico)}
 
 I dati sulle persone con patente per regione, che è stato utilizzato per stimare il traffico 
 regionale, proviene dal sito del Ministero delle Infrastrutture e Trasporti 
@@ -462,8 +454,6 @@ Tuttavia, non tutte le zone hanno la stessa superficie. Avendo a disposizione l'
     \caption{Incidenti a Milano per zona e in base alla superficie della zona}
     \label{fig:incidenti-chilometro}
 \end{figure}
-\todo{atrent: ma questi grafici li hai generati tu?}
-\todo{lelelpado: si, nella cartella src/municipi-milano}
 
 Nella figura \ref{fig:incidenti-chilometro} spicca, sia nel grafo di sinistra che in quello di destra, 
 la zona 1, cioè quella del centro, vista la superficie minore rispetto agli altri municipi.
@@ -490,8 +480,6 @@ di incidenti in zone più precise, per esempio attorno a piazzale Loreto.
     area_loreto = loreto.area * data['AREA'].iloc[0] / geometry.Polygon(data['geometry'].iloc[0]).area
     area_loreto_inc = loreto_incidenti * 1000000 / area_loreto
 \end{lstlisting}
-\todo{atrent: non trovo questo snippet nei sorgenti, come mai?}
-\todo{lelepado: sono in src/municipi-milano/milano.py, dalla linea 74 alla linea 83}
 
 Il numero di incidenti che risultano, nell'area considerata in figura \ref{fig:zona-loreto}, 
 sono 231.06, considerando che il massimo ottenuto per zona, il centro storico arriva attorno a 120, 
@@ -535,8 +523,6 @@ si ottiene la figura \ref{fig:geo-trasporti}:
     \caption{Linee Autobus e Tram a Milano}
     \label{fig:geo-trasporti}
 \end{figure}
-\todo{atrent: vale un po' ovunque, attenzione alle unità di misura e alle scale degli assi}
-\todo{lelepado: anche in queste mappe? O solo nei grafi? Devo convertire le coordinate in gradi?}
 
 Nonstante la rimozione di parte dei tragitti, i trasporti pubblici coprono 
 la maggior parte della città.
@@ -566,9 +552,6 @@ notare lo stesso fenomeno, tra Viale Bianca Maria e Viale Premuda.
     \caption{Linee dei trasporti pubblici e condizioni traffico vicino a Corso 22 Marzo}
     \label{fig:22-marzo}
 \end{figure}
-\todo{atrent: conclusione traibile solo a occhio o sei riuscito a dare un valore numerico?}
-\todo{lelepado: ho calcolato gli incidenti per km quadrato nella zona di milano, e li ho confrontati con 
-gli incidenti per km nell'area raggigurata nel grafo sotto}
 
 Le immagini del traffico sono state realizzate tramite le API di Google Maps:  
 
@@ -587,10 +570,6 @@ Nella zona dei navigli, si è poi presa in considerazione la sezione \ref{fig:zo
 perchè sono presenti molti incidenti in viale Papiniano e viale Beatrice d'Este, 
 e un numero minore nella via parallela sottostante, in cui è anche presente 
 una linea di trasporti pubblici.
-
-\todo{atrent: vale in generale, manca bibliografia scientifica, 
-ti dovresti confrontare con un po' di accademia sugli studi di incidentalità, 
-come vengono calcolati i vari fattori?}
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/atm/zona_navigli_rect.png}
@@ -655,12 +634,6 @@ corsie ciascuna; con l'aumentare dello spazio, infine, inevitabilmente la veloci
 
 %\clearpage
 \subsection{Il pavè a Milano influisce in qualche modo sull'incidentalità?}
-\todo{atrent: vale ovunque tu parli di ``correlazione'', il termine è tecnico e se lo usi devi 
-poi dare dei valori di correlazione (appunto) statistica, cioè attenzione a dire in generale 
-``è VISIBILE la correlazione tra...'', il ``visibile'' ti può aiutare a concentrarti 
-su un subset di dati, ma poi devi dare dei numeri}
-\todo{lelepado: aggiungerò una stima degli incidenti per km come ho fatto nella subsection precendente, 
-può andare bene?}
 
 Spesso le linee di tram coincidono con strade in pavè, è vero per Milano? 
 Tramite la mappa \ref{fig:tram-pave-milano} è possibile confrontarle: 
@@ -727,11 +700,6 @@ chilometro quadrato, nel campione creato, è di $220.89$ incidenti.
 Tuttavia, nel campione delle strade asfaltata sono stati presi vari tratti provenienti dalla circonvallazione 
 interna e altre zone trafficate, mentre il campione di strade in pavè contiene, per mancanza di altri dati, 
 molte strade del centro storico inevitabilmente meno trafficate.
-
-%\clearpage
-\section{Incidenti e Piste  Ciclabili}
-
-\todo{lelepado: devo decidere se aggiungerlo}
 
 %\clearpage
 \section{Incidenti e Autovelox}
@@ -1079,9 +1047,6 @@ situazioni in cui il numero di incidenti sia alto in orari con poco traffico.\\
 \end{lstlisting}
 
 Correlazione tra traffico in area C a Milano e incidenti per orario è $0.877$
-
-\todo{lelepado: La correlazione è stata realizzata con i valori cumulati delle ore, 
-non con il campione, perchè gli accessi in area C sono già parzialmente cumulati, va bene?}
 
 %\clearpage
 \subsection{Incidentalità in orari notturni}
@@ -1890,7 +1855,6 @@ per non parlare del fatto che entrambe le strade passano attraverso un alto nume
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\clearpage
-\todo{lelepado: Ho poche cose qui}
 \chapter{Dati su Meteo}
 
 \section{Meteo a Milano}
@@ -1902,6 +1866,8 @@ per non parlare del fatto che entrambe le strade passano attraverso un alto nume
     \caption{Incidenti, temperature e umidità medi per mese nel 2013}
     \label{fig:incidenti-temp}
 \end{figure}
+
+\todo{Mettere i due anni con max e min correlazione}
 
 La figura \ref{fig:incidenti-temp} mostra, partendo dall'alto, il numero di incidenti 
 avvenuti per mese, la temperatura media per mese, e infine l'umidità media.
