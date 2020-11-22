@@ -90,7 +90,8 @@
 \chapter{Introduzione}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Scopo del lavoro}
+%\section{Scopo del lavoro}
+\todo{lelepado: tengo la section con scopo del lavoro? O lascio introduzione e basta?}
 
 Lo scopo di questo lavoro, è mostrare che tipo di analisi è possibile realizzare, 
 avendo a disposizione 
@@ -115,9 +116,9 @@ Quali sono le strade più pericolose in Italia?
 Si ha più probabilità di essere coinvolti in un sinistro in città o su una strada extraurbana? 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Origine dei dati}
+\chapter{Origine dei dati}
 
-\subsection{Dati riguardanti incidenti}
+\section{Dati riguardanti incidenti}
 La maggior parte dei dati utilizzati in questo lavoro provengono 
 dall'Istituto nazionale di statistica, in particolare dall'archivio
 \footnote{\url{https://www.istat.it/it/archivio/87539}}
@@ -142,7 +143,7 @@ L'ultimo dataset, trovato dopo veloce consultazione con un dipendente Istat, è 
 \'E stato consigliato in quanto, questi dati, specifici a autostrade e strade statali, 
 indicano anche il nome della rispettiva via.
 
-\subsection{Dati riguardanti autovelox}
+\section{Dati riguardanti autovelox}
 Un primo dataset individuato, che riguardasse delle posizioni degli autovelox fissi, 
 è stato una mappa GoogleMyMaps
 \footnote{\url{https://www.google.com/maps/d/viewer?mid=1CBgMTvIDnbGo22-Y1f3rVcbeX4C0v_w1&ll=45.365557951599605\%2C10.03650113755961&z=8}} 
@@ -206,7 +207,7 @@ La lista di Ztlmilano contiene i seguenti autovelox:
 
 Il campi della tabella ripetuti sono dovuti al fatto che alcuni autovelox sono stati installati in entrambe le direzioni.
 
-\subsection{Dati riguardanti patentati}
+\section{Dati riguardanti patentati}
 
 I dati sulle persone con patente per regione, che è stato utilizzato per stimare il traffico 
 regionale, proviene dal sito del Ministero delle Infrastrutture e Trasporti 
@@ -222,7 +223,7 @@ valido per il traffico, tenendo conto del fatto che molte persone non vivono nel
 in cui hanno ottenuto la patente, e altre potrebbero spostarsi ogni giorno in altri 
 luoghi per questioni di lavoro.
 
-\subsection{Dati riguardanti le zone di Milano}
+\section{Dati riguardanti le zone di Milano}
 
 I dati con zone geolocalizzate di Milano provengono dal geoportale del comune di Milano
 \footnote{\url{https://geoportale.comune.milano.it/}}, e contengono i poligoni che costituiscono 
@@ -236,7 +237,7 @@ Un altro problema, è che le zone non contengono solamente la superficie stradal
 abitazioni e terreni, in cui non avverranno mai incidenti. 
 Ciò rende inutile la misura dell'area della zona.
 
-\subsection{Dati riguardanti il meteo}
+\section{Dati riguardanti il meteo}
 
 Per quanto riguarda i dati su meteo, si è tentato di utilizzare le informazioni provenienti dalle 
 centraline Ansa, tuttavia, dopo veloce analisi, visibile in figura \ref{fig:centraline-ansa}, 
@@ -258,7 +259,7 @@ trovato sul sito Zenodo
 
 Il dataset contiene i campi specificati, misurati ogni ora, a partire dal 2008, fino al 2018.
 
-\subsection{Dati riguardanti trasporti pubblici}
+\section{Dati riguardanti trasporti pubblici}
 I dati riguardanti i trasporti pubblici trovati hanno due provenienze, i primi sono 
 dati riferiti alle linee ATM, scaricati sul sito del comune di milano
 \footnote{\url{https://dati.comune.milano.it/dataset/ds532-atm-composizione-percorsi-linee-di-superficie-urbane}}.
@@ -266,13 +267,15 @@ Dallo stesso sito proviene anche il dataset riguardante gli autobus turistici, c
 contiene in particolare le aree di sosta di questi ultimi
 \footnote{\url{https://dati.comune.milano.it/dataset/ds740_sosta_bus_gt_turistici}}.
 
-\subsection{Dati riguardanti piste ciclabili}
+\section{Dati riguardanti piste ciclabili}
 Oltre al sito principale del comune di Milano, esiste un secondo sito web dedicato 
 unicamente ai dati geolocalizzati. Su questo sito è disponibile un dataset contenente 
 i percorsi delle piste ciclabili di Milano
 \footnote{\url{https://geoportale.comune.milano.it/sit/cerca-nel-catalogo/}}.
 
-\subsection{Dati riguardanti autostrade e manto stradale}
+\todo{vanno tolti i dati su piste  ciclabili}
+
+\section{Dati riguardanti autostrade e manto stradale}
 
 Il primo dataset individuato, riguardante il manto  stradale, è stato quello di ANAS
 \footnote{\url{http://dati.mit.gov.it/catalog/dataset/grafo-stradale-anas}}, 
@@ -290,7 +293,7 @@ autostrade, tangenziali e strade statali.
 Allo stesso modo, Geojson.io è stato utile a tracciare alcune aree in centro a Milano, per confrontare 
 gli incidenti su pavè agli incidenti su asfalto.
 
-\subsection{Dati riguardanti l'area C}
+\section{Dati riguardanti l'area C}
 
 Oltre a utilizzare i dati riguardo agli accessi all'area C, si è fatto uso anche di una mappa 
 raffigurante i varchi di entrata e i limiti del centro storico, 
@@ -299,7 +302,7 @@ proveniente dal sito del comune di Milano
 
 \todo{lelepado: devo metterla questa? è solamente un'immagine}
 
-\subsection{Dati riguardanti il turismo}
+\section{Dati riguardanti il turismo}
 
 I dati sul turismo in Italia, sono stati presi dall'archivio istat sul tema
 \footnote{\url{https://www.istat.it/it/archivio/16777}}.
@@ -313,7 +316,7 @@ Per realizzare la stima, sono stati necessari i dati regione per regione,
 a partire dal 2010 fino al 2018, convertiti in formato csv, si sono scelti gli indicatori di 
 turismo nei mesi non estivi, e tasso di turisticità. 
 
-\subsection{Immagini del traffico}
+\section{Immagini del traffico}
 
 Le immagini raffiguranti il traffico in tempo reale sono prese da Google Maps
 \footnote{\url{https://www.google.com/maps/}}, 
