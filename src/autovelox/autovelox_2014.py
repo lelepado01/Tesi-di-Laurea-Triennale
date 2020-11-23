@@ -6,8 +6,6 @@ import contextily as cx
 import sys
 sys.path.append("src")
 
-import geo_utils
-
 path = "dataset/autovelox/autovelox_2014.csv"
 autovelox = gp.read_file(path).set_crs(epsg=3857)
 autovelox = gp.GeoDataFrame(geometry=gp.points_from_xy(autovelox['field_1'], autovelox['field_2']))

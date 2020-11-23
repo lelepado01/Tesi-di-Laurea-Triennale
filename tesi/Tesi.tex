@@ -712,15 +712,15 @@ bisognerebbe innanzi tutto sapere quando sono stati posizionati i dispositivi, e
 avendo dati su incidenti prima e dopo l'installazione, sarebbe possibile trarre conclusioni.
 
 Alcuni dati sull'installazione di autovelox esistono per l'anno 2014, visualizzabili nella 
-tabella \ref{ztl-milano}, tuttavia i dati 
-riguardo agli incidenti sono solo riguardanti l'anno 2016, in quanto Istat non ha rilasciato 
+tabella \ref{ztl-milano}, tuttavia le posizioni degli incidenti 
+sono solo disponibili per l'anno 2016, in quanto Istat non ha rilasciato 
 le posizioni degli incidenti in altre annate.
 
-Sapendo le posizioni degli autovelox, con un po' di lavoro manuale, è possibile ricondursi alla 
-posizione effettiva sulla mappa.
+Conoscendo le posizioni degli autovelox installati nel 2014, è possibile ricondursi alla 
+posizione effettiva di questi ultimi sulla mappa.
 Per fare ciò, la soluzione più veloce è stata quella di enumerare, 
 come raffigurato nella mappa sul lato sinistro della figura \ref{fig:autovelox-indici}, 
-tutti gli autovelox sulla mappa, e confrontarli con le vie della tabella.
+tutti gli autovelox, e confrontarli con le vie della tabella.
 
 \begin{lstlisting}[language=Python]
     path = "dataset/autovelox/autovelox_milano.geojson"
@@ -743,13 +743,14 @@ tutti gli autovelox sulla mappa, e confrontarli con le vie della tabella.
     \label{fig:autovelox-indici}
 \end{figure}
 
-Una volta identificate le linee corrette del dataset, è possibile separarli dal datset completo.
+Una volta identificate le linee riguardanti gli autovelox interessati, è possibile separarli 
+dal datset completo.
 Gli autovelox installati nel 2014, sono rappresentati nella mappa sul lato destro della 
 figura \ref{fig:autovelox-indici}.
 
 Per quanto non si disponga delle informazioni sugli incidenti prima e dopo dell'installazione, 
 è comunque possibile sovrapporre i dataset, per vedere se gli autovelox hanno un qualche tipo di 
-effetto sugli incidenti, visto che i dati sui sinistri risalgono al 2016.
+effetto sugli incidenti, visto che i dati sui sinistri sono successivi all'installazione delle centraline.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/autovelox/correlazione.png}
@@ -758,40 +759,40 @@ effetto sugli incidenti, visto che i dati sui sinistri risalgono al 2016.
 \end{figure}
 
 La mappa \ref{fig:autovelox-incidenti} è stata realizzata contando gli incidenti avvenuti 
-vicino, più precisamente nel raggio di un chilometro, a ogni autovelox.
+nel raggio di un chilometro a ogni autovelox.
 Va precisato che le 'bolle' non indicano il raggio di conteggio degli incidenti, ma 
-l'entità del numero dei sinistri trovati.
+il numero dei sinistri trovati.
 
 \begin{center}
     \def\arraystretch{1.5}% 
-    \begin{tabular}{ |c|c|c| }
+    \begin{tabular}{ |c|c|c|c| }
         \hline
-        Autovelox & Incidenti Totali & Incidenti per $Km^2$ \\ 
+        Autovelox & Incidenti Totali & Incidenti per $Km^2$ & Incidenti della zona \\ 
         \hline
         \rowcolor{TableGray}
-        0    &    194   &      61.78\\
-        1    &    202   &      64.33\\
+        Viale Fulvio Testi direz. perif.        &    194   &      61.78 & \\
+        Viale Fulvio Testi direz. centro        &    202   &      64.33 & \\
         \rowcolor{TableGray}
-        2    &    208   &      66.24\\
-        3    &    212   &      67.51\\
+        Cavalcavia del Ghisallo direz. centro   &    208   &      66.24 & \\
+        Cavalcavia del Ghisallo direz. perif.   &    212   &      67.51 & \\
         \rowcolor{TableGray}
-        4    &    166   &      52.86\\
-        5    &     95   &      30.25\\
+        Via Fermi                               &    166   &      52.86 & \\
+        Via Parri direz. perif.                 &     95   &      30.25 & \\
         \rowcolor{TableGray}
-        6    &    100   &      31.84\\
-        7    &    180   &      57.32\\
+        Via Parri direz. centro                 &    100   &      31.84 & \\
+        Viale Famagosta                         &    180   &      57.32 & \\
         \rowcolor{TableGray}
-        8    &     23   &       7.32\\
-        9    &     57   &      18.15\\
+        Via dei Missaglia direz. centro         &     23   &       7.32 & \\
+        Via Ferrari                             &     57   &      18.15 & \\
         \rowcolor{TableGray}
-        10   &    291   &      92.67\\
-        11   &    290   &      92.35\\
+        Viale Monteceneri dir. Serra            &    291   &      92.67 & \\
+        Viale Monteceneri dir. Lugano           &    290   &      92.35 & \\
         \rowcolor{TableGray}
-        12   &    296   &      94.26\\
-        13   &    296   &      94.26\\
+        Viale Serra                             &    296   &      94.26 & \\
+        Viale Serra                             &    296   &      94.26 & \\
         \rowcolor{TableGray}
-        14   &    149   &      47.45\\
-        15   &    149   &      47.45\\
+        Viale Palmanova direz. perif.           &    149   &      47.45 & \\
+        Viale Palmanova direz. centro           &    149   &      47.45 & \\
         \hline
     \end{tabular}
 \end{center}
@@ -813,6 +814,8 @@ Questa ultima colonna, in particolare, è divisa per 3.14 perchè l'area del cer
 
 Poichè si sta utilizzando raggio di circa un chilometro, e si vuole ottenere il numero di incidenti per chilometro 
 quadrato, l'area ottentuta è 3.14.
+
+\todo{lelepado: trarre conclusione}
 
 %\clearpage
 \section{Incidenti e Meteo}
