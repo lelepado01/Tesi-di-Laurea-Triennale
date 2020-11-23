@@ -767,37 +767,35 @@ il numero dei sinistri trovati.
     \def\arraystretch{1.5}% 
     \begin{tabular}{ |c|c|c|c| }
         \hline
-        Autovelox & Incidenti Totali & Incidenti per $Km^2$ & Incidenti della zona \\ 
+        Autovelox & Incidenti totali & Incidenti per $Km^2$ & Incidenti zona \\ 
         \hline
         \rowcolor{TableGray}
-        Viale Fulvio Testi direz. perif.        &    194   &      61.78 & 51.25 \\
-        Viale Fulvio Testi direz. centro        &    202   &      64.33 & 51.25 \\
+        Viale Fulvio Testi direz. perif.        &    194 & 61.78 & 69.52 \\
+        Viale Fulvio Testi direz. centro        &    202 & 64.33 & 69.52 \\
         \rowcolor{TableGray}
-        Cavalcavia del Ghisallo direz. centro   &    208   &      66.24 & 51.25 \\
-        Cavalcavia del Ghisallo direz. perif.   &    212   &      67.51 & 51.25 \\
+        Cavalcavia del Ghisallo direz. centro   &    208 & 66.24 & 44.3 \\
+        Cavalcavia del Ghisallo direz. perif.   &    212 & 67.51 & 44.3 \\
         \rowcolor{TableGray}
-        Via Fermi                               &    166   &      52.86 & 51.25\\
-        Via Parri direz. perif.                 &     95   &      30.25 & 43.63 \\
+        Via Fermi                               &    166 & 52.86 & 51.25\\
+        Via Parri direz. perif.                 &     95 & 30.25 & 43.63 \\
         \rowcolor{TableGray}
-        Via Parri direz. centro                 &    100   &      31.84 & 43.63 \\
-        Viale Famagosta                         &    180   &      57.32 & 43.63 \\
+        Via Parri direz. centro                 &    100 & 31.84 & 43.63 \\
+        Viale Famagosta                         &    180 & 57.32 & 43.63 \\
         \rowcolor{TableGray}
-        Via dei Missaglia direz. centro         &     23   &       7.32 & 51.25 \\
-        Via Ferrari                             &     57   &      18.15 & 51.25 \\
+        Via dei Missaglia direz. centro         &     23 &  7.32 & 27.54 \\
+        Via Ferrari                             &     57 & 18.15 & 44.3 \\
         \rowcolor{TableGray}
-        Viale Monteceneri dir. Serra            &    291   &      92.67 & 51.25 \\
-        Viale Monteceneri dir. Lugano           &    290   &      92.35 & 51.25 \\
+        Viale Monteceneri dir. Serra            &    291 & 92.67 & 44.3 \\
+        Viale Monteceneri dir. Lugano           &    290 & 92.35 & 44.3 \\
         \rowcolor{TableGray}
-        Viale Serra                             &    296   &      94.26 & 51.25 \\
-        Viale Serra                             &    296   &      94.26 & 51.25 \\
+        Viale Serra                             &    296 & 94.26 & 44.3 \\
+        Viale Serra                             &    296 & 94.26 & 44.3 \\
         \rowcolor{TableGray}
-        Viale Palmanova direz. perif.           &    149   &      47.45 & 59.79\\
-        Viale Palmanova direz. centro           &    149   &      47.45 & 59.79\\
+        Viale Palmanova direz. perif.           &    149 & 47.45 & 59.79\\
+        Viale Palmanova direz. centro           &    149 & 47.45 & 59.79\\
         \hline
     \end{tabular}
 \end{center}
-
-    \todo{lelepado: ricontrollare incidenti per zona, mi sembrano sbagliati}
 
 Una volta trovati gli incidenti totali, è possile calcolare gli incidenti sulla base dell'area utilizzata.
 Nel seguente codice, al dataset autovelox sono aggiunte due colonne, una contenente gli incidenti totali, 
@@ -817,10 +815,37 @@ Questa ultima colonna, in particolare, è divisa per 3.14 perchè l'area del cer
 Poichè si sta utilizzando raggio di circa un chilometro, e si vuole ottenere il numero di incidenti per chilometro 
 quadrato, l'area ottentuta è 3.14.
 
-\todo{lelepado: trarre conclusione}
+Per facilitare la lettura della tabella precedente, nella figura \ref{fig:confronto-autovelox} è visibile il 
+confronto tra il numero di incidenti vicino a autovelox, e il numero di incidenti del municipio.
 
-%\clearpage
-\section{Incidenti e Meteo}
+In alcuni casi, il numero di incidenti sembra essere  ridotto dalla presenza dell'autovelox 
+tuttavia, nella maggior parte dei casi, e soprattutto nelle zone di Viale Serra e Viale Monteceneri, 
+il volume di incidenti è particolarmente più alto di quello del municipio.
+
+\'E possibile che, non avendo dati sufficienti a calcolare una tendenza precedente all'installazione 
+dell'autovelox, questa zona sia particolarmente pericolosae non si ha modo di saperlo.
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{../src/municipi_milano/conclusioni_municipio.png}
+    \caption{Incidenti vicino a autovelox rispetto a quelli per zona di Milano}
+    \label{fig:confronto-autovelox}
+\end{figure}
+
+\begin{lstlisting}
+    incremento_percentuale_totale = 0
+    for km, zona in zip(data['Incidenti per chilometro'], data['Incidenti per zona']): 
+        incremento_percentuale = (km - zona) * 100 / zona
+        incremento_percentuale_totale += incremento_percentuale
+
+    print(incremento_percentuale_totale)
+\end{lstlisting}
+
+Con i dati che si hanno a disposizione, è possibile calcolare l'incremento (o decremento), degli 
+incidenti in zone vicine a autovelox.
+A causa delle zone menzionate in precedenza, in vicinanza di autovelox si ha un incremento degli 
+incidenti del $329.6$\%, tuttavia, nel caso in cui si considerino outlier i Viali Serra e Monteceneri, 
+si ha invece un decremento generale del $113.6$\%.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\clearpage
