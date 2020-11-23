@@ -18,83 +18,36 @@ for m in data['MUNICIPIO']:
 
 from shapely import geometry
 
-# for m, poly in zip(data['MUNICIPIO'], data['geometry']):
+for m, poly in zip(data['MUNICIPIO'], data['geometry']):
 
-#     poly = geometry.Polygon(poly)
+    poly = geometry.Polygon(poly)
 
-#     for point in incidenti['geometry']: 
-#         point = geometry.Point(point)
+    for point in incidenti['geometry']: 
+        point = geometry.Point(point)
 
-#         if poly.contains(point): 
-#             df[m] += 1
+        if poly.contains(point): 
+            df[m] += 1
 
-# inc = gp.GeoSeries(df).sort_index()
+inc = gp.GeoSeries(df).sort_index()
 
-# data.index = data['MUNICIPIO']
-# data['Incidenti'] = inc
+data.index = data['MUNICIPIO']
+data['Incidenti'] = inc
 
-# area = pd.Series(data['AREA'], index=data['MUNICIPIO'])
-# area = area / area.sum()
-#incidenti = pd.Series(inc, index=inc.index)
-# print(area)
-# print(incidenti)
-#incidenti_per_zona = (incidenti / area) * 1000000
-#print(incidenti_per_zona)
+area = pd.Series(data['AREA'], index=data['MUNICIPIO'])
+area = area / area.sum()
+incidenti = pd.Series(inc, index=inc.index)
 
-# plt.subplot(1,2,1)
-# plt.bar(inc.index, inc, color='#5894dd', width=0.9)
-# plt.ylabel("Incidenti all'anno per zona")
-# plt.xticks(range(1,10))
+incidenti_per_zona = (incidenti / area) * 1000000
 
-# plt.subplot(1,2,2)
-# plt.bar(incidenti_per_zona.index, incidenti_per_zona, label="incidenti pesati", color='#58d7dd', width=0.9)
-# plt.ylabel("Incidenti al chilometro quadrato per zona di Milano")
-# plt.xticks(range(1,10))
+plt.subplot(1,2,1)
+plt.bar(inc.index, inc, color='#5894dd', width=0.9)
+plt.ylabel("Incidenti all'anno per zona")
+plt.xticks(range(1,10))
 
-# plt.show()
+plt.subplot(1,2,2)
+plt.bar(incidenti_per_zona.index, incidenti_per_zona, label="incidenti pesati", color='#58d7dd', width=0.9)
+plt.ylabel("Incidenti al chilometro quadrato per zona di Milano")
+plt.xticks(range(1,10))
 
-# fig, (ax1, ax2) = plt.subplots(ncols=2, sharex=True, sharey=True)
-# layer_m = data.plot(ax = ax1, column='Incidenti', cmap='OrRd', alpha=0.5, legend=True)
-# cx.add_basemap(ax=layer_m)
-# inc_layer = incidenti.plot(ax=ax2, alpha=0.02)
-# cx.add_basemap(ax=inc_layer)
-# plt.show()
-
-base = 10**6 
-up = 5.699 * base
-down = 5.6976 * base
-left = 1.0255 * base
-right = 1.0265 * base
-
-p1 = geometry.Point(left , up)
-p2 = geometry.Point(right, up)
-p3 = geometry.Point(left , down)
-p4 = geometry.Point(right, down)
-
-loreto = geometry.Polygon([p1, p2, p4, p3])
-
-loreto_incidenti = 0
-for point in incidenti['geometry']: 
-    point = geometry.Point(point)
-
-    if loreto.contains(point): 
-        loreto_incidenti += 1
-
-area_loreto = loreto.area * data['AREA'].iloc[0] / geometry.Polygon(data['geometry'].iloc[0]).area
-
-# print(loreto_incidenti)
-# print(area_loreto)
-
-area_loreto_inc = loreto_incidenti * 1000000 / area_loreto
-
-#print(area_loreto_inc)# = 231.06
-
-
-df = gp.GeoDataFrame(geometry=[loreto]).set_crs(epsg=3857)
-ax = df.plot(color='#f00f00', alpha=0.2)
-inc = incidenti.plot(ax = ax, alpha=0.0)
-cx.add_basemap(ax=inc)
-plt.xlim((1.02 * base, 1.03 * base))
-plt.ylim((5.692 * base, 5.702 * base))
-plt.axis('off')
 plt.show()
+

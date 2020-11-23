@@ -387,22 +387,23 @@ oltre al tipo di ceritificato ottenuto.
 
 \section{Incidenti}
 
-Controllando i dati trovati, in particolare come questi siano distributi, 
-si nota subito dalla mappa \ref{fig:geo-incidenti} che gli incidenti a Milano sono per buona parte uniformemente sparsi in tutta la città, 
-con più alta concentrazione in alcuni punti di interesse, come Piazzale Loreto, Zona Navigli 
+I dati riguardanti incidenti geolocalizzati, sono disponibili in un dataset contenente una 
+lista di punti indicanti latitudine e longitudine dell'incidente. 
+Ciò che delude, è che non è presente nessuna informazione aggiuntiva, se non la posizione 
+dell'incidente.
+
+Controllando i dati trovati, in particolare come questi siano posizionati, 
+si nota dalla mappa destra nella figura \ref{fig:heatmap-municipi} che gli incidenti a Milano 
+sono per buona parte uniformemente distributi per tutta la città, 
+con più alte concentrazioni in alcuni punti di interesse, come Piazzale Loreto, Zona Navigli 
 e Monumentale, e Corso Ventidue Marzo.
 
-\begin{figure}
-    \includegraphics[width=\linewidth]{../src/incidenti/geo_incidenti.png}
-    \caption{Distribuzione di incidenti a Milano}
-    \label{fig:geo-incidenti}
-\end{figure}
-
 Sarebbe interessante sapere se esistono zone con maggiore concentrazione di incidenti rispetto 
-alla media, e sarebbe interessante ottenere un indice numerico della pericolosità di una 
-determinata zona.\\
-Nella figura \ref{fig:heatmap-municipi}, si è divisa la città di Milano in base al comune, ed è 
-chiaramente visibile che il centro ha la maggior parte degli incidenti.
+alla media, e ottenere un indice numerico della pericolosità di una determinata zona.\\
+
+Nella mappa sinistra della figura \ref{fig:heatmap-municipi}, si è divisa la città di Milano 
+in base al municipio, ed è possibile osservare che nel centro si hanno la maggior parte degli 
+incidenti.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/municipi_milano/incidenti_municipio.png}
@@ -410,8 +411,9 @@ chiaramente visibile che il centro ha la maggior parte degli incidenti.
     \label{fig:heatmap-municipi}
 \end{figure}
 
-Tuttavia, non tutte le zone hanno la stessa superficie. Avendo a disposizione l'area delle varie zone, 
+Non tutte le zone hanno la stessa superficie, avendo a disposizione l'area dei vari municipi, 
 è possibile calcolare la media di incidenti al chilometro quadrato per zona.
+I risultati sono riportati nella tabella sottostante.
 
 \begin{lstlisting}    
     inc = gp.GeoSeries(df).sort_index()
@@ -419,7 +421,8 @@ Tuttavia, non tutte le zone hanno la stessa superficie. Avendo a disposizione l'
     area = pd.Series(data['AREA'], index=data['MUNICIPIO'])
     incidenti = pd.Series(inc, index=inc.index)
 
-    incidenti_per_zona = (incidenti / area) * 1000000 # trasformazione in chilometri quadri
+    # trasformazione in chilometri quadri
+    incidenti_per_zona = (incidenti / area) * 1000000 
 \end{lstlisting}
 
 \begin{center}
@@ -453,10 +456,10 @@ Tuttavia, non tutte le zone hanno la stessa superficie. Avendo a disposizione l'
 \end{figure}
 
 Nella figura \ref{fig:incidenti-chilometro} spicca, sia nel grafo di sinistra che in quello di destra, 
-la zona 1, cioè quella del centro, vista la superficie minore rispetto agli altri municipi.
+la zona 1, cioè quella del centro storico, vista la superficie minore rispetto agli altri municipi.
 
-Una volta creata una tendenza della zona, è possibile confrontare i risultati ottenuti con i numeri 
-di incidenti in zone più precise, per esempio attorno a piazzale Loreto.
+Una volta creata la tendenza generale del municipio, è possibile confrontare i risultati 
+ottenuti con il numero di incidenti in zone più ristrette, per esempio attorno a piazzale Loreto.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/municipi_milano/zona_loreto.png}
@@ -478,12 +481,13 @@ di incidenti in zone più precise, per esempio attorno a piazzale Loreto.
     area_loreto_inc = loreto_incidenti * 1000000 / area_loreto
 \end{lstlisting}
 
-Il numero di incidenti che risultano, nell'area considerata in figura \ref{fig:zona-loreto}, 
-sono 231.06, considerando che il massimo ottenuto per zona, il centro storico arriva attorno a 120, 
-è possibile assumere che piazzale loreto sia una zona ad alta incidentalità.
+Il numero di incidenti per chilometro che risultano, nell'area considerata in figura 
+\ref{fig:zona-loreto}, sono 231.06, considerando che il massimo ottenuto per zona, 
+il centro storico, arriva attorno a 120 incidenti per chilometro quadrato, è possibile affermare 
+che piazzale loreto sia una zona ad alta incidentalità.
 
-Andrebbe anche spiegato il fatto che il centro storico sia una delle zone con maggiore incidentalità, 
-non dovrebbe essere abbassata della presenza dell'area C?
+Una domanda che sorge spontanea è il perchè in centro storico risulti tra le aree con maggiore 
+incidentalità, il volume di incidenti non dovrebbe essere abbassato della presenza dell'area C?
 
 \begin{figure}
     \includegraphics[width=0.48\linewidth]{../dataset/area_c/perimetro_area_c.png}
@@ -493,10 +497,12 @@ non dovrebbe essere abbassata della presenza dell'area C?
 \end{figure}
 
 Dopo più attenta osservazione del perimetro dell'area C, visibile in figura \ref{fig:perimetro-area-c}, 
-si nota che la maggior parte degli incidenti avvengono sulla circonvallazione interna, 
-situata fuori dall'area C, che è compresa nell'area 0 di Milano nella mappa \ref{fig:heatmap-municipi}.
+si osserva che la maggior parte degli incidenti avvengono sulla circonvallazione interna, 
+situata fuori dall'area C, che è compresa nell'centro storico di Milano.
 
-Se si prende in considerazione solamente l'area C, il numero di incidenti scende a $46.83$ per chilometro quadrato.
+Prendendo in considerazione solamente l'area C, il numero di incidenti scende a $46.83$ 
+per chilometro quadrato, dunque è possibile concludere che la riduzione del traffico nel 
+centro di Milano ha impatto consistente sull'incidentalità.
 
 \begin{lstlisting}
     area_c = geometry.Polygon(gp.read_file("dataset/area_c/area_c.geojson").to_crs(epsg=3857)['geometry'].iloc[0])
@@ -1788,7 +1794,7 @@ La tendenza del grafo \ref{fig:milano-adriatica} è visibile anche negli anni pr
 \begin{figure}
     \includegraphics[width=0.5\linewidth]{../src/incidenti/incidenti_aci/autostrade/milano_adriatica_2016.png}
     \includegraphics[width=0.5\linewidth]{../src/incidenti/incidenti_aci/autostrade/milano_adriatica_2014.png}
-    \caption{Incidenti in provincia di Milano (A1) e sull'Adriatica}
+    \caption{Incidenti in provincia di Milano (A1) e sull'Adriatica per mese}
     \label{fig:milano-adriatica_tendenza}
 \end{figure}
 
@@ -1800,7 +1806,7 @@ con gli incidenti nell'adriatica alti in Luglio e Agosto.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/autostrade/tangenziali_autostrade.png}
-    \caption{Incidenti nelle principali autostrade di Milano}
+    \caption{Incidenti nelle principali autostrade di Milano per orario}
     \label{fig:tangenziali-autostrade}
 \end{figure}
 
