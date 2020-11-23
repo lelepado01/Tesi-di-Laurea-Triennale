@@ -645,10 +645,10 @@ Tramite la mappa \ref{fig:tram-pave-milano} è possibile confrontarle:
     \label{fig:tram-pave-milano}
 \end{figure}
 
-Si notano alcune somiglianze, come per esempio viale Sabotino e via Alessandro Mazoni, 
-tuttavia la maggior parte delle linee tramviarie segnate passano su asfalto.
+\'E possibile notare alcune somiglianze, come per esempio viale Sabotino e via Alessandro Mazoni, 
+tuttavia la maggior parte delle linee tranviarie segnate passano su asfalto.
 Inoltre, in alcuni viali, come viale Premuda, i tram hanno una carreggiata separata, 
-che probabilmente ha influenza ancora minore.
+che molto probabilmente ha influenza ancora minore sugli incidenti della zona.
 
 Per creare una stima, si sono convertite le vie principali della cartina trovata 
 in geojson, il risultato è visibile nella mappa \ref{fig:mappa-pave}.
@@ -679,13 +679,15 @@ avvengono in queste zone e confrontarlo con il numero di incidenti nelle strade 
 \end{lstlisting}
 
 Il numero di incidenti per chilometro quadrato, nelle strade in pavè è  $229.45$, che è un valore 
-particolarmente alto, anche se viene confrontato con il numero di incidenti nel centro storico, cioè circa 130.
+particolarmente alto, anche se viene confrontato con il numero di incidenti nel centro storico, 
+cioè circa 130.
 Tuttavia, bisogna tenere in considerazione che il dataset che è appena stato creato, contiene solamente 
-strade, senza alcuna zona morta, come edifici, a differenza dell'area utilizzata del centro storico, 
-che contiene tutto il territorio del centro.
+strade, senza alcuna zona morta, come edifici, mentre l'area utilizzata del centro storico, 
+contiene tutto il territorio del centro.
 
 Per ovviare a questo problema, si è creato un campione di strade asfaltate, prese circa 
-nella stessa zona di Milano, queste strade sono raffigurate nella mappa \ref{fig:mappa-asfalto}. 
+nella stessa zona di Milano. 
+Queste strade sono raffigurate nella mappa \ref{fig:mappa-asfalto}. 
 Si è inoltre tentato di tenere i due campioni di strade il più simili possibili, sia per zona, 
 sia per area totale del dataset.
 
@@ -696,10 +698,11 @@ sia per area totale del dataset.
 \end{figure}
 
 Eseguendo lo stesso calcolo realizzato per le strade in pavè, risulta che il numero di incidenti per 
-chilometro quadrato, nel campione creato, è di $220.89$ incidenti.
-Tuttavia, nel campione delle strade asfaltata sono stati presi vari tratti provenienti dalla circonvallazione 
-interna e altre zone trafficate, mentre il campione di strade in pavè contiene, per mancanza di altri dati, 
-molte strade del centro storico inevitabilmente meno trafficate.
+chilometro quadrato, nel campione creato, sia di $220.89$ incidenti.
+Tuttavia, nel campione delle strade asfaltate sono stati presi vari tratti provenienti dalla 
+circonvallazione interna e altre zone molto trafficate, mentre il campione di strade in pavè 
+contiene, per mancanza di altri dati, molte strade del centro storico inevitabilmente 
+meno trafficate.
 
 %\clearpage
 \section{Incidenti e Autovelox}
