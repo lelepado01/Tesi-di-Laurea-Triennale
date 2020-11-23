@@ -25,8 +25,12 @@ for m, poly in zip(data['MUNICIPIO'], data['geometry']):
         if poly.contains(point): 
             df[m] += 1
 
+data.index = data['MUNICIPIO']
+
 inc = gp.GeoSeries(df).sort_index()
 data['Incidenti'] = inc
+
+print(data)
 
 fig, (ax1, ax2) = plt.subplots(ncols=2, sharex=True, sharey=True)
 ax1.axis('off')
