@@ -813,7 +813,7 @@ Questa ultima colonna, in particolare, è divisa per 3.14 perchè l'area del cer
 \end{center}
 
 Poichè si sta utilizzando raggio di circa un chilometro, e si vuole ottenere il numero di incidenti per chilometro 
-quadrato, l'area ottentuta è 3.14.
+quadrato, l'area ottentuta è $3.14$.
 
 Per facilitare la lettura della tabella precedente, nella figura \ref{fig:confronto-autovelox} è visibile il 
 confronto tra il numero di incidenti vicino a autovelox, e il numero di incidenti del municipio.
@@ -851,11 +851,11 @@ si ha invece un decremento generale del $113.6$\%.
 %\clearpage
 \chapter{Dati su Incidenti}
 
-Per quanto riguarda dati generali su incidenti in Italia, sono disponibili due dataset molto ampi, 
-il primo, rilasciato da Istat, contiene dati dal 2010 al 2018 che riguardano campi come data, ora, 
-numero di persone a bordo, tipo di incrocio, tipo di veicolo, ecc..
+Per quanto riguarda dati generali su incidenti in Italia, sono disponibili due dataset molto ampi. 
+Il primo, rilasciato da Istat, contiene campi come data, ora, 
+numero di persone a bordo, tipo di incrocio e tipo di veicolo a partire dal 2010 fino al 2018.
 Il secondo è invece messo a disposizione da Automobile Club D'Italia (ACI) che contiene dati simili, 
-ma in più mette a disposizione il luogo dell'incidente, come autostrada o strada provinciale.
+ma in più contiene informazioni sul luogo dell'incidente, come autostrada o strada provinciale.
 
 %\clearpage
 \section{Dati Istat su veicoli}
@@ -903,7 +903,7 @@ mentre cresce molto il numero di questi nelle strade urbane.
 Il grafo \ref{fig:differenza-uomo-donna} mostra che non c'è molta differenza tra i vari tipi di 
 strada, per quanto riguarda il sesso del coducente.\\
 Il numero di incidenti per genere è tende ad essere 75\% circa uomini e 25\% donne.
-Nelle strade  urbane, la percentuale di incidenti con conducente donna aumenta leggermente nel 2010, 
+Nelle strade  urbane, la percentuale di incidenti con conducente donna aumenta leggermente nel 2018, 
 questo vale per tutti gli anni?
 
 \begin{center}
@@ -925,11 +925,18 @@ questo vale per tutti gli anni?
     \end{tabular}
 \end{center}
 
-In tutti gli anni la percentuale di uomini e donne coinvolti in incidenti è simile, 
+In tutti gli anni la percentuale di uomini e donne coinvolti in incidenti è consistente, 
 questo fenomeno fa sospettare che ci siano più uomini al volante rispetto alle donne.
-\'E possibile ricavare un campione per resolvere la questione. 
-Dopo avere contato i conducenti delle vetture passanti a Somma Lombardo, tra le 15 e le 16 
-di Giovedì, sono stati ottenuti i seguenti risultati:
+Un modo per testare l'ipotesi è quello di ricavare un campione di conducenti, separando tra 
+uomini e donne.
+Va sottolineato che un campione, preso durante la pandemia di Covid-19, in un mese di quarantena 
+non sarà mai uno stimatore estremamente accurato della percentuale di maschi e femmine al volante.
+
+Si sono, comunque, contati i conducenti delle vetture passanti a Somma Lombardo
+\footnote{sul Sempione basso, strada urbana principale, all'altezza chiesa di San Bernardino}, 
+tra le 15 e le 16 di Giovedì 5 Novembre 
+(settimana predente alla seconda chiusura della Lombardia), 
+sono stati ottenuti i seguenti risultati:
 
 \begin{center}
     \def\arraystretch{1.5}% 
@@ -945,14 +952,14 @@ di Giovedì, sono stati ottenuti i seguenti risultati:
 \end{center}
 
 La percentuale di uomini e donne al volante è equivalente a quella degli incidenti.
-Questo fatto rafforza l'idea che non ci siano differenze tra la guida di maschi e femmine.
-
+Questo dato rafforza l'idea che non esistano differenze sostanziali tra la guida di 
+maschi e femmine.
 
 %\clearpage
 \subsection{Il numero di passeggeri influisce sull'incidentalità?}
 
 \begin{figure}
-    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/tipo_veicoli/passeggeri.png}
+    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/tipo_veicoli/passeggeri_bar.png}
     \caption{Numero di passeggeri in incidenti per Milano e Rimini}
     \label{fig:passeggeri-milano-rimini}
 \end{figure}
