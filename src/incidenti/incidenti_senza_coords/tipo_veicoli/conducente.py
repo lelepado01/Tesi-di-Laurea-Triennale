@@ -68,7 +68,8 @@ passenger_count_milano = get_people_in_vehicles(data[data['provincia'] == 15])
 passenger_count_milano = passenger_count_milano[passenger_count_milano < 4]
 passenger_count_milano = passenger_count_milano.value_counts(normalize=True).sort_index()
 
-passenger_count_rimini = get_people_in_vehicles(data[data['provincia'] == 99])
+estate = data[data['trimestre'] == 2]
+passenger_count_rimini = get_people_in_vehicles(estate[estate['provincia'] == 99])
 passenger_count_rimini = passenger_count_rimini[passenger_count_rimini < 4]
 passenger_count_rimini = passenger_count_rimini.value_counts(normalize=True).sort_index()
 
