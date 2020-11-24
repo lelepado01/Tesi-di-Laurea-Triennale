@@ -27,9 +27,7 @@ plt.fill_between(ora_week.index, ora_week, color='#d5ef5f', alpha=0.5)
 plt.fill_between(ora_weekend.index, ora_weekend, color='#7057e0', alpha=0.5)
 plt.show()
 
-print((ora_week[8] / ora_week.mean()) * 100 -100)
-print((ora_weekend[8] / ora_weekend.mean()) * 100 -100)
+print((ora_week[9] / ora_week.mean()) * 100 -100)
+print((ora_weekend[9] / ora_weekend.mean()) * 100 -100)
 
 domenica = data[data['giorno'] == 6]['Ora'].value_counts().sort_index()
-
-print((domenica[8] / domenica.mean()) * 100 -100)

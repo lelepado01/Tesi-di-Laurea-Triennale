@@ -1020,10 +1020,9 @@ non è confermabile, perlomeno con i dati di cui si dispone.
 %\clearpage
 \subsection{Incremento dell'incidentalità in diversi orari}
 
-Per prima cosa, con un semplice conto degli incidenti durante il weekend 
-e confrontandolo con il numero di quelli avvenuti durante la 
-settimana lavorativa, si osserva che nel weekend avvengono più incidenti 
-durante la sera e la notte, mentre durante la settimana in giornata.
+In primo luogo, va sottolineato che il risultato atteso, 
+parlando di incidenti divisi per orario, è quello di osservare due picchi più o meno marcati 
+in corrispondenza delle fasce orarie di entrata e di uscita dal lavoro.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/ore_punta/week_weekend.png}
@@ -1031,16 +1030,22 @@ durante la sera e la notte, mentre durante la settimana in giornata.
     \label{fig:week-weekend}
 \end{figure}
 
-Per quanto riguarda gli orari di punta, sono state prese in considerazione due fasce orarie, la prima, 
-mattutina dalle 7:00 alle 10:00, e la seconda pomeridiana, dalle 17:00 alle 19:00.
-L'incremento durante la fascia oraria pomeridiana è subito osservabile nella figura 
-\ref{fig:week-weekend}; più precisamente si 
-ha un incremento del 95.2\% di incidenti rispetto alla media durante la settimana lavorativa. 
-Durante il weekend invece, si osserva comunque un'incremento, ma solamente del 61.1\%.
+Tramite un semplice conto degli incidenti durante il weekend e, 
+confrontando questo con il numero di quelli avvenuti durante la 
+settimana lavorativa, si osserva che nel weekend avvengono più incidenti 
+durante la sera e la notte, mentre durante la settimana in giornata.
 
-Va sottolineato che i grafi indicano gli incidenti normalizzati per numero di 
-giorni, quindi gli incidenti totali della settimana sono divisi per cinque giorni, 
-mentre quelli del weekend per due.
+Per quanto riguarda, invece, le fasce orarie 'di punta' definite precedentemente, 
+sono state prese in considerazione, per la mattina, gli orari dalle 7:00 alle 10:00, 
+e per il pomeriggio, dalle 17:00 alle 19:00.
+L'incremento durante la fascia oraria pomeridiana è subito osservabile nella figura 
+\ref{fig:week-weekend}, dove si ha un incremento del $95.2$\% di incidenti rispetto 
+alla media durante la settimana lavorativa. 
+D'altra parte, durante il weekend, si osserva comunque un incremento, ma solamente del $61.1$\%.
+
+Per le fasce orarie della mattina, è comunque presente un incremento di incidenti, ma 
+ammonta al $34.6$\% alle 8:00, e al $80.6$\% alle 9:00, mentre nel weekend si ha un 
+decremento di incidenti in entrambi gli orari, rispettivamente del $47.6$\% e $17.9$\%.
 
 \begin{lstlisting}[language=Python]
     ora_weekend = data[data['giorno'] > 5]['Ora'].value_counts().sort_index()
@@ -1050,24 +1055,34 @@ mentre quelli del weekend per due.
     ora_weekend /= 2 * 52
 \end{lstlisting}
 
-Si pu\'o osservare che nella fascia oraria delle 18:00, 
-avvengono molti più sinistri, mentre nella fascia mattutina, 
-il numero non sembra variare molto dalla media di incidenti durante il giorno.
+Va sottolineato che i grafi indicano gli incidenti normalizzati per numero di 
+giorni, quindi gli incidenti totali della settimana sono divisi per cinque giorni, 
+mentre quelli del weekend per due.
 
 %\clearpage
 \subsection{Incremento dell'incidentalità nelle fasce orarie della mattina}
 
-Se si selezionano solo gli incidenti nella provincia di Milano, mostrati nel grafo 
-\ref{fig:week-weekend-milano}, è possibile individuare 
-il secondo picco di incidenti, quello durante le ore di punta mattutine.
-In particolare si ha un incremento del 34.3\% alle 8:00 rispetto alla media, nelle giornate lavorative;
-d'altro canto, durante il weekend, il numero di incidenti cala del 58.5\% rispetto alla media.
+I risultati della sezione precedente sembrano indicare che la maggior parte degli incidenti 
+si verifica attorno alle 9:00 di mattina. Questa tendenza è vera anche nel caso in cui si 
+isoli una città come Milano, dove arrivano molti pendolari dalla regione e che probabilmente sono 
+già in viaggio prima delle 9:00?
+
+Selezionano solo gli incidenti nella provincia di Milano, mostrati nel grafo 
+\ref{fig:week-weekend-milano}, è possibile individuare in modo più preciso
+il primo picco di incidenti, quello durante le ore di punta mattutine.
+In particolare si ha un incremento del $34.3$\% alle 8:00 rispetto alla media, 
+che cresce fino al $118.7$\% delle 9:00, nelle giornate lavorative;
+d'altro canto, durante il weekend, il numero di incidenti cala del $58.5$\% rispetto alla media alle 8:00 
+e del $37$\% alle 9:00.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/ore_punta/week_weekend_milano.png}
     \caption{Incidenti per ora a Milano}
     \label{fig:week-weekend-milano}
 \end{figure}
+
+A Milano, dunque, si ha un incremento percentuale di incidenti alle 9:00 ancora maggiore,
+rispetto al resto di Italia, e il flusso di pendolari, non sembra influenzare il volume di incidenti.
 
 \subsection{Correlazione tra incidenti e traffico}
 
