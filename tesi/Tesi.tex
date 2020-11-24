@@ -1087,12 +1087,15 @@ rispetto al resto di Italia, e il flusso di pendolari, non sembra influenzare il
 
 \subsection{Correlazione tra incidenti e traffico}
 
-Sarebbe interessante calcolare quanto il traffico possa influenzare il numero di incidenti 
-nelle diverse ore della giornata. \\
+Fino a questo momento, si è parlato di incidenti senza alcun tipo di contesto, per quanto riguarda 
+il numero di automobili presenti sulle strade. 
+\'E chiaro che uno dei principali fattori alla causa degli incidenti sia il traffico, e sarebbe 
+interessante riuscire a isolare l'impatto di quest'ultimo, nelle diverse ore della giornata.
+
 Un primo problema da affrontare è quello di individuare informazioni sul traffico. 
 Per quanto un dataset contenente questi dati non sia stato trovato, 
-è possibile realizzare una stima del traffico a Milano, 
-in quanto a partire dal 2011, è disponibile il numero degli accessi all'area C.
+è possibile realizzare una stima di questo carattere a Milano, 
+in quanto a partire dal 2011, utilizzando i dati sul numero degli accessi all'area C.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/area_c/rapporto_incidenti_traffico.png}
@@ -1101,11 +1104,11 @@ in quanto a partire dal 2011, è disponibile il numero degli accessi all'area C.
 \end{figure}
 
 L'immagine \ref{fig:rapporto-incidenti-traffico} contiene, a partire dall'alto, 
-la percentuale traffico in area C a una determinata ora, il numero di incidenti a Milano, 
-e infine il numero di incidenti a Milano, pesati in base al traffico.\\
-Gli ultimi due grafi sono estremamente simili, ciò è dovuto al fatto che il volume di traffico e 
-il volume di incidenti siano fattori altamente correlati, il che comporta che non ci siano molte 
-situazioni in cui il numero di incidenti sia alto in orari con poco traffico.\\
+la percentuale di accessi in area C a una determinata ora, e il numero di incidenti a Milano, 
+pesati in base al questa stima del traffico.\\
+Si osserva molte similitudini tra che la stima realizzata tramite gli ingressi in area C e 
+il grafo \ref{fig:week-weekend-milano}, raffigurante gli incidenti a Milano divisi per orario, 
+in particolare, la correlazione tra traffico in area C a Milano e incidenti per orario è $0.877$
 
 \begin{lstlisting}
     # eseguito con dati del 2016
@@ -1121,7 +1124,13 @@ situazioni in cui il numero di incidenti sia alto in orari con poco traffico.\\
     correlazione = accessi_area_c_per_ora.corr(incidenti_per_ora)
 \end{lstlisting}
 
-Correlazione tra traffico in area C a Milano e incidenti per orario è $0.877$
+Per quanto riguarda invece, il grafo nella metà bassa della figura \ref{fig:rapporto-incidenti-traffico}, 
+sono presenti tre picchi di con orari particolarmente pericolosi, uno alle 3:00 di mattina, uno alle 
+8:00 e l'ultimo alle 18:00. 
+Di questi, il primo è possibile che sia dovuto allo scarso volume di accessi all'area C in questo orario, 
+visto che alle 3:00 di notte si ha il minimo volume di traffico della giornata, 
+mentre gli altri due sono certamente dovuti all'alto numero di incidenti, in quanto il traffico in questi 
+orari è pienamente nella media.
 
 %\clearpage
 \subsection{Incidentalità in orari notturni}
