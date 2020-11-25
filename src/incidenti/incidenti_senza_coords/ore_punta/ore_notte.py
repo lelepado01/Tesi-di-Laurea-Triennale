@@ -20,9 +20,13 @@ ora_notte_weekend = ora_notte_weekend.reindex([23,24,1,2,3,4,5,6])
 
 ora_notte_week /= 5 * 52 
 ora_notte_weekend /= 2 * 52
+print(ora_notte_week.mean())
+print(ora_notte_weekend.mean())
 
 ora_notte_week = ora_notte_week.rename(index={24:0})
 ora_notte_weekend = ora_notte_weekend.rename(index={24:0})
+
+
 
 pd.DataFrame(
     [ora_notte_week, ora_notte_weekend], 
