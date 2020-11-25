@@ -95,14 +95,13 @@
 %\section{Scopo del lavoro}
 \todo{lelepado: tengo la section con scopo del lavoro? O lascio introduzione e basta?}
 
-Lo scopo di questo lavoro, è mostrare che tipo di analisi è possibile realizzare, 
-avendo a disposizione 
-una buona quantità di dati liberi, e come queste analisi possono influenzare le decisioni delle 
-persone, come per esempio la scelta di una nuova casa, mettendo in luce aspetti non ancora 
-tenuti in considerazione, o che semplicemente non sono disponibili da fonti 
-come quotidiani o siti internet.
+Lo scopo di questo lavoro, è mostrare che tipo di analisi è possibile realizzare 
+avendo a disposizione una buona quantità di dati liberi, e come queste analisi possano 
+influenzare le decisioni delle persone, come per esempio la scelta di una nuova casa, 
+mettendo in luce aspetti non ancora tenuti in considerazione, o che semplicemente 
+non sono disponibili da fonti come quotidiani o siti internet.
 
-Proseguendo l'esempio fatto in precedenza, ci si potrebbe domandare quali sono le zone di Milano 
+Esplorando l'esempio fatto in precedenza, ci si potrebbe domandare quali sono le zone di Milano 
 più soggette a incidenti, o con maggiore coinvolgimento di pedoni, o ancora se la tipologia di strada 
 influenza il numero di incidenti.
 
@@ -853,19 +852,19 @@ si ha invece un decremento generale del $113.6$\%.
 
 Per quanto riguarda dati generali su incidenti in Italia, sono disponibili due dataset molto ampi. 
 Il primo, rilasciato da Istat, contiene campi come data, ora, 
-numero di persone a bordo, tipo di incrocio e tipo di veicolo a partire dal 2010 fino al 2018.
+numero di persone a bordo, tipo di incrocio e tipo di veicolo.
+Queste informazioni sono presenti a partire dal 2010 fino al 2018.
 Il secondo è invece messo a disposizione da Automobile Club D'Italia (ACI) che contiene dati simili, 
 ma in più contiene informazioni sul luogo dell'incidente, come autostrada o strada provinciale.
 
 %\clearpage
 \section{Dati Istat su veicoli}
 
-Il dataset Istat contiene molte informazioni riguardanti i conducenti dei veicoli coinvolti 
-nell'incidente, oltre al tipo di veicoli.
-
 %\clearpage
 \subsection{Il tipo di veicolo dipende dalla strada?}
 
+Sarebbe interessante sapere quanto la composizione del traffico, per quanto riguarda i veicoli, 
+cambia al cambiare del tipo di strada.
 
 \begin{lstlisting}[language=Python]
     strade_urbane = data[(data['localizzazione_incidente'] == 1) | (data['localizzazione_incidente'] == 2) | (data['localizzazione_incidente'] == 3)]['tipo_veicolo_a']
@@ -875,9 +874,11 @@ nell'incidente, oltre al tipo di veicoli.
     # mentre 4,5,6 gli ID delle strade extraurbane
 \end{lstlisting}
 
-Il grafo \ref{fig:differenza-strade} rappresenta quali sono i veicoli coinvolti con più frequenza 
-in sinistri, per tre tipi di strade diverse. Le percentuali sono calcolate per gruppo, quindi sommando 
-tutte le righe di, per esempio Autostrade, si ottiene $1$.\\
+Il grafo \ref{fig:differenza-strade} rappresenta quali sono le categorie di veicoli coinvolte 
+con più frequenza in sinistri, per tre tipi di strade diverse. 
+Le percentuali sono calcolate per gruppo, quindi sommando 
+tutte le righe di, per esempio Autostrade, si ottiene $1.0$.
+
 Nonostante le auto private siano di gran lunga il tipo di veicolo 
 più coinvolto in incidenti, nelle autostrade non sono presenti molti incidenti con motocicli, 
 mentre cresce molto il numero di questi nelle strade urbane.
@@ -887,6 +888,8 @@ mentre cresce molto il numero di questi nelle strade urbane.
     \caption{Incidenti per tipo di veicolo nel 2018}
     \label{fig:differenza-strade}
 \end{figure}
+
+\todo{togliere le auto private}
 
 %\clearpage
 \section{Dati Istat su conducente}
