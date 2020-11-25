@@ -30,7 +30,7 @@ data.index = data['MUNICIPIO']
 inc = gp.GeoSeries(df).sort_index()
 data['Incidenti'] = inc
 
-print(data)
+# print(data)
 
 fig, (ax1, ax2) = plt.subplots(ncols=2, sharex=True, sharey=True)
 ax1.axis('off')
@@ -39,4 +39,5 @@ cx.add_basemap(ax=layer_m)
 inc_layer = incidenti.plot(ax=ax2, alpha=0.02)
 cx.add_basemap(ax=inc_layer)
 plt.axis('off')
+# plt.savefig("incidenti_municipio")
 plt.show()
