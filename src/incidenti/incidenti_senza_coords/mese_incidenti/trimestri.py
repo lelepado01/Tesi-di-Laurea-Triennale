@@ -41,6 +41,7 @@ def get_provincia(prov : int) -> pd.DataFrame:
         ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018']
         ).transpose()
 
+
 provs = get_provincia(15)
 
 index = 0
@@ -48,32 +49,58 @@ for giorni in giorni_al_trimestre:
     provs.iloc[index] /= giorni
     index += 1
 
-# from scipy.interpolate import spline
+plt.subplot(1,3,1)
+plt.plot(provs.index, provs, markevery=0.1, linewidth=1.5)
+plt.xticks([1,2,3,4])
+plt.xlabel("Trimestre")
+plt.ylabel("Incidenti al trimestre a Milano")
+plt.tight_layout()
 
-# ysmoothed = gaussian_filter1d(provs, sigma=2)
+provs = get_provincia(99)
 
-# plt.plot(provs.index, provs, markevery=0.1, linewidth=1)
-# plt.xticks([1,2,3,4])
-# plt.legend(bbox_to_anchor=(1,1), loc="upper left")
-# plt.xlabel("Trimestre")
-# plt.ylabel("Incidenti al trimestre a Milano")
-# plt.tight_layout()
-# plt.show()
+index = 0
+for giorni in giorni_al_trimestre: 
+    provs.iloc[index] /= giorni
+    index += 1
+
+plt.subplot(1,3,2)
+plt.plot(provs.index, provs, markevery=0.1, linewidth=1.5)
+plt.xticks([1,2,3,4])
+plt.xlabel("Trimestre")
+plt.ylabel("Incidenti al trimestre a Rimini")
+plt.tight_layout()
+
+provs = get_provincia(7)
+
+index = 0
+for giorni in giorni_al_trimestre: 
+    provs.iloc[index] /= giorni
+    index += 1
+
+plt.subplot(1,3,3)
+plt.plot(provs.index, provs, markevery=0.1, linewidth=1.5)
+plt.legend(provs.columns, bbox_to_anchor=(1,1), loc="upper left")
+plt.xticks([1,2,3,4])
+plt.xlabel("Trimestre")
+plt.ylabel("Incidenti al trimestre a Aosta")
+plt.tight_layout()
+plt.show()
+
 
 
 ############################
 # Codice per Heatmap
 # 
-import sys
-sys.path.append('src')
-import heatmap as H
+# import sys
+# sys.path.append('src')
+# import heatmap as H
 
-fig, ax = plt.subplots()
+# fig, ax = plt.subplots()
 
-im, cbar = H.heatmap(provs, provs.index, range(2010, 2019), ax=ax, cmap="YlGn", cbarlabel="")
+# im, cbar = H.heatmap(provs, provs.index, range(2010, 2019), ax=ax, cmap="YlGn", cbarlabel="")
 
-fig.tight_layout()
-plt.ylabel("Trimestre", fontdict={'fontsize': 10})
-plt.show()
+# fig.tight_layout()
+# plt.ylabel("Trimestre", fontdict={'fontsize': 10})
+# plt.show()
 # 
 ############################
