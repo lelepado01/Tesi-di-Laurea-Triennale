@@ -13,7 +13,7 @@ aut = data_autostrade['NOME STRADA'].value_counts().sort_values(ascending=False)
 import geopandas as gp
 import contextily as cx
 
-autostrade = gp.read_file("dataset/autostrade/autostrade.geojson").to_crs(epsg=3857)
+autostrade = gp.read_file("dataset/autostrade/autostrade_milano_linee.geojson").to_crs(epsg=3857)
 #print(aut)
 
 df = pd.merge(autostrade, aut, left_on='name', right_on=aut.index)
