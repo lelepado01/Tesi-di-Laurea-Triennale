@@ -35,8 +35,8 @@ mesi_incidenti = incidenti['mese'].value_counts().sort_index()
 df.index = range(1,13)
 perc_traffico = df / df.sum()
 
-print(mesi_incidenti)
-print(df)
+# print(mesi_incidenti)
+# print(df)
 
 rapp = mesi_incidenti / df
 
@@ -52,6 +52,6 @@ plt.subplot(2,1,2)
 plt.fill_between(rapp.index, rapp, color='#c6935f')
 plt.xticks(range(1, 13))
 plt.ylabel("Rapporto tra incidenti e traffico")
-plt.title("Pericolosità dell'orario")
+plt.title("Pericolosità del mese")
 plt.tight_layout()
 plt.show()
