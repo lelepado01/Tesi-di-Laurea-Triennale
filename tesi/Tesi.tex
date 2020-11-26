@@ -135,15 +135,14 @@ avvenuto il sinistro, come rettilineo, rotonda o semaforo.
 
 Per quanto riguarda i dati geolocalizzati, 
 la fonte è invece il sito web TheSubmarine \cite{SUBMARINE:1}
-\todo{atrent: modifico questo, gli altri falli allo stesso modo},
 che in un articolo riguardante l'incidentalità a Milano, 
 ha ottenuto dall'ente Istat la pubblicazione di una parte degli 
 incidenti avvenuti nella città nel 2016, con la relativa posizione.
 Il dataset in questione è abbastanza povero, e contiene solamente l'incidente con la 
 propria posizione, indicata tramite coordinate geografiche.
 
-L'ultimo dataset, trovato dopo veloce consultazione con un dipendente Istat, è stato il dataset ACI
-\cite{ACI:1}
+L'ultimo dataset, trovato dopo veloce consultazione con un dipendente Istat, 
+è stato il dataset ACI \cite{ACI:1}
 \'E stato consigliato in quanto, questi dati, specifici a autostrade e strade statali, 
 indicano anche il nome della rispettiva via.
 
@@ -1296,10 +1295,14 @@ decisamente più incidenti.
 %\clearpage
 \subsection{In località di mare gli incidenti aumentano in estate?}
 
-Dalla figura \ref{fig:mesi-estivi} si nota che le province con maggiore incidentalità 
-cambiano in Agosto rispetto a tutto l'anno. In particolare, ad aumentare in volume sono le 
-province di Brescia e Palermo.
+La domanda che sorge spontanea, una volta visto il grafo in figura \ref{fig:milano-mese}, è se 
+il numero basso di incidenti in Agosto corrisponda con un numero alto di sinostri in altre località 
+di vacanza. 
 
+Nalla figura \ref{fig:mesi-estivi} sono elencate le province con maggiore incidentalità 
+in Agosto rispetto a tutto l'anno. In particolare, ad aumentare in volume sono le 
+province di Brescia e Palermo.
+\todo{rifare grafo e calcolo}
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/mesi_estivi.png}
     \caption{Prime 10 province per incidenti in Agosto rispetto a tutto l'anno}
@@ -1310,8 +1313,15 @@ Tuttavia questo comportamento è unico dell'anno 2011, in quanto, per gli altri 
 si dispone dei dati sui mesi, 2012 e 2013, Milano e Roma hanno il primato di 
 incidenti sia per l'anno che per il mese di Agosto individuale.
 
-\todo{lelepado: metto i grafi degli altri due anni?}
+\todo{mettere tabella degli altri due anni}
 
+Ipotizzando invece, di comparare più nel dettaglio alcune province, meta di vacanze estive, 
+con Milano, ciò che ci si aspetta da queste ultime è di avere un incremento di incidenti nei mesi 
+di Luglio e Agosto.
+
+Per eseguire questo confronto sono state prese in considerazione le località di Rimine e Palermo, 
+per mostrare che alcune province, come la prima, confermano l'ipotesi, mentre altre, come la seconda, 
+sembrano andare contro.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/milano_rimini.png}
