@@ -1158,9 +1158,9 @@ orari è pienamente nella media.
 %\clearpage
 \subsection{Incidentalità in orari notturni}
 
-Come individuato nel grafo \ref{fig:week-weekend}, durante le 
-ore notturne si ha il comportamento di incidenti tra settimana lavorativa e weekend opposta.
-Nella figura \ref{fig:ore-notte}, sono raffigurate le principali ore della notte, divise tra 
+Nel grafo \ref{fig:week-weekend}, si è potuto osservare come, durante le 
+ore notturne, si abbia il comportamento degli incidenti tra settimana lavorativa e weekend opposta.
+Nella figura \ref{fig:ore-notte} sono raffigurate le principali ore della notte, divise tra 
 settimana lavorativa e weekend.
 Chiaramente, durante il weekend si hanno un maggior numero di incidenti negli orari serali e 
 notturni, in particolare si hanno in media $5$ incidenti per serata in settimana, mentre il numero 
@@ -1212,54 +1212,44 @@ meno persone sono sveglie nelle ore notturne.
 %\clearpage
 \subsection{Quanto influiscono le vacanze estive sull'incidentalità?}
 
+Sarebbe interessante individuare eventuali cali o incrementi di incidenti, per quanto riguarda gli 
+incidenti su intervallo mensile.
+Il dataset sugli accessi all'area C è presente, nel caso della divisione per mese, fino all'anno 2018, 
+tuttavia i dati istat su incidenti contengono il campo \textit{mese} solo fino all'anno 2013,
+dunque i grafi sull'argomento prenderanno in considerazione quest'annata più recente.
+
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/milano_mese.png}
     \caption{Incidenti per mese in Milano}
     \label{fig:milano-mese}
 \end{figure}
 
-Nel grafo \ref{fig:milano-mese} si nota un chiaro calo di incidenti 
-nel mese di Agosto in provincia di Milano.
-\'E possibile controllare il decremento del numero di incidenti, anche per gli altri anni, 
-in cui sono disponibili dati.
+Nel grafo \ref{fig:milano-mese} si nota un chiaro calo di incidenti nel mese di 
+Agosto in provincia di Milano, la percentuale di decremento è riportata nella tabella sottostante, 
+anche per gli altri anni per cui sono disponibili i dati.
+
 
 \begin{center}
     \def\arraystretch{1.5}%  
     \begin{tabular}{ |c|c| } 
-    \hline
-    Anno & Decremento in Agosto \\ 
-    \hline
-    2010 & 47.4\%  \\ 
-    \rowcolor{TableGray}
-    2011 & 35.14\% \\
-    2012 & 45.46\% \\
-    \rowcolor{TableGray}
-    2013 & 41.37 \% \\
-    \hline
+        \hline
+        Anno & Decremento in Agosto \\ 
+        \hline
+        2010 & 47.4\%  \\ 
+        \rowcolor{TableGray}
+        2011 & 35.14\% \\
+        2012 & 45.46\% \\
+        \rowcolor{TableGray}
+        2013 & 41.37 \% \\
+        \hline
     \end{tabular}
 \end{center}
-
-Per quanto riguarda gli anni successivi, il dataset non dispone più di un campo che indichi il mese 
-dell'incidente, ma è disponibile soltanto il trimestre.
-La figura \ref{fig:milano-trimestri} mostra la quantità di incidenti per trimestre per ogni 
-anno a partire dal 2010 fino al 2018.
-
-\begin{figure}
-    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/trimestri.png}
-    \caption{Incidenti a Milano per trimestre}
-    \label{fig:milano-trimestri}
-\end{figure}
-
-Anche nel caso dei trimestri, quello estivo ha decisamente un numero minore di incidenti, 
-nonostante il numero sia probabilmente alzato per la presenza di Giugno e Luglio.
 
 Per quanto possano esserci molti fattori che contribuiscono a questa tendenza di decremento di sinistri, 
 quello che influisce di più devono essere le partenze per le vacanze estive.
 
-Un modo per testare questa teoria è controllare se il traffico durante il mese di Agosto cala a Milano, 
-tuttavia, non è stato trovato alcun dataset riguardante il volume di automobili nelle strade della città.
-La soluzione adottata, è quella di stimare il traffico sulla base degli accessi in area C, i cui dati 
-sono disponibili a partire dal 2011.
+Un modo per testare questa teoria è controllare se il traffico durante il mese di Agosto cala a 
+Milano, stimato tramite i dati sugli accessi in area C. 
 A supporto dell'ipotesi iniziale, nella figura \ref{fig:stima-traffico-mensile}, 
 è visibile un calo di accessi all'area C durante il mese di Agosto.
 
@@ -1268,6 +1258,8 @@ A supporto dell'ipotesi iniziale, nella figura \ref{fig:stima-traffico-mensile},
     \caption{Stima del traffico a Milano per mese, tramite accessi all'area C}
     \label{fig:stima-traffico-mensile}
 \end{figure}
+
+\todo{controlla grafi del capitolo}
 
 Una volta ottenuta una stima del traffico per mese, è possibile applicare questa misurazione 
 al numero di incidenti mensili.
@@ -1280,15 +1272,28 @@ al numero di incidenti mensili.
 
 L'immagine \ref{fig:incidenti-traffico-mese} contiene due grafi, 
 il primo riguardante la frazione di traffico annuale che interessa ogni mese; 
-mentre il secondo raffigura il numero di incidenti mensili, rispetto al numero di incidenti pesati 
-tramite la percentuale di traffico mensile
+mentre il secondo raffigura il rapporto tra il numero di incidenti mensili, e il traffico 
+stimato mensile
 \footnote{Si è utilizzato l'anno 2012 perchè è il primo anno contenente tutti i dati completi, 
 tutti gli altri anni hanno mesi o campi mancanti}.
-Dunque, più la curva verde si avvicina alla linea degli incidenti, più il mese ha avuto sinstri 
-non direttamente dovuti al traffico.
-In particolare si nota che, in Agosto, nonostante un ampia discesa degli accessi all'area C, 
-il numero di incidenti siano rimasti alti, e le due linee sono vicine.
-D'altra parte, per Maggio e Giugno, le linee si separano per il concetto inverso.
+Nel secondo grafo della figura \ref{fig:incidenti-traffico-mese}, si osserva come, per quanto agosto 
+abbia il minor numero di incidenti mensili, una volta tenuto conto della minore quantità di traffico, 
+risulta essere il mese più pericoloso.
+
+A partire dal 2014, il campo \textit{mese} è stato convertito nella colonna \textit{trimestre}.
+La figura \ref{fig:milano-trimestri} mostra la quantità di incidenti per trimestre per ogni 
+anno a partire dal 2010 fino al 2018.
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/trimestri.png}
+    \caption{Incidenti a Milano per trimestre}
+    \label{fig:milano-trimestri}
+\end{figure}
+
+Anche nel caso dei trimestri, quello estivo ha un numero minore di incidenti, ma il volume è 
+comparabile con quello del primo trimestre, mentre durante il secondo e il quarto avvengono 
+decisamente più incidenti.
+
 
 %\clearpage
 \subsection{In località di mare gli incidenti aumentano in estate?}
@@ -1970,7 +1975,7 @@ avvenuti per mese, la temperatura media per mese, e infine l'umidità media.
 Sono riportati i due anni con, rispettivamente la maggiore e la minore correlazione tra 
 incidenti e fattori atmosferici.
 Non è stato possibile eseguire la stessa operazione con dati più recenti, per mancanza del 
-campo 'mese', convertito in trimestre a partire dal 2014.
+campo \textit{mese}, convertito in trimestre a partire dal 2014.
 Allo stesso modo non è stato possibile eseguire un'analisi più precisa, per mancanza di dati 
 riguardanti il giorno del mese, e disponibili solo per il giorno della settimana.
 
