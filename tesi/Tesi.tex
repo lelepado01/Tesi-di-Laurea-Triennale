@@ -11,6 +11,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english,italian]{babel}
 \usepackage[hyphens]{url}
+\usepackage[style=numeric]{biblatex}
 
 \usepackage{todonotes}
 
@@ -45,6 +46,8 @@
 }
 
 \definecolor{TableGray}{gray}{0.9}
+
+\bibliography{Biblio}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
@@ -131,7 +134,7 @@ Particolarmente interessanti sono anche i campi riguardanti il tipo di incrocio 
 avvenuto il sinistro, come rettilineo, rotonda o semaforo.
 
 Per quanto riguarda i dati geolocalizzati, 
-la fonte è invece il sito web TheSubmarine \cite{ARTICLE:1}
+la fonte è invece il sito web TheSubmarine \cite{SUBMARINE:1}
 \footnote{\url{https://thesubmarine.it/2018/06/20/mappa-incidenti-stradali-milano/}},
 che in un articolo riguardante l'incidentalità a Milano, 
 ha ottenuto dall'ente Istat la pubblicazione di una parte degli 
@@ -160,7 +163,7 @@ specifiche per OpenStreetMaps, eseguendo la seguente query:
 
 Il dataset ricavato, purtroppo, non permette di capire quando gli autovelox siano stati 
 installati, fattore importante per capirne l'effetto sul traffico e sugli incidenti.
-Tuttavia il sito web ztlmilano \cite{ARTICLE:2}
+Tuttavia il sito web ztlmilano \cite{ZTLMILANO:1}
 \footnote{\url{https://www.ztlmilano.it/Autovelox-Milano}} 
 contiene un articolo nel quale specifica una lista di 
 autovelox installati nel 2014, considerando che il dataset di OpenStreetMaps sia aggiornato 
@@ -216,6 +219,7 @@ regionale, proviene dal sito del Ministero delle Infrastrutture e Trasporti
 Tuttavia, questo dataset è diviso in vari file seconda della regione e, vista la quantità 
 non necessaria di informazioni, si è preferito usare dati provienienti da un'infografica che 
 sintetizza il dataset in questione
+\cite{INFOGRAFICA_MIT:1}
 \footnote{\url{https://www.mit.gov.it/sites/default/files/media/notizia/2017-07/INFOGRAFICA\%20Dati\%20sintesi\%20patenti\%20Italia.pdf}}.
 In particolare, da questo pdf si è mantenuto solamente il numero di patenti per regione.
 
@@ -1259,8 +1263,6 @@ A supporto dell'ipotesi iniziale, nella figura \ref{fig:stima-traffico-mensile},
     \label{fig:stima-traffico-mensile}
 \end{figure}
 
-\todo{controlla grafi del capitolo}
-
 Una volta ottenuta una stima del traffico per mese, è possibile applicare questa misurazione 
 al numero di incidenti mensili.
 
@@ -2012,9 +2014,8 @@ influenza sia proprio il mese, e non la temperatura o l'umidità.
 In altre parole, la correlazione tra due fenomeni non ne implica la causa.
 
 
-\bibliographystyle{plain}
-\bibliography{Biblio}
-
 %\addcontentsline{toc}{chapter}{Bibliografia}
+\printbibliography
+
 
 \end{document}

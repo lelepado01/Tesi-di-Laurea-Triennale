@@ -37,8 +37,8 @@ perc_traffico = df / df.sum()
 
 # print(mesi_incidenti)
 # print(df)
-
 rapp = mesi_incidenti / df
+
 
 plt.subplot(2,1,1)
 plt.fill_between(perc_traffico.index, perc_traffico, color='#93c65f')
