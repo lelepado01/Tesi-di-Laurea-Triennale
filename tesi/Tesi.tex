@@ -268,17 +268,24 @@ Dallo stesso sito proviene anche il dataset riguardante gli autobus turistici, c
 contiene in particolare le aree di sosta di questi ultimi
 \footnote{\url{https://dati.comune.milano.it/dataset/ds740_sosta_bus_gt_turistici}}.
 
+La principale funzione di questi dataset è l'ottenere i percorsi delle linee di trasporto pubblico, 
+per confrontare il numero di incidenti, tuttavia si è anche fatto uso di un dataset contenente 
+solamente le linee tranviarie, trovato sul geoportale del comune di Milano
+\footnote{\url{https://geoportale.comune.milano.it/ATOM/SIT/DBT2012/DBT2012_STRATO_01_Dataset_1.xml}}.
+
+Questo dataset è molto ampio e contiene altri livelli di informazioni, tra cui per esempio, 
+le strade o le ferrovie passanti per Milano. 
+
 \section{Dati riguardanti autostrade e manto stradale}
 
 Il primo dataset individuato, riguardante il manto  stradale, è stato quello di ANAS
 \footnote{\url{http://dati.mit.gov.it/catalog/dataset/grafo-stradale-anas}}, 
-tuttavia questo consisteva in un file molto grande.
+tuttavia questo consisteva in un file molto grande, e dalla precisione superflua per 
+la mappa che si sta tentando di ottenere.
 
 Si è dunque tentato di utilizzare la mappa presente sul geoportale del comune di Milano
 \footnote{\url{https://geoportale.comune.milano.it/}}, 
 contenente anch'esso troppe strade in quanto traccia l'intero manto stradale del comune.
-
-Entrambi questi dataset non risolvevano il problema del dataset mancante sul pavè.
 
 Come ultima risorsa, si è deciso di tracciare alcune mappe in geojson utilizzando Geojson.io
 \footnote{\url{https://geojson.io/}}, in particolare nella zona di Milano, per le principali 
