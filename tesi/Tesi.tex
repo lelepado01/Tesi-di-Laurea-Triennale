@@ -1313,8 +1313,6 @@ Tuttavia questo comportamento è unico dell'anno 2011, in quanto, per gli altri 
 si dispone dei dati sui mesi, 2012 e 2013, Milano e Roma hanno il primato di 
 incidenti sia per l'anno che per il mese di Agosto individuale.
 
-\todo{mettere tabella degli altri due anni}
-
 Ipotizzando invece, di comparare più nel dettaglio alcune province, meta di vacanze estive, 
 con Milano, ciò che ci si aspetta da queste ultime è di avere un incremento di incidenti nei mesi 
 di Luglio e Agosto
@@ -1363,8 +1361,7 @@ L'incremento constante per ogni anno, conferma che questo fenomeno è un trend a
     \end{tabular}
 \end{center}
 
-Osservando il grafo raffigurante gli incidenti per mese della Valle d'Aosta, 
-in figura \ref{fig:aosta}, 
+Osservando il grafo raffigurante gli incidenti per mese della Valle d'Aosta, in figura \ref{fig:aosta}, 
 è possibile notare un notevole incremento di incidenti sia in Gennaio che in Agosto, possibili 
 conseguenze, rispettivamente, dell'inizio della stagione sciistica ed estiva.
 
@@ -1380,26 +1377,34 @@ Questa tendenza avviene ogni anno?
     \def\arraystretch{1.5}%  
     \begin{tabular}{ |c|c|c| } 
     \hline
-    Anno & Agosto & Gennaio \\ 
+    Anno & Gennaio & Agosto \\ 
     \hline
     \rowcolor{TableGray}
-    2010 & -2.93 \% & 78.48\%  \\ 
-    2011 & 124.0 \% & -32.12\% \\
+    2010 & 78.48\%  & -2.93 \%\\ 
+    2011 & -32.12\% & 124.0 \%\\
     \rowcolor{TableGray}
-    2012 & 52.25 \% & -41.44\% \\
-    2013 & -15.21\% & -24.63\% \\
+    2012 & -41.44\% & 52.25 \% \\
+    2013 & -24.63\% & -15.21\% \\
     \hline
     \end{tabular}
 \end{center}
 
 Il comportamento degli incidenti in Valle d'Aosta, mostrato in figura 
-\ref{fig:aosta-rimini-milano-trimestre} 
-è molto inconsistente, soprattutto in Agosto.
+\ref{fig:aosta-rimini-milano-trimestre} è molto inconsistente, soprattutto in Agosto.
 Va specificato che la taglia del campione con cui si sta lavorando, per questa provincia, 
 è molto piccolo, e sicuramente influisce sulle percentuali di incremento e decremento 
 degli incidenti.\\
 Nonostane ciò, se si assume che Gennaio 2010 sia un outlier, il numero di incidenti in 
 questo mese è sempre in decremento, in modo molto consistente, rispetto alla media.
+
+Per avere una visione di insieme delle tendenze annuali, è possibile tracciare un grafo contenente 
+gli incidenti divisi per trimestre dove, per esempio, per primo trimestre si intende: 
+
+\begin{lstlisting}
+    Gennaio
+    Febbraio
+    Marzo
+\end{lstlisting}
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/trimestri_aosta_milano_rimini.png}
@@ -1407,15 +1412,18 @@ questo mese è sempre in decremento, in modo molto consistente, rispetto alla me
     \label{fig:aosta-rimini-milano-trimestre}
 \end{figure}
 
-La prima cosa che è possibile notare nel grafo, è che il picco di Gennaio del 2010 è 
-in linea con la tendenza del trimestre invernale. 
-Tuttavia, si osserva anche che dall'anno 2015 c'è un ampio gap nel numero di incidenti. 
-\'E un cambio di metro di misurazione? 
+In tutti i grafi nella figura \ref{fig:aosta-rimini-milano-trimestre}, si osserva di nuovo 
+dall'anno 2015, l'ampio gap nel numero di incidenti, probabilmente dovuto a un cambio di 
+misurazione degli incidenti, di cui si è parlato in un precedente capitolo. 
 
-I grafi equivalenti di Milano e Rimini, nelle mappe in figura \ref{fig:aosta-rimini-milano-trimestre}, 
-mostrano la stessa tendenza di incremento del numero 
-di incidenti, che è possibile vedere nella figura \ref{fig:incremento-incidenti}, 
-di cui si è parlato in un precedente capitolo.
+Per quanto riguarda Rimini e Aosta, si osservano varie similitudini, con quasi tutte le annate, 
+in particolare si osserva un basso numero di incidenti durante il primo trimestre, e un incremento di 
+sinistri durante il terzo trimestre.
+
+D'altra parte, a Milano, si ha la tendenza opposta, con maggior numero di incidenti nel secondo trimestre, 
+e un abbassamento durante il primo e terzo trimestre.
+
+\todo{conclusione}
 
 %\clearpage
 \section{Dati Istat su tipi di incidenti e incroci}

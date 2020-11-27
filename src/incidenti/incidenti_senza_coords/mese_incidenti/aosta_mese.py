@@ -2,57 +2,60 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-path = "dataset/incidenti/incidenti_2013.txt"
-data = pd.read_csv(path, sep="\t", encoding='latin1')
+# path = "dataset/incidenti/incidenti_2013.txt"
+# data = pd.read_csv(path, sep="\t", encoding='latin1')
 
-aosta_mese = data[data['provincia'] == 7]['mese'].value_counts().sort_index()
+# aosta_mese = data[data['provincia'] == 7]['mese'].value_counts().sort_index()
 
-index = 0
-for giorni_in_mese in [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]:
-    aosta_mese.iloc[index] /= giorni_in_mese
-    index += 1
+# index = 0
+# for giorni_in_mese in [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]:
+#     aosta_mese.iloc[index] /= giorni_in_mese
+#     index += 1
 
-print(aosta_mese)
+# # print(aosta_mese)
 
-media = aosta_mese.mean()
+# media = aosta_mese.mean()
 
-color_ls = ['#5747d1']*12
-# color_ls[0] = '#5747d1'7670a9
-# print(color_ls)
+# color_ls = ['#5747d1']*12
+# # color_ls[0] = '#5747d1'7670a9
+# # print(color_ls)
 
-plt.xlabel("Mese")
-plt.ylabel("Incidenti al giorno (2013)")
-plt.plot([-1, 12], [media, media], color='#c0d147', label='Media')
-plt.text(11.7,media-0.01,'Media')
-aosta_mese.plot.bar(width=0.8, color=color_ls)
-plt.show()
+# plt.xlabel("Mese")
+# plt.ylabel("Incidenti al giorno (2013)")
+# plt.plot([-1, 12], [media, media], color='#c0d147', label='Media')
+# plt.text(11.7,media-0.01,'Media')
+# aosta_mese.plot.bar(width=0.8, color=color_ls)
+# plt.show()
 
 
 # Calcolo perc di incremento
 
-# def variazione_perc(x : float, y : float) -> float: 
-#     return (y / x) * 100 -100
+def variazione_perc(x : float, y : float) -> float: 
+    return (y / x) * 100 -100
 
-# path = "dataset/incidenti/incidenti_"
-# for year in range(2010, 2014):
-#     dati = pd.read_csv(path + str(year) + ".txt", sep='\t')
-#     aosta_mese = dati[dati['provincia'] == 7]['mese'].value_counts().sort_index()
+path = "dataset/incidenti/incidenti_"
+years = []
+for year in range(2010, 2014):
+    dati = pd.read_csv(path + str(year) + ".txt", sep='\t')
+    aosta_mese = dati[dati['provincia'] == 7]['mese'].value_counts().sort_index()
 
-#     ls = []
-#     if year == 2010: 
-#         ls = [31, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-#     else: 
-#         ls = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    ls = []
+    if year == 2010: 
+        ls = [31, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    else: 
+        ls = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     
-#     index = 0
-#     for giorni_in_mese in ls:
-#         aosta_mese.iloc[index] /= giorni_in_mese
-#         index += 1
+    index = 0
+    for giorni_in_mese in ls:
+        aosta_mese.iloc[index] /= giorni_in_mese
+        index += 1
 
-#     media = aosta_mese.mean()
-#     agosto = aosta_mese.iloc[0]
+    media = aosta_mese.mean()
+    agosto = aosta_mese.iloc[7]
 
-#     print(str(year) + ": " + str(variazione_perc(media, agosto)))
+    years.append(str(year) + ": " + str(variazione_perc(media, agosto)))
+
+print(years)
 
 # Per aosta sembra che il campione di incidenti non sia abbastanza grande 
 # (Agosto)
