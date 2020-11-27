@@ -45,13 +45,40 @@ traffico_week = pd.DataFrame(traffico, index=['Traffico in settimana']).transpos
 traffico_weekend /= 2 * 52
 traffico_week /= 5 * 52
 
-
 traffico_weekend = traffico_weekend.reindex([23,0,1,2,3,4,5,6])
 traffico_week = traffico_week.reindex([23,0,1,2,3,4,5,6])
 
-traffico_weekend['Traffico in settimana'] = traffico_week['Traffico in settimana']
-traffico_weekend.plot.bar(width=0.9, color=['#d1d162', '#6262d1'])
-plt.ylabel("Accessi in area C per giorno")
+
+data = pd.read_csv("dataset/incidenti/incidenti_2016.txt", sep="\t", encoding='latin1')
+data = data[data['Ora'] != 25]
+
+notte = data[(data['Ora'] < 7) | (data['Ora'] > 22)]
+ora_notte_week = notte[notte['giorno'] < 6]['Ora'].value_counts().sort_index()
+ora_notte_weekend = notte[notte['giorno'] > 5]['Ora'].value_counts().sort_index()
+
+ora_notte_week = ora_notte_week.reindex([23,24,1,2,3,4,5,6])
+ora_notte_weekend = ora_notte_weekend.reindex([23,24,1,2,3,4,5,6])
+
+ora_notte_week /= 5 * 52 
+ora_notte_weekend /= 2 * 52
+
+ora_notte_week = ora_notte_week.rename(index={24:0})
+ora_notte_weekend = ora_notte_weekend.rename(index={24:0})
+
+traffico_week = pd.Series(traffico_week['Traffico in settimana'], index=traffico_week.index)
+traffico_weekend = pd.Series(traffico_weekend['Traffico in weekend'], index=traffico_weekend.index)
+
+ora_notte_week /= traffico_week
+ora_notte_weekend /= traffico_weekend
+
+pd.DataFrame(
+    [ora_notte_week, ora_notte_weekend], 
+    ['Week', 'Weekend']
+).transpose().plot.bar(color=['#d1d162', '#6262d1'], width=0.9)
+
+plt.xlabel("Principali ore della notte")
+plt.ylabel("Rapporto tra incidenti e traffico")
+plt.legend(['week', 'weekend'])
 plt.xticks(rotation=0)
-plt.tight_layout()
+
 plt.show()

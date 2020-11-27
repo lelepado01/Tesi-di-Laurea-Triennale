@@ -766,6 +766,7 @@ tutti gli autovelox, e confrontarli con le vie della tabella.
     \caption{Autovelox enumerati per facilitarne l'identificazione nel dataset}
     \label{fig:autovelox-indici}
 \end{figure}
+\todo{rifare questi grafi, magari uno solo con indici numerati?}
 
 Una volta identificate le linee riguardanti gli autovelox interessati, è possibile separarli 
 dal datset completo.
@@ -781,6 +782,7 @@ effetto sugli incidenti, visto che i dati sui sinistri sono successivi all'insta
     \caption{Autovelox e Incidenti a Milano}
     \label{fig:autovelox-incidenti}
 \end{figure}
+\todo{rifare questo grafo, non mi piacciono i valori di fianco alle bolle, magari espandi con esponenziale e metti legenda}
 
 La mappa \ref{fig:autovelox-incidenti} è stata realizzata contando gli incidenti avvenuti 
 nel raggio di un chilometro a ogni autovelox.
@@ -791,7 +793,7 @@ il numero dei sinistri trovati.
     \def\arraystretch{1.5}% 
     \begin{tabular}{ |c|c|c|c| }
         \hline
-        Autovelox & Incidenti totali & Incidenti per $Km^2$ & Incidenti zona \\ 
+        Autovelox & Incidenti totali & Incidenti $Km^2$ & Incidenti zona \\ 
         \hline
         \rowcolor{TableGray}
         Viale Fulvio Testi direz. perif.        &    194 & 61.78 & 69.52 \\
@@ -1221,7 +1223,7 @@ eseguendo il rapporto tra incidenti e traffico per orario.
 Il risultato del calcolo è rafficurato nel grafo \ref{fig:rapp-inc-traff}.
 
 \begin{figure}
-    \includegraphics[width=\linewidth]{../src/area_c/rapporto_inc_traff.png}
+    \includegraphics[width=\linewidth]{../src/area_c/rapporto_inc_notte.png}
     \caption{Rapporto tra incidenti e traffico durante ore serali o notturne}
     \label{fig:rapp-inc-traff}
 \end{figure}
