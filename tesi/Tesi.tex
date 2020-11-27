@@ -295,6 +295,13 @@ gli incidenti su pavè agli incidenti su asfalto.
 
 \section{Dati riguardanti l'area C}
 
+Il dataset riguardante gli accessi all'area C è stato trovato sul sito di open data del 
+comune di Milano
+\footnote{\url{https://dati.comune.milano.it/organization/comunedimilano?q=area+c&sort=score+desc%2C+metadata_modified+desc}}, 
+dove sono disponibili varie tipologie di file, 
+distinti per orario, mese, località ecc. 
+Tra questi si è utilizzata la tipologia contenente orari e data dell'accesso.
+
 Oltre a utilizzare i dati riguardo agli accessi all'area C, si è fatto uso anche di una mappa 
 raffigurante i varchi di entrata e i limiti del centro storico, 
 proveniente dal sito del comune di Milano
@@ -374,10 +381,6 @@ Dunque si è deciso di utilizzare i dati riguardanti gli ingressi in area C a Mi
 trovati sul sito del comune di Milano
 \footnote{\url{https://dati.comune.milano.it/dataset}}, 
 nonostante non permetta una stima perfetta.
-
-Sul sito del comune di Milano sono disponibili varie tipologie di file, 
-ceh suddividono i dati in base a, per esempio, orario, mese, località. 
-Tra questi si è utilizzata la tipologia contenente orari e data dell'accesso.
 
 Un'altro dataset utilizzato per stimare il numero di automobili, è quello contenente il numero di 
 patentati per regione, trovato nel sito del Ministero dei Trasporti
@@ -1873,7 +1876,7 @@ Il numero di persone in vacanza nelle località del centro e sud italia cambiano
 a seconda dell'anno, il numero di incidenti rispecchia questo cambiamento?
 
 \begin{figure}
-    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/agosto/autostrade.png}
+    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/agosto/vacanze_autostrade.png}
     \caption{Incidenti in Strade per anno}
     \label{fig:autostrade-anno}
 \end{figure}
@@ -1990,8 +1993,8 @@ per non parlare del fatto che entrambe le strade passano attraverso un alto nume
 \subsection{Correlazione tra fattori atmosferici e incidentalità}
 
 \begin{figure}
-    \includegraphics[width=0.5\linewidth]{../src/meteo/milano/temp_incidenti_2011.png}
-    \includegraphics[width=0.5\linewidth]{../src/meteo/milano/temp_incidenti_2013.png}
+    \includegraphics[width=0.5\linewidth]{../src/meteo/temp_incidenti_2011.png}
+    \includegraphics[width=0.5\linewidth]{../src/meteo/temp_incidenti_2013.png}
     \caption{Incidenti, temperature e umidità medi per mese nel 2011 e nel 2013}
     \label{fig:incidenti-temp}
 \end{figure}
