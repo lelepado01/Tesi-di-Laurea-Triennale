@@ -1,6 +1,7 @@
 
 import geopandas as gp
 import matplotlib.pyplot as plt
+from matplotlib.pyplot import text
 from shapely import geometry
 import contextily as cx
 
@@ -31,15 +32,52 @@ for i, point in zip(autovelox_2014.index, autovelox_2014['geometry']):
 autovelox_2014['incidenti_vicini'] = gp.GeoSeries(df)
 autovelox_2014['incidenti_pesati'] = autovelox_2014['incidenti_vicini'] / 3.14
 
-print(autovelox_2014)
-# print(df)
+# print(autovelox_2014)
 
-x = incidenti.plot(alpha=0.01)
-ax = autovelox_2014.plot(ax = x, markersize=autovelox_2014['incidenti_vicini'], alpha=0.4, color='orange', legend=True)
+import matplotlib.patches as mpatches
 
-for v, p in zip(autovelox_2014['incidenti_vicini'], autovelox_2014['geometry']): 
-    p = geometry.Point(p)
-    plt.text(p.x, p.y, v)
+texts = [
+    str(autovelox_2014['incidenti_pesati'].max()), 
+    str(autovelox_2014['incidenti_pesati'].mean()), 
+    str(autovelox_2014['incidenti_pesati'].min()), 
+    ]
+vals = [
+    (autovelox_2014['incidenti_pesati'].max()/4) ** 2,  
+    (autovelox_2014['incidenti_pesati'].mean()/4) ** 2, 
+    (autovelox_2014['incidenti_pesati'].min()/4) ** 2, 
+]
+
+from matplotlib.legend_handler import HandlerPatch
+
+class HandlerEllipse(HandlerPatch):
+    def create_artists(self, legend, orig_handle,
+                       xdescent, ydescent, width, height, fontsize, trans):
+        center = 0.5 * width - 0.5 * xdescent, 0.5 * height - 0.5 * ydescent
+        p = mpatches.Ellipse(xy=center, width=height + xdescent,
+                             height=height + ydescent)
+        self.update_prop(p, orig_handle, legend)
+        p.set_transform(trans)
+        return [p]
+
+# c = [ mpatches.Circle((0.5, 0.5), radius = 0.25, facecolor='orange') for v in vals]
+c = [
+    autovelox_2014[autovelox_2014['incidenti_pesati'] == autovelox_2014['incidenti_pesati'].max()], 
+    autovelox_2014[autovelox_2014['incidenti_pesati'] == autovelox_2014['incidenti_pesati'].mean()], 
+    autovelox_2014[autovelox_2014['incidenti_pesati'] == autovelox_2014['incidenti_pesati'].min()], 
+]
+
+x = incidenti.plot(alpha=0.0, figsize=(11,9))
+ax = autovelox_2014.plot(
+    ax = x, 
+    alpha=0.5, 
+    markersize=(autovelox_2014['incidenti_vicini']/4) ** 2, 
+    color='orange'
+    )
+
+plt.legend([ax],texts, bbox_to_anchor=(1,1), loc="upper left")#, handler_map={mpatches.Circle: HandlerEllipse()})
+# for v, p in zip(autovelox_2014['incidenti_vicini'], autovelox_2014['geometry']): 
+#     p = geometry.Point(p)
+#     plt.text(p.x, p.y, v)
 
 cx.add_basemap(ax = ax)
 plt.show()

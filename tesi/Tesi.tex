@@ -754,8 +754,9 @@ tutti gli autovelox, e confrontarli con le vie della tabella.
     
     index = 0
     for lat, lon in geo_utils.parse_geojson_point_list(autovelox['geometry'].astype(str)):
-    layer_autovelox.text(lat, lon, s=index)
-    index += 1
+        layer_autovelox.text(lat, lon, s=index)
+        # si aggiunge un label per ogni punto
+        index += 1
     
     cx.add_basemap(ax=layer_autovelox)
     plt.show()
@@ -781,7 +782,6 @@ effetto sugli incidenti, visto che i dati sui sinistri sono successivi all'insta
     \caption{Autovelox e Incidenti a Milano}
     \label{fig:autovelox-incidenti}
 \end{figure}
-\todo{rifare questo grafo, non mi piacciono i valori di fianco alle bolle, magari espandi con esponenziale e metti legenda}
 
 La mappa \ref{fig:autovelox-incidenti} è stata realizzata contando gli incidenti avvenuti 
 nel raggio di un chilometro a ogni autovelox.
