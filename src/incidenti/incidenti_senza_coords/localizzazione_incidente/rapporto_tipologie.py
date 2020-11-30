@@ -1,13 +1,16 @@
 
+from matplotlib.pyplot import colorbar
 import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
 import sys
 sys.path.append("src")
 import label_utils
 
 path = "dataset/incidenti/incidenti_"
 
-for year in range(2010, 2019): 
+inc_per_anno = pd.DataFrame()
+for year in range(2010, 2014): 
     if year == 2017: 
         data = pd.read_csv(path + str(year) + ".txt", sep="\t",  error_bad_lines=False, engine='python')
     else: 
@@ -20,7 +23,12 @@ for year in range(2010, 2019):
         "dataset/incidenti/Classificazioni/natura_incidente.csv"
     ).value_counts(normalize=True).sort_values().tail(3)
 
-    print(str(year) + "------------------------")
-    print(natura_incidente_labels)
+    # print(str(year) + "------------------------")
+    inc_per_anno[str(year)] = np.flip(pd.Series.round(pd.Series(natura_incidente_labels), decimals=3).values)
 
+inc_per_anno.index = range(1,4)
 
+plt.imshow(inc_per_anno)
+
+plt.tight_layout()
+plt.show()
