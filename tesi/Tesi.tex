@@ -11,6 +11,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english,italian]{babel}
 \usepackage[hyphens]{url}
+
 \usepackage[style=numeric]{biblatex}
 
 \usepackage{todonotes}
@@ -48,7 +49,7 @@
 \definecolor{TableGray}{gray}{0.9}
 
 \bibliography{Biblio}
-\addbibresource{Biblio}
+\addbibresource{Biblio.bib}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
@@ -1430,13 +1431,8 @@ Nonostane ciò, se si assume che Gennaio 2010 sia un outlier, il numero di incid
 questo mese è sempre in decremento, in modo molto consistente, rispetto alla media.
 
 Per avere una visione di insieme delle tendenze annuali, è possibile tracciare un grafo contenente 
-gli incidenti divisi per trimestre dove, per esempio, per primo trimestre si intende: 
-
-\begin{lstlisting}
-    Gennaio
-    Febbraio
-    Marzo
-\end{lstlisting}
+gli incidenti divisi per trimestre dove, per esempio, per primo trimestre si intende Gennaio, 
+Febbraio e Marzo.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/trimestri_aosta_milano_rimini.png}
