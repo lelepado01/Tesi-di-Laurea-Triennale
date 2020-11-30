@@ -366,8 +366,7 @@ I dati in questione sono stati cercati sui principali siti di opendata
 tramite parole chiave come \textit{strada}, \textit{manto stradale}, \textit{pave}, 
 \textit{composizione strada}.
 
-Una possibile risorsa trovata è una mappa utilizzata in un articolo del blog urbanfile 
-\cite{URBANFILE:1}.
+Una possibile risorsa trovata è una mappa utilizzata in un articolo del blog urbanfile \cite{URBANFILE:1}
 Dopo una rapida consultazione tuttavia, non risulta esserci alcun dataset contenente informazioni 
 riguardanti il pavè a Milano, infatti la cartina è stata realizzata tramite conoscenza personale dell'autore dell'articolo.
 
@@ -1526,18 +1525,30 @@ La terza categoria invece, è dove si inizano ad osservare delle differenze, poi
 si alternano \textit{investimento di pedoni} e \textit{scontro laterale}, con percentuali simili, 
 attorno al $12\%$.
 
-\todo{conclusione}
+Ciò che è possibile ricavare dalla tabella, è che non sembrano esistere particolari fattori che 
+influenzano quali tipi di incidenti vengono commessi maggiormente in un anno. 
+
+Se si avessero a disposizione dati riguardanti, per esempio il numero e il tipo 
+di incroci in una località, come per esempio in provincia di Milano, sarebbe stato possibile 
+giustificare il maggior numero di incidenti frontali-laterali rispetto, per esempio, agli sbandamenti.
 
 %\clearpage
 \subsection{Gli incroci più pericolosi}
 
-Dal grafo \ref{fig:tipo-intersezioni}, 
-si nota che la maggior parte degli incidenti avviene nei rettilinei e negli incroci.\\
-Per rendere questa affermazione più attendibile, 
-bisognerebbe conoscere il numero totale di rettilinei, e di incroci di ogni altro tipo, in 
-modo da mettere in relazione i dati assoluti del grafo. 
-D'altro canto i risultati trovati sono plausibili, in quanto spesso le automobili raggiungono 
-velocità più alta nei rettilinei rispetto a qualsiasi altro tipo di incrocio.
+Il dataset istat contiene anche informazioni sul tipo di incrocio nel quale è avvenuto il 
+sinistro.
+Sarebbe, anche in questo caso, molto utile avere il numero di incroci per tipo presenti in una certa 
+località, per controllare se alcuni incroci siano più pericolosi di altri.
+
+Non avendo accesso a questo tipo di informazioni, si è utilizzato l'indice di mortalità per tipologia 
+di sinistro.
+
+Dal grafo sul lato sinistro della figura \ref{fig:tipo-intersezioni}, 
+si nota che la maggior parte degli incidenti avviene nei rettilinei e negli incroci.
+I risultati trovati sono plausibili, in quanto spesso le automobili raggiungono 
+velocità più alta nei rettilinei rispetto a qualsiasi altro tipo di incrocio, tuttavia è probabile 
+che il numero alto di incidenti in questa categoria sia dovuto all'alto numero di tratti di strada 
+dritti.
 
 \begin{figure}
     \includegraphics[width=0.5\linewidth]{../src/incidenti/incidenti_senza_coords/localizzazione_incidente/intersezioni.png}
@@ -1546,26 +1557,22 @@ velocità più alta nei rettilinei rispetto a qualsiasi altro tipo di incrocio.
     \label{fig:tipo-intersezioni}
 \end{figure}
 
+L'indice di mortalità per tipologia di incrocio, raffigurato nel grafo destro 
+dell'immagine \ref{fig:tipo-intersezioni}, mostra che, per quanto i rettilinei siano le zone 
+in cui avvengono sinistri più frequentemente, non sono le zone con incidenti più pericolosi. 
 
-\begin{lstlisting}
-    incroci = 'intersezione_o_non_interse3'
-    
-    df = {}
-    for inc in data[incroci].unique(): 
-        df[inc] = 0
+Nella tabella sottostante sono riportati i valori, sia dell'indice di mortalità, sia dell'indice di 
+feriti per tipologia di strada in cui è avvenuto l'incidente.
 
-    for inc, morti in zip(data[incroci], data['morti']): 
-        df[inc] += morti
+\begin{center}
+    $Indice\_Mortalita\_Strada\_X = \frac{Numero\_Morti\_Strada\_X * 100}{Numero\_Incidenti\_Strada\_X}$ 
+\end{center}
 
-    indice_mortalita = pd.Series(df.values(),index =  df.keys()).sort_index()
+\begin{center}
+    $Indice\_Feriti\_Strada\_X = \frac{Numero\_Feriti\_Strada\_X * 100}{Numero\_Incidenti\_Strada\_X}$ 
+\end{center}
 
-    num_incroci = data[incroci].value_counts().sort_index()
-
-    mortalita = pd.DataFrame([indice_mortalita * 100 / num_incroci], 
-        index=['indice']
-    ).transpose()
-\end{lstlisting}
-
+\todo{mettere a posto frazione}
 
 \begin{center}
     \def\arraystretch{1.5}%  
@@ -1594,6 +1601,27 @@ velocità più alta nei rettilinei rispetto a qualsiasi altro tipo di incrocio.
     \hline
     \end{tabular}
 \end{center}
+
+Per controllare la validità degli indici calcolati, si è ricavata la correlazione tra indice di 
+mortalità, feriti e tra questi ultimi e il numero di incidenti per luogo.
+Ne risulta che tutti gli insiemi sono strettamente correlati tra loro. I valori sono riportati nella 
+tabella sottostante: 
+
+\begin{center}
+    \def\arraystretch{1.5}%  
+    \begin{tabular}{ |c|c| }
+        \hline
+        \rowcolor{TableGray}
+        Tra morti e feriti     & 0.96 \\ 
+        Tra incidenti e feriti  & 0.99 \\
+        \rowcolor{TableGray}
+        Tra incidenti e morti   & 0.96 \\
+        \hline
+    \end{tabular}
+\end{center}
+
+
+\todo{conclusione}
 
 
 %\clearpage
