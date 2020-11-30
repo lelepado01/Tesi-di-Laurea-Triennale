@@ -1621,16 +1621,27 @@ I valori sono riportati nella tabella sottostante:
 %\clearpage
 \subsection{Le tipologie di incidenti che provocano più feriti}
 
+Il dataset Istat contiene informazioni riguardanti il numero di persone coinvolte in incidenti.
+Sarebbe interessante controllare se esistono tipologie di incidenti che provocano 
+un maggior numero di feriti.
+
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/natura_incidente/natura_incidente.png}
     \caption{Numero di feriti in base alla natura dell'incidente}
     \label{fig:numero-feriti}
 \end{figure}
 
-Nella figura \ref{fig:numero-feriti} si nota che esistono tipologie di sinistri che 
-favoriscono la presenza di un solo ferito, come gli incidenti con pedone. 
-Al contrario, incidenti come il tamponamento e frontale, 
-hanno una più alta percentuale di situazioni con due o più feriti.
+Nella figura \ref{fig:numero-feriti} si deduce che esistono tipologie di sinistri che 
+favoriscono la presenza di un solo ferito, come gli sbandamenti. 
+\'E possibile arrivare a questa conclusione perchè il numero di incidenti con un solo ferito, 
+nella colonna \textit{sbandamento} è tra i più alti, mentre la stessa categoria con due persone 
+ferite ha volume molto più basso.
+Al contrario, in incidenti come il tamponamento, sono molto frequenti per ogni 
+numero di feriti, il che fa pensare che semplicemente avvenga un alto numero di 
+questo tipo di sinistro.
+
+\todo{mettere in relazione con il numero totale di incidenti di quel tipo, per non essere 
+influenzati da tipo di incidente}
 
 %\clearpage
 \subsection{Incroci che favoriscono incidenti con pedoni}
