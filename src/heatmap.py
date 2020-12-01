@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 def heatmap(data, row_labels, col_labels, ax=None, xticks_rotated = False,
-            cbar_kw={}, cbarlabel="", **kwargs):
+            cbar_kw={}, cbarlabel="", cbar_visible=True, **kwargs):
     """
     Create a heatmap from a numpy array and two lists of labels.
 
@@ -35,8 +35,9 @@ def heatmap(data, row_labels, col_labels, ax=None, xticks_rotated = False,
     im = ax.imshow(data, **kwargs)
 
     # Create colorbar
-    cbar = ax.figure.colorbar(im, ax=ax, **cbar_kw)
-    cbar.ax.set_ylabel(cbarlabel, rotation=-90, va="bottom")
+    if cbar_visible: 
+        cbar = ax.figure.colorbar(im, ax=ax, **cbar_kw)
+        cbar.ax.set_ylabel(cbarlabel, rotation=-90, va="bottom")
 
     # We want to show all ticks...
     ax.set_xticks(np.arange(data.shape[1]))
@@ -62,7 +63,10 @@ def heatmap(data, row_labels, col_labels, ax=None, xticks_rotated = False,
     ax.grid(which="minor", color="w", linestyle='-', linewidth=3)
     ax.tick_params(which="minor", bottom=False, left=False)
 
-    return im, cbar
+    if cbar_visible: 
+        return im, cbar
+    else: 
+        return im
 
 
 def annotate_heatmap(im, data=None, valfmt="{x:.2f}",

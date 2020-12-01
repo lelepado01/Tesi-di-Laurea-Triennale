@@ -32,13 +32,13 @@ for year in range(2010, 2019):
 
 fig, ax = plt.subplots()
 
-im, cbar = H.heatmap(
+im = H.heatmap(
     inc_per_anno, 
     inc_per_anno.index, 
     inc_per_anno.columns, 
-    ax=ax, cmap="OrRd", cbarlabel="Categorie di incidenti più frequenti per anno")
+    ax=ax, cmap="OrRd", 
+    cbar_visible=False)
 texts = H.annotate_heatmap(im)
 
 fig.tight_layout()
-
 plt.show()
