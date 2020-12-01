@@ -225,6 +225,8 @@ La lista di Ztlmilano contiene i seguenti autovelox:
     \label{ztl-milano}
 \end{center}
 
+\todo{lelepado: solo io vedo la linea sulla sinistra della tabella che scompare se il colore è grigio?}
+
 Il campi della tabella ripetuti sono dovuti al fatto che alcuni autovelox sono stati installati in entrambe le direzioni.
 
 \section{Dati riguardanti patentati}
@@ -796,37 +798,35 @@ dei cerchi.
     \def\arraystretch{1.5}% 
     \begin{tabular}{ |c|c|c|c| }
         \hline
-        Autovelox & Incidenti totali & Incidenti $Km^2$ & Incidenti zona \\ 
+        Autovelox & Inc. Totali & Inc. per $Km^2$ & Inc. per zona \\ 
         \hline
         \rowcolor{TableGray}
-        Viale Fulvio Testi direz. perif.        &    194 & 61.78 & 69.52 \\
-        Viale Fulvio Testi direz. centro        &    202 & 64.33 & 69.52 \\
+        V. F. Testi direz. perif.\footnote{Viale Fulvio Testi}      &   194 &   61.78   &   69.52    \\
+        V. F. Testi direz. centro                                   &   202 &   64.33   &   69.52 \\
         \rowcolor{TableGray}
-        Cavalcavia del Ghisallo direz. centro   &    208 & 66.24 & 44.3 \\
-        Cavalcavia del Ghisallo direz. perif.   &    212 & 67.51 & 44.3 \\
+        C. Ghisallo direz. centro\footnote{Cavalcavia del Ghisallo} &   208 &   66.24   &   44.3 \\
+        C. Ghisallo direz. perif.                                   &   212 &   67.51   &   44.3 \\
         \rowcolor{TableGray}
-        Via Fermi                               &    166 & 52.86 & 51.25\\
-        Via Parri direz. perif.                 &     95 & 30.25 & 43.63 \\
+        V. Fermi                                                    &   166 &   52.86   &   51.25\\
+        V. Parri direz. perif.                                      &    95 &   30.25   &   43.63 \\
         \rowcolor{TableGray}
-        Via Parri direz. centro                 &    100 & 31.84 & 43.63 \\
-        Viale Famagosta                         &    180 & 57.32 & 43.63 \\
+        V. Parri direz. centro                                      &   100 &   31.84   &   43.63 \\
+        V. Famagosta                                                &   180 &   57.32   &   43.63 \\
         \rowcolor{TableGray}
-        Via dei Missaglia direz. centro         &     23 &  7.32 & 27.54 \\
-        Via Ferrari                             &     57 & 18.15 & 44.3 \\
+        V. Missaglia direz. centro                                  &   23  &    7.32   &   27.54 \\
+        V. Ferrari                                                  &   57  &   18.15   &   44.3 \\
         \rowcolor{TableGray}
-        Viale Monteceneri dir. Serra            &    291 & 92.67 & 44.3 \\
-        Viale Monteceneri dir. Lugano           &    290 & 92.35 & 44.3 \\
+        V. Monteceneri dir. Serra                                   &   291 &   92.67   &   44.3 \\
+        V. Monteceneri dir. Lugano                                  &   290 &   92.35   &   44.3 \\
         \rowcolor{TableGray}
-        Viale Serra                             &    296 & 94.26 & 44.3 \\
-        Viale Serra                             &    296 & 94.26 & 44.3 \\
+        Viale Serra                                                 &   296 &   94.26   &   44.3 \\
+        Viale Serra                                                 &   296 &   94.26   &   44.3 \\
         \rowcolor{TableGray}
-        Viale Palmanova direz. perif.           &    149 & 47.45 & 59.79\\
-        Viale Palmanova direz. centro           &    149 & 47.45 & 59.79\\
+        V. Palmanova direz. perif.                                  &   149 &   47.45   &   59.79\\
+        V. Palmanova direz. centro                                  &   149 &   47.45   &   59.79\\
         \hline
     \end{tabular}
 \end{center}
-
-\todo{lelepado: tabella troppo grande?}
 
 Una volta trovati gli incidenti totali, è possile calcolare gli incidenti sulla base dell'area utilizzata.
 Nel seguente codice, al dataset autovelox sono aggiunte due colonne, una contenente gli incidenti totali, 
