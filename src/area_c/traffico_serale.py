@@ -33,7 +33,7 @@ traffico = {}
 for f in weekend_days['hour'].unique():
     traffico[f] = weekend_days[weekend_days['hour'] == f]['totale'].sum()
 
-traffico_weekend = pd.DataFrame(traffico, index=['Traffico in weekend']).transpose()
+traffico_weekend = pd.DataFrame(traffico, index=['Traffico nel weekend']).transpose()
 
 traffico = {}
 for f in weekend_days['hour'].unique():
@@ -50,7 +50,7 @@ traffico_weekend = traffico_weekend.reindex([23,0,1,2,3,4,5,6])
 traffico_week = traffico_week.reindex([23,0,1,2,3,4,5,6])
 
 traffico_weekend['Traffico in settimana'] = traffico_week['Traffico in settimana']
-traffico_weekend.plot.bar(width=0.9, color=['#d1d162', '#6262d1'])
+traffico_weekend.plot.bar(width=0.9, color=['#6262d1', '#d1d162'])
 plt.ylabel("Accessi in area C per giorno")
 plt.xticks(rotation=0)
 plt.tight_layout()
