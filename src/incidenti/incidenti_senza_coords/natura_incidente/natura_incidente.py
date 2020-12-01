@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import sys
 sys.path.append('src')
-import aci_utils
+import label_utils
 
 data = pd.read_csv("dataset/incidenti/incidenti_2010.txt", sep='\t')
 
@@ -23,13 +23,26 @@ df = pd.DataFrame(
     [tamponamento, frontale, ostacolo, sbandamento], 
     ['tamponamento', 'frontale', 'ostacolo', 'sbandamento']
 )#.transpose()
+
+#Prendo solo le prime 4 colonne
 df = df[[1,2,3,4]].transpose()
 
-color_ls = ['#60c1c1', '#6060c1', '#c16060', '#c1c160']
+# color_ls = ['#60c1c1', '#6060c1', '#c16060', '#c1c160']
+# df.plot.bar(width=0.9, color=color_ls)
+# plt.xticks(rotation=0)
+# plt.xlabel("Numero di feriti")
+# plt.ylabel("Incidenti con specifico numero di feriti")
+# plt.show()
 
-df.plot.bar(width=0.9, color=color_ls)
-plt.xticks(rotation=0)
-plt.xlabel("Numero di feriti")
-plt.ylabel("Incidenti con specifico numero di feriti")
-plt.show()
+perc = tipo_incidenti['natura_incidente']
+perc = label_utils.join_labels(perc, "dataset/incidenti/Classificazioni/natura_incidente.csv")
+perc = perc.value_counts()
+print(perc)
 
+df['tamponamento'] = df['tamponamento'] 
+
+# print(perc)
+# Sbandamento                0.097109
+# Tamponamento               0.143532
+# Scontro frontale           0.061271
+# Urto con ostacolo          0.038681
