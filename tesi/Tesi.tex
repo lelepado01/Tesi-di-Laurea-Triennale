@@ -1666,7 +1666,11 @@ incidenti con più di un ferito.
 %\clearpage
 \subsection{Incroci che favoriscono incidenti con pedoni}
 
-La figura \ref{fig:pedoni-intersezioni} mostra il numero di incidenti con pedoni coinvolti, 
+Il dataset Istat fornisce informazioni riguardanti i pedoni coinvolti in un incidente, 
+si potrebbe controllare se esistono tipologie di incrocio che coinvolgono un alto numero di 
+persone a piedi.
+
+La figura \ref{fig:pedoni-intersezioni} mostra il numero di incidenti, 
 ordinati in base alla tipologia di intersezioni e al numero di persone coinvolte.
 
 \begin{figure}
@@ -1675,10 +1679,15 @@ ordinati in base alla tipologia di intersezioni e al numero di persone coinvolte
     \label{fig:pedoni-intersezioni}
 \end{figure}
 
-Come nel grafo \ref{fig:tipo-intersezioni} spicca che 
-tra i tipi di strada che favoriscono incidenti con pedoni spiccano i rettilinei, 
-probabilmente in parte per l'alta velocità dei veicoli, ma anche per l'alto volume di
-tratti di strada di questo tipo.
+Similmente a come si era visto nel grafo\ref{fig:tipo-intersezioni}, nella nuova figura spicca 
+un alto numero di rettilinei.
+\'E possibile che per la maggior parte, questo outlier sia dovuto all'alto numero di tratti 
+di strada dritti, tuttavia, se si confrontano le due immagini, il numero di incidenti su 
+rettilineo con pedoni coinvolti è quasi cinque volte il valore della seconda posizione.
+
+Questo alto numero di incidenti fa pensare che esista un qualche fattore che comporta 
+maggiore coinvolgimento di pedoni lungo i rettilinei, come per esempio, l'alta velocità 
+dei veicoli.
 
 %\clearpage
 \subsection{Età dei pedoni coinvolti in incidenti}
