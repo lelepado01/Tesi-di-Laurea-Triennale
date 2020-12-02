@@ -935,12 +935,12 @@ I risultati sono rappresentati, per l'anno 2018, nella figura \ref{fig:differenz
 
 Omesse le automobili private, appare chiaro che gli autocarri sono coinvolti in un maggior 
 numero di incidenti su autostrade, mentre i motocicli il primato sulle strade urbane.
-Può anche sembrare strano che i trattori stradali siano coinvolti così spesso in incidenti su autostrade, 
-tuttavia, in questo caso, per 'trattore' non si intende la macchina agricola, 
-ma la motrice di un autocarro.
+Può anche sembrare strano che i trattori stradali siano coinvolti così spesso in incidenti 
+su autostrade, tuttavia, in questo caso, per 'trattore' non si intende la macchina 
+agricola, ma la motrice di un autocarro.
 
-Va comunque sottolineato che le percentuali di incidenti provocati da queste tipologie di veicoli, 
-sono tutte al di sotto del $10$\%.
+Va comunque sottolineato che le percentuali di incidenti provocati da queste tipologie di 
+veicoli, sono tutte al di sotto del $10$\%.
 
 %\clearpage
 \section{Dati Istat su conducente}
@@ -1739,20 +1739,23 @@ che  comprende le fasce tra 30 e 54 anni di età.
 Non tutte queste fasce però contengono lo stesso numero di anni di età, per esempio 
 \textit{30-44} contiene quindici anni, mentre \textit{18-20} ne contiene solo due.
 
+\begin{lstlisting}[language=Python]
+    numero_anni = np.array([5, 5, 5, 3, 10, 15, 10, 10, 20])
+
+    pedoni_feriti_vals = pedoni_feriti.values / numero_anni
+    pedoni_morti_vals = pedoni_morti.values / numero_anni
+
+    pedoni_feriti = pd.Series(pedoni_feriti_vals, index=pedoni_feriti.index)
+    pedoni_morti = pd.Series(pedoni_morti_vals, index=pedoni_morti.index)
+\end{lstlisting}
+
 Se si normalizza per anni contenuti in ogni fascia, ipotizzando un numero
 costante di persone di ogni età
 \footnote{La normalizzazione tiene conto che la fascia di età '65 anni e oltre' vale 
 venti anni.}, 
 si ottiene un grafo, visibile in figura \ref{fig:eta-pedoni}, che, per quanto riguarda 
 i pedoni feriti, è molto differente.
-
-\begin{lstlisting}[language=Python]
-    anni_per_fascia_feriti = pd.Series([5,5,3,3,4,5,15,10,5,5,5,20,1])
-    anni_per_fascia_morti = pd.Series([5,5,3,4,5,15,10,5,5,20,1])
-    
-    pedoni_feriti = pedoni_feriti.values / np.array(anni_per_fascia_feriti)
-    pedoni_morti = pedoni_morti.values / np.array(anni_per_fascia_morti)
-\end{lstlisting}
+\todo{itera su questo concetto}
 
 Non è detto, tuttavia, che in Italia il numero di individui con la stessa età sia costante.
 Anzi, le percentuali di individui per fascia, trovate sul sito Tuttitalia \cite{TUTTITALIA:1}, 
@@ -1787,15 +1790,24 @@ sono state riportate nella tabella sottostante:
 \end{center}
 
 Per poter essere utilizzate, le fasce trovate sono state sommate, e in alcuni casi si è dovuto 
-stimare la percentuale di popolazione.
-\todo{esempio della stima}
+stimare la percentuale di popolazione con determinata età in quanto si sarebbe dovuto dividere 
+una fascia.
+Un esempio di questa divisione è la fascia dei \textit{15-19} anni presente nei dati della fonte. 
+I dati Istat hanno invece una categoria \textit{15-17} anni e un'altra \textit{18-29} anni. 
+\'E dunque necessario spostare i diciotto e i diciannovenni dalla prima alla seconda fascia. 
+In questi casi, si è semplicemente assunto che il numero di individui sia omogeneamente 
+diviso per età, cioè nella fascia \textit{15-19} si ha lo stesso numero di persone con 
+quindici e sedici anni.
+Seguendo questa logica, per spostare i due anni di età nella categoria successiva, si divide 
+la percentuale di \textit{15-19} per cinque e si moltiplica per due. Il risultato ottento 
+lo si aggiunge alla fascia \textit{18-29}.
 
 \begin{lstlisting}
-    popolazione_std_feriti = [3.9 ,4.5 ,4.8 ,3.1 ,2.8 ,4 ,5.3 ,19,16.2,7.3 ,6.4 ,19.3, 0]
-    popolazione_std_morti = [3.9 ,4.8 ,3.1 ,4,5.3 ,19,16.2,7.3 ,6.4 ,19.3, 0]
+    correct_order =         ['0-5  ', '6-9  ', '10-14', '15-17', '18-29', '30-44', '45-54', '55-64','65+  ']
+    perc_fascia = np.array( [3.9, 4.5, 4.8, 3.1, 2.8+4+5.3, 19, 18.2, 7.3+6.4, 19.3]) / 100
 
-    pedoni_feriti_vals = pedoni_feriti.values / np.array(popolazione_std_feriti)
-    pedoni_morti_vals = pedoni_morti.values / np.array(popolazione_std_morti)
+    pedoni_feriti_vals = pedoni_feriti.values * perc_fascia
+    pedoni_morti_vals = pedoni_morti.values * perc_fascia
 \end{lstlisting}
 
 \begin{figure}
@@ -1803,14 +1815,13 @@ stimare la percentuale di popolazione.
     \caption{Fasce di età dei pedoni coinvolti in incidenti, normalizzate tramite percentuale di popolazione}
     \label{fig:eta-pedoni-norm}
 \end{figure}
-\todo{controllare grafo}
 
 Una volta aver corretto l'immagine precendente, si ottiene la figura \ref{fig:eta-pedoni-norm} 
 dove, soprattutto nel grafo di destra, è presente una curva particolarmente alta 
 nelle fasce più anziane.
-Anche nel grafo dei feriti è presente la stessa curva, ma per il volume di persone, la fascia 
-dei 30-44 anni, che contiene quattordici anni di età invece che cinque, come 
-la maggior parte delle altre fasce, è molto più alta.
+Anche nel grafo di sinistra è presente la stessa impennata in corrispondenza 
+della categoria dei \textit{65+} ma, a partire dalla fascia 
+dei \textit{30-44} anni, è già presente un sostanziale incremento dei feriti.
 
 L'incremento di feriti nelle fasce più anziane, si può speculare sia dovuto al fatto che 
 questi ultimi sono più propensi all'essere feriti in un incidente. 
