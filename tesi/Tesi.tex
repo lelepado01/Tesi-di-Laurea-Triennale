@@ -1708,19 +1708,33 @@ maggiore coinvolgimento di pedoni, e le restanti categorie non troppo distanti.
 %\clearpage
 \subsection{Età dei pedoni coinvolti in incidenti}
 
+\'E scontato che, se coinvolti in un incidente, un pedone di venti anni non ha la stessa 
+probabilità di essere ferito rispetto a una persona di settanta.
+\'E possibile osservare questo comportamento utilizzando i dati che si ha a disposizione?
+
+Per prima cosa si sono utilizzati i campi \textit{eta\_pedone} per creare un grafo in cui sia 
+visibile il numero di pedoni feriti e morti, divisi per fascia di età.
+
+\todo{controllare e dividere il grafo sotto}
+
+Dal grafo \ref{fig:eta-pedoni} si osserva che la fascia di età più colpita 
+è quella dei 65 anni, tuttavia esiste un secondo picco, nel grafo dei pedoni feriti, 
+che  comprende le fasce tra 30 e 54 anni di età.
+
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/pedoni/eta_pedoni.png}
     \caption{Fasce di età dei pedoni coinvolti in incidenti}
     \label{fig:eta-pedoni}
 \end{figure}
+\todo{controllare grafo}
 
-Dal grafo \ref{fig:eta-pedoni} si osserva che la fascia di età più colpita dagli 
-incidenti è quella dei 65 anni, va comunque detto che questo gruppo probabilmente 
-contiene la maggior parte degli individui.
+Non tutte queste fasce però contengono lo stesso numero di anni di età, per esempio 
+\textit{30-44} contiene quindici anni, mentre \textit{18-20} ne contiene solo due.
+
 Se si normalizza per anni contenuti in ogni fascia, ipotizzando un numero
-costante di persone di ogni età, si ottiene un grafo, per quanto riguarda i pedoni 
-feriti, molto differente. \\
-La normalizzazione tiene conto che la fascia di età '65 anni e oltre' vale venti anni.
+costante di persone di ogni età
+\footnote{La normalizzazione tiene conto che la fascia di età '65 anni e oltre' vale venti anni.}, 
+si ottiene un grafo, per quanto riguarda i pedoni feriti, molto differente.
 
 \begin{lstlisting}[language=Python]
     anni_per_fascia_feriti = pd.Series([5,5,3,3,4,5,15,10,5,5,5,20,1])
@@ -1730,9 +1744,9 @@ La normalizzazione tiene conto che la fascia di età '65 anni e oltre' vale vent
     pedoni_morti = pedoni_morti.values / np.array(anni_per_fascia_morti)
 \end{lstlisting}
 
-Tuttavia, non è detto che in Italia il numero di individui con la stessa età sia costante.
-Infatti le percentuali di individui per fascia sono
-\footnote{\url{https://www.tuttitalia.it/statistiche/popolazione-eta-sesso-stato-civile-2019/}}: 
+Non è detto, tuttavia, che in Italia il numero di individui con la stessa età sia costante.
+Anzi, le percentuali di individui per fascia, trovate sul sito Tuttitalia \cite{TUTTITALIA:1}, 
+sono state riportate nella tabella sottostante: 
 
 \begin{center}
     \def\arraystretch{1.5}%  
@@ -1762,6 +1776,10 @@ Infatti le percentuali di individui per fascia sono
     \end{tabular}
 \end{center}
 
+Per poter essere utilizzate, le fasce trovate sono state sommate, e in alcuni casi si è dovuto 
+stimare la percentuale di popolazione.
+\todo{esempio della stima}
+
 \begin{lstlisting}
     popolazione_std_feriti = [3.9 ,4.5 ,4.8 ,3.1 ,2.8 ,4 ,5.3 ,19,16.2,7.3 ,6.4 ,19.3, 0]
     popolazione_std_morti = [3.9 ,4.8 ,3.1 ,4,5.3 ,19,16.2,7.3 ,6.4 ,19.3, 0]
@@ -1776,16 +1794,17 @@ Infatti le percentuali di individui per fascia sono
     \label{fig:eta-pedoni-norm}
 \end{figure}
 
-Una volta aver corretto l'immagine precendente, si ottiene la figura \ref{fig:eta-pedoni-norm} dove, 
-soprattutto nel grafo di destra, è presente una curva particolarmente alta nelle fasce più anziane.
+Una volta aver corretto l'immagine precendente, si ottiene la figura \ref{fig:eta-pedoni-norm} 
+dove, soprattutto nel grafo di destra, è presente una curva particolarmente alta 
+nelle fasce più anziane.
 Anche nel grafo dei feriti è presente la stessa curva, ma per il volume di persone, la fascia 
 dei 30-44 anni, che contiene quattordici anni di età invece che cinque, come 
 la maggior parte delle altre fasce, è molto più alta.
 
 L'incremento di feriti nelle fasce più anziane, si può speculare sia dovuto al fatto che 
 questi ultimi sono più propensi all'essere feriti in un incidente. 
-Tuttavia, è anche possibile che uno dei fattori maggiormente influenti sia il volume di 
-pedoni in queste fasce di età.
+Tuttavia, è anche possibile che uno dei fattori maggiormente influenti sia il 
+volume di pedoni in queste fasce di età, perchè magari non possono più guidare.
 
 %\clearpage
 \section{Dati ACI}
