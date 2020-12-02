@@ -920,6 +920,7 @@ mentre cresce molto il numero di questi nelle strade urbane.
     \caption{Incidenti per tipo di veicolo nel 2018}
     \label{fig:differenza-strade}
 \end{figure}
+\todo{non mi piace questo grafo}
 
 Visto che le auto private causano oltre tre quarti degli incidenti in ogni categoria di strada,  
 si è deciso di ometterle, per controllare la presenza di differenze nelle altre tipologie 
@@ -1155,6 +1156,7 @@ in quanto a partire dal 2011, fino al 2016, utilizzando i dati sul numero degli 
     \caption{Rapporto tra incidenti e traffico per orario a Milano}
     \label{fig:rapporto-incidenti-traffico}
 \end{figure}
+\todo{prova ad affiancare i grafi invece che uno sopra l'altro}
 
 L'immagine \ref{fig:rapporto-incidenti-traffico} contiene, a partire dall'alto, 
 la percentuale di accessi in area C a una determinata ora
@@ -1299,6 +1301,7 @@ al numero di incidenti mensili.
     \caption{Incidenti al mese, tenendo conto del traffico nello stesso periodo (2012)}
     \label{fig:incidenti-traffico-mese}
 \end{figure}
+\todo{prova ad affiancare i grafi invece che uno sopra l'altro}
 
 L'immagine \ref{fig:incidenti-traffico-mese} contiene due grafi, 
 il primo riguardante la frazione di traffico annuale che interessa ogni mese; 
@@ -1728,18 +1731,20 @@ che  comprende le fasce tra 30 e 54 anni di età.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/pedoni/eta_pedoni.png}
-    \caption{Fasce di età dei pedoni coinvolti in incidenti}
+    \caption{Fasce di età dei pedoni coinvolti in incidenti, normalizzate per numero di anni 
+    presenti nella fascia}
     \label{fig:eta-pedoni}
 \end{figure}
-\todo{controllare grafo}
 
 Non tutte queste fasce però contengono lo stesso numero di anni di età, per esempio 
 \textit{30-44} contiene quindici anni, mentre \textit{18-20} ne contiene solo due.
 
 Se si normalizza per anni contenuti in ogni fascia, ipotizzando un numero
 costante di persone di ogni età
-\footnote{La normalizzazione tiene conto che la fascia di età '65 anni e oltre' vale venti anni.}, 
-si ottiene un grafo, per quanto riguarda i pedoni feriti, molto differente.
+\footnote{La normalizzazione tiene conto che la fascia di età '65 anni e oltre' vale 
+venti anni.}, 
+si ottiene un grafo, visibile in figura \ref{fig:eta-pedoni}, che, per quanto riguarda 
+i pedoni feriti, è molto differente.
 
 \begin{lstlisting}[language=Python]
     anni_per_fascia_feriti = pd.Series([5,5,3,3,4,5,15,10,5,5,5,20,1])
@@ -1798,6 +1803,7 @@ stimare la percentuale di popolazione.
     \caption{Fasce di età dei pedoni coinvolti in incidenti, normalizzate tramite percentuale di popolazione}
     \label{fig:eta-pedoni-norm}
 \end{figure}
+\todo{controllare grafo}
 
 Una volta aver corretto l'immagine precendente, si ottiene la figura \ref{fig:eta-pedoni-norm} 
 dove, soprattutto nel grafo di destra, è presente una curva particolarmente alta 
