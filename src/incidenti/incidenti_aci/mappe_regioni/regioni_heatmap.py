@@ -54,8 +54,30 @@ df = pd.DataFrame([
     incidenti_2018['TOTALE']
 ], [2011,2012,2013, 2014,2015,2016,2017,2018]).transpose()
 
-fig, ax = plt.subplots()
-im, cbar = H.heatmap(df, df.index, [2011,2012,2013, 2014,2015,2016,2017,2018], ax=ax, cmap="YlGn", xticks_rotated=True, cbarlabel="Incidenti all'anno per regione")
+# fig, ax = plt.subplots()
+# im, cbar = H.heatmap(df, df.index, [2011,2012,2013, 2014,2015,2016,2017,2018], ax=ax, cmap="YlGn", xticks_rotated=True, cbarlabel="Incidenti all'anno per regione")
 
-plt.show()
+# plt.show()
 
+print(df.transpose().std())
+
+# Abruzzo                  105.585358
+# Basilicata                25.581453
+# Calabria                  61.346789
+# Campania                 108.728282
+# Emilia Romagna           279.732015
+# Friuli-Venezia Giulia     37.330330
+# Lazio                    324.563443
+# Liguria                  171.330039
+# Lombardia                177.239950
+# Marche                   149.166015
+# Molise                    24.421522
+# Piemonte                 258.236568
+# Puglia                   129.062277
+# Sardegna                  33.839696
+# Sicilia                  159.335226
+# Toscana                  203.875312
+# Trentino-Alto Adige       51.685864
+# Umbria                    58.523347
+# Valle d'Aosta              8.366600
+# Veneto                   195.283494

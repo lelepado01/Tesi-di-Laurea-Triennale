@@ -1865,7 +1865,13 @@ dalla heatmap \ref{fig:regione-heatmap}
 si nota che non cambia molto di anno in anno, e le regioni con maggiore numero di incidenti 
 rimangono sempre Lombardia e Veneto.
 
-\todo{aggiungere regioni con maggiore scostamento dalla media}
+Per controllare le tendenze di incremento e decremento di incidenti per regione, 
+si è calcolata la deviazione standard per ogni regione.
+\todo{definizione da libro}
+Risulta che la regione con maggiore cambiamento di incidenti di anno in anno è il Lazio, 
+con $324$ incidenti l'anno 
+\todo{lelepado: è giusto dire questo?}
+mentre quella con minore variazione è la Valle d'Aosta, con $8$.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/mappe_regioni/regioni_heatmap.png}
@@ -1873,9 +1879,10 @@ rimangono sempre Lombardia e Veneto.
     \label{fig:regione-heatmap}
 \end{figure}
 
-I grafi precedenti, soprattutto le heatmap regionali, non tengono conto del volume del traffico.
-Non avendo informazioni riguardanti il traffico in tutta Italia, si sono stimate queste informazioni 
-tramite il numero di patentati per regione.
+I grafi precedenti, soprattutto le heatmap regionali, non tengono conto del volume del 
+traffico.
+Non avendo informazioni riguardanti il traffico in tutta Italia, si sono stimate 
+queste informazioni tramite il numero di patentati per regione.
 Una stima eseguita con il numero di patentati per regione, non è molto accurata, 
 in quanto molte persone patentate in una regione, possono lavorare in altre, e influire 
 in modo errato al conteggio degli incidenti. 
@@ -1912,8 +1919,8 @@ Il grafo \ref{fig:incidenti-patentati-bar} è stato suddiviso tra regioni del no
 centro e sud, per facilitare la lettura, e indica le percentuali di incidenti e patentati 
 per la rispettiva regione. 
 \'E subito osservabile che, nella maggior parte delle regioni del centro, 
-la percentuale di incidenti supera quella di patentati, mentre nel sud Italia 
-accade il fenomeno opposto.
+la percentuale di incidenti supera quella di patentati, 
+mentre nel sud Italia accade il fenomeno opposto.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/mappe_regioni/incidenti_patenti_bar.png}
@@ -1926,8 +1933,6 @@ accade il fenomeno opposto.
     \caption{Incidenti e patentati per nord, centro e sud Italia}
     \label{fig:incidenti-patentati-box}
 \end{figure}
-
-\todo{perchè i patentati sono 2019 e gli incidenti sono 2018?}
 
 La figura \ref{fig:incidenti-patentati-box} permette di capire il motivo della disparità 
 tra centro e sud Italia.
