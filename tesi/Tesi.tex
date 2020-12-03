@@ -1876,8 +1876,8 @@ rimangono sempre Lombardia e Veneto.
 I grafi precedenti, soprattutto le heatmap regionali, non tengono conto del volume del traffico.
 Non avendo informazioni riguardanti il traffico in tutta Italia, si sono stimate queste informazioni 
 tramite il numero di patentati per regione.
-Una stima eseguita con il numero di patentati per regione, non è molto accurato, 
-in quanto molte persone patentate in una regione, possono lavorare in altre e dunque influire 
+Una stima eseguita con il numero di patentati per regione, non è molto accurata, 
+in quanto molte persone patentate in una regione, possono lavorare in altre, e influire 
 in modo errato al conteggio degli incidenti. 
 
 \begin{figure}
@@ -1889,6 +1889,7 @@ in modo errato al conteggio degli incidenti.
 Se si visualizza il rapporto tra incidenti e patentati per regione (figura \ref{fig:incidenti-patentati}), 
 si osserva una chiara distinzione tra nord, centro e sud Italia.
 A cosa è dovuta questa ampia disparità?
+
 Nella seguente tabella sono riportate le medie di incidenti annuali per regione, 
 e quella di patentati per regione.
 
@@ -1907,10 +1908,12 @@ e quella di patentati per regione.
     \end{tabular}
 \end{center}
 
-Il grafo \ref{fig:incidenti-patentati-bar} è stato suddiviso tra regioni del nord, centro e sud, per facilitare 
-la lettura, e indica le percentuali di incidenti e patentati per la rispettiva regione. 
-\'E subito osservabile che, nella maggior parte delle regioni del centro, la percentuale di incidenti 
-supera quella di patentati, mentre nel sud Italia accade il fenomeno opposto.
+Il grafo \ref{fig:incidenti-patentati-bar} è stato suddiviso tra regioni del nord, 
+centro e sud, per facilitare la lettura, e indica le percentuali di incidenti e patentati 
+per la rispettiva regione. 
+\'E subito osservabile che, nella maggior parte delle regioni del centro, 
+la percentuale di incidenti supera quella di patentati, mentre nel sud Italia 
+accade il fenomeno opposto.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/mappe_regioni/incidenti_patenti_bar.png}
@@ -1925,13 +1928,15 @@ supera quella di patentati, mentre nel sud Italia accade il fenomeno opposto.
 \end{figure}
 
 La figura \ref{fig:incidenti-patentati-box} permette di capire il motivo della disparità 
-tra centro e sud Italia, perchè il numero di incidenti al sud è molto minore, mentre 
-non c'è un'ampia differenza di patentati. 
+tra centro e sud Italia.
+Al sud, il numero di incidenti è molto minore rispetto al centro Italia, mentre, 
+sempre le stesse due zone, il numero di patentati non cambia molto. 
+\'E ovvio che tenendo il denominatore costante, il numero minore di incidenti al 
+sud causa una frazione minore.
 
 Quali potrebbero essere le motivazioni di questa disparità?
 Come già accennato in precendenza, una delle motivazioni principali 
 deve essere la destinazione lavorativa della popolazione.
-
 
 \subsection{Differenze tra mesi estivi e invernali}
 
