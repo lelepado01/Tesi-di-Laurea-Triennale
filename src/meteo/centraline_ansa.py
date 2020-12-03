@@ -13,7 +13,7 @@ incidenti = gp.read_file(path_incidenti).to_crs(epsg=3857)
 # relativamente al centro di milano
 scale = 10**6
 
-layer_sensori = sensori.plot(figsize=(7,5))
+layer_sensori = sensori.plot(figsize=(5,4), markersize=7)
 layer_incidenti = incidenti.plot(ax=layer_sensori, alpha=0.0)
 cx.add_basemap(ax=layer_incidenti)
 plt.axis('off')
