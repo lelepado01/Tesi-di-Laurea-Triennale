@@ -18,28 +18,24 @@ def get_sum_of_fields(data : pd.DataFrame, select_field : str, field_to_sum : st
 
     return pd.DataFrame(res, index=[select_field, field_to_sum]).transpose()
 
-# field_incidenti = 'TOTALE'
-field_incidenti = 'Inc'
+field_incidenti = 'TOTALE'
 
 path = "dataset/regioni/regioni.geojson"
 regioni = gp.read_file(path)
 
-# data = pd.read_csv('dataset/incidenti/aci/autostrade/mesi_2018.csv') 
-data = pd.read_csv('dataset/incidenti/aci/strade_provinciali/aci_2018.csv')
-# data = data[data['TOTALE'] != '0,0'].astype({'TOTALE': int})
+data = pd.read_csv('dataset/incidenti/aci/autostrade/mesi_2018.csv') 
+data = data[data['TOTALE'] != '0,0'].astype({'TOTALE': int})
 
 incidenti = get_sum_of_fields(data, 'REGIONE', field_incidenti)
 
 incidenti.index = incidenti['REGIONE']
 regioni.index = regioni['reg_name']
-# print(regioni)
 
 regioni = gp.GeoDataFrame(incidenti[field_incidenti], geometry=regioni['geometry'].transpose())
 
 from matplotlib.lines import Line2D
 
 regioni.plot(column=field_incidenti, cmap='OrRd', legend=True)
-# plt.title("Incidenti per regione nel 2014")
 plt.axis('off')
 plt.legend([
     Line2D([],[],color='#a52317',linewidth=5), 
