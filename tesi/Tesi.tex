@@ -1840,15 +1840,18 @@ per giorno della settimana o ora.
 
 \subsection{Incidenti per regione}
 
+Utilizzando i dati ACI, in particolare i file \textit{localizzazione}, è possibile dividere gli 
+incidenti per regione e per provincia.
 Grazie al dataset geojson di Guglielmo Celata\footnote{\url{https://github.com/openpolis/geojson-italy}}, 
 è stato possibile realizzare le mappe in figura \ref{fig:incidenti-per-regione}, 
 che raffigurano rispettivamente, le regioni con più incidentalità nel per ogni anno nelle 
 strade provinciali e nelle autostrade, nell'anno 2018.
+
 Ovviamente il nord Italia ha il primato per quanto riguarda gli incidenti, soprattutto nelle regioni 
 di Lombardia, Veneto e Emilia Romagna. 
-Spicca poi il Lazio, dove la maggior parte degli incidenti avvengono su autostrade, in quanto il volume 
-di incidenti è nella media nella prima mappa in figura \ref{fig:incidenti-per-regione}, mentre è il massimo annuale nella 
-seconda mappa.
+Spicca poi il Lazio, dove la maggior parte degli incidenti avvengono su autostrade, 
+in quanto il volume di incidenti è nella media nella prima mappa in figura 
+\ref{fig:incidenti-per-regione}, mentre è il massimo annuale nella seconda mappa.
 
 \begin{figure}
     \includegraphics[width=0.5\linewidth]{../src/incidenti/incidenti_aci/mappe_regioni/incidenti_regione.png}
@@ -1859,28 +1862,16 @@ seconda mappa.
 
 Per quanto riguarda, invece, il numero di incidenti per ogni anno, 
 dalla heatmap \ref{fig:regione-heatmap} 
-si nota che non cambia molto di anno in anno, e le regioni con maggiore numero di incidenti rimangono 
-sempre Lombardia e Veneto.
+si nota che non cambia molto di anno in anno, e le regioni con maggiore numero di incidenti 
+rimangono sempre Lombardia e Veneto.
+
+\todo{aggiungere regioni con maggiore scostamento dalla media}
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/mappe_regioni/regioni_heatmap.png}
     \caption{Incidenti all'anno per regione su strade provinciali}
     \label{fig:regione-heatmap}
 \end{figure}
-
-Se invece si guardasse la differenza tra mesi estivi e mesi invernali?
-
-\begin{figure}
-    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/mappe_regioni/incidenti_estate_inverno.png}
-    \caption{Incidenti per regione nei mesi di Gennaio e Agosto}
-    \label{fig:incidenti-estate-inverno}
-\end{figure}
-
-Il grafo \ref{fig:incidenti-estate-inverno} mostra che, per alcune regioni, la differenza del  
-numero di incidenti tra Agosto e Gennaio è molto ampia, come per Trentino, Emilia, Veneto e Friuli.
-In figura \ref{fig:incidenti-per-mese}, si osserva che la maggior parte degli incidenti, 
-per quanto riguarda le autostrade, avvengono tra Luglio e Agosto, dunque è corretto che,  
-nella maggior parte delle regioni, il volume di sinistri per quest'ultimo sia maggiore rispetto a Gennaio. 
 
 I grafi precedenti, soprattutto le heatmap regionali, non tengono conto del volume del traffico.
 Non avendo informazioni riguardanti il traffico in tutta Italia, si sono stimate queste informazioni 
@@ -1941,6 +1932,27 @@ Quali potrebbero essere le motivazioni di questa disparità?
 Come già accennato in precendenza, una delle motivazioni principali 
 deve essere la destinazione lavorativa della popolazione.
 
+
+\subsection{Differenze tra mesi estivi e invernali}
+
+\todo{obiettivo di questa subsection?}
+Se invece si guardasse la differenza tra mesi estivi e mesi invernali?
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/mappe_regioni/incidenti_estate_inverno.png}
+    \caption{Incidenti per regione nei mesi di Gennaio e Agosto}
+    \label{fig:incidenti-estate-inverno}
+\end{figure}
+
+Il grafo \ref{fig:incidenti-estate-inverno} mostra che, per alcune regioni, la differenza del  
+numero di incidenti tra Agosto e Gennaio è molto ampia, come per Trentino, Emilia, Veneto e Friuli.
+
+In figura \ref{fig:incidenti-per-mese}, si osserva che la maggior parte degli incidenti, 
+per quanto riguarda le autostrade, avvengono tra Luglio e Agosto, dunque è corretto che,  
+nella maggior parte delle regioni, il volume di sinistri per quest'ultimo sia maggiore 
+rispetto a Gennaio. 
+
+\todo{conclusione}
 
 %\clearpage
 \subsection{Le strade pericolose in provincia di Milano}
