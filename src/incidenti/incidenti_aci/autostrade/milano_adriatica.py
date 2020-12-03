@@ -3,6 +3,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 data = pd.read_csv("dataset/incidenti/aci/autostrade/mesi_2014.csv")
+# data = pd.read_csv("dataset/incidenti/aci/autostrade/mesi_2016.csv")
+# data = pd.read_csv("dataset/incidenti/aci/autostrade/mesi_2018.csv")
 
 lombardia = data[data['REGIONE'] == 'Lombardia'][['PROVINCIA', 'TOTALE']]
 

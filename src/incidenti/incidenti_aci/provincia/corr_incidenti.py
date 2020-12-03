@@ -6,11 +6,6 @@ data = pd.read_csv("dataset/incidenti/aci/autostrade/comuni_2018.csv")
 
 fields = ['INC', 'FER']
 
-#print(len(data['PROVINCIA'].unique()))
-
-# Il numero di feriti dipende dal numero di incidenti?
-# E il numero di morti?
-
 def sum_field_by_column(data, select, field_to_sum1, field_to_sum2): 
     dic = {}
     for f in data[select].unique(): 
