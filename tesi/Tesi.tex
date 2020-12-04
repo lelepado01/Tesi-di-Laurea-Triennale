@@ -140,8 +140,7 @@ Il numero di passeggeri influisce sulla probabilità di essere coinvolti in un i
 
 \section{Dati riguardanti incidenti}
 La maggior parte dei dati utilizzati in questo lavoro provengono 
-dall'Istituto nazionale di statistica, in particolare dall'archivio
-\footnote{\url{https://www.istat.it/it/archivio/87539}}
+dall'Istituto nazionale di statistica, in particolare dall'archivio\footnote{\url{https://www.istat.it/it/archivio/87539}}
 di dati non geolocalizzati su incidenti stradali in Italia.
 Questo dataset contiene un'ampia gamma di campi, tra cui ora, 
 mese, giorno della settimana in cui è avvenuto l'incidente, 
@@ -150,28 +149,27 @@ Particolarmente interessanti sono anche i campi riguardanti il tipo di incrocio 
 avvenuto il sinistro, come rettilineo, rotonda o semaforo.
 
 Per quanto riguarda i dati geolocalizzati, 
-la fonte è invece il sito web TheSubmarine \cite{SUBMARINE:1}\todo{atrent: avevo corretto citazione, come mai l'hai ripristinata? attenzione ai merge, ho notato che hai eliminato roba mia... vedi commit 317b1e33694b45edf4eff023c3bc5a9b44a91028}
+la fonte è invece il sito web TheSubmarine \cite{SUBMARINE:1}
 che in un articolo riguardante l'incidentalità a Milano, 
 ha ottenuto dall'ente Istat la pubblicazione di una parte degli 
 incidenti avvenuti nella città nel 2016, con la relativa posizione.
 Il dataset in questione è abbastanza povero, e contiene solamente l'incidente con la 
 propria posizione, indicata tramite coordinate geografiche.
 
-L'ultimo dataset, trovato dopo veloce consultazione con un dipendente Istat\todo{atrent: che immagino non sia citabile?}, 
+L'ultimo dataset, trovato dopo veloce consultazione con un dipendente Istat
+\todo{migliorare questo}
 è stato il dataset ACI \cite{ACI:1}
 \'E stato consigliato in quanto, questi dati, specifici a autostrade e strade statali, 
 indicano anche il nome della rispettiva via.
 
 \section{Dati riguardanti autovelox}
 Un primo dataset individuato, che riguardasse delle posizioni degli autovelox fissi, 
-è stato una mappa GoogleMyMaps
-\footnote{\url{https://www.google.com/maps/d/viewer?mid=1CBgMTvIDnbGo22-Y1f3rVcbeX4C0v_w1&ll=45.365557951599605\%2C10.03650113755961&z=8}} 
+è stato una mappa GoogleMyMaps\footnote{\url{https://www.google.com/maps/d/viewer?mid=1CBgMTvIDnbGo22-Y1f3rVcbeX4C0v_w1&ll=45.365557951599605\%2C10.03650113755961&z=8}} 
 creata da un utente anonimo, dunque senza un modo di provare l'autenticità dei dati.
 
 Il dataset utilizzato, invece, è stato ottenuto tramite OpenStreetMaps, ricavando solo gli autovelox 
 in Milano. 
-Per restringere il campo di ricerca a solo Milano, si è fatto uso delle Overpass API
-\footnote{\url{https://overpass-turbo.eu/}}, 
+Per restringere il campo di ricerca a solo Milano, si è fatto uso delle Overpass API\footnote{\url{https://overpass-turbo.eu/}}, 
 specifiche per OpenStreetMaps, eseguendo la seguente query: 
 
 \lstinputlisting{../src/codice_per_dati/overpass_query.txt}
@@ -223,15 +221,14 @@ La lista di Ztlmilano contiene i seguenti autovelox:
     \label{ztl-milano}
 \end{center}
 
-\todo{lelepado: solo io vedo la linea sulla sinistra della tabella che scompare se il colore è grigio?}
-
-Il campi della tabella ripetuti sono dovuti al fatto che alcuni autovelox sono stati installati in entrambe le direzioni.
+Il campi della tabella ripetuti sono dovuti al fatto che alcuni autovelox sono stati 
+installati in entrambe le direzioni.
 
 \section{Dati riguardanti patentati}
 
 I dati sulle persone con patente per regione, che è stato utilizzato per stimare il traffico 
-regionale, proviene dal sito del Ministero delle Infrastrutture e Trasporti 
-\footnote{\url{http://dati.mit.gov.it/catalog/dataset/patenti}}.
+regionale, proviene dal sito del Ministero delle Infrastrutture e 
+Trasporti\footnote{\url{http://dati.mit.gov.it/catalog/dataset/patenti}}.
 Tuttavia, questo dataset è diviso in vari file seconda della regione e, vista la quantità 
 non necessaria di informazioni, si è preferito usare dati provienienti da un'infografica che 
 sintetizza il dataset in questione \cite{INFOGRAFICA_MIT:1}
@@ -244,9 +241,9 @@ luoghi per questioni di lavoro.
 
 \section{Dati riguardanti le zone di Milano}
 
-I dati con zone geolocalizzate di Milano provengono dal geoportale del comune di Milano
-\footnote{\url{https://geoportale.comune.milano.it/}}, e contengono i poligoni che costituiscono 
-i municipi della città, 
+I dati con zone geolocalizzate di Milano provengono dal geoportale del comune di 
+Milano\footnote{\url{https://geoportale.comune.milano.it/}}, e contengono i poligoni che 
+costituiscono i municipi della città, 
 oltre a informazioni sulla superficie e il perimetro delle zone.
 
 Questi dati sono utili a determinare, a grandi linee, quali sono le zone con più incidenti 
@@ -280,55 +277,51 @@ Il dataset contiene i campi specificati, misurati ogni ora, a partire dal 2008, 
 
 \section{Dati riguardanti trasporti pubblici}
 I dati riguardanti i trasporti pubblici trovati hanno due provenienze, i primi sono 
-dati riferiti alle linee ATM, scaricati sul sito del comune di milano
-\footnote{\url{https://dati.comune.milano.it/dataset/ds532-atm-composizione-percorsi-linee-di-superficie-urbane}}.
+dati riferiti alle linee ATM, scaricati sul sito del comune di Milano\footnote{\url{https://dati.comune.milano.it/dataset/ds532-atm-composizione-percorsi-linee-di-superficie-urbane}}.
 Dallo stesso sito proviene anche il dataset riguardante gli autobus turistici, che 
-contiene in particolare le aree di sosta di questi ultimi
-\footnote{\url{https://dati.comune.milano.it/dataset/ds740_sosta_bus_gt_turistici}}.
+contiene in particolare le aree di sosta di questi ultimi\footnote{\url{https://dati.comune.milano.it/dataset/ds740_sosta_bus_gt_turistici}}.
 
 La principale funzione di questi dataset è l'ottenere i percorsi delle linee di trasporto pubblico, 
 per confrontare il numero di incidenti, tuttavia si è anche fatto uso di un dataset contenente 
-solamente le linee tranviarie, trovato sul geoportale del comune di Milano
-\footnote{\url{https://geoportale.comune.milano.it/ATOM/SIT/DBT2012/DBT2012_STRATO_01_Dataset_1.xml}}.
+solamente le linee tranviarie, trovato sul geoportale del comune di Milano\footnote{\url{https://geoportale.comune.milano.it/ATOM/SIT/DBT2012/DBT2012_STRATO_01_Dataset_1.xml}}.
 
 Questo dataset è molto ampio e contiene altri livelli di informazioni, tra cui per esempio, 
 le strade o le ferrovie passanti per Milano. 
 
 \section{Dati riguardanti autostrade e manto stradale}
 
-Il primo dataset individuato, riguardante il manto  stradale, è stato quello di ANAS
-\footnote{\url{http://dati.mit.gov.it/catalog/dataset/grafo-stradale-anas}}, 
+Il primo dataset individuato, riguardante il manto  stradale, è stato quello di 
+ANAS\footnote{\url{http://dati.mit.gov.it/catalog/dataset/grafo-stradale-anas}}, 
 tuttavia questo consisteva in un file molto grande, e dalla precisione superflua per 
 la mappa che si sta tentando di ottenere.
 
-Si è dunque tentato di utilizzare la mappa presente sul geoportale del comune di Milano
-\footnote{\url{https://geoportale.comune.milano.it/}}, 
+Si è dunque tentato di utilizzare la mappa presente sul geoportale del comune di 
+Milano\footnote{\url{https://geoportale.comune.milano.it/}}, 
 contenente anch'esso troppe strade in quanto traccia l'intero manto stradale del comune.
 
-Come ultima risorsa, si è deciso di tracciare alcune mappe in geojson utilizzando Geojson.io
-\footnote{\url{https://geojson.io/}}, in particolare nella zona di Milano, per le principali 
-autostrade, tangenziali e strade statali. 
+Come ultima risorsa, si è deciso di tracciare alcune mappe in geojson utilizzando 
+Geojson.io\footnote{\url{https://geojson.io/}}, in particolare nella zona di Milano, 
+per le principali autostrade, tangenziali e strade statali. 
 Allo stesso modo, Geojson.io è stato utile a tracciare alcune aree in centro a Milano, per confrontare 
 gli incidenti su pavè agli incidenti su asfalto.
 
 \section{Dati riguardanti l'area C}
 
 Il dataset riguardante gli accessi all'area C è stato trovato sul sito di open data del 
-comune di Milano
-\footnote{\url{https://dati.comune.milano.it/organization/comunedimilano?q=area+c&sort=score+desc\%2C+metadata_modified+desc}}, 
+comune di Milano\footnote{\url{https://dati.comune.milano.it/organization/comunedimilano?q=area+c&sort=score+desc\%2C+metadata_modified+desc}}, 
 dove sono disponibili varie tipologie di file, 
 distinti per orario, mese, località ecc. 
 Tra questi si è utilizzata la tipologia contenente orari e data dell'accesso.
 
 Oltre a utilizzare i dati riguardo agli accessi all'area C, si è fatto uso anche di una mappa 
 raffigurante i varchi di entrata e i limiti del centro storico, 
-proveniente dal sito del comune di Milano
-\footnote{\url{https://www.comune.milano.it/aree-tematiche/mobilita/area-c}}.
+proveniente dal sito del comune di 
+Milano\footnote{\url{https://www.comune.milano.it/aree-tematiche/mobilita/area-c}}.
 
 \section{Dati riguardanti il turismo}
 
-I dati sul turismo in Italia, sono stati presi dall'archivio istat sul tema
-\footnote{\url{https://www.istat.it/it/archivio/16777}}.
+I dati sul turismo in Italia, sono stati presi dall'archivio istat sul 
+tema\footnote{\url{https://www.istat.it/it/archivio/16777}}.
 
 I dati originali sono in formato xls, contenente informazioni a partire dal 1995 fino al 2019, 
 sia regione per regione, sia divise per nord, centro e sud.
@@ -342,14 +335,13 @@ turismo nei mesi non estivi, e tasso di turisticità.
 
 \section{Immagini del traffico}
 
-Le immagini raffiguranti il traffico in tempo reale sono prese da Google Maps
-\footnote{\url{https://www.google.com/maps/}}, 
+Le immagini raffiguranti il traffico in tempo reale sono prese da Google 
+Maps\footnote{\url{https://www.google.com/maps/}}, 
 tuttavia questi snapshot contengono molti punti di interesse che coprono informazioni importanti, 
 come i nomi delle strade.
 
 Per rimuovere i punti di interesse, si sono utilizzate le API di google maps, 
-tramite il sito Jsfiddle
-\footnote{\url{https://jsfiddle.net/}}.
+tramite il sito Jsfiddle\footnote{\url{https://jsfiddle.net/}}.
 
 Si sono infine realizzati degli screenshot della zona dei Navigli e dell'incrocio tra viale 
 Bianca Maria e viale Ventidue Marzo.
@@ -378,14 +370,14 @@ la maggior parte delle linee dei tram a Milano sono pavimentate in pavè, è pos
 per quanto alcune linee coincidano, non si è trovata somiglianza sufficiente 
 per giustificare la stima.
 
-Come ultima spiaggia, si è deciso di tracciare una mappa utilizzando Geojson.io
-\footnote{\url{https://geojson.io/}}, come già fatto per le autostrade a Milano, 
+Come ultima spiaggia, si è deciso di tracciare una mappa utilizzando 
+Geojson.io\footnote{\url{https://geojson.io/}}, come già fatto per le autostrade a Milano, 
 basandosi sulla cartina di Urbanfile. 
 
 \subsection{Dati riguardanti traffico stradale}
 Per quanto riguarda i dati sul traffico stradale, anche in questo caso non è stato trovato un 
-dataset, sia nei siti di cui si è parlato in precedenza, sia su quello di autostrade
-\footnote{\url{http://www.autostrade.it/it/home}}.
+dataset, sia nei siti di cui si è parlato in precedenza, sia su quello di 
+autostrade\footnote{\url{http://www.autostrade.it/it/home}}.
 
 Il primo tentativo, per avere una stima del traffico è stato la realizzazione di uno script per 
 fare scraping da Google Maps. Quest'ultimo infatti mostra sia il traffico in tempo reale, sia 
@@ -395,13 +387,12 @@ Per quanto fosse stato possibile realizzare comunque uno script per effettuare s
 quantità di traffico nelle strade, si è optato per la ricerca di un altro dataset.
 
 Dunque si è deciso di utilizzare i dati riguardanti gli ingressi in area C a Milano, 
-trovati sul sito del comune di Milano
-\footnote{\url{https://dati.comune.milano.it/dataset}}, 
+trovati sul sito del comune di Milano\footnote{\url{https://dati.comune.milano.it/dataset}}, 
 nonostante non permetta una stima perfetta.
 
 Un'altro dataset utilizzato per stimare il numero di automobili, è quello contenente il numero di 
-patentati per regione, trovato nel sito del Ministero dei Trasporti
-\footnote{\url{dati.mit.gov.it/catalog/dataset/patenti}}.
+patentati per regione, trovato nel sito del Ministero dei 
+Trasporti\footnote{\url{dati.mit.gov.it/catalog/dataset/patenti}}.
 I dati, riguardanti i patentati fino al 2019, sono divisi in file per regione e contengono anche 
 informazioni riguardanti la provincia e data di conseguimento della patente, 
 oltre al tipo di ceritificato ottenuto.
@@ -581,7 +572,7 @@ notare lo stesso fenomeno, tra Viale Bianca Maria e Viale Premuda.
 Le immagini del contenenti indicazioni sul traffico sono state realizzate tramite le API di 
 Google Maps, tuttavia non offrono una stima ideale, poiche indicano il traffico in tempo reale e 
 il Covid-19 ha ridotto notevolmente il volume di automobili.
-\todo{lelepado: va giustificato? atrent: cosa?}
+\todo{lelepado: va giustificato? atrent: cosa? lelepado: il decremento di incidenti per covid}
 
 Per confutare l'ipotesi iniziale, si sono utilizzati i dati ricavati in precedenza, 
 degli incindenti per chilometro per municipio Milano. 
@@ -625,8 +616,8 @@ gli incidenti sono $289.32$.
 Non è detto che il maggior numero di incidenti sia causato dalla linea degli autobus, 
 in particolare, va tenuta in considerazione la topologia delle due vie parallele.
 La differenza principale tra viale Bligny e viale Beatrice d'Este è che, il primo è una via a due 
-corsie per senso di marcia, mentre il secondo è un viale a due carreggiate
-\footnote{Carreggiata: la parte della strada destinata allo scorrimento dei veicoli, 
+corsie per senso di marcia, mentre il secondo è un viale a due 
+carreggiate\footnote{Carreggiata: la parte della strada destinata allo scorrimento dei veicoli, 
 delimitata da una striscia continua o da un paracarro} 
 con sensi di marcia separati. 
 Dunque è ovvio che la maggior parte dei conducenti preferiscono un viale ad alta velocità rispetto a 
@@ -824,9 +815,10 @@ dei cerchi.
     \end{tabular}
 \end{center}
 
-Una volta trovati gli incidenti totali, è possile calcolare gli incidenti sulla base dell'area utilizzata.
-Nel seguente codice, al dataset autovelox sono aggiunte due colonne, una contenente gli incidenti totali, 
-l'altra contenente gli incidenti per chilometro.
+Una volta trovati gli incidenti totali, è possile calcolare gli incidenti sulla base dell'area 
+utilizzata.
+Nel seguente codice, al dataset autovelox sono aggiunte due colonne, una contenente gli 
+incidenti totali, l'altra contenente gli incidenti per chilometro.
 
 \begin{lstlisting}
     autovelox_2014['incidenti_vicini'] = gp.GeoSeries(df)
@@ -982,8 +974,8 @@ uomini e donne.
 Va sottolineato che un campione, preso durante la pandemia di Covid-19, in un mese di quarantena 
 non sarà mai uno stimatore estremamente accurato della percentuale di maschi e femmine al volante.
 
-Si sono, comunque, contati i conducenti delle vetture passanti a Somma Lombardo
-\footnote{sul Sempione basso, strada urbana principale, all'altezza chiesa di San Bernardino}, 
+Si sono, comunque, contati i conducenti delle vetture passanti a Somma 
+Lombardo\footnote{sul Sempione basso, strada urbana principale, all'altezza chiesa di San Bernardino}, 
 tra le 15 e le 16 di Giovedì 5 Novembre 
 (settimana predente alla seconda chiusura della Lombardia), 
 sono stati ottenuti i seguenti risultati:
@@ -1154,8 +1146,8 @@ in quanto a partire dal 2011, fino al 2016, utilizzando i dati sul numero degli 
 \todo{prova ad affiancare i grafi invece che uno sopra l'altro}
 
 L'immagine \ref{fig:rapporto-incidenti-traffico} contiene, a partire dall'alto, 
-la percentuale di accessi in area C a una determinata ora
-\footnote{Si sono utilizzati i dati dell'anno 2016, perchè non si sono trovati dataset più recenti per 
+la percentuale di accessi in area C a una determinata 
+ora\footnote{Si sono utilizzati i dati dell'anno 2016, perchè non si sono trovati dataset più recenti per 
 quanto riguarda gli accessi all'area C di Milano}, 
 e il numero di incidenti a Milano, pesati in base al questa stima del traffico.\\
 Si osserva molte similitudini tra che la stima realizzata tramite gli ingressi in area C e 
@@ -1301,8 +1293,7 @@ al numero di incidenti mensili.
 L'immagine \ref{fig:incidenti-traffico-mese} contiene due grafi, 
 il primo riguardante la frazione di traffico annuale che interessa ogni mese; 
 mentre il secondo raffigura il rapporto tra il numero di incidenti mensili, e il traffico 
-stimato mensile
-\footnote{Si è utilizzato l'anno 2012 perchè è il primo anno contenente tutti i dati completi, 
+stimato mensile\footnote{Si è utilizzato l'anno 2012 perchè è il primo anno contenente tutti i dati completi, 
 tutti gli altri anni hanno mesi o campi mancanti}.
 Nel secondo grafo della figura \ref{fig:incidenti-traffico-mese}, si osserva come, per quanto agosto 
 abbia il minor numero di incidenti mensili, una volta tenuto conto della minore quantità di traffico, 
@@ -1346,9 +1337,8 @@ incidenti sia per l'anno che per il mese di Agosto individuale.
 
 Ipotizzando invece, di comparare più nel dettaglio alcune province, meta di vacanze estive, 
 con Milano, ciò che ci si aspetta da queste ultime è di avere un incremento di incidenti nei mesi 
-di Luglio e Agosto
-\footnote{Si è utilizzato l'anno più recente per i dati a disposizione, a partire dal 2014 non sono 
-più disponibili dati riguardanti il mese}.
+di Luglio e Agosto\footnote{Si è utilizzato l'anno più recente per i dati a disposizione, 
+a partire dal 2014 non sono più disponibili dati riguardanti il mese}.
 
 Per eseguire questo confronto sono state prese in considerazione le località di Rimine e Palermo, 
 per mostrare che alcune province, come la prima, confermano l'ipotesi, mentre altre, come la seconda, 
@@ -1626,9 +1616,8 @@ numero di feriti, il che fa pensare che semplicemente avvenga un alto numero di
 questo tipo di sinistro.
 
 Le percentuali di osservazione di uno degli incidenti nel grafo sono riportate nella 
-tabella sottostante
-\footnote{La somma delle percentuali dei tipi di incidenti dovrebbe ammontare a 1, ma sono state 
-riportate solo quattro categorie, e non tutte.}: 
+tabella sottostante\footnote{La somma delle percentuali dei tipi di incidenti dovrebbe 
+ammontare a 1, ma sono state riportate solo quattro categorie, e non tutte.}: 
 
 \begin{center}
     \def\arraystretch{1.5}%  
@@ -1744,9 +1733,8 @@ Non tutte queste fasce però contengono lo stesso numero di anni di età, per es
     pedoni_morti = pd.Series(pedoni_morti_vals, index=pedoni_morti.index)
 \end{lstlisting}
 
-Se si normalizza per anni contenuti in ogni fascia, ipotizzando un numero
-costante di persone di ogni età
-\footnote{La normalizzazione tiene conto che la fascia di età \textit{65+} vale 
+Se si normalizza per anni contenuti in ogni fascia, ipotizzando un numero costante di persone di ogni 
+età\footnote{La normalizzazione tiene conto che la fascia di età \textit{65+} vale 
 venti anni.}, 
 si ottiene un grafo, visibile in figura \ref{fig:eta-pedoni}, che, per quanto riguarda 
 i pedoni feriti, è molto differente.
@@ -1862,9 +1850,9 @@ si nota che non cambia molto di anno in anno, e le regioni con maggiore numero d
 rimangono sempre Lombardia e Veneto.
 
 Per controllare le tendenze di incremento e decremento di incidenti per regione, 
-si è calcolata la deviazione standard per ogni regione.
+si è calcolata la deviazione standard per ogni regione
 \footnote{Deviazione standard: misura della distanza dei dati di un campione dalla 
-media\cite{PROB.E.STATISTICA:2}}
+media\cite{PROB.E.STATISTICA:2}}.
 Risulta che la regione con maggiore cambiamento di incidenti di anno in anno è il Lazio, 
 con $324$ incidenti l'anno, 
 \todo{lelepado: è giusto dire questo?}
