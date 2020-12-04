@@ -102,14 +102,14 @@ Lo scopo di questo lavoro, è mostrare che tipo di analisi è possibile realizza
 avendo a disposizione una buona quantità di dati liberi, e come queste analisi possano 
 influenzare le decisioni delle persone, come per esempio la scelta di una nuova casa, 
 mettendo in luce aspetti non tenuti in considerazione, o le cui informazioni semplicemente 
-non sono disponibili da fonti \textit{normali} come quotidiani o siti internet.\\
+non sono disponibili da fonti \textit{normali} come quotidiani o siti internet.
 
 Esplorando l'esempio fatto in precedenza, ci si potrebbe domandare quali sono le zone 
 di Milano più soggette a incidenti, o con maggiore coinvolgimento di pedoni, 
 o ancora se la tipologia di strada influenza il numero di incidenti. 
 Queste domande raramente trovano risposta nelle classiche fonti di informazione, 
 ma in molti casi possono spostare l'ago della bilancia per decisioni più o meno 
-importanti.\\
+importanti.
 
 Ovviamente il trovare una casa non è l'unico motivo per utilizzare dati liberi. 
 Spesso, questi sono estremamente utili a garantire trasparenza tra istituzioni, 
@@ -119,8 +119,8 @@ per un utente l'ottenimento dei dati.
 La garanzia di \textit{poter fare i conti in tasca alle istituzioni}, è un valore che molto 
 spesso è contrapposto con il diritto alla privacy, anche in modo completamente ingiustificato, 
 e esisterebbero numerosi vantaggi nell'obbligare il rilascio di più informazioni da parte di 
-aziende e enti.\\
-\todo{elaborare meglio il pezzo sopra}
+aziende e enti.
+\todo{elaborare meglio il pezzo sopra - atrent: concordo, ma la direzione è quella}
 
 Questo lavoro è da intendere come una dimostrazione delle possibili analisi realizzabili 
 tramite dati pubblici, e di quante altri studi sarebbe possibile eseguire se fossero 
@@ -150,14 +150,14 @@ Particolarmente interessanti sono anche i campi riguardanti il tipo di incrocio 
 avvenuto il sinistro, come rettilineo, rotonda o semaforo.
 
 Per quanto riguarda i dati geolocalizzati, 
-la fonte è invece il sito web TheSubmarine \cite{SUBMARINE:1}
+la fonte è invece il sito web TheSubmarine \cite{SUBMARINE:1}\todo{atrent: avevo corretto citazione, come mai l'hai ripristinata? attenzione ai merge, ho notato che hai eliminato roba mia... vedi commit 317b1e33694b45edf4eff023c3bc5a9b44a91028}
 che in un articolo riguardante l'incidentalità a Milano, 
 ha ottenuto dall'ente Istat la pubblicazione di una parte degli 
 incidenti avvenuti nella città nel 2016, con la relativa posizione.
 Il dataset in questione è abbastanza povero, e contiene solamente l'incidente con la 
 propria posizione, indicata tramite coordinate geografiche.
 
-L'ultimo dataset, trovato dopo veloce consultazione con un dipendente Istat, 
+L'ultimo dataset, trovato dopo veloce consultazione con un dipendente Istat\todo{atrent: che immagino non sia citabile?}, 
 è stato il dataset ACI \cite{ACI:1}
 \'E stato consigliato in quanto, questi dati, specifici a autostrade e strade statali, 
 indicano anche il nome della rispettiva via.
@@ -581,7 +581,7 @@ notare lo stesso fenomeno, tra Viale Bianca Maria e Viale Premuda.
 Le immagini del contenenti indicazioni sul traffico sono state realizzate tramite le API di 
 Google Maps, tuttavia non offrono una stima ideale, poiche indicano il traffico in tempo reale e 
 il Covid-19 ha ridotto notevolmente il volume di automobili.
-\todo{lelepado: va giustificato?}
+\todo{lelepado: va giustificato? atrent: cosa?}
 
 Per confutare l'ipotesi iniziale, si sono utilizzati i dati ricavati in precedenza, 
 degli incindenti per chilometro per municipio Milano. 
@@ -2240,7 +2240,7 @@ per non parlare del fatto che entrambe le strade passano attraverso un alto nume
     \includegraphics[width=0.5\linewidth]{../src/meteo/temp_incidenti_2013.png}
     \caption{Incidenti, temperature e umidità medi per mese nel 2011 e nel 2013}
     \label{fig:incidenti-temp}
-\end{figure}
+\end{figure}\todo{errore label 2011 invece di 2013}
 
 La figura \ref{fig:incidenti-temp}\todo{NEW} mostra, partendo dall'alto, il numero di incidenti 
 avvenuti per mese, la temperatura media per mese, e infine l'umidità media.
@@ -2282,7 +2282,7 @@ Ciò non significa che, per esempio nel 2011, sia stata l'alta temperatura a pro
 tutti gli incidenti, anzi, è molto più probabile che il fattore con maggiore 
 influenza sia proprio il mese, e non la temperatura o l'umidità.
 In altre parole, la correlazione tra due fenomeni non ne implica la causa.
-
+\todo{atrent: esatto, va esplicitato bene che è un'analisi che lascia il tempo che trova}
 
 %\addcontentsline{toc}{chapter}{Bibliografia}
 \printbibliography
