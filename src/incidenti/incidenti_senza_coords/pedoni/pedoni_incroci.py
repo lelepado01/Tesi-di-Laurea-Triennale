@@ -47,7 +47,8 @@ import heatmap as H
 fig, ax = plt.subplots()
 
 im, cbar = H.heatmap(tab, tab.index, tab.columns, ax=ax, xticks_rotated=True,
-                   cmap="YlGn", cbarlabel="Incidenti all'anno (2018)")
+                   cmap="YlGn", cbarlabel="Incidenti all'anno per categoria (2018)")
 texts = H.annotate_heatmap(im, valfmt="{x}")
+plt.ylabel("Numero di pedoni coinvolti")
 fig.tight_layout()
 plt.show()
