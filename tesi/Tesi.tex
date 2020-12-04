@@ -15,16 +15,14 @@
 \usepackage[style=numeric]{biblatex}
 
 \usepackage{todonotes}
+\usepackage{refcheck}
 
 \usepackage{listings}
 % Per generare il file PDF aderente alle specifiche PDF/A-1b. Verificarne poi la validità.
 %\usepackage[a-1b]{pdfx}
-
 \usepackage{hyperref}
 \usepackage{graphicx}
-
-\usepackage{refcheck}
-
+\usepackage{csquotes}
 \usepackage{color, colortbl}
 
 \lstset{ %
@@ -326,8 +324,6 @@ Oltre a utilizzare i dati riguardo agli accessi all'area C, si è fatto uso anch
 raffigurante i varchi di entrata e i limiti del centro storico, 
 proveniente dal sito del comune di Milano
 \footnote{\url{https://www.comune.milano.it/aree-tematiche/mobilita/area-c}}.
-
-\todo{lelepado: devo metterla questa? è solamente un'immagine}
 
 \section{Dati riguardanti il turismo}
 
@@ -771,6 +767,7 @@ tutti gli autovelox, e confrontarli con le vie della tabella.
     \caption{Autovelox installati nel 2014 e quelli il cui anno di installazione è ignoto}
     \label{fig:autovelox-indici}
 \end{figure}
+\todo{NEW}
 
 Una volta identificate le linee riguardanti gli autovelox interessati, è possibile separarli 
 dal dataset completo.
@@ -786,6 +783,7 @@ effetto sugli incidenti, visto che i dati sui sinistri sono successivi all'insta
     \caption{Autovelox e Incidenti a Milano}
     \label{fig:autovelox-incidenti}
 \end{figure}
+\todo{NEW}
 
 La mappa \ref{fig:autovelox-incidenti} è stata realizzata contando gli incidenti avvenuti 
 nel raggio di un chilometro a ogni autovelox.
@@ -1035,9 +1033,8 @@ Tuttavia, in periodo di Covid-19, una stima di questo tipo non sarà mai accurat
 Per quanto riguarda, invece, fattori che potrebbero distrarre il conducente, uno dei più 
 ovvi, è l'utilizzo del cellulare nell'automobile.
 
-\todo{finire di leggere https://www.isfort.it/wp-content/uploads/2019/09/Rapporto\_Mobilita\_2018.pdf}
-%https://www.isfort.it/wp-content/uploads/2019/09/Rapporto_Mobilita_2018.pdf
-\todo{https://sbilanciamoci.info/meno-passeggeri-piu-automobili-4357/ qui si stimano}
+\todo{finire di leggere \url{https://www.isfort.it/wp-content/uploads/2019/09/Rapporto_Mobilita_2018.pdf}}
+\todo{\url{https://sbilanciamoci.info/meno-passeggeri-piu-automobili-4357/} qui si stimano}
 
 %\clearpage
 \subsection{L'uso del telefono cellulare ha influenzato il numero di incidenti?}
@@ -1046,7 +1043,7 @@ Per quanto non siano disponibili dati su questo ambito, si potrebbe confrontare 
 anni tra 2010 e 2013, in cui l'uso del cellulare in macchina ancora non era frequente, 
 rispetto agli anni più recenti.
 
-\todo{https://www.lautomobile.aci.it/articoli/2019/04/17/disattenzione-al-volante.html}
+\todo{\url{https://www.lautomobile.aci.it/articoli/2019/04/17/disattenzione-al-volante.html}}
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/anno/incremento_incidenti.png}
@@ -1498,6 +1495,7 @@ Le percentuali delle prime quattro categorie di incidenti sono riportate nella f
     \caption{Categorie più frequenti di incidente, divise per anno}
     \label{fig:rapporto-tipologie}
 \end{figure}
+\todo{NEW}
 
 Per tutte le annate disponibili, le prime due categorie di incidenti rimangono le stesse, cioè 
 \textit{Scontro frontale-laterale} e \textit{tamponamento}. Anche le percentuali 
@@ -1596,7 +1594,7 @@ I valori sono riportati nella tabella sottostante:
     \begin{tabular}{ |c|c| }
         \hline
         \rowcolor{TableGray}
-        Tra morti e feriti     & 0.96 \\ 
+        Tra morti e feriti      & 0.96 \\ 
         Tra incidenti e feriti  & 0.99 \\
         \rowcolor{TableGray}
         Tra incidenti e morti   & 0.96 \\
@@ -1618,6 +1616,7 @@ un maggior numero di feriti.
     \caption{Numero di feriti in base alla natura dell'incidente}
     \label{fig:numero-feriti}
 \end{figure}
+\todo{NEW}
 
 Nella figura \ref{fig:numero-feriti} si deduce che esistono tipologie di sinistri che 
 favoriscono la presenza di un solo ferito, come gli sbandamenti. 
@@ -1681,6 +1680,7 @@ ordinati in base alla tipologia di intersezioni e al numero di persone coinvolte
     \caption{Tipologia di intersezioni e pedoni coinvolti}
     \label{fig:pedoni-intersezioni}
 \end{figure}
+\todo{mettere a posto labels}
 
 Similmente a come si era visto nel grafo\ref{fig:tipo-intersezioni}, nella nuova figura spicca 
 un alto numero di rettilinei.
@@ -1697,11 +1697,11 @@ dei veicoli.
     \caption{Tipologia di intersezioni e pedoni coinvolti, ignorando gli outlier}
     \label{fig:pedoni-no-rett}
 \end{figure}
+\todo{NEW}
 
 Se si escludono gli outlier
 \footnote{In un campione di osservazioni, un outlier è un valore anomalo, 
 particolarmente distante dagli altri dati disponibili \cite{PROB.E.STATISTICA:1}}
-\todo{aggiungere libro statistica a bibliografia}, 
 come in figura \ref{fig:pedoni-no-rett}, il grafo ottenuto è più bilanciato, 
 con \textit{incroci} e \textit{intersezioni non segnalate} che spiccano come tipi di strada con 
 maggiore coinvolgimento di pedoni, e le restanti categorie non troppo distanti.
@@ -1974,6 +1974,7 @@ tutti i mesi invernali.
     \caption{Incidenti per regione nei mesi estivi e invernali}
     \label{fig:estate-inverno}
 \end{figure}
+\todo{NEW}
 
 Nella figura \ref{fig:estate-inverno}, sono rappresentati i numeri di incidenti presenti in mesi 
 invernali e estivi, divisi per regione.
@@ -2125,6 +2126,7 @@ a seconda dell'anno, il numero di incidenti rispecchia questo cambiamento?
     \caption{Incidenti in Strade per anno}
     \label{fig:autostrade-anno}
 \end{figure}
+\todo{rifare grafo}
 
 Controllando le prime cinque strade per incidentalità ogni anno, 
 raffigurate nel grafo \ref{fig:autostrade-anno}, si ottiene un'immagine 
@@ -2243,6 +2245,7 @@ per non parlare del fatto che entrambe le strade passano attraverso un alto nume
     \caption{Incidenti, temperature e umidità medi per mese nel 2011 e nel 2013}
     \label{fig:incidenti-temp}
 \end{figure}
+\todo{NEW}
 
 La figura \ref{fig:incidenti-temp} mostra, partendo dall'alto, il numero di incidenti 
 avvenuti per mese, la temperatura media per mese, e infine l'umidità media.
