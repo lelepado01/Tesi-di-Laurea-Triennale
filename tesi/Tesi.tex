@@ -1684,8 +1684,10 @@ dei veicoli.
     \label{fig:pedoni-no-rett}
 \end{figure}
 
-Se si escludono gli outlier
-\footnote{In un campione di osservazioni, un outlier è un valore anomalo, 
+\todo{specificare procedimento}
+\todo{provare, invece di eliminare outlier, a usare scala logaritmica per x}
+
+Se si escludono gli outlier\footnote{In un campione di osservazioni, un outlier è un valore anomalo, 
 particolarmente distante dagli altri dati disponibili \cite{PROB.E.STATISTICA:1}}
 come in figura \ref{fig:pedoni-no-rett}, il grafo ottenuto è più bilanciato, 
 con \textit{incroci} e \textit{intersezioni non segnalate} che spiccano come tipi di strada con 
@@ -2228,7 +2230,7 @@ per non parlare del fatto che entrambe le strade passano attraverso un alto nume
     \includegraphics[width=0.5\linewidth]{../src/meteo/temp_incidenti_2013.png}
     \caption{Incidenti, temperature e umidità medi per mese nel 2011 e nel 2013}
     \label{fig:incidenti-temp}
-\end{figure}\todo{errore label 2011 invece di 2013}
+\end{figure}
 
 La figura \ref{fig:incidenti-temp} mostra, partendo dall'alto, il numero di incidenti 
 avvenuti per mese, la temperatura media per mese, e infine l'umidità media.
@@ -2270,7 +2272,9 @@ Ciò non significa che, per esempio nel 2011, sia stata l'alta temperatura a pro
 tutti gli incidenti, anzi, è molto più probabile che il fattore con maggiore 
 influenza sia proprio il mese, e non la temperatura o l'umidità.
 In altre parole, la correlazione tra due fenomeni non ne implica la causa.
-\todo{atrent: esatto, va esplicitato bene che è un'analisi che lascia il tempo che trova}
+
+\todo{la velocità del vento è una conclusione che merita approfondimento (avendo più dati)}
+\todo{esempio di campioni con correlazione alta ma completamente scollegati}
 
 %\addcontentsline{toc}{chapter}{Bibliografia}
 \printbibliography
