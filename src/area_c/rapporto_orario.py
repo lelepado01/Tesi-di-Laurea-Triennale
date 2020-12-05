@@ -27,20 +27,18 @@ ora_media = ora.mean()
 
 accessi_area_c_per_ora =  ora.drop(index=24)
 
-plt.subplot(2,1,1)
-plt.fill_between(accessi_area_c_per_ora.index, accessi_area_c_per_ora / accessi_area_c_per_ora.sum(), color='#93c65f')
-plt.xticks(range(0,24))
-plt.ylabel("Percentuale")
-plt.title("Traffico in Area C")
+plt.subplot(1,2,1)
+plt.fill_between(accessi_area_c_per_ora.index, accessi_area_c_per_ora / accessi_area_c_per_ora.sum(), color='#66ad9f')
+plt.xticks(range(0,24, 2))
+plt.ylabel("Percentuale di traffico in Area C")
 plt.tight_layout()
 
 rapp_inc_traff = incidenti_per_ora / accessi_area_c_per_ora
 
-plt.subplot(2,1,2)
-plt.fill_between(rapp_inc_traff.index, rapp_inc_traff, color='#c6935f')
+plt.subplot(1,2,2)
+plt.fill_between(rapp_inc_traff.index, rapp_inc_traff, color='#9f66ad')
 plt.ylabel("Rapporto tra incidenti e traffico")
-plt.title("Pericolosità dell'orario")
-plt.xticks(range(0,24))
+plt.xticks(range(0,24, 2))
 plt.tight_layout()
 
 plt.show()

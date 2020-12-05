@@ -40,18 +40,15 @@ perc_traffico = df / df.sum()
 rapp = mesi_incidenti / df
 
 
-plt.subplot(2,1,1)
-plt.fill_between(perc_traffico.index, perc_traffico, color='#93c65f')
-plt.ylabel("Percentuale")
-plt.title("Traffico in Area C")
+plt.subplot(1,2,1)
+plt.fill_between(perc_traffico.index, perc_traffico, color='#66ad9f')
+plt.ylabel("Percentuale di traffico in Area C")
 plt.xticks(range(1,13))
 plt.tight_layout()
 
-plt.subplot(2,1,2)
-
-plt.fill_between(rapp.index, rapp, color='#c6935f')
+plt.subplot(1,2,2)
+plt.fill_between(rapp.index, rapp, color='#9f66ad')
 plt.xticks(range(1, 13))
 plt.ylabel("Rapporto tra incidenti e traffico")
-plt.title("Pericolosità del mese")
 plt.tight_layout()
 plt.show()
