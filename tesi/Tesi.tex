@@ -270,13 +270,16 @@ Il dataset contiene i campi specificati, misurati ogni ora, a partire dal 2008, 
 
 \section{Dati riguardanti trasporti pubblici}
 I dati riguardanti i trasporti pubblici trovati hanno due provenienze, i primi sono 
-dati riferiti alle linee ATM, scaricati sul sito del comune di Milano\footnote{\url{https://dati.comune.milano.it/dataset/ds532-atm-composizione-percorsi-linee-di-superficie-urbane}}.
+dati riferiti alle linee ATM, scaricati sul sito del comune di 
+Milano\footnote{\url{https://dati.comune.milano.it/dataset/ds532-atm-composizione-percorsi-linee-di-superficie-urbane}}.
 Dallo stesso sito proviene anche il dataset riguardante gli autobus turistici, che 
-contiene in particolare le aree di sosta di questi ultimi\footnote{\url{https://dati.comune.milano.it/dataset/ds740_sosta_bus_gt_turistici}}.
+contiene in particolare le aree di sosta di questi 
+ultimi\footnote{\url{https://dati.comune.milano.it/dataset/ds740_sosta_bus_gt_turistici}}.
 
 La principale funzione di questi dataset è l'ottenere i percorsi delle linee di trasporto pubblico, 
 per confrontare il numero di incidenti, tuttavia si è anche fatto uso di un dataset contenente 
-solamente le linee tranviarie, trovato sul geoportale del comune di Milano\footnote{\url{https://geoportale.comune.milano.it/ATOM/SIT/DBT2012/DBT2012_STRATO_01_Dataset_1.xml}}.
+solamente le linee tranviarie, trovato sul geoportale del comune di 
+Milano\footnote{\url{https://geoportale.comune.milano.it/ATOM/SIT/DBT2012/DBT2012_STRATO_01_Dataset_1.xml}}.
 
 Questo dataset è molto ampio e contiene altri livelli di informazioni, tra cui per esempio, 
 le strade o le ferrovie passanti per Milano. 
@@ -383,13 +386,26 @@ Dunque si è deciso di utilizzare i dati riguardanti gli ingressi in area C a Mi
 trovati sul sito del comune di Milano\footnote{\url{https://dati.comune.milano.it/dataset}}, 
 nonostante non permetta una stima perfetta.
 
-Un'altro dataset utilizzato per stimare il numero di automobili, è quello contenente il numero di 
-patentati per regione, trovato nel sito del Ministero dei 
+Un'altro dataset utilizzato per stimare il numero di automobili, è quello contenente 
+il numero di patentati per regione, trovato nel sito del Ministero dei 
 Trasporti\footnote{\url{dati.mit.gov.it/catalog/dataset/patenti}}.
-I dati, riguardanti i patentati fino al 2019, sono divisi in file per regione e contengono anche 
-informazioni riguardanti la provincia e data di conseguimento della patente, 
-oltre al tipo di ceritificato ottenuto.
+I dati, riguardanti i patentati fino al 2019, sono divisi in file per regione e 
+contengono anche informazioni riguardanti la provincia e data di conseguimento della 
+patente, oltre al tipo di ceritificato ottenuto.
 
+\subsection{Dati su strade, incroci, semafori}
+
+In alcuni capitoli, in particolare quelli riguardanti le tipologie di incidente e 
+di incrocio, i dati che non si ha a disposizione, sono soprattutto quelli sul 
+numero totale di categoria di strade.
+
+Si è innanzi tutto tentata una ricerca, in generale, di articoli o dataset online, con 
+parole chiave come \textit{numero di semafori Milano} o \textit{strade incroci semafori}.
+Non trovando alcun riscontro, si è ricercato l'argomento nei principali siti contenenti 
+dataset, elencati in precedenza. 
+Le informazioni più simili a ciò che si stava cercando, sono state trovate sul geoportale 
+del comune di Milano, nel dataset del manto stradale.
+\todo{vedere se dataset è utile}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Dati Geolocalizzati}
@@ -1673,9 +1689,7 @@ dei veicoli.
     \caption{Tipologia di intersezioni e pedoni coinvolti, ignorando gli outlier}
     \label{fig:pedoni-no-rett}
 \end{figure}
-
 \todo{specificare procedimento}
-\todo{provare, invece di eliminare outlier, a usare scala logaritmica per x}
 
 Se si escludono gli outlier\footnote{In un campione di osservazioni, un outlier è un valore anomalo, 
 particolarmente distante dagli altri dati disponibili \cite{PROB.E.STATISTICA:1}}
@@ -1936,6 +1950,7 @@ conseguenza delle vacanze estive.
     \caption{Incidenti per regione nei mesi di Gennaio e Agosto}
     \label{fig:incidenti-estate-inverno}
 \end{figure}
+\todo{togliere questo grafo}
 
 Il grafo \ref{fig:incidenti-estate-inverno} mostra che, per alcune regioni, 
 la differenza del  numero di incidenti tra Agosto e Gennaio è molto ampia, 
