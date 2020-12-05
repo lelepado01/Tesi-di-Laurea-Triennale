@@ -43,9 +43,8 @@ incidenti_pedoni = pd.DataFrame([incidenti_labels, incidenti_pedoni['pedoni_feri
 tab = pd.DataFrame(pd.crosstab(incidenti_pedoni['tipo_incrocio'], incidenti_pedoni['pedoni_feriti']))
 media = tab[1].mean()
 
-tab = tab[tab.index != 'Rettilineo'].transpose()
+tab = tab.transpose()
 tab.index = tab.index.astype(int)
-
 
 pedone_no_rett = tab[tab.index == 1].transpose()
 
@@ -54,8 +53,10 @@ pedone_no_rett = pedone_no_rett[pedone_no_rett > 150]
 
 pedone_no_rett.plot.barh(width=0.8, color='#cead65')
 plt.plot([media, media], [-1,10], color='#ce7865')
-plt.text(media, 6.8, "Media (tutti gli incroci)")
+plt.text(media, 7.8, "Media (tutti gli incroci)")
 plt.ylabel("")
-plt.xlabel("Numero di incidenti per anno (2018)")
+plt.xscale('log')
+plt.xticks([100,1000,10000])
+plt.xlabel("Numero di incidenti su scala logaritmica per anno (2018)")
 plt.tight_layout()
 plt.show()
