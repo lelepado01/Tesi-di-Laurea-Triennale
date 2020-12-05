@@ -44,6 +44,7 @@
     escapeinside={\%*}{*)}          % if you want to add a comment within your code
 }
 
+\newcommand{\columnstyle}[1]{\texttt{#1}}
 \definecolor{TableGray}{gray}{0.9}
 
 \bibliography{Biblio}
@@ -74,17 +75,12 @@
 \begin{flushleft}
 {\large{\bf Relatore:}}\\
 {\large{\bf Andrea Trentini}}\\
-\vspace{4mm}
-{\large{\bf Correlatore:}}\\
-{\large{\bf CORREL}}\\
 \end{flushleft}
 \vspace{12mm}
 \begin{center}
 {\large{\bf Anno Accademico 2020/2021}}
 \end{center}
 \end{titlepage}
-
-\todo{lelepado: il correlatore va tolto dalla prima pagina?}
 
 
 \tableofcontents
@@ -94,9 +90,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Introduzione}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\section{Scopo del lavoro}
-\todo{lelepado: tengo la section con scopo del lavoro? O lascio introduzione e basta?}
 
 Lo scopo di questo lavoro, è mostrare che tipo di analisi è possibile realizzare 
 avendo a disposizione una buona quantità di dati liberi, e come queste analisi possano 
@@ -355,8 +348,8 @@ I dati in questione sono stati cercati sui principali siti di opendata
 \footnote{\url{https://dati.comune.milano.it/dataset}}
 \footnote{\url{https://www.dati.lombardia.it/}}
 \footnote{\url{https://www.dati.gov.it/}}
-tramite parole chiave come \textit{strada}, \textit{manto stradale}, \textit{pave}, 
-\textit{composizione strada}.
+tramite parole chiave come \columnstyle{strada}, \columnstyle{manto stradale}, 
+\columnstyle{pave}, \columnstyle{composizione strada}.
 
 Una possibile risorsa trovata è una mappa utilizzata in un articolo del blog urbanfile \cite{URBANFILE:1}
 Dopo una rapida consultazione tuttavia, non risulta esserci alcun dataset contenente informazioni 
@@ -1236,7 +1229,7 @@ meno persone sono sveglie nelle ore notturne.
 Sarebbe interessante individuare eventuali cali o incrementi di incidenti, per quanto riguarda gli 
 incidenti su intervallo mensile.
 Il dataset sugli accessi all'area C è presente, nel caso della divisione per mese, fino all'anno 2018, 
-tuttavia i dati istat su incidenti contengono il campo \textit{mese} solo fino all'anno 2013,
+tuttavia i dati istat su incidenti contengono il campo \columnstyle{mese} solo fino all'anno 2013,
 dunque i grafi sull'argomento prenderanno in considerazione quest'annata più recente.
 
 \begin{figure}
@@ -1299,7 +1292,8 @@ Nel secondo grafo della figura \ref{fig:incidenti-traffico-mese}, si osserva com
 abbia il minor numero di incidenti mensili, una volta tenuto conto della minore quantità di traffico, 
 risulta essere il mese più pericoloso.
 
-A partire dal 2014, il campo \textit{mese} è stato convertito nella colonna \textit{trimestre}.
+A partire dal 2014, il campo \columnstyle{mese} è stato convertito nella 
+colonna \columnstyle{trimestre}.
 La figura \ref{fig:milano-trimestri} mostra la quantità di incidenti per trimestre per ogni 
 anno a partire dal 2010 fino al 2018.
 
@@ -1485,15 +1479,15 @@ Le percentuali delle prime quattro categorie di incidenti sono riportate nella f
 \end{figure}
 
 Per tutte le annate disponibili, le prime due categorie di incidenti rimangono le stesse, cioè 
-\textit{Scontro frontale-laterale} e \textit{tamponamento}. Anche le percentuali 
+\columnstyle{Scontro frontale-laterale} e \columnstyle{tamponamento}. Anche le percentuali 
 corrispondenti restano molto simili, con la prima categoria sempre attorno al $35\%$ e 
 la seconda attorno al $18\%$.
 
-\todo{lelepado: va bene se uso italico per indicare i campi di un dataset?}
+\todo{usa command invece di textit e prova roboto}
 
 La terza categoria invece, è dove si inizano ad osservare delle differenze, poichè nelle 
-prime annate si alternano \textit{investimento di pedoni} e \textit{scontro laterale}, 
-con percentuali simili, attorno al $12\%$.
+prime annate si alternano \columnstyle{investimento di pedoni} e 
+\columnstyle{scontro laterale}, con percentuali simili, attorno al $12\%$.
 
 Ciò che è possibile ricavare dalla figura \ref{fig:rapporto-tipologie} , è che non 
 sembrano esistere particolari fattori che influenzano quali tipi di incidenti vengono 
@@ -1609,8 +1603,8 @@ un maggior numero di feriti.
 Nella figura \ref{fig:numero-feriti} si deduce che esistono tipologie di sinistri che 
 favoriscono la presenza di un solo ferito, come gli sbandamenti. 
 \'E possibile arrivare a questa conclusione perchè il numero di incidenti con un solo ferito, 
-nella colonna \textit{sbandamento} è tra i più alti, mentre la stessa categoria con due persone 
-ferite ha volume molto più basso.
+nella colonna \columnstyle{sbandamento} è tra i più alti, mentre la stessa categoria 
+con due persone ferite ha volume molto più basso.
 Al contrario, in incidenti come i tamponamenti, sono molto frequenti per ogni 
 numero di feriti, il che fa pensare che semplicemente avvenga un alto numero di 
 questo tipo di sinistro.
@@ -1690,7 +1684,7 @@ dei veicoli.
 Se si escludono gli outlier\footnote{In un campione di osservazioni, un outlier è un valore anomalo, 
 particolarmente distante dagli altri dati disponibili \cite{PROB.E.STATISTICA:1}}
 come in figura \ref{fig:pedoni-no-rett}, il grafo ottenuto è più bilanciato, 
-con \textit{incroci} e \textit{intersezioni non segnalate} che spiccano come tipi di strada con 
+con \columnstyle{incroci} e \columnstyle{intersezioni non segnalate} che spiccano come tipi di strada con 
 maggiore coinvolgimento di pedoni, e le restanti categorie non troppo distanti.
 
 \todo{altro / conclusione?}
@@ -1702,8 +1696,8 @@ maggiore coinvolgimento di pedoni, e le restanti categorie non troppo distanti.
 probabilità di essere ferito rispetto a una persona di settanta.
 \'E possibile osservare questo comportamento utilizzando i dati che si ha a disposizione?
 
-Per prima cosa si sono utilizzati i campi \textit{età\_pedone} per creare un grafo in cui sia 
-visibile il numero di pedoni feriti e morti, divisi per fascia di età.
+Per prima cosa si sono utilizzati i campi \columnstyle{età\_pedone} per creare un grafo 
+in cui sia visibile il numero di pedoni feriti e morti, divisi per fascia di età.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/pedoni/eta_pedoni_iniziale.png}
@@ -1712,8 +1706,8 @@ visibile il numero di pedoni feriti e morti, divisi per fascia di età.
 \end{figure}
 
 Dal grafo \ref{fig:eta-pedoni-iniziale} si osserva che la fascia di età più colpita 
-è quella dei \textit{65+} anni, tuttavia esiste un secondo picco, nel grafo dei pedoni feriti, 
-che  comprende le fasce tra trenta e cinquantaquattro anni di età.
+è quella dei \columnstyle{65+} anni, tuttavia esiste un secondo picco, nel grafo dei 
+pedoni feriti, che  comprende le fasce tra trenta e cinquantaquattro anni di età.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/pedoni/eta_pedoni.png}
@@ -1723,7 +1717,7 @@ che  comprende le fasce tra trenta e cinquantaquattro anni di età.
 \end{figure}
 
 Non tutte queste fasce però contengono lo stesso numero di anni di età, per esempio 
-\textit{30-44} contiene quindici anni, mentre \textit{18-20} ne contiene solo due.
+\columnstyle{30-44} contiene quindici anni, mentre \columnstyle{18-20} ne contiene solo due.
 
 \begin{lstlisting}[language=Python]
     numero_anni = np.array([5, 5, 5, 3, 10, 15, 10, 10, 20])
@@ -1735,9 +1729,9 @@ Non tutte queste fasce però contengono lo stesso numero di anni di età, per es
     pedoni_morti = pd.Series(pedoni_morti_vals, index=pedoni_morti.index)
 \end{lstlisting}
 
-Se si normalizza per anni contenuti in ogni fascia, ipotizzando un numero costante di persone di ogni 
-età\footnote{La normalizzazione tiene conto che la fascia di età \textit{65+} vale 
-venti anni.}, 
+Se si normalizza per anni contenuti in ogni fascia, ipotizzando un numero costante di 
+persone di ogni età\footnote{La normalizzazione tiene conto che la fascia di età 
+\columnstyle{65+} vale venti anni.}, 
 si ottiene un grafo, visibile in figura \ref{fig:eta-pedoni}, che, per quanto riguarda 
 i pedoni feriti, è molto differente.
 \todo{itera su questo concetto}
@@ -1777,15 +1771,17 @@ sono state riportate nella tabella sottostante:
 Per poter essere utilizzate, le fasce trovate sono state sommate, e in alcuni casi si è dovuto 
 stimare la percentuale di popolazione con determinata età in quanto si sarebbe dovuto dividere 
 una fascia.
-Un esempio di questa divisione è la fascia dei \textit{15-19} anni presente nei dati della fonte. 
-I dati Istat hanno invece una categoria \textit{15-17} anni e un'altra \textit{18-29} anni. 
+Un esempio di questa divisione è la fascia dei \columnstyle{15-19} anni presente nei 
+dati della fonte. 
+I dati Istat hanno invece una categoria \columnstyle{15-17} anni e un'altra 
+\columnstyle{18-29} anni. 
 \'E dunque necessario spostare i diciotto e i diciannovenni dalla prima alla seconda fascia. 
 In questi casi, si è semplicemente assunto che il numero di individui sia omogeneamente 
-diviso per età, cioè nella fascia \textit{15-19} si ha lo stesso numero di persone con 
+diviso per età, cioè nella fascia \columnstyle{15-19} si ha lo stesso numero di persone con 
 quindici e sedici anni.
 Seguendo questa logica, per spostare i due anni di età nella categoria successiva, si divide 
-la percentuale di \textit{15-19} per cinque e si moltiplica per due. Il risultato ottento 
-lo si aggiunge alla fascia \textit{18-29}.
+la percentuale di \columnstyle{15-19} per cinque e si moltiplica per due. 
+Il risultato ottento lo si aggiunge alla fascia \columnstyle{18-29}.
 
 \begin{lstlisting}
     correct_order =         ['0-5  ', '6-9  ', '10-14', '15-17', '18-29', '30-44', '45-54', '55-64','65+  ']
@@ -1805,8 +1801,8 @@ Una volta aver corretto l'immagine precendente, si ottiene la figura \ref{fig:et
 dove, soprattutto nel grafo di destra, è presente una curva particolarmente alta 
 nelle fasce più anziane.
 Anche nel grafo di sinistra è presente la stessa impennata in corrispondenza 
-della categoria dei \textit{65+} ma, a partire dalla fascia 
-dei \textit{30-44} anni, è già presente un sostanziale incremento dei feriti.
+della categoria dei \columnstyle{65+} ma, a partire dalla fascia 
+dei \columnstyle{30-44} anni, è già presente un sostanziale incremento dei feriti.
 
 L'incremento di feriti nelle fasce più anziane, si può speculare sia dovuto al fatto che 
 questi ultimi sono più propensi all'essere feriti in un incidente. 
@@ -1826,8 +1822,8 @@ per giorno della settimana o ora.
 
 \subsection{Incidenti per regione}
 
-Utilizzando i dati ACI, in particolare i file \textit{localizzazione}, è possibile dividere gli 
-incidenti per regione e per provincia.
+Utilizzando i dati ACI, in particolare i file \columnstyle{localizzazione}, è 
+possibile dividere gli incidenti per regione e per provincia.
 Grazie al dataset geojson di Guglielmo Celata\footnote{\url{https://github.com/openpolis/geojson-italy}}, 
 è stato possibile realizzare le mappe in figura \ref{fig:incidenti-per-regione}, 
 che raffigurano rispettivamente, le regioni con più incidentalità nel per ogni anno nelle 
@@ -1852,9 +1848,8 @@ si nota che non cambia molto di anno in anno, e le regioni con maggiore numero d
 rimangono sempre Lombardia e Veneto.
 
 Per controllare le tendenze di incremento e decremento di incidenti per regione, 
-si è calcolata la deviazione standard per ogni regione
-\footnote{Deviazione standard: misura della distanza dei dati di un campione dalla 
-media\cite{PROB.E.STATISTICA:2}}.
+si è calcolata la deviazione standard per ogni regione\footnote{Deviazione standard: 
+misura della distanza dei dati di un campione dalla media\cite{PROB.E.STATISTICA:2}}.
 Risulta che la regione con maggiore cambiamento di incidenti di anno in anno è il Lazio, 
 con $324$ incidenti l'anno, 
 \todo{lelepado: è giusto dire questo?}
@@ -2237,7 +2232,7 @@ avvenuti per mese, la temperatura media per mese, e infine l'umidità media.
 Sono riportati i due anni con, rispettivamente la maggiore e la minore correlazione tra 
 incidenti e fattori atmosferici.
 Non è stato possibile eseguire la stessa operazione con dati più recenti, per mancanza del 
-campo \textit{mese}, convertito in trimestre a partire dal 2014.
+campo \columnstyle{mese}, convertito in trimestre a partire dal 2014.
 Allo stesso modo non è stato possibile eseguire un'analisi più precisa, per mancanza di dati 
 riguardanti il giorno del mese, e disponibili solo per il giorno della settimana.
 
