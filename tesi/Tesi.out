@@ -1,0 +1,55 @@
+\BOOKMARK [0][-]{chapter.1}{Introduzione}{}% 1
+\BOOKMARK [0][-]{chapter.2}{Origine dei dati}{}% 2
+\BOOKMARK [1][-]{section.2.1}{Dati riguardanti incidenti}{chapter.2}% 3
+\BOOKMARK [1][-]{section.2.2}{Dati riguardanti autovelox}{chapter.2}% 4
+\BOOKMARK [1][-]{section.2.3}{Dati riguardanti patentati}{chapter.2}% 5
+\BOOKMARK [1][-]{section.2.4}{Dati riguardanti le zone di Milano}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.5}{Dati riguardanti il meteo}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.6}{Dati riguardanti trasporti pubblici}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.7}{Dati riguardanti autostrade e manto stradale}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.8}{Dati riguardanti l'area C}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.9}{Dati riguardanti il turismo}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.10}{Immagini del traffico}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.11}{Dati mancanti}{chapter.2}% 13
+\BOOKMARK [2][-]{subsection.2.11.1}{Dati riguardanti pav\350}{section.2.11}% 14
+\BOOKMARK [2][-]{subsection.2.11.2}{Dati riguardanti traffico stradale}{section.2.11}% 15
+\BOOKMARK [2][-]{subsection.2.11.3}{Dati su strade, incroci, semafori}{section.2.11}% 16
+\BOOKMARK [0][-]{chapter.3}{Dati Geolocalizzati}{}% 17
+\BOOKMARK [1][-]{section.3.1}{Incidenti}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.2}{Incidenti e Linee dei Trasporti Pubblici}{chapter.3}% 19
+\BOOKMARK [2][-]{subsection.3.2.1}{Il pav\350 a Milano influisce in qualche modo sull'incidentalit\340?}{section.3.2}% 20
+\BOOKMARK [1][-]{section.3.3}{Incidenti e Autovelox}{chapter.3}% 21
+\BOOKMARK [0][-]{chapter.4}{Dati su Incidenti}{}% 22
+\BOOKMARK [1][-]{section.4.1}{Dati Istat su veicoli}{chapter.4}% 23
+\BOOKMARK [2][-]{subsection.4.1.1}{Il tipo di veicolo dipende dalla strada?}{section.4.1}% 24
+\BOOKMARK [1][-]{section.4.2}{Dati Istat su conducente}{chapter.4}% 25
+\BOOKMARK [2][-]{subsection.4.2.1}{Esistono differenze tra la guida di un uomo e quella di una donna?}{section.4.2}% 26
+\BOOKMARK [2][-]{subsection.4.2.2}{Il numero di passeggeri influisce sull'incidentalit\340?}{section.4.2}% 27
+\BOOKMARK [2][-]{subsection.4.2.3}{L'uso del telefono cellulare ha influenzato il numero di incidenti?}{section.4.2}% 28
+\BOOKMARK [1][-]{section.4.3}{Dati Istat su orari e mesi}{chapter.4}% 29
+\BOOKMARK [2][-]{subsection.4.3.1}{Incremento dell'incidentalit\340 in diversi orari}{section.4.3}% 30
+\BOOKMARK [2][-]{subsection.4.3.2}{Incremento dell'incidentalit\340 nelle fasce orarie della mattina}{section.4.3}% 31
+\BOOKMARK [2][-]{subsection.4.3.3}{Correlazione tra incidenti e traffico}{section.4.3}% 32
+\BOOKMARK [2][-]{subsection.4.3.4}{Incidentalit\340 in orari notturni}{section.4.3}% 33
+\BOOKMARK [2][-]{subsection.4.3.5}{Quanto influiscono le vacanze estive sull'incidentalit\340?}{section.4.3}% 34
+\BOOKMARK [2][-]{subsection.4.3.6}{In localit\340 di mare gli incidenti aumentano in estate?}{section.4.3}% 35
+\BOOKMARK [1][-]{section.4.4}{Dati Istat su tipi di incidenti e incroci}{chapter.4}% 36
+\BOOKMARK [2][-]{subsection.4.4.1}{Le tipologie di incidenti pi\371 frequenti}{section.4.4}% 37
+\BOOKMARK [2][-]{subsection.4.4.2}{Gli incroci pi\371 pericolosi}{section.4.4}% 38
+\BOOKMARK [2][-]{subsection.4.4.3}{Le tipologie di incidenti che provocano pi\371 feriti}{section.4.4}% 39
+\BOOKMARK [2][-]{subsection.4.4.4}{Incroci che favoriscono incidenti con pedoni}{section.4.4}% 40
+\BOOKMARK [2][-]{subsection.4.4.5}{Et\340 dei pedoni coinvolti in incidenti}{section.4.4}% 41
+\BOOKMARK [1][-]{section.4.5}{Dati ACI}{chapter.4}% 42
+\BOOKMARK [2][-]{subsection.4.5.1}{Incidenti per regione}{section.4.5}% 43
+\BOOKMARK [2][-]{subsection.4.5.2}{Differenze tra mesi estivi e invernali}{section.4.5}% 44
+\BOOKMARK [2][-]{subsection.4.5.3}{Le strade pericolose in provincia di Milano}{section.4.5}% 45
+\BOOKMARK [2][-]{subsection.4.5.4}{Incidenti per provincia}{section.4.5}% 46
+\BOOKMARK [2][-]{subsection.4.5.5}{Esiste correlazione tra incidenti e feriti?}{section.4.5}% 47
+\BOOKMARK [2][-]{subsection.4.5.6}{Le autostrade pi\371 pericolose}{section.4.5}% 48
+\BOOKMARK [2][-]{subsection.4.5.7}{Le autostrade pi\371 utilizzate cambiano a seconda dell'anno?}{section.4.5}% 49
+\BOOKMARK [2][-]{subsection.4.5.8}{L'incidentalit\340 su autostrade dipende dai mesi dell'anno?}{section.4.5}% 50
+\BOOKMARK [2][-]{subsection.4.5.9}{In quali orari avvengono incidenti sulle autostrade?}{section.4.5}% 51
+\BOOKMARK [2][-]{subsection.4.5.10}{Quali autostrade sono utilizzate di pi\371 per viaggiare in Agosto?}{section.4.5}% 52
+\BOOKMARK [0][-]{chapter.5}{Dati su Meteo}{}% 53
+\BOOKMARK [1][-]{section.5.1}{Meteo a Milano}{chapter.5}% 54
+\BOOKMARK [2][-]{subsection.5.1.1}{Correlazione tra fattori atmosferici e incidentalit\340}{section.5.1}% 55
