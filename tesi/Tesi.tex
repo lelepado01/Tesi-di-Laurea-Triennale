@@ -1544,11 +1544,11 @@ Nella tabella sottostante sono riportati i valori, sia dell'indice di mortalità
 feriti per tipologia di strada in cui è avvenuto l'incidente.
 
 \begin{center}
-    $Indice\_Mortalita\_Strada\_X = \displaystyle \frac{Numero\_Morti\_Strada\_X * 100}{Numero\_Incidenti\_Strada\_X}$ 
+    $Indice\_Mortalita\_Strada\_X = \displaystyle \frac{Numero\_Morti\_Strada\_X}{Numero\_Incidenti\_Strada\_X} * 100$ 
 \end{center}
 
 \begin{center}
-    $Indice\_Feriti\_Strada\_X = \displaystyle \frac{Numero\_Feriti\_Strada\_X * 100}{Numero\_Incidenti\_Strada\_X}$ 
+    $Indice\_Feriti\_Strada\_X = \displaystyle \frac{Numero\_Feriti\_Strada\_X}{Numero\_Incidenti\_Strada\_X} * 100$ 
 \end{center}
 
 \begin{center}
@@ -1581,7 +1581,6 @@ feriti per tipologia di strada in cui è avvenuto l'incidente.
 
 Per controllare la validità degli indici calcolati, si è ricavata la correlazione tra indice di 
 mortalità, feriti e tra questi ultimi e il numero di incidenti per luogo.
-Ne risulta che tutti gli insiemi sono strettamente correlati tra loro. 
 I valori sono riportati nella tabella sottostante: 
 
 \begin{center}
@@ -1597,7 +1596,15 @@ I valori sono riportati nella tabella sottostante:
     \end{tabular}
 \end{center}
 
-\todo{lelepado: altro? chiudere così non mi piace}
+Ne risulta che tutti gli insiemi siano linearmente correlati tra loro. 
+
+Dalla tabella contenente l'indice di feriti, non è possibile dedurre molto, in quanto 
+questo indicatore è molto simile tra tutte le categorie.
+
+Per quanto riguarda invece, l'indice di mortalità, è chiaro che sia più alto 
+per categorie di incidenti che avvengono ad alte velocità, come vicino a dossi, curve e 
+gallerie, rispetto a tratti di strada, come incroci e semafori, dove le 
+automobili stanno ripartendo.
 
 %\clearpage
 \subsection{Le tipologie di incidenti che provocano più feriti}
