@@ -1754,9 +1754,6 @@ Non tutte queste fasce però contengono lo stesso numero di anni di età, per es
 
     pedoni_feriti_vals = pedoni_feriti.values / numero_anni
     pedoni_morti_vals = pedoni_morti.values / numero_anni
-
-    pedoni_feriti = pd.Series(pedoni_feriti_vals, index=pedoni_feriti.index)
-    pedoni_morti = pd.Series(pedoni_morti_vals, index=pedoni_morti.index)
 \end{lstlisting}
 
 Se si normalizza per anni contenuti in ogni fascia, ipotizzando un numero costante di 
@@ -1852,13 +1849,14 @@ per giorno della settimana o ora.
 
 Utilizzando i dati ACI, in particolare i file \columnstyle{localizzazione}, è 
 possibile dividere gli incidenti per regione e per provincia.
-Grazie al dataset geojson di Guglielmo Celata\footnote{\url{https://github.com/openpolis/geojson-italy}}, 
+Grazie al dataset geojson di Guglielmo 
+Celata\footnote{\url{https://github.com/openpolis/geojson-italy}}, 
 è stato possibile realizzare le mappe in figura \ref{fig:incidenti-per-regione}, 
 che raffigurano rispettivamente, le regioni con più incidentalità nel per ogni anno nelle 
 strade provinciali e nelle autostrade, nell'anno 2018.
 
-Ovviamente il nord Italia ha il primato per quanto riguarda gli incidenti, soprattutto nelle regioni 
-di Lombardia, Veneto e Emilia Romagna. 
+Ovviamente il nord Italia ha il primato per quanto riguarda gli incidenti, soprattutto nelle 
+regioni di Lombardia, Veneto e Emilia Romagna. 
 Spicca poi il Lazio, dove la maggior parte degli incidenti avvengono su autostrade, 
 in quanto il volume di incidenti è nella media nella prima mappa in figura 
 \ref{fig:incidenti-per-regione}, mentre è il massimo annuale nella seconda mappa.
@@ -1989,8 +1987,9 @@ Questo tipo di controllo verrà eseguito in un capitolo successivo.
     \label{fig:line-incidenti-milano}
 \end{figure}
 
-Per realizzare la figura \ref{fig:line-incidenti-milano}, sono state prese in considerazione alcune 
-tra le autostrade e strade statali più trafficate e si è segnata la posizione approssimata.
+Per realizzare la figura \ref{fig:line-incidenti-milano}, sono state prese in 
+considerazione alcune tra le autostrade e strade statali più trafficate e si è segnata 
+la posizione approssimata.
 
 \begin{lstlisting}
     strade = gp.read_file("dataset/incidenti/aci/autostrade/posizione_autostrade.geojson").to_crs(epsg=3857)
@@ -2042,8 +2041,8 @@ L'indice di correlazione utilizzato è il coefficiente di Pearson.
     mor = data['MOR']
 \end{lstlisting}
 
-Una volta divisi i dati, è possibile calcolare l'indice tramite il metodo \textit{corr()}, i risultati 
-sono riportati nella seguente tabella.
+Una volta divisi i dati, è possibile calcolare l'indice tramite il metodo \textit{corr()}, 
+i risultati sono riportati nella seguente tabella.
 
 \begin{center}
     \def\arraystretch{1.5}%  
@@ -2059,8 +2058,8 @@ sono riportati nella seguente tabella.
 
 Il coefficiente di Pearson, per quanto riguarda Incidenti e Feriti, 
 è molto vicino a uno, quindi i due campioni sono strettamente correlati.
-I coefficienti riguardanti i morti sono molto meno vicini a uno, probabilmente per il minor numero 
-di incidenti mortali, che rendono il campione più ristretto.
+I coefficienti riguardanti i morti sono molto meno vicini a uno, probabilmente per il 
+minor numero di incidenti mortali, che rendono il campione più ristretto.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/provincia/corr_incidenti.png}
@@ -2097,10 +2096,12 @@ tuttavia controllando il dataset, ogni riga contiene un numero di feriti maggior
     \label{fig:incidenti-autostrade}
 \end{figure}
 
-Si pu\'o notare subito, dalla figura \ref{fig:incidenti-autostrade} che, nel 2018, le autostrade con 
-più incidenti sono anche quelle più trafficate, come l'Autostrada del Sole e l'Adriatica.
+Si può notare subito, dalla figura \ref{fig:incidenti-autostrade} che, nel 2018, le 
+autostrade con più incidenti sono anche quelle più trafficate, come 
+l'Autostrada del Sole e l'Adriatica.
 
-Una domanda che sorge spontanea è se le autostrade con più incidenti cambiano al cambiare dell'anno.\\
+Una domanda che sorge spontanea è se le autostrade con più incidenti cambiano 
+al cambiare dell'anno.\\
 Un'altra questione potrebbe essere quella delle differenze di incidenti al cambiare dei mesi, 
 o dell'orario.\\
 Infine ci si potrebbe chiedere se esistono differenze sostanziali, per anno, tra i flussi di 
@@ -2118,16 +2119,16 @@ a seconda dell'anno, il numero di incidenti rispecchia questo cambiamento?
     \caption{Incidenti in Strade per anno}
     \label{fig:autostrade-anno}
 \end{figure}
-\todo{rifare grafo}
 
 Controllando le prime cinque strade per incidentalità ogni anno, 
 raffigurate nel grafo \ref{fig:autostrade-anno}, si ottiene un'immagine 
 abbastanza stabile, in quanto gli itinerari in testa alla classifica sono sempre gli stessi.
 Si nota, che la strada statale Adriatica è sempre in prima posizione, 
 con una media di $171.5$ incidenti nel mese di Agosto.
-Le posizioni successive invece cambiano a seconda dell'anno, in particolare per\'o, l'autostrada 
-A4 (Torino-Trieste) ha progressivamente aumentato il numero di incidenti, evento possibilmente 
-dovuto all'aumento di popolarita delle vacanze in montagna.
+Le posizioni successive invece cambiano a seconda dell'anno, in particolare però, 
+l'autostrada A4 (Torino-Trieste) ha progressivamente aumentato il numero di 
+incidenti, evento possibilmente dovuto all'aumento di popolarita delle vacanze 
+in montagna.
 
 Facendo utilizzo del dataset istat riguardante il turismo in Italia, e in particolare sfruttando 
 due indicatori, Tasso di Turisticità
