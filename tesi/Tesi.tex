@@ -582,7 +582,8 @@ notare lo stesso fenomeno, tra Viale Bianca Maria e Viale Premuda.
 Le immagini del contenenti indicazioni sul traffico sono state realizzate tramite le API di 
 Google Maps, tuttavia non offrono una stima ideale, poiche indicano il traffico in tempo reale e 
 il Covid-19 ha ridotto notevolmente il volume di automobili.
-\todo{lelepado: va giustificato? atrent: cosa? lelepado: il decremento di incidenti per covid}
+\todo{lelepado: va giustificato? atrent: cosa?}
+\todo{lelepado: il decremento di incidenti per covid}
 
 Per confutare l'ipotesi iniziale, si sono utilizzati i dati ricavati in precedenza, 
 degli incindenti per chilometro per municipio Milano. 
@@ -872,8 +873,10 @@ dell'autovelox, questa zona sia particolarmente pericolosae non si ha modo di sa
 Con i dati che si hanno a disposizione, è possibile calcolare l'incremento (o decremento), degli 
 incidenti in zone vicine a autovelox.
 A causa delle zone menzionate in precedenza, in vicinanza di autovelox si ha un incremento degli 
-incidenti del $329.6$\%, tuttavia, nel caso in cui si considerino outlier i Viali Serra e Monteceneri, 
-si ha invece un decremento generale del $113.6$\%.
+incidenti del $329.6$\%, tuttavia, nel caso in cui si considerino 
+outlier\footnote{In un campione di osservazioni, un outlier è un valore anomalo, 
+particolarmente distante dagli altri dati disponibili \cite{PROB_E_STATISTICA:1}} 
+i Viali Serra e Monteceneri, si ha invece un decremento generale del $113.6$\%.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1510,12 +1513,12 @@ di incroci in una località, come per esempio in provincia di Milano, sarebbe st
 giustificare il maggior numero di incidenti frontali-laterali rispetto, per esempio, agli sbandamenti.
 
 %\clearpage
-\subsection{Gli incroci più pericolosi}
+\subsection{I tratti di strada più pericolosi}
 
-Il dataset istat contiene anche informazioni sul tipo di incrocio nel quale è avvenuto il 
+Il dataset istat contiene anche informazioni sul tipo di strada nel quale è avvenuto il 
 sinistro.
-Sarebbe, anche in questo caso, molto utile avere il numero di incroci per tipo presenti in una certa 
-località, per controllare se alcuni incroci siano più pericolosi di altri.
+Sarebbe, anche in questo caso, molto utile avere il numero di incroci per tipo presenti in una 
+certa località, per controllare se alcuni incroci siano più pericolosi di altri.
 
 Non avendo accesso a questo tipo di informazioni, si è utilizzato l'indice di mortalità per 
 tipologia di sinistro, prendendo spunto dalla sintesi dello studio su incidenti stradali, 
@@ -1693,18 +1696,28 @@ dei veicoli.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/pedoni/pedoni_no_rett.png}
-    \caption{Tipologia di intersezioni e pedoni coinvolti, ignorando gli outlier}
+    \caption{Tipologia di intersezioni e pedoni coinvolti, ignorando le categorie con valori più bassi}
     \label{fig:pedoni-no-rett}
 \end{figure}
-\todo{specificare procedimento}
 
-Se si escludono gli outlier\footnote{In un campione di osservazioni, un outlier è un valore anomalo, 
-particolarmente distante dagli altri dati disponibili \cite{PROB_E_STATISTICA:1}}
-come in figura \ref{fig:pedoni-no-rett}, il grafo ottenuto è più bilanciato, 
-con \columnstyle{incroci} e \columnstyle{intersezioni non segnalate} che spiccano come tipi di strada con 
-maggiore coinvolgimento di pedoni, e le restanti categorie non troppo distanti.
+In figura \ref{fig:pedoni-no-rett} sono state escluse le categorie con minore 
+valore\footnote{Sono state rimosse tutte le categorie con valore minore di 150 incidenti 
+all'anno}, 
+in particolare \columnstyle{Dosso}, \columnstyle{Galleria ill.}, \columnstyle{Galleria non ill.,} 
+e \columnstyle{Passaggio a livello}.
+Il grafo ottenuto è più bilanciato, con \columnstyle{incroci} e 
+\columnstyle{intersezioni non segnalate} che spiccano come tipi di strada con 
+maggiore coinvolgimento di pedoni, ovviamente dopo \columnstyle{rettilineo}, 
+e le restanti categorie non troppo distanti.
+Va specificato che il grafo \ref{fig:pedoni-no-rett} sia stato realizzato con una scala 
+logaritmica, poichè il numero di pedoni coinvolti su rettilineo è un ordine di grandezza 
+maggiore rispetto alla media.
 
-\todo{altro / conclusione?}
+A differenza della precedente analisi sui tratti di strada più pericolosi, 
+l'immagine dipinta in questo capitolo è molto diversa.
+In questo caso, non si può più dire che i tratti più pericolosi siano quelli che favoriscono 
+alte velocità, ma sembra che il maggior numero di pedoni siano coinvolti in incroci e zone in 
+cui la visibilità è ostruita, come le curve.
 
 %\clearpage
 \subsection{Età dei pedoni coinvolti in incidenti}

@@ -49,6 +49,8 @@ tab.index = tab.index.astype(int)
 pedone_no_rett = tab[tab.index == 1].transpose()
 
 pedone_no_rett = pd.Series(pedone_no_rett[1], index=pedone_no_rett.index)
+
+# print(pedone_no_rett[pedone_no_rett < 150].index)
 pedone_no_rett = pedone_no_rett[pedone_no_rett > 150]
 
 pedone_no_rett.plot.barh(width=0.8, color='#cead65')
