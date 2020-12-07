@@ -20,6 +20,7 @@ for year in range(2011, 2019):
     else: 
         df[str(year)] = agosto_2018
     
+df = df.astype(int)
 fig, ax = plt.subplots()
 
 im, cbar = H.heatmap(df, df.index, df.columns, ax=ax, cmap="YlGn", cbarlabel="Incidenti all'anno")
