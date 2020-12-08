@@ -1385,11 +1385,11 @@ L'incremento constante per ogni anno, conferma che questo fenomeno è un trend a
     Anno & Luglio   & Agosto \\ 
     \hline
     \rowcolor{TableGray}
-    2010 & 101.72\% & 63.75\% \\ 
-    2011 & 54.6 \%  & 60.49\% \\
+    2010 & 101.72\% & 63.75 \% \\ 
+    2011 & 54.6  \%  & 60.49\% \\
     \rowcolor{TableGray}
-    2012 & 75.97\%  & 45.93\%\\
-    2013 & 116.37\% & 51.82\%\\
+    2012 & 75.97 \%  & 45.93\%\\
+    2013 & 116.37\% & 51.82 \%\\
     \hline
     \end{tabular}
 \end{center}
@@ -1981,6 +1981,13 @@ Questo tipo di controllo verrà eseguito in un capitolo successivo.
 
 \subsection{Incidenti per provincia}
 
+Utilizzando, ancora una volta, i file geojson contenenti i limiti delle province, è 
+possibile creare delle heatmap raffiguranti quali tra queste hanno maggior numero 
+di incidenti.
+
+Il calcolo, avendo a disposizione dati riguardanti strade provinciali e autostrade, 
+è stato realizzato per entrambi i casi.
+
 \begin{figure}
     \includegraphics[width=0.5\linewidth]{../src/provincia/lombardia_autostrade.png}
     \includegraphics[width=0.5\linewidth]{../src/provincia/lombardia_strade_prov.png}
@@ -1989,10 +1996,13 @@ Questo tipo di controllo verrà eseguito in un capitolo successivo.
 \end{figure}
 
 Nella figura \ref{fig:lombardia-strade} sono mostrati gli incidenti in Lombardia, 
-avvenuti rispettivamente nelle autostrade e nelle strade provinciali, divisi per provincia.
-In entrambi i casi, si nota che la provincia di Milano è quella più caratterizzata da incidenti. 
-D'altra parte, per quanto riguarda le differenze, nelle province di Bergamo e Como il numero di 
-incidenti cresce molto nelle strade provinciali rispetto alle autostrade.
+avvenuti rispettivamente nelle autostrade e nelle strade provinciali.
+In entrambi i casi, si nota che la provincia di Milano è quella caratterizzata da 
+un maggior numero di incidenti. 
+D'altra parte, per quanto riguarda le differenze, nelle province di Bergamo e Como, 
+i sinistri crescono molto nelle strade provinciali rispetto alle autostrade.
+
+Viene riportato lo stesso calcolo, per le province del Lazio.
 
 \begin{figure}
     \includegraphics[width=0.5\linewidth]{../src/provincia/lazio_autostrade.png}
@@ -2001,10 +2011,16 @@ incidenti cresce molto nelle strade provinciali rispetto alle autostrade.
     \label{fig:lazio-strade}
 \end{figure}
 
-Invece, nella figura \ref{fig:lazio-strade} raffigurante il Lazio, 
-per quanto nelle autostrade il numero di incidenti sia molto più alto 
-rispetto a quello delle strade provinciali, 
-non ci sono molte differenze di volume tra le province.
+Nella figura \ref{fig:lazio-strade} raffigurante il Lazio, va specificato che il numero 
+di incidenti su autostrade è molto più alto rispetto a quello su strade provinciali, 
+fenomeno già osservato nella mappa \ref{fig:incidenti-per-regione}.
+
+Inoltre, la provincia di Frosinone ha un numero particolarmente alto di incidenti su 
+autostrade, mentre la provincia di Latina, al contrario, ha un maggiore incremento di 
+sinistri su strade provinciali.
+
+Non è difficile trovare il perchè di questi numeri, in quanto l'autostrada A01 passa 
+attraverso la provincia di Frosinone e non quella di Latina.
 
 %\clearpage
 \subsection{Le strade pericolose in provincia di Milano}
