@@ -45,6 +45,8 @@
 }
 
 \newcommand{\columnstyle}[1]{\texttt{#1}}
+\newcommand{\methodstyle}[1]{\textbf{#1}}
+
 \definecolor{TableGray}{gray}{0.9}
 
 \bibliography{Biblio}
@@ -2050,19 +2052,19 @@ e controllare se esistano zone che alzano il volume di incidenti.
 %\clearpage
 \subsection{Esiste correlazione tra incidenti e feriti?}
 
-E allo stesso modo, esiste correlazione tra morti e incidenti, o tra morti e feriti?\\
+Esiste correlazione tra morti e incidenti, o tra morti e feriti?
 Ovviamente si attende un esito positivo a queste domande.
-L'indice di correlazione utilizzato è il coefficiente di Pearson.
+L'indice di correlazione utilizzato è il coefficiente di Pearson, calcolato tramite la 
+formula: 
 
-\begin{lstlisting}
-    data = pd.read_csv("dataset/incidenti/aci/autostrade/comuni_2018.csv")
-    inc = data['INC']
-    fer = data['FER']
-    mor = data['MOR']
-\end{lstlisting}
+\begin{center}
+    $\rho_{X, Y} = \displaystyle \frac{cov(X, Y)}{\sigma_X \sigma_Y}$
+\end{center}
 
-Una volta divisi i dati, è possibile calcolare l'indice tramite il metodo \textit{corr()}, 
-i risultati sono riportati nella seguente tabella.
+dove X e Y sono i due campioni di cui si vuole calcolare la correlazione, 
+\methodstyle{cov()} è la covarianza, e $\sigma_X$ è la deviazione standard del 
+campione X \cite{PROB_E_STATISTICA:1}
+\todo{trovare pagine del libro da citare}.
 
 \begin{center}
     \def\arraystretch{1.5}%  
@@ -2075,6 +2077,9 @@ i risultati sono riportati nella seguente tabella.
     \hline
     \end{tabular}
 \end{center}
+
+Una volta divisi i dati, è possibile calcolare l'indice tramite il metodo \methodstyle{corr()}, 
+i risultati sono riportati nella seguente tabella.
 
 Il coefficiente di Pearson, per quanto riguarda Incidenti e Feriti, 
 è molto vicino a uno, quindi i due campioni sono strettamente correlati.
@@ -2090,7 +2095,10 @@ minor numero di incidenti mortali, che rendono il campione più ristretto.
 Tracciando il grafo \ref{fig:corr-incidenti-feriti}, dei primi trenta valori del dataset ACI, 
 è chiaramente visibile la correlazione tra numero di incidenti e numero di feriti.
 L'unico dubbio che possa sorgere è che il numero di feriti sia maggiore del numero di incidenti, 
-tuttavia controllando il dataset, ogni riga contiene un numero di feriti maggiore. 
+tuttavia controllando il dataset, ogni riga contiene un numero di feriti maggiore.
+\todo{spiegare perchè}
+Nella tabella sottostante sono  mostrate le prime righe del dataset, con i rispettivi 
+numeri di incidenti e feriti. 
 
 \begin{center}
     \def\arraystretch{1.5}%  
@@ -2107,6 +2115,8 @@ tuttavia controllando il dataset, ogni riga contiene un numero di feriti maggior
     \hline
     \end{tabular}
 \end{center}
+
+\todo{conclusione}
 
 %\clearpage
 \subsection{Le autostrade più pericolose}
