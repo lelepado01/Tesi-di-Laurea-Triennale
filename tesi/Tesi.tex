@@ -1978,29 +1978,6 @@ Un modo in cui si potrebbe ricavarlo, però, è osservare gli incidenti sulle au
 principali in Agosto.
 Questo tipo di controllo verrà eseguito in un capitolo successivo.
 
-%\clearpage
-\subsection{Le strade pericolose in provincia di Milano}
-
-\todo{continua a guardare da qui}
-
-\begin{figure}
-    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/autostrade/incidenti_line_chart.png}
-    \caption{Autostrade con più incidenti nel 2012}
-    \label{fig:line-incidenti-milano}
-\end{figure}
-
-Per realizzare la figura \ref{fig:line-incidenti-milano}, sono state prese in 
-considerazione alcune tra le autostrade e strade statali più trafficate e si è segnata 
-la posizione approssimata.
-
-\begin{lstlisting}
-    strade = gp.read_file("dataset/incidenti/aci/autostrade/posizione_autostrade.geojson").to_crs(epsg=3857)
-    strade.index = strade['name']
-
-    strade = gp.GeoDataFrame(incidenti[ore], geometry=strade['geometry'])
-    ax = strade.plot(markersize=strade[ore].sum() * 10, alpha=0.5)
-\end{lstlisting}
-
 
 \subsection{Incidenti per provincia}
 
@@ -2028,6 +2005,25 @@ Invece, nella figura \ref{fig:lazio-strade} raffigurante il Lazio,
 per quanto nelle autostrade il numero di incidenti sia molto più alto 
 rispetto a quello delle strade provinciali, 
 non ci sono molte differenze di volume tra le province.
+
+%\clearpage
+\subsection{Le strade pericolose in provincia di Milano}
+
+\'E anche possibile approfondire, allo stesso modo del calcolo degli incidenti per 
+provincia, calcolando quali sono le strade più pericolose, per esempio, 
+a Milano.
+
+Utilizzando il sito Geojson.io\footnote{\url{https://geojson.io/}}, 
+è stato possibile tracciare i percorsi delle principali autostrade in prossimità di 
+Milano. Il risultato è visibile nella figura \ref{fig:line-incidenti-milano}.
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/autostrade/incidenti_line_chart.png}
+    \caption{Autostrade con più incidenti nel 2018}
+    \label{fig:line-incidenti-milano}
+\end{figure}
+
+\todo{descrizione sintetica del grafo}
 
 %\clearpage
 \subsection{Esiste correlazione tra incidenti e feriti?}

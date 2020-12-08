@@ -34,20 +34,17 @@ for field in milano['NOME STRADA'].unique():
 strade = gp.read_file("dataset/autostrade/autostrade_milano_linee.geojson").to_crs(epsg=3857)
 strade.index = strade['name']
 
-# print(incidenti)
 inc = incidenti['01']
-for i in ['02', '03', '04', '05', '06', '07', '08', '09']:
+ore.remove('01')
+for i in ore:
     inc = incidenti[i] + inc
-for i in range(10,25): 
-    inc = incidenti[str(i)] + inc
 
 strade = gp.GeoDataFrame(inc, geometry=strade['geometry'])
-# print(strade)
 
 ax = strade.plot(figsize=(11,9), column= 0, cmap='hot_r' ,legend=True, linewidth=1.5)
 plt.ylim((5.68 * pow(10, 6), 5.72 * pow(10,6)))
 plt.xlim((pow(10, 6), 1.04 * pow(10,6)))
-plt.xlabel("Incidenti nelle strade principali a Milano (2018)")
+plt.xlabel("Incidenti nelle principali strade a Milano (2018)")
 cx.add_basemap(ax=ax)
 plt.show()
 
