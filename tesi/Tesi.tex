@@ -2078,13 +2078,13 @@ campione X \cite{PROB_E_STATISTICA:3}.
     \end{tabular}
 \end{center}
 
-Una volta divisi i dati, è possibile calcolare l'indice tramite il metodo \methodstyle{corr()}, 
-i risultati sono riportati nella seguente tabella.
+Una volta divisi i dati, è possibile calcolare l'indice tramite il metodo 
+\methodstyle{corr()}, i risultati sono riportati nella seguente tabella.
 
 Il coefficiente di Pearson, per quanto riguarda Incidenti e Feriti, 
 è molto vicino a uno, quindi i due campioni sono strettamente correlati.
-I coefficienti riguardanti i morti sono molto meno vicini a uno, probabilmente per il 
-minor numero di incidenti mortali, che rendono il campione più ristretto.
+I coefficienti riguardanti i morti sono molto meno vicini a uno, probabilmente 
+per il minor numero di incidenti mortali, che rendono il campione più ristretto.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/provincia/corr_incidenti.png}
@@ -2092,11 +2092,13 @@ minor numero di incidenti mortali, che rendono il campione più ristretto.
     \label{fig:corr-incidenti-feriti}
 \end{figure}
 
-Tracciando il grafo \ref{fig:corr-incidenti-feriti}, dei primi trenta valori del dataset ACI, 
-è chiaramente visibile la correlazione tra numero di incidenti e numero di feriti.
-L'unico dubbio che possa sorgere è che il numero di feriti sia maggiore del numero di incidenti, 
-tuttavia controllando il dataset, ogni riga contiene un numero di feriti maggiore.
-\todo{spiegare perchè}
+Tracciando il grafo \ref{fig:corr-incidenti-feriti}, dei primi trenta valori 
+del dataset ACI, è chiaramente visibile la correlazione tra 
+numero di incidenti e numero di feriti.
+L'unico dubbio che possa sorgere è che il numero di feriti sia maggiore del 
+numero di incidenti, tuttavia controllando il dataset, ogni 
+riga contiene un numero di feriti maggiore.
+\todo{spiegare perchè ci sono più feriti che incidenti}
 Nella tabella sottostante sono  mostrate le prime righe del dataset, con i rispettivi 
 numeri di incidenti e feriti. 
 
@@ -2116,12 +2118,12 @@ numeri di incidenti e feriti.
     \end{tabular}
 \end{center}
 
-\todo{conclusione, magari su correlazione non causa/effetto}
+\todo{conclusione}
 
-%\clearpage
 \subsection{Le autostrade più pericolose}
 
 Quali sono le autostrade con più incidenti durante l'anno? 
+Sono tutte autostrade o ai primi posti ci sono anche delle strade statali? 
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/autostrade/autostrade.png}
@@ -2131,8 +2133,8 @@ Quali sono le autostrade con più incidenti durante l'anno?
 
 Nella figura \ref{fig:incidenti-autostrade} sono  raffigurate le autostrade con 
 maggiore numero di incidenti nel 2018. 
-Non è una sorpresa che le prime posizioni della lista 
-coincidano anche con le strade più trafficate, come l'Autostrada del Sole e l'Adriatica.
+Non è una sorpresa che le prime posizioni della lista coincidano 
+anche con le strade più trafficate, come l'Autostrada del Sole e l'Adriatica.
 
 Tuttavia sono anche presenti, due strade statali, SS1 e SS16. 
 La motivazione dell'alto numero di incidenti su queste direttive, potrebbe essere 
@@ -2140,7 +2142,12 @@ la lunghezza di queste. Infatti entrambe sono strade che coprono la costa Italia
 da nord a sud e, nella maggior parte della loro estensione, 
 hanno solamente due corsie.
 
-\todo{allungare capitolo}
+L'avere i sensi di marcia separati, e delle corsie designate al sorpasso, nel caso 
+delle autostrade non può che essere un fattore che influenza negativamente 
+il numero degli incidenti. 
+D'altra parte, l'essere costretti a sorpassare sulla corsia adibita al senso di 
+marcia opposto, nel caso della SS1 e SS16, porta possibilmente a un aumento dei 
+sinistri.
 
 \subsection{Le autostrade più utilizzate cambiano a seconda dell'anno?}
 
@@ -2291,6 +2298,8 @@ per non parlare del fatto che entrambe le strade passano attraverso un alto nume
 \section{Meteo a Milano}
 
 \subsection{Correlazione tra fattori atmosferici e incidentalità}
+
+\todo{c'è un paragrafo nel libro di statistica su correlazione e non causa}
 
 \begin{figure}
     \includegraphics[width=0.5\linewidth]{../src/meteo/temp_incidenti_2011.png}
