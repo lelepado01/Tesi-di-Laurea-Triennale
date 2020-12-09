@@ -2214,8 +2214,10 @@ rispetto al 2015 è del $13$\%, mentre rispetto alla media annuale
 
 \subsection{L'incidentalità su autostrade dipende dai mesi dell'anno?}
 
-Un'altra questione potrebbe essere quella delle differenze di incidenti al cambiare dei mesi, 
-o dell'orario.
+Un'altra questione, di cui ci si è occupati tramite dati Istat in precedenza, è 
+quella dei mesi con maggior numero di incidenti.
+Il dataset ACI permette di individuare cambiamenti nella tendenza trovata nei 
+capitoli precedenti, dividendo i sinistri in base alla strada.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/autostrade/mesi_autostrade.png}
@@ -2223,14 +2225,15 @@ o dell'orario.
     \label{fig:incidenti-per-mese}
 \end{figure}
 
-Le curve nel grafo \ref{fig:incidenti-per-mese} sono state normalizzate per bilanciare il volume di incidenti maggiori per 
-l'autostrada Adriatica.
-L'Adriatica e l'Aurelia, autostrade utilizzate molto durante i mesi caldi, hanno un picco di 
-incidenti in Luglio e Agosto, mentre l'A1, ha picco più basso in Agosto, probabilmente 
+Le curve nel grafo \ref{fig:incidenti-per-mese} sono state normalizzate per 
+bilanciare il volume maggiore di incidenti per l'autostrada Adriatica.
+Quest'ultima e l'autostrada Aurelia, utilizzate molto durante i mesi caldi, 
+hanno un picco di incidenti in Luglio e Agosto, mentre l'A1, 
+ha picco più basso in Agosto, probabilmente 
 perchè bilanciato dagli incidenti in inverno intorno a Milano.
 
-Se si prendono i dati della A1, si nota che in Agosto, Settembre e Ottobre il numero degli 
-incidenti diminuisce.
+Se si prendono i dati della A1, si nota che in Agosto, Settembre e Ottobre il 
+numero degli incidenti diminuisce.
 Invece sull'Adriatica, raffigurata nel grafo \ref{fig:milano-adriatica}, 
 prevalgono incidenti in Luglio e Agosto.
 
@@ -2239,6 +2242,8 @@ prevalgono incidenti in Luglio e Agosto.
     \caption{Incidenti in provincia di Milano (A1) e sull'Adriatica (2018)}
     \label{fig:milano-adriatica}
 \end{figure}
+
+\todo{non ha senso mettere tre anni di dati uguali}
 
 La tendenza del grafo \ref{fig:milano-adriatica} è visibile anche negli anni precendenti?
 
@@ -2251,6 +2256,8 @@ La tendenza del grafo \ref{fig:milano-adriatica} è visibile anche negli anni pr
 
 Nella figura \ref{fig:milano-adriatica_tendenza} è osservabile la stessa tendenza del grafo precedente, 
 con gli incidenti nell'adriatica alti in Luglio e Agosto. 
+
+\todo{conclusione}
 
 %\clearpage%
 \subsection{In quali orari avvengono incidenti sulle autostrade?}

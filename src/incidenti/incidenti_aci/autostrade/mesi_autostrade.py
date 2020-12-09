@@ -24,14 +24,31 @@ def sum_columns(data : pd.DataFrame, normalize = False) -> pd.Series:
 
     return res
 
-adriatica = data[data['CODICE'] == 'SS01601'][mesi]
+adriatica = data[data['CODICE'] ==  'SS01601'][mesi]
 a1 = data[data['CODICE'] == 'AA00101'][mesi]
-aurelia = data[data['CODICE'] == 'SS00101'][mesi]
+aurelia = data[data['CODICE'] ==    'SS00101'][mesi]
 
-adriatica = sum_columns(adriatica, normalize=True)
-a1 = sum_columns(a1, normalize=True)
-aurelia =  sum_columns(aurelia, normalize=True)
+a4 = data[data['CODICE'] == 'AA00401'][mesi]
+a90 = data[data['CODICE'] == 'AA09001'][mesi]
 
-pd.DataFrame([a1, adriatica, aurelia], ['A1', 'Adriatica', 'Aurelia']).transpose().plot()
-plt.xlabel("Differenza tra incidenti mensili")
+adriatica = sum_columns(adriatica)
+a1 = sum_columns(a1)
+aurelia =  sum_columns(aurelia)
+a4 = sum_columns(a4)
+a90 =  sum_columns(a90)
+
+import sys
+sys.path.append("src")
+import heatmap as H
+
+df = pd.DataFrame(
+    [a1, adriatica, aurelia, a4, a90], 
+    ['A1 Milano-Roma-Napoli', 'SS16 Adriatica', 'SS1 Aurelia', 'A4 Torino Trieste', 'A90 Raccordo Anulare']
+    )
+
+fig, ax = plt.subplots()
+im, cbar = H.heatmap(df, df.index, df.columns, ax=ax, cmap="OrRd", cbarlabel="Incidenti all'anno (2018)", xticks_rotated=True)
+texts = H.annotate_heatmap(im, valfmt="{x}")
+
+fig.tight_layout()
 plt.show()
