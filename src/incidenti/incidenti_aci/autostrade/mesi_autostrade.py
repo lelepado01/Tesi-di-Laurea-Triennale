@@ -47,7 +47,7 @@ df = pd.DataFrame(
     )
 
 fig, ax = plt.subplots()
-im, cbar = H.heatmap(df, df.index, df.columns, ax=ax, cmap="OrRd", cbarlabel="Incidenti all'anno (2018)", xticks_rotated=True)
+im = H.heatmap(df, df.index, df.columns, ax=ax, cmap="OrRd", xticks_rotated=True, cbar_visible=False)
 texts = H.annotate_heatmap(im, valfmt="{x}")
 
 fig.tight_layout()
