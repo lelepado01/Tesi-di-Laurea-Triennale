@@ -2165,13 +2165,12 @@ l'autostrada A4 (Torino-Trieste) ha progressivamente aumentato il numero di
 incidenti, evento possibilmente dovuto all'aumento di popolarita delle vacanze 
 in montagna anche in periodo estivo.
 
-Facendo utilizzo del dataset istat riguardante il turismo in Italia, e in particolare sfruttando 
-due indicatori, Tasso di Turisticità
-\footnote{Tasso di Turisticità: indica il numero di turisti presenti ogni 100.000 
-abitanti\cite{ONTIT:1}} 
-e turismo in mesi non estivi,
-è stato possibile realizzare il grafo \ref{fig:turismo}, contenente questi indici, 
-nel periodo a partire dall'anno 1995 fino al 2018.
+Facendo utilizzo del dataset istat riguardante il turismo in Italia, e in 
+particolare sfruttando due indicatori, Tasso di 
+Turisticità\footnote{Tasso di Turisticità: indica il numero di turisti presenti 
+ogni 100.000 abitanti\cite{ONTIT:1}} 
+e turismo in mesi non estivi, è stato possibile realizzare il grafo \ref{fig:turismo}, 
+contenente questi indici, nel periodo a partire dall'anno 1995 fino al 2018.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/turismo/turismo.png}
@@ -2179,10 +2178,26 @@ nel periodo a partire dall'anno 1995 fino al 2018.
     \label{fig:turismo}
 \end{figure}
 
+Nel grafo \ref{fig:turismo} sono state incluse alcune regioni con località popolari per le 
+vacanze estive, come Sardegna, Sicilia e Liguria, e regioni principalmente di 
+montagna, come Trentino e Valle d'Aosta. 
+La Lombardia, infine, è stata aggiunta per assicurarsi che il trend delle due regioni di 
+montagna non fosse comune a tutte le regioni del nord Italia.
+
 Ciò che si può concludere, oltre al fatto che le zone di montagna hanno 
-un tasso di turisticità particolarmente alto, 
+un tasso di turisticità particolarmente alto, probabilmente per il numero 
+ristretto di abitanti, 
 è che, a partire dal 2015, è presente un aumento di turisti nelle località 
 di montagna del Nord Italia, che non è visibile nelle altre regioni.
+
+In particolare, rispetto al 2015, nel 2018 in Trentino si ha un incremento 
+di turisti percentuale del $11.9$\%, mentre eseguendo lo stesso calcolo con la 
+media\footnote{Calcolata sull'insieme di anni disponibili, quindi 
+a partire dal 1995 fino al 2018} l'incremento è del $14.7$\%.
+
+In Valle d'Aosta, allo stesso modo, l'incremento di turisti nel 2018 
+rispetto al 2015 è del $13$\%, mentre rispetto alla media annuale 
+è del $7.6$\%.
 
 \subsection{L'incidentalità su autostrade dipende dai mesi dell'anno?}
 
