@@ -12,7 +12,7 @@ mesi_non_estivi.index = mesi_non_estivi['regione']
 mesi_non_estivi.pop('regione')
 mesi_non_estivi = mesi_non_estivi.transpose()
 
-regioni = ['Sicilia', 'Toscana', 'Trentino', 'Sardegna', 'Liguria', 'Valle d\'Aosta']
+regioni = ['Sicilia', 'Toscana', 'Trentino', 'Sardegna', 'Liguria', 'Valle d\'Aosta', 'Lombardia']
 
 plt.subplot(1,2,1)
 t = mesi_non_estivi[regioni]
