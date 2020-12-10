@@ -25,17 +25,18 @@ def sum_columns(data : pd.DataFrame, normalize = False) -> pd.Series:
 
 mesi = ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'] 
 
-
 raccordo = data[data['CODICE'] == 'AA09001']
 adriatica = data[data['CODICE'] == 'SS01601']
 
 adriatica = sum_columns(adriatica[mesi])
 raccordo = sum_columns(raccordo[mesi])
 
-df = pd.DataFrame([adriatica, raccordo], ['Adriatica', 'Raccordo Anulare Roma']).transpose()
+# df = pd.DataFrame([adriatica, raccordo], ['Adriatica', 'Raccordo Anulare Roma']).transpose()
 
-df.plot.bar(width=0.9, color=['#a1cc61', '#61a1cc'])
-plt.ylabel("Numero di incidenti al mese (2018)")
-plt.tight_layout()
-# plt.savefig("milano_adriatica_2014")
-plt.show()
+# df.plot.bar(width=0.9, color=['#a1cc61', '#61a1cc'])
+# plt.ylabel("Numero di incidenti al mese (2018)")
+# plt.tight_layout()
+# plt.show()
+
+# racc_mean = raccordo.mean()
+# print((raccordo['Agosto'] - racc_mean) / racc_mean)
