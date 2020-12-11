@@ -3,9 +3,8 @@ import geopandas as gp
 import matplotlib.pyplot as plt
 import contextily as cx
 
-path = "/Users/gabrielepadovani/Desktop/DBT2012_STRATO01_E0/"
 
-data = gp.read_file(path+"P010108.shx").to_crs(epsg=3857)
+data = gp.read_file("dataset/manto_stradale_milano/L010105.Shx").to_crs(epsg=3857)
 
 incidenti = gp.read_file("dataset/incidenti/inc_strad_milano_2016.geojson").to_crs(epsg=3857)
 
