@@ -252,9 +252,10 @@ Ciò rende inutile la misura dell'area della zona.
 
 \section{Dati riguardanti il meteo}
 
-Per quanto riguarda i dati su meteo, si è tentato di utilizzare le informazioni provenienti dalle 
-centraline Arpa, tuttavia, dopo veloce analisi, visibile in figura \ref{fig:centraline-arpa}, 
-si è notato i dataset non contengono tutte le stazioni.
+Per quanto riguarda i dati su meteo, si è tentato di utilizzare le informazioni 
+provenienti dalle centraline Arpa, tuttavia, dopo veloce analisi, visibile 
+in figura \ref{fig:centraline-arpa}, si è notato i dataset non 
+contengono tutte le stazioni.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/meteo/centraline_arpa.png}
@@ -262,7 +263,11 @@ si è notato i dataset non contengono tutte le stazioni.
     \label{fig:centraline-arpa}
 \end{figure}
 
-\todo{aggiungere centraline arpa mancanti}
+Durante un controllo della mappa \ref{fig:centraline-arpa}, ci si è accorti 
+che non tutte le centraline di Milano sono contenute nel dataset.
+Per esempio, utilizzando una lista di centraline meteo completa, come quella su 
+Centrometeolombardo\footnote{\url{http://www.centrometeolombardo.com/content.asp?CatId=272&ContentType=Stazioni}}, 
+si nota che mancano quelle di Abbiategrasso Sud e Cardorna.
 
 Inoltre, per mancanza di dati precisi sul giorno degli incidenti, avere un'informazione così 
 precisa sul meteo è superfluo.
