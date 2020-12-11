@@ -1860,9 +1860,9 @@ Il risultato ottento lo si aggiunge alla fascia \columnstyle{18-29}.
     \label{fig:eta-pedoni-norm}
 \end{figure}
 
-Una volta aver corretto l'immagine precendente, si ottiene la 
-figura \ref{fig:eta-pedoni-norm} 
-dove, soprattutto nel grafo di destra, è presente una curva particolarmente alta 
+Una volta aver corretto l'immagine precendente, 
+si ottiene la figura \ref{fig:eta-pedoni-norm} dove, soprattutto 
+nel grafo di destra, è presente una curva particolarmente alta 
 nelle fasce più anziane.
 Anche nel grafo di sinistra è presente la stessa impennata in corrispondenza 
 della categoria dei \columnstyle{65+} ma, a partire dalla fascia 
@@ -1873,7 +1873,47 @@ fatto che questi ultimi sono più propensi all'essere feriti in un incidente.
 Tuttavia, è anche possibile che uno dei fattori maggiormente influenti sia il 
 volume di pedoni in queste fasce di età, perchè magari non possono più guidare.
 
-\todo{realizzare tasso di mortalità per fascia di età, ACI:2 può essere confrontato}
+\subsection{Età dei conducenti coinvolti in incidenti}
+
+Avendo a disposizione le informazioni riguardanti l'età del conducente del 
+veicolo che ha causato l'incidente, è possibile controllare se esistono fasce di 
+età con incidentalità particolarmente alta.
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mortalita/indice_mortalita_eta.png}
+    \caption{Indice di mortalità degli incidenti, divisi in base all'età del conducente}
+    \label{fig:indice-mortalita-eta}
+\end{figure}
+
+In primo luogo, il grafo destro nella figura \ref{fig:indice-mortalita-eta} contiene 
+la percentuale, per fascia di età del conducente, di incidenti totali commessi, insieme 
+al numero di morti in questi incidenti\footnote{Ogni colonna contiene incidenti in 
+cui il conducente rientra nella fascia di età, la persona deceduta tuttavia potrebbe non 
+essere il conducente}.
+
+In particolare, più di un quarto degli incidenti totali coinvolgono conducenti nella 
+fascia d'età \columnstyle{30-44} mentre, probabilmente per il basso numero di 
+guidatori nella fascia \columnstyle{15-17}, questo gruppo sembra essere molto 
+più responsabile alla guida.
+
+Nel grafo di sinistra in figura \ref{fig:indice-mortalita-eta}, invece, 
+è rappresentato l'indice di mortalità di questi incidenti, 
+calcolato utilizzando la formula: 
+
+\begin{center}
+    $Indice\_Mortalita\_X = \displaystyle \frac{Numero\_Morti\_X}{Numero\_Incidenti\_X} * 100$ 
+\end{center}
+
+L'indice di mortalità presente nel grafo aumenta all'aumentare dell'età, 
+e il risultato trovato sembra essere confermato dalla stima realizzata nello studio 
+ACI del 2018 sugli incidenti stradali \cite{ACI:3}. 
+
+Tuttavia, come già spiegato nella sezione precedente, la prima fascia di cui si è parlato 
+contiene quindici anni, mentre la seconda solamente due. Sarebbe quindi opportuno 
+normalizzare la percentuale di incidenti commessi, con una stima del numero di 
+guidatori nella rispettiva fascia di età.
+
+\todo{normalizza usando la popolazione standard}
 
 %\clearpage
 \section{Dati ACI}
