@@ -2430,7 +2430,21 @@ si rechi in spiaggia passando per esempio per la A1.
 
 \subsection{Correlazione tra fattori atmosferici e incidentalità}
 
-\todo{c'è un paragrafo nel libro di statistica su correlazione e non causa}
+L'idea di ipotizzare che esista correlazione tra le condizioni meteo e il numero 
+di incidenti, può non sembrare improponibile, in fondo a nessuno piace guidare 
+durante una nevicata.
+
+Tuttavia, le informazioni necessarie per ottenere una stima della correlazione 
+dei due fattori sono, o fuori dalla portata dei dati liberi, o inesistenti. 
+Un esempio di queste informazioni, potrebbe essere il sapere giorno e ora 
+dell'incidente, e allo stesso modo anche le zone in cui si sono verificati certi 
+fenomeni atmosferici, come la caduta di neve. 
+Entrambi questi dati non sono disponibili tramite dataset aperti, e probabilmente, 
+anche con questi non sarebbe possibile dare una buona stima della correlazione 
+tra i due fattori.
+
+\'E comunque interessante mostrare come, la correlazione tra due campioni possa essere 
+estremamente alta, anche se questi ultimi sono completamente scollegati.
 
 \begin{figure}
     \includegraphics[width=0.5\linewidth]{../src/meteo/temp_incidenti_2011.png}
@@ -2443,16 +2457,9 @@ La figura \ref{fig:incidenti-temp} mostra, partendo dall'alto, il numero di inci
 avvenuti per mese, la temperatura media per mese, e infine l'umidità media.
 Sono riportati i due anni con, rispettivamente la maggiore e la minore correlazione tra 
 incidenti e fattori atmosferici.
+
 Non è stato possibile eseguire la stessa operazione con dati più recenti, per mancanza del 
 campo \columnstyle{mese}, convertito in trimestre a partire dal 2014.
-Allo stesso modo non è stato possibile eseguire un'analisi più precisa, per mancanza di dati 
-riguardanti il giorno del mese, e disponibili solo per il giorno della settimana.
-
-Senza conoscere gli incidenti giorno per giorno, non è possibile avere una stima della 
-correlazione tra i diversi indici del meteo e i sinistri.
-Il meglio che è possibile realizzare è un calcolo della correlazione per mese e, per 
-avere la maggiore quantità di dati possibile, è stato eseguito per tutti gli 
-anni disponibili.
 I risultati sono riportati nella tabella sottostante: 
 
 \begin{center}
@@ -2478,7 +2485,8 @@ riguarda l'umidità.
 Ciò non significa che, per esempio nel 2011, sia stata l'alta temperatura a provocare 
 tutti gli incidenti, anzi, è molto più probabile che il fattore con maggiore 
 influenza sia proprio il mese, e non la temperatura o l'umidità.
-In altre parole, la correlazione tra due fenomeni non ne implica la causa.
+
+\todo{contesto dei dati utilizzati, e campioni scollegati ma correlati}
 
 Dal punto di vista, invece, della velocità del vento, sarebbe possibile eseguire 
 un'analisi più approfondita, in quanto un valore di indice di correlazione uguale 
