@@ -362,8 +362,8 @@ I dati in questione sono stati cercati sui principali siti di opendata
 \footnote{\url{https://dati.comune.milano.it/dataset}}
 \footnote{\url{https://www.dati.lombardia.it/}}
 \footnote{\url{https://www.dati.gov.it/}}
-tramite parole chiave come \columnstyle{strada}, \columnstyle{manto stradale}, 
-\columnstyle{pave}, \columnstyle{composizione strada}.
+tramite parole chiave come \quotestyle{strada}, \quotestyle{manto stradale}, 
+\quotestyle{pave}, \quotestyle{composizione strada}.
 
 Una possibile risorsa trovata è una mappa utilizzata in un articolo del blog urbanfile \cite{URBANFILE:1}
 Dopo una rapida consultazione tuttavia, non risulta esserci alcun dataset contenente informazioni 
@@ -414,9 +414,22 @@ Si è innanzi tutto tentata una ricerca, in generale, di articoli o dataset onli
 parole chiave come \quotestyle{numero di semafori Milano} o \quotestyle{strade incroci semafori}.
 Non trovando alcun riscontro, si è ricercato l'argomento nei principali siti contenenti 
 dataset, elencati in precedenza. 
+
 Le informazioni più simili a ciò che si stava cercando, sono state trovate sul geoportale 
 del comune di Milano, nel dataset del manto stradale.
-\todo{vedere se dataset è utile}
+Questo dataset contiene vari layer di informazioni, tra cui Area di circolazione veicolare, 
+Area di circolazione pedonale e Area di circolazione ciclabile, tuttavia, in nessuno 
+di questi livelli, si sono trovate informazioni utili a dividere, per esempio, 
+intersezioni segnalate da incroci con semaforo. 
+
+Inoltre, per maggior parte dei livelli, non si sono trovate informazioni sul significato 
+delle colonne presenti nei dataset come, per esempio, \columnstyle{GZ_STR_TY} o 
+\columnstyle{GZ_STR_TYF}. 
+Le ricerche per un file contenente informazioni sui metadati sono state eseguite sia 
+sul sito del comune di Milano, sia in generale, tramite motore di ricerca, con parole chiave 
+come \quotestyle{ID_ZRIL milano} o \quotestyle{ID_ZRIL metadati}. 
+Nel caso di quest'ultimo, tuttavia, è risultato che fosse un identificatore univoco del 
+territorio, informazione ricavata tracciando una parte dei valori della colonna.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Dati Geolocalizzati}
