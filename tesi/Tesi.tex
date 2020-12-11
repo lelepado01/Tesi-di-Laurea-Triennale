@@ -272,12 +272,13 @@ si nota che mancano quelle di Abbiategrasso Sud e Cardorna.
 Inoltre, per mancanza di dati precisi sul giorno degli incidenti, avere un'informazione così 
 precisa sul meteo è superfluo.
 Si è dunque optato per un dataset contenente temperature, umidità, e velocità del vento, 
-trovato sul sito Zenodo
-\footnote{\url{https://zenodo.org/record/3992354}}.
+trovato sul sito Zenodo\footnote{\url{https://zenodo.org/record/3992354}}.
 
-Il dataset contiene i campi specificati, misurati ogni ora, a partire dal 2008, fino al 2018.
+Il dataset contiene i campi di cui si è parlato, misurati ogni ora, a partire dal 2008, 
+fino al 2018.
 
 \section{Dati riguardanti trasporti pubblici}
+
 I dati riguardanti i trasporti pubblici trovati hanno due provenienze, i primi sono 
 dati riferiti alle linee ATM, scaricati sul sito del comune di 
 Milano\footnote{\url{https://dati.comune.milano.it/dataset/ds532-atm-composizione-percorsi-linee-di-superficie-urbane}}.
@@ -291,31 +292,32 @@ solamente le linee tranviarie, trovato sul geoportale del comune di
 Milano\footnote{\url{https://geoportale.comune.milano.it/ATOM/SIT/DBT2012/DBT2012_STRATO_01_Dataset_1.xml}}.
 
 Questo dataset è molto ampio e contiene altri livelli di informazioni, tra cui per esempio, 
-le strade o le ferrovie passanti per Milano. 
+le strade, le ferrovie o le piste ciclabili passanti per Milano. 
 
 \section{Dati riguardanti autostrade e manto stradale}
 
 Il primo dataset individuato, riguardante il manto  stradale, è stato quello di 
 ANAS\footnote{\url{http://dati.mit.gov.it/catalog/dataset/grafo-stradale-anas}}, 
 tuttavia questo consisteva in un file molto grande, e dalla precisione superflua per 
-la mappa che si sta tentando di ottenere.
+le mappe che si sta tentando di ottenere.
 
-Si è dunque tentato di utilizzare la mappa presente sul geoportale del comune di 
+Si è dunque tentato di utilizzare il dataset presente sul geoportale del comune di 
 Milano\footnote{\url{https://geoportale.comune.milano.it/}}, 
 contenente anch'esso troppe strade in quanto traccia l'intero manto stradale del comune.
 
 Come ultima risorsa, si è deciso di tracciare alcune mappe in geojson utilizzando 
 Geojson.io\footnote{\url{https://geojson.io/}}, in particolare nella zona di Milano, 
 per le principali autostrade, tangenziali e strade statali. 
-Allo stesso modo, Geojson.io è stato utile a tracciare alcune aree in centro a Milano, per confrontare 
-gli incidenti su pavè agli incidenti su asfalto.
+Allo stesso modo, Geojson.io è stato utile a tracciare alcune aree in centro a Milano, 
+per confrontare gli incidenti su pavè agli incidenti su asfalto.
 
 \section{Dati riguardanti l'area C}
 
-Il dataset riguardante gli accessi all'area C è stato trovato sul sito di open data del 
-comune di Milano\footnote{\url{https://dati.comune.milano.it/organization/comunedimilano?q=area+c&sort=score+desc\%2C+metadata_modified+desc}}, 
-dove sono disponibili varie tipologie di file, 
-distinti per orario, mese, località ecc. 
+Il dataset riguardante gli accessi all'area C è stato trovato sul sito 
+di open data del comune di 
+Milano\footnote{\url{https://dati.comune.milano.it/organization/comunedimilano?q=area+c&sort=score+desc\%2C+metadata_modified+desc}}, 
+dove sono disponibili varie tipologie di file distinti per esempio, per orario, 
+mese o località. 
 Tra questi si è utilizzata la tipologia contenente orari e data dell'accesso.
 
 Oltre a utilizzare i dati riguardo agli accessi all'area C, si è fatto uso anche di una mappa 
@@ -328,8 +330,8 @@ Milano\footnote{\url{https://www.comune.milano.it/aree-tematiche/mobilita/area-c
 I dati sul turismo in Italia, sono stati presi dall'archivio istat sul 
 tema\footnote{\url{https://www.istat.it/it/archivio/16777}}.
 
-I dati originali sono in formato xls, contenente informazioni a partire dal 1995 fino al 2019, 
-sia regione per regione, sia divise per nord, centro e sud.
+I dati originali sono in formato xls, contenente informazioni a partire dal 1995 
+fino al 2019, sia regione per regione, sia divise per nord, centro e sud.
 Sono anche presenti più tabelle, ognuna rafficurante un particolare indicatore, 
 come produttività del lavoro, turismo nei mesi non estivi, tasso di turisticità 
 e valore aggiunto del turismo.
@@ -1878,7 +1880,7 @@ Celata\footnote{\url{https://github.com/openpolis/geojson-italy}},
 che raffigurano rispettivamente, le regioni con più incidentalità nel per ogni 
 anno nelle strade provinciali e nelle autostrade, nell'anno 2018.
 
-Ovviamente il nord Italia ha il primato per quanto riguarda gli incidenti, 
+Ovviamente il Nord Italia ha il primato per quanto riguarda gli incidenti, 
 soprattutto nelle regioni di Lombardia, Veneto e Emilia Romagna. 
 Spicca poi il Lazio, dove la maggior parte degli incidenti avvengono su autostrade, 
 in quanto il volume di incidenti è nella media nella prima mappa in figura 
@@ -1925,7 +1927,7 @@ influire in modo errato al conteggio degli incidenti.
 
 Se si visualizza il rapporto tra incidenti e patentati per regione 
 (figura \ref{fig:incidenti-patentati}), si osserva una chiara distinzione 
-tra nord, centro e sud Italia. 
+tra Nord, Centro e Sud Italia. 
 A cosa è dovuta questa ampia disparità?
 
 Nella seguente tabella sono riportate le medie di incidenti annuali per regione, 
@@ -1951,7 +1953,7 @@ centro e sud, per facilitare la lettura, e indica le percentuali di incidenti e
 patentati per la rispettiva regione. 
 \'E subito osservabile che, nella maggior parte delle regioni del centro, 
 la percentuale di incidenti supera quella di patentati, 
-mentre nel sud Italia accade il fenomeno opposto.
+mentre nel Sud Italia accade il fenomeno opposto.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/mappe_regioni/incidenti_patenti_bar.png}
@@ -1961,12 +1963,12 @@ mentre nel sud Italia accade il fenomeno opposto.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/mappe_regioni/incidenti_patenti_box.png}
-    \caption{Incidenti e patentati per nord, centro e sud Italia}
+    \caption{Incidenti e patentati per Nord, Centro e Sud Italia}
     \label{fig:incidenti-patentati-box}
 \end{figure}
 
 La figura \ref{fig:incidenti-patentati-box} permette di capire il motivo della disparità 
-tra centro e sud Italia.
+tra centro e Sud Italia.
 Al sud, il numero di incidenti è molto minore rispetto al centro Italia, mentre, 
 sempre le stesse due zone, il numero di patentati non cambia molto. 
 \'E ovvio che tenendo il denominatore costante, il numero minore di incidenti al 
@@ -1999,7 +2001,7 @@ La probabile motivazione di ciò probabilmente il fatto che
 le persone si muovono meno nei mesi freddi, rispetto a quelli caldi.
 
 Il comportamento che si stava cercando, cioè più incidenti in estate nel 
-sud Italia, non è visibile. 
+Sud Italia, non è visibile. 
 Un modo in cui si potrebbe ricavarlo, però, è osservare gli incidenti sulle autostrade 
 principali in Agosto.
 Questo tipo di controllo verrà eseguito in un capitolo successivo.
@@ -2066,7 +2068,7 @@ Milano. Il risultato è visibile nella figura \ref{fig:line-incidenti-milano}.
 \end{figure}
 
 In particolare, dalla mappa \ref{fig:line-incidenti-milano}, si deduce che le 
-tangenziali ovest e est, e l'autostrada Torino-Trieste, sono i tratti di 
+Tangenziali Ovest e Est, e l'autostrada Torino-Trieste, sono i tratti di 
 strada con più incidenti.
 
 Infine, se si avesse a disposizione la posizione precisa degli incidenti, 
@@ -2221,7 +2223,7 @@ Nel grafo \ref{fig:turismo} sono state incluse alcune regioni con località popo
 per le vacanze estive, come Sardegna, Sicilia e Liguria, e regioni principalmente 
 di montagna, come Trentino e Valle d'Aosta. 
 La Lombardia, infine, è stata aggiunta per assicurarsi che il trend delle due regioni 
-di montagna non fosse comune a tutte le regioni del nord Italia.
+di montagna non fosse comune a tutte le regioni del Nord Italia.
 
 Ciò che si può concludere, oltre al fatto che le zone di montagna hanno 
 un tasso di turisticità particolarmente alto, probabilmente per il numero 
@@ -2262,11 +2264,11 @@ in Luglio e Agosto e in generale nei mesi estivi.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/autostrade/adriatica_roma.png}
-    \caption{Incidenti sull'Adriatica e sul Grande raccordo anulare a Roma nel 2018}
+    \caption{Incidenti sull'Adriatica e sul Grande Raccordo Anulare a Roma nel 2018}
     \label{fig:adriatica-roma}
 \end{figure}
 
-Isolando gli incidenti avvenuti sul Grande raccordo anulare a Roma, e quelli avvenuti 
+Isolando gli incidenti avvenuti sul Grande Raccordo Anulare a Roma, e quelli avvenuti 
 sull'Adriatica, raffigurati nel grafo \ref{fig:adriatica-roma}, si osserva, 
 nel primo caso, un numero di inciedenti per mese molto omogeneo, a eccezione per il 
 mese di Agosto, quando avviene un calo del $46$\% rispetto alla media mensile. 
@@ -2291,7 +2293,7 @@ con i dati ACI, è quella riguardante gli orari di incidenti.
 \end{figure}
 
 Nella figura \ref{fig:orari-strade-aci} sono raffigurati gli incidenti avvenuti 
-nel 2018, divisi per orario, sulla SS16 (Adriatica) in provincia di Bari, sulla SS1 
+nel 2018, divisi per orario, sulla SS16 Adriatica in provincia di Bari, sulla SS1 
 in provincia di Genova, e infine sul Raccordo Anulare a Roma.
 
 Le tendenze nei tre grafi sono molto simili e a Roma, dove si ha maggiore 
@@ -2312,14 +2314,14 @@ andare e tornare dai luoghi di lavoro.
 
 Il grafo \ref{fig:tangenziali-autostrade} conferma per alcune autostrade i picchi di 
 incidenti per il traffico durante orari di punta, in particolare è molto visibile 
-per la A4 Torino-Trieste, per la Tangenziale ovest e per la Tangenziale est.
+per la A4 Torino-Trieste, per la Tangenziale Ovest e per la Tangenziale Est.
 
 \'E possibile ipotizzare che siano queste le strade più utilizzate per 
 andare a lavoro? 
 Certamente la maggior parte dei residenti a Milano non utilizzerà strade registrate 
 nell'ultimo grafo. 
 Tuttavia, per quanto riguarda i pendolari, è molto probabile che, quelli provenienti 
-da Varese, Busto Arsizio o Novara per esempio, utilizzino la Tangenziale ovest, 
+da Varese, Busto Arsizio o Novara per esempio, utilizzino la Tangenziale Ovest, 
 e dunque siano contenuti nei conteggi. 
 
 Per quanto dunque, non sia possibile stimare le strade in città più utilizzate, 
@@ -2361,9 +2363,9 @@ autostrade.
 \'E anche curioso che le uniche autostrade presenti nel grafo siano la A1 e la A14, 
 solamente in occasione dell'estate 2011. 
 La motivazione di ciò potrebbe essere, che le due strade statali, oltre a essere usate per 
-recarsi nella località marittima, siano poi sfruttate anche durante la vacanza per raggiungere 
-zone vicine, mentre è molto più raro che, durante le ferie, una famiglia si rechi in spiaggia 
-passando per esempio per la A1.
+recarsi nella località marittima, siano poi sfruttate anche durante la vacanza per 
+raggiungere zone vicine, mentre è molto più raro che, durante le ferie, una famiglia 
+si rechi in spiaggia passando per esempio per la A1.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\clearpage
