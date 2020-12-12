@@ -28,8 +28,8 @@ morti_per_eta = morti_per_eta.drop('0-5  ')
 
 perc_fascia = np.array( [3.1, 2.8+4+5.3, 19, 18.2, 7.3+6.4, 19.3]) / 100
 
-incidenti_per_eta = incidenti_per_eta / perc_fascia
-morti_per_eta = morti_per_eta / perc_fascia
+incidenti_per_eta /= perc_fascia
+morti_per_eta /= perc_fascia
 
 indice_mortalita = morti_per_eta * 100 / incidenti_per_eta
 

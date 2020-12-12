@@ -1915,12 +1915,27 @@ contiene quindici anni, mentre la seconda solamente due. Sarebbe quindi opportun
 normalizzare la percentuale di incidenti commessi, con una stima del numero di 
 guidatori nella rispettiva fascia di età.
 
+\begin{lstlisting}
+    perc_fascia = np.array( [3.1, 2.8+4+5.3, 19, 18.2, 7.3+6.4, 19.3]) / 100
+
+    incidenti_per_eta /= perc_fascia
+    morti_per_eta /= perc_fascia
+
+    indice_mortalita = morti_per_eta * 100 / incidenti_per_eta
+\end{lstlisting}
+
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mortalita/indice_mort_norm.png}
     \caption{Indice di mortalità degli incidenti, normalizzato per popolazione standard}
     \label{fig:indice-mort-norm}
 \end{figure}
 
+Una volta normalizzato per la popolazione standard in Italia, il numero di incidenti per 
+fascia di età, nel grafo destro della figura \ref{fig:indice-mort-norm}, mostra che le 
+età nelle quali si commettono più sinistri sono quelle dei \columnstyle{18-29 anni}, 
+con un calo nei valori successivi.
+D'altra parte, l'indice di mortalità non cambia, poichè è un rapporto in cui i fattori 
+sono stati divisi per costanti uguali per ogni fascia.
 
 %\clearpage
 \section{Dati ACI}
