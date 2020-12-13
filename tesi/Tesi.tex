@@ -110,26 +110,27 @@ importanti.
 
 Ovviamente il trovare una casa non è l'unico motivo per utilizzare dati liberi. 
 Spesso, questi sono estremamente utili a garantire trasparenza tra istituzioni, 
-a tal punto che, fin troppo frequentemente, queste rendono complesso o del tutto impossibile 
-per un utente l'ottenimento dei dati.
+a tal punto che, fin troppo frequentemente, queste rendono complesso o del tutto 
+impossibile per un utente l'ottenimento dei dati.
 
-La garanzia di \quotestyle{poter fare i conti in tasca alle istituzioni}, è un valore che molto 
-spesso è contrapposto con il diritto alla privacy, anche in modo completamente ingiustificato, 
-e esisterebbero numerosi vantaggi nell'obbligare il rilascio di più informazioni da parte di 
-aziende e enti.
+La garanzia di \quotestyle{poter fare i conti in tasca alle istituzioni}, è un 
+valore che molto spesso è contrapposto con il diritto alla privacy, anche in 
+modo completamente ingiustificato, e esisterebbero numerosi vantaggi nell'obbligare 
+il rilascio di più informazioni da parte di aziende e enti.
 \todo{elaborare meglio il pezzo sopra - atrent: concordo, ma la direzione è quella}
 
 Questo lavoro è da intendere come una dimostrazione delle possibili analisi realizzabili 
 tramite dati pubblici, e di quante altri studi sarebbe possibile eseguire se fossero 
 disponibili le informazioni mancanti.
 In particolare ci si chiederà se il pavè, a Milano, influisca sull'incidentalità, 
-o se gli autovelox rendano più attenta la guida delle automobili in loro prossimità, o 
-ancora se le linee dei trasporti pubblici influiscano in maniera positiva o negativa sugli 
-incidenti.
+o se gli autovelox rendano più attenta la guida delle automobili in loro prossimità, 
+o ancora se le linee dei trasporti pubblici influiscano in maniera positiva o 
+negativa sugli incidenti.
 
 Altre questioni interessanti potrebbero essere: 
 Quali sono le strade più pericolose in Italia? 
-Si ha più probabilità di essere coinvolti in un sinistro in città o su una strada extraurbana? 
+Si ha più probabilità di essere coinvolti in un sinistro in città o 
+su una strada extraurbana? 
 Il numero di passeggeri influisce sulla probabilità di essere coinvolti in un incidente?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -143,21 +144,21 @@ di dati non geolocalizzati su incidenti stradali in Italia.
 Questo dataset contiene un'ampia gamma di campi, tra cui ora, 
 mese, giorno della settimana in cui è avvenuto l'incidente, 
 ma anche dati sui passeggeri, la natura dell'incidente e il tipo di strada. 
-Particolarmente interessanti sono anche i campi riguardanti il tipo di incrocio a cui è 
-avvenuto il sinistro, come rettilineo, rotonda o semaforo.
+Particolarmente interessanti sono anche i campi riguardanti il tipo di incrocio 
+a cui è avvenuto il sinistro, come rettilineo, rotonda o semaforo.
 
 Per quanto riguarda i dati geolocalizzati, 
 la fonte è invece il sito web TheSubmarine \cite{SUBMARINE:1}
 che in un articolo riguardante l'incidentalità a Milano, 
 ha ottenuto dall'ente Istat la pubblicazione di una parte degli 
 incidenti avvenuti nella città nel 2016, con la relativa posizione.
-Il dataset in questione è abbastanza povero, e contiene solamente l'incidente con la 
-propria posizione, indicata tramite coordinate geografiche.
+Il dataset in questione è abbastanza povero, e contiene solamente 
+l'incidente con la propria posizione, indicata tramite coordinate geografiche.
 
 L'ultimo dataset, è stato trovato sul sito di 
 ACI\footnote{Automobile Club Italia} \cite{ACI:1}.
-Questi dati, specifici a autostrade e strade provinciali, indicano anche il nome della 
-rispettiva via, oltre a informazioni come l'orario dell'incidente, 
+Questi dati, specifici a autostrade e strade provinciali, indicano anche il 
+nome della rispettiva via, oltre a informazioni come l'orario dell'incidente, 
 il mese o il giorno della settimana.
 
 \section{Dati riguardanti autovelox}
@@ -165,19 +166,21 @@ Un primo dataset individuato, che riguardasse delle posizioni degli autovelox fi
 è stato una mappa GoogleMyMaps\footnote{\url{https://www.google.com/maps/d/viewer?mid=1CBgMTvIDnbGo22-Y1f3rVcbeX4C0v_w1&ll=45.365557951599605\%2C10.03650113755961&z=8}} 
 creata da un utente anonimo, dunque senza un modo di provare l'autenticità dei dati.
 
-Il dataset utilizzato, invece, è stato ottenuto tramite OpenStreetMaps, ricavando solo gli autovelox 
-in Milano. 
-Per restringere il campo di ricerca a solo Milano, si è fatto uso delle Overpass API\footnote{\url{https://overpass-turbo.eu/}}, 
+Il dataset utilizzato, invece, è stato ottenuto tramite OpenStreetMaps, ricavando 
+solo gli autovelox in Milano. 
+Per restringere il campo di ricerca a solo Milano, si è fatto uso delle 
+Overpass API\footnote{\url{https://overpass-turbo.eu/}}, 
 specifiche per OpenStreetMaps, eseguendo la seguente query: 
 
 \lstinputlisting{../src/codice_per_dati/overpass_query.txt}
 
-Il dataset ricavato, purtroppo, non permette di capire quando gli autovelox siano stati 
-installati, fattore importante per capirne l'effetto sul traffico e sugli incidenti.
-Tuttavia il sito web ztlmilano \cite{ZTLMILANO:1}
+Il dataset ricavato, purtroppo, non permette di capire quando gli autovelox siano 
+stati installati, fattore importante per capirne l'effetto sul traffico e 
+sugli incidenti.Tuttavia il sito web ztlmilano \cite{ZTLMILANO:1}
 contiene un articolo nel quale specifica una lista di 
-autovelox installati nel 2014, considerando che il dataset di OpenStreetMaps sia aggiornato 
-fino ad oggi, è possibile ricavare la posizione precisa di questi ultimi.
+autovelox installati nel 2014, considerando che il dataset di OpenStreetMaps 
+sia aggiornato fino ad oggi, è possibile ricavare la posizione precisa di 
+questi ultimi.
 
 La lista di Ztlmilano contiene i seguenti autovelox: 
 
@@ -679,7 +682,7 @@ e in alcuni punti tre, corsie ciascuna.
 Con l'aumentare dello spazio, inevitabilmente la velocità delle automobili aumenta, 
 e con esso il rischio di incidenti.
 
-\todo{ci sono vie con la tendenza opposta?}
+\todo{concludere, trasporti pubblici deterrente per traffico?}
 
 %\clearpage
 \subsection{Il pavè a Milano influisce in qualche modo sull'incidentalità?}
@@ -1792,15 +1795,19 @@ per esempio \columnstyle{30-44} contiene quindici anni, mentre
 
 Se si normalizza per anni contenuti in ogni fascia, ipotizzando un numero 
 costante di persone di ogni età\footnote{La normalizzazione tiene conto 
-che la fascia di età \columnstyle{65+} vale venti anni.}, 
+che la fascia di età \columnstyle{65+} valga venti anni.}, 
 si ottiene un grafo, visibile in figura \ref{fig:eta-pedoni}, che, per 
 quanto riguarda i pedoni feriti, è molto differente.
-\todo{itera su questo concetto}
+Ignorando gli individui più giovani, tutte le altre fasce sono coinvolte 
+in modo omogeneo, con un picco nella categoria \columnstyle{65+ anni}.
+D'altra parte, il grafo destro, contenente i pedoni morti per fascia di età, 
+non subisce un grande cambiamento, mantenendo il punto di massimo con 
+i pedoni più anziani.
 
-Non è detto, tuttavia, che in Italia il numero di individui con la stessa età 
-sia costante.
-Anzi, le percentuali di individui per fascia, trovate sul sito 
-Tuttitalia \cite{TUTTITALIA:1}, sono state riportate nella tabella sottostante: 
+Non è detto, tuttavia, che in Italia il numero di individui con 
+la stessa età sia costante anzi, le percentuali di individui per fascia, 
+trovate sul sito Tuttitalia \cite{TUTTITALIA:1}, riportate nella tabella 
+sottostante, non sono particolarmente omogenee: 
 
 \begin{center}
     \def\arraystretch{1.5}%  
@@ -2195,10 +2202,15 @@ per il minor numero di incidenti mortali, che rendono il campione più ristretto
 Tracciando il grafo \ref{fig:corr-incidenti-feriti}, dei primi trenta valori 
 del dataset ACI, è chiaramente visibile la correlazione tra 
 numero di incidenti e numero di feriti.
+
 L'unico dubbio che possa sorgere è che il numero di feriti sia maggiore del 
 numero di incidenti, tuttavia controllando il dataset, ogni 
 riga contiene un numero di feriti maggiore.
-\todo{spiegare perchè ci sono più feriti che incidenti}
+\'E possibile che il dataset contenga solo incidenti con almeno un ferito, 
+e quindi ignori tutti i sinistri non particolarmente significativi.
+D'altra parte, tenendo conto che si sono utilizzati dati raccolti lungo 
+le autostrade, è possibile che la maggior parte dei sinistri comporti 
+un alto numero di feriti. 
 Nella tabella sottostante sono  mostrate le prime righe del dataset, con i 
 rispettivi numeri di incidenti e feriti. 
 
@@ -2456,7 +2468,7 @@ durante una nevicata.
 
 Tuttavia, le informazioni necessarie per ottenere una stima della correlazione 
 dei due fattori sono, o fuori dalla portata dei dati liberi, o inesistenti. 
-Un esempio di queste informazioni, potrebbe essere il sapere giorno e ora 
+Un esempio di questi dati, potrebbe essere il sapere giorno e ora 
 dell'incidente, e allo stesso modo anche le zone in cui si sono verificati certi 
 fenomeni atmosferici, come la caduta di neve. 
 Entrambi questi dati non sono disponibili tramite dataset aperti, e probabilmente, 
@@ -2506,18 +2518,24 @@ Ciò non significa che, per esempio nel 2011, sia stata l'alta temperatura a pro
 tutti gli incidenti, anzi, è molto più probabile che il fattore con maggiore 
 influenza sia proprio il mese, e non la temperatura o l'umidità.
 
-\todo{contesto dei dati utilizzati, e campioni scollegati ma correlati}
+Infatti, se si osserva che tipo di dati si sta utilizzando per realizzare 
+queste stime, i dati sulle condizioni meteo sono molto imprecisi, in quanto potrebbero 
+esserci differenze di diversi gradi, in zone lontane di Milano.
+Tuttavia, anche i dati sugli incidenti non sono particolarmente precisi, da 
+questo punto di vista, visto che indicano solo il nome dell'autostrada in cui è avvenuto 
+il sinistro, e la posizione precisa potrebbe essere a chilometri di distanza da dove 
+si è calcolata l'informazione sul meteo.
 
 Dal punto di vista, invece, della velocità del vento, sarebbe possibile eseguire 
-un'analisi più approfondita, in quanto un valore di indice di correlazione uguale 
-a $0.5$ non sia particolarmente alto.
-Si potrebbe, per esempio, controllare se esista una qualche differenza tra gli incidenti su 
-moto rispetto all'auto. 
+un'analisi più approfondita, in quanto un valore dell'indice di correlazione uguale 
+a $0.5$ non è particolarmente alto.
+Si potrebbe, per esempio, controllare se esista una qualche differenza tra gli 
+incidenti su moto rispetto all'auto. 
 Oppure, avendo a disposizione la velocità del vento in una precisa zona, controllare 
 la differenza di incidenti all'uscita di gallerie, zone molto pericolose 
 in presenza di vento forte.
 
-\todo{esempio di campioni con correlazione alta ma completamente scollegati}
+\todo{conclusione e esempio di campioni con correlazione alta ma completamente scollegati}
 
 %\addcontentsline{toc}{chapter}{Bibliografia}
 \printbibliography
