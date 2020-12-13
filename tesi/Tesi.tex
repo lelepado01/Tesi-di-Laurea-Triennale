@@ -1848,7 +1848,7 @@ Il risultato ottento lo si aggiunge alla fascia \columnstyle{18-29}.
 
 \begin{lstlisting}
     correct_order =         ['0-5  ', '6-9  ', '10-14', '15-17', '18-29', '30-44', '45-54', '55-64','65+  ']
-    perc_fascia = np.array( [3.9, 4.5, 4.8, 3.1, 2.8+4+5.3, 19, 18.2, 7.3+6.4, 19.3]) / 100
+    perc_fascia = np.array( [3.9, 4.5, 4.8, 3.1, 12.1, 19, 18.2, 13.7, 19.3]) / 100
 
     pedoni_feriti_vals = pedoni_feriti.values * perc_fascia
     pedoni_morti_vals = pedoni_morti.values * perc_fascia
@@ -1859,20 +1859,19 @@ Il risultato ottento lo si aggiunge alla fascia \columnstyle{18-29}.
     \caption{Fasce di età dei pedoni coinvolti in incidenti, normalizzate tramite percentuale di popolazione}
     \label{fig:eta-pedoni-norm}
 \end{figure}
-\todo{correggere commmento}
 
 Una volta aver corretto l'immagine precendente, 
 si ottiene la figura \ref{fig:eta-pedoni-norm} dove, soprattutto 
 nel grafo di destra, è presente una curva particolarmente alta 
-nelle fasce più anziane.
+nelle fasce più anziane, e un secondo picco nella categoria \columnstyle{18-29 anni}.
 Anche nel grafo di sinistra è presente la stessa impennata in corrispondenza 
-della categoria dei \columnstyle{65+} ma, a partire dalla fascia 
-dei \columnstyle{30-44} anni, è già presente un sostanziale incremento dei feriti.
+della seconda fascia, mentre la categoria \columnstyle{65+} non 
+risulta particolarmente alta.
 
-L'incremento di feriti nelle fasce più anziane, si può speculare sia dovuto al 
-fatto che questi ultimi sono più propensi all'essere feriti in un incidente. 
-Tuttavia, è anche possibile che uno dei fattori maggiormente influenti sia il 
-volume di pedoni in queste fasce di età, perchè magari non possono più guidare.
+L'incremento di morti nelle fasce più anziane, si può speculare sia dovuto al 
+fatto che questi ultimi siano più propensi all'essere feriti in un incidente. 
+Mentre, per la prima categoria, può essere che, soprattutto tra i più giovani, 
+si preferisca ancora muoversi a piedi invece che in macchina.
 
 \subsection{Età dei conducenti coinvolti in incidenti}
 
