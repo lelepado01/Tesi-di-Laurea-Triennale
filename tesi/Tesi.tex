@@ -703,11 +703,13 @@ Inoltre, in alcuni viali, come viale Premuda, i tram hanno una carreggiata separ
 che molto probabilmente ha influenza ancora minore sugli incidenti della zona.
 
 Per creare una stima, si sono convertite le vie principali della cartina trovata 
-in geojson, il risultato è visibile nella mappa \ref{fig:mappa-pave}.
+in geojson, il risultato è visibile nella mappa sulla sinistra 
+dell'immagine \ref{fig:mappa-pave}.
 
 \begin{figure}
-    \includegraphics[width=\linewidth]{../src/pave/mappa_pave.png}
-    \caption{Principali strade a Milano in pavè}
+    \includegraphics[width=0.5\linewidth]{../src/pave/mappa_pave.png}
+    \includegraphics[width=0.5\linewidth]{../src/pave/mappa_asfalto.png}
+    \caption{Principali strade a Milano in pavè e campione di strade asfaltate}
     \label{fig:mappa-pave}
 \end{figure}
 
@@ -739,15 +741,9 @@ contiene tutto il territorio del centro.
 
 Per ovviare a questo problema, si è creato un campione di strade asfaltate, prese circa 
 nella stessa zona di Milano. 
-Queste strade sono raffigurate nella mappa \ref{fig:mappa-asfalto}. 
+Queste strade sono raffigurate nella mappa destra in figura \ref{fig:mappa-pave}. 
 Si è inoltre tentato di tenere i due campioni di strade il più simili possibili, sia per zona, 
 sia per area totale del dataset.
-
-\begin{figure}
-    \includegraphics[width=\linewidth]{../src/pave/mappa_asfalto.png}
-    \caption{Campione di strade asfaltate a Milano}
-    \label{fig:mappa-asfalto}
-\end{figure}
 
 Eseguendo lo stesso calcolo realizzato per le strade in pavè, risulta che il numero di incidenti per 
 chilometro quadrato, nel campione creato, sia di $220.89$ incidenti.
