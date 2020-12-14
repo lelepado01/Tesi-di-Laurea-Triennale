@@ -10,7 +10,7 @@ for km, zona in zip(data['Incidenti per chilometro'], data['Incidenti per zona']
 
 # print(incremento_percentuale_totale)
 
-data[['Incidenti per chilometro', 'Incidenti per zona']].plot.barh(color=['#c1a660', '#c17560'], width=0.9 )
+data[['Incidenti per chilometro', 'Incidenti per zona']].plot.barh(color=['#dd994f', '#4f94dd'], width=0.9 )
 plt.yticks(range(0, len(data)), data['nome'])
 plt.legend(bbox_to_anchor=(1,1), loc="upper left")
 plt.tight_layout()
