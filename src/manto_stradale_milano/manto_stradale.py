@@ -1,4 +1,7 @@
 
+# File usato per controllare se nei vari layer esistessero info 
+# su pave (file di geoportale comune di milano) 
+
 import geopandas as gp
 import matplotlib.pyplot as plt
 import contextily as cx

@@ -3,7 +3,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import sys
 sys.path.append("src")
-
 import meteo.meteo_generale_utils as mgu
 
 incidenti = pd.read_csv("dataset/incidenti/incidenti_2013.txt", sep="\t")

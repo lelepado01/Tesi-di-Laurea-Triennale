@@ -1,11 +1,7 @@
 
 import geopandas as gp
-import matplotlib.pyplot as plt
-import contextily as cx
-import pandas as pd
 import sys
 
-#from geo_utils import Point
 sys.path.append("src/")
 import geo_utils
 import map_utils
@@ -29,12 +25,12 @@ path_incidenti = "dataset/incidenti/inc_strad_milano_2016.geojson"
 incidenti = gp.read_file(path_incidenti).to_crs(epsg=3857)
 
 # Navigli
-# bounds = [1.020 * scale, 1.025 * scale, 5.691 * scale, 5.695 * scale]
-# mappa = map_utils.CustomMap(bounds=bounds)
-# mappa.add_layer(incidenti)
-# mappa.add_layer(percorsi_ridotti, alpha=0.5, color = "orange")
-# mappa.set_label("Linee Autobus e Incidenti")
-# mappa.draw() 
+bounds = [1.020 * scale, 1.025 * scale, 5.691 * scale, 5.695 * scale]
+mappa = map_utils.CustomMap(bounds=bounds)
+mappa.add_layer(incidenti)
+mappa.add_layer(percorsi_ridotti, alpha=0.5, color = "orange")
+mappa.set_label("Linee Autobus e Incidenti")
+mappa.draw() 
 
 rect = geometry.Polygon([
     geometry.Point(1.020 * scale, 5.695 * scale), 

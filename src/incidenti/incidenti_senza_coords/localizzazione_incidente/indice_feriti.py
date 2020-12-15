@@ -1,6 +1,8 @@
 
+# File usato per calcolare tabella con indici di 
+# feriti per tipo di strada
+
 import pandas as pd
-import matplotlib.pyplot as plt
 
 data = pd.read_csv("dataset/incidenti/incidenti_2018.txt", sep="\t", encoding='latin1')
 
@@ -27,6 +29,9 @@ import sys
 sys.path.append("src")
 import label_utils
 
-mortalita['incrocio'] = label_utils.join_labels(mortalita['incrocio'], "dataset/incidenti/Classificazioni/intersezione_o_non_interse3.csv")
+mortalita['incrocio'] = label_utils.join_labels(
+    mortalita['incrocio'], 
+    "dataset/incidenti/Classificazioni/intersezione_o_non_interse3.csv"
+    )
 
 print(mortalita)

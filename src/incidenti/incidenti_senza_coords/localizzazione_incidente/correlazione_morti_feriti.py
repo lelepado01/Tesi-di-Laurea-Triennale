@@ -1,5 +1,8 @@
+
+# File usato per calcolare la correlazione tra morti / feriti e incidenti 
+# (tabella) 
+
 import pandas as pd
-import matplotlib.pyplot as plt
 
 data = pd.read_csv("dataset/incidenti/incidenti_2018.txt", sep="\t", encoding='latin1')
 
