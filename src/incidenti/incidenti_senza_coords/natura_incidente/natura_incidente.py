@@ -1,9 +1,6 @@
 
 import pandas as pd
 import matplotlib.pyplot as plt
-import sys
-sys.path.append('src')
-import label_utils
 
 data = pd.read_csv("dataset/incidenti/incidenti_2010.txt", sep='\t')
 

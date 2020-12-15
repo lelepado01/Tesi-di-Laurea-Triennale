@@ -1716,8 +1716,9 @@ dove le automobili stanno ripartendo.
 \subsection{Le tipologie di incidenti che provocano più feriti}
 
 Il dataset Istat contiene informazioni riguardanti il numero di persone coinvolte 
-in incidenti.
-Sarebbe interessante controllare se esistono tipologie di incidenti che provocano 
+in incidenti, in particolare l'età, il sesso e l'esito, cioè lo stato del passeggero 
+dopo l'incidente, incolume, ferito, morto entro 24 ore o morto entro un mese.
+Sarebbe interessante controllare se esistano tipologie di incidenti che provocano 
 un maggior numero di feriti.
 
 \begin{figure}
@@ -1731,8 +1732,8 @@ che favoriscono la presenza di un solo ferito, come gli sbandamenti.
 \'E possibile arrivare a questa conclusione perchè il numero di incidenti con 
 un solo ferito, nella colonna \columnstyle{sbandamento} è tra i più alti, 
 mentre la stessa categoria con due persone ferite ha volume molto più basso.
-Al contrario, in incidenti come i tamponamenti, sono molto frequenti per ogni 
-numero di feriti, il che fa pensare che semplicemente avvenga un alto numero 
+Al contrario, in incidenti come \columnstyle{tamponamento}, sono molto frequenti 
+per ogni numero di feriti, il che fa pensare che semplicemente avvenga un alto numero 
 di questo tipo di sinistro.
 
 Le percentuali di osservazione di uno degli incidenti nel grafo sono riportate 
@@ -1929,8 +1930,8 @@ Il risultato ottento lo si aggiunge alla fascia \columnstyle{18-29}.
     correct_order =         ['0-5  ', '6-9  ', '10-14', '15-17', '18-29', '30-44', '45-54', '55-64','65+  ']
     perc_fascia = np.array( [3.9, 4.5, 4.8, 3.1, 12.1, 19, 18.2, 13.7, 19.3]) / 100
 
-    pedoni_feriti_vals = pedoni_feriti.values * perc_fascia
-    pedoni_morti_vals = pedoni_morti.values * perc_fascia
+    pedoni_feriti_vals = pedoni_feriti.values / perc_fascia
+    pedoni_morti_vals = pedoni_morti.values / perc_fascia
 \end{lstlisting}
 
 \begin{figure}
@@ -1993,7 +1994,7 @@ normalizzare la percentuale di incidenti commessi, con una stima del numero di
 guidatori nella rispettiva fascia di età.
 
 \begin{lstlisting}
-    perc_fascia = np.array( [3.1, 2.8+4+5.3, 19, 18.2, 7.3+6.4, 19.3]) / 100
+    perc_fascia = np.array( [3.1, 12.2, 19, 18.2, 13.7, 19.3]) / 100
 
     incidenti_per_eta /= perc_fascia
     morti_per_eta /= perc_fascia
