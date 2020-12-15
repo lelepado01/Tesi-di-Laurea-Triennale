@@ -152,12 +152,13 @@ influisca sull'incidentalità, o se gli autovelox rendano più attenta
 la guida delle automobili in loro prossimità, o ancora se le linee dei trasporti pubblici 
 influiscano in maniera positiva o negativa sugli incidenti.
 
-Altre questioni interessanti potrebbero essere: 
-Quali sono le strade più pericolose in Italia? 
+Altre questioni interessanti potrebbero essere:\\
+Quali sono le strade più pericolose in Italia?\\
 Si ha più probabilità di essere coinvolti in un sinistro in città o 
-su una strada extraurbana? 
-Le linee di trasporto pubblico influenzano il traffico positivamente o negativamente?
-Il numero di passeggeri influisce sulla probabilità di essere coinvolti in un incidente?
+su una strada extraurbana?\\
+Le linee di trasporto pubblico influenzano il traffico positivamente o negativamente?\\
+Il numero di passeggeri influisce sulla probabilità di essere coinvolti in un 
+incidente?\\
 Esistono fattori di distrazione per il conducente di un'automobile? 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -190,7 +191,8 @@ il mese o il giorno della settimana.
 
 \section{Dati riguardanti autovelox}
 Un primo dataset individuato, che riguardasse delle posizioni degli autovelox fissi, 
-è stato una mappa GoogleMyMaps\footnote{\url{https://www.google.com/maps/d/viewer?mid=1CBgMTvIDnbGo22-Y1f3rVcbeX4C0v_w1&ll=45.365557951599605\%2C10.03650113755961&z=8}} 
+è stato una mappa 
+GoogleMyMaps\footnote{\url{https://www.google.com/maps/d/viewer?mid=1CBgMTvIDnbGo22-Y1f3rVcbeX4C0v_w1&ll=45.365557951599605\%2C10.03650113755961&z=8}} 
 creata da un utente anonimo, dunque senza un modo di provare l'autenticità dei dati.
 
 Il dataset utilizzato, invece, è stato ottenuto tramite OpenStreetMaps, ricavando 
@@ -1248,12 +1250,16 @@ in quanto a partire dal 2011, fino al 2016, utilizzando i dati sul numero degli 
 
 L'immagine \ref{fig:rapporto-incidenti-traffico} contiene, a partire dall'alto, 
 la percentuale di accessi in area C a una determinata 
-ora\footnote{Si sono utilizzati i dati dell'anno 2016, perchè non si sono trovati dataset più recenti per 
-quanto riguarda gli accessi all'area C di Milano}, 
-e il numero di incidenti a Milano, pesati in base al questa stima del traffico.\\
-Si osserva molte similitudini tra che la stima realizzata tramite gli ingressi in area C e 
-il grafo \ref{fig:week-weekend-milano}, raffigurante gli incidenti a Milano divisi per orario, 
-in particolare, la correlazione tra traffico in area C a Milano e incidenti per orario è $0.877$
+ora\footnote{Si sono utilizzati i dati dell'anno 2016, perchè non si sono trovati 
+dataset più recenti per quanto riguarda gli accessi all'area C di Milano}, 
+e il numero di incidenti a Milano, pesati in base al questa stima del traffico.
+
+Si osserva molte similitudini tra la stima realizzata tramite gli ingressi 
+in area C e il grafo \ref{fig:week-weekend-milano}, raffigurante gli incidenti 
+a Milano divisi per orario, in particolare, la correlazione tra traffico in 
+area C a Milano e incidenti per orario è $0.877$.
+
+\todo{correlazione alta, spiegare}
 
 \begin{lstlisting}
     # eseguito con dati del 2016
@@ -1269,13 +1275,14 @@ in particolare, la correlazione tra traffico in area C a Milano e incidenti per 
     correlazione = accessi_area_c_per_ora.corr(incidenti_per_ora)
 \end{lstlisting}
 
-Per quanto riguarda invece, il grafo nella metà bassa della figura \ref{fig:rapporto-incidenti-traffico}, 
-sono presenti tre picchi di con orari particolarmente pericolosi, uno alle 3:00 di mattina, uno alle 
+Per quanto riguarda invece, il grafo nella metà bassa della 
+figura \ref{fig:rapporto-incidenti-traffico}, sono presenti tre picchi di 
+con orari particolarmente pericolosi, uno alle 3:00 di mattina, uno alle 
 8:00 e l'ultimo alle 18:00. 
-Di questi, il primo è possibile che sia dovuto allo scarso volume di accessi all'area C in questo orario, 
-visto che alle 3:00 di notte si ha il minimo volume di traffico della giornata, 
-mentre gli altri due sono certamente dovuti all'alto numero di incidenti, in quanto il traffico in questi 
-orari è pienamente nella media.
+Di questi, il primo è possibile che sia dovuto allo scarso volume di accessi 
+all'area C in questo orario, visto che alle 3:00 di notte si ha il minimo volume di 
+traffico della giornata, mentre gli altri due sono certamente dovuti all'alto 
+numero di incidenti, in quanto il traffico in questi orari è pienamente nella media.
 
 %\clearpage
 \subsection{Incidentalità in orari notturni}
@@ -2234,9 +2241,16 @@ formula:
     $\rho_{X, Y} = \displaystyle \frac{cov(X, Y)}{\sigma_X \sigma_Y}$
 \end{center}
 
+\begin{center}
+    con: $\rho_{X, Y} \rightarrow [-1, 1]$
+\end{center}
+
 dove X e Y sono i due campioni di cui si vuole calcolare la correlazione, 
 \methodstyle{cov()} è la covarianza, e $\sigma_X$ è la deviazione standard del 
 campione X \cite{PROB_E_STATISTICA:3}.
+
+Una volta divisi i dati, è possibile calcolare l'indice tramite il metodo 
+\methodstyle{corr()}, i risultati sono riportati nella seguente tabella.
 
 \begin{center}
     \def\arraystretch{1.5}%  
@@ -2250,23 +2264,16 @@ campione X \cite{PROB_E_STATISTICA:3}.
     \end{tabular}
 \end{center}
 
-Una volta divisi i dati, è possibile calcolare l'indice tramite il metodo 
-\methodstyle{corr()}, i risultati sono riportati nella seguente tabella.
-
-Il coefficiente di Pearson, per quanto riguarda Incidenti e Feriti, 
-è molto vicino a uno, quindi i due campioni sono strettamente correlati.
-I coefficienti riguardanti i morti sono molto meno vicini a uno, probabilmente 
-per il minor numero di incidenti mortali, che rendono il campione più ristretto.
-
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/provincia/corr_incidenti.png}
-    \caption{Correlazione tra numero di feriti e incidenti}
+    \caption{Correlazione tra numero di feriti e incidenti nelle venti province con maggior numero di sinistri}
     \label{fig:corr-incidenti-feriti}
 \end{figure}
 
 Tracciando il grafo \ref{fig:corr-incidenti-feriti}, dei primi trenta valori 
 del dataset ACI, è chiaramente visibile la correlazione tra 
-numero di incidenti e numero di feriti.
+numero di incidenti e numero di feriti, in quanto nella maggior parte dei casi, 
+all'aumentare del numero di incidenti il numero di feriti cresce allo stesso modo.
 
 L'unico dubbio che possa sorgere è che il numero di feriti sia maggiore del 
 numero di incidenti, tuttavia controllando il dataset, ogni 
@@ -2295,7 +2302,14 @@ rispettivi numeri di incidenti e feriti.
     \end{tabular}
 \end{center}
 
-\todo{lelepado: conclusione, in questo caso c'è anche causa tra incidenti e feriti/morti?}
+Il coefficiente di Pearson, per quanto riguarda Incidenti e Feriti, 
+è molto vicino a uno, quindi i due campioni sono strettamente correlati.
+Nonostante, in generale, correlazione non implichi causa o effetto, cioè, non 
+è detto che due fattori correlati si influenzino in alcun modo, in questo caso è 
+difficile pensare che il numero di incidenti non sia alla causa del aumenare o diminuire 
+del numero di feriti.
+I coefficienti riguardanti i morti sono molto meno vicini a uno, probabilmente 
+per il minor numero di incidenti mortali, che rendono il campione più ristretto.
 
 \subsection{Le autostrade più pericolose}
 
