@@ -654,8 +654,9 @@ incidenti avvengono sulla circonvallazione interna,
 situata fuori dall'area C, ma compresa nel centro storico di Milano.
 
 Prendendo in considerazione solamente l'area C, il numero di incidenti scende a $46.83$ 
-per chilometro quadrato, dunque è possibile concludere che la riduzione del traffico nel 
-centro di Milano ha impatto consistente sull'incidentalità.
+per chilometro quadrato, di gran lunga minore rispetto al valore del centro storico, 
+dunque è possibile concludere che la riduzione del traffico nel centro di Milano ha impatto 
+consistente sull'incidentalità.
 
 %\clearpage
 \section{Incidenti e Linee dei Trasporti Pubblici}
@@ -665,20 +666,22 @@ quello degli incidenti, dopo aver eliminato alcune linee di autobus che risultav
 troppo in periferia, si ottiene la mappa sinistra nella figura \ref{fig:geo-trasporti}: 
 
 \begin{figure}
-    \includegraphics[width=\linewidth]{../src/atm/linee_atm.png}
+    \hfill\includegraphics[width=0.6\linewidth]{../src/atm/linee_atm.png}\hspace*{\fill}
     \caption{Linee Autobus e Tram a Milano}
     \label{fig:geo-trasporti}
 \end{figure}
 
 Affiancando le posizioni degli incidenti ai tragitti dei trasporti pubblici, 
-non è possibile notare un collegamento preciso tra i due dataset. Sono presenti tuttavia alcune 
-corrispondenze come, per esempio, la zona dei navigli e quella circostante a 
-corso Ventidue Marzo. 
-Sono anche visibili alcune strade con alta incidentalità, parallele a linee di autobus. 
+non è possibile notare un collegamento preciso tra i due dataset. 
+Sono presenti tuttavia alcune corrispondenze come, per esempio, la zona dei Navigli 
+e quella circostante a Corso Ventidue Marzo. 
+
+Un fenomeno interessante, è la presenza di alcune strade con alta incidentalità, 
+parallele a linee di autobus. 
 Un esempio è quello di zona Navigli, in figura \ref{fig:navigli}, dove le vie interessate sono:
 Viale Gian Galeazzo e Viale Beatrice D'Este, parallele a Viale Col di Lana e Viale Bligny.
 Lo stesso fenomeno è osservabile su Viale Gabriele D'Annunzio e Viale Gorizia e Coni Zugna, 
-e in un'altra zona, vicino a corso Ventidue Marzo.
+e nella zona vicino a corso Ventidue Marzo.
 
 \begin{figure}
     \includegraphics[width=0.51\linewidth]{../src/atm/navigli.png}
@@ -699,18 +702,18 @@ notare lo stesso fenomeno, tra Viale Bianca Maria e Viale Premuda.
 
 Le immagini del contenenti indicazioni sul traffico sono state realizzate tramite le API di 
 Google Maps, tuttavia non offrono una stima ideale, poiche indicano il traffico in tempo reale e 
-il Covid-19 ha ridotto notevolmente il volume di automobili.
+la quarantena per il Covid-19 ha ridotto notevolmente il volume di automobili.
 
 Per confutare l'ipotesi iniziale, si sono utilizzati i dati ricavati in precedenza, 
-degli incindenti per chilometro per municipio Milano. 
-Nella zona dei navigli, si è poi presa in considerazione la sezione \ref{fig:zona-navigli-rect}, 
+cioè gli incindenti per chilometro per ogni municipio di Milano. 
+Nella zona dei Navigli, si è poi presa in considerazione la sezione \ref{fig:zona-navigli-rect}, 
 perchè sono presenti molti incidenti in viale Papiniano e viale Beatrice d'Este, 
-e un numero minore nella via parallela sottostante, in cui è anche presente 
-una linea di trasporti pubblici.
+e un numero minore nella vie parallele sottostanti, in cui sono anche presenti 
+linee di trasporti pubblici.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/atm/zona_navigli_rect.png}
-    \caption{Sezioni di Milano prese in considerazione per contare gli incidenti ai navigli}
+    \caption{Sezioni di Milano prese in considerazione per contare gli incidenti ai Navigli}
     \label{fig:zona-navigli-rect}
 \end{figure}
 
@@ -735,23 +738,25 @@ una linea di trasporti pubblici.
 \end{lstlisting}
 
 Il risultato, conferma che avvengono $167.09$ incidenti per chilometro 
-nel viale in cui sono presenti trasporti pubblici, che per quanto non sia nella media per la zona 
-di appartenenza, è giustificabile in quanto si è presa in considerazione solo la strada.
-Nell'altra zona, invece, dove non passa alcuna linea di trasporti pubblici, 
-gli incidenti sono $289.32$. 
+nel viale in cui sono presenti trasporti pubblici e, per quanto non sia nella media per la zona 
+di appartenenza, è giustificabile in quanto si è presa in considerazione solo la strada, 
+e non le \quotestyle{zone morte}.
+Nell'altra via, invece, dove non passa alcuna linea di trasporti pubblici, 
+gli incidenti sono $289.32$, risultato ancora più alto rispetto a quello ottenuto 
+nella zona di Loreto. 
 
 Non è detto che il maggior numero di incidenti sia causato dalla linea degli autobus, 
 in particolare, va tenuta in considerazione la topologia delle due vie parallele.
-La differenza principale tra viale Bligny e viale Beatrice d'Este è che, il primo è una via a due 
+La differenza principale tra Viale Bligny e Viale Beatrice d'Este è che, la prima è una via a due 
 corsie per senso di marcia, mentre il secondo è un viale a due 
 carreggiate\footnote{Carreggiata: la parte della strada destinata allo scorrimento dei veicoli, 
 delimitata da una striscia continua o da un paracarro} 
-con sensi di marcia separati. 
-Dunque è ovvio che la maggior parte dei conducenti preferiscono un viale ad alta velocità rispetto a 
-una via dove è possibile rimanere incolonnati per la presenza di una sola corsia, e dove si è 
-rallentati dalla presenza di autobus o tram.
+con sensi di marcia separati da una zona non attraversabile da automobili. 
+Dunque è ovvio che la maggior parte dei conducenti preferirà un viale ad alta velocità 
+rispetto a una via dove è possibile rimanere incolonnati per la presenza di una sola 
+corsia, e dove si è rallentati dalla presenza di autobus o tram.
 
-Lo stesso procedimento è stato realizzato per corso Ventidue Marzo, le zone utilizzate sono 
+Lo stesso procedimento è stato realizzato per Corso Ventidue Marzo, le zone utilizzate sono 
 raffigurate nel'immagine \ref{fig:zona-22marzo-rect}. 
 
 \begin{figure}
@@ -768,8 +773,8 @@ Anche per questa zona, le due vie prese in considerazione sono molto diverse.
 Viale Premuda è una via a due carreggiate separate, ognuna con una corsia e un solo senso 
 di marcia, dove sono parcheggiate automobili su entambi i lati, e la velocità dei 
 veicoli non deve essere particolarmente elevata.
-D'altra parte viale Bianca Maria, pur avendo carreggiate separate, queste hanno due, 
-e in alcuni punti tre, corsie ciascuna. 
+Allo stesso modo, nel Viale Bianca Maria, le carreggiate sono separate, tuttavia queste 
+hanno due, e in alcuni punti tre, corsie ciascuna. 
 Con l'aumentare dello spazio, inevitabilmente la velocità delle automobili aumenta, 
 e con esso il rischio di incidenti.
 
