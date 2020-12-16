@@ -290,6 +290,26 @@ luoghi per questioni di lavoro.
 Va dunque tenuto conto che questa stima non sarà probabilmente tra le più accurate, 
 e in caso di grandi disparità tra regioni, si potrebbe dover invalidare i calcoli eseguiti.
 
+\section{Dati riguardanti l'area C}
+
+Per lo stesso motivo del capitolo precedente, si sono cercate informazioni sugli 
+accessi all'area C di Milano per realizzare una stima approssimativa del traffico, in 
+città, in base all'orario.
+
+Il dataset riguardante gli accessi è stato trovato sul sito di open data del comune di 
+Milano\footnote{\url{https://dati.comune.milano.it/organization/comunedimilano?q=area+c&sort=score+desc\%2C+metadata_modified+desc}}, 
+dove sono disponibili varie tipologie di file distinti, per esempio, per orario, 
+mese o località. 
+Tra questi si è utilizzata la tipologia contenente orari e data dell'accesso.
+
+Oltre ai dati riguardo agli accessi all'area C, si è fatto uso anche di una mappa 
+raffigurante i varchi di entrata e i limiti del centro storico, 
+proveniente dal sito del comune di 
+Milano\footnote{\url{https://www.comune.milano.it/aree-tematiche/mobilita/area-c}}. 
+
+Per quanto anche questo stimatore non sia tra i più accurati, ci si può aspettare che 
+il numero di accessi corrisponda, almeno in piccola parte, al traffico di Milano.
+
 \section{Dati riguardanti le zone di Milano}
 
 I dataset delle zone geolocalizzate di Milano provengono dal geoportale del comune di 
@@ -335,8 +355,9 @@ dal 2008, fino al 2018.
 
 \section{Dati riguardanti trasporti pubblici}
 
-Un altro fattore per cui ci si è chiesti se influisse sull'incidentalità, è la 
-presenza di trasporti pubblici.
+Un altro fattore su cui ci si è chiesti l'influenza sull'incidentalità, è la 
+presenza, nella via o viale, di trasporti pubblici in una città come, 
+per esempio, Milano.
 
 I dati riguardanti questi ultimi, hanno due provenienze, i primi sono 
 dati riferiti alle linee ATM, scaricati sul sito del comune di 
@@ -356,34 +377,24 @@ quelle in cui sono presenti solo autovetture private.
 
 \section{Dati riguardanti autostrade e manto stradale}
 
-Il primo dataset individuato, riguardante il manto  stradale, è stato quello di 
-ANAS\footnote{\url{http://dati.mit.gov.it/catalog/dataset/grafo-stradale-anas}}, 
-tuttavia questo consisteva in un file molto grande, e dalla precisione superflua per 
-le mappe che si sta tentando di ottenere.
+Per la realizzazione di alcune mappe, nelle quali sono necessari i tracciati delle principali 
+autostrade, si è tentata la ricerca di dati geolocalizzati sulle strade Italiane.
+
+Il primo dataset individuato, riguardante il manto  stradale, è stato trovato sul sito 
+internet dell'ente  
+ANAS\footnote{\url{http://dati.mit.gov.it/catalog/dataset/grafo-stradale-anas}}. 
+Tuttavia, consisteva in un file molto grande, contenente tutte le principali 
+strade in Italia, e dalla precisione superflua per le mappe che si sta tentando di ottenere.
 
 Si è dunque tentato di utilizzare il dataset presente sul geoportale del comune di 
 Milano\footnote{\url{https://geoportale.comune.milano.it/}}, 
-contenente anch'esso troppe strade in quanto traccia l'intero manto stradale del comune.
+contenente anch'esso troppe strade in quanto traccia l'intero manto stradale della città.
 
 Come ultima risorsa, si è deciso di tracciare alcune mappe in geojson utilizzando 
 Geojson.io\footnote{\url{https://geojson.io/}}, in particolare nella zona di Milano, 
 per le principali autostrade, tangenziali e strade statali. 
 Allo stesso modo, Geojson.io è stato utile a tracciare alcune aree in centro a Milano, 
 per confrontare gli incidenti su pavè agli incidenti su asfalto.
-
-\section{Dati riguardanti l'area C}
-
-Il dataset riguardante gli accessi all'area C è stato trovato sul sito 
-di open data del comune di 
-Milano\footnote{\url{https://dati.comune.milano.it/organization/comunedimilano?q=area+c&sort=score+desc\%2C+metadata_modified+desc}}, 
-dove sono disponibili varie tipologie di file distinti per esempio, per orario, 
-mese o località. 
-Tra questi si è utilizzata la tipologia contenente orari e data dell'accesso.
-
-Oltre a utilizzare i dati riguardo agli accessi all'area C, si è fatto uso anche di una mappa 
-raffigurante i varchi di entrata e i limiti del centro storico, 
-proveniente dal sito del comune di 
-Milano\footnote{\url{https://www.comune.milano.it/aree-tematiche/mobilita/area-c}}.
 
 \section{Dati riguardanti il turismo}
 
