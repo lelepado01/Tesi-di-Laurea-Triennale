@@ -398,75 +398,94 @@ per confrontare gli incidenti su pavè agli incidenti su asfalto.
 
 \section{Dati riguardanti il turismo}
 
-I dati sul turismo in Italia, sono stati presi dall'archivio istat sul 
-tema\footnote{\url{https://www.istat.it/it/archivio/16777}}.
+Le informazioni riguardanti il turismo, sono state utili a capire se nelle annate più 
+recenti, fosse presente un incremento di persone in ferie in località di montagna.
 
-I dati originali sono in formato xls, contenente informazioni a partire dal 1995 
+I dati sul turismo in Italia, sono stati trovati nell'archivio Istat sul 
+tema\footnote{\url{https://www.istat.it/it/archivio/16777}}.
+Il dataset originale era in formato xls, contenente informazioni a partire dal 1995 
 fino al 2019, sia regione per regione, sia divise per nord, centro e sud.
-Sono anche presenti più tabelle, ognuna rafficurante un particolare indicatore, 
-come produttività del lavoro, turismo nei mesi non estivi, tasso di turisticità 
+A loro volta, i file sono divisi in più tabelle, ognuna rafficurante un particolare 
+indicatore, come produttività del lavoro, turismo nei mesi non estivi, 
+tasso di turisticità\footnote{Il tasso di turisticità misura il livello di "affollamento" 
+turistico in un determinato periodo (anno o mese) indicando il numero di turisti presenti 
+ogni 100.000 abitanti. \cite{ONTIT:1}} 
 e valore aggiunto del turismo.
 
-Per realizzare la stima, sono stati necessari i dati regione per regione, 
-a partire dal 2010 fino al 2018, convertiti in formato csv, si sono scelti gli indicatori di 
-turismo nei mesi non estivi, e tasso di turisticità. 
+Per controllare la tendenza, sono stati necessari i dati regione per regione, 
+a partire dal 2010 fino al 2018, convertiti in formato csv, e sono stati scelti gli 
+indicatori di turismo nei mesi non estivi, e tasso di turisticità. 
 
 \section{Immagini del traffico}
 
 Le immagini raffiguranti il traffico in tempo reale sono prese da Google 
-Maps\footnote{\url{https://www.google.com/maps/}}, 
-tuttavia questi snapshot contengono molti punti di interesse che coprono informazioni importanti, 
-come i nomi delle strade.
+Maps\footnote{\url{https://www.google.com/maps/}}. 
+In primo luogo, si è tentato di realizzare degli screenshot direttamente dal sito, 
+tuttavia immagini prese in questo modo, contengono molti punti di interesse e altri simboli, 
+che coprono informazioni importanti, come i nomi delle strade.
 
-Per rimuovere i punti di interesse, si sono utilizzate le API di google maps, 
+Per rimuovere le informazioni superflue, si è fatto uso delle API di Google Maps, 
 tramite il sito Jsfiddle\footnote{\url{https://jsfiddle.net/}}.
 
-Si sono infine realizzati degli screenshot della zona dei Navigli e dell'incrocio tra viale 
+Gli screenshot realizzati rappresentano le zone dei Navigli e dell'incrocio tra viale 
 Bianca Maria e viale Ventidue Marzo.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Dati mancanti}
 
 \subsection{Dati riguardanti pavè}
-Non sembra che esista un dataset contenente la composizione del manto stradale di Milano.
-I dati in questione sono stati cercati sui principali siti di opendata
+
+Nonostante le ricerche nei principali siti di opendata
 \footnote{\url{https://dati.comune.milano.it/dataset}}
 \footnote{\url{https://www.dati.lombardia.it/}}
-\footnote{\url{https://www.dati.gov.it/}}
-tramite parole chiave come \quotestyle{strada}, \quotestyle{manto stradale}, 
-\quotestyle{pave}, \quotestyle{composizione strada}.
+\footnote{\url{https://www.dati.gov.it/}}, 
+non sembra che esista un dataset contenente informazioni sulla composizione del 
+manto stradale di Milano. 
+In particolare, si sono cercate le informazioni tramite parole chiave come 
+\quotestyle{strada}, \quotestyle{manto stradale}, \quotestyle{pave}, 
+\quotestyle{composizione strada}.
 
-Una possibile risorsa trovata è una mappa utilizzata in un articolo del blog urbanfile \cite{URBANFILE:1}
-Dopo una rapida consultazione tuttavia, non risulta esserci alcun dataset contenente informazioni 
-riguardanti il pavè a Milano, infatti la cartina è stata realizzata tramite conoscenza personale dell'autore dell'articolo.
+Una risorsa trovata durante le ricerche, è una mappa utilizzata in un articolo del blog online 
+Urbanfile \cite{URBANFILE:1}. 
+Dopo una rapida consultazione con l'autore tuttavia, non risulta esserci alcun 
+dataset contenente informazioni riguardanti il pavè a Milano, infatti la cartina è 
+stata realizzata per conoscenza personale.
 
-Il dataset che potrebbe avvicinarsi di più ad ottenere le informazioni cercate potrebbe essere 
-quello riguardante i percorsi dei trasporti tranviari. Basandosi su queste informazioni, e assumendo che 
-la maggior parte delle linee dei tram a Milano sono pavimentate in pavè, è possibile ottenere un dataset con taglia discreta.
+Il dataset che potrebbe avvicinarsi di più alle informazioni ricercate, 
+potrebbe essere quello riguardante i percorsi dei trasporti tranviari. 
+Basandosi su queste informazioni, e assumendo che la maggior parte delle linee dei 
+tram a Milano siano in pavè, è possibile ottenere un dataset con taglia discreta.
 
-\'E possibile confrontare il dataset ottenuto con la mappa di Urbanfile e, 
-per quanto alcune linee coincidano, non si è trovata somiglianza sufficiente 
-per giustificare la stima.
+Tuttavia, confrontando il dataset delle linee tranviarie ottenuto, 
+con la mappa di Urbanfile, per quanto alcune linee coincidano, non si è trovata 
+somiglianza sufficiente per giustificare l'utilizzo.
 
 Come ultima spiaggia, si è deciso di tracciare una mappa utilizzando 
 Geojson.io\footnote{\url{https://geojson.io/}}, come già fatto per le autostrade a Milano, 
-basandosi sulla cartina di Urbanfile. 
+basandosi sulla cartina trovata su Urbanfile. 
 
 \subsection{Dati riguardanti traffico stradale}
+
 Per quanto riguarda i dati sul traffico stradale, anche in questo caso non è stato trovato un 
 dataset, sia nei siti di cui si è parlato in precedenza, sia su quello di 
 autostrade\footnote{\url{http://www.autostrade.it/it/home}}.
 
-Il primo tentativo, per avere una stima del traffico è stato la realizzazione di uno script per 
-fare scraping da Google Maps. Quest'ultimo infatti mostra sia il traffico in tempo reale, sia 
-il traffico stimato a una determinata ora. Tuttavia, leggendo nella documentazione, si è scoperto che 
-non è possibile ottenere dati sul traffico stimato, per mancanza di API. 
+Il primo tentativo, per avere una stima del traffico è stato la realizzazione di uno 
+script per fare scraping da Google Maps. 
+Quest'ultimo infatti mostra sia il traffico in tempo reale, sia 
+il traffico stimato a una determinata ora. 
+Tuttavia, leggendo nella documentazione, si è scoperto che non è possibile ottenere 
+dati sul traffico abituale, per la mancanza delle API corrispondenti. 
+Invece, per quanto riguarda il traffico in tempo 
+reale, questo è disponibile, ma non è particolarmente utile per la quarantena dovuta al 
+Covid-19, che riduce notevolmente il volume di automobili. 
 Per quanto fosse stato possibile realizzare comunque uno script per effettuare scraping della 
-quantità di traffico nelle strade, si è optato per la ricerca di un altro dataset.
+quantità di traffico nelle strade, registrando il colore delle direttive per ogni orario della 
+giornata nei periodi interessati, si è optato per la ricerca di un altro dataset.
 
-Dunque si è deciso di utilizzare i dati riguardanti gli ingressi in area C a Milano, 
+Si è deciso, dunque, di utilizzare i dati riguardanti gli ingressi in area C, 
 trovati sul sito del comune di Milano\footnote{\url{https://dati.comune.milano.it/dataset}}, 
-nonostante non permetta una stima perfetta.
+nonostante questi non permettano una stima perfetta.
 
 Un'altro dataset utilizzato per stimare il numero di automobili, è quello contenente 
 il numero di patentati per regione, trovato nel sito del Ministero dei 
@@ -478,29 +497,32 @@ patente, oltre al tipo di ceritificato ottenuto.
 \subsection{Dati su strade, incroci, semafori}
 
 In alcuni capitoli, in particolare quelli riguardanti le tipologie di incidente e 
-di incrocio, i dati che non si ha a disposizione, sono soprattutto quelli sul 
-numero totale di categoria di strade.
+di incrocio, i dati non disponibili, sono soprattutto quelli sul 
+numero di strade per le diverse categorie.
 
-Si è innanzi tutto tentata una ricerca, in generale, di articoli o dataset online, con 
-parole chiave come \quotestyle{numero di semafori Milano} o \quotestyle{strade incroci semafori}.
+Per la trovare questi ultimi si è cercato, innanzi tutto, articoli o dataset online, con 
+parole chiave come \quotestyle{numero semafori Milano} o \quotestyle{strade incroci semafori}.
 Non trovando alcun riscontro, si è ricercato l'argomento nei principali siti contenenti 
-dataset, elencati in precedenza. 
+dataset, di cui si è parlato in precedenza. 
 
-Le informazioni più simili a ciò che si stava cercando, sono state trovate sul geoportale 
-del comune di Milano, nel dataset del manto stradale.
-Questo dataset contiene vari layer di informazioni, tra cui Area di circolazione veicolare, 
-Area di circolazione pedonale e Area di circolazione ciclabile, tuttavia, in nessuno 
-di questi livelli, si sono trovate informazioni utili a dividere, per esempio, 
-intersezioni segnalate da incroci con semaforo. 
+Le informazioni più vicine a ciò che si stava cercando, sono state trovate sul geoportale 
+del comune di Milano, nei dati sul manto stradale.
+Questo dataset contiene vari layer di informazioni, tra cui 
+\columnstyle{Area di circolazione veicolare}, 
+\columnstyle{Area di circolazione pedonale} e \columnstyle{Area di circolazione ciclabile}, 
+tuttavia, in nessuno di questi livelli, si sono trovate informazioni utili a dividere, 
+per esempio, intersezioni segnalate da incroci con semaforo. 
 
-Inoltre, per maggior parte dei livelli, non si sono trovate informazioni sul significato 
+Inoltre, per la maggior parte dei livelli, non si sono trovate informazioni sul significato 
 delle colonne presenti nei dataset come, per esempio, \columnstyle{GZ\_STR\_TY} o 
 \columnstyle{GZ\_STR\_TYF}. 
+
 Le ricerche per un file contenente informazioni sui metadati sono state eseguite sia 
-sul sito del comune di Milano, sia in generale, tramite motore di ricerca, con parole chiave 
+sul sito del comune di Milano sia, in generale, tramite motore di ricerca, con parole chiave 
 come \quotestyle{ID\_ZRIL milano} o \quotestyle{ID\_ZRIL metadati}. 
-Nel caso di quest'ultimo, tuttavia, è risultato che fosse un identificatore univoco del 
-territorio, informazione ricavata tracciando una parte dei valori della colonna.
+Nel caso di quest'ultimo, si è ipotizzato, tracciando una parte dei valori della colonna, 
+che fosse un identificatore univoco del territorio, ipotesi confermata da un pdf trovato sul sito 
+cittametropolitana.mi\footnote{\url{https://www.cittametropolitana.mi.it/export/sites/default/DeCiMetro/DOCUMENTI-DA-SCARICARE/Manuale-civici.pdf}}. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Dati Geolocalizzati}
@@ -1383,7 +1405,7 @@ meno persone sono sveglie nelle ore notturne.
 Sarebbe interessante individuare eventuali cali o incrementi di incidenti, per quanto riguarda gli 
 incidenti su intervallo mensile.
 Il dataset sugli accessi all'area C è presente, nel caso della divisione per mese, fino all'anno 2018, 
-tuttavia i dati istat su incidenti contengono il campo \columnstyle{mese} solo fino all'anno 2013,
+tuttavia i dati Istat su incidenti contengono il campo \columnstyle{mese} solo fino all'anno 2013,
 dunque i grafi sull'argomento prenderanno in considerazione quest'annata più recente.
 
 \begin{figure}
@@ -1656,7 +1678,7 @@ per esempio, agli sbandamenti.
 
 \subsection{I tratti di strada più pericolosi}
 
-Il dataset istat contiene anche informazioni sul tipo di strada nel quale è avvenuto il 
+Il dataset Istat contiene anche informazioni sul tipo di strada nel quale è avvenuto il 
 sinistro.
 Sarebbe, anche in questo caso, molto utile avere il numero di incroci per tipo 
 presenti in una certa località, per controllare se alcuni incroci siano più 
@@ -2412,7 +2434,7 @@ l'autostrada A4 (Torino-Trieste) ha progressivamente aumentato il numero di
 incidenti, evento possibilmente dovuto all'aumento di popolarita delle vacanze 
 in montagna anche in periodo estivo.
 
-Facendo utilizzo del dataset istat riguardante il turismo in Italia, e in 
+Facendo utilizzo del dataset Istat riguardante il turismo in Italia, e in 
 particolare sfruttando due indicatori, Tasso di 
 Turisticità\footnote{Tasso di Turisticità: indica il numero di turisti 
 presenti ogni 100.000 abitanti\cite{ONTIT:1}} 
