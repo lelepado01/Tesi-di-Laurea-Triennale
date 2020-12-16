@@ -529,23 +529,23 @@ cittametropolitana.mi\footnote{\url{https://www.cittametropolitana.mi.it/export/
 
 \section{Incidenti}
 
-I dati riguardanti incidenti geolocalizzati, sono disponibili in un dataset contenente una 
+I dati riguardanti gli incidenti geolocalizzati, sono disponibili in un dataset contenente una 
 lista di punti indicanti latitudine e longitudine dell'incidente. 
 Ciò che delude, è che non è presente nessuna informazione aggiuntiva, se non la posizione 
 dell'incidente.
 
 Controllando i dati trovati, in particolare come questi siano posizionati, 
-si nota dalla mappa destra nella figura \ref{fig:heatmap-municipi} che gli incidenti a Milano 
-sono per buona parte uniformemente distributi per tutta la città, 
+si nota, dalla mappa destra nella figura \ref{fig:heatmap-municipi}, come gli incidenti a Milano 
+siano per buona parte uniformemente distributi per tutta la città, 
 con più alte concentrazioni in alcuni punti di interesse, come Piazzale Loreto, Zona Navigli 
 e Monumentale, e Corso Ventidue Marzo.
 
 Sarebbe interessante sapere se esistono zone con maggiore concentrazione di incidenti rispetto 
-alla media, e ottenere un indice numerico della pericolosità di una determinata zona.\\
+alla media, e ottenere un indice numerico della pericolosità di una determinata zona.
 
 Nella mappa sinistra della figura \ref{fig:heatmap-municipi}, si è divisa la città di Milano 
-in base al municipio, ed è possibile osservare che nel centro si hanno la maggior parte degli 
-incidenti.
+in base ai diversi municipi, ed è possibile osservare che nel centro storico si hanno la 
+maggior parte degli incidenti.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/municipi_milano/incidenti_municipio.png}
@@ -553,7 +553,8 @@ incidenti.
     \label{fig:heatmap-municipi}
 \end{figure}
 
-Non tutte le zone hanno la stessa superficie, avendo a disposizione l'area dei vari municipi, 
+Non tutte le zone hanno la stessa superficie, e ovviamente sezioni più ampie hanno un maggior 
+numero di strade. Avendo a disposizione l'area dei vari municipi, 
 è possibile calcolare la media di incidenti al chilometro quadrato per zona.
 I risultati sono riportati nella tabella sottostante.
 
@@ -597,14 +598,17 @@ I risultati sono riportati nella tabella sottostante.
     \label{fig:incidenti-chilometro}
 \end{figure}
 
-Nella figura \ref{fig:incidenti-chilometro} spicca, sia nel grafo di sinistra che in quello di destra, 
-la zona 1, cioè quella del centro storico, vista la superficie minore rispetto agli altri municipi.
+Nella figura \ref{fig:incidenti-chilometro} spicca, sia nel grafo di sinistra, rappresentante 
+il numero di incidenti totali per zona, che in 
+quello di destra, che contiene il numero di incienti divisi per l'area del municipio, 
+la zona 1, cioè quella del centro storico, vista la superficie minore 
+rispetto agli altri municipi.
 
 Una volta creata la tendenza generale del municipio, è possibile confrontare i risultati 
 ottenuti con il numero di incidenti in zone più ristrette, per esempio attorno a piazzale Loreto.
 
 \begin{figure}
-    \includegraphics[width=\linewidth]{../src/municipi_milano/zona_loreto.png}
+    \hfill\includegraphics[width=0.6\linewidth]{../src/municipi_milano/zona_loreto.png}\hspace*{\fill}
     \caption{Zona presa in considerazione per piazzale Loreto}
     \label{fig:zona-loreto}
 \end{figure}
@@ -624,36 +628,29 @@ ottenuti con il numero di incidenti in zone più ristrette, per esempio attorno 
 \end{lstlisting}
 
 Il numero di incidenti per chilometro che risultano, nell'area considerata in figura 
-\ref{fig:zona-loreto}, sono 231.06, considerando che il massimo ottenuto per zona, 
-il centro storico, arriva attorno a 120 incidenti per chilometro quadrato, è possibile affermare 
-che piazzale loreto sia una zona ad alta incidentalità.
+\ref{fig:zona-loreto}, sono $231.06$, considerando che il massimo ottenuto per zona, 
+il centro storico, arriva attorno a $120$ incidenti per chilometro quadrato, è possibile affermare 
+che Piazzale Loreto sia una zona ad alta incidentalità.
 
-Una domanda che sorge spontanea è il perchè in centro storico risulti tra le aree con maggiore 
-incidentalità, il volume di incidenti non dovrebbe essere abbassato della presenza dell'area C?
+Una domanda che sorge spontanea è, perchè nel centro storico risulta tra le aree con maggiore 
+incidentalità, il volume di traffico, e quindi di incidenti, non dovrebbe essere abbassato 
+della presenza dell'area C?
 
 \begin{figure}
-    \includegraphics[width=0.48\linewidth]{../dataset/area_c/perimetro_area_c.png}
+    \includegraphics[width=0.48\linewidth]{img/perimetro_area_c.png}
     \includegraphics[width=0.52\linewidth]{../src/area_c/area_c_incidenti.png}
     \caption{Perimetro dell'area C e incidenti nella stessa zona}
     \label{fig:perimetro-area-c}
 \end{figure}
 
-Dopo più attenta osservazione del perimetro dell'area C, visibile in figura \ref{fig:perimetro-area-c}, 
-si osserva che la maggior parte degli incidenti avvengono sulla circonvallazione interna, 
-situata fuori dall'area C, che è compresa nell'centro storico di Milano.
+Dopo più attenta osservazione del perimetro dell'area C, visibile nell'immagine a sinistra nella 
+figura \ref{fig:perimetro-area-c}, si osserva che la maggior parte degli 
+incidenti avvengono sulla circonvallazione interna, 
+situata fuori dall'area C, ma compresa nel centro storico di Milano.
 
 Prendendo in considerazione solamente l'area C, il numero di incidenti scende a $46.83$ 
 per chilometro quadrato, dunque è possibile concludere che la riduzione del traffico nel 
 centro di Milano ha impatto consistente sull'incidentalità.
-
-\begin{lstlisting}
-    area_c = geometry.Polygon(gp.read_file("dataset/area_c/area_c.geojson").to_crs(epsg=3857)['geometry'].iloc[0])
-
-    inc = 0
-    for point in incidenti['geometry']: 
-        if area_c.contains(geometry.Point(point)): 
-            inc += 1
-\end{lstlisting}
 
 %\clearpage
 \section{Incidenti e Linee dei Trasporti Pubblici}
