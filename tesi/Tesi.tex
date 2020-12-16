@@ -292,61 +292,67 @@ e in caso di grandi disparità tra regioni, si potrebbe dover invalidare i calco
 
 \section{Dati riguardanti le zone di Milano}
 
-I dati con zone geolocalizzate di Milano provengono dal geoportale del comune di 
+I dataset delle zone geolocalizzate di Milano provengono dal geoportale del comune di 
 Milano\footnote{\url{https://geoportale.comune.milano.it/}}, e contengono i poligoni che 
 costituiscono i municipi della città, 
 oltre a informazioni sulla superficie e il perimetro delle zone.
 
 Questi dati sono utili a determinare, a grandi linee, quali sono le zone con più incidenti 
-a Milano, tuttavia il risultato ottenuto non sarà mai preciso, 
-soprattutto per l'ampiezza delle sezioni.
+a Milano, nonostante il risultato ottenuto non sarà mai troppo preciso, soprattutto 
+per l'ampiezza delle sezioni rispetto al numero di strade di ogni sezione.
+
 Un altro problema, è che le zone non contengono solamente la superficie stradale, ma anche 
-abitazioni e terreni, in cui non avverranno mai incidenti. 
-Ciò rende inutile la misura dell'area della zona.
+abitazioni e terreni, in cui non avverranno mai incidenti.
+Sarà necessario tenere a mente, che il numero di incidenti per zona che verrà ricavato, 
+è da considerarsi come una stima \quotestyle{dal basso}, se contrapposto all'area del municipio, 
+e stime che utilizzano solamente la superficie stradale avranno inevitabilmente volume 
+di incidenti per chilometro maggiore.
 
 \section{Dati riguardanti il meteo}
 
 Per quanto riguarda i dati su meteo, si è tentato di utilizzare le informazioni 
-provenienti dalle centraline Arpa, tuttavia, dopo veloce analisi, visibile 
-in figura \ref{fig:centraline-arpa}, si è notato i dataset non 
-contengono tutte le stazioni.
+provenienti dalle centraline Arpa. 
+Dopo una veloce analisi, la cui mappa è visibile in figura \ref{fig:centraline-arpa}, 
+si è notato il dataset non contiene tutte le stazioni di Milano.
 
 \begin{figure}
-    \includegraphics[width=\linewidth]{../src/meteo/centraline_arpa.png}
+    \hfill\includegraphics[width=0.7\linewidth]{../src/meteo/centraline_arpa.png}\hspace*{\fill}
     \caption{Centraline Arpa a Milano}
     \label{fig:centraline-arpa}
 \end{figure}
 
-Durante un controllo della mappa \ref{fig:centraline-arpa}, ci si è accorti 
-che non tutte le centraline di Milano sono contenute nel dataset.
 Per esempio, utilizzando una lista di centraline meteo completa, come quella su 
 Centrometeolombardo\footnote{\url{http://www.centrometeolombardo.com/content.asp?CatId=272&ContentType=Stazioni}}, 
 si nota che mancano quelle di Abbiategrasso Sud e Cardorna.
 
-Inoltre, per mancanza di dati precisi sul giorno degli incidenti, avere un'informazione così 
-precisa sul meteo è superfluo.
+Inoltre, per mancanza di dati precisi sul giorno degli incidenti, avere informazioni con 
+posizione così precisa è superfluo.
 Si è dunque optato per un dataset contenente temperature, umidità, e velocità del vento, 
 trovato sul sito Zenodo\footnote{\url{https://zenodo.org/record/3992354}}.
 
-Il dataset contiene i campi di cui si è parlato, misurati ogni ora, a partire dal 2008, 
-fino al 2018.
+Il dataset contiene i campi di cui si è parlato, misurati ogni ora a Milano, a partire 
+dal 2008, fino al 2018.
 
 \section{Dati riguardanti trasporti pubblici}
 
-I dati riguardanti i trasporti pubblici trovati hanno due provenienze, i primi sono 
+Un altro fattore per cui ci si è chiesti se influisse sull'incidentalità, è la 
+presenza di trasporti pubblici.
+
+I dati riguardanti questi ultimi, hanno due provenienze, i primi sono 
 dati riferiti alle linee ATM, scaricati sul sito del comune di 
 Milano\footnote{\url{https://dati.comune.milano.it/dataset/ds532-atm-composizione-percorsi-linee-di-superficie-urbane}}.
 Dallo stesso sito proviene anche il dataset riguardante gli autobus turistici, che 
-contiene in particolare le aree di sosta di questi 
-ultimi\footnote{\url{https://dati.comune.milano.it/dataset/ds740_sosta_bus_gt_turistici}}.
-
-La principale funzione di questi dataset è l'ottenere i percorsi delle linee di trasporto pubblico, 
-per confrontare il numero di incidenti, tuttavia si è anche fatto uso di un dataset contenente 
+contiene, in particolare, le aree di 
+sosta\footnote{\url{https://dati.comune.milano.it/dataset/ds740_sosta_bus_gt_turistici}}.
+Si è anche fatto uso di un dataset contenente 
 solamente le linee tranviarie, trovato sul geoportale del comune di 
 Milano\footnote{\url{https://geoportale.comune.milano.it/ATOM/SIT/DBT2012/DBT2012_STRATO_01_Dataset_1.xml}}.
-
 Questo dataset è molto ampio e contiene altri livelli di informazioni, tra cui per esempio, 
 le strade, le ferrovie o le piste ciclabili passanti per Milano. 
+
+La principale funzione di questi dataset è l'ottenere i percorsi delle linee di trasporto pubblico, 
+per confrontare il numero di incidenti, nelle vie in cui viaggiano autobus, rispetto a 
+quelle in cui sono presenti solo autovetture private.
 
 \section{Dati riguardanti autostrade e manto stradale}
 
