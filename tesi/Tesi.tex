@@ -165,51 +165,60 @@ Esistono fattori di distrazione per il conducente di un'automobile?
 \chapter{Origine dei dati}
 
 \section{Dati riguardanti incidenti}
-La maggior parte dei dati utilizzati in questo lavoro provengono 
+
+La maggior parte dei dataset utilizzati in questo lavoro provengono 
 dall'Istituto nazionale di statistica, in particolare 
 dall'archivio\footnote{\url{https://www.istat.it/it/archivio/87539}}
 di dati non geolocalizzati su incidenti stradali in Italia.
 Questo dataset contiene un'ampia gamma di campi, tra cui ora, 
 mese, giorno della settimana in cui è avvenuto l'incidente, 
-ma anche dati sui passeggeri, la natura dell'incidente e il tipo di strada. 
-Particolarmente interessanti sono anche i campi riguardanti il tipo di incrocio 
+ma anche informazioni sui passeggeri, la natura del sinistro e il tipo di strada. 
+Particolarmente interessanti sono anche i campi riguardanti la categoria di incrocio 
 a cui è avvenuto il sinistro, come rettilineo, rotonda o semaforo.
 
 Per quanto riguarda i dati geolocalizzati, 
-la fonte è invece il sito web TheSubmarine \cite{SUBMARINE:1}
-che in un articolo riguardante l'incidentalità a Milano, 
+la fonte è invece il giornale online TheSubmarine \cite{SUBMARINE:1}
+che, in un articolo riguardante l'incidentalità a Milano, 
 ha ottenuto dall'ente Istat la pubblicazione di una parte degli 
 incidenti avvenuti nella città nel 2016, con la relativa posizione.
-Il dataset in questione è abbastanza povero, e contiene solamente 
-l'incidente con la propria posizione, indicata tramite coordinate geografiche.
+Il dataset in questione è abbastanza scarno, contiene solamente 
+l'incidente con la relativa posizione, indicata tramite coordinate geografiche.
 
-L'ultimo dataset, è stato trovato sul sito di 
+Infine l'ultimo dataset è stato trovato sul sito di 
 ACI\footnote{Automobile Club Italia} \cite{ACI:1}.
 Questi dati, specifici a autostrade e strade provinciali, indicano anche il 
-nome della rispettiva via, oltre a informazioni come l'orario dell'incidente, 
-il mese o il giorno della settimana.
+nome della via in cui è avvenuto l'incidente, oltre a informazioni come 
+l'orario, il mese o il giorno della settimana.
 
 \section{Dati riguardanti autovelox}
-Un primo dataset individuato, che riguardasse delle posizioni degli autovelox fissi, 
-è stato una mappa 
-GoogleMyMaps\footnote{\url{https://www.google.com/maps/d/viewer?mid=1CBgMTvIDnbGo22-Y1f3rVcbeX4C0v_w1&ll=45.365557951599605\%2C10.03650113755961&z=8}} 
-creata da un utente anonimo, dunque senza un modo di provare l'autenticità dei dati.
 
-Il dataset utilizzato, invece, è stato ottenuto tramite OpenStreetMaps, ricavando 
-solo gli autovelox in Milano. 
-Per restringere il campo di ricerca a solo Milano, si è fatto uso delle 
+Una delle prime domande che ci si è posti, è stata se gli autovelox, installati 
+nel tentativo di ridurre la velocità delle vetture, avessero influenza sul numero 
+degli incidenti del luogo.
+
+Un primo dataset individuato, che riguardasse delle posizioni 
+degli autovelox fissi, è stata una mappa 
+GoogleMyMaps\footnote{\url{https://www.google.com/maps/d/viewer?mid=1CBgMTvIDnbGo22-Y1f3rVcbeX4C0v_w1&ll=45.365557951599605\%2C10.03650113755961&z=8}} 
+creata da un utente anonimo, dunque senza un modo di provare l'autenticità dei dati. 
+Per evitare di fare uso di informazioni non corrette, si è preferito scartare 
+questa fonte.
+
+Il dataset utilizzato, invece, è stato ottenuto tramite OpenStreetMaps, 
+realizzando una query per selezionare solo gli autovelox presenti a Milano. 
+Per restringere il campo di ricerca a solo la città, si è fatto uso delle 
 Overpass API\footnote{\url{https://overpass-turbo.eu/}}, 
-specifiche per OpenStreetMaps, eseguendo la seguente query: 
+specifiche per OpenStreetMaps, utilizzando il codice riportato nel riquadro seguente: 
 
 \lstinputlisting{../src/codice_per_dati/overpass_query.txt}
 
-Il dataset ricavato, purtroppo, non permette di capire quando gli autovelox siano 
-stati installati, fattore importante per capirne l'effetto sul traffico e 
-sugli incidenti.Tuttavia il sito web ztlmilano \cite{ZTLMILANO:1}
+Il dataset ricavato, purtroppo, non contiene informazioni riguardanti quando gli 
+autovelox siano stati installati, fattore importante per capirne l'effetto 
+sul traffico e sugli incidenti.
+Tuttavia il sito web ztlmilano \cite{ZTLMILANO:1}
 contiene un articolo nel quale specifica una lista di 
-autovelox installati nel 2014, considerando che il dataset di OpenStreetMaps 
-sia aggiornato fino ad oggi, è possibile ricavare la posizione precisa di 
-questi ultimi.
+autovelox installati nel 2014. 
+Sapendo che il dataset di OpenStreetMaps è stato aggiornato fino ad oggi, 
+è possibile ricavare la posizione precisa di questi ultimi.
 
 La lista di Ztlmilano contiene i seguenti autovelox: 
 
@@ -256,18 +265,30 @@ installati in entrambe le direzioni.
 
 \section{Dati riguardanti patentati}
 
-I dati sulle persone con patente per regione, che è stato utilizzato per stimare il traffico 
+Un'importante necessità in un indagine di questo tipo, è avere un contesto con cui 
+interpretare i risultati ottenuti. 
+Non è possibile, per esempio, dire se su una certa strada si ha un numero alto di 
+incidenti, senza sapere quante automobili passano in una giornata.
+
+Si è dunque tentata una ricerca, infruttuosa, di dataset sul traffico stradale nel periodo 
+dal 2010 al 2018.
+Non avendo trovato alcuna informazione sull'argomento, si è tentato di realizzare 
+alcune stime del numero di automobili per regione, e a Milano.
+
+I dati sui patentati per regione, che è stato utilizzato per stimare il traffico 
 regionale, proviene dal sito del Ministero delle Infrastrutture e 
 Trasporti\footnote{\url{http://dati.mit.gov.it/catalog/dataset/patenti}}.
-Tuttavia, questo dataset è diviso in vari file seconda della regione e, vista la quantità 
-non necessaria di informazioni, si è preferito usare dati provienienti da un'infografica che 
-sintetizza il dataset in questione \cite{INFOGRAFICA_MIT:1}
-In particolare, da questo pdf si è mantenuto solamente il numero di patenti per regione.
+Questo dataset è diviso in vari file seconda della regione e, vista la quantità 
+non necessaria di informazioni, si è preferito usare informazioni provienienti da 
+un'infografica che sintetizza i dati in questione \cite{INFOGRAFICA_MIT:1}.
+In particolare, da questo file pdf si è mantenuto solamente il numero di patenti per regione.
 
 \'E anche necessario chiedersi quanto il numero dei patentati per regione sia uno stimatore 
 valido per il traffico, tenendo conto del fatto che molte persone non vivono nella regione 
 in cui hanno ottenuto la patente, e altre potrebbero spostarsi ogni giorno in altri 
-luoghi per questioni di lavoro.
+luoghi per questioni di lavoro. 
+Va dunque tenuto conto che questa stima non sarà probabilmente tra le più accurate, 
+e in caso di grandi disparità tra regioni, si potrebbe dover invalidare i calcoli eseguiti.
 
 \section{Dati riguardanti le zone di Milano}
 
@@ -2619,6 +2640,8 @@ in presenza di vento forte.
 Infine, osservando le misurazioni sull'umidità, è possibile che in questo caso sia presente 
 un rapporto di causa e effetto, in quanto spesso, un valore alto di questo fattore 
 coincide con pioggia e temporali, che a loro volta rendono più difficoltosa la guida.
+
+\todo{lelepado: serve una conclusione?}
 
 %\addcontentsline{toc}{chapter}{Bibliografia}
 \printbibliography
