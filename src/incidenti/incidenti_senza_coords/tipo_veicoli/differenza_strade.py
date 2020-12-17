@@ -24,26 +24,26 @@ uniti = pd.DataFrame([
 uniti[uniti < 0.02] = 0.0
 uniti['altro'] = 1 - uniti.transpose().sum()
 
-autoc= ['#b9c466']*15 
-suc = ['#b9c466']*15 
-seuc = ['#b9c466']*15
-autoc[0] =  '#83c466'
-suc[0] =    '#83c466'
-seuc[0] =   '#83c466'
-autoc[4] =  '#66c4a6'
-suc[4] =    '#66c4a6'
-seuc[4] =   '#66c4a6'
-autoc[9] =  '#a666c4'
-suc[9] =    '#a666c4'
-seuc[9] =   '#a666c4'
-autoc[14] = '#c46683'
-suc[14] =   '#c46683'
-seuc[14] =  '#c46683'
-autoc[11] = '#7166c4'
+autoc= ['#8755d1']*15 
+suc = ['#8755d1']*15 
+seuc = ['#8755d1']*15
+autoc[0] =  '#559fd1'
+suc[0] =    '#559fd1'
+seuc[0] =   '#559fd1'
+autoc[4] =  '#d18755'
+suc[4] =    '#d18755'
+seuc[4] =   '#d18755'
+autoc[9] =  '#9fd155'
+suc[9] =    '#9fd155'
+seuc[9] =   '#9fd155'
+autoc[14] = '#d1559f'
+suc[14] =   '#d1559f'
+seuc[14] =  '#d1559f'
+autoc[11] = '#55d187'
 
 color_ls = autoc+suc+seuc
-
-colors = ['#83c466', '#66c4a6', '#b9c466', '#a666c4', '#7166c4', '#c46683']
+print(uniti.transpose())
+colors = ['#559fd1', '#d18755', '#8755d1', '#9fd155', '#55d187', '#d1559f']
 labels =['Auto Privata', 'Autocarro', 'Ciclomotore', 'Motociclo da solo', 'Trattore stradale', 'altro']
 
 from matplotlib.lines import Line2D

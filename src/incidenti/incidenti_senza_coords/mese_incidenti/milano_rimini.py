@@ -20,7 +20,7 @@ rimini_media = rimini_mese.mean()
 pd.DataFrame([milano_mese, rimini_mese], ['Milano', 'Rimini']).transpose().plot.bar(
     width=0.9,
     color={
-        'Milano': '#5747d1',
+        'Milano': '#4566c1',
         'Rimini': '#d15747'
     }
 )
@@ -31,8 +31,6 @@ plt.plot([-1, 15], [milano_media, milano_media], color='#c0d147')
 plt.plot([-1, 15], [rimini_media, rimini_media], color='#c0d147')
 plt.text(11.8,milano_media - 0.1,'Media Milano')
 plt.text(11.8,rimini_media - 0.1,'Media Rimini')
-# milano_mese.plot.bar(width=0.8, color='#5747d1')
-# rimini_mese.plot.bar(width=0.8, color='#d15747')
 plt.legend(bbox_to_anchor=(1,1), loc="upper left")
 plt.tight_layout()
 plt.show()

@@ -44,9 +44,6 @@ def get_provincia(prov : int) -> pd.DataFrame:
 # Milano
 provs = get_provincia(15)
 
-############################
-# Codice per Heatmap
-
 import sys
 sys.path.append('src')
 import heatmap as H
@@ -58,5 +55,3 @@ im, cbar = H.heatmap(provs, provs.index, range(2010, 2019), ax=ax, cmap="YlGn", 
 fig.tight_layout()
 plt.ylabel("Trimestre", fontdict={'fontsize': 10})
 plt.show()
-
-############################

@@ -24,13 +24,13 @@ pedoni_morti = pedoni_morti.reindex(correct_order)
 
 plt.subplot(121)
 plt.xticks(rotation=90)
-plt.fill_between(pedoni_feriti.index, pedoni_feriti, color='#a1ce71')
+plt.fill_between(pedoni_feriti.index, pedoni_feriti, color='#5578d1')
 plt.ylabel("Numero pedoni feriti")
 plt.tight_layout()
 
 plt.subplot(122)
 plt.xticks(rotation=90)
-plt.fill_between(pedoni_morti.index, pedoni_morti, color='#ce9e71')
+plt.fill_between(pedoni_morti.index, pedoni_morti, color='#d15578')
 plt.ylabel("Numero pedoni morti")
 plt.tight_layout()
 
