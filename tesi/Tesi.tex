@@ -867,19 +867,21 @@ meno trafficate.
 \section{Incidenti e Autovelox}
 
 Per sapere se gli autovelox hanno influenza sull'incidentalità, 
-bisognerebbe innanzi tutto sapere quando sono stati posizionati i dispositivi, e solo a quel punto, 
-avendo dati su incidenti prima e dopo l'installazione, sarebbe possibile trarre conclusioni.
+bisognerebbe innanzi tutto sapere quando sono stati posizionati i dispositivi, e solo 
+a quel punto, avendo dati su incidenti prima e dopo l'installazione, sarebbe 
+possibile trarre conclusioni.
 
-Alcuni dati sull'installazione di autovelox esistono per l'anno 2014, visualizzabili nella 
-tabella \ref{ztl-milano}, tuttavia le posizioni degli incidenti 
+Alcuni dati sull'installazione di autovelox esistono per l'anno 2014, visualizzabili 
+nella tabella \ref{ztl-milano}, tuttavia le posizioni degli incidenti 
 sono solo disponibili per l'anno 2016, in quanto Istat non ha rilasciato 
-le posizioni degli incidenti in altre annate.
+le posizioni precise degli incidenti in altre annate.
 
-Conoscendo le posizioni degli autovelox installati nel 2014, è possibile ricondursi alla 
-posizione effettiva di questi ultimi sulla mappa.
-Per fare ciò, la soluzione più veloce è stata quella di enumerare, 
-come raffigurato nella mappa sul lato sinistro della figura \ref{fig:autovelox-indici}, 
-tutti gli autovelox, e confrontarli con le vie della tabella.
+Conoscendo il nome della via degli autovelox installati nel 2014, è possibile ricondursi 
+alla posizione effettiva di questi ultimi sulla mappa.
+Per fare ciò, la soluzione più veloce è stata quella di enumerare tutti gli autovelox, 
+e confrontarli con le vie della tabella, salvando le posizioni che coincidono.
+Il risultato è rappresentato nella mappa sul lato sinistro della 
+figura \ref{fig:autovelox-indici}.
 
 \begin{lstlisting}[language=Python]
     path = "dataset/autovelox/autovelox_milano.geojson"
@@ -902,14 +904,10 @@ tutti gli autovelox, e confrontarli con le vie della tabella.
     \label{fig:autovelox-indici}
 \end{figure}
 
-Una volta identificate le linee riguardanti gli autovelox interessati, è possibile separarli 
-dal dataset completo.
-Gli autovelox installati nel 2014, sono rappresentati nella mappa in 
-figura \ref{fig:autovelox-indici}.
-
 Per quanto non si disponga delle informazioni sugli incidenti prima e dopo dell'installazione, 
 è comunque possibile sovrapporre i dataset, per vedere se gli autovelox hanno un qualche tipo di 
-effetto sugli incidenti, visto che i dati sui sinistri sono successivi all'installazione delle centraline.
+effetto sugli incidenti, visto che i dati sui sinistri sono successivi all'installazione 
+delle telecamere.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/autovelox/autovelox_incidenti.png}
@@ -918,11 +916,12 @@ effetto sugli incidenti, visto che i dati sui sinistri sono successivi all'insta
 \end{figure}
 
 La mappa \ref{fig:autovelox-incidenti} è stata realizzata contando gli incidenti avvenuti 
-nel raggio di un chilometro a ogni autovelox.
+nel raggio di un chilometro a ogni autovelox, in quanto non si dispone del nome della 
+via nel quale è avvenuto il sinistro. 
 Va precisato che le \quotestyle{bolle} non indicano il raggio di conteggio degli incidenti, ma 
-il numero dei sinistri trovati. La colorazione delle \quotestyle{bolle} è stata aggiunta per 
+il numero dei sinistri trovati. La colorazione dei \quotestyle{cerchi} è stata aggiunta per 
 rendere il grafo più leggibile, la cui interpretazione poteva essere difficoltosa 
-osservando solo l'ampiezza dei cerchi.
+osservando solo l'ampiezza del raggio di questi.
 
 \begin{center}
     \def\arraystretch{1.5}% 
@@ -961,34 +960,33 @@ osservando solo l'ampiezza dei cerchi.
 \footnotetext[1]{Viale Fulvio Testi}
 \footnotetext[2]{Cavalcavia del Ghisallo}
 
-Una volta trovati gli incidenti totali, è possile calcolare gli incidenti sulla base dell'area 
-utilizzata.
-Nel seguente codice, al dataset autovelox sono aggiunte due colonne, una contenente gli 
-incidenti totali, l'altra contenente gli incidenti per chilometro.
+Una volta trovati gli incidenti totali, è possile calcolare il numero di sinistri 
+sulla base dell'area utilizzata.
+Al dataset degli autovelox sono aggiunte due colonne, una contenente gli incidenti totali, 
+l'altra contenente gli incidenti per chilometro.
 
 \begin{lstlisting}
     autovelox_2014['incidenti_vicini'] = gp.GeoSeries(df)
     autovelox_2014['incidenti_pesati'] = autovelox_2014['incidenti_vicini'] / 3.14
 \end{lstlisting}
 
-Questa ultima colonna, in particolare, è divisa per 3.14 perchè l'area del cerchio è data dalla formula: 
+Questa ultima colonna, in particolare, è divisa per 3.14 perchè l'area del cerchio 
+è data dalla formula: 
 
 \begin{center}
     $Area\, = \pi * r^2$
 \end{center}
 
-Poichè si sta utilizzando raggio di circa un chilometro, e si vuole ottenere il numero di incidenti per chilometro 
-quadrato, l'area ottentuta è $3.14$.
+E, poichè si sta utilizzando un raggio di circa un chilometro, e si vuole ottenere il 
+numero di incidenti per chilometro quadrato, l'area ottentuta è $3.14$.
 
-Per facilitare la lettura della tabella precedente, nella figura \ref{fig:confronto-autovelox} è visibile il 
-confronto tra il numero di incidenti vicino a autovelox, e il numero di incidenti del municipio.
-
-In alcuni casi, il numero di incidenti sembra essere  ridotto dalla presenza dell'autovelox 
-tuttavia, nella maggior parte dei casi, e soprattutto nelle zone di Viale Serra e Viale Monteceneri, 
-il volume di incidenti è particolarmente più alto di quello del municipio.
-
-\'E possibile che, non avendo dati sufficienti a calcolare una tendenza precedente all'installazione 
-dell'autovelox, questa zona sia particolarmente pericolosae non si ha modo di saperlo.
+Per facilitare la lettura della tabella precedente, nella figura \ref{fig:confronto-autovelox} 
+è visibile il confronto tra il numero di incidenti vicino a autovelox, e il numero di incidenti 
+del municipio.
+In alcuni casi, il numero di incidenti sembra essere ridotto dalla presenza della telecamera,  
+tuttavia nella maggior parte dei casi, e soprattutto nelle zone di Viale Serra e 
+Viale Monteceneri, il volume di incidenti è particolarmente più alto di 
+quello della zona municipale.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/municipi_milano/conclusioni_municipio.png}
@@ -1005,13 +1003,22 @@ dell'autovelox, questa zona sia particolarmente pericolosae non si ha modo di sa
     print(incremento_percentuale_totale)
 \end{lstlisting}
 
-Con i dati che si hanno a disposizione, è possibile calcolare l'incremento (o decremento), degli 
-incidenti in zone vicine a autovelox.
+Sarebbe interessante \quotestyle{catturare}, in un solo valore, l'incremento (o decremento) 
+globale, degli incidenti in zone vicine a 
+autovelox\footnote{Si tenta di capire, con un solo numero, se la presenza di autovelox nella zona 
+aumenta o diminuisce il numero di sinistri}.
 A causa delle zone menzionate in precedenza, in vicinanza di autovelox si ha un incremento degli 
 incidenti del $329.6$\%, tuttavia, nel caso in cui si considerino 
 outlier\footnote{In un campione di osservazioni, un outlier è un valore anomalo, 
 particolarmente distante dagli altri dati disponibili \cite{PROB_E_STATISTICA:1}} 
 i Viali Serra e Monteceneri, si ha invece un decremento generale del $113.6$\%.
+
+Va comunque sottolineato che, non avendo dati sufficienti a calcolare una tendenza 
+precedente all'installazione dell'autovelox, non si ha modo di sapere se questi abbiano un 
+effetto positivo o negativo sull'incidentalità.
+Con il rilascio di nuovi dataset di incidenti geolocalizzati, possibilmente riferiti ad annate 
+precedenti al 2014, sarebbe possibile realizzare una stima con informazioni antecedenti e 
+successive all'installazione delle telecamere.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
