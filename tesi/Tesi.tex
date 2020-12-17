@@ -1025,12 +1025,15 @@ successive all'installazione delle telecamere.
 %\clearpage
 \chapter{Dati su Incidenti}
 
-Per quanto riguarda dati generali su incidenti in Italia, sono disponibili due dataset molto ampi. 
+Per quanto riguarda i dati sugli incidenti in Italia, sono disponibili due dataset 
+molto ampi. 
 Il primo, rilasciato da Istat, contiene campi come data, ora, 
 numero di persone a bordo, tipo di incrocio e tipo di veicolo.
 Queste informazioni sono presenti a partire dal 2010 fino al 2018.
 Il secondo è invece messo a disposizione da Automobile Club D'Italia (ACI) che contiene dati simili, 
-ma in più contiene informazioni sul luogo dell'incidente, come autostrada o strada provinciale.
+e in più informazioni sul luogo dell'incidente, come autostrada o strada provinciale, 
+inteso come il nome della strada, il che permette di avere una minima localizzazione del 
+sinistro.
 
 %\clearpage
 \section{Dati Istat su veicoli}
@@ -1038,31 +1041,36 @@ ma in più contiene informazioni sul luogo dell'incidente, come autostrada o str
 %\clearpage
 \subsection{Il tipo di veicolo dipende dalla strada?}
 
-Sarebbe interessante sapere quanto la composizione del traffico, per quanto riguarda i veicoli, 
-cambia al cambiare del tipo di strada.
+Una prima analisi che è possibile realizzare, è, per quanto riguarda i veicoli, come 
+la composizione di questi cambia al cambiare del tipo di strada. 
+In altre parole, la percentuale, per esempio, di autotreni nelle autostrade, è diversa rispetto 
+a quella nelle strade provinciali? 
 
 \begin{lstlisting}[language=Python]
-    strade_urbane = data[(data['localizzazione_incidente'] == 1) | (data['localizzazione_incidente'] == 2) | (data['localizzazione_incidente'] == 3)]['tipo_veicolo_a']
-    strade_extraurbane = data[(data['localizzazione_incidente'] == 4) | (data['localizzazione_incidente'] == 5) | (data['localizzazione_incidente'] == 6)]['tipo_veicolo_a']
-
     # Dove 1,2,3 sono gli ID dei diversi tipi di strade urbane, 
     # mentre 4,5,6 gli ID delle strade extraurbane
+
+    strade_urbane = data[(data['localizzazione_incidente'] == 1) | (data['localizzazione_incidente'] == 2) | (data['localizzazione_incidente'] == 3)]['tipo_veicolo_a']
+    strade_extraurbane = data[(data['localizzazione_incidente'] == 4) | (data['localizzazione_incidente'] == 5) | (data['localizzazione_incidente'] == 6)]['tipo_veicolo_a']
 \end{lstlisting}
 
-Il grafo \ref{fig:differenza-strade} rappresenta quali sono le categorie di veicoli coinvolte 
-con più frequenza in sinistri, per tre tipi di strade diverse. 
+Il grafo \ref{fig:differenza-strade} rappresenta quali sono le categorie di veicoli 
+coinvolte con più frequenza in sinistri, per tre tipi di strade diverse, strade urbane, 
+extraurbane e autostrade. 
 Le percentuali sono calcolate per gruppo, quindi sommando 
-tutte le righe di, per esempio Autostrade, si ottiene $1.0$.
-
-Nonostante le auto private siano di gran lunga il tipo di veicolo 
-più coinvolto in incidenti, nelle autostrade non sono presenti molti incidenti con motocicli, 
-mentre cresce molto il numero di questi nelle strade urbane.
+tutte le righe di, per esempio \columnstyle{Autostrade}, si ottiene $1.0$.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/tipo_veicoli/differenza_strade.png}
     \caption{Incidenti per tipo di veicolo nel 2018}
     \label{fig:differenza-strade}
 \end{figure}
+
+Nonostante le auto private siano di gran lunga il tipo di veicolo 
+più coinvolto in incidenti, nelle autostrade non sono presenti molti incidenti con motocicli, 
+mentre cresce molto il numero di questi nelle strade urbane.
+Nel caso degli autotreni, si ha invece una bassa percentuale di questi nelle strade 
+urbane, mentre il numero si alza nelle autostrade.
 
 Visto che le auto private causano oltre tre quarti degli incidenti in ogni categoria di strada,  
 si è deciso di ometterle, per controllare la presenza di differenze nelle altre tipologie 
@@ -1075,14 +1083,17 @@ I risultati sono rappresentati, per l'anno 2018, nella figura \ref{fig:differenz
     \label{fig:differenza-strade-no-auto}
 \end{figure}
 
-Omesse le automobili private, appare chiaro che gli autocarri sono coinvolti in un maggior 
-numero di incidenti su autostrade, mentre i motocicli il primato sulle strade urbane.
+Omesse le automobili private, appare chiaro che gli autocarri siano coinvolti in un maggior 
+numero di incidenti su autostrade, mentre i motocicli abbiano il primato sulle strade urbane.
 Può anche sembrare strano che i trattori stradali siano coinvolti così spesso in incidenti 
-su autostrade, tuttavia, in questo caso, per 'trattore' non si intende la macchina 
-agricola, ma la motrice di un autocarro.
+su autostrade, tuttavia, in questo caso, per \quotestyle{trattore} non si intende la macchina 
+agricola, ma la motrice di un autocarro senza rimorchio.
 
 Va comunque sottolineato che le percentuali di incidenti provocati da queste tipologie di 
-veicoli, sono tutte al di sotto del $10$\%.
+veicoli, sono tutte al di sotto del $10$\%, e che la sezione più ingente di sinistri è 
+provocata dalle automobili private. 
+Inoltre, utilizzare il numero di incidenti come stimatore del traffico, potrebbe 
+non portare a un risultato ottimale.
 
 %\clearpage
 \section{Dati Istat su conducente}
