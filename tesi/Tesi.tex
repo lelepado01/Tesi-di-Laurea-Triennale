@@ -1096,10 +1096,15 @@ Inoltre, utilizzare il numero di incidenti come stimatore del traffico, potrebbe
 non portare a un risultato ottimale.
 
 %\clearpage
-\section{Dati Istat su conducente}
+\section{Dati Istat su conducenti e passeggeri}
 
 %\clearpage
 \subsection{Esistono differenze tra la guida di un uomo e quella di una donna?}
+
+Un frequente stereotipo infondato riguardante le donne alla guida, è che queste 
+ultime siano meno abili rispetto a individui del sesso opposto. 
+Avendo a disposizione le informazioni sul sesso del conducente che ha causato l'incidente, 
+è possibile controllare se esista un riscontro reale per questa ipotesi.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/tipo_veicoli/uomo-donna.png}
@@ -1107,11 +1112,20 @@ non portare a un risultato ottimale.
     \label{fig:differenza-uomo-donna}
 \end{figure}
 
-Il grafo \ref{fig:differenza-uomo-donna} mostra che non c'è molta differenza tra i vari tipi di 
-strada, per quanto riguarda il sesso del coducente.\\
-Il numero di incidenti per genere è tende ad essere 75\% circa uomini e 25\% donne.
-Nelle strade  urbane, la percentuale di incidenti con conducente donna aumenta leggermente nel 2018, 
-questo vale per tutti gli anni?
+Il grafo \ref{fig:differenza-uomo-donna} mostra le percentuali di incidenti causate 
+da uomini e donne, per tre diverse tipologie di strada. 
+Per quanto riguarda il tipo di strada, non è possibile individuare una 
+variazione nella percentuale di incidenti così ingente. 
+La variazione più ampia si registra sulle strade urbane, dove le donne causano circa il 
+$5$\% di incidenti in più, nonostante ciò il numero 
+di incidenti per genere tende ad essere causato per il $75$\% circa da uomini e 
+per il $25$\% donne.
+
+Avendo a disposizione i dati provenienti da tutte le annate a partire dal 2010, 
+è anche possibile controllare se le percentuali trovate siano costanti al 
+passare del tempo.
+Nella tabella sottostante sono state riportate le stesse percentuali per le 
+autostrade e le strade urbane.
 
 \begin{center}
     \def\arraystretch{1.5}% 
@@ -1134,13 +1148,15 @@ questo vale per tutti gli anni?
 
 In tutti gli anni la percentuale di uomini e donne coinvolti in incidenti è consistente, 
 questo fenomeno fa sospettare che ci siano più uomini al volante rispetto alle donne.
-Un modo per testare l'ipotesi è quello di ricavare un campione di conducenti, separando tra 
-uomini e donne.
-Va sottolineato che un campione, preso durante la pandemia di Covid-19, in un mese di quarantena 
-non sarà mai uno stimatore estremamente accurato della percentuale di maschi e femmine al volante.
+Un modo per testare l'ipotesi è quello di ricavare un campione di conducenti, 
+separando tra uomini e donne.
+Va sottolineato che un campione, preso durante la pandemia di Covid-19, in un 
+mese di quarantena non sarà mai uno stimatore estremamente accurato della percentuale 
+di maschi e femmine al volante.
 
-Si sono, comunque, contati i conducenti delle vetture passanti a Somma 
-Lombardo\footnote{sul Sempione basso, strada urbana principale, all'altezza chiesa di San Bernardino}, 
+Si sono comunque contati i conducenti delle vetture passanti a Somma 
+Lombardo\footnote{sul Sempione basso, strada urbana principale, all'altezza 
+chiesa di San Bernardino}, 
 tra le 15 e le 16 di Giovedì 5 Novembre 
 (settimana predente alla seconda chiusura della Lombardia), 
 sono stati ottenuti i seguenti risultati:
@@ -1160,7 +1176,9 @@ sono stati ottenuti i seguenti risultati:
 
 La percentuale di uomini e donne al volante è equivalente a quella degli incidenti.
 Questo dato rafforza l'idea che non esistano differenze sostanziali tra la guida di 
-maschi e femmine.
+maschi e femmine, in quanto, assumendo che la probabilità che una donna causi un 
+incidente sia uguale a quella di un uomo, le percentuali che si otterrebbero sarebbero 
+le stesse del campione.
 
 %\clearpage
 \subsection{Il numero di passeggeri influisce sull'incidentalità?}
