@@ -1183,6 +1183,12 @@ le stesse del campione.
 %\clearpage
 \subsection{Il numero di passeggeri influisce sull'incidentalità?}
 
+Il dataset Istat dispone anche di una serie di colonne corrispondenti all'età, sesso e 
+all'esito di tre passeggeri, oltre al conducente.
+Con un po' di lavoro, è possibile ricavare quanti passeggeri sono presenti 
+nell'automobile al momento dell'incidente, in modo da controllare se esista una 
+relazione tra numero di persone nella macchina e l'incidentalità.
+
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/passeggeri/passeggeri.png}
     \caption{Numero di passeggeri in incidenti per Milano, Rimini e Bari}
@@ -1192,19 +1198,24 @@ le stesse del campione.
 La figura \ref{fig:passeggeri-milano-rimini} mostra che oltre il 90\% degli incidenti
 avviene quando in macchina è presente solo il conducente, cioè la colonna indicata con 0.
 Si sono prese in considerazione le provincie di Milano, Rimini e Bari, 
-per controllare se la località marittima influisse sul numero di incidenti, 
-ma sembra che quest'ultima abbia una percentuale 
-ancora più alta di incidenti in cui è presente solo il conducente, rispetto a Milano.
+per controllare se la località marittima influisse sul numero di incidenti.
+Non sembra, tuttavia, esserci una grande differenza tra le province, con Rimini dove è 
+più alto il numero di incidenti con solo il conducente, mentre a Bari vale l'opposto.
 
-La domanda che sorge spontanea è, se avvengano più incidenti dove è presente 
+La domanda che sorge spontanea, dunque, è se avvengano più incidenti dove è presente 
 solo il conducente per il numero frequente di automobili con una sola persona a 
-bordo, o per fattori esterni che portano il conducente a distrarsi?
+bordo, o se esistano fattori esterni che portano il conducente a distrarsi?
 
-Sarebbe dunque utile poter ricavare un campione di automobili divise per numero 
-di persone a bordo. 
-Tuttavia, in periodo di Covid-19, una stima di questo tipo non sarà mai accurata.
+Sarebbe utile poter ricavare un campione di automobili divise per 
+numero di persone a bordo, tuttavia, in periodo di Covid-19, una stima di questo tipo 
+non sarà mai accurata, in quanto la maggior parte delle persone si spostano da sole 
+per viaggi (si spera) di prima necessità.
 
-Nel 2010 in un articolo per la campagna 
+Una seconda possibilità è cercare una qualche stima del numero medio di 
+persone a bordo di automobili, in una delle annate in cui sono disponibili i dati 
+sui sinistri.
+
+Nel 2010, in un articolo per la campagna 
 Sbilanciamoci!\footnote{https://sbilanciamoci.info/chi-siamo/}, 
 Anna Donati scriveva \cite{SBILANCIAMOCI:1}: 
 
@@ -1214,25 +1225,25 @@ Anna Donati scriveva \cite{SBILANCIAMOCI:1}:
     \quotestyle{viaggia solo.}
 \end{center}
 
-\'E possibile dunque ipotizzare che la percentale di conducenti che viaggiano 
-da soli sia approssimativamente attorno al $60$\%, perlomeno nel 2010.
-Per realizzare una stima, è necessario conoscere le percentuali di automobili con uno, 
-due o tre passeggeri, non presenti nell'articolo e che se esistessero, sarebbero 
-valide per l'anno 2010, e non per le annate più recenti.
-
-Ipotizzando però, che il numero di automobili con solo conducente rimangano attorno al 
-$60$\%, deve esistere qualche fattore che alza gli incidenti senza passeggeri a 
-$95.3$\%.
-Uno di questi fattori, che potrebbero distrarre il conducente, deve essere l'utilizzo 
-del cellulare nell'automobile.
-
-Va specificato che la fonte di questo articolo è il sito 
-Isfort\footnote{https://www.isfort.it/}, in particolare il 
-rapporto sulla mobilità.
+La fonte dell'articolo è il sito Isfort\footnote{https://www.isfort.it/}, 
+in particolare il loro rapporto sulla mobilità.
 Sul loro sito, non è più reperibile il rapporto del 2010, tuttavia sono disponibili 
 quelli più recenti, in particolare per 
 2018\footnote{\url{https://www.isfort.it/wp-content/uploads/2019/09/Rapporto_Mobilita_2018.pdf}}, 
 2019, 2020.
+
+\'E possibile dunque ipotizzare che la percentale di conducenti che viaggiano 
+da soli, sia approssimativamente attorno al $60$\%, perlomeno nel 2010.
+Per realizzare una stima, è necessario conoscere le percentuali di automobili con uno, 
+due o tre passeggeri, che non sono presenti nell'articolo e che se esistessero, sarebbero 
+valide solo per l'anno 2010, e non per le annate più recenti.
+
+Ipotizzando però, che il numero di automobili con solo conducente rimanga attorno al 
+$60$\%, deve esistere qualche fattore che alza gli incidenti senza passeggeri al 
+$95.3$\% visibile nel grafo \ref{fig:passeggeri-milano-rimini}.
+
+Uno di questi fattori, che distrarrebbero il conducente, potrebbe essere l'utilizzo 
+del cellulare nell'automobile.
 
 %\clearpage
 \subsection{L'uso del telefono cellulare ha influenzato il numero di incidenti?}

@@ -43,7 +43,7 @@ passenger_count_bari = get_people_in_vehicles(data[data['provincia'] == 72])
 passenger_count_bari = passenger_count_bari[passenger_count_bari < 4]
 passenger_count_bari = passenger_count_bari.value_counts(normalize=True).sort_index()
 
-color_ls = ['#d6b835', '#a3d635','#d66835']
+color_ls = ['#5f64c6', '#c65f64', '#c6c15f']
 
 pd.DataFrame(
     [passenger_count_milano, passenger_count_rimini, passenger_count_bari],
