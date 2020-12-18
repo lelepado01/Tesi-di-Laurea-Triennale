@@ -51,5 +51,4 @@ pd.DataFrame(
 ).transpose().plot.bar(width=0.95, color=color_ls)
 plt.xticks(rotation=0)
 plt.xlabel("Numero passeggeri")
-plt.savefig("passeggeri_bar")
 plt.show()
