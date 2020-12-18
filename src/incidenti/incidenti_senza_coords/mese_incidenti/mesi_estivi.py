@@ -12,10 +12,8 @@ agosto = data[data['mese'] == 8]['provincia']
 agosto_label = label_utils.join_labels(agosto, 'dataset/incidenti/Classificazioni/provincia.csv').value_counts().head(10)
 #agosto_label = agosto_label / agosto_label.sum()
 
-# print(agosto_label)
 mesi = label_utils.join_labels(data['provincia'], 'dataset/incidenti/Classificazioni/provincia.csv').value_counts().head(10)
 #mesi = mesi / mesi.sum()
-# print(mesi.head(10))
 
 agosto_ls = ['#8bc1c4']*12
 agosto_ls[:4] = ['#5bc1c6']*4
