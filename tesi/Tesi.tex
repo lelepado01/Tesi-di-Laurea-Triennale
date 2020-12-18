@@ -1293,9 +1293,12 @@ quelle eseguite.
 %\clearpage
 \subsection{Incremento dell'incidentalità in diversi orari}
 
-In primo luogo, va sottolineato che il risultato atteso, 
-parlando di incidenti divisi per orario, è quello di osservare due picchi più o meno marcati 
+Se si volesse stimare la distribuzione di traffico per orario, sicuramente una prima ipotesi 
+deve essere quella di una curva più alta durante il giorno, con punto di minimo durante la notte. 
+Il risultato atteso, inoltre, è quello di osservare due picchi più o meno marcati 
 in corrispondenza delle fasce orarie di entrata e di uscita dal lavoro.
+Una domanda che sorge spontanea, visto che i dati a disposizione si riferiscono agli incidenti, 
+è se questi seguano lo stesso comportamento del traffico.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/ore_punta/week_weekend.png}
@@ -1303,22 +1306,27 @@ in corrispondenza delle fasce orarie di entrata e di uscita dal lavoro.
     \label{fig:week-weekend}
 \end{figure}
 
-Tramite un semplice conto degli incidenti durante il weekend e, 
-confrontando questo con il numero di quelli avvenuti durante la 
-settimana lavorativa, si osserva che nel weekend avvengono più incidenti 
-durante la sera e la notte, mentre durante la settimana in giornata.
+Tramite un semplice conteggio degli incidenti durante il weekend e, 
+confrontandolo con il numero di quelli avvenuti durante la 
+settimana lavorativa, si osserva come nel weekend avvengono più sinistri 
+durante la sera e la notte, mentre in giornata durante la settimana.
 
-Per quanto riguarda, invece, le fasce orarie 'di punta' definite precedentemente, 
-sono state prese in considerazione, per la mattina, gli orari dalle 7:00 alle 10:00, 
+Per quanto riguarda, le fasce orarie \quotestyle{di punta} definite precedentemente, 
+sono stati presi in considerazione, per la mattina, gli orari dalle 7:00 alle 10:00, 
 e per il pomeriggio, dalle 17:00 alle 19:00.
+
 L'incremento durante la fascia oraria pomeridiana è subito osservabile nella figura 
 \ref{fig:week-weekend}, dove si ha un incremento del $95.2$\% di incidenti rispetto 
 alla media durante la settimana lavorativa. 
-D'altra parte, durante il weekend, si osserva comunque un incremento, ma solamente del $61.1$\%.
+Durante il weekend, si osserva comunque un incremento, ma solamente del $61.1$\%.
 
-Per le fasce orarie della mattina, è comunque presente un incremento di incidenti, ma 
-ammonta al $34.6$\% alle 8:00, e al $80.6$\% alle 9:00, mentre nel weekend si ha un 
+Per le fasce orarie della mattina, è comunque presente un incremento di sinistri, ma questo 
+ammonta al $34.6$\% alle 8:00, e al $80.6$\% alle 9:00, e nel weekend si ha addirittura un 
 decremento di incidenti in entrambi gli orari, rispettivamente del $47.6$\% e $17.9$\%.
+
+I grafi presentati indicano gli incidenti all'anno, normalizzati per numero di 
+giorni settimanali e feriali, quindi gli incidenti totali della settimana sono divisi 
+per cinque giorni, mentre quelli del weekend per due, come mostrato nel codice sottostante.
 
 \begin{lstlisting}[language=Python]
     ora_weekend = data[data['giorno'] > 5]['Ora'].value_counts().sort_index()
@@ -1328,16 +1336,16 @@ decremento di incidenti in entrambi gli orari, rispettivamente del $47.6$\% e $1
     ora_weekend /= 2 * 52
 \end{lstlisting}
 
-Va sottolineato che i grafi indicano gli incidenti normalizzati per numero di 
-giorni, quindi gli incidenti totali della settimana sono divisi per cinque giorni, 
-mentre quelli del weekend per due.
+Le informazioni ricavate ricalcano in modo particolarmente preciso, soprattutto nelle ore del 
+pomeriggio, le ipotesi iniziali.
 
 %\clearpage
 \subsection{Incremento dell'incidentalità nelle fasce orarie della mattina}
 
-I risultati della sezione precedente sembrano indicare che la maggior parte degli incidenti 
-si verifica attorno alle 9:00 di mattina. Questa tendenza è vera anche nel caso in cui si 
-isoli una città come Milano, dove arrivano molti pendolari dalla regione e che probabilmente sono 
+I risultati della sezione precedente sembrano indicare che la maggior parte degli 
+incidenti si verifica attorno alle 9:00 di mattina. 
+Questa tendenza è vera anche nel caso in cui si isoli una città come Milano, 
+che è la destinazione di molti pendolari della regione, probabilmente 
 già in viaggio prima delle 9:00?
 
 Selezionano solo gli incidenti nella provincia di Milano, mostrati nel grafo 
