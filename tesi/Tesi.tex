@@ -1581,13 +1581,12 @@ Tuttavia, in questo caso, il volume del primo trimestre è comparabile con quell
 
 \subsection{In località di mare gli incidenti aumentano in estate?}
 
-La domanda che sorge spontanea, una volta visto il grafo in figura \ref{fig:milano-mese}, è se 
-il numero basso di incidenti in Agosto corrisponda con un numero alto di sinostri in altre località 
-di vacanza. 
-
-Nalla figura \ref{fig:mesi-estivi} sono elencate le province con maggiore incidentalità 
-in Agosto rispetto a tutto l'anno. In particolare, ad aumentare in volume sono le 
-province di Brescia e Palermo.
+Visto il grafo in figura \ref{fig:milano-mese}, una domanda che sorge spontanea, è se 
+il numero basso di incidenti in Agosto corrisponda con un numero alto di sinostri in 
+altre località di vacanza. 
+In altre parole, visto che un gran numero di persone si spostano in macchina 
+in altre regioni durante il mese di Agosto, questa differenza di traffico è osservabile 
+nel numero di incidenti?
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/mesi_estivi.png}
@@ -1595,41 +1594,48 @@ province di Brescia e Palermo.
     \label{fig:mesi-estivi}
 \end{figure}
 
-Tuttavia questo comportamento è unico dell'anno 2011, in quanto, per gli altri due anni in cui 
-si dispone dei dati sui mesi, 2012 e 2013, Milano e Roma hanno il primato di 
-incidenti sia per l'anno che per il mese di Agosto individuale.
+Nalla figura \ref{fig:mesi-estivi} sono elencate le province con maggiore incidentalità 
+in Agosto rispetto a tutto l'anno. In particolare, ad aumentare in volume sono le 
+province di Brescia e Palermo.
 
-Ipotizzando invece, di comparare più nel dettaglio alcune province, meta di vacanze estive, 
-con Milano, ciò che ci si aspetta da queste ultime è di avere un incremento di incidenti nei mesi 
-di Luglio e Agosto\footnote{Si è utilizzato l'anno più recente per i dati a disposizione, 
+Il comportamento rappresentato nel grafico, tuttavia, è unico dell'anno 2011, in quanto, 
+per gli altri due anni di cui si dispone dei dati (2012 e 2013), 
+Milano e Roma hanno il primato di incidenti sia per l'anno, come ci si attende, che per il 
+mese di Agosto individuale, nel 2011 occupato da Palermo.
+
+D'altra parte, se si pensasse di comparare più nel dettaglio alcune province, 
+meta di vacanze estive con Milano, ciò che ci si aspetterebbe da queste ultime sarebbe 
+di avere un incremento di incidenti nei mesi di Luglio e 
+Agosto\footnote{Si è utilizzato l'anno più recente per i dati a disposizione, 
 a partire dal 2014 non sono più disponibili dati riguardanti il mese}.
-
 Per eseguire questo confronto sono state prese in considerazione le località di Rimine e Palermo, 
-per mostrare che alcune province, come la prima, confermano l'ipotesi, mentre altre, come la seconda, 
-sembrano andare contro.
+per mostrare che alcune province, come la prima, confermano l'ipotesi, mentre altre, 
+come la seconda, possono essere usate come controesempio.
 
 \begin{figure}
-    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/milano_rimini.png}
-    \caption{Incidenti per mese a Milano e Rimini}
+    \includegraphics[width=0.5\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/milano_rimini.png}
+    \includegraphics[width=0.5\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/palermo_milano.png}
+    \caption{Incidenti per mese a Milano, Rimini e Palermo}
     \label{fig:milano-rimini}
 \end{figure}
 
-\begin{figure}
-    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/palermo_milano.png}
-    \caption{Incidenti per mese a Milano e Palermo}
-    \label{fig:palermo-milano}
-\end{figure}
+Il confronto tra Milano e Rimini è raffigurato nell'immagine sinistra della 
+figura \ref{fig:milano-rimini}e, nonostante a Milano avvengano un numero molto maggiore di 
+incidenti rispetto alla provincia Emiliana, nei mesi estivi, 
+il numero di sinistri a Rimini è superiore alla media annuale, 
+mentre per Milano è inferiore. 
+Inoltre, a Milano si ha una tendenza di diminuzione di incidenti in Agosto e nei 
+mesi invernali, mentre a Rimini si ha incremento nei mesi estivi.
 
-Il confronto tra Milano e Rimini è raffigurato nell'immagine \ref{fig:milano-rimini} e, per quanto a 
-Milano avvengano un numero molto maggiore di incidenti rispetto alla provincia Emiliana, nei mesi estivi, 
-il numero di sinistri a Rimini è superiore alla media annuale, mentre per Milano è inferiore.
+Nella provincia di Palermo, visibile nel grafo destro in figura \ref{fig:milano-rimini}, 
+d'altra parte, non risulta che nessun mese abbia un numero di incidenti 
+particolarmente più alto della media, anzi la tendenza sembra imitare il comportamento di 
+Milano, con Agosto e i mesi invernali più bassi della media.
 
-Nella provincia di Palermo, visibile in figura \ref{fig:palermo-milano}, d'altra parte, 
-non risulta che nessun mese abbbia un numero di incidenti 
-particolarmente più alto della media.
-
-Nella seguente tabella, sono indicati gli incrementi per anno del numero di incidenti a Rimini.
-L'incremento constante per ogni anno, conferma che questo fenomeno è un trend annuale.
+Nella seguente tabella, sono indicate le percentuali di aumento per anno del numero di 
+incidenti a Rimini.
+L'incremento più o meno constante in ogni anno, conferma questo fenomeno come un trend 
+annuale, e non un outlier dovuto a un 2011 fuori dalla norma.
 
 \begin{center}
     \def\arraystretch{1.5}%  
@@ -1647,9 +1653,13 @@ L'incremento constante per ogni anno, conferma che questo fenomeno è un trend a
     \end{tabular}
 \end{center}
 
-Osservando il grafo raffigurante gli incidenti per mese della Valle d'Aosta, in figura \ref{fig:aosta}, 
-è possibile notare un notevole incremento di incidenti sia in Gennaio che in Agosto, possibili 
-conseguenze, rispettivamente, dell'inizio della stagione sciistica ed estiva.
+Una domanda che sorge spontanea, è se i calcoli realizzati valgano anche nelle regioni 
+del nord Italia, e se questi permettano di individuare un incrementi di incidenti in 
+inverno, a segnalare la stagione sciistica.
+Nel grafo raffigurante gli incidenti per mese della Valle d'Aosta, 
+in figura \ref{fig:aosta}, si notano incrementi dell'incidentalità 
+nei mesi di Giugno e Settembre, tuttavia, nei mesi invernali, il numero di sinistri è 
+generalmente più basso rispetto alla media.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/aosta_mese.png}
@@ -1657,7 +1667,9 @@ conseguenze, rispettivamente, dell'inizio della stagione sciistica ed estiva.
     \label{fig:aosta}
 \end{figure}
 
-Questa tendenza avviene ogni anno?
+La prima cosa che è possibile controllare, è se questa tendenza avvenga ogni anno. 
+Nella tabella sottostante sono stati riportati gli incrementi percentuali di incidenti 
+rispetto alla media annuale, per ogni anno disponibile.
 
 \begin{center}
     \def\arraystretch{1.5}%  
@@ -1675,17 +1687,19 @@ Questa tendenza avviene ogni anno?
     \end{tabular}
 \end{center}
 
-Il comportamento degli incidenti in Valle d'Aosta, mostrato in figura 
-\ref{fig:aosta-rimini-milano-trimestre} è molto inconsistente, soprattutto in Agosto.
+Il comportamento degli incidenti in Valle d'Aosta mostrato, oltre che in tabella, 
+anche in figura \ref{fig:aosta-rimini-milano-trimestre} è molto inconsistente, 
+soprattutto in Agosto.
 Va specificato che la taglia del campione con cui si sta lavorando, per questa provincia, 
 è molto piccolo, e sicuramente influisce sulle percentuali di incremento e decremento 
-degli incidenti.\\
-Nonostane ciò, se si assume che Gennaio 2010 sia un outlier, il numero di incidenti in 
-questo mese è sempre in decremento, in modo molto consistente, rispetto alla media.
+degli incidenti.
+Nonostane ciò, assumendo che Gennaio 2010 sia un outlier, il numero di incidenti in 
+questo mese è sempre in decremento rispetto alla media, con percentuali abbastanza alte.
 
 Per avere una visione di insieme delle tendenze annuali, è possibile tracciare 
-un grafo contenente gli incidenti divisi per trimestre dove, per esempio, 
-per primo trimestre si intende Gennaio, Febbraio e Marzo.
+il grafo \ref{fig:aosta-rimini-milano-trimestre}, contenente gli incidenti divisi 
+per trimestre dove, per esempio, per primo trimestre si 
+intende Gennaio, Febbraio e Marzo.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/trimestri_aosta_milano_rimini.png}
@@ -1694,26 +1708,26 @@ per primo trimestre si intende Gennaio, Febbraio e Marzo.
 \end{figure}
 
 In tutti i grafi nella figura \ref{fig:aosta-rimini-milano-trimestre}, 
-si osserva di nuovo, dall'anno 2015, l'ampio gap nel numero di incidenti, 
-probabilmente dovuto a un cambio di misurazione degli incidenti, di cui si 
-è parlato in un precedente capitolo. 
+si osserva, come già visto in precedenza, che dall'anno 2015 si ha un ampia crescita  
+del numero di incidenti, probabilmente dovuta a un cambio di misurazione 
+degli incidenti. 
 
-Per quanto riguarda Rimini e Aosta, si osservano varie similitudini, con quasi 
-tutte le annate, in particolare si osserva un basso numero di incidenti 
+Per quanto riguarda Rimini e Aosta, si osservano varie similitudini in quasi 
+tutte le annate. In particolare si osserva un basso numero di incidenti 
 durante il primo trimestre, e un incremento di sinistri durante il terzo trimestre.
-
 D'altra parte, a Milano, si ha la tendenza opposta, con maggior numero di 
 incidenti nel secondo trimestre, e un abbassamento durante il primo 
-e terzo trimestre.
+e terzo trimestre, soprattutto con l'aumento della taglia del campione, 
+a partire dal 2015.
 
 Ciò che è possibile dedurre, è che a Milano il numero di incidenti decresce 
-nel terzo trimestre in accordo con le partenze per le vacanze, mentre nelle 
+nel terzo trimestre in concordanza con le partenze per le vacanze, mentre nelle 
 altre località raffigurate, avviene la tendenza opposta poichè 
-queste sono mete feriali.
+queste sono spesso mete feriali.
 
-Sarebbe interessante conoscere se esistono località di vacanza preferite, o se 
-queste cambiano il base all'anno, si tenterà di rispondere a queste domande 
-nei capitoli successivi.
+Sarebbe interessante conoscere l'esistenza di località di vacanza preferite, o se 
+queste cambino il base all'anno. 
+Si tenterà di rispondere a queste domande nei capitoli successivi.
 
 %\clearpage
 \section{Dati Istat su tipi di incidenti e incroci}
