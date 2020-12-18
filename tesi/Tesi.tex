@@ -1488,22 +1488,24 @@ la settimana lavorativa meno persone siano sveglie nelle ore notturne.
 %\clearpage
 \subsection{Quanto influiscono le vacanze estive sull'incidentalità?}
 
-Sarebbe interessante individuare eventuali cali o incrementi di incidenti, per quanto riguarda gli 
-incidenti su intervallo mensile.
-Il dataset sugli accessi all'area C è presente, nel caso della divisione per mese, fino all'anno 2018, 
-tuttavia i dati Istat su incidenti contengono il campo \columnstyle{mese} solo fino all'anno 2013,
-dunque i grafi sull'argomento prenderanno in considerazione quest'annata più recente.
+Sarebbe interessante individuare eventuali cali o incrementi di incidenti 
+su intervallo mensile.
+Il dataset sugli accessi all'area C è presente, nel caso della divisione per 
+mese, fino all'anno 2018, tuttavia il campo \columnstyle{mese} è presente nei 
+dati Istat solo fino all'anno 2013, ed è sostituito successivamente 
+dalla colonna \columnstyle{trimestre}, dunque i grafi sull'argomento prenderanno 
+in considerazione quest'annata più recente.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/milano_mese.png}
-    \caption{Incidenti per mese in Milano}
+    \caption{Incidenti per mese in Milano nel 2013}
     \label{fig:milano-mese}
 \end{figure}
 
 Nel grafo \ref{fig:milano-mese} si nota un chiaro calo di incidenti nel mese di 
-Agosto in provincia di Milano, la percentuale di decremento è riportata nella tabella sottostante, 
-anche per gli altri anni per cui sono disponibili i dati.
-
+Agosto in provincia di Milano. 
+La percentuale di decremento è riportata nella tabella sottostante, assieme agli 
+altri anni per cui sono disponibili i dati.
 
 \begin{center}
     \def\arraystretch{1.5}%  
@@ -1521,13 +1523,15 @@ anche per gli altri anni per cui sono disponibili i dati.
     \end{tabular}
 \end{center}
 
-Per quanto possano esserci molti fattori che contribuiscono a questa tendenza di decremento di sinistri, 
-quello che influisce di più devono essere le partenze per le vacanze estive.
+Per quanto possano esserci molti fattori che contribuiscono a questa tendenza di 
+decremento di sinistri, uno di quelli più influenti deve essere la partenza 
+di persone per le vacanze estive.
 
-Un modo per testare questa teoria è controllare se il traffico durante il mese di Agosto cala a 
-Milano, stimato tramite i dati sugli accessi in area C. 
+Un modo per testare questa teoria è controllare se il traffico, 
+stimato tramite i dati sugli accessi in area C, cala durante il mese di 
+Agosto a Milano. 
 A supporto dell'ipotesi iniziale, nella figura \ref{fig:stima-traffico-mensile}, 
-è visibile un calo di accessi all'area C durante il mese di Agosto.
+è visibile un calo di accessi all'area C durante i mesi di Giugno, Luglio e Agosto.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/area_c/stima_traffico_mese.png}
@@ -1535,41 +1539,47 @@ A supporto dell'ipotesi iniziale, nella figura \ref{fig:stima-traffico-mensile},
     \label{fig:stima-traffico-mensile}
 \end{figure}
 
-Una volta ottenuta una stima del traffico per mese, è possibile applicare questa misurazione 
-al numero di incidenti mensili.
+Una volta ottenuta una stima del traffico, è possibile calcolare quali mesi 
+siano più pericolosi dal punto di vista degli incidenti, rapportando il numero di 
+sinistri al numero di accessi in area C mensile.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/area_c/rapporto_mese.png}
     \caption{Incidenti al mese, tenendo conto del traffico nello stesso periodo (2012)}
     \label{fig:incidenti-traffico-mese}
 \end{figure}
+\todo{controlla grafo, cambia label X}
 
 L'immagine \ref{fig:incidenti-traffico-mese} contiene due grafi, 
-il primo riguardante la frazione di traffico annuale che interessa ogni mese; 
+il primo riguardante la frazione di traffico annuale che interessa ogni mese, 
 mentre il secondo raffigura il rapporto tra il numero di incidenti mensili, e il traffico 
-stimato mensile\footnote{Si è utilizzato l'anno 2012 perchè è il primo anno contenente tutti i dati completi, 
-tutti gli altri anni hanno mesi o campi mancanti}.
-Nel secondo grafo della figura \ref{fig:incidenti-traffico-mese}, si osserva come, per quanto agosto 
-abbia il minor numero di incidenti mensili, una volta tenuto conto della minore quantità di traffico, 
-risulta essere il mese più pericoloso.
+stimato\footnote{Si è utilizzato l'anno 2012 perchè è il primo anno contenente tutti i dati completi, 
+tutti gli altri anni hanno mesi o campi mancanti, per esempio il file corrispondente all'anno 
+2013 non ha le misurazioni per tutto il mese di Dicembre}.
+Nel secondo grafo della figura \ref{fig:incidenti-traffico-mese}, si osserva come, 
+nonostante Agosto abbia il minor numero di incidenti mensili, 
+una volta tenuto conto della minore quantità di traffico, risulti essere 
+il mese più pericoloso.
 
 A partire dal 2014, il campo \columnstyle{mese} è stato convertito nella 
 colonna \columnstyle{trimestre}.
-La figura \ref{fig:milano-trimestri} mostra la quantità di incidenti per trimestre per ogni 
-anno a partire dal 2010 fino al 2018.
+La figura \ref{fig:milano-trimestri} mostra la quantità di incidenti per 
+trimestre per ogni anno a partire dal 2010 fino al 2018.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/trimestri.png}
-    \caption{Incidenti a Milano per trimestre}
+    \caption{Incidenti per trimestre a Milano}
     \label{fig:milano-trimestri}
 \end{figure}
 
-Anche nel caso dei trimestri, quello estivo ha un numero minore di incidenti, ma il volume è 
-comparabile con quello del primo trimestre, mentre durante il secondo e il quarto avvengono 
-decisamente più incidenti.
+\'E possibile osservare, anche in questo grafo, l'aumento di sinistri a partire dall'anno 2013, 
+di cui si è parlato nel capitolo riguardante l'utilizzo del cellulare all guida.
+
+Anche nel caso dei trimestri, quello estivo ha un numero minore di incidenti. 
+Tuttavia, in questo caso, il volume del primo trimestre è comparabile con quello del terzo 
+(estivo), mentre durante il secondo e il quarto avvengono decisamente più incidenti.
 
 
-%\clearpage
 \subsection{In località di mare gli incidenti aumentano in estate?}
 
 La domanda che sorge spontanea, una volta visto il grafo in figura \ref{fig:milano-mese}, è se 
