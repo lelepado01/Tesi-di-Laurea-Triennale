@@ -1793,22 +1793,19 @@ la maggiore frequenza di sinistri di un tipo rispetto a un altro.
 
 \subsection{I tratti di strada più pericolosi}
 
-Il dataset Istat contiene anche informazioni sul tipo di strada nel quale è avvenuto il 
-sinistro.
-Sarebbe, anche in questo caso, molto utile avere il numero di incroci per tipo 
+Il dataset di incidenti Istat contiene informazioni riguardanti il tipo di 
+intersezione nel quale è avvenuto l'incidente.
+Sarebbe molto utile, anche in questo caso, avere il numero di incroci per tipo 
 presenti in una certa località, per controllare se alcuni incroci siano più 
-pericolosi di altri.
+frequenti di altri.
 
-Non avendo accesso a questo tipo di informazioni, si è utilizzato un'indice di 
+Non avendo accesso a questo tipo di informazioni, si è utilizzato l'indice di 
 mortalità per tipologia di sinistro, prendendo spunto dalla sintesi dello 
 studio su incidenti stradali, eseguito da ACI \cite{ACI:2}.
 
-Dal grafo sul lato sinistro della figura \ref{fig:tipo-intersezioni}, 
-si nota che la maggior parte degli incidenti avviene nei rettilinei e negli incroci.
-I risultati trovati sono plausibili, in quanto spesso le automobili raggiungono 
-velocità più alta nei rettilinei rispetto a qualsiasi altro tipo di incrocio, 
-tuttavia è probabile che il numero alto di incidenti in questa categoria sia dovuto 
-all'alto numero di tratti di strada dritti.
+Nel grafo sul lato sinistro della figura \ref{fig:tipo-intersezioni}, 
+sono rappresentati gli incidenti in Italia nel 2018, divisi per tipologia 
+di incrocio in cui sono avvenuti.
 
 \begin{figure}
     \includegraphics[width=0.5\linewidth]{../src/incidenti/incidenti_senza_coords/localizzazione_incidente/intersezioni.png}
@@ -1817,13 +1814,17 @@ all'alto numero di tratti di strada dritti.
     \label{fig:tipo-intersezioni}
 \end{figure}
 
-L'indice di mortalità per tipologia di incrocio, raffigurato nel grafo destro 
-dell'immagine \ref{fig:tipo-intersezioni}, mostra che, per quanto i rettilinei 
-siano le zone in cui avvengono sinistri più frequentemente, non sono le zone 
-con incidenti più pericolosi. 
+I risultati sono piuttosto eterogenei, con la maggior parte dei sinistri 
+localizzati lungo rettilinei, incroci e curve. 
+\'E possibile ipotizzare che, viste le alte velocità raggiunte dalle automobili 
+lungo i rettilinei, i risultati calcolati siano corretti, e questa categoria sia 
+particolarmente pericolosa.
+Tuttavia è più probabile che il numero di incidenti di questa tipologia sia dovuto 
+all'alta frequenza di tratti di strada dritti.
 
-Nella tabella sottostante sono riportati i valori, sia dell'indice di mortalità, 
-sia dell'indice di feriti per tipologia di strada in cui è avvenuto l'incidente.
+Ulteriore conferma di questa teoria, è data dall'indice di mortalità per tipologia di incrocio, 
+riportato nel grafo destro dell'immagine \ref{fig:tipo-intersezioni}, e calcolato tramite le 
+formule sottostanti. 
 
 \begin{center}
     $Indice\_Mortalita\_Strada\_X = \displaystyle \frac{Numero\_Morti\_Strada\_X}{Numero\_Incidenti\_Strada\_X} * 100$ 
@@ -1832,6 +1833,13 @@ sia dell'indice di feriti per tipologia di strada in cui è avvenuto l'incidente
 \begin{center}
     $Indice\_Feriti\_Strada\_X = \displaystyle \frac{Numero\_Feriti\_Strada\_X}{Numero\_Incidenti\_Strada\_X} * 100$ 
 \end{center}
+
+Questo indicatore mostra come, nonostante i rettilinei siano le zone in cui 
+avvengono più frequentemente incidenti, questi non siano i tratti di 
+strada più pericolosi. 
+
+Nella tabella sottostante sono riportati i valori, sia dell'indice di mortalità, 
+sia dell'indice di feriti per tipologia di strada in cui è avvenuto l'incidente.
 
 \begin{center}
     \def\arraystretch{1.5}%  
@@ -1881,7 +1889,10 @@ I valori sono riportati nella tabella sottostante:
 
 Ne risulta che tutti gli insiemi siano linearmente correlati tra loro. 
 Dalla tabella contenente l'indice di feriti, non è possibile dedurre molto, 
-in quanto questo indicatore è molto simile tra tutte le categorie.
+in quanto questo indicatore è molto simile tra tutte le categorie. 
+Tuttavia, il minimo indice di mortalità e di feriti, si ha nella stessa categoria, 
+la rotatoria, informazione potrebbe essere molto utile durante la realizzazione di nuovi 
+incroci.
 
 Per quanto riguarda invece, l'indice di mortalità, è chiaro che sia più alto 
 per categorie di incidenti che avvengono ad alte velocità, come vicino a dossi, 
