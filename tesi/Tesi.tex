@@ -1725,40 +1725,48 @@ nel terzo trimestre in concordanza con le partenze per le vacanze, mentre nelle
 altre località raffigurate, avviene la tendenza opposta poichè 
 queste sono spesso mete feriali.
 
-Sarebbe interessante conoscere l'esistenza di località di vacanza preferite, o se 
-queste cambino il base all'anno. 
+Sarebbe interessante conoscere l'esistenza di località di vacanza preferite, 
+o se queste cambino il base all'anno. 
 Si tenterà di rispondere a queste domande nei capitoli successivi.
 
 %\clearpage
 \section{Dati Istat su tipi di incidenti e incroci}
 
-A riguardo dei dati sulla località degli incidenti e del tipo di incrocio, 
-sarebbe interessante sapere se esistano tipologie di incidenti che accadono 
-con più frequenza di altre, o se tra queste tipologie, il numero di feriti 
-è comparabile o se alcuni incidenti sono più pericolosi di altri.
+Riguardo i dati sulla località degli incidenti e sul tipo di incrocio, 
+sarebbe interessante sapere se esistano tipologie di sinitri che accadono 
+con più frequenza di altre. 
+Un'altra questione potrebbe essere se, tra queste tipologie, il numero di feriti 
+sia comparabile o se alcuni tipi di incidenti siano più pericolosi di altri.
 
 %\clearpage
 \subsection{Le tipologie di incidenti più frequenti}
 
+Per rispondere alla prima delle domande poste nell'introduzione, è possibile, 
+utilizzando i dati a disposizione, contare la frequenza di ogni categoria di incidente.
+
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/localizzazione_incidente/tipo_incidente.png}
-    \caption{Tipologia di incidente}
+    \caption{Numero di incidenti divisi per tipologia}
     \label{fig:tipo-incidente}
 \end{figure}
 
-Nella figura \ref{fig:tipo-incidente} è possibile osservare quali sono gli incidenti 
-più frequenti in un anno, in questo caso nel 2018.
+Nella figura \ref{fig:tipo-incidente} sono riportati gli incidenti più frequenti nel 2018.
 In particolare sono molto frequenti scontri frontali, laterali e tamponamenti. 
-Gli incidenti frontali-laterali sono i più rappresentati probabilmente per 
-l'ampiezza della categoria.
+La tipologia \columnstyle{frontali-laterali} è quella più rappresentata probabilmente per 
+l'ampiezza della categoria, in quanto contiene tutte le sfumature di incidenti che non sono 
+precisamente contatti frontali o precisamente laterali.
 
-Questo grafo, senza un constesto, non è molto utile. Tuttavia è difficile 
-individuare un fattore che incida particolarmente sulle diverse tipologie di incidente.
+Prima di fare assunzioni errate, va detto che questo grafo, senza un constesto, 
+non è molto utile, perchè il numero di incidenti di una categoria deve 
+essere strettamente influenzato dalla tipo di strada e intersezione. 
+Per esempio, si ha una probabilità bassa di essere coinvolti in un tamponamento 
+se si sta guidando su un'autostrada, mentre il numero di casi aumenta se si viaggia 
+su un viale con più semafori in serie.
 
-Ciò che è possibile controllare, è se negli altri anni disponibili, il rapporto 
-di tipologie di incidenti rimanga costante o no.
-Le percentuali delle prime quattro categorie di incidenti sono riportate nella 
-figura \ref{fig:rapporto-tipologie}: 
+Ciò che è possibile controllare, è se negli altri anni disponibili, le 
+tipologie di intersezioni rimangano costanti o meno.
+Le percentuali delle prime quattro categorie di incroci che provocano più sinistri 
+sono riportate nella figura \ref{fig:rapporto-tipologie}: 
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/localizzazione_incidente/rapporto_tipologie.png}
@@ -1766,24 +1774,22 @@ figura \ref{fig:rapporto-tipologie}:
     \label{fig:rapporto-tipologie}
 \end{figure}
 
-Per tutte le annate disponibili, le prime due categorie di incidenti rimangono 
+Per tutte le annate disponibili, le prime due categorie di incidenti rimangono sempre 
 le stesse, cioè \columnstyle{Scontro frontale-laterale} e \columnstyle{tamponamento}. 
 Anche le percentuali corrispondenti restano molto simili, con la prima 
 categoria sempre attorno al $35\%$ e la seconda attorno al $18\%$.
 
-La terza categoria invece, è dove si inizano ad osservare delle differenze, 
-poichè nelle prime annate si alternano \columnstyle{investimento di pedoni} e 
-\columnstyle{scontro laterale}, con percentuali simili, attorno al $12\%$.
+Nella terza categoria, d'altra parte, si inizano ad osservare delle differenze, 
+poichè si alternano \columnstyle{investimento di pedoni} e \columnstyle{scontro laterale}, 
+con percentuali simili, attorno al $12\%$.
 
-Ciò che è possibile ricavare dalla figura \ref{fig:rapporto-tipologie} , è che non 
-sembrano esistere particolari fattori che influenzano quali tipi di incidenti 
-vengono commessi maggiormente in un anno. 
+Ciò che è possibile dedurre dalla figura \ref{fig:rapporto-tipologie}, è che non 
+sembrano esistere fattori che influenzano quali tipi di sinistro 
+vengano commessi maggiormente in un anno. 
 
-Se si avessero a disposizione dati riguardanti, per esempio il numero e il tipo 
-di incroci in una località, come per esempio in provincia di Milano, sarebbe stato 
-possibile giustificare il maggior numero di incidenti frontali-laterali rispetto, 
-per esempio, agli sbandamenti.
-
+Se si avessero a disposizione dei dati riguardanti il numero e il tipo 
+di incroci in una località, sarebbe possibile giustificare 
+la maggiore frequenza di sinistri di un tipo rispetto a un altro. 
 
 \subsection{I tratti di strada più pericolosi}
 
