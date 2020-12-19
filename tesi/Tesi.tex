@@ -1903,8 +1903,9 @@ dove le automobili stanno ripartendo.
 \subsection{Le tipologie di incidenti che provocano più feriti}
 
 Il dataset Istat contiene informazioni riguardanti il numero di persone coinvolte 
-in incidenti, in particolare l'età, il sesso e l'esito, cioè lo stato del passeggero 
-dopo l'incidente, incolume, ferito, morto entro 24 ore o morto entro un mese.
+in incidenti, in particolare l'età, il sesso e l'esito. 
+Per quest'ultimo campo, si intende lo stato di salute del passeggero 
+dopo l'incidente, che può essere: incolume, ferito, morto entro 24 ore o morto entro un mese.
 Sarebbe interessante controllare se esistano tipologie di incidenti che provocano 
 un maggior numero di feriti.
 
@@ -1914,19 +1915,20 @@ un maggior numero di feriti.
     \label{fig:numero-feriti}
 \end{figure}
 
-Nella figura \ref{fig:numero-feriti} si deduce che esistono tipologie di sinistri 
-che favoriscono la presenza di un solo ferito, come gli sbandamenti. 
-\'E possibile arrivare a questa conclusione perchè il numero di incidenti con 
-un solo ferito, nella colonna \columnstyle{sbandamento} è tra i più alti, 
-mentre la stessa categoria con due persone ferite ha volume molto più basso.
-Al contrario, in incidenti come \columnstyle{tamponamento}, sono molto frequenti 
-per ogni numero di feriti, il che fa pensare che semplicemente avvenga un alto numero 
-di questo tipo di sinistro.
+Dalla figura \ref{fig:numero-feriti} è possibile ipotizzare l'esistenza di tipologie 
+di sinistri che favoriscono la presenza di un solo ferito, come gli sbandamenti. 
+Si arriva a questa conclusione perchè la colonna di questo tipo di incidente, è tra 
+le più alte di quelle del primo gruppo (un solo ferito), 
+mentre nel secondo gruppo (due feriti), la stessa categoria è tra i valori 
+più bassi.
+Al contrario, le colonne corrispondenti al \columnstyle{tamponamento}, sono molto alte 
+per ognuno dei quattro gruppi, il che fa pensare che semplicemente avvenga un alto numero 
+di sinistri di questo tipo.
 
-Le percentuali di osservazione di uno degli incidenti nel grafo sono riportate 
-nella tabella sottostante\footnote{La somma delle percentuali dei tipi di 
-incidenti dovrebbe ammontare a 1, ma sono state riportate solo quattro categorie, 
-e non tutte.}: 
+Le percentuali di osservazione degli incidenti nel grafo \ref{fig:numero-feriti} sono 
+riportate nella tabella sottostante\footnote{La somma delle percentuali dei tipi di 
+incidenti dovrebbe ammontare a 1, ma sono state riportate solo quattro categorie 
+interessate, e non tutte.}: 
 
 \begin{center}
     \def\arraystretch{1.5}%  
@@ -1944,24 +1946,25 @@ e non tutte.}:
     \end{tabular}
 \end{center}
 
-Avendo a disposizione il volume di incidenti per categoria, è possibile capire 
-se il comportamento visibile nel grafo è dovuto al numero di sinistri. 
+Avendo a disposizione il numero di incidenti per categoria, è possibile capire 
+se il comportamento visibile nel grafo sia dovuto al numero di sinistri, o alla 
+pericolosità del tipo di scontro. 
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/natura_incidente/perc_natura_incidente.png}
     \caption{Percentuale del tipo di incidente, diviso per numero di feriti presenti}
     \label{fig:perc-numero-feriti}
 \end{figure}
+\todo{riguarda labely e caption}
 
-La figura \ref{fig:perc-numero-feriti} mostra la percentuale della categoria 
-di incidenti, divisi per numero di feriti, dunque, sommando i valori delle 
-colonne di colore uguale si ottiene $1.0$.
+La figura \ref{fig:perc-numero-feriti} mostra la frequenza di incidenti con un dato numero 
+di feriti, divisa per la percentuale di sinistri della categoria interessata.
 
-Avendo delle percentuali corrette in base al volume della categoria di incidente, 
-si osserva come alcune tipologie, come urto con ostacolo e sbandamento, 
-favoriscano una sola persona ferita, mentre altre, come i tamponamenti e 
-gli scontri frontali, abbiano una maggiore percentuale di 
-incidenti con più di un ferito.
+Avendo a disposizione un indice di incidenti, corretto in base al volume della categoria 
+di incidente, si osserva come alcune tipologie, come \columnstyle{urto con ostacolo} 
+e \columnstyle{sbandamento}, favoriscano una sola persona ferita, mentre altre, 
+come i \columnstyle{tamponamenti} e gli \columnstyle{scontri frontali}, presentino 
+una maggiore percentuale di scontri con più di un ferito.
 
 %\clearpage
 \subsection{Incroci che favoriscono incidenti con pedoni}
