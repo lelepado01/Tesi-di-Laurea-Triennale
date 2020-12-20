@@ -2028,12 +2028,14 @@ qualche modo, come nelle curve.
 %\clearpage
 \subsection{Età dei pedoni coinvolti in incidenti}
 
-\'E scontato che, se coinvolti in un incidente, un pedone di venti anni non ha la stessa 
-probabilità di essere ferito rispetto a una persona di settanta.
-\'E possibile osservare questo comportamento utilizzando i dati che si ha a disposizione?
+\'E scontato che, se coinvolti in un incidente, un ventenne non ha la stessa 
+probabilità di essere ferito rispetto a un pedone che ha settanta anni.
+La domanda che sorge spontanea è se sia possibile osservare questo comportamento 
+utilizzando i dati a disposizione.
 
-Per prima cosa si sono utilizzati i campi \columnstyle{età\_pedone} per creare un grafo 
-in cui sia visibile il numero di pedoni feriti e morti, divisi per fascia di età.
+Per prima cosa si sono utilizzati i campi \columnstyle{pedone\_ferito\_età} 
+per creare un grafo in cui sia visibile il numero di passanti feriti e morti, 
+divisi per fascia di età.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/pedoni/eta_pedoni_iniziale.png}
@@ -2041,9 +2043,9 @@ in cui sia visibile il numero di pedoni feriti e morti, divisi per fascia di et�
     \label{fig:eta-pedoni-iniziale}
 \end{figure}
 
-Dal grafo \ref{fig:eta-pedoni-iniziale} si osserva che la fascia di età più colpita 
-è quella dei \columnstyle{65+} anni, tuttavia esiste un secondo picco, nel grafo dei 
-pedoni feriti, che  comprende le fasce tra trenta e cinquantaquattro anni di età.
+Dal grafo \ref{fig:eta-pedoni-iniziale} si osserva come la fascia di età più colpita 
+sia quella dei \columnstyle{65+} anni, tuttavia esiste un secondo picco, nel grafo dei 
+pedoni feriti, che comprende le persone tra i trenta e cinquantaquattro anni di età.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/pedoni/eta_pedoni.png}
@@ -2052,7 +2054,7 @@ pedoni feriti, che  comprende le fasce tra trenta e cinquantaquattro anni di et�
     \label{fig:eta-pedoni}
 \end{figure}
 
-Non tutte queste fasce però contengono lo stesso numero di anni di età, 
+Non tutte queste fasce, però, contengono lo stesso numero di anni di età, 
 per esempio \columnstyle{30-44} contiene quindici anni, mentre 
 \columnstyle{18-20} ne contiene solo due.
 
@@ -2070,12 +2072,12 @@ si ottiene un grafo, visibile in figura \ref{fig:eta-pedoni}, che, per
 quanto riguarda i pedoni feriti, è molto differente.
 Ignorando gli individui più giovani, tutte le altre fasce sono coinvolte 
 in modo omogeneo, con un picco nella categoria \columnstyle{65+ anni}.
-D'altra parte, il grafo destro, contenente i pedoni morti per fascia di età, 
+D'altra parte, il grafo destro, contenente i morti per fascia di età, 
 non subisce un grande cambiamento, mantenendo il punto di massimo con 
 i pedoni più anziani.
 
 Non è detto, tuttavia, che in Italia il numero di individui con 
-la stessa età sia costante anzi, le percentuali di individui per fascia, 
+la stessa età sia costante, anzi, le percentuali di individui per fascia, 
 trovate sul sito Tuttitalia \cite{TUTTITALIA:1}, riportate nella tabella 
 sottostante, non sono particolarmente omogenee: 
 
@@ -2106,15 +2108,14 @@ sottostante, non sono particolarmente omogenee:
     \hline
     \end{tabular}
 \end{center}
-
-Per poter essere utilizzate, le fasce trovate sono state sommate, e in alcuni casi 
-si è dovuto stimare la percentuale di popolazione con determinata età in 
-quanto si sarebbe dovuto dividere una fascia.
-Un esempio di questa divisione è la fascia dei \columnstyle{15-19} anni presente nei 
-dati della fonte. 
-I dati Istat hanno invece una categoria \columnstyle{15-17} anni e un'altra 
-\columnstyle{18-29} anni. 
-\'E dunque necessario spostare i diciotto e i diciannovenni dalla prima alla 
+Visto che le fasce di età della fonte, e quelle del dataset Istat non coincidono, 
+si è dovuto, in alcuni casi sommare, in altri suddividere, i dati del sito Tuttitalia.
+Nel secondo caso, si è dovuto stimare la percentuale di popolazione con 
+determinata età, in quanto si sarebbe dovuto dividere una fascia.
+Un esempio è la fascia dei \columnstyle{15-19} anni, 
+i dati Istat hanno una categoria \columnstyle{15-17} anni e un'altra 
+\columnstyle{18-29} anni, 
+è dunque necessario spostare i diciotto e i diciannovenni dalla prima alla 
 seconda fascia. 
 In questi casi, si è semplicemente assunto che il numero di individui sia omogeneamente 
 diviso per età, cioè nella fascia \columnstyle{15-19} si ha lo stesso numero di 
@@ -2145,10 +2146,11 @@ Anche nel grafo di sinistra è presente la stessa impennata in corrispondenza
 della seconda fascia, mentre la categoria \columnstyle{65+} non 
 risulta particolarmente alta.
 
-L'incremento di morti nelle fasce più anziane, si può speculare sia dovuto al 
+Si può speculare che l'incremento di morti nelle fasce più anziane, sia dovuto al 
 fatto che questi ultimi siano più propensi all'essere feriti in un incidente. 
-Mentre, per la prima categoria, può essere che, soprattutto tra i più giovani, 
-si preferisca ancora muoversi a piedi invece che in macchina.
+Mentre, per la prima categoria, può essere che, soprattutto tra i più giovani
+per la minore esperenza alla guida, 
+questi preferiscano ancora muoversi a piedi invece che in macchina.
 
 \subsection{Età dei conducenti coinvolti in incidenti}
 
