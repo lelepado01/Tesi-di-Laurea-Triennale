@@ -1952,10 +1952,9 @@ pericolosità del tipo di scontro.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/natura_incidente/perc_natura_incidente.png}
-    \caption{Percentuale del tipo di incidente, diviso per numero di feriti presenti}
+    \caption{Frequenza del tipo di incidente con numero di feriti, diviso per la percentuale di incidenti della rispettiva categoria}
     \label{fig:perc-numero-feriti}
 \end{figure}
-\todo{riguarda labely e caption}
 
 La figura \ref{fig:perc-numero-feriti} mostra la frequenza di incidenti con un dato numero 
 di feriti, divisa per la percentuale di sinistri della categoria interessata.
@@ -1969,12 +1968,13 @@ una maggiore percentuale di scontri con più di un ferito.
 %\clearpage
 \subsection{Incroci che favoriscono incidenti con pedoni}
 
-Il dataset Istat fornisce informazioni riguardanti i pedoni coinvolti in un incidente, 
-si potrebbe controllare se esistono tipologie di incrocio che coinvolgono un 
-alto numero di persone a piedi.
+Il dataset Istat fornisce varie informazioni riguardanti i pedoni coinvolti in un 
+incidente, tramite le colonne \columnstyle{pedone\_morto\_sesso}, 
+\columnstyle{pedone\_ferito\_sesso},\columnstyle{pedone\_morto\_età} e 
+\columnstyle{pedone\_ferito\_età}.
 
-La figura \ref{fig:pedoni-intersezioni} mostra il numero di incidenti, 
-ordinati in base alla tipologia di intersezioni e al numero di persone coinvolte.
+Si potrebbe controllare l'esistenza di tipologie di incrocio che 
+coinvolgono un alto numero di persone a piedi. 
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/pedoni/pedoni_incroci.png}
@@ -1982,15 +1982,20 @@ ordinati in base alla tipologia di intersezioni e al numero di persone coinvolte
     \label{fig:pedoni-intersezioni}
 \end{figure}
 
-Similmente a come si era visto nel grafo\ref{fig:tipo-intersezioni}, nella nuova 
-figura spicca un alto numero di rettilinei.
-\'E possibile che per la maggior parte, questo outlier sia dovuto all'alto 
+La figura \ref{fig:pedoni-intersezioni} mostra il numero di incidenti, 
+ordinati in base alla tipologia di intersezioni in cui sono avvenuti 
+e al numero di persone coinvolte.
+
+Come si era già visto nel grafo\ref{fig:tipo-intersezioni}, nella nuova 
+figura spicca un alto numero di rettilinei. 
+Analogamente all'analisi precedente, si è inclini a pensare che il valore 
+elevato di questa categoria sia dovuto dovuto all'alto 
 numero di tratti di strada dritti, tuttavia, se si confrontano le due immagini, 
-il numero di incidenti su rettilineo con pedoni coinvolti è quasi cinque 
+il numero di incidenti su rettilineo è quasi cinque 
 volte il valore della seconda posizione.
 
-Questo alto numero di incidenti fa pensare che esista un qualche fattore 
-che comporta maggiore coinvolgimento di pedoni lungo i rettilinei, come per 
+Questo alto numero di sinistri fa pensare che esista un qualche fattore 
+che comporti maggiore coinvolgimento di pedoni lungo rettilinei come, per 
 esempio, l'alta velocità dei veicoli.
 
 \begin{figure}
@@ -2008,15 +2013,17 @@ Il grafo ottenuto è più bilanciato, con \columnstyle{incroci} e
 \columnstyle{intersezioni non segnalate} che spiccano come tipi di strada con 
 maggiore coinvolgimento di pedoni, ovviamente dopo \columnstyle{rettilineo}, 
 e le restanti categorie non troppo distanti.
-Va specificato che il grafo \ref{fig:pedoni-no-rett} sia stato realizzato con 
-una scala logaritmica, poichè il numero di pedoni coinvolti su rettilineo è un 
-ordine di grandezza maggiore rispetto alla media.
+
+Va specificato che il grafo \ref{fig:pedoni-no-rett} è stato realizzato utilizzando, 
+nell'asse delle ascisse, una scala logaritmica, poichè il numero di pedoni coinvolti 
+su rettilineo è un ordine di grandezza maggiore rispetto alla media.
 
 A differenza della precedente analisi sui tratti di strada più pericolosi, 
-l'immagine dipinta in questo capitolo è molto diversa.
+ignorando momentaneamente i rettilinei, l'immagine dipinta è molto diversa.
 In questo caso, non si può più dire che i tratti più pericolosi siano quelli 
 che favoriscono alte velocità, ma sembra che il maggior numero di pedoni 
-siano coinvolti in incroci e zone in cui la visibilità è ostruita, come le curve.
+siano coinvolti in incroci e zone in cui la visibilità è ostruita in 
+qualche modo, come nelle curve.
 
 %\clearpage
 \subsection{Età dei pedoni coinvolti in incidenti}
