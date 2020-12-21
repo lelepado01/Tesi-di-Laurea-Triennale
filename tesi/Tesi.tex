@@ -279,7 +279,14 @@ Non è possibile, per esempio, dire se su una certa strada si ha un numero alto 
 incidenti, senza sapere quante automobili passano in una giornata.
 
 Si è dunque tentata una ricerca, infruttuosa, di dataset sul traffico stradale nel periodo 
-dal 2010 al 2018.\todo{atrent: devi tentare di "dimostrare" che la tua ricerca era sensata, è difficile dimostrare di NON aver trovato qualcosa, ma almeno esplicita che ricerche hai fatto e su quali siti}
+dal 2010 al 2018.
+Queste informazioni si sono cercate, principalmente per la zona di Milano, nei principali 
+siti di open data, con parole chiave come \quotestyle{traffico milano} e 
+\quotestyle{flussi autostrade}. 
+Si è inoltre controllato sul sito di Autostrade per 
+l'Italia\footnote{\url{http://www.autostrade.it/it/home}}, 
+ma le uniche informazioni trovate sono in tempo reale.
+
 Non avendo trovato alcuna informazione sull'argomento, si è tentato di realizzare 
 alcune stime del numero di automobili per regione, e a Milano.
 
@@ -287,7 +294,7 @@ I dati sui patentati per regione, che è stato utilizzato per stimare il traffic
 regionale, proviene dal sito del Ministero delle Infrastrutture e 
 Trasporti\footnote{\url{http://dati.mit.gov.it/catalog/dataset/patenti}}.
 Questo dataset è diviso in vari file seconda della regione e, vista la quantità 
-non necessaria di informazioni, si è preferito usare informazioni provienienti da 
+non necessaria di informazioni, si è preferito usare una sintesi di questi provienienti da 
 un'infografica che sintetizza i dati in questione \cite{INFOGRAFICA_MIT:1}.
 In particolare, da questo file pdf si è mantenuto solamente il numero di patenti per regione.
 
@@ -323,7 +330,8 @@ il numero di accessi corrisponda, almeno in piccola parte, al traffico di Milano
 I dataset delle zone geolocalizzate di Milano provengono dal geoportale del comune di 
 Milano\footnote{\url{https://geoportale.comune.milano.it/}}, e contengono i poligoni che 
 costituiscono i municipi della città, 
-oltre a informazioni sulla superficie e il perimetro delle zone.\todo{atrent: ci starebbe bene un /excerpt/ del dataset, per capire come'è fatto, vale per tutti i dataset}
+oltre a informazioni sulla superficie e il perimetro delle zone.
+\todo{atrent: ci starebbe bene un /excerpt/ del dataset, per capire come'è fatto, vale per tutti i dataset}
 
 Questi dati sono utili a determinare, a grandi linee, quali sono le zone con più incidenti 
 a Milano, nonostante il risultato ottenuto non sarà mai troppo preciso, soprattutto 
