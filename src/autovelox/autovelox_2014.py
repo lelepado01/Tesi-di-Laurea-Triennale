@@ -15,7 +15,7 @@ autovelox = gp.read_file(path).set_crs(epsg=3857)
 autovelox = gp.GeoDataFrame(geometry=gp.points_from_xy(autovelox['field_1'], autovelox['field_2']))
 
 autovelox_tutti = gp.read_file("dataset/autovelox/autovelox_milano.geojson").to_crs(epsg=3857)
-
+print(autovelox_tutti.columns)
 import matplotlib.patches as mpatches
 patches = [
     mpatches.Patch(color=color_ls[0], label='Installazioni nel 2014'), 

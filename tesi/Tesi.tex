@@ -192,8 +192,7 @@ a cui è avvenuto il sinistro, come rettilineo, rotonda o semaforo.\\
     \indent tipo\_di\_strada : numero di carreggiate della strada,\\
     \indent pavimentazione : tipo di pavimentazione,\\
     \indent intersezione\_o\_non\_interse3 : tipo di intersezione,\\
-    \indent segnaletica, condizioni\_meteorologiche,\\
-    \indent natura\_incidente : tipo di incidente,
+    \indent segnaletica, condizioni\_meteorologiche,\\natura\_incidente,\\
     \indent tipo\_veicolo\_a ; questo campo è ripetuto per altri due veicoli,\\
     \indent veicolo\_\_a\_\_\_et\_\_conducente : questi campi sono ripetuti anche per i passeggeri,\\
     \indent veicolo\_\_a\_\_\_sesso\_conducente,\\veicolo\_\_a\_\_\_esito\_conducente, \\
@@ -323,8 +322,9 @@ non necessaria di informazioni, si è preferito usare una sintesi di questi prov
 un'infografica che sintetizza i dati in questione \cite{INFOGRAFICA_MIT:1}.
 In particolare, da questo file pdf si è mantenuto solamente il numero di patenti per regione.
 
-\'E anche necessario chiedersi quanto il numero dei patentati per regione sia un fattore valido 
-per stimare il traffico, tenendo conto del fatto che molte persone non vivono nella regione 
+\'E anche necessario chiedersi quanto il numero dei patentati per regione sia un 
+fattore valido con cui stimare il traffico, tenendo conto del fatto che molte 
+persone non vivono nella regione 
 in cui hanno ottenuto la patente, e altre potrebbero spostarsi ogni giorno in altri 
 luoghi per questioni di lavoro. 
 Va dunque tenuto conto che questa stima non sarà probabilmente tra le più accurate, 
@@ -340,7 +340,14 @@ Il dataset riguardante gli accessi è stato trovato sul sito di open data del co
 Milano\footnote{\url{https://dati.comune.milano.it/organization/comunedimilano?q=area+c&sort=score+desc\%2C+metadata_modified+desc}}, 
 dove sono disponibili varie tipologie di file distinti, per esempio, per orario, 
 mese o località. 
-Tra questi si è utilizzata la tipologia contenente orari e data dell'accesso.
+Tra questi si è utilizzata la tipologia contenente orari e data dell'accesso.\\
+
+\noindent\lighttext{\texttt{(\\
+    \indent year,\\
+    \indent month,day,hour,\\
+    \indent totale: numero di accessi nella riga,
+    \indent areac : campo booleano che indica se l'area C sia attiva o meno\\
+)}} 
 
 Oltre ai dati riguardo agli accessi all'area C, si è fatto uso anche di una mappa 
 raffigurante i varchi di entrata e i limiti del centro storico, 
@@ -355,9 +362,14 @@ il numero di accessi corrisponda, almeno in piccola parte, al traffico di Milano
 I dataset delle zone geolocalizzate di Milano provengono dal geoportale del comune di 
 Milano\footnote{\url{https://geoportale.comune.milano.it/}}, e contengono i poligoni che 
 costituiscono i municipi della città, 
-oltre a informazioni sulla superficie e il perimetro delle zone.
-\todo{atrent: ci starebbe bene un /excerpt/ del dataset, per capire come'è fatto, vale per tutti i dataset}
+oltre a informazioni sulla superficie e il perimetro delle zone.\\
 
+\noindent\lighttext{\texttt{(\\
+    MUNICIPIO : id della zona,\\
+    AREA,\\
+    PERIMETRO,\\
+    geometry : insieme di punti che formano il poligono\\
+)}} 
 
 Questi dati sono utili a determinare, a grandi linee, quali sono le zone con più incidenti 
 a Milano, nonostante il risultato ottenuto non sarà mai troppo preciso, soprattutto 
@@ -393,7 +405,16 @@ Si è dunque optato per un dataset contenente temperature, umidità, e velocità
 trovato sul sito Zenodo\footnote{\url{https://zenodo.org/record/3992354}}.
 
 Il dataset contiene i campi di cui si è parlato, misurati ogni ora a Milano, a partire 
-dal 2008, fino al 2018.
+dal 2008, fino al 2018.\\
+
+\noindent\lighttext{\texttt{(\\
+    Date\_Time: campo che contiene giorno, mese e anno,\\
+    Temperature,\\
+    Dew\_Point,\\
+    Humidity,\\
+    Wind\_Speed\\
+)}}
+\todo{finire, zenodo non funziona}
 
 \section{Dati riguardanti trasporti pubblici}
 
@@ -403,7 +424,18 @@ per esempio, Milano.
 
 I dati riguardanti questi ultimi, hanno due provenienze, i primi sono 
 dati riferiti alle linee ATM, scaricati sul sito del comune di 
-Milano\footnote{\url{https://dati.comune.milano.it/dataset/ds532-atm-composizione-percorsi-linee-di-superficie-urbane}}.
+Milano\footnote{\url{https://dati.comune.milano.it/dataset/ds532-atm-composizione-percorsi-linee-di-superficie-urbane}}.\\
+
+\noindent\lighttext{\texttt{(\\
+    linea,\\
+    mezzo : bus, filobus o tram,\\
+    percorso : identificatore percorso,\\
+    verso, nome,\\
+    tipo\_perc : Canonico o Barrato,\\
+    lung\_km, num\_ferm,\\
+    geometry : insieme di linee che formano i percorsi\\
+)}}
+
 Dallo stesso sito proviene anche il dataset riguardante gli autobus turistici, che 
 contiene, in particolare, le aree di 
 sosta\footnote{\url{https://dati.comune.milano.it/dataset/ds740_sosta_bus_gt_turistici}}.

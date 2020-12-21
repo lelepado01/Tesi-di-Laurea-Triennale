@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from matplotlib.pyplot import axis
 
 data = gp.read_file("dataset/milano_municipi/Municipi.shx").to_crs(epsg=3857)
-
+print(data.columns)
 incidenti = gp.read_file("dataset/incidenti/inc_strad_milano_2016.geojson").to_crs(epsg=3857)
 
 df = {}
