@@ -54,7 +54,8 @@
 \newcommand{\columnstyle}[1]{\texttt{#1}}
 \newcommand{\methodstyle}[1]{\textbf{#1}}
 \newcommand{\quotestyle}[1]{\textit{#1}}
-\def\lighttext#1{{\color{LightTextColor}#1}}
+\def\light#1{{\color{LightTextColor}#1}}
+\newcommand{\lighttext}[1]{\noindent\light{\texttt{#1}}}
 
 \bibliography{Biblio}
 \addbibresource{Biblio.bib}
@@ -101,6 +102,8 @@
 \todo{lelepado: devo aggiungere collegamenti al codice, e spiegare come è organizzato?
 atrent: certamente, ma non in intro, farei un'appendice col codice commentato/spiegato}
 
+\todo{lelepado: la bibliografia non compila se metto il campo 'year', è normale?}
+
 Lo scopo di questo lavoro, è mostrare che tipo di analisi è possibile realizzare 
 avendo a disposizione una buona quantità di dati liberi, e come queste analisi possano 
 influenzare le decisioni delle persone, come per esempio la scelta di una nuova casa, 
@@ -127,10 +130,10 @@ del tutto impossibile per un utente l'ottenimento dei dati.
 
 Un esempio di questo comportamento è il sito 
 Arpa\footnote{\url{https://www.arpalombardia.it/Pages/ARPA_Home_Page.aspx}}, 
-in particolare negli anni precedenti al 2017, in quanto negli anni successivi 
+soprattutto negli anni precedenti al 2017, in quanto successivamente
 sono stati resi disponibili svariati dataset, contenenti la maggior parte delle 
 informazioni rilevanti, su meteo e ambiente.
-Negli anni precedenti al 2017 invece, si sarebbe dovuto compilare un form, che 
+Precedentemente al 2017 invece, si sarebbe dovuto compilare un form, che 
 richiedeva l'inserimento di un periodo, al massimo di un anno, di una sola 
 centralina, e di una sola tipologia di dati, come per esempio il tipo di inquinante. 
 A rendere il processo ancora più complesso è il fatto che i dati sarebbero stati 
@@ -176,8 +179,8 @@ Esistono fattori di distrazione per il conducente di un'automobile?
 
 \section{Dati riguardanti incidenti}
 
-La maggior parte dei dataset utilizzati in questo lavoro provengono 
-dall'Istituto nazionale di statistica, in particolare 
+La maggior parte dei dataset utilizzati in questo lavoro 
+provengono dall'Istituto nazionale di statistica, in particolare 
 dall'archivio\footnote{\url{https://www.istat.it/it/archivio/87539}}
 di dati non geolocalizzati su incidenti stradali in Italia.
 Questo dataset contiene un'ampia gamma di campi, tra cui ora, 
@@ -186,19 +189,19 @@ ma anche informazioni sui passeggeri, la natura del sinistro e il tipo di strada
 Particolarmente interessanti sono anche i campi riguardanti la categoria di incrocio 
 a cui è avvenuto il sinistro, come rettilineo, rotonda o semaforo.\\
 
-\noindent\lighttext{\texttt{(\\
+\lighttext{(\\
     \indent anno, provincia, comune, giorno,\\
-    \indent localizzazione\_incidente : zona incidente come urbana, extraurbana o autostrada\\
-    \indent tipo\_di\_strada : numero di carreggiate della strada,\\
-    \indent pavimentazione : tipo di pavimentazione,\\
-    \indent intersezione\_o\_non\_interse3 : tipo di intersezione,\\
+    \indent localizzazione\_incidente: zona incidente come urbana, extraurbana o autostrada\\
+    \indent tipo\_di\_strada: numero di carreggiate della strada,\\
+    \indent pavimentazione: tipo di pavimentazione,\\
+    \indent intersezione\_o\_non\_interse3: tipo di intersezione,\\
     \indent segnaletica, condizioni\_meteorologiche,\\natura\_incidente,\\
     \indent tipo\_veicolo\_a ; questo campo è ripetuto per altri due veicoli,\\
-    \indent veicolo\_\_a\_\_\_et\_\_conducente : questi campi sono ripetuti anche per i passeggeri,\\
+    \indent veicolo\_\_a\_\_\_et\_\_conducente: questi campi sono ripetuti anche per i passeggeri,\\
     \indent veicolo\_\_a\_\_\_sesso\_conducente,\\veicolo\_\_a\_\_\_esito\_conducente, \\
     \indent morti\_entro\_24\_ore, morti\_entro\_30\_giorni,\\
     \indent feriti, Ora, trimestre\\
-    )}}
+)}
 
 Per quanto riguarda i dati geolocalizzati, 
 la fonte è invece il giornale online TheSubmarine \cite{SUBMARINE:1}
@@ -214,13 +217,13 @@ Questi dati, specifici a autostrade e strade provinciali, indicano anche il
 nome della via in cui è avvenuto l'incidente, oltre a informazioni come 
 l'orario, il mese o il giorno della settimana.\\
 
-\noindent\lighttext{\texttt{(\\
+\lighttext{(\\
     \indent COD REG,REGIONE,\\
     \indent COD PROV,PROVINCIA,NOME STRADA,\\
-    \indent INC : numero di incidenti (ce ne sono più per riga),\\
+    \indent INC: numero di incidenti (ce ne sono più per riga),\\
     \indent di cui MORTALI,MOR,FER,\\
-    \indent NVEI : numero di veicoli coinvolti\\
-)}}
+    \indent NVEI: numero di veicoli coinvolti\\
+)}
 
 \section{Dati riguardanti autovelox}
 
@@ -342,12 +345,12 @@ dove sono disponibili varie tipologie di file distinti, per esempio, per orario,
 mese o località. 
 Tra questi si è utilizzata la tipologia contenente orari e data dell'accesso.\\
 
-\noindent\lighttext{\texttt{(\\
+\lighttext{(\\
     \indent year,\\
     \indent month,day,hour,\\
     \indent totale: numero di accessi nella riga,\\
-    \indent areac : campo booleano che indica se l'area C sia attiva o meno\\
-)}} 
+    \indent areac: booleano che indica se l'area C sia attiva o meno\\
+)}
 
 Oltre ai dati riguardo agli accessi all'area C, si è fatto uso anche di una mappa 
 raffigurante i varchi di entrata e i limiti del centro storico, 
@@ -364,12 +367,12 @@ Milano\footnote{\url{https://geoportale.comune.milano.it/}}, e contengono i poli
 costituiscono i municipi della città, 
 oltre a informazioni sulla superficie e il perimetro delle zone.\\
 
-\noindent\lighttext{\texttt{(\\
-    \indent MUNICIPIO : id della zona,\\
+\lighttext{(\\
+    \indent MUNICIPIO: id della zona,\\
     \indent AREA,\\
     \indent PERIMETRO,\\
-    \indent geometry : insieme di punti che formano il poligono\\
-)}} 
+    \indent geometry: insieme di punti che formano il poligono\\
+)}
 
 Questi dati sono utili a determinare, a grandi linee, quali sono le zone con più incidenti 
 a Milano, nonostante il risultato ottenuto non sarà mai troppo preciso, soprattutto 
@@ -407,12 +410,12 @@ trovato sul sito Zenodo\footnote{\url{https://zenodo.org/record/3992354}}.
 Il dataset contiene i campi di cui si è parlato, misurati ogni 
 ora a Milano, a partire dal 2008, fino al 2018.\\
 
-\noindent\lighttext{\texttt{(\\
+\lighttext{(\\
     \indent Date\_Time: campo che contiene giorno, mese e anno,\\
-    \indent Temperature : in gradi Celsius,\\
-    \indent Dew\_Point : temperatura di condensazione,\\
+    \indent Temperature: in gradi Celsius,\\
+    \indent Dew\_Point: temperatura di condensazione,\\
     \indent Humidity, Wind\_Speed\\
-)}}
+)}
 
 \section{Dati riguardanti trasporti pubblici}
 
@@ -424,15 +427,15 @@ I dati riguardanti questi ultimi, hanno due provenienze, i primi sono
 dati riferiti alle linee ATM, scaricati sul sito del comune di 
 Milano\footnote{\url{https://dati.comune.milano.it/dataset/ds532-atm-composizione-percorsi-linee-di-superficie-urbane}}.\\
 
-\noindent\lighttext{\texttt{(\\
-    \indent linea : numero della linea,\\
-    \indent mezzo : bus, filobus o tram,\\
-    \indent percorso : identificatore del percorso,\\
+\lighttext{(\\
+    \indent linea: numero della linea,\\
+    \indent mezzo: bus, filobus o tram,\\
+    \indent percorso: identificatore del percorso,\\
     \indent verso, nome,\\
-    \indent tipo\_perc : Canonico o Barrato,\\
+    \indent tipo\_perc: Canonico o Barrato,\\
     \indent lung\_km, num\_ferm,\\
-    \indent geometry : insieme di linee che formano i percorsi\\
-)}}
+    \indent geometry: insieme di linee che formano i percorsi\\
+)}
 
 Dallo stesso sito proviene anche il dataset riguardante gli autobus turistici, che 
 contiene, in particolare, le aree di 
@@ -2884,7 +2887,33 @@ Infine, osservando le misurazioni sull'umidità, è possibile che in questo caso
 un rapporto di causa e effetto, in quanto spesso, un valore alto di questo fattore 
 coincide con pioggia e temporali, che a loro volta rendono più difficoltosa la guida.
 
+
 \chapter{Conclusioni}
+
+Per concludere, sarebbe opportuno aggiungere quali sono state le maggiori difficoltà 
+incontrate durante quest'analisi di dati liberi.
+
+Uno dei maggiori problemi riscontrati, soprattutto per quanto riguarda il confermare la 
+validità dei risultati calcolati, è stata la mancanza di dataset in ambiti come il traffico, 
+o il fondo stradale. 
+Per ovviare a questa difficoltà si è spesso dovuto ricorrere a stime, 
+come il numero di accessi in area C.
+
+In secondo luogo, alcuni dataset non sono completi, o hanno sezioni temporali 
+estese anche svariati mesi. 
+\'E il caso delle informazioni sugli accessi all'area C di Milano dove, 
+per il 2013 non è presente il mese di Dicembre.
+Rimanendo sull'argomento, lo stesso dataset, a partire dal 2017, è disponibile 
+solamente diviso in dodici file su base mensile, problema ricorrente, in 
+quanto le condivisioni di open data venivano misurate sulla base del numero di file, 
+era quindi più proficuo pubblicare dati separati.
+\todo{lelepado: ancora oggi?}
+
+Infine, un problema sorto con frequenza è stato la mancanza di descrizioni del 
+significato dei campi di un dataset. 
+Un esempio di ciò può essere i dati provenienti dal geoportale del comune di Milano 
+dove, in molti casi, si è dovuto ipotizzare il significato delle colonne, e di conseguenza 
+si è stati costretti a scartare queste informazioni.
 
 \todo{lelepado: serve una conclusione?
 atrent: inteso come un capitolo "conclusioni"? ci può stare, breve, in cui riassumi i 
