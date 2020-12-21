@@ -345,7 +345,7 @@ Tra questi si è utilizzata la tipologia contenente orari e data dell'accesso.\\
 \noindent\lighttext{\texttt{(\\
     \indent year,\\
     \indent month,day,hour,\\
-    \indent totale: numero di accessi nella riga,
+    \indent totale: numero di accessi nella riga,\\
     \indent areac : campo booleano che indica se l'area C sia attiva o meno\\
 )}} 
 
@@ -365,10 +365,10 @@ costituiscono i municipi della città,
 oltre a informazioni sulla superficie e il perimetro delle zone.\\
 
 \noindent\lighttext{\texttt{(\\
-    MUNICIPIO : id della zona,\\
-    AREA,\\
-    PERIMETRO,\\
-    geometry : insieme di punti che formano il poligono\\
+    \indent MUNICIPIO : id della zona,\\
+    \indent AREA,\\
+    \indent PERIMETRO,\\
+    \indent geometry : insieme di punti che formano il poligono\\
 )}} 
 
 Questi dati sono utili a determinare, a grandi linee, quali sono le zone con più incidenti 
@@ -404,17 +404,15 @@ posizione così precisa è superfluo.
 Si è dunque optato per un dataset contenente temperature, umidità, e velocità del vento, 
 trovato sul sito Zenodo\footnote{\url{https://zenodo.org/record/3992354}}.
 
-Il dataset contiene i campi di cui si è parlato, misurati ogni ora a Milano, a partire 
-dal 2008, fino al 2018.\\
+Il dataset contiene i campi di cui si è parlato, misurati ogni 
+ora a Milano, a partire dal 2008, fino al 2018.\\
 
 \noindent\lighttext{\texttt{(\\
-    Date\_Time: campo che contiene giorno, mese e anno,\\
-    Temperature,\\
-    Dew\_Point,\\
-    Humidity,\\
-    Wind\_Speed\\
+    \indent Date\_Time: campo che contiene giorno, mese e anno,\\
+    \indent Temperature : in gradi Celsius,\\
+    \indent Dew\_Point : temperatura di condensazione,\\
+    \indent Humidity, Wind\_Speed\\
 )}}
-\todo{finire, zenodo non funziona}
 
 \section{Dati riguardanti trasporti pubblici}
 
@@ -427,13 +425,13 @@ dati riferiti alle linee ATM, scaricati sul sito del comune di
 Milano\footnote{\url{https://dati.comune.milano.it/dataset/ds532-atm-composizione-percorsi-linee-di-superficie-urbane}}.\\
 
 \noindent\lighttext{\texttt{(\\
-    linea,\\
-    mezzo : bus, filobus o tram,\\
-    percorso : identificatore percorso,\\
-    verso, nome,\\
-    tipo\_perc : Canonico o Barrato,\\
-    lung\_km, num\_ferm,\\
-    geometry : insieme di linee che formano i percorsi\\
+    \indent linea : numero della linea,\\
+    \indent mezzo : bus, filobus o tram,\\
+    \indent percorso : identificatore del percorso,\\
+    \indent verso, nome,\\
+    \indent tipo\_perc : Canonico o Barrato,\\
+    \indent lung\_km, num\_ferm,\\
+    \indent geometry : insieme di linee che formano i percorsi\\
 )}}
 
 Dallo stesso sito proviene anche il dataset riguardante gli autobus turistici, che 
