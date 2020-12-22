@@ -1,10 +1,7 @@
 
 import geopandas as gp
 import pandas as pd
-import contextily as cx
 import matplotlib.pyplot as plt
-from matplotlib.pyplot import legend
-from shapely.geometry import geo
 
 
 data = gp.read_file("dataset/milano_municipi/Municipi.shx").to_crs(epsg=3857)
@@ -34,11 +31,9 @@ data.index = data['MUNICIPIO']
 data['Incidenti'] = inc
 
 area = pd.Series(data['AREA'], index=data['MUNICIPIO'])
-# area = area / area.sum()
 incidenti = pd.Series(inc, index=inc.index)
 
 incidenti_per_zona = (incidenti / area) * 1000000
-print(incidenti_per_zona)
 
 plt.subplot(1,2,1)
 plt.bar(inc.index, inc, color='#5894dd', width=0.9)

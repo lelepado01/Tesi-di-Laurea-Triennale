@@ -5,11 +5,8 @@ import contextily as cx
 import matplotlib.pyplot as plt
 from shapely import geometry
 
-
 data = gp.read_file("dataset/milano_municipi/Municipi.shx").to_crs(epsg=3857)
-
 incidenti = gp.read_file("dataset/incidenti/inc_strad_milano_2016.geojson").to_crs(epsg=3857)
-
 
 base = 10**6 
 up = 5.699 * base
@@ -32,14 +29,8 @@ for point in incidenti['geometry']:
         loreto_incidenti += 1
 
 area_loreto = loreto.area * data['AREA'].iloc[0] / geometry.Polygon(data['geometry'].iloc[0]).area
-
-# print(loreto_incidenti)
-# print(area_loreto)
-
 area_loreto_inc = loreto_incidenti * 1000000 / area_loreto
-
 #print(area_loreto_inc)# = 231.06
-
 
 df = gp.GeoDataFrame(geometry=[loreto]).set_crs(epsg=3857)
 ax = df.plot(color='#f00f00', alpha=0.2)
@@ -48,5 +39,5 @@ cx.add_basemap(ax=inc)
 plt.xlim((1.02 * base, 1.03 * base))
 plt.ylim((5.692 * base, 5.702 * base))
 plt.axis('off')
-# plt.show()
-plt.savefig("zona_loreto")
+# plt.savefig("zona_loreto")
+plt.show()

@@ -5,13 +5,9 @@ import matplotlib.pyplot as plt
 
 data = gp.read_file("dataset/regioni/provincia.geojson").to_crs(epsg=3857)
 
-# print(data[data['prov_acr'] == 'MI'])
 lombardia = data[data['reg_istat_code_num'] == 3]
-# lombardia.plot()
-# plt.show()
 
-incidenti = pd.read_csv("dataset/incidenti/aci/autostrade/comuni_2018.csv")
-#incidenti = pd.read_csv("dataset/incidenti/aci/strade_provinciali/aci_2018.csv")
+incidenti = pd.read_csv("dataset/incidenti/aci/strade_provinciali/aci_2018.csv")
 incidenti_lombardia = incidenti[incidenti['REGIONE'] == 'Lombardia']
 
 def get_sum_of_fields(data : pd.DataFrame, select_field : str, field_to_sum : str) -> pd.Series: 
@@ -29,18 +25,19 @@ def get_sum_of_fields(data : pd.DataFrame, select_field : str, field_to_sum : st
 
     return pd.DataFrame(res, index=[select_field, field_to_sum]).transpose()
 
+inc = 'Inc'
 
-incidenti_lombardia = gp.GeoDataFrame(get_sum_of_fields(incidenti_lombardia, 'PROVINCIA', 'INC'))
+incidenti_lombardia = gp.GeoDataFrame(get_sum_of_fields(incidenti_lombardia, 'provincia', inc))
 
-incidenti_lombardia = lombardia.merge(incidenti_lombardia, left_on='prov_name', right_on='PROVINCIA')
+incidenti_lombardia = lombardia.merge(incidenti_lombardia, left_on='prov_name', right_on='provincia')
 
 from matplotlib.lines import Line2D
 
-incidenti_lombardia.plot(column='INC', cmap='OrRd')
+incidenti_lombardia.plot(column=inc, cmap='OrRd')
 plt.legend([
     Line2D([],[],color='#84190f',linewidth=5), 
     Line2D([],[],color='#ef5547',linewidth=5), 
     Line2D([],[],color='#efd4ae',linewidth=5)
-], [max(incidenti_lombardia['INC']), int(incidenti_lombardia['INC'].mean()), min(incidenti_lombardia['INC'])])
+], [max(incidenti_lombardia[inc]), int(incidenti_lombardia[inc].mean()), min(incidenti_lombardia[inc])])
 plt.axis('off')
 plt.show()

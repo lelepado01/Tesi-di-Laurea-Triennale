@@ -6,10 +6,7 @@ import matplotlib.pyplot as plt
 data = gp.read_file("dataset/regioni/provincia.geojson").to_crs(epsg=3857)
 
 lombardia = data[data['reg_istat_code_num'] == 12]
-# lombardia.plot()
-# plt.show()
 
-#incidenti = pd.read_csv("dataset/incidenti/aci/autostrade/comuni_2018.csv")
 incidenti = pd.read_csv("dataset/incidenti/aci/strade_provinciali/aci_2018.csv")
 incidenti_lombardia = incidenti[incidenti['REGIONE'] == 'Lazio']
 
@@ -30,14 +27,10 @@ def get_sum_of_fields(data : pd.DataFrame, select_field : str, field_to_sum : st
 
 
 incidenti_lombardia = gp.GeoDataFrame(get_sum_of_fields(incidenti_lombardia, 'provincia', 'Inc'))
-# incidenti_lombardia = gp.GeoDataFrame(get_sum_of_fields(incidenti_lombardia, 'PROVINCIA', 'INC'))
-
 incidenti_lombardia = lombardia.merge(incidenti_lombardia, left_on='prov_name', right_on='provincia') 
-# incidenti_lombardia = lombardia.merge(incidenti_lombardia, left_on='prov_name', right_on='PROVINCIA')
 
 from matplotlib.lines import Line2D
 
-# inc = 'INC'
 inc = 'Inc'
 
 incidenti_lombardia.plot(column=inc, cmap='OrRd')

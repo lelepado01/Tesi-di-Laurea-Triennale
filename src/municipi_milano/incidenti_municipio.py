@@ -30,8 +30,6 @@ data.index = data['MUNICIPIO']
 inc = gp.GeoSeries(df).sort_index()
 data['Incidenti'] = inc
 
-# print(data)
-
 fig, (ax1, ax2) = plt.subplots(ncols=2, sharex=True, sharey=True)
 ax1.axis('off')
 layer_m = data.plot(ax = ax1, column='Incidenti', cmap='OrRd', alpha=0.5, legend=True)
