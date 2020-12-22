@@ -31,19 +31,19 @@ perc = tipo_incidenti['natura_incidente']
 perc = label_utils.join_labels(perc, "dataset/incidenti/istat/Classificazioni/natura_incidente.csv")
 perc = perc.value_counts(normalize=True)
 
-# Sbandamento                0.097109
-# Tamponamento               0.143532
-# Scontro frontale           0.061271
-# Urto con ostacolo          0.038681
+# Sbandamento                0.088576
+# Tamponamento               0.186053
+# Scontro frontale           0.056302
+# Urto con ostacolo          0.049875
 
-df['tamponamento'] = df['tamponamento'] / 5655
-df['frontale'] = df['frontale'] / 2414
-df['ostacolo'] = df['ostacolo'] / 1524
-df['sbandamento'] = df['sbandamento'] / 3826
+df['tamponamento'] = df['tamponamento'] / 32104 # numero di incidenti di questo tipo
+df['frontale'] = df['frontale'] / 9715
+df['ostacolo'] = df['ostacolo'] / 8606
+df['sbandamento'] = df['sbandamento'] / 15284
 
 color_ls = ['#60c1c1', '#6060c1', '#c16060', '#c1c160']
 df.plot.bar(width=0.9, color=color_ls)
 plt.xticks(rotation=0)
 plt.xlabel("Numero di feriti")
-plt.ylabel("Percentuale della categoria di incidente\ncon numero di feriti indicato")
+plt.ylabel("Percentuale della categoria di incidente\ncon numero di feriti indicato (2018)")
 plt.show()

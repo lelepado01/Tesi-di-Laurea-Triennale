@@ -25,5 +25,5 @@ color_ls = ['#60c1c1', '#6060c1', '#c16060', '#c1c160']
 df.plot.bar(width=0.9, color=color_ls)
 plt.xticks(rotation=0)
 plt.xlabel("Numero di feriti")
-plt.ylabel("Incidenti con numero di feriti specificato")
+plt.ylabel("Incidenti con numero di feriti specificato (2018)")
 plt.show()
