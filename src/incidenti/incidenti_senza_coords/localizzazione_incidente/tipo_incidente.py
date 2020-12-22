@@ -6,7 +6,7 @@ sys.path.append("src/")
 
 import label_utils
 
-path = "dataset/incidenti/incidenti_2018.txt"
+path = "dataset/incidenti/istat/incidenti_2018.txt"
 
 data : pd.DataFrame = pd.read_csv(path, sep="\t", encoding='latin1')
 
@@ -15,7 +15,7 @@ natura_incidente = data['natura_incidente']
 
 natura_incidente_labels = label_utils.join_labels(
     natura_incidente, 
-    "dataset/incidenti/Classificazioni/natura_incidente.csv"
+    "dataset/incidenti/istat/Classificazioni/natura_incidente.csv"
     ).value_counts().sort_index()
 
 # GRAFO 3

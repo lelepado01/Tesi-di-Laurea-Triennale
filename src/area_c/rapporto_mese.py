@@ -29,7 +29,7 @@ mesi = [
     'Dicembre'
 ]
 
-incidenti = pd.read_csv("dataset/incidenti/incidenti_2012.txt", sep='\t')
+incidenti = pd.read_csv("dataset/incidenti/istat/incidenti_2012.txt", sep='\t')
 mesi_incidenti = incidenti['mese'].value_counts().sort_index()
 
 df.index = range(1,13)

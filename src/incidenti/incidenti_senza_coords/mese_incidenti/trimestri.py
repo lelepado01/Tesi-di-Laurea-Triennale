@@ -5,15 +5,15 @@ import matplotlib.pyplot as plt
 giorni_al_mese = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 giorni_al_trimestre = [31 +28+ 31, 30+ 31+30, 31+ 31+ 30, 31+ 30+ 31]
 
-incidenti_2010 = pd.read_csv("dataset/incidenti/incidenti_2010.txt", sep="\t")
-incidenti_2011 = pd.read_csv("dataset/incidenti/incidenti_2011.txt", sep="\t")
-incidenti_2012 = pd.read_csv("dataset/incidenti/incidenti_2012.txt", sep="\t")
-incidenti_2013 = pd.read_csv("dataset/incidenti/incidenti_2013.txt", sep="\t")
-incidenti_2014 = pd.read_csv("dataset/incidenti/incidenti_2014.txt", sep="\t")
-incidenti_2015 = pd.read_csv("dataset/incidenti/incidenti_2015.txt", sep="\t", encoding='latin1')
-incidenti_2016 = pd.read_csv("dataset/incidenti/incidenti_2016.txt", sep="\t", encoding='latin1')
-incidenti_2017 = pd.read_csv("dataset/incidenti/incidenti_2017.txt", sep="\t", error_bad_lines=False, engine="python")
-incidenti_2018 = pd.read_csv("dataset/incidenti/incidenti_2018.txt", sep="\t", encoding='latin1')
+incidenti_2010 = pd.read_csv("dataset/incidenti/istat/incidenti_2010.txt", sep="\t")
+incidenti_2011 = pd.read_csv("dataset/incidenti/istat/incidenti_2011.txt", sep="\t")
+incidenti_2012 = pd.read_csv("dataset/incidenti/istat/incidenti_2012.txt", sep="\t")
+incidenti_2013 = pd.read_csv("dataset/incidenti/istat/incidenti_2013.txt", sep="\t")
+incidenti_2014 = pd.read_csv("dataset/incidenti/istat/incidenti_2014.txt", sep="\t")
+incidenti_2015 = pd.read_csv("dataset/incidenti/istat/incidenti_2015.txt", sep="\t", encoding='latin1')
+incidenti_2016 = pd.read_csv("dataset/incidenti/istat/incidenti_2016.txt", sep="\t", encoding='latin1')
+incidenti_2017 = pd.read_csv("dataset/incidenti/istat/incidenti_2017.txt", sep="\t", error_bad_lines=False, engine="python")
+incidenti_2018 = pd.read_csv("dataset/incidenti/istat/incidenti_2018.txt", sep="\t", encoding='latin1')
 
 def get_trimestre(data : pd.Series) -> pd.Series: 
     res = {

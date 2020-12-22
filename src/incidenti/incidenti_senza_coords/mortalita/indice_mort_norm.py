@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-data = pd.read_csv("dataset/incidenti/incidenti_2018.txt", sep='\t')
+data = pd.read_csv("dataset/incidenti/istat/incidenti_2018.txt", sep='\t')
 
 incidenti_per_eta = data['veicolo__a___et__conducente'].value_counts().sort_index()
 incidenti_per_eta = incidenti_per_eta.drop('n.i. ')

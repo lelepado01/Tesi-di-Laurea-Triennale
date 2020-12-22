@@ -6,14 +6,14 @@ sys.path.append("src/")
 
 import label_utils
 
-path = "dataset/incidenti/incidenti_2018.txt"
+path = "dataset/incidenti/istat/incidenti_2018.txt"
 
 data : pd.DataFrame = pd.read_csv(path, sep="\t", encoding='latin1')
 
 intersezione = data['intersezione_o_non_interse3']
 intersezione_labels = label_utils.join_labels(
     intersezione, 
-    "dataset/incidenti/Classificazioni/intersezione_o_non_interse3.csv"
+    "dataset/incidenti/istat/Classificazioni/intersezione_o_non_interse3.csv"
     ).value_counts().sort_index()
 
 #print(intersezione_labels)
@@ -25,7 +25,7 @@ intersezione_labels = intersezione_labels.sort_index()
 
 ######################
 
-data = pd.read_csv("dataset/incidenti/incidenti_2018.txt", sep="\t", encoding='latin1')
+data = pd.read_csv("dataset/incidenti/istat/incidenti_2018.txt", sep="\t", encoding='latin1')
 
 incr = 'intersezione_o_non_interse3'
 morti = ['morti_entro_24_ore', 'morti_entro_30_giorni']
@@ -53,7 +53,7 @@ import sys
 sys.path.append("src")
 import label_utils
 
-mortalita['incrocio'] = label_utils.join_labels(mortalita['incrocio'], "dataset/incidenti/Classificazioni/intersezione_o_non_interse3.csv")
+mortalita['incrocio'] = label_utils.join_labels(mortalita['incrocio'], "dataset/incidenti/istat/Classificazioni/intersezione_o_non_interse3.csv")
 
 mortalita['indice'] /= mortalita['indice'].sum()
 mortalita.index = mortalita['incrocio']

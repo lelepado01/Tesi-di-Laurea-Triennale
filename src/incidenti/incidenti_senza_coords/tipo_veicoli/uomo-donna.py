@@ -5,7 +5,7 @@ import sys
 sys.path.append("src/")
 import label_utils
 
-path = "dataset/incidenti/incidenti_2018.txt"
+path = "dataset/incidenti/istat/incidenti_2018.txt"
 
 data = pd.read_csv(path, sep="\t")
 
@@ -17,9 +17,9 @@ strade_urbane = strade_urbane[strade_urbane != ' '].astype(int)
 strade_extraurbane = strade_extraurbane[strade_extraurbane != ' '].astype(int)
 autostrade = autostrade[autostrade != ' '].astype(int)
 
-strade_extraurbane = label_utils.join_labels(strade_extraurbane, "dataset/incidenti/Classificazioni/veicolo__a___sesso_conducente.csv").value_counts(normalize=True).sort_index()
-strade_urbane = label_utils.join_labels(strade_urbane, "dataset/incidenti/Classificazioni/veicolo__a___sesso_conducente.csv").value_counts(normalize=True).sort_index()
-autostrade = label_utils.join_labels(autostrade, "dataset/incidenti/Classificazioni/veicolo__a___sesso_conducente.csv").value_counts(normalize=True).sort_index()
+strade_extraurbane = label_utils.join_labels(strade_extraurbane, "dataset/incidenti/istat/Classificazioni/veicolo__a___sesso_conducente.csv").value_counts(normalize=True).sort_index()
+strade_urbane = label_utils.join_labels(strade_urbane, "dataset/incidenti/istat/Classificazioni/veicolo__a___sesso_conducente.csv").value_counts(normalize=True).sort_index()
+autostrade = label_utils.join_labels(autostrade, "dataset/incidenti/istat/Classificazioni/veicolo__a___sesso_conducente.csv").value_counts(normalize=True).sort_index()
 
 pd.DataFrame(
    [strade_extraurbane, strade_urbane, autostrade], 

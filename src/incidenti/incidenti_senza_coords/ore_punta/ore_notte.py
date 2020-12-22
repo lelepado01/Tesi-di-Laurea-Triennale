@@ -4,7 +4,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt    
 
-path = "dataset/incidenti/incidenti_2016.txt"
+path = "dataset/incidenti/istat/incidenti_2016.txt"
 
 data = pd.read_csv(path, sep="\t", encoding='latin1')
 data = data[data['Ora'] != 25]

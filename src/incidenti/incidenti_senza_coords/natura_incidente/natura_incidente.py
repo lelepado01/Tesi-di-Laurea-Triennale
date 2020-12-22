@@ -2,7 +2,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-data = pd.read_csv("dataset/incidenti/incidenti_2010.txt", sep='\t')
+data = pd.read_csv("dataset/incidenti/istat/incidenti_2018.txt", sep='\t')
 
 tipo_incidenti = data[['natura_incidente', 'feriti']]
 

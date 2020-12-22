@@ -4,7 +4,7 @@
 
 import pandas as pd
 
-data = pd.read_csv("dataset/incidenti/incidenti_2018.txt", sep="\t", encoding='latin1')
+data = pd.read_csv("dataset/incidenti/istat/incidenti_2018.txt", sep="\t", encoding='latin1')
 
 incr = 'intersezione_o_non_interse3'
 
@@ -31,7 +31,7 @@ import label_utils
 
 mortalita['incrocio'] = label_utils.join_labels(
     mortalita['incrocio'], 
-    "dataset/incidenti/Classificazioni/intersezione_o_non_interse3.csv"
+    "dataset/incidenti/istat/Classificazioni/intersezione_o_non_interse3.csv"
     )
 
 print(mortalita)

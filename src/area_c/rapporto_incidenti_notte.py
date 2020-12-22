@@ -49,7 +49,7 @@ traffico_weekend = traffico_weekend.reindex([23,0,1,2,3,4,5,6])
 traffico_week = traffico_week.reindex([23,0,1,2,3,4,5,6])
 
 
-data = pd.read_csv("dataset/incidenti/incidenti_2016.txt", sep="\t", encoding='latin1')
+data = pd.read_csv("dataset/incidenti/istat/incidenti_2016.txt", sep="\t", encoding='latin1')
 data = data[data['Ora'] != 25]
 
 notte = data[(data['Ora'] < 7) | (data['Ora'] > 22)]

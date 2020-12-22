@@ -7,7 +7,7 @@ sys.path.append("src")
 import label_utils
 import heatmap as H
 
-path = "dataset/incidenti/incidenti_"
+path = "dataset/incidenti/istat/incidenti_"
 
 tipo_incidenti = ['Frontale-laterale', 'Tamponamento', 'Investimento pedoni', 'Scontro laterale']
 
@@ -22,7 +22,7 @@ for year in range(2010, 2019):
 
     natura_incidente_labels = label_utils.join_labels(
         natura_incidente, 
-        "dataset/incidenti/Classificazioni/natura_incidente.csv"
+        "dataset/incidenti/istat/Classificazioni/natura_incidente.csv"
     ).value_counts(normalize=True)
 
     natura_incidente_labels = natura_incidente_labels[tipo_incidenti]

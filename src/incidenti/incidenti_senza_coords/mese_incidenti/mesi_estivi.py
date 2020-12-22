@@ -7,12 +7,12 @@ sys.path.append('src')
 
 import label_utils
 
-data = pd.read_csv("dataset/incidenti/incidenti_2011.txt", sep="\t")
+data = pd.read_csv("dataset/incidenti/istat/incidenti_2011.txt", sep="\t")
 agosto = data[data['mese'] == 8]['provincia']
-agosto_label = label_utils.join_labels(agosto, 'dataset/incidenti/Classificazioni/provincia.csv').value_counts().head(10)
+agosto_label = label_utils.join_labels(agosto, 'dataset/incidenti/istat/Classificazioni/provincia.csv').value_counts().head(10)
 #agosto_label = agosto_label / agosto_label.sum()
 
-mesi = label_utils.join_labels(data['provincia'], 'dataset/incidenti/Classificazioni/provincia.csv').value_counts().head(10)
+mesi = label_utils.join_labels(data['provincia'], 'dataset/incidenti/istat/Classificazioni/provincia.csv').value_counts().head(10)
 #mesi = mesi / mesi.sum()
 
 agosto_ls = ['#6ac48f']*12

@@ -2,7 +2,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# path = "dataset/incidenti/incidenti_2013.txt"
+# path = "dataset/incidenti/istat/incidenti_2013.txt"
 # data = pd.read_csv(path, sep="\t", encoding='latin1')
 
 # aosta_mese = data[data['provincia'] == 7]['mese'].value_counts().sort_index()
@@ -33,7 +33,7 @@ import matplotlib.pyplot as plt
 def variazione_perc(x : float, y : float) -> float: 
     return (y / x) * 100 -100
 
-path = "dataset/incidenti/incidenti_"
+path = "dataset/incidenti/istat/incidenti_"
 years = []
 for year in range(2010, 2014):
     dati = pd.read_csv(path + str(year) + ".txt", sep='\t')

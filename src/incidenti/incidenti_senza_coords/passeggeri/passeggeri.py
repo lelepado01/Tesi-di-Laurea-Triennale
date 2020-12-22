@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import sys
 sys.path.append("src/")
 
-data = pd.read_csv("dataset/incidenti/incidenti_2018.txt", sep="\t")
+data = pd.read_csv("dataset/incidenti/istat/incidenti_2018.txt", sep="\t")
 
 
 def count_people(row) -> int: 

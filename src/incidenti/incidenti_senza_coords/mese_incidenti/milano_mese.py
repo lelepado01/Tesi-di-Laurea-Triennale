@@ -2,7 +2,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-path = "dataset/incidenti/incidenti_2013.txt"
+path = "dataset/incidenti/istat/incidenti_2013.txt"
 data = pd.read_csv(path, sep="\t")
 
 milano_mese = data[data['provincia'] == 15]['mese'].value_counts().sort_index()
@@ -45,7 +45,7 @@ var_2010 = variazione_perc(media, agosto)
 
 # Vale per tutti gli anni?
 
-# path = "dataset/incidenti/incidenti_"
+# path = "dataset/incidenti/istat/incidenti_"
 # for year in range(2011, 2014):
 #     dati = pd.read_csv(path + str(year) + ".txt", sep='\t', encoding='latin1')
 #     milano_mese = dati[dati['provincia'] == 15]['mese'].value_counts().sort_index()

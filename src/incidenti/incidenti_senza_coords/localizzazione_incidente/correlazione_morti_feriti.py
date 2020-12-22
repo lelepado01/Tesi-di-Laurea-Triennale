@@ -4,7 +4,7 @@
 
 import pandas as pd
 
-data = pd.read_csv("dataset/incidenti/incidenti_2018.txt", sep="\t", encoding='latin1')
+data = pd.read_csv("dataset/incidenti/istat/incidenti_2018.txt", sep="\t", encoding='latin1')
 
 incroci = 'intersezione_o_non_interse3'
 morti = ['morti_entro_24_ore', 'morti_entro_30_giorni']

@@ -5,7 +5,7 @@ import sys
 sys.path.append('src')
 import label_utils
 
-path = "dataset/incidenti/incidenti_2018.txt"
+path = "dataset/incidenti/istat/incidenti_2018.txt"
 
 data = pd.read_csv(path, sep="\t")
 
@@ -36,7 +36,7 @@ pedoni_feriti = get_people(incidenti_pedoni, fields)
 incidenti_pedoni = pd.DataFrame([incidenti_pedoni['intersezione_o_non_interse3'], pedoni_feriti], ['tipo_incrocio', 'pedoni_feriti']).transpose()
 incidenti_pedoni = incidenti_pedoni[incidenti_pedoni['pedoni_feriti'] != 0]
 
-incidenti_labels = label_utils.join_labels(incidenti_pedoni['tipo_incrocio'], 'dataset/incidenti/Classificazioni/intersezione_o_non_interse3.csv')
+incidenti_labels = label_utils.join_labels(incidenti_pedoni['tipo_incrocio'], 'dataset/incidenti/istat/Classificazioni/intersezione_o_non_interse3.csv')
 incidenti_pedoni = pd.DataFrame([incidenti_labels, incidenti_pedoni['pedoni_feriti']], ['tipo_incrocio', 'pedoni_feriti']).transpose()
 
 tab = pd.DataFrame(pd.crosstab(incidenti_pedoni['tipo_incrocio'], incidenti_pedoni['pedoni_feriti'])).transpose()

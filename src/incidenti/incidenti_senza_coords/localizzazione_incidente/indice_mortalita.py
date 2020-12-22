@@ -2,7 +2,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-data = pd.read_csv("dataset/incidenti/incidenti_2018.txt", sep="\t", encoding='latin1')
+data = pd.read_csv("dataset/incidenti/istat/incidenti_2018.txt", sep="\t", encoding='latin1')
 
 incroci = 'intersezione_o_non_interse3'
 morti = ['morti_entro_24_ore', 'morti_entro_30_giorni']
@@ -30,7 +30,7 @@ import sys
 sys.path.append("src")
 import label_utils
 
-mortalita['incrocio'] = label_utils.join_labels(mortalita['incrocio'], "dataset/incidenti/Classificazioni/intersezione_o_non_interse3.csv")
+mortalita['incrocio'] = label_utils.join_labels(mortalita['incrocio'], "dataset/incidenti/istat/Classificazioni/intersezione_o_non_interse3.csv")
 
 mortalita.index = mortalita['incrocio']
 mortalita = mortalita['indice']

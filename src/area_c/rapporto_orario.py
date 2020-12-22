@@ -14,7 +14,7 @@ for f in data['hour'].unique():
         ignore_index=True
         )
 
-path = "dataset/incidenti/incidenti_2016.txt"
+path = "dataset/incidenti/istat/incidenti_2016.txt"
 
 incidenti = pd.read_csv(path, sep="\t", encoding='latin1')
 incidenti = incidenti[incidenti['Ora'] != 25]

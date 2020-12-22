@@ -6,7 +6,7 @@ import sys
 sys.path.append('src')
 import label_utils
 
-data = pd.read_csv("dataset/incidenti/incidenti_2010.txt", sep='\t')
+data = pd.read_csv("dataset/incidenti/istat/incidenti_2018.txt", sep='\t')
 
 tipo_incidenti = data[['natura_incidente', 'feriti']]
 
@@ -28,7 +28,7 @@ df = pd.DataFrame(
 df = df[[1,2,3,4]].transpose()
 
 perc = tipo_incidenti['natura_incidente']
-perc = label_utils.join_labels(perc, "dataset/incidenti/Classificazioni/natura_incidente.csv")
+perc = label_utils.join_labels(perc, "dataset/incidenti/istat/Classificazioni/natura_incidente.csv")
 perc = perc.value_counts(normalize=True)
 
 # Sbandamento                0.097109

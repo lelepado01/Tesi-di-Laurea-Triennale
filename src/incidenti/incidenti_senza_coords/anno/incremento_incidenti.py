@@ -27,12 +27,12 @@ df = pd.DataFrame()
 for year in range(2010, 2019):
     l = 0
     if year < 2014:
-        data = pd.read_csv("dataset/incidenti/incidenti_" + str(year) +".txt", sep='\t')
+        data = pd.read_csv("dataset/incidenti/istat/incidenti_" + str(year) +".txt", sep='\t')
         l = len(data)
         data = data[(data[campi[0]] != '  ') & (data[campi[0]] != ' ')]
         data = data[(data[campi[1]] == '  ') | (data[campi[1]] == ' ')]
     elif year != 2017: 
-        data = pd.read_csv("dataset/incidenti/incidenti_" + str(year) +".txt", sep='\t', encoding='latin1')[campi_2]
+        data = pd.read_csv("dataset/incidenti/istat/incidenti_" + str(year) +".txt", sep='\t', encoding='latin1')[campi_2]
         l = len(data)
         data = data[data[campi_2[0]] != " "]
         data = data[data[campi_2[1]] == " "]

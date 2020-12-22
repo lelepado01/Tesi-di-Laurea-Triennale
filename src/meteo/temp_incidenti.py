@@ -5,7 +5,7 @@ import sys
 sys.path.append("src")
 import meteo.meteo_generale_utils as mgu
 
-incidenti = pd.read_csv("dataset/incidenti/incidenti_2013.txt", sep="\t")
+incidenti = pd.read_csv("dataset/incidenti/istat/incidenti_2013.txt", sep="\t")
 
 inc = pd.Series()
 for m in incidenti['mese'].unique(): 
