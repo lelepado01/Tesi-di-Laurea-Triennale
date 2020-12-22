@@ -55,7 +55,7 @@
 \newcommand{\methodstyle}[1]{\textbf{#1}}
 \newcommand{\quotestyle}[1]{\textit{#1}}
 \def\light#1{{\color{LightTextColor}#1}}
-\newcommand{\lighttext}[1]{\noindent\light{\texttt{#1}}}
+\newcommand{\lighttext}[1]{\vspace{0.2in}\noindent\light{\texttt{#1}}\vspace{0.2in}}
 
 \bibliography{Biblio}
 \addbibresource{Biblio.bib}
@@ -187,7 +187,7 @@ Questo dataset contiene un'ampia gamma di campi, tra cui ora,
 mese, giorno della settimana in cui è avvenuto l'incidente, 
 ma anche informazioni sui passeggeri, la natura del sinistro e il tipo di strada. 
 Particolarmente interessanti sono anche i campi riguardanti la categoria di incrocio 
-a cui è avvenuto il sinistro, come rettilineo, rotonda o semaforo.\\
+a cui è avvenuto il sinistro, come rettilineo, rotonda o semaforo.
 
 \lighttext{(\\
     \indent anno, provincia, comune, giorno,\\
@@ -215,7 +215,7 @@ Infine l'ultimo dataset è stato trovato sul sito di
 ACI\footnote{Automobile Club Italia} \cite{ACI:1}.
 Questi dati, specifici a autostrade e strade provinciali, indicano anche il 
 nome della via in cui è avvenuto l'incidente, oltre a informazioni come 
-l'orario, il mese o il giorno della settimana.\\
+l'orario, il mese o il giorno della settimana.
 
 \lighttext{(\\
     \indent COD REG,REGIONE,\\
@@ -343,7 +343,7 @@ Il dataset riguardante gli accessi è stato trovato sul sito di open data del co
 Milano\footnote{\url{https://dati.comune.milano.it/organization/comunedimilano?q=area+c&sort=score+desc\%2C+metadata_modified+desc}}, 
 dove sono disponibili varie tipologie di file distinti, per esempio, per orario, 
 mese o località. 
-Tra questi si è utilizzata la tipologia contenente orari e data dell'accesso.\\
+Tra questi si è utilizzata la tipologia contenente orari e data dell'accesso.
 
 \lighttext{(\\
     \indent year,\\
@@ -365,7 +365,7 @@ il numero di accessi corrisponda, almeno in piccola parte, al traffico di Milano
 I dataset delle zone geolocalizzate di Milano provengono dal geoportale del comune di 
 Milano\footnote{\url{https://geoportale.comune.milano.it/}}, e contengono i poligoni che 
 costituiscono i municipi della città, 
-oltre a informazioni sulla superficie e il perimetro delle zone.\\
+oltre a informazioni sulla superficie e il perimetro delle zone.
 
 \lighttext{(\\
     \indent MUNICIPIO: id della zona,\\
@@ -408,7 +408,7 @@ Si è dunque optato per un dataset contenente temperature, umidità, e velocità
 trovato sul sito Zenodo\footnote{\url{https://zenodo.org/record/3992354}}.
 
 Il dataset contiene i campi di cui si è parlato, misurati ogni 
-ora a Milano, a partire dal 2008, fino al 2018.\\
+ora a Milano, a partire dal 2008, fino al 2018.
 
 \lighttext{(\\
     \indent Date\_Time: campo che contiene giorno, mese e anno,\\
@@ -425,7 +425,7 @@ per esempio, Milano.
 
 I dati riguardanti questi ultimi, hanno due provenienze, i primi sono 
 dati riferiti alle linee ATM, scaricati sul sito del comune di 
-Milano\footnote{\url{https://dati.comune.milano.it/dataset/ds532-atm-composizione-percorsi-linee-di-superficie-urbane}}.\\
+Milano\footnote{\url{https://dati.comune.milano.it/dataset/ds532-atm-composizione-percorsi-linee-di-superficie-urbane}}.
 
 \lighttext{(\\
     \indent linea: numero della linea,\\
