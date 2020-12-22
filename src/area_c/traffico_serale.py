@@ -41,10 +41,8 @@ for f in weekend_days['hour'].unique():
 
 traffico_week = pd.DataFrame(traffico, index=['Traffico in settimana']).transpose()
 
-
 traffico_weekend /= 2 * 52
 traffico_week /= 5 * 52
-
 
 traffico_weekend = traffico_weekend.reindex([23,0,1,2,3,4,5,6])
 traffico_week = traffico_week.reindex([23,0,1,2,3,4,5,6])

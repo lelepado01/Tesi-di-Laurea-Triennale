@@ -2,9 +2,7 @@ import geopandas as gp
 import matplotlib.pyplot as plt
 import contextily as cx
 import sys
-
 sys.path.append("src/")
-
 import geo_utils
 
 path = "dataset/atm/atm_percorsi.geojson"
@@ -31,5 +29,4 @@ cx.add_basemap(ax=layer_m)
 inc_layer = incidenti.plot(ax=ax2, alpha=0.02)
 cx.add_basemap(ax=inc_layer)
 plt.axis('off')
-# plt.show()
-plt.savefig("linee_atm")
+plt.show()

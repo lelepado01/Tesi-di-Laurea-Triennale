@@ -46,4 +46,3 @@ for point in incidenti['geometry']:
         inc += 1
 
 #print("Incidenti per km in zona: " + str(inc * 1000000 / rect.area))# = 59.25 incidenti/km
-#  il risultato è nella norma

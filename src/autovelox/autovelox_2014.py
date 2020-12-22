@@ -1,12 +1,8 @@
 
 import geopandas as gp
 import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
 import contextily as cx
-
-import sys
-
-from matplotlib.pyplot import legend
-sys.path.append("src")
 
 color_ls = ['#8e50a8', '#506ba8']
 
@@ -15,8 +11,7 @@ autovelox = gp.read_file(path).set_crs(epsg=3857)
 autovelox = gp.GeoDataFrame(geometry=gp.points_from_xy(autovelox['field_1'], autovelox['field_2']))
 
 autovelox_tutti = gp.read_file("dataset/autovelox/autovelox_milano.geojson").to_crs(epsg=3857)
-print(autovelox_tutti.columns)
-import matplotlib.patches as mpatches
+
 patches = [
     mpatches.Patch(color=color_ls[0], label='Installazioni nel 2014'), 
     mpatches.Patch(color=color_ls[1], label='Installazioni ignote')

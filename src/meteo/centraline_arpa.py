@@ -9,8 +9,6 @@ path_sensori = "dataset/meteo/tipologia_sensori.geojson"
 sensori = gp.read_file(path_sensori).to_crs(epsg=3857)
 incidenti = gp.read_file(path_incidenti).to_crs(epsg=3857)
 
-# uso gli incidenti in modo da avere la posizione delle centraline 
-# relativamente al centro di milano
 scale = 10**6
 
 layer_sensori = sensori.plot(figsize=(5,4), markersize=7)

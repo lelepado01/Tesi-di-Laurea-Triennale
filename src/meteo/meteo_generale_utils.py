@@ -1,8 +1,6 @@
 
-# Le funzioni restituiscono un dataframe in cui vengono filtrati i campi che non corrispondono
-# all'anno / mese / giorno
-# Il Dataset passato deve contenere un campo 'Date_Time' nel formato: 
-# mm/dd/yyyy hh:hh 
+# Le funzioni restituiscono un dataframe in cui vengono filtrati i campi 
+# che non corrispondono all'anno / mese / giorno
 
 import pandas as pd
 

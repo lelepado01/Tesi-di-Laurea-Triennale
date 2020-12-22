@@ -7,17 +7,6 @@ path = "dataset/area_c/orari_2012.csv"
 
 data = pd.read_csv(path, sep=';')
 
-# print(data['totale'].mean())
-
-# Ho modificato il dataset per mostrare y;m;d separati
-# Manca Novembre
-
-# Agosto e DIcembre sono bassi, mancano dati?
-
-# print("Giorni in Agosto: " + str(len(data[data['month'] == 8])))
-# print("Giorni in Dicembre: " + str(len(data[data['month'] == 12])))
-
-# print(data['month'].unique())
 df = pd.Series()
 for f in data['month'].unique():
     df = df.append(
@@ -41,8 +30,6 @@ mesi = [
 ]
 
 perc_traffico = df / df.sum()
-
-# print(perc_traffico)
 
 color_ls = ['#dbad85']*12
 color_ls[5:7] = ['#dd8d46']*3

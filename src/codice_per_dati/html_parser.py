@@ -40,15 +40,12 @@ def parse_html_file(dir_path : str, file_name : str):
 
 # Realizza un parse di file html in file csv a partire dalla directory di riferimento
 def parse_files_in_dir(dir_path : str): 
-    # Prendo una lista di tutti i file nella cartella
-    res = os.listdir(path)
+    res = os.listdir(dir_path)
 
-    # Elimino i file nella lista che non voglio convertire (quelli che non in formato html)
     for f in res: 
         if not (os.path.isfile(dir_path + str(f)) and str(f).endswith(".html")): 
             res.remove(f)
 
-    # Per ogni file parso i dati e li metto in un nuovo file csv
     for file_path in res: 
         parse_html_file(dir_path, file_path)
 

@@ -34,9 +34,6 @@ mesi_incidenti = incidenti['mese'].value_counts().sort_index()
 
 df.index = range(1,13)
 perc_traffico = df / df.sum()
-
-# print(mesi_incidenti)
-# print(df)
 rapp = mesi_incidenti / df
 
 mesi = ["Gennaio","Febbraio","Marzo","Aprile","Maggio","Giugno","Luglio","Agosto","Settembre","Ottobre","Novembre","Dicembre"]

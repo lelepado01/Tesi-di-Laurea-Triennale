@@ -1,13 +1,8 @@
 
 
 import geopandas as gp
-import matplotlib.pyplot as plt
-import contextily as cx
-import pandas as pd
 import sys
-
 sys.path.append("src/")
-
 import geo_utils
 
 path = "dataset/atm/atm_percorsi.geojson"
