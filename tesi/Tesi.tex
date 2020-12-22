@@ -55,7 +55,8 @@
 \newcommand{\methodstyle}[1]{\textbf{#1}}
 \newcommand{\quotestyle}[1]{\textit{#1}}
 \def\light#1{{\color{LightTextColor}#1}}
-\newcommand{\lighttext}[1]{\vspace{0.2in}\noindent\light{\texttt{#1}}\vspace{0.2in}}
+\newcommand{\skipline}{\vspace{0.2in}}
+\newcommand{\lighttext}[1]{\skipline\noindent\light{\texttt{#1}}\skipline}
 
 \bibliography{Biblio}
 \addbibresource{Biblio.bib}
@@ -2896,24 +2897,48 @@ incontrate durante quest'analisi di dati liberi.
 Uno dei maggiori problemi riscontrati, soprattutto per quanto riguarda il confermare la 
 validità dei risultati calcolati, è stata la mancanza di dataset in ambiti come il traffico, 
 o il fondo stradale. 
+L'assenza di informazioni ha giocato un ruolo anche nelle analisi riguardanti gli incroci, 
+in quanto non si sono trovati riferimenti al numero di questi in alcun sito di open data.
 Per ovviare a questa difficoltà si è spesso dovuto ricorrere a stime, 
-come il numero di accessi in area C.
-
+come il numero di accessi in area C. 
+\skipline
 In secondo luogo, alcuni dataset non sono completi, o hanno sezioni temporali 
 estese anche svariati mesi. 
 \'E il caso delle informazioni sugli accessi all'area C di Milano dove, 
 per il 2013 non è presente il mese di Dicembre.
 Rimanendo sull'argomento, lo stesso dataset, a partire dal 2017, è disponibile 
-solamente diviso in dodici file su base mensile, problema ricorrente, in 
-quanto le condivisioni di open data venivano misurate sulla base del numero di file, 
-era quindi più proficuo pubblicare dati separati.
-\todo{lelepado: ancora oggi?}
-
+solamente diviso in dodici file su base mensile.
+Questo, in passato, era un comportamento ricorrente, in 
+quanto molte piattaforme, come quella del Ministero dei 
+Trasporti\footnote{\url{http://dati.mit.gov.it/catalog/dataset}}, 
+misuravano le condivisioni di open data delle amministrazioni 
+sulla base del numero di file pubblicati. 
+Era quindi più proficuo pubblicare dati separati, rispetto a tutte le informazioni in 
+un dataset unico.
+\skipline
 Infine, un problema sorto con frequenza è stato la mancanza di descrizioni del 
-significato dei campi di un dataset. 
-Un esempio di ciò può essere i dati provenienti dal geoportale del comune di Milano 
-dove, in molti casi, si è dovuto ipotizzare il significato delle colonne, e di conseguenza 
-si è stati costretti a scartare queste informazioni.
+significato dei campi di una tabella. 
+Un esempio di ciò sono i dati provenienti dal geoportale del comune di Milano, 
+in particolare il dataset riguardante la rete dei trasporti.
+In molti casi, si è dovuto ipotizzare il significato delle colonne delle tabelle, 
+e di conseguenza si è stati costretti a scartare queste informazioni. 
+
+Analogamente, un problema simile, è che molti dataset non aderiscono ad 
+alcuno standard, per quanto riguarda la nomenclatura delle colonne.
+Nelle tabelle provenienti dal sito Istat, per esempio, nel 2011, hanno un campo denominato 
+\columnstyle{intersezione\_o\_non\_interse1}, mentre nel 2018, la stessa informazione ha 
+nome \columnstyle{intersezione\_o\_non\_interse3}. 
+
+A cambiare non sono soltanto i nomi dell colonne negli anni, ma in alcuni casi, come 
+quello esplorato in precedenza, è usato un solo \quotestyle{underscore} a 
+simboleggiare uno spazio, mentre nel campo \columnstyle{veicolo\_\_a\_\_\_et\_\_conducente} 
+ne sono usati due o anche tre.
+
+Rimanendo in tema, lo stesso dataset Istat ha colonne con differenze di anno in anno, 
+come \columnstyle{mese}, che è presente fino al 2013, e successivamente viene 
+sostituito dal campo \columnstyle{trimestre}. 
+In questo caso, non solo è presente un cambio di nomenclatura, ma il dato in sè è 
+anche reso più vago.
 
 \todo{lelepado: serve una conclusione?
 atrent: inteso come un capitolo "conclusioni"? ci può stare, breve, in cui riassumi i 
@@ -2922,6 +2947,12 @@ aggiungo: importante sarebbe anche (sempre nelle conclusioni) fare un rapporto s
 stato dei dati disponibili, sulla loro qualità e granularità (btw mi viene in mente 
 che servirebbe una digressione, in zona intro, sugli opendata) e sulle migliorie che 
 si potrebbero chiedere ai produttori degli opendata che hai man mano trovato}
+
+\appendix
+\chapter{Appendice A: Codice}
+
+
+
 
 
 %\addcontentsline{toc}{chapter}{Bibliografia}
