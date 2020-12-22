@@ -2803,8 +2803,7 @@ recarsi nella località marittima, siano poi sfruttate anche durante la vacanza 
 raggiungere zone vicine, mentre è molto più raro che, durante le ferie, una famiglia 
 si rechi in spiaggia passando per esempio per la A1.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\clearpage
+
 \chapter{Dati su Meteo}
 
 \section{Meteo a Milano}
@@ -2929,8 +2928,8 @@ Nelle tabelle provenienti dal sito Istat, per esempio, nel 2011, hanno un campo 
 \columnstyle{intersezione\_o\_non\_interse1}, mentre nel 2018, la stessa informazione ha 
 nome \columnstyle{intersezione\_o\_non\_interse3}. 
 
-A cambiare non sono soltanto i nomi dell colonne negli anni, ma in alcuni casi, come 
-quello esplorato in precedenza, è usato un solo \quotestyle{underscore} a 
+A cambiare non sono soltanto i nomi dell colonne negli anni, ma in alcuni casi, 
+come quello esplorato in precedenza, è usato un solo \quotestyle{underscore} a 
 simboleggiare uno spazio, mentre nel campo \columnstyle{veicolo\_\_a\_\_\_et\_\_conducente} 
 ne sono usati due o anche tre.
 
@@ -2951,9 +2950,26 @@ si potrebbero chiedere ai produttori degli opendata che hai man mano trovato}
 \appendix
 \chapter{Appendice A: Codice}
 
+Tutti gli script utilizzati per questo lavoro sono reperibili a questa pagina 
+github\footnote{\url{https://github.com/lelepado01/Tirocinio}}.
 
+Il repository è diviso in tre cartelle principali, \columnstyle{dataset}, \columnstyle{src} 
+e \columnstyle{tesi}. La prima contiene tutti i dataset utilizzati, divisi per 
+argomento, e alcuni file riguardanti le stime realizzate, come la percentuale di 
+conducenti maschi e femmine.
 
+La cartella \columnstyle{tesi} contiene le immagini utilizzate nella relazione e il codice 
+sorgente\LaTeX del pdf.
 
+Infine, nella directory \columnstyle{src} è contenuto il codice sorgente per i grafi, 
+le mappe e le stime, diviso per argomento. Ogni grafo e mappa è associato a uno script python 
+con lo stesso nome.
+
+Se si volesse trovare il codice del grafo raffigurante l'incremento di incidenti 
+dal 2010 al 2018, si troverebbero i dataset utilizati nella directory:\\
+\indent\columnstyle{dataset/incidenti/incidenti\_istat}\\
+Mentre il codice sorgente, sarebbe situato al percorso:\\
+\indent\columnstyle{src/incidenti/incidenti\_senza\_coords/anno}
 
 %\addcontentsline{toc}{chapter}{Bibliografia}
 \printbibliography
