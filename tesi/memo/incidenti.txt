@@ -1,8 +1,0 @@
-
-DOMANDE: 
-    ci sono alcuni punti che hanno alta concentrazione, come
-        <5.698, 1.012>
-        <5.694, 1.010>
-        <5.690, 1.030>
-        ecc...
-    Sono dei punti in cui avvengono molti incidenti o sono errori?

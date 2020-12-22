@@ -1,7 +1,0 @@
-
-DOMANDE: 
-    - Per caso influisce fatto che alcune strade hanno pavimentazione a blocchi (PAVE')?
-    - Quali tipi di incroci producono quali tipi di incidenti?
-        Quali hanno più pedoni coinvolti?
-        O mortalità / numero di feriti più alto?
-    - Come cambiano i tipi di incidenti al cambiare degli incroci?

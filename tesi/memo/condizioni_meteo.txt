@@ -1,9 +1,0 @@
-
-Concluderei che non c'è molta correlazione tra meteo e incidenti, almeno a milano, 
-dove è sereno spesso e ci sono molti altri fattori in gioco 
-
-DOMANDE: 
-    - A milano, la maggior parte degli incidenti avvengono con tempo sereno, e il meteo non 
-        sembra influenzare la guida.
-    - Cosa succede in altre zone dove il clima è meno 'sereno'?
-        Es. montagna?
