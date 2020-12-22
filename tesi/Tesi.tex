@@ -2178,6 +2178,7 @@ sottostante, non sono particolarmente omogenee:
     \hline
     \end{tabular}
 \end{center}
+
 Visto che le fasce di età della fonte, e quelle del dataset Istat non coincidono, 
 si è dovuto, in alcuni casi sommare, in altri suddividere, i dati del sito Tuttitalia.
 Nel secondo caso, si è dovuto stimare la percentuale di popolazione con 
@@ -2226,7 +2227,7 @@ questi preferiscano ancora muoversi a piedi invece che in macchina.
 
 Avendo a disposizione le informazioni riguardanti l'età del conducente del 
 veicolo che ha causato l'incidente, è possibile controllare se esistono fasce di 
-età con incidentalità particolarmente alta.
+età che provocano un numero di sinistri particolarmente alto.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mortalita/indice_mortalita_eta.png}
@@ -2236,14 +2237,16 @@ età con incidentalità particolarmente alta.
 
 In primo luogo, il grafo destro nella figura \ref{fig:indice-mortalita-eta} contiene 
 la percentuale, per fascia di età del conducente, di incidenti totali commessi, insieme 
-al numero di morti in questi incidenti\footnote{Ogni colonna contiene incidenti in 
+al numero di morti in questi incidenti\footnote{Ogni punto contiene incidenti in 
 cui il conducente rientra nella fascia di età, la persona deceduta tuttavia potrebbe non 
 essere il conducente}.
 
 In particolare, più di un quarto degli incidenti totali coinvolgono conducenti nella 
-fascia d'età \columnstyle{30-44} mentre, probabilmente per il basso numero di 
-guidatori nella fascia \columnstyle{15-17}, questo gruppo sembra essere molto 
-più responsabile alla guida.
+fascia d'età \columnstyle{30-44 anni} mentre, il gruppo \columnstyle{15-17} sembrerebbe 
+essere molto più responsabile alla guida, ma il numero di conducenti che rientrano 
+in queste età deve essere particolarmente basso, in quanto si parla di ragazzi 
+con patenti di tipo A1\footnote{Patenti conseguibili a partire dai 16 anni, 
+che permettono la guida di motocicli con potenza ridotta}. 
 
 Nel grafo di sinistra in figura \ref{fig:indice-mortalita-eta}, invece, 
 è rappresentato l'indice di mortalità di questi incidenti, 
@@ -2257,8 +2260,8 @@ L'indice di mortalità presente nel grafo aumenta all'aumentare dell'età,
 e il risultato trovato sembra essere confermato dalla stima realizzata nello studio 
 ACI del 2018 sugli incidenti stradali \cite{ACI:3}. 
 
-Tuttavia, come già spiegato nella sezione precedente, la prima fascia di cui si è parlato 
-contiene quindici anni, mentre la seconda solamente due. Sarebbe quindi opportuno 
+Tuttavia, come già spiegato nella sezione precedente, la fascia \columnstyle{30-44} 
+contiene quindici anni, invece che solamente due. Sarebbe quindi opportuno 
 normalizzare la percentuale di incidenti commessi, con una stima del numero di 
 guidatori nella rispettiva fascia di età.
 
@@ -2278,11 +2281,11 @@ guidatori nella rispettiva fascia di età.
 \end{figure}
 
 Una volta normalizzato per la popolazione standard in Italia, il numero di incidenti per 
-fascia di età, nel grafo destro della figura \ref{fig:indice-mort-norm}, mostra che le 
-età nelle quali si commettono più sinistri sono quelle dei \columnstyle{18-29 anni}, 
+fascia di età, nel grafo destro della figura \ref{fig:indice-mort-norm}, mostra che  
+si commettono più sinistri nella categoria \columnstyle{18-29 anni}, 
 con un calo nei valori successivi.
-D'altra parte, l'indice di mortalità non cambia, poichè è un rapporto in cui i fattori 
-sono stati divisi per costanti uguali per ogni fascia.
+D'altra parte, l'indice di mortalità non cambia, poichè è realizzato tramite 
+un rapporto in cui i fattori sono stati divisi per costanti uguali per ogni fascia.
 
 %\clearpage
 \section{Dati ACI}
