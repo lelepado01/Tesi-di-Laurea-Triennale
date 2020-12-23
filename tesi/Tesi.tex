@@ -466,7 +466,11 @@ Si è dunque tentato di utilizzare il dataset presente sul geoportale del comune
 Milano\footnote{\url{https://geoportale.comune.milano.it/}}, 
 contenente anch'esso troppe strade in quanto traccia l'intero manto stradale della città.
 
-Come ultima risorsa, si è deciso di tracciare alcune mappe in geojson utilizzando 
+Come ultima risorsa, si è deciso di tracciare alcune mappe in 
+\textbf{geojson}\footnote{Formato di file, derivato da \textbf{Json}, cioè 
+JavaScript Object Notation, utilizzato spesso per il salvataggio di informazioni, ma 
+in aggiunta permette di memorizzare insiemi di punti, sotto forma di linee o poligoni, 
+tramite l'apposito campo \columnstyle{geometry}.} utilizzando 
 Geojson.io\footnote{\url{https://geojson.io/}}, in particolare nella zona di Milano, 
 per le principali autostrade, tangenziali e strade statali. 
 Allo stesso modo, Geojson.io è stato utile a tracciare alcune aree in centro a Milano, 
@@ -2412,8 +2416,8 @@ del traffico non è da considerarsi particolarmente attendibile.
 
 \subsection{Differenze tra mesi estivi e invernali}
 
-Sarebbe interessante controllare se i dati ACI confermano le tendenze trovate tramite 
-le informazioni Istat, e vedere se al sud, il numero di incidenti cresce 
+Sarebbe interessante controllare se i dati ACI confermino le tendenze trovate tramite 
+le informazioni Istat, e vedere se nel Sud Italia, il numero di incidenti crescesca 
 come conseguenza delle vacanze estive.
 
 \begin{figure}
@@ -2422,26 +2426,27 @@ come conseguenza delle vacanze estive.
     \label{fig:estate-inverno}
 \end{figure}
 
-Nella figura \ref{fig:estate-inverno}, sono rappresentati i numeri di incidenti presenti 
-in mesi invernali e estivi, divisi per regione.
-
+Nella figura \ref{fig:estate-inverno}, sono rappresentati gli incidenti avvenuti 
+in mesi invernali ed estivi, divisi per regione. 
 In tutte le regioni italiane, il numero di incidenti in estate è maggiore del 
 numero di incidenti in inverno. 
-La probabile motivazione di ciò probabilmente il fatto che 
-le persone si muovono meno nei mesi freddi, rispetto a quelli caldi.
+La motivazione di ciò è probabilmente il fatto che 
+le persone preferiscono muoversi meno nei mesi freddi, rispetto a quelli caldi, 
+anche in macchina.
 
 Il comportamento che si stava cercando, cioè più incidenti in estate nel 
 Sud Italia, non è visibile. 
-Un modo in cui si potrebbe ricavarlo, però, è osservare gli incidenti sulle autostrade 
-principali in Agosto.
-Questo tipo di controllo verrà eseguito in un capitolo successivo.
+D'altra parte, un modo in cui si potrebbe tentare di ricavarlo, è osservare gli 
+incidenti sulle autostrade principali in Agosto, su cui si movono i turisti diretti 
+nelle località di mare.
 
+Questo tipo di controllo verrà eseguito nei capitoli successivi.
 
 \subsection{Incidenti per provincia}
 
-Utilizzando, ancora una volta, i file geojson contenenti i limiti delle province, è 
-possibile creare delle heatmap raffiguranti quali tra queste hanno maggior numero 
-di incidenti.
+Utilizzando, ancora una volta, i file geojson contenenti i limiti delle province, 
+è possibile creare delle heatmap raffiguranti quali tra queste hanno maggior 
+numero di incidenti.
 
 Il calcolo, avendo a disposizione dati riguardanti strade provinciali e autostrade, 
 è stato realizzato per entrambi i casi.
