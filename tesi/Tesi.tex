@@ -2292,10 +2292,10 @@ un rapporto in cui i fattori sono stati divisi per costanti uguali per ogni fasc
 %\clearpage
 \section{Dati ACI}
 
-I dati trovati sul sito di ACI sono inizialmente divisi in due categorie in 
+I dati trovati sul sito di ACI sono inizialmente divisi in due file in 
 base al tipo di strada dove l'incidente è avvenuto, 
 su autostrade o strade provinciali.
-I due gruppi, a loro volta sono rispettivamente divisi in file, a seconda 
+I due gruppi, a loro volta sono rispettivamente divisi in categorie, a seconda 
 dell'informazione contenuta, come incidenti con località, incidenti per 
 comune, per mese, per giorno della settimana o ora.
 
@@ -2306,14 +2306,14 @@ possibile dividere gli incidenti per regione e per provincia.
 Grazie al dataset geojson di Guglielmo 
 Celata\footnote{\url{https://github.com/openpolis/geojson-italy}}, 
 è stato possibile realizzare le mappe in figura \ref{fig:incidenti-per-regione}, 
-che raffigurano rispettivamente, le regioni con più incidentalità nel per ogni 
-anno nelle strade provinciali e nelle autostrade, nell'anno 2018.
+che raffigurano rispettivamente, le regioni con più incidenti 
+nelle strade provinciali e nelle autostrade, nell'anno 2018.
 
-Ovviamente il Nord Italia ha il primato per quanto riguarda gli incidenti, 
+Ovviamente il Nord Italia ha il primato per quanto riguarda i sinistri, 
 soprattutto nelle regioni di Lombardia, Veneto e Emilia Romagna. 
 Spicca poi il Lazio, dove la maggior parte degli incidenti avvengono su autostrade, 
-in quanto il volume di incidenti è nella media nella prima mappa in figura 
-\ref{fig:incidenti-per-regione}, mentre è il massimo annuale nella seconda mappa.
+in quanto il volume di questi, in figura \ref{fig:incidenti-per-regione}, 
+è nella media nella prima mappa, mentre è il massimo tra tutte le regioni nella seconda.
 
 \begin{figure}
     \includegraphics[width=0.5\linewidth]{../src/incidenti/incidenti_aci/mappe_regioni/incidenti_regione.png}
@@ -2323,9 +2323,9 @@ in quanto il volume di incidenti è nella media nella prima mappa in figura
 \end{figure}
 
 Per quanto riguarda, invece, il numero di incidenti per ogni anno, 
-dalla heatmap \ref{fig:regione-heatmap} 
-si nota che non cambia molto di anno in anno, e le regioni con maggiore numero 
-di incidenti rimangono sempre Lombardia e Veneto.
+visibile nella heatmap \ref{fig:regione-heatmap} 
+si nota che questo non cambia molto di anno in anno, e le regioni con maggiore numero 
+di sinistri rimangono sempre Lombardia e Veneto.
 
 Per controllare le tendenze di incremento e decremento di incidenti per regione, 
 si è calcolata la deviazione standard per ogni regione\footnote{Deviazione standard: 
@@ -2344,12 +2344,12 @@ I grafi precedenti, soprattutto le heatmap regionali, non tengono conto del
 volume del traffico.
 Non avendo informazioni riguardanti il traffico in tutta Italia, si sono stimate 
 queste informazioni tramite il numero di patentati per regione.
-Una stima eseguita con il numero di patentati per regione, non è molto accurata, 
-in quanto molte persone patentate in una regione, possono lavorare in altre, e 
-influire in modo errato al conteggio degli incidenti. 
+Va sottolineato che una stima eseguita con il numero di patentati per regione, 
+non è molto accurata, in quanto molte persone patentate in una regione, possono 
+lavorare in altre, e influire in modo errato al conteggio degli incidenti. 
 
 \begin{figure}
-    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/mappe_regioni/incidenti_patenti_italia.png}
+    \includegraphics[width=0.8\linewidth]{../src/incidenti/incidenti_aci/mappe_regioni/incidenti_patenti_italia.png}
     \caption{Incidenti e patentati per regione}
     \label{fig:incidenti-patentati}
 \end{figure}
@@ -2366,7 +2366,7 @@ e quella di patentati per regione.
     \def\arraystretch{1.5}%  
     \begin{tabular}{ |c|c|c| } 
     \hline
-    Zona & Media di Incidenti annuali & Patentati (in Milioni) \\ 
+    Zona & Media Incidenti annuali & Patentati (in Milioni) \\ 
     \hline
     \rowcolor{TableGray}
     Nord    &   2470 &   2.28 \\ 
@@ -2378,7 +2378,7 @@ e quella di patentati per regione.
 \end{center}
 
 Il grafo \ref{fig:incidenti-patentati-bar} è stato suddiviso tra regioni del nord, 
-centro e sud, per facilitare la lettura, e indica le percentuali di incidenti e 
+centro e sud per facilitare la lettura, e indica le percentuali di incidenti e 
 patentati per la rispettiva regione. 
 \'E subito osservabile che, nella maggior parte delle regioni del centro, 
 la percentuale di incidenti supera quella di patentati, 
@@ -2390,12 +2390,6 @@ mentre nel Sud Italia accade il fenomeno opposto.
     \label{fig:incidenti-patentati-bar}
 \end{figure}
 
-\begin{figure}
-    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/mappe_regioni/incidenti_patenti_box.png}
-    \caption{Incidenti e patentati per Nord, Centro e Sud Italia}
-    \label{fig:incidenti-patentati-box}
-\end{figure}
-
 La figura \ref{fig:incidenti-patentati-box} permette di capire il motivo della disparità 
 tra centro e Sud Italia.
 Al sud, il numero di incidenti è molto minore rispetto al centro Italia, mentre, 
@@ -2403,11 +2397,18 @@ sempre le stesse due zone, il numero di patentati non cambia molto.
 \'E ovvio che tenendo il denominatore costante, il numero minore di incidenti al 
 sud causa una frazione minore.
 
+\begin{figure}
+    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/mappe_regioni/incidenti_patenti_box.png}
+    \caption{Incidenti e patentati per Nord, Centro e Sud Italia}
+    \label{fig:incidenti-patentati-box}
+\end{figure}
+
 Quali potrebbero essere le motivazioni di questa disparità?
 Come già accennato in precendenza, una delle motivazioni principali 
-deve essere la destinazione lavorativa della popolazione, tuttavia va anche sottolineato 
-la precisione del numero di patenti come stimatore del traffico non è da considerarsi 
-particolarmente attendibile.
+deve essere la destinazione lavorativa della popolazione tuttavia, 
+come accennato in precedenza, 
+la precisione del numero di patenti come fattore utilizzato per la stima 
+del traffico non è da considerarsi particolarmente attendibile.
 
 \subsection{Differenze tra mesi estivi e invernali}
 
