@@ -2098,31 +2098,26 @@ qualche modo, come nelle curve.
 %\clearpage
 \subsection{Età dei pedoni coinvolti in incidenti}
 
-\'E scontato che, se coinvolti in un incidente, un ventenne non ha la stessa 
+\'E scontato che, se coinvolto in un incidente, un ventenne non ha la stessa 
 probabilità di essere ferito rispetto a un pedone che ha settanta anni.
 La domanda che sorge spontanea è se sia possibile osservare questo comportamento 
 utilizzando i dati a disposizione.
 
-Per prima cosa si sono utilizzati i campi \columnstyle{pedone\_ferito\_età} 
+Per prima cosa, si sono utilizzati i campi 
+\columnstyle{pedone\_ferito\_età}\footnote{Nel dataset sono presenti quattro colonne per 
+annotare l'età dei pedoni coinvolti.} 
 per creare un grafo in cui sia visibile il numero di passanti feriti e morti, 
-divisi per fascia di età.
+divisi per le categorie disponibili.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/pedoni/eta_pedoni_iniziale.png}
-    \caption{Fasce di età dei pedoni coinvolti in incidenti}
+    \caption{Frequenze di coinvolgimento di pedoni in incidenti per fascia di età}
     \label{fig:eta-pedoni-iniziale}
 \end{figure}
 
 Dal grafo \ref{fig:eta-pedoni-iniziale} si osserva come la fascia di età più colpita 
 sia quella dei \columnstyle{65+} anni, tuttavia esiste un secondo picco, nel grafo dei 
 pedoni feriti, che comprende le persone tra i trenta e cinquantaquattro anni di età.
-
-\begin{figure}
-    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/pedoni/eta_pedoni.png}
-    \caption{Fasce di età dei pedoni coinvolti in incidenti, normalizzate per numero di anni 
-    presenti nella fascia}
-    \label{fig:eta-pedoni}
-\end{figure}
 
 Non tutte queste fasce, però, contengono lo stesso numero di anni di età, 
 per esempio \columnstyle{30-44} contiene quindici anni, mentre 
@@ -2135,16 +2130,23 @@ per esempio \columnstyle{30-44} contiene quindici anni, mentre
     pedoni_morti_vals = pedoni_morti.values / numero_anni
 \end{lstlisting}
 
+\begin{figure}
+    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/pedoni/eta_pedoni.png}
+    \caption{Fasce di età dei pedoni coinvolti in incidenti, normalizzate per numero di anni 
+    presenti nella categoria}
+    \label{fig:eta-pedoni}
+\end{figure}
+
 Se si normalizza per anni contenuti in ogni fascia, ipotizzando un numero 
 costante di persone di ogni età\footnote{La normalizzazione tiene conto 
 che la fascia di età \columnstyle{65+} valga venti anni.}, 
-si ottiene un grafo, visibile in figura \ref{fig:eta-pedoni}, che, per 
-quanto riguarda i pedoni feriti, è molto differente.
+si ottiene un grafo, visibile in figura \ref{fig:eta-pedoni}. 
+Per quanto riguarda i pedoni feriti, questa rappresentazione è molto differente.
 Ignorando gli individui più giovani, tutte le altre fasce sono coinvolte 
 in modo omogeneo, con un picco nella categoria \columnstyle{65+ anni}.
 D'altra parte, il grafo destro, contenente i morti per fascia di età, 
-non subisce un grande cambiamento, mantenendo il punto di massimo con 
-i pedoni più anziani.
+non subisce un grande cambiamento, mantenendo il punto di massimo nei 
+pedoni più anziani.
 
 Non è detto, tuttavia, che in Italia il numero di individui con 
 la stessa età sia costante, anzi, le percentuali di individui per fascia, 
@@ -2155,7 +2157,7 @@ sottostante, non sono particolarmente omogenee:
     \def\arraystretch{1.5}%  
     \begin{tabular}{ |c|c| } 
     \hline
-    Fascia & Percentuale Popolazione \\ 
+    Età & Percentuale Popolazione \\ 
     \hline
     \rowcolor{TableGray}
     0-5     & 3.9 \% \\ 
@@ -2179,21 +2181,22 @@ sottostante, non sono particolarmente omogenee:
     \end{tabular}
 \end{center}
 
-Visto che le fasce di età della fonte, e quelle del dataset Istat non coincidono, 
-si è dovuto, in alcuni casi sommare, in altri suddividere, i dati del sito Tuttitalia.
-Nel secondo caso, si è dovuto stimare la percentuale di popolazione con 
-determinata età, in quanto si sarebbe dovuto dividere una fascia.
-Un esempio è la fascia dei \columnstyle{15-19} anni, 
-i dati Istat hanno una categoria \columnstyle{15-17} anni e un'altra 
+Visto che gli insiemi di popolazione del sito e quelle del dataset Istat non coincidono, 
+si è dovuto, in alcuni casi sommare, in altri suddividere, i dati di Tuttitalia.
+Nel secondo caso, si è necessario stimare la percentuale di popolazione con 
+determinata età, in quanto si deve dividere una fascia.
+Un esempio è la categoria dei \columnstyle{15-19} anni, 
+i dati Istat hanno un insieme per \columnstyle{15-17} anni e un altro per 
 \columnstyle{18-29} anni, 
 è dunque necessario spostare i diciotto e i diciannovenni dalla prima alla 
 seconda fascia. 
 In questi casi, si è semplicemente assunto che il numero di individui sia omogeneamente 
-diviso per età, cioè nella fascia \columnstyle{15-19} si ha lo stesso numero di 
-persone con quindici e sedici anni.
+diviso per età, cioè in \columnstyle{15-19 anni} si abbia lo stesso numero di 
+quindicenni e sedicenni.
 Seguendo questa logica, per spostare i due anni di età nella categoria successiva, 
-si divide la percentuale di \columnstyle{15-19} per cinque e si moltiplica per due. 
-Il risultato ottento lo si aggiunge alla fascia \columnstyle{18-29}.
+è opportuno dividere la cardinalità\footnote{Il numero di elementi presenti nell'insieme.} 
+dell'insieme \columnstyle{15-19} per cinque e moltiplicarlo per due. 
+Il risultato ottenuto va aggiunto alla fascia \columnstyle{18-29}.
 
 \begin{lstlisting}
     correct_order =         ['0-5  ', '6-9  ', '10-14', '15-17', '18-29', '30-44', '45-54', '55-64','65+  ']
@@ -2209,19 +2212,18 @@ Il risultato ottento lo si aggiunge alla fascia \columnstyle{18-29}.
     \label{fig:eta-pedoni-norm}
 \end{figure}
 
-Una volta aver corretto l'immagine precendente, 
-si ottiene la figura \ref{fig:eta-pedoni-norm} dove, soprattutto 
-nel grafo di destra, è presente una curva particolarmente alta 
+Una volta aver corretto l'immagine precendente, si ottiene la figura \ref{fig:eta-pedoni-norm} 
+dove, soprattutto nel grafo di destra, è presente una curva particolarmente alta 
 nelle fasce più anziane, e un secondo picco nella categoria \columnstyle{18-29 anni}.
 Anche nel grafo di sinistra è presente la stessa impennata in corrispondenza 
-della seconda fascia, mentre la categoria \columnstyle{65+} non 
+della seconda fascia, mentre nei \columnstyle{65+} non 
 risulta particolarmente alta.
 
 Si può speculare che l'incremento di morti nelle fasce più anziane, sia dovuto al 
 fatto che questi ultimi siano più propensi all'essere feriti in un incidente. 
-Mentre, per la prima categoria, può essere che, soprattutto tra i più giovani
-per la minore esperenza alla guida, 
-questi preferiscano ancora muoversi a piedi invece che in macchina.
+Le categorie centrali, in particolare \columnstyle{18-29 anni}, una volta 
+aggiustati i calcoli per popolazione, sembrano essere comunque quelle più 
+coinvolte in sinistri.
 
 \subsection{Età dei conducenti coinvolti in incidenti}
 
