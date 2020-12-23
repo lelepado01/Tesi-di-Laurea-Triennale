@@ -2,24 +2,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-def count_people(row, campi) -> int: 
-    count = 0
-    if row[campi[0]] != '  ' and row[campi[0]] != ' ':  
-        if row[campi[1]] == '  ' or row[campi[1]] == ' ':
-            count += 1
-
-    return count
-
-def get_people_in_vehicles(dataset : pd.DataFrame, fields): 
-    res = {}
-    for index in range(0, len(dataset)): 
-        res[index] = 0
-
-    for index, row in dataset.iterrows(): 
-        res[index] = count_people(row, fields)
-
-    return pd.Series(res)
-
 campi = ['veicolo__a___sesso_conducente', 'veicolo__a___et__passegger12']
 campi_2 = ['veicolo__a___sesso_conducente', 'veicolo__a___sesso_passegg37']
 

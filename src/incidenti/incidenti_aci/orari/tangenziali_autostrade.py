@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import sys
 sys.path.append("src")
-
 import heatmap as H
 
 def sum_columns(data : pd.DataFrame, normalize = False, name=None) -> pd.Series: 

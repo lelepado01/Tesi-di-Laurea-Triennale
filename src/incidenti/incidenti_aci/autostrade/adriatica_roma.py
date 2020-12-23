@@ -31,12 +31,12 @@ adriatica = data[data['CODICE'] == 'SS01601']
 adriatica = sum_columns(adriatica[mesi])
 raccordo = sum_columns(raccordo[mesi])
 
-# df = pd.DataFrame([adriatica, raccordo], ['Adriatica', 'Raccordo Anulare Roma']).transpose()
+df = pd.DataFrame([adriatica, raccordo], ['Adriatica', 'Raccordo Anulare Roma']).transpose()
 
-# df.plot.bar(width=0.9, color=['#a1cc61', '#61a1cc'])
-# plt.ylabel("Numero di incidenti al mese (2018)")
-# plt.tight_layout()
-# plt.show()
+df.plot.bar(width=0.9, color=['#a1cc61', '#61a1cc'])
+plt.ylabel("Numero di incidenti al mese (2018)")
+plt.tight_layout()
+plt.show()
 
 # racc_mean = raccordo.mean()
 # print((raccordo['Agosto'] - racc_mean) / racc_mean)
