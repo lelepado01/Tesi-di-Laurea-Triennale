@@ -1,6 +1,4 @@
 
-# GRAFO 3.6 (week_weekend_milano.png)
-
 import pandas as pd
 import matplotlib.pyplot as plt
 

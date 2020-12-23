@@ -29,14 +29,9 @@ df = df[[1,2,3,4]].transpose()
 
 perc = tipo_incidenti['natura_incidente']
 perc = label_utils.join_labels(perc, "dataset/incidenti/istat/Classificazioni/natura_incidente.csv")
-perc = perc.value_counts(normalize=True)
+perc = perc.value_counts(normalize=False)
 
-# Sbandamento                0.088576
-# Tamponamento               0.186053
-# Scontro frontale           0.056302
-# Urto con ostacolo          0.049875
-
-df['tamponamento'] = df['tamponamento'] / 32104 # numero di incidenti di questo tipo
+df['tamponamento'] = df['tamponamento'] / 32104 # numero di incidenti di questo tipo (da perc)
 df['frontale'] = df['frontale'] / 9715
 df['ostacolo'] = df['ostacolo'] / 8606
 df['sbandamento'] = df['sbandamento'] / 15284

@@ -35,37 +35,3 @@ plt.legend(bbox_to_anchor=(1,1), loc="upper left")
 plt.tight_layout()
 plt.show()
 
-# Calcolo perc di incremento
-
-# def variazione_perc(x : float, y : float) -> float: 
-#     return (y / x) * 100 -100
-
-# path = "dataset/incidenti/istat/incidenti_"
-# for year in range(2010, 2014):
-#     dati = pd.read_csv(path + str(year) + ".txt", sep='\t')
-#     rimini_mese = dati[dati['provincia'] == 99]['mese'].value_counts().sort_index()
-
-#     index = 0
-#     for giorni_in_mese in [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]:
-#         rimini_mese.iloc[index] /= giorni_in_mese
-#         index += 1
-
-#     media = rimini_mese.mean()
-#     agosto = rimini_mese.iloc[7]
-
-#     print(str(year) + ": " + str(variazione_perc(media, agosto)))
-
-# Incremento rispetto alla media
-# 2010: 63.75
-# 2011: 60.49
-# 2012: 45.93
-# 2013: 51.82
-# 
-# Invece per Luglio?
-# 2010: 101.72
-# 2011: 54.6  
-# 2012: 75.97 
-# 2013: 116.37
-
-
-

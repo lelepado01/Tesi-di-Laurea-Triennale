@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 import sys
 sys.path.append("src/")
 import label_utils
-import heatmap as H
 
 data = pd.read_csv("dataset/incidenti/istat/incidenti_2018.txt", sep="\t")
 
