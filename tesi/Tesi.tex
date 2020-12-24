@@ -2494,13 +2494,16 @@ un'impennata di incidenti nella prima heatmap.
 %\clearpage
 \subsection{Le strade pericolose in provincia di Milano}
 
-\'E anche possibile approfondire, allo stesso modo del calcolo degli incidenti per 
-provincia, calcolando quali sono le strade più pericolose, per esempio, 
-a Milano.
+Approfondendo le informazioni del capitolo precedente, è possibile calcolare quali siano 
+le strade più pericolose, per esempio, a Milano. 
+Il dataset ACI infatti fornisce il nome delle strade su cui sono avvenuti gli incidenti, 
+tuttavia non presenta dati aggiuntivi sulla zona del sinistro, dunque per autostrade molto 
+estese, questa misurazione potrebbe presentare errori di vari chilometri. 
 
 Utilizzando il sito Geojson.io\footnote{\url{https://geojson.io/}}, 
 è stato possibile tracciare i percorsi delle principali autostrade in prossimità di 
-Milano. Il risultato è visibile nella figura \ref{fig:line-incidenti-milano}.
+Milano, come le Tangenziali Est e Ovest, la Torino-Trieste e la A1. 
+Il risultato è visibile nella figura \ref{fig:line-incidenti-milano}.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/autostrade/incidenti_line_chart.png}
@@ -2510,11 +2513,12 @@ Milano. Il risultato è visibile nella figura \ref{fig:line-incidenti-milano}.
 
 In particolare, dalla mappa \ref{fig:line-incidenti-milano}, si deduce che le 
 Tangenziali Ovest e Est, e l'autostrada Torino-Trieste, sono i tratti di 
-strada con più incidenti.
+strada con maggior numero di incidenti, con più di $150$ sinistri all'anno.
 
 Infine, se si avesse a disposizione la posizione precisa degli incidenti, 
-sarebbe possibile anche dividere queste tratte pericolose, in sezioni più piccole, 
-e controllare se esistano zone che alzano il volume di incidenti.
+sarebbe possibile anche dividere queste tratte, in sezioni più piccole, 
+e controllare se esistano zone che alzano il volume di incidenti, poichè 
+particolarmemte pericolose.
 
 %\clearpage
 \subsection{Esiste correlazione tra incidenti e feriti?}
