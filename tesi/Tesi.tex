@@ -2447,12 +2447,13 @@ Questo tipo di controllo verrà eseguito nei capitoli successivi.
 
 \subsection{Incidenti per provincia}
 
-Utilizzando, ancora una volta, i file geojson contenenti i limiti delle province, 
-è possibile creare delle heatmap raffiguranti quali tra queste hanno maggior 
-numero di incidenti.
+Utilizzando ancora una volta, i file geojson trovati sul repository github di 
+Guglielmo Celata, riguardanti questa volta le province, 
+è possibile creare delle heatmap raffiguranti in quali tra queste avvengano più 
+incidenti.
 
-Il calcolo, avendo a disposizione dati riguardanti strade provinciali e autostrade, 
-è stato realizzato per entrambi i casi.
+Avendo a disposizione dati riguardanti strade provinciali e autostrade, è stato realizzato 
+lo stesso calcolo per entrambi i casi.
 
 \begin{figure}
     \includegraphics[width=0.5\linewidth]{../src/provincia/lombardia_autostrade.png}
@@ -2468,7 +2469,7 @@ un maggior numero di incidenti.
 D'altra parte, per quanto riguarda le differenze, nelle province di Bergamo e Como, 
 i sinistri crescono molto nelle strade provinciali rispetto alle autostrade.
 
-Viene riportato lo stesso calcolo, per le province del Lazio.
+Lo stesso calcolo è stato eseguito per le province del Lazio.
 
 \begin{figure}
     \includegraphics[width=0.5\linewidth]{../src/provincia/lazio_autostrade.png}
@@ -2477,16 +2478,18 @@ Viene riportato lo stesso calcolo, per le province del Lazio.
     \label{fig:lazio-strade}
 \end{figure}
 
-Nella figura \ref{fig:lazio-strade} raffigurante il Lazio, va specificato che il numero 
-di incidenti su autostrade è molto più alto rispetto a quello su strade provinciali, 
+Per quanto riguarda la figura \ref{fig:lazio-strade} raffigurante il Lazio, va 
+specificato che il numero di incidenti su autostrade è molto più alto rispetto 
+a quello su strade provinciali, 
 fenomeno già osservato nella mappa \ref{fig:incidenti-per-regione}.
 
 Inoltre, la provincia di Frosinone ha un numero particolarmente alto di incidenti su 
 autostrade, mentre la provincia di Latina, al contrario, ha un maggiore incremento di 
 sinistri su strade provinciali.
 
-Non è difficile trovare il perchè di questi numeri, in quanto l'autostrada A01 passa 
-attraverso la provincia di Frosinone e non quella di Latina.
+Non è difficile trovare il motivo di questi numeri, in quanto l'autostrada A01 passa 
+attraverso la provincia di Frosinone e non quella di Latina, e conseguentemente provoca 
+un'impennata di incidenti nella prima heatmap. 
 
 %\clearpage
 \subsection{Le strade pericolose in provincia di Milano}
