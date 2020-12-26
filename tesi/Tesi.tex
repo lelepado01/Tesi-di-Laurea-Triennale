@@ -2523,10 +2523,13 @@ particolarmemte pericolose.
 %\clearpage
 \subsection{Esiste correlazione tra incidenti e feriti?}
 
-Esiste correlazione tra morti e incidenti, o tra morti e feriti?
-Ovviamente si attende un esito positivo a queste domande.
-L'indice di correlazione utilizzato è il coefficiente di Pearson, calcolato tramite la 
-formula: 
+Utilizzando i dataset ACI a disposizione, è possibile stabilire l'esistenza di 
+correlazione tra morti e incidenti, o tra morti e feriti?
+Ovviamente ci si aspetta che la risposta abbia un esito positivo, poichè 
+i campioni di feriti e morti sono strettamente collegati al numero di sinistri.
+
+L'indice di correlazione utilizzato è il coefficiente di Pearson, 
+calcolato tramite la formula: 
 
 \begin{center}
     $\rho_{X, Y} = \displaystyle \frac{cov(X, Y)}{\sigma_X \sigma_Y}$
@@ -2536,12 +2539,16 @@ formula:
     con: $\rho_{X, Y} \rightarrow [-1, 1]$
 \end{center}
 
-dove X e Y sono i due campioni di cui si vuole calcolare la correlazione, 
-\methodstyle{cov()} è la covarianza, e $\sigma_X$ è la deviazione standard del 
-campione X \cite{PROB_E_STATISTICA:3}.
+dove X e Y sono i due campioni tra cui si vuole calcolare la correlazione, 
+\methodstyle{cov()} restituisce la covarianza, e $\sigma_X$ è la deviazione standard del 
+campione X \cite{PROB_E_STATISTICA:3}. 
 
 Una volta divisi i dati, è possibile calcolare l'indice tramite il metodo 
 \methodstyle{corr()}, i risultati sono riportati nella seguente tabella.
+
+Il valore restituito dal metodo \methodstyle{corr()} è contenuto tra $-1$ e $1$ dove, 
+se il numero si avvicina a uno, è possibile dire che tra i due campioni esista correlazione 
+lineare, mentre la vicinanza all'altro estremo indica la presenza di correlazione inversa.
 
 \begin{center}
     \def\arraystretch{1.5}%  
@@ -2561,21 +2568,22 @@ Una volta divisi i dati, è possibile calcolare l'indice tramite il metodo
     \label{fig:corr-incidenti-feriti}
 \end{figure}
 
-Tracciando il grafo \ref{fig:corr-incidenti-feriti}, dei primi trenta valori 
+Tracciando il grafo \ref{fig:corr-incidenti-feriti}, contenente i primi trenta valori 
 del dataset ACI, è chiaramente visibile la correlazione tra 
-numero di incidenti e numero di feriti, in quanto nella maggior parte dei casi, 
-all'aumentare del numero di incidenti il numero di feriti cresce allo stesso modo.
+numero di incidenti e di feriti, in quanto nella maggior parte dei casi, 
+all'aumentare dei primi il volume dei secondi cresce allo stesso modo.
 
-L'unico dubbio che possa sorgere è che il numero di feriti sia maggiore del 
-numero di incidenti, tuttavia controllando il dataset, ogni 
-riga contiene un numero di feriti maggiore.
+L'unico dubbio che possa sorgere è che il numero di infortunati sia maggiore di quello 
+di incidenti, tuttavia controllando il dataset, ogni 
+riga contiene più feriti rispetto a sinistri.
 \'E possibile che il dataset contenga solo incidenti con almeno un ferito, 
 e quindi ignori tutti i sinistri non particolarmente significativi.
 D'altra parte, tenendo conto che si sono utilizzati dati raccolti lungo 
-le autostrade, è possibile che la maggior parte dei sinistri comporti 
+le autostrade, è possibile che la maggior parte degli scontri comporti 
 un alto numero di feriti. 
-Nella tabella sottostante sono  mostrate le prime righe del dataset, con i 
-rispettivi numeri di incidenti e feriti. 
+Nella tabella sottostante è raffigurato un estratto del dataset ACI, 
+di cui si sono prese in considerazione le colonne principali, più 
+rilevanti per questo calcolo. 
 
 \begin{center}
     \def\arraystretch{1.5}%  
@@ -2593,14 +2601,15 @@ rispettivi numeri di incidenti e feriti.
     \end{tabular}
 \end{center}
 
-Il coefficiente di Pearson, per quanto riguarda Incidenti e Feriti, 
+Il coefficiente di Pearson, per quanto riguarda i campi \columnstyle{Incidenti} 
+e \columnstyle{Feriti}, 
 è molto vicino a uno, quindi i due campioni sono strettamente correlati.
 Nonostante, in generale, correlazione non implichi causa o effetto, cioè, non 
 è detto che due fattori correlati si influenzino in alcun modo, in questo caso è 
-difficile pensare che il numero di incidenti non sia alla causa del aumenare o diminuire 
-del numero di feriti.
+difficile pensare che il numero di incidenti non sia il motivo dell'aumentare o diminuire 
+dei feriti.
 I coefficienti riguardanti i morti sono molto meno vicini a uno, probabilmente 
-per il minor numero di incidenti mortali, che rendono il campione più ristretto.
+per il minor numero di sinistri mortali, che rende il campione più ristretto.
 
 \subsection{Le autostrade più pericolose}
 
