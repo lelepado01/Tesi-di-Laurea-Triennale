@@ -563,7 +563,7 @@ Invece, per quanto riguarda il traffico in tempo
 reale, questo è disponibile, ma non è particolarmente utile per la quarantena dovuta al 
 Covid-19, che riduce notevolmente il volume di automobili. 
 Per quanto fosse stato possibile realizzare comunque uno script per effettuare scraping della 
-quantità di traffico nelle strade, registrando il colore delle direttive per ogni orario della 
+quantità di traffico nelle strade, registrando il colore delle direttrici per ogni orario della 
 giornata nei periodi interessati, si è optato per la ricerca di un altro dataset.
 
 Si è deciso, dunque, di utilizzare i dati riguardanti gli ingressi in area C, 
@@ -2634,7 +2634,7 @@ Non è una sorpresa che le prime posizioni della lista coincidano
 anche con le strade più trafficate, come l'Autostrada del Sole e l'Adriatica, 
 tuttavia sono anche presenti, due strade statali, la SS1 e la SS16. 
 
-La motivazione dell'alto numero di incidenti su queste direttive, potrebbe essere 
+La motivazione dell'alto numero di incidenti su queste direttrici, potrebbe essere 
 la lunghezza di queste. Infatti entrambe sono strade che corrono lungo tutta la 
 costa Italiana da nord a sud e, nella maggior parte della loro estensione, 
 hanno solamente due corsie.
@@ -2695,7 +2695,7 @@ sia registrata con un altro nome.
 
 \begin{figure}
     \includegraphics[width=0.5\linewidth]{img/pescara_ss16.png}
-    \caption{SS16 nella provincia di Pescara, all'ingresso in città cambia nome in SS714}
+    \caption{La SS16 nella provincia di Pescara. All'ingresso in città questa strada cambia nome in SS714}
     \label{fig:ss16-pescara}
 \end{figure}
 
@@ -2713,8 +2713,8 @@ si potrebbe controllare quanto questo fattore influisca sul volume di incidenti.
 
 \subsection{Le autostrade più utilizzate in estate cambiano a seconda dell'anno?}
 
-Una domanda che sorge spontanea è se le autostrade con più incidenti 
-cambino al cambiare dell'anno.
+Tornando a concentrarsi sulle autostrade, sarebbe interessante sapere se quelle 
+con più incidenti cambino al cambiare dell'anno.
 Una motivazione di questo fenomento potrebbe essere, il cambiamento 
 delle mode riguadanti le località di vacanza.
 Per esempio, nel 2018, le mete preferite sono state Puglia e 
@@ -2723,8 +2723,8 @@ una percentuale sostanziale di turisti si è recata in
 Emilia Romagna e Liguria\cite{REPORT_ISTAT_2019:1}.
 
 Avendo a disposizione i dati di tutte le annate, dal 2010 al 2018, 
-è anche possibile controllare se esistano anni con un volume di 
-incidenti particolare alto.
+è possibile controllare se esistano anni con un volume di 
+incidenti in Agosto particolarmente alto.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/agosto/vacanze_autostrade.png}
@@ -2734,14 +2734,15 @@ incidenti particolare alto.
 
 Controllando le prime cinque strade per incidentalità ogni anno, 
 raffigurate nel grafo \ref{fig:autostrade-anno}, si ottiene un'immagine 
-abbastanza stabile, in quanto gli itinerari in testa alla classifica sono 
-sempre gli stessi.
+abbastanza consistente, in quanto le direttrici in testa alla classifica sono 
+sempre le stesse.
+
 La strada statale Adriatica è sempre in prima posizione, con una media di $171.5$ 
-incidenti nel mese di Agosto.
+sinistri nel mese di Agosto.
 Le posizioni successive invece cambiano a seconda dell'anno, in particolare però, 
-l'autostrada A4 (Torino-Trieste) ha progressivamente aumentato il numero di 
-incidenti, evento possibilmente dovuto all'aumento di popolarita delle vacanze 
-in montagna anche in periodo estivo.
+nell'autostrada A4 (Torino-Trieste) il numero di incidenti è progressivamente cresciuto, 
+evento possibilmente dovuto all'aumento di popolarita delle vacanze 
+in montagna anche nel periodo estivo.
 
 Facendo utilizzo del dataset Istat riguardante il turismo in Italia, e in 
 particolare sfruttando due indicatori, Tasso di 
@@ -2762,16 +2763,17 @@ di montagna, come Trentino e Valle d'Aosta.
 La Lombardia, infine, è stata aggiunta per assicurarsi che il trend delle due regioni 
 di montagna non fosse comune a tutte le regioni del Nord Italia.
 
-Ciò che si può concludere, oltre al fatto che le zone di montagna hanno 
+Ciò che si può concludere, oltre al fatto che le zone di montagna abbiano 
 un tasso di turisticità particolarmente alto, probabilmente per il numero 
 ristretto di abitanti, 
-è che, a partire dal 2015, è presente un aumento di turisti nelle località 
-di montagna del Nord Italia, che non è visibile nelle altre regioni.
+è che, a partire dal 2015, è presente una crescita nel volume di turisti nelle località 
+del Nord Italia a eccezione della Lombardia, che non è visibile nelle 
+destinazioni di mare.
 
-In particolare, rispetto al 2015, nel 2018 in Trentino si ha un incremento 
+In particolare, rispetto al 2015, in Trentino nel 2018 si ha un incremento 
 di turisti percentuale del $11.9$\%, mentre eseguendo lo stesso calcolo con la 
 media\footnote{Calcolata sull'insieme di anni disponibili, quindi 
-a partire dal 1995 fino al 2018} l'incremento è del $14.7$\%.
+a partire dal 1995 fino al 2018} l'aumento è del $14.7$\%.
 
 In Valle d'Aosta, allo stesso modo, l'incremento di turisti nel 2018 
 rispetto al 2015 è del $13$\%, mentre rispetto alla media annuale 
