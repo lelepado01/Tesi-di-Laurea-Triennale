@@ -2654,6 +2654,10 @@ pericolose lungo queste strade.
 Un modo per aumentare la precisione dei dati a disposizione, potrebbe essere il 
 dividere gli incidenti sulle strade statali, in base alla provincia in cui sono avvenuti.
 
+Nonostante il procedimento sia stato eseguito solo per le strade statali, gli stessi dati 
+sono presenti anche per le autostrade e le strade provinciali, e un'analisi più 
+approfondita potrebbe includere queste informazioni.
+
 \begin{figure}
     \includegraphics[width=0.5\linewidth]{../src/incidenti/incidenti_aci/statali/ss01_tratti.png}
     \includegraphics[width=0.5\linewidth]{../src/incidenti/incidenti_aci/statali/ss16_tratti.png}
@@ -2661,7 +2665,51 @@ dividere gli incidenti sulle strade statali, in base alla provincia in cui sono 
     \label{fig:incidenti-strade-statali}
 \end{figure}
 
+Nel grafo sinistro della figura \ref{fig:incidenti-strade-statali}, contiene il numero di 
+incidenti, oltre a quello di persone ferite, avvenuti in ogni provincia attraversata dalla SS1. 
+La provincia in cui avvengono più sinistri è quella di Savona, mentre le grandi città come 
+Roma e Livorno hanno valori nella media o poco superiori.
 
+Lo stesso grafo, realizzato per la SS16, è rappresentato nella figura destra dell'immagine 
+\ref{fig:incidenti-strade-statali}. 
+In questo caso, il picco di scontri avviene nella provincia 
+di Bari, con quasi $200$ incidenti e $400$ feriti nel 2018. 
+
+Una provincia che salta all'occhio invece, per dei valori bassi è quella di Pescara. 
+Dopo aver eseguito il codice sottostante, tuttavia, si è osservato che tutte le righe 
+del dataset per questa zona riportano valori uguali a zero, eccetto una. 
+
+\begin{lstlisting}
+    data = pd.read_csv("dataset/incidenti/aci/autostrade/localizzazione_2018.csv")
+    ss16 = data[data['CODICE'] == 'SS01601']
+
+    pescara = ss16[ss16['PROVINCIA'] == 'Pescara'][['INC', 'FER']]
+\end{lstlisting}
+
+A prima osservazione questo risulato potrebbe essere considerato un errore nei dati. 
+Tuttavia, considerando che l'estensione della SS16 in questa provincia non 
+è particolarmente ampia, è plausibile che durante l'anno sia avvenuto un solo incidente. 
+A supportare questa teoria, nella figura \ref{fig:ss16-pescara} si osserva come 
+questa direttrice, all'ingresso in città, diventi strada urbana e, molto probabilmente, 
+sia registrata con un altro nome.
+
+\begin{figure}
+    \includegraphics[width=0.5\linewidth]{img/pescara_ss16.png}
+    \caption{SS16 nella provincia di Pescara, all'ingresso in città cambia nome in SS714}
+    \label{fig:ss16-pescara}
+\end{figure}
+
+Da un'analisi di questo tipo, non è facile trarre conclusioni approfondite, in quanto la 
+zona in cui può essere avvenuto l'incidente è particolarmente ampia, e il numero maggiore di 
+sinistri in un luogo potrebbe essere semplicemente dovuto alla maggiore estensione della 
+strada in quella provincia. 
+Inoltre, a eccezione di alcune province, come Bari, Savona, Viterbo e Massa-Carrara, 
+la maggior parte degli scontri è più o meno omogeneamente distributo lungo tutta 
+l'estensione delle direttrici. 
+
+Se si avesse a disposizione la lunghezza delle due strade in questione, 
+o anche il flusso di automobili nelle province attraversate, 
+si potrebbe controllare quanto questo fattore influisca sul volume di incidenti. 
 
 \subsection{Le autostrade più utilizzate in estate cambiano a seconda dell'anno?}
 

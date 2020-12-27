@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 data = pd.read_csv("dataset/incidenti/aci/autostrade/localizzazione_2018.csv")
 ss16 = data[data['CODICE'] == 'SS01601']
 
+print(ss16[ss16['PROVINCIA'] == 'Pescara'][['INC', 'FER']])
+
 def sum_fields(dataset : pd.DataFrame, select_field): 
     df = {}
     for d in dataset[select_field].unique(): 
