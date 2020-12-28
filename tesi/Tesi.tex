@@ -358,7 +358,7 @@ raffigurante i varchi di entrata e i limiti del centro storico,
 proveniente dal sito del comune di 
 Milano\footnote{\url{https://www.comune.milano.it/aree-tematiche/mobilita/area-c}}. 
 
-Per quanto anche questo stimatore non sia tra i più accurati, ci si può aspettare che 
+Per quanto anche questa stima non sia tra le più accurate, ci si può aspettare che 
 il numero di accessi corrisponda, almeno in piccola parte, al traffico di Milano.
 
 \section{Dati riguardanti le zone di Milano}
@@ -1170,7 +1170,7 @@ Va comunque sottolineato che le percentuali di incidenti provocati da queste tip
 veicoli, sono tutte al di sotto del $10$\%, e che la sezione più ingente di sinistri è 
 provocata dalle automobili private. 
 Inoltre, utilizzare il numero di incidenti come stimatore del traffico, potrebbe 
-non portare a un risultato ottimale.
+non portare a un risultato ottimale. \todo{cita libro stimatore}
 
 %\clearpage
 \section{Dati Istat su conducenti e passeggeri}
@@ -2788,9 +2788,13 @@ con $99$ scontri nel 2011, e $97$ nel 2018.
 \subsection{L'incidentalità su autostrade dipende dai mesi dell'anno?}
 
 Un'altra questione, di cui ci si è occupati tramite dati Istat in precedenza, è 
-quella dei mesi con maggior numero di incidenti.
-Il dataset ACI permette di individuare cambiamenti nella tendenza trovata nei 
-capitoli precedenti, dividendo i sinistri in base alla strada.
+quella dei mesi con maggiore incidentalità.
+Il dataset ACI permette di individuare gli stessi cambiamenti di tendenza trovati nei 
+capitoli precedenti, in più però permette di dividere i sinistri in base alla strada.
+
+In particolare, nell'analisi precedente si era individuato un decremento di incidenti 
+nei mesi estivi nella zona di Milano, e il comportamento opposto nelle province di 
+Rimini e Aosta.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/autostrade/mesi_autostrade.png}
@@ -2798,13 +2802,13 @@ capitoli precedenti, dividendo i sinistri in base alla strada.
     \label{fig:incidenti-per-mese}
 \end{figure}
 
-La heatmap \ref{fig:incidenti-per-mese} mostra come, su alcune autostrade, come il 
-Grande Raccordo Anulare a Roma, il numero di incidenti diminuisca durante i mesi 
+La heatmap \ref{fig:incidenti-per-mese} mostra che su alcune autostrade, come il 
+Grande Raccordo Anulare a Roma, il numero di incidenti diminuisce durante i mesi 
 estivi.
-La tendenza opposta avviene, per esempio, sulla A1 e la A4, con picchi di 
-sinistri in Giugno e Luglio per, come precendentemente spiegato, l'aumento di 
-traffico dovuto alle partenze per le vacanze.
-Sull'Adriatica e sull'Aurelia, anche in questo caso prevalgono incidenti 
+D'altra parte, la tendenza opposta avviene, per esempio, sulla A1 e la A4, 
+con picchi di sinistri in Giugno e Luglio per, come precendentemente spiegato, 
+l'aumento di traffico dovuto alle partenze per le vacanze.
+Sull'Adriatica e sull'Aurelia, infine, prevalgono scontri 
 in Luglio e Agosto e in generale nei mesi estivi.
 
 \begin{figure}
@@ -2815,15 +2819,19 @@ in Luglio e Agosto e in generale nei mesi estivi.
 
 Isolando gli incidenti avvenuti sul Grande Raccordo Anulare a Roma, e quelli avvenuti 
 sull'Adriatica, raffigurati nel grafo \ref{fig:adriatica-roma}, si osserva, 
-nel primo caso, un numero di inciedenti per mese molto omogeneo, a eccezione per il 
+nel primo caso, un numero di sinistri per mese molto omogeneo, a eccezione del 
 mese di Agosto, quando avviene un calo del $46$\% rispetto alla media mensile. 
 D'altra parte, nel caso dell'Adriatica, è visibile una campana con apice nei 
 mesi di Luglio e Agosto, comportamento opposto rispetto a quello nell'autostrada 
 romana.
 
 Come ultimo quesito, bisognerebbe domandarsi se ha senso dire che il mese dell'anno 
-influenzi l'incidentalità, o se invece, non siano tutti gli altri fattori, 
-nascosti in questa indagine, che variano mensilmente, ad avere maggiore peso. 
+influenzi l'incidentalità. 
+
+Di certo il questo indicatore sembra essere un buon stimatore 
+per i numero di sinistri.
+Tuttavia va ricordato che sono tutti i fattori 
+nascosti in questa indagine, che variano mensilmente, a influenzare l'esito. 
 
 %\clearpage%
 \subsection{In quali orari avvengono incidenti sulle autostrade?}
