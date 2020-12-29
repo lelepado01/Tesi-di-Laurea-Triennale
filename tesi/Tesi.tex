@@ -3082,26 +3082,31 @@ si potrebbero chiedere ai produttori degli opendata che hai man mano trovato}
 \chapter{Appendice A: Codice}
 
 Tutti gli script utilizzati per questo lavoro sono reperibili a questa pagina 
-github\footnote{\url{https://github.com/lelepado01/Tirocinio}}.
+github: \url{https://github.com/lelepado01/Tirocinio}.
 
 Il repository è diviso in tre cartelle principali, \columnstyle{dataset}, \columnstyle{src} 
-e \columnstyle{tesi}. La prima contiene tutti i dataset utilizzati, divisi per 
-argomento, e alcuni file riguardanti le stime realizzate, come la percentuale di 
-conducenti maschi e femmine.
+e \columnstyle{tesi}. La prima contiene tutti i file di informazioni utilizzati, divisi per 
+argomento, e alcuni documenti di testo riguardanti le stime realizzate, come la percentuale di 
+conducenti maschio e femmina.
 
-La cartella \columnstyle{tesi} contiene le immagini utilizzate nella relazione e il codice 
-sorgente\LaTeX del pdf.
+La cartella \columnstyle{tesi} contiene la maggior parte delle immagini utilizzate 
+nella relazione\footnote{Ci si riferisce alle immagini realizzate tramite screenshot 
+da Google Maps e altri siti, non ai grafi.} 
+e il codice sorgente \LaTeX del pdf.
 
-Infine, nella directory \columnstyle{src} è contenuto il codice sorgente per i grafi, 
-le mappe e le stime, diviso per argomento. Ogni grafo e mappa è associato a uno script python 
-con lo stesso nome.
+Infine, nella directory \columnstyle{src} è contenuto il codice sorgente utilizzato per realizzare 
+i grafi, le mappe e le stime, diviso per argomento. 
+Ogni grafo è associato allo script python che ne permette la creazione, registrato con 
+lo stesso nome, e estensione \columnstyle{.py}. 
+Quindi se in una cartella fosse presente l'immagine \columnstyle{esempio.png}, lo script con 
+cui questa è stata creata avrà nome \columnstyle{esempio.py}.
 
-Se si volesse trovare il codice del grafo raffigurante l'incremento di incidenti 
-dal 2010 al 2018, si troverebbero i dataset utilizati nella directory:
+Invece, se si volesse trovare il codice del grafo raffigurante l'incremento di incidenti 
+dal 2010 al 2018, i dataset utilizati si troverebbero nella directory:
 \skipline
 \indent\columnstyle{dataset/incidenti/incidenti\_istat}
 \skipline
-Mentre il codice sorgente, sarebbe situato al percorso:
+Mentre il codice sorgente e le immagini sarebbero situate al percorso:
 \skipline
 \indent\columnstyle{src/incidenti/incidenti\_senza\_coords/anno}
 
