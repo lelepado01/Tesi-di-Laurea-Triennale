@@ -209,12 +209,15 @@ a cui è avvenuto il sinistro, come rettilineo, rotonda o semaforo.
     \indent tipo\_di\_strada: numero di carreggiate della strada,\\
     \indent pavimentazione: tipo di pavimentazione,\\
     \indent intersezione\_o\_non\_interse3: tipo di intersezione,\\
-    \indent segnaletica, condizioni\_meteorologiche,\\natura\_incidente,\\
-    \indent tipo\_veicolo\_a ; questo campo è ripetuto per altri due veicoli,\\
-    \indent veicolo\_\_a\_\_\_et\_\_conducente: questi campi sono ripetuti anche per i passeggeri,\\
+    \indent segnaletica : tipo di segnaletica presente,\\
+    \indent condizioni\_meteorologiche, natura\_incidente,\\
+    \indent tipo\_veicolo\_a : questo campo è ripetuto per altri due veicoli,\\
+    \indent veicolo\_\_a\_\_\_et\_\_conducente: questo e i due campi successivi sono ripetuti anche per i passeggeri,\\
     \indent veicolo\_\_a\_\_\_sesso\_conducente,\\veicolo\_\_a\_\_\_esito\_conducente, \\
-    \indent morti\_entro\_24\_ore, morti\_entro\_30\_giorni,\\
-    \indent feriti, Ora, trimestre\\
+    \indent morti\_entro\_24\_ore,\\
+    \indent morti\_entro\_30\_giorni : questo insieme non contiene la categoria precedente,\\
+    \indent feriti, Ora,\\
+    \indent trimestre : prima del 2014 questo campo è sostituito da 'anno'\\
 )}
 
 Per quanto riguarda i dati geolocalizzati, 
@@ -234,9 +237,9 @@ l'orario, il mese o il giorno della settimana.
 \lighttext{(\\
     \indent COD REG,REGIONE,\\
     \indent COD PROV,PROVINCIA,\\
-    \indent NOME STRADA,\\
+    \indent NOME STRADA : codice e nome della strada,\\
     \indent INC: numero di incidenti (ce ne sono più per riga),\\
-    \indent di cui MORTALI,MOR,FER,\\
+    \indent MOR,FER,\\
     \indent NVEI: numero di veicoli coinvolti\\
 )}
 
@@ -361,8 +364,10 @@ mese o località.
 Tra questi si è utilizzata la tipologia contenente orari e data dell'accesso.
 
 \lighttext{(\\
-    \indent year,\\
-    \indent month,day,hour,\\
+    \indent year : anno dell'accesso in area C,\\
+    \indent month: mese dell'accesso in area C,\\
+    \indent day: giorno dell'accesso in area C,\\
+    \indent hour: ora dell'accesso in area C,\\
     \indent totale: numero di accessi nella riga,\\
     \indent areac: booleano che indica se l'area C sia attiva o meno\\
 )}
@@ -384,8 +389,8 @@ oltre a informazioni sulla superficie e il perimetro delle zone.
 
 \lighttext{(\\
     \indent MUNICIPIO: id della zona,\\
-    \indent AREA,\\
-    \indent PERIMETRO,\\
+    \indent AREA : della zona,\\
+    \indent PERIMETRO: della zona,\\
     \indent geometry: insieme di punti che formano il poligono\\
 )}
 
@@ -417,8 +422,8 @@ Per esempio, utilizzando una lista di centraline meteo completa, come quella su
 Centrometeolombardo\footnote{\url{http://www.centrometeolombardo.com/content.asp?CatId=272&ContentType=Stazioni}}, 
 si nota che mancano quelle di Abbiategrasso Sud e Cardorna.
 
-Inoltre, per mancanza di dati precisi sul giorno degli incidenti, avere informazioni con 
-posizione così precisa è superfluo.
+Inoltre, per mancanza di dati precisi sul giorno degli incidenti, è superfluo avere 
+informazioni con posizione così precisa.
 Si è dunque optato per un dataset contenente temperature, umidità, e velocità del vento, 
 trovato sul sito Zenodo\footnote{\url{https://zenodo.org/record/3992354}}.
 
@@ -429,7 +434,8 @@ ora a Milano, a partire dal 2008, fino al 2018.
     \indent Date\_Time: campo che contiene giorno, mese e anno,\\
     \indent Temperature: in gradi Celsius,\\
     \indent Dew\_Point: temperatura di condensazione,\\
-    \indent Humidity, Wind\_Speed\\
+    \indent Humidity : umidità,\\
+    \indent Wind\_Speed : velocità del vento\\
 )}
 
 \section{Dati riguardanti trasporti pubblici}
