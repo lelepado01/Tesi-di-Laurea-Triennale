@@ -3,8 +3,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % o article, book, ...
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % packages...
 \usepackage[utf8]{inputenc}
@@ -23,33 +21,38 @@
 \usepackage{graphicx}
 \usepackage{csquotes}
 \usepackage{color, colortbl}
+\usepackage{courier}
 
 % draft più leggibile
 \usepackage[a4paper,top=2cm,bottom=2cm,outer=5cm,verbose,headheight=1cm,heightrounded]{geometry}
 \setlength{\marginparwidth}{4.5cm} %per farci stare todonotes
 
-
-\lstset{ %
-    language=Python,                % choose the language of the code
-    basicstyle=\footnotesize,       % the size of the fonts that are used for the code
-    numbers=left,                   % where to put the line-numbers
-    numberstyle=\footnotesize,      % the size of the fonts that are used for the line-numbers
-    stepnumber=1,                   % the step between two line-numbers. If it is 1 each line will be numbered
-    numbersep=5pt,                  % how far the line-numbers are from the code
-    backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
-    showspaces=false,               % show spaces adding particular underscores
-    showstringspaces=false,         % underline spaces within strings
-    showtabs=false,                 % show tabs within strings adding particular underscores
-    frame=single,                   % adds a frame around the code
-    tabsize=2,                      % sets default tabsize to 2 spaces
-    captionpos=b,                   % sets the caption-position to bottom
-    breaklines=true,                % sets automatic line breaking
-    breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
-    escapeinside={\%*}{*)}          % if you want to add a comment within your code
-}
-
+\definecolor{CodeGray}{gray}{0.95}
 \definecolor{TableGray}{gray}{0.9}
 \definecolor{LightTextColor}{rgb}{0.5,0.5,0.5}
+
+\lstnewenvironment{code}[1][]%
+{
+   \noindent
+   \minipage{\linewidth} 
+   \vspace{0.5\baselineskip}
+   \lstset{
+        language=Python,
+        basicstyle=\ttfamily\footnotesize,
+        numbers=left,                   % where to put the line-numbers
+        numberstyle=\ttfamily\footnotesize,      % the size of the fonts that are used for the line-numbers
+        stepnumber=1,                   % the step between two line-numbers. If it is 1 each line will be numbered
+        numbersep=5pt,                  % how far the line-numbers are from the code
+        backgroundcolor=\color{CodeGray},  % choose the background color. You must add \usepackage{color}
+        showspaces=false,               % show spaces adding particular underscores
+        showstringspaces=false,         % underline spaces within strings
+        showtabs=false,                 % show tabs within strings adding particular underscores
+        tabsize=2,                      % sets default tabsize to 2 spaces
+        captionpos=b,                   % sets the caption-position to bottom
+        breaklines=true,                % sets automatic line breaking
+        breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+        #1}}
+{\endminipage}
 
 \newcommand{\columnstyle}[1]{\texttt{#1}}
 \newcommand{\filenamestyle}[1]{\texttt{#1}}
@@ -263,6 +266,12 @@ Overpass API\footnote{\url{https://overpass-turbo.eu/}},
 specifiche per OpenStreetMaps, utilizzando il codice riportato nel riquadro seguente: 
 
 \lstinputlisting{../src/codice_per_dati/overpass_query.txt}
+
+\begin{code}
+[out:json];
+node({{bbox}})["highway"="speed_camera"];
+out meta;
+\end{code}
 
 Il dataset ricavato, purtroppo, non contiene informazioni riguardanti quando gli 
 autovelox siano stati installati, fattore importante per capirne l'effetto 
@@ -661,15 +670,15 @@ numero di strade. Avendo a disposizione l'area dei vari municipi,
 è possibile calcolare la media di incidenti al chilometro quadrato per zona.
 I risultati sono riportati nella tabella sottostante.
 
-\begin{lstlisting}    
-    inc = gp.GeoSeries(df).sort_index()
+\begin{code}    
+inc = gp.GeoSeries(df).sort_index()
 
-    area = pd.Series(data['AREA'], index=data['MUNICIPIO'])
-    incidenti = pd.Series(inc, index=inc.index)
+area = pd.Series(data['AREA'], index=data['MUNICIPIO'])
+incidenti = pd.Series(inc, index=inc.index)
 
-    # trasformazione in chilometri quadri
-    incidenti_per_zona = (incidenti / area) * 1000000 
-\end{lstlisting}
+# trasformazione in chilometri quadri
+incidenti_per_zona = (incidenti / area) * 1000000 
+\end{code}
 
 \begin{center}
     \def\arraystretch{1.5}%  
@@ -716,7 +725,7 @@ ottenuti con il numero di incidenti in zone più ristrette, per esempio attorno 
     \label{fig:zona-loreto}
 \end{figure}
 
-\begin{lstlisting}
+\begin{code}
     loreto = geometry.Polygon([p1, p2, p4, p3])
 
     loreto_incidenti = 0
@@ -728,7 +737,7 @@ ottenuti con il numero di incidenti in zone più ristrette, per esempio attorno 
 
     area_loreto = loreto.area * data['AREA'].iloc[0] / geometry.Polygon(data['geometry'].iloc[0]).area
     area_loreto_inc = loreto_incidenti * 1000000 / area_loreto
-\end{lstlisting}
+\end{code}
 
 Il numero di incidenti per chilometro che risultano, nell'area considerata in figura 
 \ref{fig:zona-loreto}, sono $231.06$, considerando che il massimo ottenuto per zona, 
@@ -820,7 +829,7 @@ linee di trasporti pubblici.
     \label{fig:zona-navigli-rect}
 \end{figure}
 
-\begin{lstlisting}
+\begin{code}
     data = gp.read_file("dataset/zone_milano/zone.geojson").to_crs(epsg=3857)
     autobus = data[data['name'] == "Navigli Autobus"]
     street = data[data['name'] == "Navigli Incidenti"]
@@ -838,7 +847,7 @@ linee di trasporti pubblici.
         
         if street_rect.contains(point): 
             inc_s += 1
-\end{lstlisting}
+\end{code}
 
 Il risultato, conferma che avvengono $167.09$ incidenti per chilometro 
 nel viale in cui sono presenti trasporti pubblici e, per quanto non sia nella media per la zona 
@@ -923,7 +932,7 @@ Una volta creata l'area delle strade in pavè, è possibile calcolare quanti son
 incidenti che avvengono in queste zone e confrontarlo con il numero di incidenti 
 nelle strade asfaltate.
 
-\begin{lstlisting}
+\begin{code}
     inc_in_pave = 0
     for rect in pave['geometry']: 
         rect = geometry.Polygon(rect)
@@ -937,7 +946,7 @@ nelle strade asfaltate.
         area_pave += geometry.Polygon(rect).area
 
     incidenti_per_km = inc_in_pave * 10**6 / area_pave
-\end{lstlisting}
+\end{code}
 
 Il numero di incidenti per chilometro quadrato, nelle strade in pavè è $229.45$, che 
 è un valore particolarmente alto, anche se viene confrontato con il numero di 
@@ -980,7 +989,7 @@ e confrontarli con le vie della tabella, salvando le posizioni che coincidono.
 Il risultato è rappresentato nella mappa sul lato sinistro della 
 figura \ref{fig:autovelox-indici}.
 
-\begin{lstlisting}[language=Python]
+\begin{code}[language=Python]
     path = "dataset/autovelox/autovelox_milano.geojson"
     autovelox = gp.read_file(path).to_crs(epsg=3857)
     layer_autovelox = autovelox.plot(figsize=(11,9), color="red")
@@ -993,7 +1002,7 @@ figura \ref{fig:autovelox-indici}.
     
     cx.add_basemap(ax=layer_autovelox)
     plt.show()
-\end{lstlisting}
+\end{code}
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/autovelox/autovelox_2014.png}
@@ -1062,10 +1071,10 @@ sulla base dell'area utilizzata.
 Al dataset degli autovelox sono aggiunte due colonne, una contenente gli incidenti totali, 
 l'altra contenente gli incidenti per chilometro.
 
-\begin{lstlisting}
+\begin{code}
     autovelox_2014['incidenti_vicini'] = gp.GeoSeries(df)
     autovelox_2014['incidenti_pesati'] = autovelox_2014['incidenti_vicini'] / 3.14
-\end{lstlisting}
+\end{code}
 
 Questa ultima colonna, in particolare, è divisa per 3.14 perchè l'area del cerchio 
 è data dalla formula: 
@@ -1091,14 +1100,14 @@ quello della zona municipale.
     \label{fig:confronto-autovelox}
 \end{figure}
 
-\begin{lstlisting}
+\begin{code}
     incremento_percentuale_totale = 0
     for km, zona in zip(data['Incidenti per chilometro'], data['Incidenti per zona']): 
         incremento_percentuale = (km - zona) * 100 / zona
         incremento_percentuale_totale += incremento_percentuale
 
     print(incremento_percentuale_totale)
-\end{lstlisting}
+\end{code}
 
 Sarebbe interessante \quotestyle{catturare}, in un solo valore, l'incremento (o decremento) 
 globale, degli incidenti in zone vicine a 
@@ -1143,13 +1152,13 @@ la composizione di questi cambia al cambiare del tipo di strada.
 In altre parole, la percentuale, per esempio, di autotreni nelle autostrade, è diversa rispetto 
 a quella nelle strade provinciali? 
 
-\begin{lstlisting}[language=Python]
+\begin{code}[language=Python]
     # Dove 1,2,3 sono gli ID dei diversi tipi di strade urbane, 
     # mentre 4,5,6 gli ID delle strade extraurbane
 
     strade_urbane = data[(data['localizzazione_incidente'] == 1) | (data['localizzazione_incidente'] == 2) | (data['localizzazione_incidente'] == 3)]['tipo_veicolo_a']
     strade_extraurbane = data[(data['localizzazione_incidente'] == 4) | (data['localizzazione_incidente'] == 5) | (data['localizzazione_incidente'] == 6)]['tipo_veicolo_a']
-\end{lstlisting}
+\end{code}
 
 Il grafo \ref{fig:differenza-strade} rappresenta quali sono le categorie di veicoli 
 coinvolte con più frequenza in sinistri, per tre tipi di strade diverse, strade urbane, 
@@ -1427,13 +1436,13 @@ I grafi presentati indicano gli incidenti all'anno, normalizzati per numero di
 giorni settimanali e feriali, quindi gli incidenti totali della settimana sono divisi 
 per cinque giorni, mentre quelli del weekend per due, come mostrato nel codice sottostante.
 
-\begin{lstlisting}[language=Python]
+\begin{code}[language=Python]
     ora_weekend = data[data['giorno'] > 5]['Ora'].value_counts().sort_index()
     ora_week = data[data['giorno'] < 6]['Ora'].value_counts().sort_index()
 
     ora_week /= 5 * 52
     ora_weekend /= 2 * 52
-\end{lstlisting}
+\end{code}
 
 Le informazioni ricavate ricalcano in modo particolarmente preciso, soprattutto nelle ore del 
 pomeriggio, le ipotesi iniziali.
@@ -1501,7 +1510,7 @@ In particolare, tra traffico in area C a Milano e
 numero incidenti per orario, si è calcolato un coefficiente di Pearson uguale a $0.877$, 
 quindi è possibile dire che i due siano dataset linearmente correlati.
 
-\begin{lstlisting}
+\begin{code}
     # eseguito con dati del 2016
     accessi_area_c_per_ora = pd.Series()
     for f in data['hour'].unique():
@@ -1513,7 +1522,7 @@ quindi è possibile dire che i due siano dataset linearmente correlati.
     incidenti_per_ora = data[data['provincia'] == 15]['ora'].value_counts().sort_index()
 
     correlazione = accessi_area_c_per_ora.corr(incidenti_per_ora)
-\end{lstlisting}
+\end{code}
 
 Per quanto riguarda invece, il grafo nella metà bassa della 
 figura \ref{fig:rapporto-incidenti-traffico}, sono presenti tre picchi di 
@@ -1542,14 +1551,14 @@ Chiaramente, durante il weekend si hanno un numero più alto di incidenti negli 
 notturni, in particolare si hanno in media $5$ incidenti per serata in settimana, mentre il numero 
 quasi raddoppia a $9.4$ durante il Sabato e la Domenica sera.
 
-\begin{lstlisting}
+\begin{code}
     notte = data[(data['Ora'] < 7) | (data['Ora'] > 22)]
     ora_notte_week = notte[notte['giorno'] < 6]['Ora'].value_counts().sort_index()
     ora_notte_weekend = notte[notte['giorno'] > 5]['Ora'].value_counts().sort_index()
 
     ora_notte_week /= 5 * 52 
     ora_notte_weekend /= 2 * 52
-\end{lstlisting}
+\end{code}
 
 Il traffico, stimato tramite gli accessi all'area C, conferma questa tendenza?
 
@@ -2152,12 +2161,12 @@ Non tutte queste fasce, però, contengono lo stesso numero di anni di età,
 per esempio \columnstyle{30-44} contiene quindici anni, mentre 
 \columnstyle{18-20} ne contiene solo due.
 
-\begin{lstlisting}[language=Python]
+\begin{code}[language=Python]
     numero_anni = np.array([5, 5, 5, 3, 10, 15, 10, 10, 20])
 
     pedoni_feriti_vals = pedoni_feriti.values / numero_anni
     pedoni_morti_vals = pedoni_morti.values / numero_anni
-\end{lstlisting}
+\end{code}
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/pedoni/eta_pedoni.png}
@@ -2227,13 +2236,13 @@ Seguendo questa logica, per spostare i due anni di età nella categoria successi
 dell'insieme \columnstyle{15-19} per cinque e moltiplicarlo per due. 
 Il risultato ottenuto va aggiunto alla fascia \columnstyle{18-29}.
 
-\begin{lstlisting}
+\begin{code}
     correct_order =         ['0-5  ', '6-9  ', '10-14', '15-17', '18-29', '30-44', '45-54', '55-64','65+  ']
     perc_fascia = np.array( [3.9, 4.5, 4.8, 3.1, 12.1, 19, 18.2, 13.7, 19.3]) / 100
 
     pedoni_feriti_vals = pedoni_feriti.values / perc_fascia
     pedoni_morti_vals = pedoni_morti.values / perc_fascia
-\end{lstlisting}
+\end{code}
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/pedoni/eta_pedoni_norm.png}
@@ -2296,14 +2305,14 @@ contiene quindici anni, invece che solamente due. Sarebbe quindi opportuno
 normalizzare la percentuale di incidenti commessi, con una stima del numero di 
 guidatori nella rispettiva fascia di età.
 
-\begin{lstlisting}
+\begin{code}
     perc_fascia = np.array( [3.1, 12.2, 19, 18.2, 13.7, 19.3]) / 100
 
     incidenti_per_eta /= perc_fascia
     morti_per_eta /= perc_fascia
 
     indice_mortalita = morti_per_eta * 100 / incidenti_per_eta
-\end{lstlisting}
+\end{code}
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mortalita/indice_mort_norm.png}
@@ -2701,12 +2710,12 @@ Una provincia che salta all'occhio invece, per dei valori bassi è quella di Pes
 Dopo aver eseguito il codice sottostante, tuttavia, si è osservato che tutte le righe 
 del dataset per questa zona riportano valori uguali a zero, eccetto una. 
 
-\begin{lstlisting}
+\begin{code}
     data = pd.read_csv("dataset/incidenti/aci/autostrade/localizzazione_2018.csv")
     ss16 = data[data['CODICE'] == 'SS01601']
 
     pescara = ss16[ss16['PROVINCIA'] == 'Pescara'][['INC', 'FER']]
-\end{lstlisting}
+\end{code}
 
 A prima osservazione questo risulato potrebbe essere considerato un errore nei dati. 
 Tuttavia, considerando che l'estensione della SS16 in questa provincia non 
