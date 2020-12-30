@@ -31,6 +31,7 @@
 \definecolor{TableGray}{gray}{0.9}
 \definecolor{LightTextColor}{rgb}{0.5,0.5,0.5}
 
+\lstloadlanguages{Python}
 \lstnewenvironment{code}[1][]%
 {
    \noindent
@@ -264,8 +265,6 @@ realizzando una query per selezionare solo gli autovelox presenti a Milano.
 Per restringere il campo di ricerca a solo la città, si è fatto uso delle 
 Overpass API\footnote{\url{https://overpass-turbo.eu/}}, 
 specifiche per OpenStreetMaps, utilizzando il codice riportato nel riquadro seguente: 
-
-\lstinputlisting{../src/codice_per_dati/overpass_query.txt}
 
 \begin{code}
 [out:json];
@@ -726,17 +725,17 @@ ottenuti con il numero di incidenti in zone più ristrette, per esempio attorno 
 \end{figure}
 
 \begin{code}
-    loreto = geometry.Polygon([p1, p2, p4, p3])
+loreto = geometry.Polygon([p1, p2, p4, p3])
 
-    loreto_incidenti = 0
-    for point in incidenti['geometry']: 
-        point = geometry.Point(point)
+loreto_incidenti = 0
+for point in incidenti['geometry']: 
+    point = geometry.Point(point)
 
-        if loreto.contains(point): 
-            loreto_incidenti += 1
+    if loreto.contains(point): 
+        loreto_incidenti += 1
 
-    area_loreto = loreto.area * data['AREA'].iloc[0] / geometry.Polygon(data['geometry'].iloc[0]).area
-    area_loreto_inc = loreto_incidenti * 1000000 / area_loreto
+area_loreto = loreto.area * data['AREA'].iloc[0] / geometry.Polygon(data['geometry'].iloc[0]).area
+area_loreto_inc = loreto_incidenti * 1000000 / area_loreto
 \end{code}
 
 Il numero di incidenti per chilometro che risultano, nell'area considerata in figura 
@@ -830,23 +829,23 @@ linee di trasporti pubblici.
 \end{figure}
 
 \begin{code}
-    data = gp.read_file("dataset/zone_milano/zone.geojson").to_crs(epsg=3857)
-    autobus = data[data['name'] == "Navigli Autobus"]
-    street = data[data['name'] == "Navigli Incidenti"]
+data = gp.read_file("dataset/zone_milano/zone.geojson").to_crs(epsg=3857)
+autobus = data[data['name'] == "Navigli Autobus"]
+street = data[data['name'] == "Navigli Incidenti"]
 
-    autobus_rect = geometry.Polygon(autobus['geometry'].iloc[0])
-    street_rect = geometry.Polygon(street['geometry'].iloc[0])
+autobus_rect = geometry.Polygon(autobus['geometry'].iloc[0])
+street_rect = geometry.Polygon(street['geometry'].iloc[0])
 
-    inc_a = 0
-    inc_s = 0
-    for point in incidenti['geometry']: 
-        point = geometry.Point(point)
+inc_a = 0
+inc_s = 0
+for point in incidenti['geometry']: 
+    point = geometry.Point(point)
 
-        if autobus_rect.contains(point): 
-            inc_a += 1
+    if autobus_rect.contains(point): 
+        inc_a += 1
         
-        if street_rect.contains(point): 
-            inc_s += 1
+    if street_rect.contains(point): 
+        inc_s += 1
 \end{code}
 
 Il risultato, conferma che avvengono $167.09$ incidenti per chilometro 
@@ -933,19 +932,19 @@ incidenti che avvengono in queste zone e confrontarlo con il numero di incidenti
 nelle strade asfaltate.
 
 \begin{code}
-    inc_in_pave = 0
-    for rect in pave['geometry']: 
-        rect = geometry.Polygon(rect)
+inc_in_pave = 0
+for rect in pave['geometry']: 
+    rect = geometry.Polygon(rect)
 
-        for point in incidenti['geometry']: 
-            if rect.contains(geometry.Point(point)): 
-                inc_in_pave += 1
+    for point in incidenti['geometry']: 
+        if rect.contains(geometry.Point(point)): 
+            inc_in_pave += 1
 
-    area_pave = 0
-    for rect in pave['geometry']: 
-        area_pave += geometry.Polygon(rect).area
+area_pave = 0
+for rect in pave['geometry']: 
+    area_pave += geometry.Polygon(rect).area
 
-    incidenti_per_km = inc_in_pave * 10**6 / area_pave
+incidenti_per_km = inc_in_pave * 10**6 / area_pave
 \end{code}
 
 Il numero di incidenti per chilometro quadrato, nelle strade in pavè è $229.45$, che 
@@ -990,18 +989,18 @@ Il risultato è rappresentato nella mappa sul lato sinistro della
 figura \ref{fig:autovelox-indici}.
 
 \begin{code}[language=Python]
-    path = "dataset/autovelox/autovelox_milano.geojson"
-    autovelox = gp.read_file(path).to_crs(epsg=3857)
-    layer_autovelox = autovelox.plot(figsize=(11,9), color="red")
+path = "dataset/autovelox/autovelox_milano.geojson"
+autovelox = gp.read_file(path).to_crs(epsg=3857)
+layer_autovelox = autovelox.plot(figsize=(11,9), color="red")
     
-    index = 0
-    for lat, lon in geo_utils.parse_geojson_point_list(autovelox['geometry'].astype(str)):
-        layer_autovelox.text(lat, lon, s=index)
-        # si aggiunge un label per ogni punto
-        index += 1
+index = 0
+for lat, lon in geo_utils.parse_geojson_point_list(autovelox['geometry'].astype(str)):
+    layer_autovelox.text(lat, lon, s=index)
+    # si aggiunge un label per ogni punto
+    index += 1
     
-    cx.add_basemap(ax=layer_autovelox)
-    plt.show()
+cx.add_basemap(ax=layer_autovelox)
+plt.show()
 \end{code}
 
 \begin{figure}
@@ -1072,8 +1071,8 @@ Al dataset degli autovelox sono aggiunte due colonne, una contenente gli inciden
 l'altra contenente gli incidenti per chilometro.
 
 \begin{code}
-    autovelox_2014['incidenti_vicini'] = gp.GeoSeries(df)
-    autovelox_2014['incidenti_pesati'] = autovelox_2014['incidenti_vicini'] / 3.14
+autovelox_2014['incidenti_vicini'] = gp.GeoSeries(df)
+autovelox_2014['incidenti_pesati'] = autovelox_2014['incidenti_vicini'] / 3.14
 \end{code}
 
 Questa ultima colonna, in particolare, è divisa per 3.14 perchè l'area del cerchio 
@@ -1101,12 +1100,12 @@ quello della zona municipale.
 \end{figure}
 
 \begin{code}
-    incremento_percentuale_totale = 0
-    for km, zona in zip(data['Incidenti per chilometro'], data['Incidenti per zona']): 
-        incremento_percentuale = (km - zona) * 100 / zona
-        incremento_percentuale_totale += incremento_percentuale
+incremento_percentuale_totale = 0
+for km, zona in zip(data['Incidenti per chilometro'], data['Incidenti per zona']): 
+    incremento_percentuale = (km - zona) * 100 / zona
+    incremento_percentuale_totale += incremento_percentuale
 
-    print(incremento_percentuale_totale)
+print(incremento_percentuale_totale)
 \end{code}
 
 Sarebbe interessante \quotestyle{catturare}, in un solo valore, l'incremento (o decremento) 
@@ -1153,11 +1152,11 @@ In altre parole, la percentuale, per esempio, di autotreni nelle autostrade, è 
 a quella nelle strade provinciali? 
 
 \begin{code}[language=Python]
-    # Dove 1,2,3 sono gli ID dei diversi tipi di strade urbane, 
-    # mentre 4,5,6 gli ID delle strade extraurbane
+# Dove 1,2,3 sono gli ID dei diversi tipi di strade urbane, 
+# mentre 4,5,6 gli ID delle strade extraurbane
 
-    strade_urbane = data[(data['localizzazione_incidente'] == 1) | (data['localizzazione_incidente'] == 2) | (data['localizzazione_incidente'] == 3)]['tipo_veicolo_a']
-    strade_extraurbane = data[(data['localizzazione_incidente'] == 4) | (data['localizzazione_incidente'] == 5) | (data['localizzazione_incidente'] == 6)]['tipo_veicolo_a']
+strade_urbane = data[(data['localizzazione_incidente'] == 1) | (data['localizzazione_incidente'] == 2) | (data['localizzazione_incidente'] == 3)]['tipo_veicolo_a']
+strade_extraurbane = data[(data['localizzazione_incidente'] == 4) | (data['localizzazione_incidente'] == 5) | (data['localizzazione_incidente'] == 6)]['tipo_veicolo_a']
 \end{code}
 
 Il grafo \ref{fig:differenza-strade} rappresenta quali sono le categorie di veicoli 
@@ -1437,11 +1436,11 @@ giorni settimanali e feriali, quindi gli incidenti totali della settimana sono d
 per cinque giorni, mentre quelli del weekend per due, come mostrato nel codice sottostante.
 
 \begin{code}[language=Python]
-    ora_weekend = data[data['giorno'] > 5]['Ora'].value_counts().sort_index()
-    ora_week = data[data['giorno'] < 6]['Ora'].value_counts().sort_index()
+ora_weekend = data[data['giorno'] > 5]['Ora'].value_counts().sort_index()
+ora_week = data[data['giorno'] < 6]['Ora'].value_counts().sort_index()
 
-    ora_week /= 5 * 52
-    ora_weekend /= 2 * 52
+ora_week /= 5 * 52
+ora_weekend /= 2 * 52
 \end{code}
 
 Le informazioni ricavate ricalcano in modo particolarmente preciso, soprattutto nelle ore del 
@@ -1511,17 +1510,17 @@ numero incidenti per orario, si è calcolato un coefficiente di Pearson uguale a
 quindi è possibile dire che i due siano dataset linearmente correlati.
 
 \begin{code}
-    # eseguito con dati del 2016
-    accessi_area_c_per_ora = pd.Series()
-    for f in data['hour'].unique():
-        accessi_area_c_per_ora = accessi_area_c_per_ora.append(
-            pd.Series(data[data['hour'] == f]['totale'].sum()), 
-            ignore_index=True
-            )
+# eseguito con dati del 2016
+accessi_area_c_per_ora = pd.Series()
+for f in data['hour'].unique():
+    accessi_area_c_per_ora = accessi_area_c_per_ora.append(
+        pd.Series(data[data['hour'] == f]['totale'].sum()), 
+        ignore_index=True
+        )
 
-    incidenti_per_ora = data[data['provincia'] == 15]['ora'].value_counts().sort_index()
+incidenti_per_ora = data[data['provincia'] == 15]['ora'].value_counts().sort_index()
 
-    correlazione = accessi_area_c_per_ora.corr(incidenti_per_ora)
+correlazione = accessi_area_c_per_ora.corr(incidenti_per_ora)
 \end{code}
 
 Per quanto riguarda invece, il grafo nella metà bassa della 
@@ -1552,12 +1551,12 @@ notturni, in particolare si hanno in media $5$ incidenti per serata in settimana
 quasi raddoppia a $9.4$ durante il Sabato e la Domenica sera.
 
 \begin{code}
-    notte = data[(data['Ora'] < 7) | (data['Ora'] > 22)]
-    ora_notte_week = notte[notte['giorno'] < 6]['Ora'].value_counts().sort_index()
-    ora_notte_weekend = notte[notte['giorno'] > 5]['Ora'].value_counts().sort_index()
+notte = data[(data['Ora'] < 7) | (data['Ora'] > 22)]
+ora_notte_week = notte[notte['giorno'] < 6]['Ora'].value_counts().sort_index()
+ora_notte_weekend = notte[notte['giorno'] > 5]['Ora'].value_counts().sort_index()
 
-    ora_notte_week /= 5 * 52 
-    ora_notte_weekend /= 2 * 52
+ora_notte_week /= 5 * 52  
+ora_notte_weekend /= 2 * 52
 \end{code}
 
 Il traffico, stimato tramite gli accessi all'area C, conferma questa tendenza?
@@ -2162,10 +2161,10 @@ per esempio \columnstyle{30-44} contiene quindici anni, mentre
 \columnstyle{18-20} ne contiene solo due.
 
 \begin{code}[language=Python]
-    numero_anni = np.array([5, 5, 5, 3, 10, 15, 10, 10, 20])
+numero_anni = np.array([5, 5, 5, 3, 10, 15, 10, 10, 20])
 
-    pedoni_feriti_vals = pedoni_feriti.values / numero_anni
-    pedoni_morti_vals = pedoni_morti.values / numero_anni
+pedoni_feriti_vals = pedoni_feriti.values / numero_anni
+pedoni_morti_vals = pedoni_morti.values / numero_anni
 \end{code}
 
 \begin{figure}
@@ -2237,11 +2236,11 @@ dell'insieme \columnstyle{15-19} per cinque e moltiplicarlo per due.
 Il risultato ottenuto va aggiunto alla fascia \columnstyle{18-29}.
 
 \begin{code}
-    correct_order =         ['0-5  ', '6-9  ', '10-14', '15-17', '18-29', '30-44', '45-54', '55-64','65+  ']
-    perc_fascia = np.array( [3.9, 4.5, 4.8, 3.1, 12.1, 19, 18.2, 13.7, 19.3]) / 100
+correct_order =         ['0-5  ', '6-9  ', '10-14', '15-17', '18-29', '30-44', '45-54', '55-64','65+  ']
+perc_fascia = np.array( [3.9, 4.5, 4.8, 3.1, 12.1, 19, 18.2, 13.7, 19.3]) / 100
 
-    pedoni_feriti_vals = pedoni_feriti.values / perc_fascia
-    pedoni_morti_vals = pedoni_morti.values / perc_fascia
+pedoni_feriti_vals = pedoni_feriti.values / perc_fascia
+pedoni_morti_vals = pedoni_morti.values / perc_fascia
 \end{code}
 
 \begin{figure}
@@ -2306,12 +2305,12 @@ normalizzare la percentuale di incidenti commessi, con una stima del numero di
 guidatori nella rispettiva fascia di età.
 
 \begin{code}
-    perc_fascia = np.array( [3.1, 12.2, 19, 18.2, 13.7, 19.3]) / 100
+perc_fascia = np.array( [3.1, 12.2, 19, 18.2, 13.7, 19.3]) / 100
 
-    incidenti_per_eta /= perc_fascia
-    morti_per_eta /= perc_fascia
+incidenti_per_eta /= perc_fascia
+morti_per_eta /= perc_fascia
 
-    indice_mortalita = morti_per_eta * 100 / incidenti_per_eta
+indice_mortalita = morti_per_eta * 100 / incidenti_per_eta
 \end{code}
 
 \begin{figure}
@@ -2711,10 +2710,10 @@ Dopo aver eseguito il codice sottostante, tuttavia, si è osservato che tutte le
 del dataset per questa zona riportano valori uguali a zero, eccetto una. 
 
 \begin{code}
-    data = pd.read_csv("dataset/incidenti/aci/autostrade/localizzazione_2018.csv")
-    ss16 = data[data['CODICE'] == 'SS01601']
+data = pd.read_csv("dataset/incidenti/aci/autostrade/localizzazione_2018.csv")
+ss16 = data[data['CODICE'] == 'SS01601']
 
-    pescara = ss16[ss16['PROVINCIA'] == 'Pescara'][['INC', 'FER']]
+pescara = ss16[ss16['PROVINCIA'] == 'Pescara'][['INC', 'FER']]
 \end{code}
 
 A prima osservazione questo risulato potrebbe essere considerato un errore nei dati. 
