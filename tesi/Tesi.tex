@@ -101,9 +101,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Introduzione}
 
-\todo{lelepado: devo aggiungere collegamenti al codice, e spiegare come è organizzato?
-atrent: certamente, ma non in intro, farei un'appendice col codice commentato/spiegato}
-
 \todo{lelepado: la bibliografia non compila se metto il campo 'year', è normale?}
 
 Lo scopo di questo lavoro, è mostrare che tipo di analisi è possibile realizzare 
@@ -125,6 +122,7 @@ Allo stesso modo, si potrebbe scegliere una casa non adiacente
 a un viale con vetture che si spostano ad alte velocità, se queste incrementano 
 il numero di incidenti con coinvolgimento di pedoni.
 
+\skipline
 Ovviamente il trovare una casa non è l'unico motivo per utilizzare dati liberi. 
 Spesso, questi sono estremamente utili a garantire trasparenza tra istituzioni, 
 a tal punto che, fin troppo frequentemente, queste ultime rendono complesso o 
@@ -171,7 +169,7 @@ L'Italia in particolare creerà nel 2011 il proprio portale
 dati.gov.it\footnote{\url{https://www.dati.gov.it/}}, mentre l'Unione Europea nel 
 2012\footnote{\url{https://data.europa.eu/euodp/it/home}}.
 
-
+\skipline
 Questo lavoro è da intendere come una dimostrazione delle analisi realizzabili 
 tramite dati pubblici, e di quanti altri studi sarebbe possibile eseguire se fossero 
 disponibili le informazioni mancanti.
@@ -235,7 +233,8 @@ l'orario, il mese o il giorno della settimana.
 
 \lighttext{(\\
     \indent COD REG,REGIONE,\\
-    \indent COD PROV,PROVINCIA,NOME STRADA,\\
+    \indent COD PROV,PROVINCIA,\\
+    \indent NOME STRADA,\\
     \indent INC: numero di incidenti (ce ne sono più per riga),\\
     \indent di cui MORTALI,MOR,FER,\\
     \indent NVEI: numero di veicoli coinvolti\\
@@ -3042,6 +3041,7 @@ Per ovviare a questa difficoltà si è spesso dovuto ricorrere a stime,
 come il numero di accessi in area C. 
 L'assenza di informazioni ha giocato un ruolo anche nelle analisi riguardanti gli incroci, 
 in quanto non si sono trovati riferimenti al numero di questi in alcun sito di open data.
+
 \skipline
 In secondo luogo, alcuni dataset non sono completi, o hanno sezioni temporali mancanti,
 estese anche svariati mesi. 
@@ -3060,6 +3060,7 @@ un unico dataset.
 
 Ovviamente questa operazione rende non solo la raccolta delle informazioni più complessa, 
 ma anche l'associazione di dati, che magari sono presenti in un file e non in un altro.
+
 \skipline
 Infine, un problema sorto con frequenza è stato la mancanza di descrizioni sul 
 significato dei campi di una tabella. 
@@ -3119,10 +3120,13 @@ cui questa è stata creata avrà nome \filenamestyle{esempio.py}.
 Invece, se si volessero trovare le informazioni sul grafo raffigurante 
 l'incremento di incidenti 
 dal 2010 al 2018, i dataset utilizzati si troverebbero nella directory:
+
 \skipline
 \indent\filenamestyle{dataset/incidenti/incidenti\_istat}
+
 \skipline
-Mentre il codice sorgente e le immagini sarebbero situate al percorso:
+\noindent Mentre il codice sorgente e le immagini sarebbero situate al percorso:
+
 \skipline
 \indent\filenamestyle{src/incidenti/incidenti\_senza\_coords/anno}
 
