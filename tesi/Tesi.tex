@@ -3054,15 +3054,6 @@ quanto molte piattaforme, come quella del Ministero dei
 Trasporti\footnote{\url{http://dati.mit.gov.it/catalog/dataset}}, 
 misuravano le condivisioni di open data delle amministrazioni 
 sulla base del numero di file pubblicati.
-\todo{atrent: riesci a trovare qualche articolo che ne parla? 
-te lo avevo detto io ma sarebbe carino trovare qualcuno che lo abbia detto pubblicamente, 
-anche solo su web, era una cosa tipo "valutazione delle PA nell'opendata"}
-\todo{\url{https://www.europeandataportal.eu/sites/default/files/open_data_maturity_report_2019.pdf}}
-\todo{\url{https://www.forumpa.it/open-government/open-data/open-data-maturity-report-2019-linsostenibile-leggerezza-dellimpegno-italiano/}}
-\todo{\url{https://www.europeandataportal.eu/sites/default/files/country-factsheet_italy_2019.pdf}}
-\todo{\url{https://www.agid.gov.it/sites/default/files/repository_files/documentazione/strat_crescita_digit_3marzo_0.pdf}}
-\todo{\url{http://2015.index.okfn.org/methodology/}}
-\todo{\url{https://indigotrust.org.uk/2012/11/12/good-governance-the-accountability-stack-and-multi-lateral-fora/}}
 Era quindi più proficuo pubblicare dati separati, rispetto a tutte le informazioni in 
 un unico dataset.
 \todo{atrent: a me pareva di averlo segnalato, non c'è da nessuna parte una 
@@ -3070,17 +3061,52 @@ introduzione all'opendata, in cui si potrebbe dire cosa sono, come vengono
 classificati (Berners-Lee e Davies) e quali siano i processi di pubblicazione}
 
 Ovviamente questa operazione rende non solo la raccolta delle informazioni più complessa, 
-ma anche l'associazione di dati, che magari sono presenti in un file e non in un altro.
+ma anche l'associazione di dati, che magari sono presenti in un file e non in un altro. 
+Il sito Global Open Data Index, che offre un punteggio in base a quanti dati ogni paese 
+ha condiviso in formato libero, nelle metodologie di calcolo di questo, scrive: 
+
+\begin{center}
+    (\dots) \quotestyle{we expect that national governments also provide aggregation 
+    of that data from 
+    sub governments so as to ensure users have an easy way to access use the data 
+    (the best solution is one consolidated dataset but at a minimum could consist of a 
+    single point of access to all data subsets).}\cite{OPENDATAINDEX:1}
+\end{center}
+
+\begin{center}
+    (\dots) \quotestyle{Ci si aspetta che i governi nazionali provvedano per 
+    l'aggregazione dei dati provenienti dalle 'regioni', per garantire agli utenti 
+    un punto di accesso 
+    alle informazioni (la soluzione migliore sarebbe l'avere un dataset unico, ma è sufficiente 
+    avere un solo punto di accesso a tutti i sottoinsiemi di dati).}
+\end{center}
+\todo{lelepado: questa come fonte può andare? non ho trovato articoli...}
+
+\todo{atrent: riesci a trovare qualche articolo che ne parla? 
+te lo avevo detto io ma sarebbe carino trovare qualcuno che lo abbia detto pubblicamente, 
+anche solo su web, era una cosa tipo "valutazione delle PA nell'opendata"}
+\todo{\url{https://www.europeandataportal.eu/sites/default/files/open_data_maturity_report_2019.pdf}}
+\todo{\url{https://www.forumpa.it/open-government/open-data/open-data-maturity-report-2019-linsostenibile-leggerezza-dellimpegno-italiano/}}
+\todo{\url{https://www.europeandataportal.eu/sites/default/files/country-factsheet_italy_2019.pdf}}
+\todo{\url{https://www.agid.gov.it/sites/default/files/repository_files/documentazione/strat_crescita_digit_3marzo_0.pdf}}
+
 
 \skipline
 Infine, un problema sorto con frequenza è stato la mancanza di descrizioni sul 
-significato dei campi di una tabella. \todo{atrent: appunto, classificazione ;)}
-Un esempio di ciò sono i dati provenienti dal geoportale del comune di Milano, 
-in particolare il dataset riguardante la rete dei trasporti.
+significato dei campi di una tabella. 
+\todo{atrent: appunto, classificazione ;)}
+Un esempio di ciò, in figura \ref{fig:scheda-metadati}, sono i dati provenienti dal 
+geoportale del comune di Milano, 
+in particolare i dataset riguardanti la rete dei trasporti e il manto stradale.
 In molti casi, si è dovuto ipotizzare il significato delle colonne delle tabelle, 
 e di conseguenza si è stati costretti a scartare queste informazioni. 
+
+\begin{figure}
+    \hfill\includegraphics[width=0.7\linewidth]{img/scheda_metadati_geoportale.png}\hspace*{\fill}
+    \caption{Pagina dei metadati del dataset riguardante il manto stradale (Geoportale Milano)}
+    \label{fig:scheda-metadati}
+\end{figure}
 \todo{atrent: metterei almeno uno screenshot, sicuro che non c'è descrizione campi?}
-\todo{aggiungere l'associazione fra i file in dir 'dataset' e gli url dei dataset salvati}
 
 Analogamente, molti dataset non aderiscono ad 
 alcuno standard, per quanto riguarda la nomenclatura delle colonne.
