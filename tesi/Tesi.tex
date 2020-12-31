@@ -646,12 +646,12 @@ Ciò che delude, è che non è presente nessuna informazione aggiuntiva, se non 
 dell'incidente.
 
 Controllando i dati trovati, in particolare come questi siano posizionati, 
-si nota, dalla mappa destra nella figura \ref{fig:heatmap-municipi}, come gli incidenti a Milano 
-siano per buona parte uniformemente distributi per tutta la città, 
-con più alte concentrazioni in alcuni punti di interesse, come Piazzale Loreto, Zona Navigli 
+si nota, dalla mappa destra nella figura \ref{fig:heatmap-municipi} come, 
+gli incidenti a Milano siano distributi con concentrazioni più alte, 
+in alcuni punti di interesse della città, come Piazzale Loreto, Zona Navigli 
 e Monumentale, e Corso Ventidue Marzo.
 
-Sarebbe interessante sapere se esistono zone con maggiore concentrazione di incidenti rispetto 
+Sarebbe interessante sapere se esistano zone con maggiore concentrazione di incidenti rispetto 
 alla media, e ottenere un indice numerico della pericolosità di una determinata zona.
 
 Nella mappa sinistra della figura \ref{fig:heatmap-municipi}, si è divisa la città di Milano 
@@ -667,7 +667,7 @@ maggior parte degli incidenti.
 Non tutte le zone hanno la stessa superficie, e ovviamente sezioni più ampie hanno un maggior 
 numero di strade. Avendo a disposizione l'area dei vari municipi, 
 è possibile calcolare la media di incidenti al chilometro quadrato per zona.
-I risultati sono riportati nella tabella sottostante.
+I risultati sono riportati negli istogrammi sottostanti.
 
 \begin{code}    
 inc = gp.GeoSeries(df).sort_index()
@@ -3065,7 +3065,9 @@ anche solo su web, era una cosa tipo "valutazione delle PA nell'opendata"}
 \todo{\url{https://indigotrust.org.uk/2012/11/12/good-governance-the-accountability-stack-and-multi-lateral-fora/}}
 Era quindi più proficuo pubblicare dati separati, rispetto a tutte le informazioni in 
 un unico dataset.
-\todo{atrent: a me pareva di averlo segnalato, non c'è da nessuna parte una introduzione all'opendata, in cui si potrebbe dire cosa sono, come vengono classificati (Berners-Lee e Davies) e quali siano i processi di pubblicazione}
+\todo{atrent: a me pareva di averlo segnalato, non c'è da nessuna parte una 
+introduzione all'opendata, in cui si potrebbe dire cosa sono, come vengono 
+classificati (Berners-Lee e Davies) e quali siano i processi di pubblicazione}
 
 Ovviamente questa operazione rende non solo la raccolta delle informazioni più complessa, 
 ma anche l'associazione di dati, che magari sono presenti in un file e non in un altro.
@@ -3131,6 +3133,42 @@ dal 2010 al 2018, i dataset utilizzati si troverebbero nella directory:
 
 \skipline
 \indent\filenamestyle{src/incidenti/incidenti\_senza\_coords/anno}
+
+\skipline
+Infine, in modo da fornire un collegamento tra i dataset nella specifica directory e i siti 
+di open data in cui sono stati trovati, nella tabella sottostante sono forniti i percorsi di 
+ogni file con l'url del portale di origine.
+
+\begin{center}
+    \def\arraystretch{1.5}%  
+    \begin{tabular}{ |c|c| } 
+    \hline
+    Percorso Cartella & Sito \\ 
+    \hline
+    \rowcolor{TableGray}
+    dataset/area\_c & \href{https://dati.comune.milano.it/dataset?tags=Area+C}{Comune di Milano} \\
+    dataset/atm & \href{https://dati.comune.milano.it/dataset/ds538_atm-percorsi-linee-di-superficie-urbane}{Comune di Milano} \\
+    \rowcolor{TableGray}
+    dataset/autovelox & \href{https://www.openstreetmap.org/}{OpenStreetMaps} \\
+    dataset/incidenti/aci & \href{http://www.aci.it/fileadmin/documenti/ACI/Trasparenza/Open_Data/Catalogo_localizzazione_in_formato_Open_2019.pdf}{Portale ACI} \\
+    \rowcolor{TableGray}
+    dataset/incidenti/istat & \href{https://www.istat.it/it/archivio/87539}{Archivio Istat}\\
+    dataset/incidenti & \href{https://thesubmarine.it/2018/06/20/mappa-incidenti-stradali-milano/}{TheSubmarine}\\
+    \rowcolor{TableGray}
+    dataset/manto\_stradale\_milano & \href{https://geoportale.comune.milano.it/ATOM/SIT/DBT2012/DBT2012_STRATO_01_Dataset_1.xml}{Geoportale Milano}\\
+    dataset/meteo/ilmeteo2010 & \href{https://www.ilmeteo.it/portale/archivio-meteo/Milano/2010/}{Archivio Istat}\\
+    \rowcolor{TableGray}
+    dataset/meteo & \href{https://zenodo.org/record/3992354}{Zenodo}\\
+    dataset/milano\_municipi & \href{https://geoportale.comune.milano.it/ATOM/SIT/Municipi/Municipi_Dataset_1.xml}{Geoportale Milano}\\
+    \rowcolor{TableGray}
+    dataset/patenti & \href{https://www.mit.gov.it/sites/default/files/media/notizia/2017-07/INFOGRAFICA%20Dati%20sintesi%20patenti%20Italia.pdf}{Ministero dei Trasporti}\\
+    dataset/pave/tram & \href{https://geoportale.comune.milano.it/ATOM/SIT/DBT2012/DBT2012_STRATO_01_Dataset_1.xml}{Geoportale Milano}\\
+    \rowcolor{TableGray}
+    dataset/regioni & \href{https://github.com/openpolis/geojson-italy}{Github}\\
+    dataset/turismo & \href{https://www.istat.it/it/archivio/16777}{Archivio Istat}\\
+    \hline
+    \end{tabular}
+\end{center}
 
 %\addcontentsline{toc}{chapter}{Bibliografia}
 \printbibliography

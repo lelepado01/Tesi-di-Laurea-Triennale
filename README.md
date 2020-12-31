@@ -50,10 +50,6 @@
 
     [Aree di sosta bus turistici](https://dati.comune.milano.it/dataset/ds740_sosta_bus_gt_turistici)
 
-- Presenza di Piste Ciclabili
-
-    [Percorsi piste ciclabili](https://geoportale.comune.milano.it/sit/cerca-nel-catalogo/)
-
 - Presenza di Pavé
 
     [Mappa con vie in pavé](https://blog.urbanfile.org/2018/05/02/milano-arredo-urbano-il-pave-risorsa-da-preservare-o-problema-da-eliminare/)
