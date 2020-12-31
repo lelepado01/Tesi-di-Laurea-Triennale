@@ -14,6 +14,6 @@ for point in incidenti['geometry']:
 
 #print(inc * 10**6/ area_c.area) # = 46.83 incidenti / km^2
 
-ax = incidenti.plot(alpha = 0.08, figsize=(11,9))
+ax = incidenti.plot(alpha = 0.5, figsize=(11,9), markersize=0.8)
 cx.add_basemap(ax = ax)
 plt.show()

@@ -2,14 +2,12 @@
 import geopandas as gp
 import contextily as cx
 import matplotlib.pyplot as plt
-from matplotlib.pyplot import axis
 
 data = gp.read_file("dataset/milano_municipi/Municipi.shx").to_crs(epsg=3857)
 print(data.columns)
 incidenti = gp.read_file("dataset/incidenti/inc_strad_milano_2016.geojson").to_crs(epsg=3857)
 
 df = {}
-
 for m in data['MUNICIPIO']:
     df[m] = 0
 
@@ -30,11 +28,7 @@ data.index = data['MUNICIPIO']
 inc = gp.GeoSeries(df).sort_index()
 data['Incidenti'] = inc
 
-# fig, (ax1, ax2) = plt.subplots(ncols=2, sharex=True, sharey=True)
 layer_m = data.plot(column='Incidenti', cmap='OrRd', alpha=0.5, figsize=(9,7))
 cx.add_basemap(ax=layer_m)
-# inc_layer = incidenti.plot(ax=ax2, alpha=0.02)
-# cx.add_basemap(ax=inc_layer)
 plt.axis('off')
-# plt.savefig("incidenti_municipio")
 plt.show()
