@@ -659,8 +659,7 @@ in base ai diversi municipi, ed è possibile osservare che nel centro storico si
 maggior parte degli incidenti.
 
 \begin{figure}
-    \includegraphics[width=0.5\linewidth]{../src/municipi_milano/municipio_solo.png}
-    \includegraphics[width=0.5\linewidth]{../src/municipi_milano/incidenti_bubble.png}
+    \includegraphics[width=\linewidth]{../src/municipi_milano/incidenti_municipio.png}
     \caption{Incidenti a Milano per municipio}
     \label{fig:heatmap-municipi}
 \end{figure}
@@ -679,31 +678,6 @@ incidenti = pd.Series(inc, index=inc.index)
 # trasformazione in chilometri quadri
 incidenti_per_zona = (incidenti / area) * 1000000 
 \end{code}
-
-\todo{affianca tabella a grafo sopra}
-\begin{center}
-    \def\arraystretch{1.5}%  
-    \begin{tabular}{ |c|c| } 
-    \hline
-    Numero della zona & Nome della zona \\ 
-    \hline
-    \rowcolor{TableGray}
-    1   &   Centro Storico\\
-    2   &   Greco, Padova\\
-    \rowcolor{TableGray}
-    3   &   Venezia, Città Studi\\
-    4   &   Vittoria, Vigentina \\
-    \rowcolor{TableGray}
-    5   &   Ticinese, Gratosoglio\\
-    6   &   Inganni, Barona\\
-    \rowcolor{TableGray}
-    7   &   Baggio, Forze Armate\\
-    8   &   Gallaratese, Sempione\\
-    \rowcolor{TableGray}
-    9   &   Niguarda, Dergano\\
-    \hline
-    \end{tabular}
-\end{center}
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/municipi_milano/incidenti_superf.png}
@@ -754,6 +728,7 @@ Una domanda che sorge spontanea è, perchè nel centro storico risulta tra le ar
 incidentalità, il volume di traffico, e quindi di incidenti, non dovrebbe essere abbassato 
 della presenza dell'area C?
 
+\todo{allineare}
 \begin{figure}
     \includegraphics[width=0.48\linewidth]{img/perimetro_area_c.png}
     \includegraphics[width=0.52\linewidth]{../src/area_c/area_c_incidenti.png}
@@ -796,6 +771,8 @@ Viale Gian Galeazzo e Viale Beatrice D'Este, parallele a Viale Col di Lana e Via
 Lo stesso fenomeno è osservabile su Viale Gabriele D'Annunzio e Viale Gorizia e Coni Zugna, 
 e nella zona vicino a corso Ventidue Marzo.
 
+\todo{allineare}
+
 \begin{figure}
     \includegraphics[width=0.51\linewidth]{../src/atm/navigli.png}
     \includegraphics[width=0.49\linewidth]{img/navigli.png}
@@ -806,6 +783,7 @@ e nella zona vicino a corso Ventidue Marzo.
 Anche vicino a corso Ventidue Marzo, nella mappa \ref{fig:22-marzo} si può 
 notare lo stesso fenomeno, tra Viale Bianca Maria e Viale Premuda.
 
+\todo{allineare}
 \begin{figure}
     \includegraphics[width=0.25\linewidth]{../src/atm/22_marzo.png}
     \includegraphics[width=0.55\linewidth]{img/22_marzo.png}
@@ -904,6 +882,7 @@ un tracciato con la maggior parte delle strade in pavè a Milano.
 Per valutare le somiglianze tra le linee tranviarie e la cartina di 
 Urbanfile, si è utilizzata l'immagine \ref{fig:tram-pave-milano}.
 
+\todo{allineare}
 \begin{figure}
     \includegraphics[width=0.48\linewidth]{../src/tram/tram_milano.png}
     \includegraphics[width=0.52\linewidth]{../dataset/pave/Cartina_Milano_Strade_Pavimentazione_Pavé_2.jpg}
@@ -921,6 +900,8 @@ Viste le basse somiglianze tra la cartina di Urbanfile e le linee del tram,
 per creare una stima, si sono convertite le vie principali della mappa trovata 
 in geojson. 
 Il risultato è visibile nella mappa sulla sinistra dell'immagine \ref{fig:mappa-pave}.
+
+\todo{allineare}
 
 \begin{figure}
     \includegraphics[width=0.5\linewidth]{../src/pave/mappa_pave.png}
@@ -1562,7 +1543,7 @@ ora_notte_weekend /= 2 * 52
 \end{code}
 
 Il traffico, stimato tramite gli accessi all'area C, conferma questa tendenza?
-
+\todo{allineare}
 \begin{figure}
     \includegraphics[width=0.5\linewidth]{../src/incidenti/incidenti_senza_coords/ore_punta/ore_notte.png}
     \includegraphics[width=0.48\linewidth]{../src/area_c/traffico_serale.png}
@@ -1720,7 +1701,7 @@ a partire dal 2014 non sono più disponibili dati riguardanti il mese}.
 Per eseguire questo confronto sono state prese in considerazione le località di Rimine e Palermo, 
 per mostrare che alcune province, come la prima, confermano l'ipotesi, mentre altre, 
 come la seconda, possono essere usate come controesempio.
-
+\todo{allineare}
 \begin{figure}
     \includegraphics[width=0.5\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/milano_rimini.png}
     \includegraphics[width=0.5\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/palermo_milano.png}
@@ -1915,7 +1896,7 @@ studio su incidenti stradali, eseguito da ACI \cite{ACI:2}.
 Nel grafo sul lato sinistro della figura \ref{fig:tipo-intersezioni}, 
 sono rappresentati gli incidenti in Italia nel 2018, divisi per tipologia 
 di incrocio in cui sono avvenuti.
-
+\todo{allineare}
 \begin{figure}
     \includegraphics[width=0.5\linewidth]{../src/incidenti/incidenti_senza_coords/localizzazione_incidente/intersezioni.png}
     \includegraphics[width=0.5\linewidth]{../src/incidenti/incidenti_senza_coords/localizzazione_incidente/indice_mortalita.png}
@@ -2354,6 +2335,7 @@ Spicca poi il Lazio, dove la maggior parte degli incidenti avvengono su autostra
 in quanto il volume di questi, in figura \ref{fig:incidenti-per-regione}, 
 è nella media nella prima mappa, mentre è il massimo tra tutte le regioni nella seconda.
 
+\todo{allineare}
 \begin{figure}
     \includegraphics[width=0.5\linewidth]{../src/incidenti/incidenti_aci/mappe_regioni/incidenti_regione.png}
     \includegraphics[width=0.5\linewidth]{../src/incidenti/incidenti_aci/mappe_regioni/incidenti_regione_autostrade.png}
@@ -2486,7 +2468,7 @@ incidenti.
 
 Avendo a disposizione dati riguardanti strade provinciali e autostrade, è stato realizzato 
 lo stesso calcolo per entrambi i casi.
-
+\todo{allineare}
 \begin{figure}
     \includegraphics[width=0.5\linewidth]{../src/provincia/lombardia_autostrade.png}
     \includegraphics[width=0.5\linewidth]{../src/provincia/lombardia_strade_prov.png}
@@ -2502,7 +2484,7 @@ D'altra parte, per quanto riguarda le differenze, nelle province di Bergamo e Co
 i sinistri crescono molto nelle strade provinciali rispetto alle autostrade.
 
 Lo stesso calcolo è stato eseguito per le province del Lazio.
-
+\todo{allineare}
 \begin{figure}
     \includegraphics[width=0.5\linewidth]{../src/provincia/lazio_autostrade.png}
     \includegraphics[width=0.5\linewidth]{../src/provincia/lazio_strade_prov.png}
@@ -2689,7 +2671,7 @@ dividere gli incidenti sulle strade statali, in base alla provincia in cui sono 
 Nonostante il procedimento sia stato eseguito solo per le strade statali, gli stessi dati 
 sono presenti anche per le autostrade e le strade provinciali, e un'analisi più 
 approfondita potrebbe includere queste informazioni.
-
+\todo{allineare}
 \begin{figure}
     \includegraphics[width=0.5\linewidth]{../src/incidenti/incidenti_aci/statali/ss01_tratti.png}
     \includegraphics[width=0.5\linewidth]{../src/incidenti/incidenti_aci/statali/ss16_tratti.png}
@@ -2982,7 +2964,7 @@ tra i due fattori.
 
 \'E comunque interessante mostrare come, la correlazione tra due campioni possa essere 
 estremamente alta, anche se questi ultimi sono completamente scollegati.
-
+\todo{allineare}
 \begin{figure}
     \includegraphics[width=0.5\linewidth]{../src/meteo/temp_incidenti_2011.png}
     \includegraphics[width=0.5\linewidth]{../src/meteo/temp_incidenti_2013.png}
