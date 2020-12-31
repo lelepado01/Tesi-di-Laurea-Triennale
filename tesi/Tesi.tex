@@ -155,10 +155,7 @@ La condivisione di questi ha reso meno necessario l'utilizzo del form.
     \hfill\includegraphics[width=0.7\linewidth]{img/arpa.png}\hspace*{\fill}
     \caption{Form per la richiesta di dati sul sito Arpa}
 \end{figure}
-\todo{atrent: citare sempre fonte immagini
-lelepado: questa la avevo presa dalle sue slide di 
-cittadinanza digitale, come faccio a citarla?
-atrent: in questo caso puoi semplicemente mettere (fonte: Trentini)}
+\footnote{fonte: Trentini}
 
 La garanzia di \quotestyle{poter fare i conti in tasca alle istituzioni}, è un 
 valore che molto spesso è contrapposto al diritto alla privacy, anche in 
@@ -682,6 +679,7 @@ incidenti = pd.Series(inc, index=inc.index)
 incidenti_per_zona = (incidenti / area) * 1000000 
 \end{code}
 
+\todo{affianca tabella a grafo sopra}
 \begin{center}
     \def\arraystretch{1.5}%  
     \begin{tabular}{ |c|c| } 
@@ -722,7 +720,7 @@ Una volta creata la tendenza generale del municipio, è possibile confrontare i 
 ottenuti con il numero di incidenti in zone più ristrette, per esempio attorno a piazzale Loreto.
 
 \begin{figure}
-    \hfill\includegraphics[width=0.6\linewidth]{../src/municipi_milano/zona_loreto.png}\hspace*{\fill}
+    \hfill\includegraphics[width=0.7\linewidth]{../src/municipi_milano/zona_loreto.png}\hspace*{\fill}
     \caption{Zona presa in considerazione per piazzale Loreto}
     \label{fig:zona-loreto}
 \end{figure}
@@ -780,7 +778,7 @@ quello degli incidenti, dopo aver eliminato alcune linee di autobus che risultav
 troppo in periferia, si ottiene la mappa sinistra nella figura \ref{fig:geo-trasporti}: 
 
 \begin{figure}
-    \hfill\includegraphics[width=0.6\linewidth]{../src/atm/linee_atm.png}\hspace*{\fill}
+    \hfill\includegraphics[width=0.7\linewidth]{../src/atm/linee_atm.png}\hspace*{\fill}
     \caption{Linee Autobus e Tram a Milano}
     \label{fig:geo-trasporti}
 \end{figure}
@@ -3047,8 +3045,7 @@ coincide con pioggia e temporali, che a loro volta rendono più difficoltosa la 
 
 
 \chapter{Conclusioni}
-\todo{atrent: minimale, ma per ora va bene così, da rielaborare a freddo}
-\todo{atrent: di solito si ricapitolano gli scopi}
+\todo{atrent: ricapitolare gli scopi}
 
 Per concludere, sarebbe opportuno riportare quali siano state le maggiori difficoltà 
 incontrate durante l'analisi di dati liberi appena realizzata.
@@ -3073,9 +3070,19 @@ Questo, in passato, era un comportamento ricorrente, in
 quanto molte piattaforme, come quella del Ministero dei 
 Trasporti\footnote{\url{http://dati.mit.gov.it/catalog/dataset}}, 
 misuravano le condivisioni di open data delle amministrazioni 
-sulla base del numero di file pubblicati.\todo{atrent: riesci a trovare qualche articolo che ne parla? te lo avevo detto io ma sarebbe carino trovare qualcuno che lo abbia detto pubblicamente, anche solo su web, era una cosa tipo "valutazione delle PA nell'opendata"}
+sulla base del numero di file pubblicati.
+\todo{atrent: riesci a trovare qualche articolo che ne parla? 
+te lo avevo detto io ma sarebbe carino trovare qualcuno che lo abbia detto pubblicamente, 
+anche solo su web, era una cosa tipo "valutazione delle PA nell'opendata"}
+\todo{\url{https://www.europeandataportal.eu/sites/default/files/open_data_maturity_report_2019.pdf}}
+\todo{\url{https://www.forumpa.it/open-government/open-data/open-data-maturity-report-2019-linsostenibile-leggerezza-dellimpegno-italiano/}}
+\todo{\url{https://www.europeandataportal.eu/sites/default/files/country-factsheet_italy_2019.pdf}}
+\todo{\url{https://www.agid.gov.it/sites/default/files/repository_files/documentazione/strat_crescita_digit_3marzo_0.pdf}}
+\todo{\url{http://2015.index.okfn.org/methodology/}}
+\todo{\url{https://indigotrust.org.uk/2012/11/12/good-governance-the-accountability-stack-and-multi-lateral-fora/}}
 Era quindi più proficuo pubblicare dati separati, rispetto a tutte le informazioni in 
-un unico dataset.\todo{atrent: a me pareva di averlo segnalato, non c'è da nessuna parte una introduzione all'opendata, in cui si potrebbe dire cosa sono, come vengono classificati (Berners-Lee e Davies) e quali siano i processi di pubblicazione}
+un unico dataset.
+\todo{atrent: a me pareva di averlo segnalato, non c'è da nessuna parte una introduzione all'opendata, in cui si potrebbe dire cosa sono, come vengono classificati (Berners-Lee e Davies) e quali siano i processi di pubblicazione}
 
 Ovviamente questa operazione rende non solo la raccolta delle informazioni più complessa, 
 ma anche l'associazione di dati, che magari sono presenti in un file e non in un altro.
