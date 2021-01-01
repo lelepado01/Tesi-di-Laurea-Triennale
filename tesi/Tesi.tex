@@ -616,7 +616,8 @@ parole chiave come \quotestyle{numero semafori Milano} o \quotestyle{strade incr
 Non trovando alcun riscontro, si è ricercato l'argomento nei principali siti contenenti 
 dataset, di cui si è parlato in precedenza. 
 
-Le informazioni più vicine a ciò che si stava cercando, sono state trovate sul geoportale 
+Le informazioni più vicine a ciò che si stava cercando, 
+sono state trovate sul geoportale 
 del comune di Milano, nei dati sul manto stradale.
 Questo dataset contiene vari layer di informazioni, tra cui 
 \columnstyle{Area di circolazione veicolare}, 
@@ -1003,7 +1004,7 @@ osservando solo l'ampiezza del raggio di questi.
     \def\arraystretch{1.5}% 
     \begin{tabular}{ |c|c|c|c| }
         \hline
-        Autovelox & Inc. Totali & Inc. per $Km^2$ & Inc. per zona \\ 
+        Autovelox & Totali & Per $Km^2$ & Per zona \\ 
         \hline
         \rowcolor{TableGray}
         V. F. Testi d. perif.\footnotemark[1]   &   194 &   61.78   &   69.52 \\
@@ -2078,7 +2079,8 @@ esempio, l'alta velocità dei veicoli.
     \label{fig:pedoni-no-rett}
 \end{figure}
 
-In figura \ref{fig:pedoni-no-rett} sono state escluse le categorie con minore 
+In figura \ref{fig:pedoni-no-rett} sono state 
+escluse le categorie con minore 
 valore\footnote{Sono state rimosse tutte le categorie con valore minore di 
 150 incidenti all'anno}, 
 in particolare \columnstyle{Dosso}, \columnstyle{Galleria ill.}, 
@@ -3092,7 +3094,8 @@ Nelle tabelle provenienti dal sito Istat, per esempio, nel 2011, hanno un campo 
 \columnstyle{intersezione\_o\_non\_interse1}, mentre nel 2018, la stessa informazione ha 
 nome \columnstyle{intersezione\_o\_non\_interse3}. 
 
-A cambiare non sono soltanto i nomi delle colonne negli anni, ma in alcuni casi, 
+A cambiare non sono soltanto i nomi delle colonne negli anni, 
+ma in alcuni casi, 
 come quello esplorato in precedenza, è usato un solo \quotestyle{underscore} a 
 simboleggiare uno spazio, mentre nel campo \columnstyle{veicolo\_\_a\_\_\_et\_\_conducente} 
 ne sono usati due o anche tre.
@@ -3116,7 +3119,7 @@ conducenti maschio e femmina.
 La cartella \columnstyle{tesi} contiene la maggior parte delle immagini utilizzate 
 nella relazione\footnote{Ci si riferisce alle immagini realizzate tramite screenshot 
 da Google Maps e altri siti, non ai grafi.} 
-e il codice sorgente \LaTeX del pdf.
+e il codice sorgente Latex del pdf.
 
 Infine, nella directory \filenamestyle{src} è contenuto il codice sorgente utilizzato per realizzare 
 i grafi, le mappe e le stime, diviso per argomento. 
@@ -3139,6 +3142,14 @@ dal 2010 al 2018, i dataset utilizzati si troverebbero nella directory:
 \indent\filenamestyle{src/incidenti/incidenti\_senza\_coords/anno}
 
 \skipline
+
+Alcune immagini, in particolare quelle con grafi posizionati in coppia 
+orizzontalmente\footnote{I grafi singoli sono tutti nella directory \filenamestyle{src}, 
+le immagini doppie, unite tramite programmi esterni, in più, sono raccolte separatamente 
+in \filenamestyle{tesi/img\_unite}}, sono raccolte nella 
+cartella \filenamestyle{tesi/img\_unite}, 
+mentre la directory \filenamestyle{tesi/img} contiene gli screenshot e le 
+figure che non hanno bisogno di codice sorgente.
 Infine, in modo da fornire un collegamento tra i dataset nella specifica directory e i siti 
 di open data in cui sono stati trovati, nella tabella sottostante sono forniti i percorsi di 
 ogni file con l'url del portale di origine.
