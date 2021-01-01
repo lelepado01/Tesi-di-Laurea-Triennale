@@ -875,10 +875,8 @@ un tracciato con la maggior parte delle strade in pavè a Milano.
 Per valutare le somiglianze tra le linee tranviarie e la cartina di 
 Urbanfile, si è utilizzata l'immagine \ref{fig:tram-pave-milano}.
 
-\todo{allineare}
 \begin{figure}
-    \includegraphics[width=0.48\linewidth]{../src/tram/tram_milano.png}
-    \includegraphics[width=0.52\linewidth]{../dataset/pave/Cartina_Milano_Strade_Pavimentazione_Pavé_2.jpg}
+    \includegraphics[width=\linewidth]{../src/tram/tram_milano.png}
     \caption{Cartina con strade in pavè e linee tranviarie a Milano}
     \label{fig:tram-pave-milano}
 \end{figure}
@@ -894,11 +892,8 @@ per creare una stima, si sono convertite le vie principali della mappa trovata
 in geojson. 
 Il risultato è visibile nella mappa sulla sinistra dell'immagine \ref{fig:mappa-pave}.
 
-\todo{allineare}
-
 \begin{figure}
-    \includegraphics[width=0.5\linewidth]{../src/pave/mappa_pave.png}
-    \includegraphics[width=0.5\linewidth]{../src/pave/mappa_asfalto.png}
+    \includegraphics[width=\linewidth]{../src/pave/mappa_pave_asfalto.png}
     \caption{Principali strade a Milano in pavè e campione simile di strade asfaltate}
     \label{fig:mappa-pave}
 \end{figure}
@@ -1536,10 +1531,8 @@ ora_notte_weekend /= 2 * 52
 \end{code}
 
 Il traffico, stimato tramite gli accessi all'area C, conferma questa tendenza?
-\todo{allineare}
 \begin{figure}
-    \includegraphics[width=0.5\linewidth]{../src/incidenti/incidenti_senza_coords/ore_punta/ore_notte.png}
-    \includegraphics[width=0.48\linewidth]{../src/area_c/traffico_serale.png}
+    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/ore_punta/ore_punta.png}
     \caption{Incidenti e traffico durante ore serali o notturne}
     \label{fig:ore-notte}
 \end{figure}
@@ -1694,10 +1687,9 @@ a partire dal 2014 non sono più disponibili dati riguardanti il mese}.
 Per eseguire questo confronto sono state prese in considerazione le località di Rimine e Palermo, 
 per mostrare che alcune province, come la prima, confermano l'ipotesi, mentre altre, 
 come la seconda, possono essere usate come controesempio.
-\todo{allineare}
+
 \begin{figure}
-    \includegraphics[width=0.5\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/milano_rimini.png}
-    \includegraphics[width=0.5\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/palermo_milano.png}
+    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/milano_rimini_palermo.png}
     \caption{Incidenti per mese a Milano, Rimini e Palermo}
     \label{fig:milano-rimini}
 \end{figure}
@@ -3073,11 +3065,13 @@ ha condiviso in formato libero, nelle metodologie di calcolo di questo, scrive:
     alle informazioni (la soluzione migliore sarebbe l'avere un dataset unico, ma è sufficiente 
     avere un solo punto di accesso a tutti i sottoinsiemi di dati).}
 \end{center}
-\todo{lelepado: questa come fonte può andare? non ho trovato articoli...}
 
 \todo{atrent: riesci a trovare qualche articolo che ne parla? 
 te lo avevo detto io ma sarebbe carino trovare qualcuno che lo abbia detto pubblicamente, 
 anche solo su web, era una cosa tipo "valutazione delle PA nell'opendata"}
+
+\todo{lelepado: questa come fonte può andare? non ho trovato articoli...}
+
 \todo{\url{https://www.europeandataportal.eu/sites/default/files/open_data_maturity_report_2019.pdf}}
 \todo{\url{https://www.forumpa.it/open-government/open-data/open-data-maturity-report-2019-linsostenibile-leggerezza-dellimpegno-italiano/}}
 \todo{\url{https://www.europeandataportal.eu/sites/default/files/country-factsheet_italy_2019.pdf}}
@@ -3098,7 +3092,8 @@ e di conseguenza si è stati costretti a scartare queste informazioni.
     \caption{Pagina dei metadati del dataset riguardante il manto stradale (Geoportale Milano)}
     \label{fig:scheda-metadati}
 \end{figure}
-\todo{atrent: metterei almeno uno screenshot, sicuro che non c'è descrizione campi?}
+\todo{atrent: metterei almeno uno screenshot, sicuro che non c'è 
+descrizione campi?}
 
 Analogamente, molti dataset non aderiscono ad 
 alcuno standard, per quanto riguarda la nomenclatura delle colonne.
