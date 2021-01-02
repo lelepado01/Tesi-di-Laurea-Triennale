@@ -105,6 +105,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Introduzione}
 
+
+\todo{atrent: a me pareva di averlo segnalato, non c'è da nessuna parte una 
+introduzione all'opendata, in cui si potrebbe dire cosa sono, come vengono 
+classificati (Berners-Lee e Davies) e quali siano i processi di pubblicazione}
+
 Lo scopo di questo lavoro, è mostrare che tipo di analisi è possibile realizzare 
 avendo a disposizione una buona quantità di dati liberi, e come queste osservazioni possano 
 influenzare le decisioni delle persone, come per esempio la scelta di una nuova casa, 
@@ -3031,9 +3036,6 @@ misuravano le condivisioni di open data delle amministrazioni
 sulla base del numero di file pubblicati.
 Era quindi più proficuo pubblicare dati separati, rispetto a tutte le informazioni in 
 un unico dataset.
-\todo{atrent: a me pareva di averlo segnalato, non c'è da nessuna parte una 
-introduzione all'opendata, in cui si potrebbe dire cosa sono, come vengono 
-classificati (Berners-Lee e Davies) e quali siano i processi di pubblicazione}
 
 Ovviamente questa operazione rende non solo la raccolta delle informazioni più complessa, 
 ma anche l'associazione di dati, che magari sono presenti in un file e non in un altro. 
@@ -3054,37 +3056,25 @@ ha condiviso in formato libero, nelle metodologie di calcolo di questo, scrive:
     un punto di accesso 
     alle informazioni (la soluzione migliore sarebbe l'avere un dataset unico, ma è sufficiente 
     avere un solo punto di accesso a tutti i sottoinsiemi di dati).}
-\end{center}
-
-\todo{atrent: riesci a trovare qualche articolo che ne parla? 
-te lo avevo detto io ma sarebbe carino trovare qualcuno che lo abbia detto pubblicamente, 
-anche solo su web, era una cosa tipo "valutazione delle PA nell'opendata"}
-
-\todo{lelepado: questa come fonte può andare? non ho trovato articoli...}
-
-\todo{\url{https://www.europeandataportal.eu/sites/default/files/open_data_maturity_report_2019.pdf}}
-\todo{\url{https://www.forumpa.it/open-government/open-data/open-data-maturity-report-2019-linsostenibile-leggerezza-dellimpegno-italiano/}}
-\todo{\url{https://www.europeandataportal.eu/sites/default/files/country-factsheet_italy_2019.pdf}}
-\todo{\url{https://www.agid.gov.it/sites/default/files/repository_files/documentazione/strat_crescita_digit_3marzo_0.pdf}}
+\end{center
 
 \skipline
 Infine, un problema sorto con frequenza è stato la mancanza di descrizioni sul 
 significato dei campi di una tabella. 
-\todo{atrent: appunto, classificazione ;)}
+
 Un esempio di ciò, in figura \ref{fig:scheda-metadati}, sono i dati provenienti dal 
 geoportale del comune di Milano, 
 in particolare i dataset riguardanti la rete dei trasporti e il manto stradale.
 In molti casi, si è dovuto ipotizzare il significato delle colonne delle tabelle, 
 e di conseguenza si è stati costretti a scartare queste informazioni. 
 
+\todo{togliere o correggere questa parte, il dataset aderisce a standard}
+
 \begin{figure}
     \hfill\includegraphics[width=0.7\linewidth]{img/scheda_metadati_geoportale.png}\hspace*{\fill}
     \caption{Pagina dei metadati del dataset riguardante il manto stradale (Geoportale Milano)}
     \label{fig:scheda-metadati}
 \end{figure}
-\todo{atrent: metterei almeno uno screenshot, sicuro che non c'è 
-descrizione campi?, lelepado: ho riguardato e non ho trovato dettagli, 
-per screenshot intende questo?}
 
 Analogamente, molti dataset non aderiscono ad 
 alcuno standard, per quanto riguarda la nomenclatura delle colonne.
@@ -3157,7 +3147,7 @@ ogni file con l'url del portale di origine.
     \def\arraystretch{1.5}%  
     \begin{tabular}{ |c|c| } 
     \hline
-    Percorso Cartella & Sito \\ 
+    Percorso Cartella & Fonte \\ 
     \hline
     \rowcolor{TableGray}
     dataset/area\_c & \href{https://dati.comune.milano.it/dataset?tags=Area+C}{Comune di Milano} \\
@@ -3183,6 +3173,8 @@ ogni file con l'url del portale di origine.
     \hline
     \end{tabular}
 \end{center}
+
+\todo{mettere link come footnote e anche in repository}
 
 %\addcontentsline{toc}{chapter}{Bibliografia}
 \printbibliography
