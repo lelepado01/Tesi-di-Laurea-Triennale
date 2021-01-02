@@ -667,6 +667,8 @@ maggior parte degli incidenti.
     \label{fig:heatmap-municipi}
 \end{figure}
 
+\todo{spiegare come si è ottenuto grafo di destra}
+
 Non tutte le zone hanno la stessa superficie, e ovviamente sezioni più ampie hanno un maggior 
 numero di strade. Avendo a disposizione l'area dei vari municipi, 
 è possibile calcolare la media di incidenti al chilometro quadrato per zona.
@@ -3056,7 +3058,7 @@ ha condiviso in formato libero, nelle metodologie di calcolo di questo, scrive:
     un punto di accesso 
     alle informazioni (la soluzione migliore sarebbe l'avere un dataset unico, ma è sufficiente 
     avere un solo punto di accesso a tutti i sottoinsiemi di dati).}
-\end{center
+\end{center}
 
 \skipline
 Infine, un problema sorto con frequenza è stato la mancanza di descrizioni sul 
@@ -3150,31 +3152,45 @@ ogni file con l'url del portale di origine.
     Percorso Cartella & Fonte \\ 
     \hline
     \rowcolor{TableGray}
-    dataset/area\_c & \href{https://dati.comune.milano.it/dataset?tags=Area+C}{Comune di Milano} \\
-    dataset/atm & \href{https://dati.comune.milano.it/dataset/ds538_atm-percorsi-linee-di-superficie-urbane}{Comune di Milano} \\
+    dataset/area\_c & Comune di Milano\footnotemark[1] \\
+    dataset/atm & Comune di Milano\footnotemark[2] \\
     \rowcolor{TableGray}
-    dataset/autovelox & \href{https://www.openstreetmap.org/}{OpenStreetMaps} \\
-    dataset/incidenti/aci & \href{http://www.aci.it/fileadmin/documenti/ACI/Trasparenza/Open_Data/Catalogo_localizzazione_in_formato_Open_2019.pdf}{Portale ACI} \\
+    dataset/autovelox & OpenStreetMaps\footnotemark[3] \\
+    dataset/incidenti/aci & Portale ACI\footnotemark[4] \\
     \rowcolor{TableGray}
-    dataset/incidenti/istat & \href{https://www.istat.it/it/archivio/87539}{Archivio Istat}\\
-    dataset/incidenti & \href{https://thesubmarine.it/2018/06/20/mappa-incidenti-stradali-milano/}{TheSubmarine}\\
+    dataset/incidenti/istat & Archivio Istat\footnotemark[5]\\
+    dataset/incidenti & TheSubmarine\footnotemark[6]\\
     \rowcolor{TableGray}
-    dataset/manto\_stradale\_milano & \href{https://geoportale.comune.milano.it/ATOM/SIT/DBT2012/DBT2012_STRATO_01_Dataset_1.xml}{Geoportale Milano}\\
-    dataset/meteo/ilmeteo2010 & \href{https://www.ilmeteo.it/portale/archivio-meteo/Milano/2010/}{Archivio Istat}\\
+    dataset/manto\_stradale\_milano & Geoportale Milano\footnotemark[7]\\
+    dataset/meteo/ilmeteo2010 & Archivio Il Meteo\footnotemark[8]\\
     \rowcolor{TableGray}
-    dataset/meteo & \href{https://zenodo.org/record/3992354}{Zenodo}\\
-    dataset/milano\_municipi & \href{https://geoportale.comune.milano.it/ATOM/SIT/Municipi/Municipi_Dataset_1.xml}{Geoportale Milano}\\
+    dataset/meteo & Zenodo\footnotemark[9]\\
+    dataset/milano\_municipi & Geoportale Milano\footnotemark[10]\\
     \rowcolor{TableGray}
-    dataset/patenti & \href{https://www.mit.gov.it/sites/default/files/media/notizia/2017-07/INFOGRAFICA%20Dati%20sintesi%20patenti%20Italia.pdf}{Ministero dei Trasporti}\\
-    dataset/pave/tram & \href{https://geoportale.comune.milano.it/ATOM/SIT/DBT2012/DBT2012_STRATO_01_Dataset_1.xml}{Geoportale Milano}\\
+    dataset/patenti & Ministero dei Trasporti\footnotemark[11]\\
+    dataset/pave/tram & Geoportale Milano\footnotemark[12]\\
     \rowcolor{TableGray}
-    dataset/regioni & \href{https://github.com/openpolis/geojson-italy}{Github}\\
-    dataset/turismo & \href{https://www.istat.it/it/archivio/16777}{Archivio Istat}\\
+    dataset/regioni & Github\footnotemark[13]\\
+    dataset/turismo & Archivio Istat\footnotemark[14]\\
     \hline
     \end{tabular}
 \end{center}
 
-\todo{mettere link come footnote e anche in repository}
+\footnotetext[1]{\url{https://dati.comune.milano.it/dataset?tags=Area+C}}
+\footnotetext[2]{\url{https://dati.comune.milano.it/dataset/ds538_atm-percorsi-linee-di-superficie-urbane}}
+\footnotetext[3]{\url{https://www.openstreetmap.org/}}
+\footnotetext[4]{\url{http://www.aci.it/fileadmin/documenti/ACI/Trasparenza/Open_Data/Catalogo_localizzazione_in_formato_Open_2019.pdf}}
+\footnotetext[5]{\url{https://www.istat.it/it/archivio/87539}}
+\footnotetext[6]{\url{https://thesubmarine.it/2018/06/20/mappa-incidenti-stradali-milano/}}
+\footnotetext[7]{\url{https://geoportale.comune.milano.it/ATOM/SIT/DBT2012/DBT2012_STRATO_01_Dataset_1.xml}}
+\footnotetext[8]{\url{https://www.ilmeteo.it/portale/archivio-meteo/Milano/2010/}}
+\footnotetext[9]{\url{https://zenodo.org/record/3992354}}
+\footnotetext[10]{\url{https://geoportale.comune.milano.it/ATOM/SIT/Municipi/Municipi_Dataset_1.xml}}
+\footnotetext[11]{\url{https://www.mit.gov.it/sites/default/files/media/notizia/2017-07/INFOGRAFICA Dati sintesi patenti Italia.pdf}}
+\footnotetext[12]{\url{https://geoportale.comune.milano.it/ATOM/SIT/DBT2012/DBT2012_STRATO_01_Dataset_1.xml}}
+\footnotetext[13]{\url{https://github.com/openpolis/geojson-italy}}
+\footnotetext[14]{\url{https://www.istat.it/it/archivio/16777}}
+
 
 %\addcontentsline{toc}{chapter}{Bibliografia}
 \printbibliography
