@@ -180,8 +180,9 @@ Questo lavoro è da intendere come una dimostrazione delle analisi realizzabili
 tramite dati pubblici, e di quanti altri studi sarebbe possibile eseguire se fossero 
 disponibili le informazioni mancanti.
 
+\todo{sistemare}
 Tra le domande che ci si porrà, ci si chiederà se il pavè, a Milano, 
-influisca sull'incidentalità, o se gli autovelox rendano più attenta 
+influisca sugli, o se gli autovelox rendano più attenta 
 la guida dei conducenti in loro prossimità, o ancora se le linee dei trasporti pubblici 
 influiscano in maniera positiva o negativa sui sinistri.
 
@@ -209,6 +210,7 @@ ma anche informazioni sui passeggeri, la natura del sinistro e il tipo di strada
 Particolarmente interessanti sono anche i campi riguardanti la categoria di incrocio 
 a cui è avvenuto il sinistro, come rettilineo, rotonda o semaforo.
 
+\todo{mettere le descrizioni come footnote}
 \lighttext{(\\
     \indent anno, provincia, comune, giorno,\\
     \indent localizzazione\_incidente: zona incidente come urbana, extraurbana o autostrada\\
@@ -258,7 +260,8 @@ degli incidenti del luogo.
 Un primo dataset individuato, che riguardasse delle posizioni 
 degli autovelox fissi, è stata una mappa 
 GoogleMyMaps\footnote{\url{https://www.google.com/maps/d/viewer?mid=1CBgMTvIDnbGo22-Y1f3rVcbeX4C0v_w1&ll=45.365557951599605\%2C10.03650113755961&z=8}} 
-creata da un utente anonimo, dunque senza un modo di provare l'autenticità dei dati. 
+creata da un utente anonimo, dunque senza possibilità di verificarne 
+l'autenticità dei dati. 
 Per evitare di fare uso di informazioni non corrette, si è preferito scartare 
 questa fonte.
 
@@ -347,7 +350,9 @@ alcune stime del numero di automobili per regione, e a Milano.
 
 I dati sui patentati per regione, che è stato utilizzato per stimare il traffico 
 regionale, proviene dal sito del Ministero delle Infrastrutture e 
-Trasporti\footnote{\url{http://dati.mit.gov.it/catalog/dataset/patenti}}.
+Trasporti\footnote{\url{http://dati.mit.gov.it/catalog/dataset/patenti}}. 
+\todo{è coomposto da un ampia quantità di informazioni, non utili al fine dell'analisi, 
+ma tra queste si è risciti a ricavare il numero di cose utili}
 Questo dataset è diviso in vari file seconda della regione e, vista la quantità 
 non necessaria di informazioni, si è preferito usare una sintesi di questi provienienti da 
 un'infografica che sintetizza i dati in questione \cite{INFOGRAFICA_MIT:1}.
@@ -410,6 +415,7 @@ per l'ampiezza delle sezioni rispetto al numero di strade di ogni sezione.
 
 Un altro problema, è che le zone non contengono solamente la superficie stradale, ma anche 
 abitazioni e terreni, in cui non avverranno mai incidenti.
+\todo{spiegare meglio la stima dal basso}
 Sarà necessario tenere a mente, che il numero di incidenti per zona che verrà ricavato, 
 è da considerarsi come una stima \quotestyle{dal basso}, se contrapposto all'area del municipio, 
 e stime che utilizzano solamente la superficie stradale avranno inevitabilmente volume 
@@ -589,6 +595,7 @@ Quest'ultimo infatti mostra sia il traffico in tempo reale, sia
 il traffico stimato a una determinata ora. 
 Tuttavia, leggendo nella documentazione, si è scoperto che non è possibile ottenere 
 dati sul traffico abituale, per la mancanza delle API corrispondenti. 
+\todo{ma non è particolarmente utile poichè lo studio è stato svolto in concomutanza a un lungo periodo di quarantena dovuto al covid 19 le cui limitazioni hanno ridotto in maniera significariva i volumi di traffico}
 Invece, per quanto riguarda il traffico in tempo 
 reale, questo è disponibile, ma non è particolarmente utile per la quarantena dovuta al 
 Covid-19, che riduce notevolmente il volume di automobili. 
@@ -651,8 +658,9 @@ dell'incidente.
 Controllando i dati trovati, in particolare come questi siano posizionati, 
 si nota, dalla mappa destra nella figura \ref{fig:heatmap-municipi} come, 
 gli incidenti a Milano siano distributi con concentrazioni più alte, 
-in alcuni punti di interesse della città, come Piazzale Loreto, Zona Navigli 
-e Monumentale, e Corso Ventidue Marzo.
+in alcuni punti di interesse della città, come Piazzale Loreto, le circonvallazioni 
+interna e esterna, e Piazza Kennedy e Cavalcavia del Ghisallo.
+\todo{evidenziando zona navigli}
 
 Sarebbe interessante sapere se esistano zone con maggiore concentrazione di incidenti rispetto 
 alla media, e ottenere un indice numerico della pericolosità di una determinata zona.
