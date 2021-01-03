@@ -180,11 +180,11 @@ Questo lavoro è da intendere come una dimostrazione delle analisi realizzabili
 tramite dati pubblici, e di quanti altri studi sarebbe possibile eseguire se fossero 
 disponibili le informazioni mancanti.
 
-\todo{sistemare}
-Tra le domande che ci si porrà, ci si chiederà se il pavè, a Milano, 
-influisca sugli, o se gli autovelox rendano più attenta 
-la guida dei conducenti in loro prossimità, o ancora se le linee dei trasporti pubblici 
-influiscano in maniera positiva o negativa sui sinistri.
+Una delle domande che ci si potrebbe porre, è se il pavè, a Milano, 
+influisca sull'incidentalità.
+Un'altra questione interessante riguarda gli autovelox, e come questi influiscano sulla 
+la guida dei conducenti in loro prossimità. 
+O ancora se le linee dei trasporti pubblici aumentino o diminuiscano il numero di sinistri.
 
 Altre questioni interessanti potrebbero essere:\\
 Quali sono le strade più pericolose in Italia?\\
@@ -351,12 +351,13 @@ alcune stime del numero di automobili per regione, e a Milano.
 I dati sui patentati per regione, che è stato utilizzato per stimare il traffico 
 regionale, proviene dal sito del Ministero delle Infrastrutture e 
 Trasporti\footnote{\url{http://dati.mit.gov.it/catalog/dataset/patenti}}. 
-\todo{è coomposto da un ampia quantità di informazioni, non utili al fine dell'analisi, 
-ma tra queste si è risciti a ricavare il numero di cose utili}
-Questo dataset è diviso in vari file seconda della regione e, vista la quantità 
-non necessaria di informazioni, si è preferito usare una sintesi di questi provienienti da 
-un'infografica che sintetizza i dati in questione \cite{INFOGRAFICA_MIT:1}.
-In particolare, da questo file pdf si è mantenuto solamente il numero di patenti per regione.
+
+Questo dataset è formato da un ampia quantità di informazioni, 
+non utili al fine dell'analisi, 
+si è preferito quindi usare una sintesi di queste provieniente da 
+un'infografica che riassume i dati in questione \cite{INFOGRAFICA_MIT:1}.
+In particolare, da questo file pdf si è mantenuto solamente 
+il numero di patenti per regione.
 
 \'E anche necessario chiedersi quanto il numero dei patentati per regione sia un 
 fattore valido con cui stimare il traffico, tenendo conto del fatto che molte 
@@ -415,11 +416,13 @@ per l'ampiezza delle sezioni rispetto al numero di strade di ogni sezione.
 
 Un altro problema, è che le zone non contengono solamente la superficie stradale, ma anche 
 abitazioni e terreni, in cui non avverranno mai incidenti.
-\todo{spiegare meglio la stima dal basso}
-Sarà necessario tenere a mente, che il numero di incidenti per zona che verrà ricavato, 
-è da considerarsi come una stima \quotestyle{dal basso}, se contrapposto all'area del municipio, 
-e stime che utilizzano solamente la superficie stradale avranno inevitabilmente volume 
-di incidenti per chilometro maggiore.
+
+\'E necessario tenere a mente, che il numero di incidenti per zona ricavato, 
+è da considerarsi come un'approssimazione per difetto, o una stima del 
+\quotestyle{lower bound}, perchè il valore è abbassato dalle aree in cui non 
+possono avvenire scontri.
+Quindi calcoli che utilizzano solamente la superficie stradale avranno 
+inevitabilmente volume di incidenti per chilometro maggiore.
 
 \section{Dati riguardanti il meteo}
 
@@ -595,10 +598,11 @@ Quest'ultimo infatti mostra sia il traffico in tempo reale, sia
 il traffico stimato a una determinata ora. 
 Tuttavia, leggendo nella documentazione, si è scoperto che non è possibile ottenere 
 dati sul traffico abituale, per la mancanza delle API corrispondenti. 
-\todo{ma non è particolarmente utile poichè lo studio è stato svolto in concomutanza a un lungo periodo di quarantena dovuto al covid 19 le cui limitazioni hanno ridotto in maniera significariva i volumi di traffico}
 Invece, per quanto riguarda il traffico in tempo 
-reale, questo è disponibile, ma non è particolarmente utile per la quarantena dovuta al 
-Covid-19, che riduce notevolmente il volume di automobili. 
+reale, questo è disponibile, ma non è particolarmente utile 
+poichè questo studio è stato svolto in concomitanza a un lungo periodo di quarantena 
+dovuto al Covid-19, le cui limitazioni hanno ridotto in maniera significativa 
+i volumi di traffico.
 Per quanto fosse stato possibile realizzare comunque uno script per effettuare scraping della 
 quantità di traffico nelle strade, registrando il colore delle direttrici per ogni orario della 
 giornata nei periodi interessati, si è optato per la ricerca di un altro dataset.
@@ -659,8 +663,14 @@ Controllando i dati trovati, in particolare come questi siano posizionati,
 si nota, dalla mappa destra nella figura \ref{fig:heatmap-municipi} come, 
 gli incidenti a Milano siano distributi con concentrazioni più alte, 
 in alcuni punti di interesse della città, come Piazzale Loreto, le circonvallazioni 
-interna e esterna, e Piazza Kennedy e Cavalcavia del Ghisallo.
-\todo{evidenziando zona navigli}
+interna e esterna\footnote{Si evidenzieranno, in particolare, Corso Ventidue Marzo 
+e la zona dei Navigli}, e Piazza Kennedy e Cavalcavia del Ghisallo. 
+
+La mappa sinistra nella figura \ref{fig:heatmap-municipi} è stata realizzata 
+approssimando ogni coordinata di incidente. 
+Normalmente queste hanno precisione di sette cifre decimali, arrotondando a cinque e 
+contando i punti uguali, è stato possibile aggregare sinistri che avvengono in zone 
+vicine. 
 
 Sarebbe interessante sapere se esistano zone con maggiore concentrazione di incidenti rispetto 
 alla media, e ottenere un indice numerico della pericolosità di una determinata zona.
@@ -674,8 +684,6 @@ maggior parte degli incidenti.
     \caption{Incidenti a Milano per municipio}
     \label{fig:heatmap-municipi}
 \end{figure}
-
-\todo{spiegare come si è ottenuto grafo di destra}
 
 Non tutte le zone hanno la stessa superficie, e ovviamente sezioni più ampie hanno un maggior 
 numero di strade. Avendo a disposizione l'area dei vari municipi, 
@@ -803,15 +811,17 @@ la quarantena per il Covid-19 ha ridotto notevolmente il volume di automobili.
 
 Per confutare l'ipotesi iniziale, si sono utilizzati i dati ricavati in precedenza, 
 cioè gli incindenti per chilometro per ogni municipio di Milano. 
-Nella zona dei Navigli, si è poi presa in considerazione la sezione \ref{fig:zona-navigli-rect}, 
+Nella zona dei Navigli, si è poi presa in considerazione la sezione 
+nell'immagine sinistra 
+della figura \ref{fig:zona-navigli-22marzo}, 
 perchè sono presenti molti incidenti in viale Papiniano e viale Beatrice d'Este, 
 e un numero minore nella vie parallele sottostanti, in cui sono anche presenti 
 linee di trasporti pubblici.
 
 \begin{figure}
-    \hfill\includegraphics[width=0.7\linewidth]{../src/atm/zona_navigli_rect.png}\hspace*{\fill}
-    \caption{Sezioni di Milano prese in considerazione per contare gli incidenti ai Navigli}
-    \label{fig:zona-navigli-rect}
+    \includegraphics[width=\linewidth]{img_unite/zona_navigli_22marzo.png}
+    \caption{Sezioni di Milano prese in considerazione per contare gli incidenti ai Navigli e nella zona di Corso Ventidue Marzo}
+    \label{fig:zona-navigli-22marzo}
 \end{figure}
 
 \begin{code}
@@ -854,13 +864,7 @@ rispetto a una via dove è possibile rimanere incolonnati per la presenza di una
 corsia, e dove si è rallentati dalla presenza di autobus o tram.
 
 Lo stesso procedimento è stato realizzato per Corso Ventidue Marzo, le zone utilizzate sono 
-raffigurate nel'immagine \ref{fig:zona-22marzo-rect}. 
-
-\begin{figure}
-    \hfill\includegraphics[width=0.7\linewidth]{../src/atm/zona_22marzo_rect.png}\hspace*{\fill}
-    \caption{Sezioni di Milano prese in considerazione per contare gli incidenti intorno a corso Ventidue Marzo}
-    \label{fig:zona-22marzo-rect}
-\end{figure}
+raffigurate nell'immagine destra della figura \ref{fig:zona-navigli-22marzo}. 
 
 In questo caso, per viale Bianca Maria, dove non è presente una linea di trasporti pubblici, 
 il numero di incidenti è $254.31$, mentre per viale Premuda per cui passa una linea tranviaria, 
