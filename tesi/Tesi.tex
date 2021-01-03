@@ -210,22 +210,23 @@ ma anche informazioni sui passeggeri, la natura del sinistro e il tipo di strada
 Particolarmente interessanti sono anche i campi riguardanti la categoria di incrocio 
 a cui è avvenuto il sinistro, come rettilineo, rotonda o semaforo.
 
-\todo{mettere le descrizioni come footnote}
 \lighttext{(\\
-    \indent anno, provincia, comune, giorno,\\
-    \indent localizzazione\_incidente: zona incidente come urbana, extraurbana o autostrada\\
-    \indent tipo\_di\_strada: numero di carreggiate della strada,\\
-    \indent pavimentazione: tipo di pavimentazione,\\
-    \indent intersezione\_o\_non\_interse3: tipo di intersezione,\\
-    \indent segnaletica : tipo di segnaletica presente,\\
-    \indent condizioni\_meteorologiche, natura\_incidente,\\
-    \indent tipo\_veicolo\_a : questo campo è ripetuto per altri due veicoli,\\
-    \indent veicolo\_\_a\_\_\_et\_\_conducente: questo e i due campi successivi sono ripetuti anche per i passeggeri,\\
-    \indent veicolo\_\_a\_\_\_sesso\_conducente,\\veicolo\_\_a\_\_\_esito\_conducente, \\
+    \indent anno, provincia, \\
+    \indent comune, giorno,\\
+    \indent localizzazione\_incidente\footnote{zona incidente come urbana, extraurbana o autostrada}\\
+    \indent tipo\_di\_strada\footnote{numero di carreggiate della strada},\\
+    \indent pavimentazione,\\
+    \indent intersezione\_o\_non\_interse3\footnote{tipo di intersezione},\\
+    \indent segnaletica,\\
+    \indent condizioni\_meteorologiche, \\
+    \indent natura\_incidente,\\
+    \indent tipo\_veicolo\_a\footnote{questo campo è ripetuto per altri due veicoli},\\
+    \indent veicolo\_\_a\_\_\_et\_\_conducente\footnote{questo e i due campi successivi sono ripetuti anche per i passeggeri},\\
+    \indent veicolo\_\_a\_\_\_sesso\_conducente,\\
+    \indent veicolo\_\_a\_\_\_esito\_conducente, \\
     \indent morti\_entro\_24\_ore,\\
-    \indent morti\_entro\_30\_giorni : questo insieme non contiene la categoria precedente,\\
-    \indent feriti, Ora,\\
-    \indent trimestre : prima del 2014 questo campo è sostituito da 'anno'\\
+    \indent morti\_entro\_30\_giorni\footnote{questo insieme non contiene la categoria precedentemente},\\
+    \indent feriti, Ora, trimestre\footnote{prima del 2014 questo campo è sostituito da 'anno'}\\
 )}
 
 Per quanto riguarda i dati geolocalizzati, 
@@ -3073,24 +3074,8 @@ ha condiviso in formato libero, nelle metodologie di calcolo di questo, scrive:
 \end{center}
 
 \skipline
-Infine, un problema sorto con frequenza è stato la mancanza di descrizioni sul 
-significato dei campi di una tabella. 
-
-Un esempio di ciò, in figura \ref{fig:scheda-metadati}, sono i dati provenienti dal 
-geoportale del comune di Milano, 
-in particolare i dataset riguardanti la rete dei trasporti e il manto stradale.
-In molti casi, si è dovuto ipotizzare il significato delle colonne delle tabelle, 
-e di conseguenza si è stati costretti a scartare queste informazioni. 
-
-\todo{togliere o correggere questa parte, il dataset aderisce a standard}
-
-\begin{figure}
-    \hfill\includegraphics[width=0.7\linewidth]{img/scheda_metadati_geoportale.png}\hspace*{\fill}
-    \caption{Pagina dei metadati del dataset riguardante il manto stradale (Geoportale Milano)}
-    \label{fig:scheda-metadati}
-\end{figure}
-
-Analogamente, molti dataset non aderiscono ad 
+Infine, un problema sorto con frequenza è stato il fatto che 
+molti dataset non aderiscono ad 
 alcuno standard, per quanto riguarda la nomenclatura delle colonne.
 Nelle tabelle provenienti dal sito Istat, per esempio, nel 2011, hanno un campo denominato 
 \columnstyle{intersezione\_o\_non\_interse1}, mentre nel 2018, la stessa informazione ha 
