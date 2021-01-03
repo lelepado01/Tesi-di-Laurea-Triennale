@@ -112,17 +112,17 @@ classificati (Berners-Lee e Davies) e quali siano i processi di pubblicazione}
 
 Lo scopo di questo lavoro, è mostrare che tipo di analisi è possibile realizzare 
 avendo a disposizione una buona quantità di dati liberi, e come queste osservazioni possano 
-influenzare le decisioni delle persone, come per esempio la scelta di una nuova casa, 
+influenzare le decisioni delle persone, come la scelta di una nuova casa, 
 mettendo in luce aspetti non tenuti in considerazione, o le cui informazioni semplicemente 
 non sono disponibili da fonti \quotestyle{normali} come quotidiani o siti internet.
 
-Esplorando questo esempio, ci si potrebbe domandare quali siano le zone 
+Esplorando questa idea, ci si potrebbe domandare quali siano le zone 
 di Milano più soggette a incidenti, o con maggiore coinvolgimento di pedoni, 
 o ancora se la tipologia di strada influenza il numero di sinistri. 
 Queste domande raramente trovano risposta nelle classiche fonti di informazione, 
 ma in molti casi possono spostare l'ago della bilancia per decisioni più o meno 
 importanti.
-Una famiglia, per esempio, potrebbe preferire una destinazione in cui si è nelle 
+Una famiglia potrebbe preferire una destinazione in cui si è nelle 
 vicinanze di una fermata dell'autobus, se si pensa che i trasporti pubblici riducano 
 il traffico. 
 Allo stesso modo, si potrebbe scegliere una casa non adiacente 
@@ -135,13 +135,13 @@ Spesso, questi sono estremamente utili a garantire trasparenza tra istituzioni,
 a tal punto che, fin troppo frequentemente, queste ultime rendono complesso o 
 del tutto impossibile per un utente l'ottenimento di queste informazioni.
 
-Un esempio di questo comportamento è il sito 
+Uno di questi siti è la pagina di richiesta dati 
 Arpa\footnote{\url{https://www.arpalombardia.it/Pages/ARPA_Home_Page.aspx}}, 
 soprattutto negli anni precedenti al 2017, quando si sarebbe dovuto compilare un 
 \textbf{form}\footnote{Un form è un questionario, costituito da più campi, che 
 permettono all'utente l'inserimento di dati utilizzati, per esempio, da un sito web}, 
 che richiedeva l'inserimento di un periodo, al massimo di un anno, di una sola 
-centralina, e di una sola tipologia di informazione, come per esempio il tipo di inquinante. 
+centralina, e di una sola tipologia di informazione, come il tipo di inquinante. 
 A rendere il processo ancora più complesso è il fatto che i dati sarebbero stati 
 spediti via email, dunque con un peso massimo di 20MB.
 Infine, per evitare che persone creassero script per automatizzare le richieste, 
@@ -334,7 +334,7 @@ installati in entrambe le direzioni.
 
 Un'importante necessità in un indagine di questo tipo, è avere un contesto con cui 
 interpretare i risultati ottenuti. 
-Non è possibile, per esempio, dire se su una certa strada si ha un numero alto di 
+Non è possibile dire se su una certa strada si ha un numero alto di 
 incidenti, senza sapere quante automobili passano in una giornata.
 
 Si è dunque tentata una ricerca, infruttuosa, di dataset sul traffico stradale nel periodo 
@@ -376,7 +376,7 @@ città, in base all'orario.
 
 Il dataset riguardante gli accessi è stato trovato sul sito di open data del comune di 
 Milano\footnote{\url{https://dati.comune.milano.it/organization/comunedimilano?q=area+c&sort=score+desc\%2C+metadata_modified+desc}}, 
-dove sono disponibili varie tipologie di file distinti, per esempio, per orario, 
+dove sono disponibili varie tipologie di file distinti per orario, 
 mese o località. 
 Tra questi si è utilizzata la tipologia contenente orari e data dell'accesso.
 
@@ -461,8 +461,7 @@ ora a Milano, a partire dal 2008, fino al 2018.
 \section{Dati riguardanti trasporti pubblici}
 
 Un altro fattore su cui ci si è chiesti l'influenza sull'incidentalità, è la 
-presenza, nella via o viale, di trasporti pubblici in una città come, 
-per esempio, Milano.
+presenza, nella via o viale, di trasporti pubblici in una città come Milano.
 
 I dati riguardanti questi ultimi, hanno due provenienze, i primi sono 
 dati riferiti alle linee ATM, scaricati sul sito del comune di 
@@ -484,7 +483,7 @@ sosta\footnote{\url{https://dati.comune.milano.it/dataset/ds740_sosta_bus_gt_tur
 Si è anche fatto uso di un dataset contenente 
 solamente le linee tranviarie, trovato sul geoportale del comune di 
 Milano\footnote{\url{https://geoportale.comune.milano.it/ATOM/SIT/DBT2012/DBT2012_STRATO_01_Dataset_1.xml}}.
-Questo dataset è molto ampio e contiene altri livelli di informazioni, tra cui per esempio, 
+Questo dataset è molto ampio e contiene altri livelli di informazioni, tra cui 
 le strade, le ferrovie o le piste ciclabili passanti per Milano. 
 
 La principale funzione di questi dataset è l'ottenere i percorsi delle linee di trasporto pubblico, 
@@ -639,8 +638,9 @@ Questo dataset contiene vari layer di informazioni, tra cui
 tuttavia, in nessuno di questi livelli, si sono trovate informazioni utili a dividere, 
 per esempio, intersezioni segnalate da incroci con semaforo. 
 
+\todo{controllare questa parte}
 Inoltre, per la maggior parte dei livelli, non si sono trovate informazioni sul significato 
-delle colonne presenti nei dataset come, per esempio, \columnstyle{GZ\_STR\_TY} o 
+delle colonne presenti nei dataset come \columnstyle{GZ\_STR\_TY} o 
 \columnstyle{GZ\_STR\_TYF}. 
 
 Le ricerche per un file contenente informazioni sui metadati sono state eseguite sia 
@@ -714,7 +714,8 @@ la zona 1, cioè quella del centro storico, vista la superficie minore
 rispetto agli altri municipi.
 
 Una volta creata la tendenza generale del municipio, è possibile confrontare i risultati 
-ottenuti con il numero di incidenti in zone più ristrette, per esempio attorno a piazzale Loreto.
+ottenuti con il numero di incidenti in zone più ristrette come, per esempio, 
+attorno a piazzale Loreto.
 
 \begin{figure}
     \hfill\includegraphics[width=0.7\linewidth]{../src/municipi_milano/zona_loreto.png}\hspace*{\fill}
@@ -781,13 +782,14 @@ troppo in periferia, si ottiene la mappa sinistra nella figura \ref{fig:geo-tras
 
 Affiancando le posizioni degli incidenti ai tragitti dei trasporti pubblici, 
 non è possibile notare un collegamento preciso tra i due dataset. 
-Sono presenti tuttavia alcune corrispondenze come, per esempio, la zona dei Navigli 
+Sono presenti tuttavia alcune corrispondenze come la zona dei Navigli 
 e quella circostante a Corso Ventidue Marzo. 
 
 Un fenomeno interessante, è la presenza di alcune strade con alta incidentalità, 
 parallele a linee di autobus. 
-Un esempio è quello di zona Navigli, in figura \ref{fig:navigli}, dove le vie interessate sono:
-Viale Gian Galeazzo e Viale Beatrice D'Este, parallele a Viale Col di Lana e Viale Bligny.
+Un esempio di ciò è quello di zona Navigli, in figura \ref{fig:navigli}, dove le vie 
+interessate sono Viale Gian Galeazzo e Viale Beatrice D'Este, 
+parallele a Viale Col di Lana e Viale Bligny.
 Lo stesso fenomeno è osservabile su Viale Gabriele D'Annunzio e Viale Gorizia e Coni Zugna, 
 e nella zona vicino a corso Ventidue Marzo.
 
@@ -885,7 +887,7 @@ D'altro canto, è anche possibile che una parte dei conducenti, come quelli con 
 a giudare in grandi città, tengano in considerazione e evitino le strade con i mezzi pubblici.
 
 %\clearpage
-\subsection{Il pavè a Milano influisce in qualche modo sull'incidentalità?}
+\section{Il pavè a Milano influisce in qualche modo sull'incidentalità?}
 
 Nella sezione sull'origine dei dati, si è parlato di come è stato possibile ricavare 
 un tracciato con la maggior parte delle strade in pavè a Milano.
@@ -899,7 +901,7 @@ Urbanfile, si è utilizzata l'immagine \ref{fig:tram-pave-milano}.
     \label{fig:tram-pave-milano}
 \end{figure}
 
-\'E possibile notare alcune somiglianze, come per esempio viale Sabotino e via 
+\'E possibile notare alcune somiglianze, come tra viale Sabotino e via 
 Alessandro Mazoni, tuttavia la maggior parte delle linee tranviarie segnate 
 passano su asfalto.
 Inoltre, in alcuni viali, come viale Premuda, i tram hanno una carreggiata separata, 
@@ -1151,8 +1153,8 @@ strade_extraurbane = data[(data['localizzazione_incidente'] == 4) | (data['local
 Il grafo \ref{fig:differenza-strade} rappresenta quali sono le categorie di veicoli 
 coinvolte con più frequenza in sinistri, per tre tipi di strade diverse, strade urbane, 
 extraurbane e autostrade. 
-Le percentuali sono calcolate per gruppo, quindi sommando 
-tutte le righe di, per esempio \columnstyle{Autostrade}, si ottiene $1.0$.
+Le percentuali sono calcolate per gruppo quindi, sommando 
+tutte le righe di \columnstyle{Autostrade}, si ottiene $1.0$.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/tipo_veicoli/differenza_strade.png}
@@ -1791,7 +1793,7 @@ questo mese è sempre in decremento rispetto alla media, con percentuali abbasta
 
 Per avere una visione di insieme delle tendenze annuali, è possibile tracciare 
 il grafo \ref{fig:aosta-rimini-milano-trimestre}, contenente gli incidenti divisi 
-per trimestre dove, per esempio, per primo trimestre si 
+per trimestre dove, per primo trimestre si 
 intende Gennaio, Febbraio e Marzo.
 
 \begin{figure}
@@ -2087,8 +2089,8 @@ il numero di incidenti su rettilineo è quasi cinque
 volte il valore della seconda posizione.
 
 Questo alto numero di sinistri fa pensare che esista un qualche fattore 
-che comporti maggiore coinvolgimento di pedoni lungo rettilinei come, per 
-esempio, l'alta velocità dei veicoli.
+che comporti maggiore coinvolgimento di pedoni lungo rettilinei come 
+l'alta velocità dei veicoli.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/pedoni/pedoni_no_rett.png}
@@ -2143,7 +2145,7 @@ sia quella dei \columnstyle{65+} anni, tuttavia esiste un secondo picco, nel gra
 pedoni feriti, che comprende le persone tra i trenta e cinquantaquattro anni di età.
 
 Non tutte queste fasce, però, contengono lo stesso numero di anni di età, 
-per esempio \columnstyle{30-44} contiene quindici anni, mentre 
+\columnstyle{30-44} contiene quindici anni, mentre 
 \columnstyle{18-20} ne contiene solo due.
 
 \begin{code}[language=Python]
@@ -2508,7 +2510,7 @@ un'impennata di incidenti nella prima heatmap.
 \subsection{Le strade pericolose in provincia di Milano}
 
 Approfondendo le informazioni del capitolo precedente, è possibile calcolare quali siano 
-le strade più pericolose, per esempio, a Milano. 
+le strade più pericolose, concentrandosi sulla città di Milano. 
 Il dataset ACI infatti fornisce il nome delle strade su cui sono avvenuti gli incidenti, 
 tuttavia non presenta dati aggiuntivi sulla zona del sinistro, dunque per autostrade molto 
 estese, questa misurazione potrebbe presentare errori di vari chilometri. 
@@ -2728,7 +2730,7 @@ Tornando a concentrarsi sulle autostrade, sarebbe interessante sapere se quelle
 con più incidenti cambino al cambiare dell'anno.
 Una motivazione di questo fenomento potrebbe essere, il cambiamento 
 delle mode riguadanti le località di vacanza.
-Per esempio, nel 2018, le mete preferite sono state Puglia e 
+Nel 2018, le mete preferite sono state Puglia e 
 Toscana\cite{INFOGRAFICA_ISTAT:1}, mentre nel 2019, oltre alla Puglia, 
 una percentuale sostanziale di turisti si è recata in 
 Emilia Romagna e Liguria\cite{REPORT_ISTAT_2019:1}.
@@ -2816,7 +2818,7 @@ Rimini e Aosta.
 La heatmap \ref{fig:incidenti-per-mese} mostra che su alcune autostrade, come il 
 Grande Raccordo Anulare a Roma, il numero di incidenti diminuisce durante i mesi 
 estivi.
-D'altra parte, la tendenza opposta avviene, per esempio, sulla A1 e la A4, 
+D'altra parte, la tendenza opposta avviene sulla A1 e la A4, 
 con picchi di sinistri in Giugno e Luglio per, come precendentemente spiegato, 
 l'aumento di traffico dovuto alle partenze per le vacanze.
 Sull'Adriatica e sull'Aurelia, infine, prevalgono scontri 
@@ -2887,7 +2889,7 @@ andare a lavoro?
 Certamente la maggior parte dei residenti a Milano non utilizzerà strade registrate 
 nell'ultimo grafo, poichè essendo già a Milano, utilizzaranno le direttrici urbane. 
 Tuttavia, per quanto riguarda i pendolari, è molto probabile che, quelli provenienti 
-da Varese, Busto Arsizio o Novara per esempio, utilizzino la Tangenziale Ovest, 
+da Varese, Busto Arsizio o Novara, utilizzino la Tangenziale Ovest, 
 e dunque siano registrati nei conteggi. 
 
 Questa stima, di certo non permette di affermare con sicurezza 
@@ -2996,7 +2998,7 @@ Per le annate a disposizione, i dati sono consistenti tra loro, e indicano la pr
 correlazione lineare tra temperature e incidenti, mentre si ha correlazione inversa per quanto 
 riguarda l'umidità.
 
-Ciò non significa che, per esempio nel 2011, sia stata l'alta temperatura a provocare 
+Ciò non significa che, nel 2011, sia stata l'alta temperatura a provocare 
 tutti gli incidenti, anzi, è molto più probabile che il fattore con maggiore 
 influenza sia proprio il mese, e non la temperatura o l'umidità.
 
@@ -3023,15 +3025,36 @@ coincide con pioggia e temporali, che a loro volta rendono più difficoltosa la 
 
 
 \chapter{Conclusioni}
-\todo{atrent: ricapitolare gli scopi}
 
+Riprendendo alcune delle analisi realizzate in questo lavoro, è possibile dire che buona 
+parte di queste sono state portate a termine facendo compromessi tra precisione del dato, e 
+disponibilità di quest'ultimo.
+
+In particolare, i capitoli che fanno utilizzo dei dati geolocalizzati, soffrono la mancanza di 
+queste informazioni per annate diverse dal 
+2016\footnote{Il dataset di incidenti geolocalizzati è disponibile solo per l'anno 2016}, 
+come si è potuto osservare nella sezione riguardante gli autovelox. 
+
+Le analisi dei dataset Istat e Aci, invece, facendo uso di informazioni già aggregate 
+e di facile elaborazione, sono state portate a termine con maggiore frequenza, e il 
+principale ostacolo è stato creare un contesto corretto attorno ai risultati ottenuti. 
+
+\'E il caso dei sinistri divisi per età della popolazione, dove si sono ottenuti esiti 
+molto diversi a seconda di quali percentuali venivano usate per fasce.
+
+\skipline
 Per concludere, sarebbe opportuno riportare quali siano state le maggiori difficoltà 
 incontrate durante l'analisi di dati liberi appena realizzata.
 
 Uno dei problemi riscontrati, soprattutto per quanto riguarda il confermare la 
 validità dei risultati calcolati, è stata la mancanza di dataset in ambiti come 
 il traffico e il fondo stradale. 
-Per ovviare a questa difficoltà si è spesso dovuto ricorrere a stime, 
+
+Nel capitolo riguardante gli autovelox non è stato possibile individuare una tendenza 
+per la mancanza di informazioni 
+sulla posizione precisa dei sinistri precedentemente all'anno 2016. 
+
+Per ovviare a queste difficoltà si è spesso dovuto ricorrere a stime, 
 come il numero di accessi in area C. 
 L'assenza di informazioni ha giocato un ruolo anche nelle analisi riguardanti gli incroci, 
 in quanto non si sono trovati riferimenti al numero di questi in alcun sito di open data.
@@ -3057,21 +3080,21 @@ ma anche l'associazione di dati, che magari sono presenti in un file e non in un
 Il sito Global Open Data Index, che offre un punteggio in base a quanti dati ogni paese 
 ha condiviso in formato libero, nelle metodologie di calcolo di questo, scrive: 
 
-\begin{center}
-    \quotestyle{\dots we expect that national governments also provide aggregation 
+\begin{quotation}
+    \dots we expect that national governments also provide aggregation 
     of that data from 
     sub governments so as to ensure users have an easy way to access use the data 
     (the best solution is one consolidated dataset but at a minimum could consist of a 
-    single point of access to all data subsets).}\cite{OPENDATAINDEX:1}
-\end{center}
+    single point of access to all data subsets).\cite{OPENDATAINDEX:1}
+\end{quotation}
 
-\begin{center}
-    \quotestyle{\dots Ci si aspetta che i governi nazionali provvedano per 
+\begin{quotation}
+    \dots Ci si aspetta che i governi nazionali provvedano per 
     l'aggregazione dei dati provenienti dalle 'regioni', per garantire agli utenti 
     un punto di accesso 
     alle informazioni (la soluzione migliore sarebbe l'avere un dataset unico, ma è sufficiente 
-    avere un solo punto di accesso a tutti i sottoinsiemi di dati).}
-\end{center}
+    avere un solo punto di accesso a tutti i sottoinsiemi di dati).
+\end{quotation}
 
 \skipline
 Infine, un problema sorto con frequenza è stato il fatto che 
