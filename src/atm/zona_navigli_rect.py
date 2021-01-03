@@ -14,11 +14,23 @@ data = gp.read_file("dataset/zone_milano/zone.geojson").to_crs(epsg=3857)
 autobus = data[data['name'] == "Navigli Autobus"]
 street = data[data['name'] == "Navigli Incidenti"]
 
-ax = autobus.plot(alpha=0.5, color='orange')
-ax2 = street.plot(ax=ax, alpha=0.5, color='yellow')
 
+providers = {}
+def get_providers(provider):
+    if "url" in provider:
+        providers[provider['name']] = provider
+    else:
+        for prov in provider.values():
+            get_providers(prov)
+
+get_providers(cx.providers)
+
+
+ax = autobus.plot(alpha=0.5, color='blue', figsize=(11,9))
+ax2 = street.plot(ax=ax, alpha=0.5, color='green')
 plt.ylim([bounds[2], bounds[3]])
-cx.add_basemap(ax=ax2)
+cx.add_basemap(ax=ax2, source=providers['OpenStreetMap.Mapnik'])
+plt.axis('off')
 plt.show()
 
 

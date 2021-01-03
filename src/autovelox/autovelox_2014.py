@@ -17,9 +17,20 @@ patches = [
     mpatches.Patch(color=color_ls[1], label='Installazioni ignote')
     ]
 
+
+providers = {}
+def get_providers(provider):
+    if "url" in provider:
+        providers[provider['name']] = provider
+    else:
+        for prov in provider.values():
+            get_providers(prov)
+
+get_providers(cx.providers)
+
 layer_i = autovelox_tutti.plot(color=color_ls[1],markersize=16, figsize=(7,5))
 layer_a = autovelox.plot(ax=layer_i, color=color_ls[0],markersize=20)
 plt.legend(handles=patches)
 plt.axis('off')
-cx.add_basemap(ax=layer_a)
+cx.add_basemap(ax=layer_a, source=providers['OpenStreetMap.Mapnik'])
 plt.show()

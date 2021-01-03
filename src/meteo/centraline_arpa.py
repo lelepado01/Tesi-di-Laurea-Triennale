@@ -11,9 +11,20 @@ incidenti = gp.read_file(path_incidenti).to_crs(epsg=3857)
 
 scale = 10**6
 
-layer_sensori = sensori.plot(figsize=(5,4), markersize=7)
+
+providers = {}
+def get_providers(provider):
+    if "url" in provider:
+        providers[provider['name']] = provider
+    else:
+        for prov in provider.values():
+            get_providers(prov)
+
+get_providers(cx.providers)
+
+layer_sensori = sensori.plot(figsize=(5,4), markersize=10)
 layer_incidenti = incidenti.plot(ax=layer_sensori, alpha=0.0)
-cx.add_basemap(ax=layer_incidenti)
+cx.add_basemap(ax=layer_incidenti, source=providers['OpenStreetMap.Mapnik'])
 plt.axis('off')
 plt.xlim((1.017 * scale, 1.032 * scale))
 plt.ylim((5.69 * scale, 5.705 * scale))

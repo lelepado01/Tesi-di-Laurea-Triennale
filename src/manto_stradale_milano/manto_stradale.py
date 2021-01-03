@@ -7,16 +7,16 @@ import matplotlib.pyplot as plt
 import contextily as cx
 
 
-data = gp.read_file("dataset/manto_stradale_milano/L010105.Shx").to_crs(epsg=3857)
+# data = gp.read_file("dataset/manto_stradale_milano/L010105.Shx").to_crs(epsg=3857)
 
 incidenti = gp.read_file("dataset/incidenti/inc_strad_milano_2016.geojson").to_crs(epsg=3857)
 
-print(data.columns)
+# print(data.columns)
 
-data = data[data['ID_ZRIL'] == 'MI_2012_0922']
+# data = data[data['ID_ZRIL'] == 'MI_2012_0922']
 
-ax = data.plot(figsize=(11,9))
-ax2 = incidenti.plot(ax = ax, alpha=0.0)
+# ax = data.plot(figsize=(11,9))
+ax2 = incidenti.plot(alpha=0.1, figsize=(11,9))
 cx.add_basemap(ax=ax2)
 plt.show()
 

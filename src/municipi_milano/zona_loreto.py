@@ -3,6 +3,7 @@
 import geopandas as gp
 import contextily as cx
 import matplotlib.pyplot as plt
+from numpy.lib.utils import source
 from shapely import geometry
 
 data = gp.read_file("dataset/milano_municipi/Municipi.shx").to_crs(epsg=3857)
@@ -30,14 +31,24 @@ for point in incidenti['geometry']:
 
 area_loreto = loreto.area * data['AREA'].iloc[0] / geometry.Polygon(data['geometry'].iloc[0]).area
 area_loreto_inc = loreto_incidenti * 1000000 / area_loreto
+
 #print(area_loreto_inc)# = 231.06
 
+providers = {}
+def get_providers(provider):
+    if "url" in provider:
+        providers[provider['name']] = provider
+    else:
+        for prov in provider.values():
+            get_providers(prov)
+
+get_providers(cx.providers)
+
 df = gp.GeoDataFrame(geometry=[loreto]).set_crs(epsg=3857)
-ax = df.plot(color='#f00f00', alpha=0.2)
+ax = df.plot(alpha=0.4)
 inc = incidenti.plot(ax = ax, alpha=0.0)
-cx.add_basemap(ax=inc)
+cx.add_basemap(ax=inc, source=providers['OpenStreetMap.Mapnik'])
 plt.xlim((1.02 * base, 1.03 * base))
 plt.ylim((5.692 * base, 5.702 * base))
 plt.axis('off')
-# plt.savefig("zona_loreto")
 plt.show()

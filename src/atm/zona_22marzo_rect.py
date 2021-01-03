@@ -14,9 +14,20 @@ data = gp.read_file("dataset/zone_milano/zone.geojson").to_crs(epsg=3857)
 bianca = data[data['name'] == "Bianca Maria"]
 premuda = data[data['name'] == "Premuda"]
 
-ax1 = bianca.plot(color='orange', alpha=0.5)
-ax2 = premuda.plot(ax = ax1, color='yellow', alpha=0.5)
+providers = {}
+def get_providers(provider):
+    if "url" in provider:
+        providers[provider['name']] = provider
+    else:
+        for prov in provider.values():
+            get_providers(prov)
+
+get_providers(cx.providers)
+
+ax1 = bianca.plot(color='blue', alpha=0.5, figsize=(11,9))
+ax2 = premuda.plot(ax = ax1, color='green', alpha=0.5)
 plt.ylim([5.693 * scale, 5.697 * scale])
 plt.xlim([1.022 * scale, 1.026 * scale])
-cx.add_basemap(ax=ax2)
+cx.add_basemap(ax=ax2, source=providers['OpenStreetMap.Mapnik'])
+plt.axis('off')
 plt.show()
