@@ -506,8 +506,8 @@ Milano\footnote{\url{https://geoportale.comune.milano.it/}},
 contenente anch'esso troppe strade in quanto traccia l'intero manto stradale della città.
 
 Come ultima risorsa, si è deciso di tracciare alcune mappe in 
-\textbf{geojson}\footnote{Formato di file, derivato da \textbf{Json}, cioè 
-JavaScript Object Notation, utilizzato spesso per il salvataggio di informazioni, ma 
+\textbf{geojson}\footnote{Formato di file derivato da \textbf{Json} 
+(JavaScript Object Notation), che è usato spesso per il salvataggio di informazioni, ma 
 in aggiunta permette di memorizzare insiemi di punti, sotto forma di linee o poligoni, 
 tramite l'apposito campo \columnstyle{geometry}.} utilizzando 
 Geojson.io\footnote{\url{https://geojson.io/}}, in particolare nella zona di Milano, 
@@ -629,21 +629,22 @@ parole chiave come \quotestyle{numero semafori Milano} o \quotestyle{strade incr
 Non trovando alcun riscontro, si è ricercato l'argomento nei principali siti contenenti 
 dataset, di cui si è parlato in precedenza. 
 
-Le informazioni più vicine a ciò che si stava cercando, 
+Le informazioni più simili a ciò che si stava cercando, 
 sono state trovate sul geoportale 
 del comune di Milano, nei dati sul manto stradale.
-Questo dataset contiene vari layer di informazioni, tra cui 
+Questa collezione contiene vari livelli di informazioni, tra cui 
 \columnstyle{Area di circolazione veicolare}, 
 \columnstyle{Area di circolazione pedonale} e \columnstyle{Area di circolazione ciclabile}, 
 tuttavia, in nessuno di questi livelli, si sono trovate informazioni utili a dividere, 
 per esempio, intersezioni segnalate da incroci con semaforo. 
 
-\todo{controllare questa parte}
 Inoltre, per la maggior parte dei livelli, non si sono trovate informazioni sul significato 
 delle colonne presenti nei dataset come \columnstyle{GZ\_STR\_TY} o 
-\columnstyle{GZ\_STR\_TYF}. 
+\columnstyle{GZ\_STR\_TYF}\footnote{Il dataset trovato aderisce al regolamento UE n. 1089/2010, 
+tuttavia, leggendo questo documento, non è stato possibile reperire informazioni sulle colonne 
+in questione \cite{REGOLAMENTOUE:1}}. 
 
-Le ricerche per un file contenente informazioni sui metadati sono state eseguite sia 
+Le ricerche per un file contenente informazioni su questi metadati sono state eseguite sia 
 sul sito del comune di Milano sia, in generale, tramite motore di ricerca, con parole chiave 
 come \quotestyle{ID\_ZRIL milano} o \quotestyle{ID\_ZRIL metadati}. 
 Nel caso di quest'ultimo, si è ipotizzato, tracciando una parte dei valori della colonna, 
