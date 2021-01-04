@@ -668,11 +668,13 @@ in alcuni punti di interesse della città, come Piazzale Loreto, le circonvallaz
 interna e esterna\footnote{Si evidenzieranno, in particolare, Corso Ventidue Marzo 
 e la zona dei Navigli}, e Piazza Kennedy e Cavalcavia del Ghisallo. 
 
-La mappa sinistra nella figura \ref{fig:heatmap-municipi} è stata realizzata 
+La mappa destra nella figura \ref{fig:heatmap-municipi} è stata realizzata 
 approssimando ogni coordinata di incidente. 
 Normalmente queste hanno precisione di sette cifre decimali, arrotondando a cinque e 
 contando i punti uguali, è stato possibile aggregare sinistri che avvengono in zone 
 vicine. 
+Questi dati elaborati sono poi stati memorizzati nel file reperibile seguendo il 
+percorso \filenamestyle{dataset/incidenti/incidenti\_round.csv}.
 
 Sarebbe interessante sapere se esistano zone con maggiore concentrazione di incidenti rispetto 
 alla media, e ottenere un indice numerico della pericolosità di una determinata zona.
@@ -1316,18 +1318,17 @@ sui sinistri.
 
 Nel 2010, in un articolo per la campagna 
 Sbilanciamoci!\footnote{https://sbilanciamoci.info/chi-siamo/}, 
-Anna Donati scriveva \cite{SBILANCIAMOCI:1}: 
+Anna Donati scriveva: 
 
-\begin{center}
-    \quotestyle{Infatti l’auto passa dal} $59.3$\% \quotestyle{degli spostamenti nel 2000 al $65.3$\% del }
-    \quotestyle{2009 e di questi ben il} $57.7$\% 
-    \quotestyle{viaggia solo.}
-\end{center}
+\begin{quotation}
+    \dots infatti l’auto passa dal $59.3$\% degli spostamenti nel 2000 al $65.3$\% del 
+    2009 e di questi ben il $57.7$\% viaggia solo \cite{SBILANCIAMOCI:1}.
+\end{quotation}
 
 La fonte dell'articolo è il sito Isfort\footnote{https://www.isfort.it/}, 
 in particolare il loro rapporto sulla mobilità.
-Sul loro sito, non è più reperibile il rapporto del 2010, tuttavia sono disponibili 
-quelli più recenti, in particolare per 
+Cercando nell'archivio, si è concluso che il rapporto del 2010 non sia più reperibile, 
+tuttavia sono disponibili quelli più recenti, in particolare per 
 2018\footnote{\url{https://www.isfort.it/wp-content/uploads/2019/09/Rapporto_Mobilita_2018.pdf}}, 
 2019, 2020.
 
