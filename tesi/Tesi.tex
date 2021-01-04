@@ -104,6 +104,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Introduzione}
+\todo{Da Leggere}
 
 Il termine dati aperti, o liberi, tradotto dall'inglese \quotestyle{open data}, 
 si riferisce a collezioni di informazioni liberamente accessibili e 
@@ -120,7 +121,8 @@ scrive:
 In questa definizione, viene specificato che, chiunque ne sia capace, ha la possibilità di 
 fare uso, modificare le informazioni, e condividerle per qualunque scopo. 
 Un concetto da evidenziare, sono le possibili restrizioni degli open data, 
-di cui si parla nella frase tra parentesi, cioè l'obbligo di condividere i dati modificati 
+di cui si parla nella sezione tra parentesi della citazione, 
+cioè l'obbligo di condividere i dati modificati 
 mantenendo lo stesso tipo di licenza 
 aperta\footnote{In questo caso si parla della clausola \quotestyle{share alike}, ma 
 esistono più tipologie di restrizioni.}. 
@@ -140,11 +142,12 @@ Tim Berners-Lee, di cinque categorie di dati:
     per fornire un contesto tra le risorse.
 \end{itemize}
 
-Queste categorie hanno permesso la valutazione della qualità delle informazioni condivise 
-dalle istituzioni, e hanno aperto la strada alla creazione di nuove metriche, come 
+Queste categorie hanno permesso una prima valutazione della qualità delle informazioni condivise, 
+e hanno aperto la strada alla creazione di nuove metriche, come 
 Open Data Certificates\footnote{https://certificates.theodi.org/en/} e FAIR data 
 principles\footnote{https://www.go-fair.org/fair-principles/}.
 
+\skipline
 Lo scopo di questo lavoro, è mostrare che tipo di analisi è possibile realizzare 
 avendo a disposizione una buona quantità di dati liberi, e come queste osservazioni possano 
 influenzare le decisioni delle persone, come la scelta di una nuova casa, 
@@ -165,34 +168,37 @@ a un viale con vetture che si spostano ad alte velocità, se queste incrementano
 il numero di incidenti con coinvolgimento di pedoni.
 
 \skipline
-Ovviamente il trovare una casa non è l'unico motivo per utilizzare dati liberi. 
+Ovviamente il trovare una casa non è l'unico motivo per fare uso dei dati liberi. 
 Spesso, questi sono estremamente utili a garantire trasparenza tra istituzioni, 
 a tal punto che, fin troppo frequentemente, queste ultime rendono complesso o 
-del tutto impossibile per un utente l'ottenimento di queste informazioni.
+del tutto impossibile per un utente l'ottenimento di informazioni.
 
 Uno di questi siti è la pagina di richiesta dati 
 Arpa\footnote{\url{https://www.arpalombardia.it/Pages/ARPA_Home_Page.aspx}}, 
-soprattutto negli anni precedenti al 2017, quando si sarebbe dovuto compilare un 
+soprattutto negli anni precedenti al 2017 quando, per ottenere le loro informazioni sul 
+meteo si sarebbe dovuto compilare un 
 \textbf{form}\footnote{Un form è un questionario, costituito da più campi, che 
 permettono all'utente l'inserimento di dati utilizzati, per esempio, da un sito web}, 
 che richiedeva l'inserimento di un periodo, al massimo di un anno, di una sola 
 centralina, e di una sola tipologia di informazione, come il tipo di inquinante. 
+
 A rendere il processo ancora più complesso è il fatto che i dati sarebbero stati 
 spediti via email, dunque con un peso massimo di 20MB.
-Infine, per evitare che persone creassero script per automatizzare le richieste, 
+Infine, per evitare che persone creassero script per automatizzare la compilazione, 
 era presente un \textbf{captcha}\footnote{Un captcha è un test per determinare se l'utente 
 sia umano o un computer. Tipicamente si richiede di scrivere quali parole siano 
 contenute in un'immagine distorta o offuscata.}, in modo da richiedere l'intervento 
 di un utente reale per ogni query \cite{TRENTINI:1}.
 Durante l'anno 2017, sono stati resi disponibili una serie di dataset, contenenti la maggior 
 parte delle informazioni rilevanti su meteo e ambiente del sito Arpa. 
-La condivisione di questi ha reso meno necessario l'utilizzo del form.
+La condivisione di questi ha reso meno necessario l'utilizzo del form, che 
+è comunque ancora online per l'ottenimento di dati più precisi.
 
 \begin{figure}
     \hfill\includegraphics[width=0.7\linewidth]{img/arpa.png}\hspace*{\fill}
     \caption{Form per la richiesta di dati sul sito Arpa}
 \end{figure}
-\footnote{fonte: Trentini}
+\footnotetext{fonte immagine Form Arpa: Trentini}
 
 La garanzia di \quotestyle{poter fare i conti in tasca alle istituzioni}, è un 
 valore che molto spesso è contrapposto al diritto alla privacy, anche in 
@@ -207,8 +213,8 @@ con lo scopo di raccogliere in un'unico portale la maggior parte dei dataset
 aperti di enti americani. 
 Non passerà molto tempo prima che altri paesi si uniscano al movimento. 
 L'Italia in particolare creerà nel 2011 il proprio portale 
-dati.gov.it\footnote{\url{https://www.dati.gov.it/}}, mentre l'Unione Europea nel 
-2012\footnote{\url{https://data.europa.eu/euodp/it/home}}.
+dati.gov.it\footnote{\url{https://www.dati.gov.it/}}, mentre l'Unione Europea seguirà 
+nel 2012\footnote{\url{https://data.europa.eu/euodp/it/home}}.
 
 \skipline
 Questo lavoro è da intendere come una dimostrazione delle analisi realizzabili 
@@ -234,6 +240,7 @@ Esistono fattori di distrazione per il conducente di un'automobile?
 \chapter{Origine dei dati}
 
 \section{Dati riguardanti incidenti}
+\todo{Da Leggere}
 
 La maggior parte dei dataset utilizzati in questo lavoro 
 provengono dall'Istituto nazionale di statistica, in particolare 
@@ -268,7 +275,10 @@ Per quanto riguarda i dati geolocalizzati,
 la fonte è invece il giornale online TheSubmarine \cite{SUBMARINE:1}
 che, in un articolo riguardante l'incidentalità a Milano, 
 ha ottenuto dall'ente Istat la pubblicazione di una parte degli 
-incidenti avvenuti nella città nel 2016, con la relativa posizione.
+incidenti avvenuti nella città nel 2016, con la relativa 
+posizione\footnote{La fonte è la stessa del dataset precedente, ma i proprietari dell'articolo sono 
+riusciti a fare pubblicare da Istat una parte delle posizioni geolocalizzate di incidenti a Milano, 
+normalmente private per proteggere la privacy delle persone coinvolte.}.
 Il dataset in questione è abbastanza scarno, contiene solamente 
 l'incidente con la relativa posizione, indicata tramite coordinate geografiche.
 
@@ -288,6 +298,7 @@ l'orario, il mese o il giorno della settimana.
 )}
 
 \section{Dati riguardanti autovelox}
+\todo{Da Leggere}
 
 Una delle prime domande che ci si è posti, è stata se gli autovelox, installati 
 nel tentativo di ridurre la velocità delle vetture, avessero influenza sul numero 
@@ -296,12 +307,11 @@ degli incidenti del luogo.
 Un primo dataset individuato, che riguardasse delle posizioni 
 degli autovelox fissi, è stata una mappa 
 GoogleMyMaps\footnote{\url{https://www.google.com/maps/d/viewer?mid=1CBgMTvIDnbGo22-Y1f3rVcbeX4C0v_w1&ll=45.365557951599605\%2C10.03650113755961&z=8}} 
-creata da un utente anonimo, dunque senza possibilità di verificarne 
-l'autenticità dei dati. 
+creata da un utente anonimo, dunque senza possibilità di verificarne l'autenticità. 
 Per evitare di fare uso di informazioni non corrette, si è preferito scartare 
 questa fonte.
 
-Il dataset utilizzato, invece, è stato ottenuto tramite OpenStreetMaps, 
+I dati utilizzati, invece, sono stati ottenuti tramite OpenStreetMaps, 
 realizzando una query per selezionare solo gli autovelox presenti a Milano. 
 Per restringere il campo di ricerca a solo la città, si è fatto uso delle 
 Overpass API\footnote{\url{https://overpass-turbo.eu/}}, 
@@ -366,15 +376,16 @@ Il campi della tabella ripetuti sono dovuti al fatto che alcuni autovelox sono s
 installati in entrambe le direzioni.
 
 \section{Dati riguardanti patentati}
+\todo{Da Leggere}
 
 Un'importante necessità in un indagine di questo tipo, è avere un contesto con cui 
 interpretare i risultati ottenuti. 
-Non è possibile dire se su una certa strada si ha un numero alto di 
-incidenti, senza sapere quante automobili passano in una giornata.
+Senza sapere quante automobili passino in una giornata sulle strade prese in considerazione, 
+non è possibile confrontare il numero incidenti che avvengono su queste.
 
 Si è dunque tentata una ricerca, infruttuosa, di dataset sul traffico stradale nel periodo 
 dal 2010 al 2018.
-Queste informazioni si sono cercate, principalmente per la zona di Milano, nei principali 
+Queste informazioni si sono cercate, per la zona di Milano, nei principali 
 siti di open data, con parole chiave come \quotestyle{traffico milano} e 
 \quotestyle{flussi autostrade}. 
 Si è inoltre controllato sul sito di Autostrade per 
@@ -384,32 +395,35 @@ ma le uniche informazioni trovate sono in tempo reale.
 Non avendo trovato alcuna informazione sull'argomento, si è tentato di realizzare 
 alcune stime del numero di automobili per regione, e a Milano.
 
-I dati sui patentati per regione, che è stato utilizzato per stimare il traffico 
+I dati sui patentati per regione, che sono stati utilizzati per stimare il traffico 
 regionale, proviene dal sito del Ministero delle Infrastrutture e 
 Trasporti\footnote{\url{http://dati.mit.gov.it/catalog/dataset/patenti}}. 
 
 Questo dataset è formato da un ampia quantità di informazioni, 
 non utili al fine dell'analisi, 
-si è preferito quindi usare una sintesi di queste provieniente da 
+si è preferito quindi usare una sintesi di queste, provieniente da 
 un'infografica che riassume i dati in questione \cite{INFOGRAFICA_MIT:1}.
 In particolare, da questo file pdf si è mantenuto solamente 
-il numero di patenti per regione.
+il numero di patentati per regione.
 
-\'E anche necessario chiedersi quanto il numero dei patentati per regione sia un 
-fattore valido con cui stimare il traffico, tenendo conto del fatto che molte 
-persone non vivono nella regione 
+\'E anche necessario chiedersi quanto, il numero delle persone che hanno ottenuto 
+una patente per regione, sia un fattore valido con cui stimare il traffico, 
+tenendo conto del fatto che molti individui non vivono nella zona 
 in cui hanno ottenuto la patente, e altre potrebbero spostarsi ogni giorno in altri 
 luoghi per questioni di lavoro. 
-Va dunque tenuto conto che questa stima non sarà probabilmente tra le più accurate, 
-e in caso di grandi disparità tra regioni, si potrebbe dover invalidare i calcoli eseguiti.
+Va dunque tenuto conto che questa stima non sarà tra le più accurate, 
+e in caso di grandi disparità tra regioni, si potrebbe dover invalidare 
+i calcoli eseguiti.
 
 \section{Dati riguardanti l'area C}
+\todo{Da Leggere}
 
-Per lo stesso motivo del capitolo precedente, si sono cercate informazioni sugli 
-accessi all'area C di Milano per realizzare una stima approssimativa del traffico, in 
-città, in base all'orario.
+Per lo stesso motivo del capitolo precedente, cioè realizzare una stima approssimativa 
+del traffico, si sono cercate informazioni sugli accessi all'area C di Milano, 
+in base all'orario.
 
-Il dataset riguardante gli accessi è stato trovato sul sito di open data del comune di 
+Il dataset riguardante gli accessi è stato trovato sul portale di open data 
+del comune di 
 Milano\footnote{\url{https://dati.comune.milano.it/organization/comunedimilano?q=area+c&sort=score+desc\%2C+metadata_modified+desc}}, 
 dove sono disponibili varie tipologie di file distinti per orario, 
 mese o località. 
@@ -430,14 +444,15 @@ proveniente dal sito del comune di
 Milano\footnote{\url{https://www.comune.milano.it/aree-tematiche/mobilita/area-c}}. 
 
 Per quanto anche questa stima non sia tra le più accurate, ci si può aspettare che 
-il numero di accessi corrisponda, almeno in piccola parte, al traffico di Milano.
+il numero di accessi corrisponda, almeno in piccola parte, al volume di traffico di Milano.
 
 \section{Dati riguardanti le zone di Milano}
+\todo{Da Leggere}
 
-I dataset delle zone geolocalizzate di Milano provengono dal geoportale del comune di 
-Milano\footnote{\url{https://geoportale.comune.milano.it/}}, e contengono i poligoni che 
-costituiscono i municipi della città, 
-oltre a informazioni sulla superficie e il perimetro delle zone.
+I dataset delle zone di Milano provengono dal portale di dati geolocalizzati della 
+città\footnote{\url{https://geoportale.comune.milano.it/}}, 
+e contengono i poligoni che costituiscono i municipi, 
+oltre a informazioni sulla superficie e il perimetro delle aree.
 
 \lighttext{(\\
     \indent MUNICIPIO: id della zona,\\
@@ -446,25 +461,25 @@ oltre a informazioni sulla superficie e il perimetro delle zone.
     \indent geometry: insieme di punti che formano il poligono\\
 )}
 
-Questi dati sono utili a determinare, a grandi linee, quali sono le zone con più incidenti 
-a Milano, nonostante il risultato ottenuto non sarà mai troppo preciso, soprattutto 
-per l'ampiezza delle sezioni rispetto al numero di strade di ogni sezione.
-
+Queste informazioni sono utili a determinare, a grandi linee, quali sono le zone 
+con più incidenti a Milano, per quanto il risultato ottenuto non sarà mai troppo preciso, 
+soprattutto per l'ampiezza delle sezioni. 
 Un altro problema, è che le zone non contengono solamente la superficie stradale, ma anche 
 abitazioni e terreni, in cui non avverranno mai incidenti.
 
 \'E necessario tenere a mente, che il numero di incidenti per zona ricavato, 
 è da considerarsi come un'approssimazione per difetto, o una stima del 
 \quotestyle{lower bound}, perchè il valore è abbassato dalle aree in cui non 
-possono avvenire scontri.
+possono avvenire sinistri.
 Quindi calcoli che utilizzano solamente la superficie stradale avranno 
 inevitabilmente volume di incidenti per chilometro maggiore.
 
 \section{Dati riguardanti il meteo}
+\todo{Da Leggere}
 
 Per quanto riguarda i dati su meteo, si è tentato di utilizzare le informazioni 
 provenienti dalle centraline Arpa. 
-Dopo una veloce analisi, la cui mappa è visibile in figura \ref{fig:centraline-arpa}, 
+Dopo un veloce controllo delle posizioni di queste, visibili in figura \ref{fig:centraline-arpa}, 
 si è notato il dataset non contiene tutte le stazioni di Milano.
 
 \begin{figure}
@@ -476,14 +491,12 @@ si è notato il dataset non contiene tutte le stazioni di Milano.
 Per esempio, utilizzando una lista di centraline meteo completa, come quella su 
 Centrometeolombardo\footnote{\url{http://www.centrometeolombardo.com/content.asp?CatId=272&ContentType=Stazioni}}, 
 si nota che mancano quelle di Abbiategrasso Sud e Cardorna.
+Inoltre, per mancanza di dati precisi sul giorno degli incidenti, 
+è superfluo avere informazioni con posizione e data così precise.
 
-Inoltre, per mancanza di dati precisi sul giorno degli incidenti, è superfluo avere 
-informazioni con posizione così precisa.
 Si è dunque optato per un dataset contenente temperature, umidità, e velocità del vento, 
-trovato sul sito Zenodo\footnote{\url{https://zenodo.org/record/3992354}}.
-
-Il dataset contiene i campi di cui si è parlato, misurati ogni 
-ora a Milano, a partire dal 2008, fino al 2018.
+trovato sul sito Zenodo\footnote{\url{https://zenodo.org/record/3992354}},
+che contiene questi campi, misurati ogni ora a Milano, a partire dal 2008, fino al 2018.
 
 \lighttext{(\\
     \indent Date\_Time: campo che contiene giorno, mese e anno,\\
@@ -494,13 +507,16 @@ ora a Milano, a partire dal 2008, fino al 2018.
 )}
 
 \section{Dati riguardanti trasporti pubblici}
+\todo{Da Leggere}
 
-Un altro fattore su cui ci si è chiesti l'influenza sull'incidentalità, è la 
-presenza, nella via o viale, di trasporti pubblici in una città come Milano.
+Un altro fattore di cui ci si è chiesti l'influenza sull'incidentalità, è la 
+presenza, nella via o viale, di trasporti pubblici.
 
 I dati riguardanti questi ultimi, hanno due provenienze, i primi sono 
 dati riferiti alle linee ATM, scaricati sul sito del comune di 
-Milano\footnote{\url{https://dati.comune.milano.it/dataset/ds532-atm-composizione-percorsi-linee-di-superficie-urbane}}.
+Milano\footnote{\url{https://dati.comune.milano.it/dataset/ds532-atm-composizione-percorsi-linee-di-superficie-urbane}}, 
+contenenti informazioni come il numero identificatore della linea, 
+la lunghezza e il tipo di mezzo.
 
 \lighttext{(\\
     \indent linea: numero della linea,\\
@@ -513,34 +529,39 @@ Milano\footnote{\url{https://dati.comune.milano.it/dataset/ds532-atm-composizion
 )}
 
 Dallo stesso sito proviene anche il dataset riguardante gli autobus turistici, che 
-contiene, in particolare, le aree di 
+contiene, in particolare, solo le aree di 
 sosta\footnote{\url{https://dati.comune.milano.it/dataset/ds740_sosta_bus_gt_turistici}}.
+
 Si è anche fatto uso di un dataset contenente 
-solamente le linee tranviarie, trovato sul geoportale del comune di 
+solamente le linee tranviarie, trovato sul portale di dati geolocalizzati 
+del comune di 
 Milano\footnote{\url{https://geoportale.comune.milano.it/ATOM/SIT/DBT2012/DBT2012_STRATO_01_Dataset_1.xml}}.
 Questo dataset è molto ampio e contiene altri livelli di informazioni, tra cui 
-le strade, le ferrovie o le piste ciclabili passanti per Milano. 
+le strade, le ferrovie o le piste ciclabili passanti per la città. 
 
 La principale funzione di questi dataset è l'ottenere i percorsi delle linee di trasporto pubblico, 
 per confrontare il numero di incidenti, nelle vie in cui viaggiano autobus, rispetto a 
 quelle in cui sono presenti solo autovetture private.
 
 \section{Dati riguardanti autostrade e manto stradale}
+\todo{Da Leggere}
 
-Per la realizzazione di alcune mappe, nelle quali sono necessari i tracciati delle principali 
-autostrade, si è tentata la ricerca di dati geolocalizzati sulle strade Italiane.
+Puramente per la realizzazione di alcune mappe, quindi non a scopo di analisi 
+ma più di visualizzazione, si è tentata la ricerca di dati geolocalizzati sulle 
+strade Italiane.
 
 Il primo dataset individuato, riguardante il manto  stradale, è stato trovato sul sito 
 internet dell'ente  
 ANAS\footnote{\url{http://dati.mit.gov.it/catalog/dataset/grafo-stradale-anas}}. 
-Tuttavia, consisteva in un file molto grande, contenente tutte le principali 
-strade in Italia, e dalla precisione superflua per le mappe che si sta tentando di ottenere.
+Tuttavia, questo consisteva in un file molto grande, contenente tutte le principali 
+strade in Italia, dalla precisione superflua per le mappe che si sta tentando di ottenere.
 
-Si è dunque tentato di utilizzare il dataset presente sul geoportale del comune di 
-Milano\footnote{\url{https://geoportale.comune.milano.it/}}, 
-contenente anch'esso troppe strade in quanto traccia l'intero manto stradale della città.
+Si è dunque tentato di utilizzare il dataset presente sul portale di dati geolocalizzati 
+del comune di Milano\footnote{\url{https://geoportale.comune.milano.it/}}. 
+Anche quest'ultimo contiene fin troppe strade, in quanto traccia l'intero manto 
+stradale della città.
 
-Come ultima risorsa, si è deciso di tracciare alcune mappe in 
+Come ultima risorsa, si è deciso di tracciare alcune mappe in formato 
 \textbf{geojson}\footnote{Formato di file derivato da \textbf{Json} 
 (JavaScript Object Notation), che è usato spesso per il salvataggio di informazioni, ma 
 in aggiunta permette di memorizzare insiemi di punti, sotto forma di linee o poligoni, 
@@ -551,13 +572,17 @@ Allo stesso modo, Geojson.io è stato utile a tracciare alcune aree in centro a 
 per confrontare gli incidenti su pavè agli incidenti su asfalto.
 
 \section{Dati riguardanti il turismo}
+\todo{Da Leggere}
 
-Le informazioni riguardanti il turismo, sono state utili a capire se nelle annate più 
-recenti, fosse presente un incremento di persone in ferie in località di montagna.
+Durante le analisi degli incidenti autostradali, è sorto il dubbio che 
+nelle annate più recenti, tra 2015 e 2018, 
+fosse presente un incremento di persone in ferie in località di montagna. 
+Le informazioni riguardanti il turismo, sono state utili a visualizzare questa tendenza 
+tramite un campione di dati diverso.
 
-I dati sul turismo in Italia, sono stati trovati nell'archivio Istat sul 
+I dataset sul turismo in Italia, sono stati trovati nell'archivio Istat sul 
 tema\footnote{\url{https://www.istat.it/it/archivio/16777}}.
-Il dataset originale era in formato xls, contenente informazioni a partire dal 1995 
+Il file originale era in formato xls, contenente informazioni a partire dal 1995 
 fino al 2019, sia regione per regione, sia divise per nord, centro e sud.
 A loro volta, i file sono divisi in più tabelle, ognuna rafficurante un particolare 
 indicatore, come produttività del lavoro, turismo nei mesi non estivi, 
@@ -571,35 +596,37 @@ a partire dal 2010 fino al 2018, convertiti in formato csv, e sono stati scelti 
 indicatori di turismo nei mesi non estivi, e tasso di turisticità. 
 
 \section{Immagini del traffico}
+\todo{Da Leggere}
 
 Le immagini raffiguranti il traffico in tempo reale sono prese da Google 
 Maps\footnote{\url{https://www.google.com/maps/}}. 
+
 In primo luogo, si è tentato di realizzare degli screenshot direttamente dal sito, 
 tuttavia immagini prese in questo modo, contengono molti punti di interesse e altri simboli, 
 che coprono informazioni importanti, come i nomi delle strade.
 
-Per rimuovere le informazioni superflue, si è fatto uso delle API di Google Maps, 
-tramite il sito Jsfiddle\footnote{\url{https://jsfiddle.net/} Un sito web che permette di 
-scrivere e eseguire codice JavaScript.}.
+Per rimuovere i simboli superflui, si è fatto uso delle API di Google Maps, 
+tramite il sito Jsfiddle\footnote{\url{https://jsfiddle.net/}}, un sito web che permette di 
+scrivere e eseguire codice JavaScript. 
 
 Gli screenshot realizzati rappresentano le zone dei Navigli e dell'incrocio tra viale 
-Bianca Maria e viale Ventidue Marzo.
+Bianca Maria e viale Ventidue Marzo a Milano.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Dati mancanti}
 
 \subsection{Dati riguardanti pavè}
+\todo{Da Leggere}
 
 Nonostante le ricerche nei principali siti di opendata
 \footnote{
     \url{https://dati.comune.milano.it/dataset}, 
     \url{https://www.dati.lombardia.it/},
-    \url{https://www.dati.gov.it/}
-    }
+    \url{https://www.dati.gov.it/}}
 non sembra che esista un dataset contenente informazioni sulla composizione del 
 manto stradale di Milano. 
 In particolare, si sono cercate le informazioni tramite parole chiave come 
-\quotestyle{strada}, \quotestyle{manto stradale}, \quotestyle{pave}, 
+\quotestyle{strada}, \quotestyle{manto stradale}, \quotestyle{pavè}, 
 \quotestyle{composizione strada}.
 
 Una risorsa trovata durante le ricerche, è una mappa utilizzata in un articolo del blog online 
@@ -608,13 +635,13 @@ Dopo una rapida consultazione con l'autore tuttavia, non risulta esserci alcun
 dataset contenente informazioni riguardanti il pavè a Milano, infatti la cartina è 
 stata realizzata per conoscenza personale.
 
-Il dataset che potrebbe avvicinarsi di più alle informazioni ricercate, 
-potrebbe essere quello riguardante i percorsi dei trasporti tranviari. 
+I dati che potrebbero avvicinarsi di più alle informazioni ricercate, 
+sono quelli riguardanti i percorsi delle linee tranviarie. 
 Basandosi su queste informazioni, e assumendo che la maggior parte delle linee dei 
-tram a Milano siano in pavè, è possibile ottenere un dataset con taglia discreta.
+tram a Milano siano in pavè, è possibile ottenere un dataset di taglia discreta.
 
-Tuttavia, confrontando il dataset delle linee tranviarie ottenuto, 
-con la mappa di Urbanfile, per quanto alcune linee coincidano, non si è trovata 
+Tuttavia, confrontando le linee tranviarie, con la mappa di Urbanfile, 
+per quanto alcune zone coincidano, non si è trovata 
 somiglianza sufficiente per giustificare l'utilizzo.
 
 Come ultima spiaggia, si è deciso di tracciare una mappa utilizzando 
@@ -622,6 +649,7 @@ Geojson.io\footnote{\url{https://geojson.io/}}, come già fatto per le autostrad
 basandosi sulla cartina trovata su Urbanfile. 
 
 \subsection{Dati riguardanti traffico stradale}
+\todo{Da Leggere}
 
 Per quanto riguarda i dati sul traffico stradale, anche in questo caso non è stato trovato un 
 dataset, sia nei siti di cui si è parlato in precedenza, sia su quello di 
@@ -631,16 +659,16 @@ Il primo tentativo, per avere una stima del traffico è stato la realizzazione d
 script per fare scraping da Google Maps. 
 Quest'ultimo infatti mostra sia il traffico in tempo reale, sia 
 il traffico stimato a una determinata ora. 
-Tuttavia, leggendo nella documentazione, si è scoperto che non è possibile ottenere 
+Tuttavia, leggendo la documentazione, si è scoperto che non è possibile ottenere 
 dati sul traffico abituale, per la mancanza delle API corrispondenti. 
-Invece, per quanto riguarda il traffico in tempo 
-reale, questo è disponibile, ma non è particolarmente utile 
+Invece, il traffico in tempo reale è disponibile, ma non è particolarmente utile 
 poichè questo studio è stato svolto in concomitanza a un lungo periodo di quarantena 
 dovuto al Covid-19, le cui limitazioni hanno ridotto in maniera significativa 
 i volumi di traffico.
-Per quanto fosse stato possibile realizzare comunque uno script per effettuare scraping della 
-quantità di traffico nelle strade, registrando il colore delle direttrici per ogni orario della 
-giornata nei periodi interessati, si è optato per la ricerca di un altro dataset.
+Per quanto fosse stato possibile realizzare comunque uno script per effettuare 
+scraping della quantità di traffico nelle strade, registrando il colore delle 
+direttrici per ogni orario della giornata nei periodi interessati, si è 
+optato per la ricerca di un altro dataset.
 
 Si è deciso, dunque, di utilizzare i dati riguardanti gli ingressi in area C, 
 trovati sul sito del comune di Milano\footnote{\url{https://dati.comune.milano.it/dataset}}, 
@@ -649,28 +677,32 @@ nonostante questi non permettano una stima perfetta.
 Un'altro dataset utilizzato per stimare il numero di automobili, è quello contenente 
 il numero di patentati per regione, trovato nel sito del Ministero dei 
 Trasporti\footnote{\url{dati.mit.gov.it/catalog/dataset/patenti}}.
-I dati, riguardanti i patentati fino al 2019, sono divisi in file per regione e 
+I dati, disponibili fino al 2019, sono divisi in file per regione e 
 contengono anche informazioni riguardanti la provincia e data di conseguimento della 
 patente, oltre al tipo di ceritificato ottenuto.
 
 \subsection{Dati su strade, incroci, semafori}
+\todo{Da Leggere}
 
 In alcuni capitoli, in particolare quelli riguardanti le tipologie di incidente e 
-di incrocio, i dati non disponibili, sono soprattutto quelli sul 
-numero di strade per le diverse categorie.
+di incrocio, i dati disponibili non permettono di realizzare delle stime sulle 
+percentuali di strade per le diverse categorie. 
+In altre parole, non si ha modo di sapere, in un'area come Milano, quanti incroci 
+per esempio siano con semaforo, o della categoria rotonda, 
+rispetto al numero totale di intersezioni. 
 
-Per la trovare questi ultimi si è cercato, innanzi tutto, articoli o dataset online, con 
+Per stimare queste percentuali si è cercato, innanzi tutto, articoli o dataset online, con 
 parole chiave come \quotestyle{numero semafori Milano} o \quotestyle{strade incroci semafori}.
 Non trovando alcun riscontro, si è ricercato l'argomento nei principali siti contenenti 
 dataset, di cui si è parlato in precedenza. 
 
 Le informazioni più simili a ciò che si stava cercando, 
-sono state trovate sul geoportale 
-del comune di Milano, nei dati sul manto stradale.
+sono state trovate sul portale di dati geolocalizzati 
+del comune di Milano, nei dataset contenenti i tratti stradali.
 Questa collezione contiene vari livelli di informazioni, tra cui 
 \columnstyle{Area di circolazione veicolare}, 
 \columnstyle{Area di circolazione pedonale} e \columnstyle{Area di circolazione ciclabile}, 
-tuttavia, in nessuno di questi livelli, si sono trovate informazioni utili a dividere, 
+tuttavia, in nessuno di questi layer, si sono trovate risorse utili a dividere, 
 per esempio, intersezioni segnalate da incroci con semaforo. 
 
 Inoltre, per la maggior parte dei livelli, non si sono trovate informazioni sul significato 
@@ -679,11 +711,12 @@ delle colonne presenti nei dataset come \columnstyle{GZ\_STR\_TY} o
 tuttavia, leggendo questo documento, non è stato possibile reperire informazioni sulle colonne 
 in questione \cite{REGOLAMENTOUE:1}}. 
 
-Le ricerche per un file contenente informazioni su questi metadati sono state eseguite sia 
+Le ricerche per un file contenente indicazioni su questi metadati sono state eseguite sia 
 sul sito del comune di Milano sia, in generale, tramite motore di ricerca, con parole chiave 
 come \quotestyle{ID\_ZRIL milano} o \quotestyle{ID\_ZRIL metadati}. 
 Nel caso di quest'ultimo, si è ipotizzato, tracciando una parte dei valori della colonna, 
-che fosse un identificatore univoco del territorio, ipotesi confermata da un pdf trovato sul sito 
+che fosse un identificatore univoco del territorio, ipotesi confermata 
+da un pdf trovato sul sito 
 cittametropolitana\footnote{\url{https://www.cittametropolitana.mi.it/export/sites/default/DeCiMetro/DOCUMENTI-DA-SCARICARE/Manuale-civici.pdf}}. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
