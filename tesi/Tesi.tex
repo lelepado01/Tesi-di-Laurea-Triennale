@@ -1238,13 +1238,14 @@ successive al posizionamento delle telecamere.
 %\clearpage
 \chapter{Dati su Incidenti}
 
-Per quanto riguarda i dati sugli incidenti in Italia, sono disponibili due dataset 
-molto ampi. 
+Per quanto riguarda i dati sugli incidenti avvenuti in Italia, 
+sono disponibili due dataset molto ampi. 
 Il primo, rilasciato da Istat, contiene campi come data, ora, 
 numero di persone a bordo, tipo di incrocio e tipo di veicolo.
 Queste informazioni sono presenti a partire dal 2010 fino al 2018.
-Il secondo è invece messo a disposizione da Automobile Club D'Italia (ACI) che contiene dati simili, 
-e in più informazioni sul luogo dell'incidente, come autostrada o strada provinciale, 
+Il secondo è invece messo a disposizione da Automobile Club D'Italia (ACI) 
+e contiene dati simili, 
+aggiungendo il luogo dell'incidente, su autostrada o strada provinciale, 
 inteso come il nome della strada, il che permette di avere una minima localizzazione del 
 sinistro.
 
@@ -1253,11 +1254,13 @@ sinistro.
 
 %\clearpage
 \subsection{Il tipo di veicolo dipende dalla strada?}
+\todo{Da Leggere}
 
-Una prima analisi che è possibile realizzare, è, per quanto riguarda i veicoli, come 
-la composizione di questi cambia al cambiare del tipo di strada. 
-In altre parole, la percentuale, per esempio, di autotreni sulle autostrade, è diversa rispetto 
-a quella nelle strade provinciali? 
+Una prima analisi che è possibile realizzare, utilizzando il dataset Istat è, 
+per quanto riguarda i veicoli, 
+come la composizione di questi cambia al cambiare del tipo di strada. 
+In altre parole, la percentuale, per esempio di autotreni, è diversa sulle autostrade 
+rispetto alle strade provinciali? 
 
 \begin{code}[language=Python]
 # Dove 1,2,3 sono gli ID dei diversi tipi di strade urbane, 
@@ -1270,7 +1273,7 @@ strade_extraurbane = data[(data['localizzazione_incidente'] == 4) | (data['local
 Il grafo \ref{fig:differenza-strade} rappresenta quali sono le categorie di veicoli 
 coinvolte con più frequenza in sinistri, per tre tipi di strade diverse, strade urbane, 
 extraurbane e autostrade. 
-Le percentuali sono calcolate per gruppo quindi, sommando 
+Le percentuali sono calcolate per gruppo, quindi, sommando 
 tutte le righe di \columnstyle{Autostrade}, si ottiene $1.0$.
 
 \begin{figure}
@@ -1281,14 +1284,16 @@ tutte le righe di \columnstyle{Autostrade}, si ottiene $1.0$.
 
 Nonostante le auto private siano di gran lunga il tipo di veicolo 
 più coinvolto in incidenti, sulle autostrade non sono presenti molti incidenti con motocicli, 
-mentre cresce molto il numero di questi nelle strade urbane.
-Nel caso degli autotreni, si ha invece una bassa percentuale di questi nelle strade 
-urbane, mentre il numero si alza sulle autostrade.
+mentre cresce il numero di questi nelle strade urbane.
+Nel caso degli autotreni, si ha invece una bassa percentuale nelle strade 
+urbane, mentre il volume di questa categoria aumenta sulle autostrade.
 
-Visto che le auto private causano oltre tre quarti degli incidenti in ogni categoria di strada,  
-si è deciso di ometterle, per controllare la presenza di differenze nelle altre tipologie 
-di veicoli.
-I risultati sono rappresentati, per l'anno 2018, nella figura \ref{fig:differenza-strade-no-auto}.
+Visto che le auto private causano oltre tre quarti degli 
+incidenti in ogni categoria di strada,  
+si è deciso di ometterle, per avere una rappresentazione più 
+precisa delle tipologie di veicoli che accorrono con minore frequenza.
+I risultati sono mostrati, per l'anno 2018, 
+nella figura \ref{fig:differenza-strade-no-auto}.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/tipo_veicoli/differenza_senza_auto.png}
@@ -1303,8 +1308,8 @@ su autostrade, tuttavia, in questo caso, per \quotestyle{trattore} non si intend
 agricola, ma la motrice di un autocarro senza rimorchio.
 
 Va comunque sottolineato che le percentuali di incidenti provocati da queste tipologie di 
-veicoli, sono tutte al di sotto del $10$\%, e che la sezione più ingente di sinistri è 
-provocata dalle automobili private. 
+veicoli, sono tutte al di sotto del $10$\%, e che la sezione maggiore di sinistri è 
+provocata dalle auto private. 
 Inoltre, utilizzare il numero di incidenti come stimatore\footnote{Stimatore: una qualunque statistica con 
 lo scopo di dare una stima di un parametro $\theta$ è detta stimatore 
 di $\theta$ \cite{PROB_E_STATISTICA:4}} 
@@ -1315,11 +1320,12 @@ del traffico, potrebbe non portare a un risultato ottimale.
 
 %\clearpage
 \subsection{Esistono differenze tra la guida di un uomo e quella di una donna?}
+\todo{Da rivedere}
 
 Un frequente stereotipo infondato riguardante le donne alla guida, è che queste 
 ultime siano meno abili rispetto a individui del sesso opposto. 
-Avendo a disposizione le informazioni sul sesso del conducente che ha causato l'incidente, 
-è possibile controllare se esista un riscontro reale per questa ipotesi.
+Avendo a disposizione le informazioni sul genere del conducente che ha causato l'incidente, 
+è possibile controllare se esista un riscontro reale per questa credenza.
 
 \begin{figure}
     \hfill\includegraphics[width=0.7\linewidth]{../src/incidenti/incidenti_senza_coords/tipo_veicoli/uomo-donna.png}\hspace*{\fill}
@@ -1329,11 +1335,12 @@ Avendo a disposizione le informazioni sul sesso del conducente che ha causato l'
 
 Il grafo \ref{fig:differenza-uomo-donna} mostra le percentuali di incidenti causate 
 da uomini e donne, per tre diverse tipologie di strada. 
-Per quanto riguarda il tipo di strada, non è possibile individuare una 
-variazione nella percentuale di incidenti così ingente. 
-La variazione più ampia si registra sulle strade urbane, dove le donne causano circa il 
+
+Per quanto riguarda il tipo di strada, non è possibile individuare alcuna 
+variazione nella percentuale di incidenti. 
+La differenza maggiore si registra sulle strade urbane, dove le donne causano circa il 
 $5$\% di incidenti in più, nonostante ciò il numero 
-di incidenti per genere tende ad essere causato per il $75$\% circa da uomini e 
+di sinistri per genere tende ad essere causato per il $75$\% circa da uomini e 
 per il $25$\% donne.
 
 Avendo a disposizione i dati provenienti da tutte le annate a partire dal 2010, 
@@ -1361,8 +1368,9 @@ autostrade e le strade urbane.
     \end{tabular}
 \end{center}
 
-In tutti gli anni la percentuale di uomini e donne coinvolti in incidenti è consistente, 
-questo fenomeno fa sospettare che ci siano più uomini al volante rispetto alle donne.
+In tutti gli anni la frequenza di femmine e maschi coinvolti in incidenti è consistente, 
+questo fenomeno, più che indicare a una mancanza di attenzione da parte degli uomini, 
+fa sospettare che ci siano più persone del primo gruppo al volante rispetto al secondo.
 Un modo per testare l'ipotesi è quello di ricavare un campione di conducenti, 
 separando tra uomini e donne.
 Va sottolineato che un campione, preso durante la pandemia di Covid-19, in un 
@@ -1390,19 +1398,20 @@ sono stati ottenuti i seguenti risultati:
 \end{center}
 
 La percentuale di uomini e donne al volante è equivalente a quella degli incidenti.
-Questo dato rafforza l'idea che non esistano differenze sostanziali tra la guida di 
+Questo dato rafforza l'ipotesi che non esistano differenze sostanziali tra la guida di 
 maschi e femmine, in quanto, assumendo che la probabilità che una donna causi un 
-incidente sia uguale a quella di un uomo, le percentuali che si otterrebbero sarebbero 
+incidente sia uguale a quella di un uomo, le percentuali ottenute sarebbero 
 le stesse del campione.
 
 %\clearpage
 \subsection{Il numero di passeggeri influisce sull'incidentalità?}
+\todo{Da Leggere}
 
 Il dataset Istat dispone anche di una serie di colonne corrispondenti all'età, sesso e 
 all'esito di tre passeggeri, oltre al conducente.
 Con un po' di lavoro, è possibile ricavare quanti passeggeri sono presenti 
-nell'automobile al momento dell'incidente, in modo da controllare se esista una 
-relazione tra numero di persone nella macchina e l'incidentalità.
+nell'automobile al momento del sinistro, in modo da controllare se esista una 
+relazione tra numero di persone nella vettura e la probabilità di commettere un incidente.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/passeggeri/passeggeri.png}
@@ -1410,25 +1419,26 @@ relazione tra numero di persone nella macchina e l'incidentalità.
     \label{fig:passeggeri-milano-rimini}
 \end{figure}
 
-La figura \ref{fig:passeggeri-milano-rimini} mostra che oltre il 90\% degli incidenti
-avviene quando in macchina è presente solo il conducente, cioè la colonna indicata con 0.
+La figura \ref{fig:passeggeri-milano-rimini} mostra che oltre il $90$\% degli scontri
+avviene quando nell'automobile è presente solo il conducente, 
+cioè la colonna indicata con 0.
 Si sono prese in considerazione le provincie di Milano, Rimini e Bari, 
 per controllare se la località marittima influisca sul numero di incidenti.
 Non sembra, tuttavia, esserci una grande differenza tra le province, con Rimini dove è 
-più alto il numero di incidenti con solo il conducente, mentre a Bari vale l'opposto.
+più alta la categoria con solo il conducente, mentre a Bari vale l'opposto.
 
 La domanda che sorge spontanea, dunque, è se avvengano più incidenti dove è presente 
-solo il conducente per il numero frequente di automobili con una sola persona a 
-bordo, o se esistano fattori esterni che portano il conducente a distrarsi?
+una sola persona per il numero frequente di automobili che rientra in questa tipologia, 
+o se esistano fattori esterni che portano il conducente a distrarsi.
 
-Sarebbe utile poter ricavare un campione di automobili divise per 
-numero di persone a bordo, tuttavia, in periodo di Covid-19, una stima di questo tipo 
-non sarà mai accurata, in quanto la maggior parte delle persone si spostano da sole 
-per viaggi (si spera) di prima necessità.
+Sarebbe utile poter ricavare un campione di vetture divise per 
+numero di persone a bordo, tuttavia, per il periodo in cui si è eseguito questo 
+studio, la quarantena per il Covid-19 rende una stima di questo tipo 
+imprecisa, in quanto la maggior parte delle persone si spostano da sole 
+per viaggi di prima necessità.
 
 Una seconda possibilità è cercare una qualche stima del numero medio di 
-persone a bordo di automobili, in una delle annate in cui sono disponibili i dati 
-sui sinistri.
+persone a bordo di automobili, in una delle annate con dati su incidenti disponibili.
 
 Nel 2010, in un articolo per la campagna 
 Sbilanciamoci!\footnote{https://sbilanciamoci.info/chi-siamo/}, 
@@ -1441,38 +1451,40 @@ Anna Donati scriveva:
 
 La fonte dell'articolo è il sito Isfort\footnote{https://www.isfort.it/}, 
 in particolare il loro rapporto sulla mobilità.
-Cercando nell'archivio, si è concluso che il rapporto del 2010 non sia più reperibile, 
-tuttavia sono disponibili quelli più recenti, in particolare per 
+Cercando nell'archivio, si è riusciti a reperire il rapporto del 2010, 
+tuttavia si sono trovati quelli più recenti, in particolare per 
 2018\footnote{\url{https://www.isfort.it/wp-content/uploads/2019/09/Rapporto_Mobilita_2018.pdf}}, 
 2019, 2020.
 
 \'E possibile dunque ipotizzare che la percentuale di conducenti che viaggiano 
 da soli, sia approssimativamente attorno al $60$\%, perlomeno nel 2010.
-Per realizzare una stima, è necessario conoscere le percentuali di automobili con uno, 
-due o tre passeggeri, che non sono presenti nell'articolo e che se esistessero, sarebbero 
-valide solo per l'anno 2010, e non per le annate più recenti.
-
+Per realizzare una stima, è necessario conoscere la quantità di automobili con uno, 
+due o tre passeggeri, non presenti nell'articolo.
 Ipotizzando però, che il numero di automobili con solo conducente rimanga attorno al 
-$60$\%, deve esistere qualche fattore che alza gli incidenti senza passeggeri al 
+$60$\%, è probabile che esista qualche fattore che alzi gli incidenti senza passeggeri al 
 $95.3$\% visibile nel grafo \ref{fig:passeggeri-milano-rimini}.
 
-Uno di questi fattori, che distrarrebbe il conducente, potrebbe essere l'utilizzo 
-del cellulare durante la guida.
+Uno dei primi fattori che a venire in mente, potrebbe 
+essere l'utilizzo del cellulare durante la guida.
 
 %\clearpage
 \subsection{L'uso del telefono cellulare influenza il numero di incidenti?}
+\todo{Da Leggere}
 
-Non è un segreto che il numero di conducenti che utilizzano lo smartphone alla guida 
+Non è un segreto che il numero di conducenti 
+che utilizzano lo smartphone alla guida 
 sia cresciuto negli anni, parallelamente all'aumento di popolarità di quest'ultimo. 
+
 Per il giornale online l'Automobile \cite{AUTOMOBILE:1}, gli automobilisti americani 
 passano quasi due minuti guardando il cellulare, in un'ora di guida.
 Questo comportamento non può che diminuire l'attenzione alla guida, e di conseguenza 
-aumentare il numero di incidenti. 
-Sarebbe interessante riuscire a osservare questa tendenza nelle informazioni a disposizione.
+aumentare la frequenza di incidenti. 
+Sarebbe interessante riuscire a osservare questa tendenza nelle 
+informazioni a disposizione.
 
 Per quanto non siano disponibili dati su questo ambito, si potrebbe confrontare gli 
-anni tra 2010 e 2013, in cui l'uso del cellulare in macchina non era ancora frequente, 
-rispetto agli anni più recenti, quando gli smartphones hanno iniziato a essere utilizzati 
+anni tra 2010 e 2013, in cui l'uso del cellulare in macchina non era ancora diffuso, 
+rispetto agli anni più recenti, quando gli smartphone hanno iniziato a essere utilizzati 
 frequentemente durante la guida.
 
 \begin{figure}
@@ -1481,23 +1493,26 @@ frequentemente durante la guida.
     \label{fig:incremento-incidenti}
 \end{figure}
 
-Nella figura \ref{fig:incremento-incidenti} è visibile l'aumento, tra 2013 e 2014, del 
-numero di incidenti all'anno, il che supporterebbe l'ipotesi iniziale.
+Nella figura \ref{fig:incremento-incidenti} è visibile l'aumento, tra 2013 e 2014, degli 
+incidenti all'anno, il che supporterebbe l'ipotesi iniziale.
 Tuttavia, il numero di sinistri nei quali è presente solo il conducente 
-aumenta allo stesso modo, e gli incidenti con più di una persona nel veicolo 
+cresce allo stesso modo, e i quelli con più di una persona nel veicolo 
 salgono in maniera ancora maggiore. 
-Queste tendenze sono visibili nella aumento dell'ampiezza dell'area blu, nel grafo 
-\ref{fig:incremento-incidenti}.
+Queste tendenze riscontrate nell'aumento dell'ampiezza dell'area blu, nel grafo 
+\ref{fig:incremento-incidenti}, che mostra un minor numero di scontri con solo il conducente, 
+e per sottrazione, l'incremento delle altre categorie.
 
-L'ampio incremento di incidenti, a partire dal 2013, si arresta l'anno successivo, e dopo il 2015 
-il numero di sinistri tende addirittura a diminuire, il che fa sospettare 
-una modifica nella metodologia di raccolta dei dati, più che un cambiamento 
-nel comportamento di molte persone. 
+L'ampia crescita di incidenti, a partire dal 2013, si arresta l'anno successivo e, 
+dopo il 2015 il numero di sinistri tende addirittura a diminuire, 
+il che fa sospettare 
+in modifiche nella metodologia di raccolta dei dati, più che un cambiamento 
+del comportamento delle persone. 
 
 L'ipotesi del telefono cellulare come fattore di distrazione per il conducente, 
 non è confermabile, perlomeno con i dati di cui si dispone. 
-Va anche sottolineato che i dati utilizzati sono influenzati da svariati fattori, ed è 
+Va anche sottolineato che le informazioni utilizzate sono influenzate da svariati fattori, ed è 
 possibile \quotestyle{ipotizzare} la prevalenza di uno di questi al di sopra degli altri, 
+come si è fatto con il telefono cellulare, 
 ma per confermare il collegamento sono necessarie indagini molto più approfondite di 
 quelle eseguite. 
 
