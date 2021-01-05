@@ -9,7 +9,7 @@
 \usepackage[english,italian]{babel}
 \usepackage[hyphens]{url}
 
-\usepackage{biblatex}
+\usepackage[backend=bibtex]{biblatex}
 
 \usepackage{todonotes}
 \usepackage{refcheck}
@@ -40,18 +40,18 @@
    \lstset{
         language=Python,
         basicstyle=\ttfamily\footnotesize,
-        numbers=left,                   % where to put the line-numbers
-        numberstyle=\ttfamily\footnotesize,      % the size of the fonts that are used for the line-numbers
-        stepnumber=1,                   % the step between two line-numbers. If it is 1 each line will be numbered
-        numbersep=5pt,                  % how far the line-numbers are from the code
-        backgroundcolor=\color{CodeGray},  % choose the background color. You must add \usepackage{color}
-        showspaces=false,               % show spaces adding particular underscores
-        showstringspaces=false,         % underline spaces within strings
-        showtabs=false,                 % show tabs within strings adding particular underscores
-        tabsize=2,                      % sets default tabsize to 2 spaces
-        captionpos=b,                   % sets the caption-position to bottom
-        breaklines=true,                % sets automatic line breaking
-        breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+        numbers=left,                           % where to put the line-numbers
+        numberstyle=\ttfamily\footnotesize,     % the size of the fonts that are used for the line-numbers
+        stepnumber=1,                           % the step between two line-numbers. If it is 1 each line will be numbered
+        numbersep=5pt,                          % how far the line-numbers are from the code
+        backgroundcolor=\color{CodeGray},       % choose the background color. You must add \usepackage{color}
+        showspaces=false,                       % show spaces adding particular underscores
+        showstringspaces=false,                 % underline spaces within strings
+        showtabs=false,                         % show tabs within strings adding particular underscores
+        tabsize=2,                              % sets default tabsize to 2 spaces
+        captionpos=b,                           % sets the caption-position to bottom
+        breaklines=true,                        % sets automatic line breaking
+        breakatwhitespace=false,                % sets if automatic breaks should only happen at whitespace
         #1}}
 {\endminipage}
 
@@ -64,7 +64,7 @@
 \newcommand{\lighttext}[1]{\skipline\noindent\light{\texttt{#1}}\skipline}
 
 % \bibliography{Biblio}
-% \addbibresource{Biblio.bib}
+\addbibresource{Biblio.bib}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
