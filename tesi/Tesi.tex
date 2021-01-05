@@ -1676,17 +1676,19 @@ Chiaramente, con l'aumento del numero di automobili in viaggio, aumenta anche
 la pericolosità delle strade e la probabilità che avvenga un incidente.
 
 \subsection{Incidentalità in orari notturni}
+\todo{Da Rileggere}
 
 Nel grafo \ref{fig:week-weekend}, si è potuto osservare come, durante le 
 ore notturne, il comportamento degli incidenti tra settimana lavorativa e weekend 
 sia l'opposto, con maggior numero di sinistri durante le ore notturne del 
 Sabato e della Domenica.
 Nella figura \ref{fig:ore-notte} sono raffigurate le principali ore della notte, divise tra 
-settimana lavorativa e weekend.
+settimana e weekend.
 
-Chiaramente, durante il weekend si hanno un numero più alto di incidenti negli orari serali e 
-notturni, in particolare si hanno in media $5$ incidenti per serata in settimana, mentre il numero 
-quasi raddoppia a $9.4$ durante il Sabato e la Domenica sera.
+Chiaramente, durante il fine settimana si hanno un numero 
+più alto di incidenti negli orari serali, 
+in particolare si hanno in media $5$ sinistri per le giornate lavorative, 
+mentre il numero quasi raddoppia a $9.4$ durante il Sabato e la Domenica sera.
 
 \begin{code}
 notte = data[(data['Ora'] < 7) | (data['Ora'] > 22)]
@@ -1698,6 +1700,7 @@ ora_notte_weekend /= 2 * 52
 \end{code}
 
 Il traffico, stimato tramite gli accessi all'area C, conferma questa tendenza?
+
 \begin{figure}
     \includegraphics[width=\linewidth]{img_unite/ore_punta.png}
     \caption{Incidenti e traffico durante ore serali o notturne}
@@ -1706,12 +1709,13 @@ Il traffico, stimato tramite gli accessi all'area C, conferma questa tendenza?
 
 Premettendo che la differenza di traffico tra settimana lavorativa e 
 weekend in orari serali non è molta, il divario maggiore è presente alle ore 6:00 
-in favore del traffico in settimana, mentre il traffico nel weekend è maggiore in 
+in favore della settimana, mentre gli ingressi in area C sono maggiori nel weekend in 
 quasi tutte le altre ore.
 
-Una volta ottenuti questi risultati, è possibile ricavare quali siano le ore 
-più pericolose, calcolando il rapporto tra incidenti e traffico per orario.
-Il risultato di questo procedimento è raffigurato nel grafo \ref{fig:rapp-inc-traff}.
+Una volta ottenuti questi risultati, è possibile ricavare quali siano gli orari
+più pericolosi, calcolando il rapporto tra incidenti e traffico per orario.
+Il risultato di questo procedimento è 
+raffigurato nella figura \ref{fig:rapp-inc-traff}.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/area_c/rapporto_inc_notte.png}
@@ -1720,13 +1724,13 @@ Il risultato di questo procedimento è raffigurato nel grafo \ref{fig:rapp-inc-t
 \end{figure}
 
 Durante il weekend, le ore più pericolose sono tra le 3:00 e le 4:00 di notte. 
-D'altra parte, per la settimana lavorativa, gli orari più pericolosi sono quelli 
-tra l'una e le tre di notte, con un numero di incidenti rapportato al 
+D'altra parte, per la settimana lavorativa, gli orari con più sinistri sono quelli 
+tra l'una e le tre, con un numero di incidenti rapportato al 
 traffico molto minore. 
 
 I risultati sembrano essere in linea con l'idea che, nel weekend, il maggior 
-numero di incidenti avvenga in ore più tarde a causa della movida, mentre durante 
-la settimana lavorativa meno persone siano sveglie nelle ore notturne.
+numero di scontri avvenga in ore più tarde a causa della movida, mentre durante 
+la settimana lavorativa meno persone siano sveglie in orari notturni.
 
 %\clearpage
 \subsection{Quanto influiscono le vacanze estive sull'incidentalità?}
