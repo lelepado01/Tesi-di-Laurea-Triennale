@@ -723,33 +723,34 @@ cittametropolitana\footnote{\url{https://www.cittametropolitana.mi.it/export/sit
 \chapter{Dati Geolocalizzati}
 
 \section{Incidenti}
+\todo{Da Leggere}
 
-I dati riguardanti gli incidenti geolocalizzati, sono disponibili in un dataset contenente una 
-lista di punti indicanti latitudine e longitudine dell'incidente. 
-Ciò che delude, è che non è presente nessuna informazione aggiuntiva, se non la posizione 
-dell'incidente.
+I dati riguardanti gli incidenti geolocalizzati, sono disponibili in un dataset 
+contenente una lista di punti indicanti latitudine e longitudine dello scontro. 
+Ciò che delude, è che non è presente nessuna informazione aggiuntiva, 
+oltre alla posizione.
 
-Controllando i dati trovati, in particolare come questi siano posizionati, 
-si nota, dalla mappa destra nella figura \ref{fig:heatmap-municipi} come, 
-gli incidenti a Milano siano distribuiti con concentrazioni più alte, 
+Controllando come gli incidenti siano distribuiti, 
+si nota, dalla mappa destra nella figura \ref{fig:heatmap-municipi} come questi, 
+a Milano abbiano concentrazioni più alte, 
 in alcuni punti di interesse della città, come Piazzale Loreto, le circonvallazioni 
 interna e esterna\footnote{Si evidenzieranno, in particolare, Corso Ventidue Marzo 
-e la zona dei Navigli}, e Piazza Kennedy e Cavalcavia del Ghisallo. 
+e la zona dei Navigli}, Piazza Kennedy e Cavalcavia del Ghisallo. 
 
-La mappa destra nella figura \ref{fig:heatmap-municipi} è stata realizzata 
-approssimando ogni coordinata di incidente. 
-Normalmente queste hanno precisione di sette cifre decimali, arrotondando a cinque e 
-contando i punti uguali, è stato possibile aggregare sinistri che avvengono in zone 
+Questa figura è stata realizzata approssimando ogni coordinata di incidente, che  
+normalmente ha precisione a sette cifre decimali, a cinque e numeri dopo la virgola.
+Contando i punti uguali, è stato possibile aggregare sinistri che avvengono in zone 
 vicine. 
-Questi dati elaborati sono poi stati memorizzati nel file reperibile seguendo il 
+Questi dati elaborati sono poi stati memorizzati nel file reperibile al 
 percorso \filenamestyle{dataset/incidenti/incidenti\_round.csv}.
 
-Sarebbe interessante sapere se esistano zone con maggiore concentrazione di incidenti rispetto 
-alla media, e ottenere un indice numerico della pericolosità di una determinata zona.
+Sarebbe interessante sapere se esistano zone con maggiore concentrazione 
+di incidenti rispetto alla media, e ottenere un indice numerico 
+della pericolosità di una determinata zona.
 
-Nella mappa sinistra della figura \ref{fig:heatmap-municipi}, si è divisa la città di Milano 
-in base ai diversi municipi, ed è possibile osservare che nel centro storico si hanno la 
-maggior parte degli incidenti.
+Nella mappa sinistra della figura \ref{fig:heatmap-municipi}, si è divisa 
+la città di Milano in base ai diversi municipi, ed è possibile 
+osservare che nel centro storico si ha la più alta concentrazione di sinistri.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/municipi_milano/incidenti_municipio.png}
@@ -781,11 +782,12 @@ incidenti_per_zona = (incidenti / area) * 1000000
 Nella figura \ref{fig:incidenti-chilometro} spicca, sia nel grafo di sinistra, rappresentante 
 il numero di incidenti totali per zona, che in 
 quello di destra, che contiene il numero di incidenti divisi per l'area del municipio, 
-la zona 1, cioè quella del centro storico, vista la superficie minore 
-rispetto agli altri municipi.
+la zona 1, cioè quella del centro storico.
+La causa dell'alto valore di sinistri può essere ricondotta alla superficie minore 
+di questa area rispetto agli altri municipi.
 
-Una volta creata la tendenza generale del municipio, è possibile confrontare i risultati 
-ottenuti con il numero di incidenti in zone più ristrette come, per esempio, 
+Una volta creata la tendenza generale di ogni zona, è possibile confrontare i risultati 
+ottenuti con il numero di incidenti in aree più ristrette come, per esempio, 
 attorno a piazzale Loreto.
 
 \begin{figure}
@@ -809,16 +811,17 @@ area_loreto_inc = loreto_incidenti * 1000000 / area_loreto
 \end{code}
 
 Il numero di incidenti per chilometro che risultano, nell'area considerata in figura 
-\ref{fig:zona-loreto}, sono $231.06$, considerando che il massimo ottenuto per zona, 
-il centro storico, arriva attorno a $120$ incidenti per chilometro quadrato, è possibile affermare 
+\ref{fig:zona-loreto}, sono $231.06$. 
+Considerando che la zona con massimo valore ottenuto è il centro storico, 
+con circa $120$ incidenti per chilometro quadrato, è possibile affermare 
 che Piazzale Loreto sia una zona ad alta incidentalità.
 
 Va anche tenuto in considerazione che, come spiegato nel capitolo sull'origine dei dati, 
-prendendo una qualsiasi area di strade, si avrà un numero di incidenti per chilometro quadrato 
+prendendo una qualsiasi area di strade, si avrà un numero di sinistri per chilometro quadrato 
 molto maggiore rispetto a quello delle aree municipali, per la presenza di zone dove  
-le automobili non possono viaggiare, come gli edifici.
+le automobili non possono viaggiare, come gli edifici e parchi.
 
-Una domanda che sorge spontanea è, perché nel centro storico risulta tra le aree con maggiore 
+Una domanda che sorge spontanea è perché nel centro storico risulti tra le aree con maggiore 
 incidentalità, il volume di traffico, e quindi di incidenti, non dovrebbe essere abbassato 
 della presenza dell'area C?
 
@@ -828,18 +831,24 @@ della presenza dell'area C?
     \label{fig:perimetro-area-c}
 \end{figure}
 
-Dopo più attenta osservazione del perimetro dell'area C, visibile nell'immagine a sinistra nella 
+Dopo più attenta osservazione del perimetro della zona a traffico limitato, 
+visibile nell'immagine a sinistra nella 
 figura \ref{fig:perimetro-area-c}, si osserva che la maggior parte degli 
 incidenti avvengono sulla circonvallazione interna, 
 situata fuori dall'area C, ma compresa nel centro storico di Milano.
 
 Prendendo in considerazione solamente l'area C, il numero di incidenti scende a $46.83$ 
-per chilometro quadrato, di gran lunga minore rispetto al valore del centro storico, 
-dunque è possibile concludere che la riduzione del traffico nel centro di Milano ha impatto 
+per chilometro quadrato, di gran lunga minore rispetto al valore del centro storico. 
+\'E possibile concludere che la riduzione del traffico nel centro di Milano ha impatto 
 consistente sull'incidentalità.
 
 %\clearpage
 \section{Incidenti e Linee dei Trasporti Pubblici}
+\todo{da Leggere}
+
+Proseguendo con la serie di questioni poste nell'introduzione, ci si è chiesti quale 
+fosse l'effetto delle linee di trasporti pubblici, come tram e autobus, 
+sull'incidentalità a Milano. 
 
 Il dataset dei tragitti dei trasporti pubblici copre molta più superficie rispetto a 
 quello degli incidenti, dopo aver eliminato alcune linee di autobus che risultavano 
@@ -851,18 +860,18 @@ troppo in periferia, si ottiene la mappa sinistra nella figura \ref{fig:geo-tras
     \label{fig:geo-trasporti}
 \end{figure}
 
-Affiancando le posizioni degli incidenti ai tragitti dei trasporti pubblici, 
+Affiancando le posizioni dei sinistri alle linee dei trasporti, 
 non è possibile notare un collegamento preciso tra i due dataset. 
-Sono presenti tuttavia alcune corrispondenze come la zona dei Navigli 
+Sono presenti tuttavia alcune corrispondenze, come la zona dei Navigli 
 e quella circostante a Corso Ventidue Marzo. 
 
 Un fenomeno interessante, è la presenza di alcune strade con alta incidentalità, 
-parallele a linee di autobus. 
-Un esempio di ciò è quello di zona Navigli, in figura \ref{fig:navigli}, dove le vie 
-interessate sono Viale Gian Galeazzo e Viale Beatrice D'Este, 
+parallele a viali su cui viaggiano mezzi pubblici. 
+Nella zona Navigli, in figura \ref{fig:navigli}, le vie 
+interessate sono Viale Gian Galeazzo, Viale Beatrice D'Este, 
 parallele a Viale Col di Lana e Viale Bligny.
-Lo stesso fenomeno è osservabile su Viale Gabriele D'Annunzio e Viale Gorizia e Coni Zugna, 
-e nella zona vicino a corso Ventidue Marzo.
+Lo stesso comportamento prosegue su Viale Gabriele D'Annunzio e Viale Gorizia e Coni Zugna, 
+località vicine alle direttrici precedenti.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/atm/navigli.png}
@@ -870,8 +879,8 @@ e nella zona vicino a corso Ventidue Marzo.
     \label{fig:navigli}
 \end{figure}
 
-Anche vicino a corso Ventidue Marzo, nella mappa \ref{fig:22-marzo} si può 
-notare lo stesso fenomeno, tra Viale Bianca Maria e Viale Premuda.
+Anche tra Viale Bianca Maria e Viale Premuda, nella mappa \ref{fig:22-marzo} si può 
+notare lo stesso fenomeno, in prossimità di corso Ventidue Marzo.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/atm/22_marzo.png}
@@ -879,18 +888,25 @@ notare lo stesso fenomeno, tra Viale Bianca Maria e Viale Premuda.
     \label{fig:22-marzo}
 \end{figure}
 
-Le immagini del contenenti indicazioni sul traffico sono state realizzate tramite le API di 
-Google Maps, tuttavia non offrono una stima ideale, poiché indicano il traffico in tempo reale e 
-la quarantena per il Covid-19 ha ridotto notevolmente il volume di automobili.
+Le immagini, 
+del contenenti indicazioni sul traffico, affiancate alle mappe, 
+sono state realizzate tramite le API di 
+Google Maps. 
+Va specificato che queste non offrono una stima ideale, poiché indicano 
+il traffico in tempo reale e ciò non solo comporta imprecisione per l'orario, 
+ma anche per 
+la quarantena dovuta al Covid-19 che ha ridotto notevolmente il volume di automobili 
+circolanti.
 
-Per confutare l'ipotesi iniziale, si sono utilizzati i dati ricavati in precedenza, 
-cioè gli incidenti per chilometro per ogni municipio di Milano. 
+Per confutare l'ipotesi iniziale, si sono utilizzati i dati ricavati 
+nel capitolo precedente, 
+cioè gli incidenti per chilometro quadrato, calcolati per ogni municipio di Milano. 
 Nella zona dei Navigli, si è poi presa in considerazione la sezione 
 nell'immagine sinistra 
 della figura \ref{fig:zona-navigli-22marzo}, 
 perché sono presenti molti incidenti in viale Papiniano e viale Beatrice d'Este, 
-e un numero minore nella vie parallele sottostanti, in cui sono anche presenti 
-linee di trasporti pubblici.
+e un numero minore nella vie parallele sottostanti, su cui viaggiano 
+trasporti pubblici.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{img_unite/zona_navigli_22marzo.png}
@@ -918,21 +934,28 @@ for point in incidenti['geometry']:
         inc_s += 1
 \end{code}
 
-Il risultato, conferma che avvengono $167.09$ incidenti per chilometro 
+Il risultato, conferma che avvengono $167.09$ sinistri per chilometro quadrato
 nel viale in cui sono presenti trasporti pubblici e, per quanto non sia nella media per la zona 
-di appartenenza, è giustificabile in quanto si è presa in considerazione solo la strada, 
-e non le \quotestyle{zone morte}.
-Nell'altra via, invece, dove non passa alcuna linea di trasporti pubblici, 
+di appartenenza, è giustificabile in quanto si sono prese in considerazione solo le strade, 
+e non le 
+\quotestyle{zone morte}\footnote{Zone come parchi e edifici, dove non possono 
+viaggiare automobili e non possono quindi avvenire incidenti}.
+Su Viale Papiniano e Beatrice D'Este, invece, dove non passa alcuna 
+linea di trasporti pubblici, 
 gli incidenti sono $289.32$, risultato ancora più alto rispetto a quello ottenuto 
 nella zona di Loreto. 
 
-Non è detto che il maggior numero di incidenti sia causato dalla linea degli autobus, 
-in particolare, va tenuta in considerazione la topologia delle due vie parallele.
-La differenza principale tra Viale Bligny e Viale Beatrice d'Este è che, la prima è una via a due 
+\skipline
+Nonostante si siano ricavati questi valori particolarmente alti, 
+non è detto che il maggior numero di sinistri sia causato dall'assenza di una 
+linea di autobus, 
+in particolare, va tenuta in considerazione la topologia delle due vie parallele. 
+La differenza principale tra Viale Bligny e Viale Beatrice d'Este è che, 
+la prima è una via a due 
 corsie per senso di marcia, mentre il secondo è un viale a due 
 carreggiate\footnote{Carreggiata: la parte della strada destinata allo scorrimento dei veicoli, 
 delimitata da una striscia continua o da un paracarro} 
-con sensi di marcia separati da una zona non attraversabile da automobili. 
+separate da una zona non attraversabile da automobili. 
 Dunque è ovvio che la maggior parte dei conducenti preferirà un viale ad alta velocità 
 rispetto a una via dove è possibile rimanere incolonnati per la presenza di una sola 
 corsia, e dove si è rallentati dalla presenza di autobus o tram.
@@ -942,29 +965,37 @@ raffigurate nell'immagine destra della figura \ref{fig:zona-navigli-22marzo}.
 
 In questo caso, per viale Bianca Maria, dove non è presente una linea di trasporti pubblici, 
 il numero di incidenti è $254.31$, mentre per viale Premuda per cui passa una linea tranviaria, 
-il numero scende a $93.96$.
+il valore ottenuto dallo stesso calcolo scende a $93.96$.
 
 Anche per questa zona, le due vie prese in considerazione sono molto diverse.
-Viale Premuda è una via a due carreggiate separate, ognuna con una corsia e un solo senso 
-di marcia, dove sono parcheggiate automobili su entrambi i lati, e la velocità dei 
-veicoli non deve essere particolarmente elevata.
-Allo stesso modo, nel Viale Bianca Maria, le carreggiate sono separate, tuttavia queste 
+Viale Premuda dispone di due carreggiate separate, ognuna con una corsia e un solo senso 
+di marcia, dove sono parcheggiate automobili su entrambi i lati, e la velocità delle 
+vetture non deve essere particolarmente elevata.
+Allo stesso modo, su Viale Bianca Maria, le carreggiate sono separate, tuttavia queste 
 hanno due, e in alcuni punti tre corsie ciascuna. 
 
-Va sottolineato che le strade prese in considerazione hanno differenze sostanziali, e che 
-probabilmente, il numero maggiore di incidenti su viali più ampi sia dovuto al 
-volume di traffico più alto.
-D'altro canto, è anche possibile che una parte dei conducenti, come quelli con più esperienza 
-a giudare in grandi città, tengano in considerazione e evitino le strade con i mezzi pubblici.
+Va sottolineato che le strade prese in considerazione hanno differenze sostanziali, 
+e che probabilmente, il numero maggiore di incidenti su viali più ampi sia dovuto al 
+volume di traffico più elevato.
+D'altro canto, è più che possibile che una parte dei conducenti, 
+come quelli con più esperienza 
+a guidare in grandi città, tengano in considerazione e evitino le strade con i mezzi pubblici.
 
 %\clearpage
 \section{Il pavé a Milano influisce in qualche modo sull'incidentalità?}
+\todo{Da Riguardare}
 
-Nella sezione sull'origine dei dati, si è parlato di come è stato possibile ricavare 
-un tracciato con la maggior parte delle strade in pavé a Milano.
+Tra le domande poste nell'introduzioni, una particolarmente interessante è quella 
+sull'influenza del pavé sull'incidentalità.
 
-Per valutare le somiglianze tra le linee tranviarie e la cartina di 
-Urbanfile, si è utilizzata l'immagine \ref{fig:tram-pave-milano}.
+Il primo dataset con cui si è tentato di approssimare le vie in pavé è stato quello 
+delle linee tranviarie. 
+Confrontando queste e la cartina di Urbanfile, con l'immagine \ref{fig:tram-pave-milano}, 
+è possibile notare alcune somiglianze, come tra viale Sabotino e via 
+Alessandro Manzoni, tuttavia la maggior parte delle linee tranviarie segnate 
+passano su asfalto.
+Inoltre, in alcuni viali, come viale Premuda, i tram hanno una carreggiata separata, 
+che molto probabilmente ha influenza ancora minore sugli incidenti della zona.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/tram/tram_milano.png}
@@ -972,15 +1003,13 @@ Urbanfile, si è utilizzata l'immagine \ref{fig:tram-pave-milano}.
     \label{fig:tram-pave-milano}
 \end{figure}
 
-\'E possibile notare alcune somiglianze, come tra viale Sabotino e via 
-Alessandro Manzoni, tuttavia la maggior parte delle linee tranviarie segnate 
-passano su asfalto.
-Inoltre, in alcuni viali, come viale Premuda, i tram hanno una carreggiata separata, 
-che molto probabilmente ha influenza ancora minore sugli incidenti della zona.
-
 Viste le basse somiglianze tra la cartina di Urbanfile e le linee del tram, 
 per creare una stima, si sono convertite le vie principali della mappa trovata 
 in geojson. 
+Nella sezione sull'origine dei dati, si è parlato di come è stato possibile ricavare 
+un tracciato con la maggior parte delle strade in pavé a Milano e, allo stesso modo, 
+anche un campione di strade asfaltate con caratteristiche simili.
+
 Il risultato è visibile nella mappa sulla sinistra dell'immagine \ref{fig:mappa-pave}.
 
 \begin{figure}
@@ -989,9 +1018,9 @@ Il risultato è visibile nella mappa sulla sinistra dell'immagine \ref{fig:mappa
     \label{fig:mappa-pave}
 \end{figure}
 
-Una volta creata l'area delle strade in pavé, è possibile calcolare quanti sono gli 
-incidenti che avvengono in queste zone e confrontarlo con il numero di incidenti 
-nelle strade asfaltate.
+Una volta creata l'area delle strade in pavé, è possibile calcolare quanti 
+incidenti avvengono in queste zone e confrontarlo con il numero di sinistri 
+nei viali asfaltati.
 
 \begin{code}
 inc_in_pave = 0
@@ -1009,44 +1038,58 @@ for rect in pave['geometry']:
 incidenti_per_km = inc_in_pave * 10**6 / area_pave
 \end{code}
 
-Il numero di incidenti per chilometro quadrato, nelle strade in pavé è $229.45$, che 
-è un valore particolarmente alto, anche se viene confrontato con il numero di 
-incidenti nel centro storico, cioè circa $130$.
+Il numero di incidenti per chilometro quadrato nelle strade in pavé è $229.45$, 
+questo è un valore particolarmente alto, anche se viene confrontato con il numero di 
+incidenti nel centro storico, cioè circa $120$.
 Tuttavia, bisogna tenere in considerazione che il dataset che è appena stato creato, 
-contiene solamente strade, senza alcuna zona morta, come edifici, mentre l'area utilizzata 
+contiene solamente strade, senza alcuna \quotestyle{zona morta}, 
+come edifici o parchi, mentre l'area utilizzata 
 del centro storico, contiene tutto il territorio del centro.
 
-Per ovviare a questo problema, si è creato un campione di strade asfaltate, prese circa 
-nella stessa zona di Milano. 
-Queste strade sono raffigurate nella mappa destra in figura \ref{fig:mappa-pave}. 
-Si è tentato di aggiungere al campione strade più simili possibili a 
-quelle in pavé, sia per zona, sia per topologia. 
+Per ovviare a questo problema, si è selezionato il campione di strade asfaltate, 
+prese circa nella stessa zona di Milano, per mantenere le quantità di traffico il più 
+costante possibile. 
 Inoltre, per lo stesso motivo, l'area totale dei due dataset è simile.
+Queste strade sono raffigurate nella mappa destra in figura \ref{fig:mappa-pave}. 
 
-Eseguendo lo stesso calcolo realizzato per le strade in pavé, risulta che il numero di incidenti per 
-chilometro quadrato, nel campione creato, sia di $220.89$ incidenti.
-Tuttavia, nel campione delle strade asfaltate sono stati presi vari tratti provenienti dalla 
-circonvallazione interna e altre zone molto trafficate, mentre il campione di strade in pavé 
+Nonostante si sia tentato di tenere i due campioni di strade il più simili 
+possibili, nel campione delle strade asfaltate sono stati presi vari tratti 
+provenienti dalla circonvallazione interna e altre zone molto trafficate, 
+mentre il campione di strade in pavé 
 contiene, per mancanza di altri dati, molte strade del centro storico, inevitabilmente 
 meno trafficate.
 
+Eseguendo lo stesso calcolo realizzato per le strade in pavé, risulta che 
+il numero di incidenti per 
+chilometro quadrato, nel campione creato, sia di $220.89$ incidenti.
+
+Per quanto il calcolo con le strade in pavé abbia restituito un valore di 
+sinistri maggiore, non sarebbe sbagliato considerare i due numeri vicini. 
+Per rendere l'analisi più precisa, disponendo di informazioni sulla 
+posizione degli incidenti in più annate, e sapendo che il pavé è stato 
+rimosso da alcune strade, sarebbe possibile eseguire un confronto 
+sulla stessa direttrice, avendo come unica variabile il cambio di pavimentazione.
+
 %\clearpage
 \section{Incidenti e Autovelox}
+\todo{Da riguardare}
 
-Per sapere se gli autovelox hanno influenza sull'incidentalità, 
+Per sapere se gli autovelox abbiano influenza sull'incidentalità, 
 bisognerebbe innanzitutto sapere quando sono stati posizionati i dispositivi, e solo 
-a quel punto, avendo dati su incidenti prima e dopo l'installazione, sarebbe 
+a quel punto, avendo dati sui sinistri prima e dopo l'installazione, sarebbe 
 possibile trarre conclusioni.
 
-Alcuni dati sull'installazione di autovelox esistono per l'anno 2014, visualizzabili 
-nella tabella \ref{ztl-milano}, tuttavia le posizioni degli incidenti 
-sono solo disponibili per l'anno 2016, in quanto Istat non ha rilasciato 
-le posizioni precise degli incidenti in altre annate.
+Alcune informazioni, sul posizionamento degli autovelox esistono per 
+l'anno 2014, e sono visualizzabili 
+nella tabella \ref{ztl-milano}. 
+Tuttavia la localizzazione degli incidenti 
+è disponibile solo per l'anno 2016, in quanto Istat non ha rilasciato 
+le coordinate degli scontri in altre annate.
 
-Conoscendo il nome della via degli autovelox installati nel 2014, è possibile ricondursi 
-alla posizione effettiva di questi ultimi sulla mappa.
+Conoscendo il nome della via in cui sono stati installati gli autovelox nel 2014, 
+è possibile ricondursi alla posizione effettiva di questi ultimi sulla mappa.
 Per fare ciò, la soluzione più veloce è stata quella di enumerare tutti gli autovelox, 
-e confrontarli con le vie della tabella, salvando le posizioni che coincidono.
+e confrontarli con le vie della tabella, salvando le coordinate che coincidono.
 Il risultato è rappresentato nella mappa sul lato sinistro della 
 figura \ref{fig:autovelox-indici}.
 
@@ -1071,10 +1114,10 @@ plt.show()
     \label{fig:autovelox-indici}
 \end{figure}
 
-Per quanto non si disponga delle informazioni sugli incidenti prima e dopo dell'installazione, 
-è comunque possibile sovrapporre i dataset, per vedere se gli autovelox hanno un qualche tipo di 
-effetto sugli incidenti, visto che i dati sui sinistri sono successivi all'installazione 
-delle telecamere.
+Per quanto non si disponga delle informazioni sui sinistri prima e dopo dell'installazione, 
+è comunque possibile sovrapporre i dataset, per vedere se gli autovelox 
+hanno un qualche tipo di effetto sugli incidenti, visto che i dati 
+localizzati sono successivi all'installazione delle telecamere.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/autovelox/autovelox_incidenti.png}
@@ -1086,9 +1129,10 @@ La mappa \ref{fig:autovelox-incidenti} è stata realizzata contando gli incident
 nel raggio di un chilometro a ogni autovelox, in quanto non si dispone del nome della 
 via nel quale è avvenuto il sinistro. 
 Va precisato che le \quotestyle{bolle} non indicano il raggio di conteggio degli incidenti, ma 
-il numero dei sinistri trovati. La colorazione dei \quotestyle{cerchi} è stata aggiunta per 
-rendere il grafo più leggibile, la cui interpretazione poteva essere difficoltosa 
-osservando solo l'ampiezza del raggio di questi.
+il numero dei sinistri trovati. 
+La colorazione dei cerchi è stata aggiunta per 
+rendere il grafo più leggibile, la cui interpretazione poteva risultare difficoltosa 
+osservando solo l'ampiezza di questi.
 
 \begin{center}
     \def\arraystretch{1.5}% 
@@ -1127,9 +1171,10 @@ osservando solo l'ampiezza del raggio di questi.
 \footnotetext[1]{Viale Fulvio Testi}
 \footnotetext[2]{Cavalcavia del Ghisallo}
 
-Una volta trovati gli incidenti totali, è possibile calcolare il numero di sinistri 
-sulla base dell'area utilizzata.
-Al dataset degli autovelox sono aggiunte due colonne, una contenente gli incidenti totali, 
+Una volta trovati i sinistri totali presenti nel raggio, 
+è possibile calcolare il numero di incidenti per chilometro quadrato 
+in base all'area utilizzata.
+Alla tabella degli autovelox sono aggiunte due colonne, una contenente gli incidenti totali, 
 l'altra contenente gli incidenti per chilometro.
 
 \begin{code}
@@ -1137,8 +1182,8 @@ autovelox_2014['incidenti_vicini'] = gp.GeoSeries(df)
 autovelox_2014['incidenti_pesati'] = autovelox_2014['incidenti_vicini'] / 3.14
 \end{code}
 
-Questa ultima colonna, in particolare, è divisa per 3.14 perché l'area del cerchio 
-è data dalla formula: 
+Quest'ultima colonna, in particolare, è divisa per $3.14$ perché l'area del cerchio 
+è data dalla formula sottostante: 
 
 \begin{center}
     $Area\, = \pi * r^2$
@@ -1148,11 +1193,11 @@ E, poiché si sta utilizzando un raggio di circa un chilometro, e si vuole otten
 numero di incidenti per chilometro quadrato, l'area ottenuta è $3.14$.
 
 Per facilitare la lettura della tabella precedente, nella figura \ref{fig:confronto-autovelox} 
-è visibile il confronto tra il numero di incidenti vicino a autovelox, e il numero di incidenti 
-del municipio.
-In alcuni casi, il numero di incidenti sembra essere ridotto dalla presenza della telecamera,  
+è visibile sia il confronto tra il numero di incidenti vicino a autovelox, 
+sia quanti sinistri avvengono nel rispettivo municipio.
+In alcuni casi, il numero di scontri sembra essere ridotto dalla presenza della telecamera,  
 tuttavia nella maggior parte dei casi, e soprattutto nelle zone di Viale Serra e 
-Viale Monte Ceneri, il volume di incidenti è particolarmente più alto di 
+Viale Monte Ceneri, questo valore è particolarmente più alto di 
 quello della zona municipale.
 
 \begin{figure}
@@ -1172,10 +1217,12 @@ print(incremento_percentuale_totale)
 
 Sarebbe interessante \quotestyle{catturare}, in un solo valore, l'incremento (o decremento) 
 globale, degli incidenti in zone vicine a 
-autovelox\footnote{Si tenta di capire, con un solo numero, se la presenza di autovelox nella zona 
-aumenta o diminuisce il numero di sinistri}.
-A causa delle zone menzionate in precedenza, in vicinanza di autovelox si ha un incremento degli 
-incidenti del $329.6$\%, tuttavia, nel caso in cui si considerino 
+autovelox\footnote{Si tenta di capire, con un solo numero, se la presenza di 
+autovelox nella zona aumenta o diminuisce il numero di sinistri}.
+A causa delle zone menzionate in precedenza, che alzano di molto la media di sinistri, 
+in prossimità di autovelox si ha un aumento di 
+incidenti del $329.6$\%. 
+Tuttavia, nel caso in cui si considerino 
 outlier\footnote{In un campione di osservazioni, un outlier è un valore anomalo, 
 particolarmente distante dagli altri dati disponibili \cite{PROB_E_STATISTICA:1}} 
 i Viali Serra e Monte Ceneri, si ha invece un decremento generale del $113.6$\%.
@@ -1185,8 +1232,7 @@ precedente all'installazione dell'autovelox, non si ha modo di sapere se questi 
 effetto positivo o negativo sull'incidentalità.
 Con il rilascio di nuovi dataset di incidenti geolocalizzati, possibilmente riferiti ad annate 
 precedenti al 2014, sarebbe possibile realizzare una stima con informazioni antecedenti e 
-successive all'installazione delle telecamere.
-
+successive al posizionamento delle telecamere.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\clearpage
