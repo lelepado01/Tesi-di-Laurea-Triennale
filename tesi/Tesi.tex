@@ -1521,13 +1521,18 @@ quelle eseguite.
 
 %\clearpage
 \subsection{Incremento dell'incidentalità in diversi orari}
+\todo{Da Leggere}
 
 Se si volesse stimare la distribuzione di traffico per orario, sicuramente una prima ipotesi 
-deve essere quella di una curva più alta durante il giorno, con punto di minimo durante la notte. 
-Il risultato atteso, inoltre, è quello di osservare due picchi più o meno marcati 
+deve essere quella di una curva che si alza durante il giorno, con 
+punto di minimo durante la notte. 
+
+Il risultato atteso, inoltre, potrebbe essere 
+quello di osservare due picchi più o meno marcati 
 in corrispondenza delle fasce orarie di entrata e di uscita dal lavoro.
-Una domanda che sorge spontanea, visto che i dati a disposizione si riferiscono agli incidenti, 
-è se questi seguano lo stesso comportamento del traffico.
+Una domanda che sorge spontanea, 
+è se sia possibile mostrare questo comportamento utilizzando i dati 
+riferiti ai sinistri, e non al traffico.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/ore_punta/week_weekend.png}
@@ -1535,27 +1540,30 @@ Una domanda che sorge spontanea, visto che i dati a disposizione si riferiscono 
     \label{fig:week-weekend}
 \end{figure}
 
-Tramite un semplice conteggio degli incidenti durante il weekend e, 
+Tramite un semplice conteggio degli incidenti durante il weekend, e 
 confrontandolo con il numero di quelli avvenuti durante la 
-settimana lavorativa, si osserva come nel weekend avvengono più sinistri 
+settimana lavorativa, si osserva come nel weekend avvengano più scontri 
 durante la sera e la notte, mentre in giornata durante la settimana.
 
-Per quanto riguarda, le fasce orarie \quotestyle{di punta} definite precedentemente, 
+Per quanto riguarda, le fasce orarie \quotestyle{di punta} di cui si 
+è parlato precedentemente, 
 sono stati presi in considerazione, per la mattina, gli orari dalle 7:00 alle 10:00, 
 e per il pomeriggio, dalle 17:00 alle 19:00.
 
-L'incremento durante la fascia oraria pomeridiana è subito osservabile nella figura 
-\ref{fig:week-weekend}, dove si ha un incremento del $95.2$\% di incidenti rispetto 
-alla media durante la settimana lavorativa. 
+L'incremento durante la fascia oraria pomeridiana, presente nella figura 
+\ref{fig:week-weekend}, mostra un aumento della percentuale di incidenti 
+del $95.2$\% rispetto alla media, durante la settimana lavorativa. 
 Durante il weekend, si osserva comunque un incremento, ma solamente del $61.1$\%.
 
-Per le fasce orarie della mattina, è comunque presente un incremento di sinistri, ma questo 
-ammonta al $34.6$\% alle 8:00, e al $80.6$\% alle 9:00, e nel weekend si ha addirittura un 
-decremento di incidenti in entrambi gli orari, rispettivamente del $47.6$\% e $17.9$\%.
+Per le fasce orarie della mattina, è comunque presente una crescita di sinistri, 
+ma questo ammonta al $34.6$\% alle 8:00, e al $80.6$\% alle 9:00, 
+mentre nel weekend si hanno addirittura percentuali di decremento 
+in entrambi gli orari, rispettivamente $47.6$\% e $17.9$\%.
 
-I grafi presentati indicano gli incidenti all'anno, normalizzati per numero di 
-giorni settimanali e feriali, quindi gli incidenti totali della settimana sono divisi 
-per cinque giorni, mentre quelli del weekend per due, come mostrato nel codice sottostante.
+I grafi presentati indicano i sinistri all'anno, normalizzati per numero di 
+giorni settimanali o feriali, quindi gli incidenti totali della settimana sono divisi 
+per cinque giorni, mentre quelli del weekend per due, 
+come mostrato nel codice sottostante.
 
 \begin{code}[language=Python]
 ora_weekend = data[data['giorno'] > 5]['Ora'].value_counts().sort_index()
@@ -1565,23 +1573,26 @@ ora_week /= 5 * 52
 ora_weekend /= 2 * 52
 \end{code}
 
-Le informazioni ricavate ricalcano in modo particolarmente preciso, soprattutto nelle ore del 
-pomeriggio, le ipotesi iniziali.
+Le informazioni ricavate ricalcano in modo particolarmente preciso, 
+soprattutto nelle ore del pomeriggio, le ipotesi iniziali.
 
 %\clearpage
 \subsection{Incremento dell'incidentalità nelle fasce orarie della mattina}
+\todo{Da Leggere}
 
-I risultati della sezione precedente sembrano indicare che la maggior parte degli 
-incidenti si verifica attorno alle 9:00 di mattina. 
+I risultati ottenuti nella sezione precedente sembrano indicare 
+che la maggior parte degli incidenti si verifica attorno alle 9:00 di mattina. 
+
 Questa tendenza è vera anche nel caso in cui si isoli una città come Milano, 
-che è la destinazione di molti pendolari della regione, probabilmente 
+destinazione di molti pendolari della regione, probabilmente 
 già in viaggio prima delle 9:00?
 
-Selezionano solo gli incidenti nella provincia di Milano, mostrati nel grafo 
+Selezionano solo i sinistri nella provincia di Milano, mostrati nel grafo 
 \ref{fig:week-weekend-milano}, è possibile individuare in modo più preciso
 il primo picco di incidenti, quello durante le ore di punta mattutine.
 In particolare si ha un incremento del $34.3$\% alle 8:00 rispetto alla media, 
 che aumenta fino al $118.7$\% delle 9:00, nelle giornate lavorative.
+
 D'altro canto, durante il weekend, il numero di incidenti alle 8:00 cala del $58.5$\% rispetto 
 alla media e allo stesso modo alle 9:00, del $37$\%.
 
@@ -1591,24 +1602,27 @@ alla media e allo stesso modo alle 9:00, del $37$\%.
     \label{fig:week-weekend-milano}
 \end{figure}
 
-A Milano, dunque, si ha un incremento percentuale di incidenti ancora maggiore 
-rispetto al resto d'Italia, e il flusso di pendolari, alla guida in orari precedenti 
-alle 9:00 di mattina, non sembra influenzare il volume di sinistri.
+A Milano, dunque, si ha un aumento percentuale di incidenti, nelle ore della mattina, 
+ancora maggiore rispetto al resto d'Italia, e il flusso di pendolari, 
+alla guida in orari precedenti alle 9:00, 
+non sembra influenzare il volume di sinistri.
 
 \subsection{Correlazione tra incidenti e traffico}
+\todo{Da riguardare}
 
 Fino a questo momento, si è parlato di incidenti senza alcun tipo di contesto, in 
-particolare senza tenere conto del numero di automobili presenti sulle strade. 
-\'E chiaro che uno dei principali fattori che causa incidenti sia proprio 
-il numero di automobili presenti, sarebbe interessante riuscire a isolare 
-l'impatto dell traffico, nelle diverse ore della giornata.
+particolare non si è tenuto conto del numero di automobili presenti sulle strade. 
+\'E chiaro che uno dei principali fattori che causa sinistri sia proprio 
+la quantità di veicoli presenti. 
+Sarebbe interessante riuscire a isolare quanto 
+il traffico influenzi l'incidentalità, nelle diverse ore della giornata.
 
 Un primo problema da affrontare è quello di individuare informazioni sul 
-numero di macchine presenti su strada in diverse fasce orarie. 
+numero di vetture presenti su strada in diverse fasce orarie. 
 Per quanto un dataset contenente questi dati non sia stato trovato, 
 è possibile realizzare una stima di questo carattere a Milano, 
-a partire dal 2011, fino al 2016, utilizzando i dataset sul numero 
-degli accessi all'area C.
+utilizzando i dataset sul numero degli accessi all'area C, 
+disponibile a partire dal 2011, fino al 2016.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/area_c/rapporto_orario.png}
@@ -1620,16 +1634,15 @@ L'immagine \ref{fig:rapporto-incidenti-traffico} contiene, sulla sinistra,
 la percentuale di accessi in area C a una determinata 
 ora\footnote{Si sono utilizzati i dati dell'anno 2016, perché non si sono trovati 
 dataset più recenti per quanto riguarda gli accessi all'area C di Milano}, 
-e nel grafo a destra, il numero di incidenti a Milano, pesati in base al 
-questa stima del traffico.
+e nel grafo sulla destra, il numero di incidenti a Milano, pesati in base alla 
+stima appena realizzata del traffico.
 
-Si osservano molte similitudini tra la stima realizzata tramite gli ingressi 
-in area C, rappresentata nel grafo sinistro della 
+Sono presenti molte similitudini tra gli ingressi in area C, 
+rappresentati nel grafo sinistro della 
 figura \ref{fig:rapporto-incidenti-traffico} e l'immagine \ref{fig:week-weekend-milano}, 
 raffigurante gli incidenti a Milano divisi per orario. 
 In particolare, tra traffico in area C a Milano e 
-numero incidenti per orario, si è calcolato un coefficiente di Pearson uguale a $0.877$, 
-quindi è possibile dire che i due siano dataset linearmente correlati.
+numero incidenti per orario, si è calcolata una correlazione uguale a $0.877$.
 
 \begin{code}
 # eseguito con dati del 2016
@@ -1645,19 +1658,22 @@ incidenti_per_ora = data[data['provincia'] == 15]['ora'].value_counts().sort_ind
 correlazione = accessi_area_c_per_ora.corr(incidenti_per_ora)
 \end{code}
 
-Per quanto riguarda invece, il grafo nella metà bassa della 
+Per quanto riguarda invece, il grafico sulla destra della 
 figura \ref{fig:rapporto-incidenti-traffico}, sono presenti tre picchi di 
 con orari particolarmente pericolosi, uno alle 3:00 di mattina, uno alle 
 8:00 e l'ultimo alle 18:00. 
 
 Di questi, il primo è possibile che sia dovuto allo scarso volume di accessi 
-all'area C in questo orario, visto che alle 3:00 di notte si ha il minimo volume di 
-traffico della giornata, mentre gli altri due sono certamente dovuti all'alto 
+all'area C in questo orario, visto che alle 3:00 di notte si ha il valore minimo di 
+ingressi della giornata.
+
+Gli altri due sono certamente dovuti all'alto 
 numero di incidenti, in quanto il traffico in questi orari è pienamente nella media.
-Gli ultimi due orari, inoltre, sono i due orari di punta coincidenti con l'inizio 
-e la fine della giornata lavorativa per la maggior parte delle persone. 
-Chiaramente, con l'aumento del numero di persone in viaggio, aumenta anche il 
-numero di \quotestyle{pericoli} a cui ogni conducente deve prestare attenzione.
+Gli ultimi due orari, inoltre, sono le due fasce orarie di punta, che coincidono 
+con l'inizio e la fine della giornata lavorativa per la maggior parte delle persone. 
+
+Chiaramente, con l'aumento del numero di automobili in viaggio, aumenta anche 
+la pericolosità delle strade e la probabilità che avvenga un incidente.
 
 \subsection{Incidentalità in orari notturni}
 
