@@ -38,8 +38,11 @@ rapp = mesi_incidenti / df
 
 mesi = ["Gennaio","Febbraio","Marzo","Aprile","Maggio","Giugno","Luglio","Agosto","Settembre","Ottobre","Novembre","Dicembre"]
 
+color_ls = ['#dbad85']*12
+color_ls[5:7] = ['#dd8d46']*3
+
 plt.subplot(1,2,1)
-plt.fill_between(perc_traffico.index, perc_traffico, color='#66ad9f')
+plt.bar(perc_traffico.index, perc_traffico, color=color_ls, width=0.9)
 plt.ylabel("Percentuale di traffico in Area C")
 plt.xticks(range(1,13), mesi, rotation=90)
 plt.tight_layout()
