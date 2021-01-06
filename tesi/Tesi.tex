@@ -1,7 +1,4 @@
 \documentclass[a4paper,12pt]{report}
-% scopiazzato dal template di Matteo Longeri (grazie!)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% o article, book, ...
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % packages...
@@ -12,7 +9,6 @@
 \usepackage[backend=bibtex]{biblatex}
 
 \usepackage{todonotes}
-\usepackage{refcheck}
 
 \usepackage{listings}
 % Per generare il file PDF aderente alle specifiche PDF/A-1b. Verificarne poi la validità.
@@ -22,6 +18,8 @@
 \usepackage{csquotes}
 \usepackage{color, colortbl}
 \usepackage{courier}
+
+\usepackage{refcheck}
 
 % draft più leggibile
 \usepackage[a4paper,top=2cm,bottom=2cm,outer=5cm,verbose,headheight=1cm,heightrounded]{geometry}
@@ -104,8 +102,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Introduzione}
-\todo{Da Leggere}
-
+\todo{atrent: minimale ma ok, vedi todo aggiunti}
 Il termine dati aperti, o liberi, tradotto dall'inglese \quotestyle{open data}, 
 si riferisce a collezioni di informazioni liberamente accessibili e 
 utilizzabili. 
@@ -175,8 +172,7 @@ del tutto impossibile per un utente l'ottenimento di informazioni.
 
 Uno di questi siti è la pagina di richiesta dati 
 Arpa\footnote{\url{https://www.arpalombardia.it/Pages/ARPA_Home_Page.aspx}}, 
-soprattutto negli anni precedenti al 2017 quando, per ottenere le loro informazioni sul 
-meteo si sarebbe dovuto compilare un 
+soprattutto negli anni precedenti al 2017 quando, per ottenere le loro informazioni sulla qualità dell'aria si sarebbe dovuto compilare un 
 \textbf{form}\footnote{Un form è un questionario, costituito da più campi, che 
 permettono all'utente l'inserimento di dati utilizzati, per esempio, da un sito web}, 
 che richiede l'inserimento di un periodo, al massimo di un anno, di una sola 
@@ -196,9 +192,10 @@ La condivisione di questi ha reso meno necessario l'utilizzo del form, che
 
 \begin{figure}
     \hfill\includegraphics[width=0.7\linewidth]{img/arpa.png}\hspace*{\fill}
-    \caption{Form per la richiesta di dati sul sito Arpa}
+    \caption{Form per la richiesta di dati sul sito Arpa (fonte: Trentini)}
+    \label{fig:arpa}
 \end{figure}
-\footnotetext{fonte immagine Form Arpa: Trentini}
+\todo{atrent: la fonte si mette tra parentesi nella caption, inoltre metti le label su ogni figura e citala nel testo}
 
 La garanzia di \quotestyle{poter fare i conti in tasca alle istituzioni}, è un 
 valore che molto spesso è contrapposto al diritto alla privacy, anche in 
@@ -235,6 +232,7 @@ Le linee di trasporto pubblico influenzano il traffico positivamente o negativam
 Il numero di passeggeri influisce sulla probabilità di essere coinvolti in un 
 incidente?\\
 Esistono fattori di distrazione per il conducente di un'automobile? 
+\todo{atrent: perché non una bullet list?}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Origine dei dati}
@@ -3431,5 +3429,6 @@ ogni file con l'url del portale di origine.
 %\addcontentsline{toc}{chapter}{Bibliografia}
 \printbibliography
 
+\todo{atrent: leggi \url{http://appunti.linux.it/a2/a269.htm\#almltitle2772}}
 
 \end{document}
