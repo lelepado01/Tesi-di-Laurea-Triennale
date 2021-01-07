@@ -3178,31 +3178,33 @@ si rechi in spiaggia viaggiando su un'autostrada.
 \section{Meteo a Milano}
 
 \subsection{Correlazione tra fattori atmosferici e incidentalità}
+\todo{Da riguardare}
 
 L'idea di ipotizzare che esista correlazione tra le condizioni meteo e il numero 
-di incidenti, può non sembrare improponibile, in fondo a nessuno piace guidare 
+di incidenti, può non sembrare improponibile, in fondo nessuno adora guidare 
 durante una nevicata.
-Tuttavia, le informazioni necessarie per ottenere una stima della correlazione 
-dei due fattori sono, o fuori dalla portata dei dati liberi, o inesistenti. 
+Tuttavia, le informazioni necessarie per ottenere una stima della dipendenza 
+tra i due fattori sono, o fuori dalla portata dei dati liberi, o inesistenti. 
 
-Un esempio di questi dati, potrebbe essere il sapere giorno e ora 
+Un esempio di questi dataset, potrebbe essere sapere il giorno e l'ora 
 dell'incidente, e allo stesso modo anche le zone in cui si sono verificati certi 
-fenomeni atmosferici, come la caduta di neve. 
-Entrambi questi dati non sono disponibili tramite dataset aperti, e probabilmente, 
+fenomeni atmosferici, come la caduta di neve o temporali. 
+Entrambi questi dati non sono disponibili tramite open data e, probabilmente, 
 anche con questi non sarebbe possibile dare una buona stima della correlazione 
 tra i due fattori.
 
-\`E comunque interessante mostrare come, la correlazione tra due campioni possa essere 
-estremamente alta, anche se questi ultimi sono completamente scollegati.
+\`E comunque interessante mostrare come, il coefficiente di Pearson tra due campioni 
+possa essere estremamente alto, anche se questi ultimi sono completamente scollegati.
+
 \begin{figure}
     \includegraphics[width=\linewidth]{img_unite/temp_incidenti.png}
     \caption{Incidenti, temperature e umidità medi per mese nel 2011 e nel 2013}
     \label{fig:incidenti-temp}
 \end{figure}
 
-La figura \ref{fig:incidenti-temp} mostra, partendo dall'alto, il numero di incidenti 
-avvenuti per mese, la temperatura media per mese, e infine l'umidità media.
-Sono riportati i due anni con, rispettivamente la maggiore e la minore correlazione tra 
+La figura \ref{fig:incidenti-temp} mostra, partendo dall'alto, il numero di sinistri 
+avvenuti per mese, la temperatura media mensile, e infine l'umidità.
+Sono state riportate le due annate con rispettivamente la maggiore e la minore correlazione tra 
 incidenti e fattori atmosferici.
 
 Non è stato possibile eseguire la stessa operazione con dati più recenti, per mancanza del 
@@ -3226,52 +3228,54 @@ I risultati sono riportati nella tabella sottostante:
 \end{center}
 
 Per le annate a disposizione, i dati sono consistenti tra loro, e indicano la presenza di 
-correlazione lineare tra temperature e incidenti, mentre si ha correlazione inversa per quanto 
+correlazione lineare tra temperatura e sinistri, mentre si ha dipendenza inversa per quanto 
 riguarda l'umidità.
 
 Ciò non significa che, nel 2011, sia stata l'alta temperatura a provocare 
 tutti gli incidenti, anzi, è molto più probabile che il fattore con maggiore 
-influenza sia proprio il mese, e non la temperatura o l'umidità.
+influenza sia proprio il mese, e non o l'umidità o la velocità del vento.
 
-Infatti, se si osserva che tipo di informazioni si sta utilizzando 
-queste stime, il dataset sulle condizioni meteo è molto impreciso, in quanto potrebbero 
-esserci differenze di diversi gradi, in zone lontane di Milano.
+Infatti, il dataset sulle condizioni meteo che si sta utilizzando è molto impreciso, 
+in quanto potrebbero esserci differenze di diversi gradi, in zone lontane di Milano.
 Allo stesso modo, anche i dati sugli incidenti non sono particolarmente precisi, 
 visto che indicano solo il nome dell'autostrada in cui è avvenuto 
 il sinistro, e la posizione effettiva potrebbe essere a chilometri di distanza da dove 
-si è calcolata l'informazione sul meteo.
+si è calcolata l'informazione sul clima.
 
 Dal punto di vista, invece, della velocità del vento, sarebbe possibile eseguire 
 un'analisi più approfondita, in quanto un valore dell'indice di correlazione uguale 
 a $0.5$ non è particolarmente alto.
 Si potrebbe, per esempio, controllare se esista una qualche differenza tra gli 
-incidenti su moto rispetto all'auto. 
-Oppure, avendo a disposizione la velocità del vento in una precisa zona, controllare 
-il volume di sinistri all'uscita delle gallerie, zone molto pericolose 
-in presenza di vento forte.
+incidenti su moto rispetto a quelli in automobile. 
+Oppure, avendo a disposizione la velocità del vento all'uscita delle gallerie, 
+controllare la quantità di sinistri in queste zone, notoriamente pericolose 
+in presenza di correnti d'aria forti.
 
-Infine, osservando le misurazioni dell'umidità, è possibile che in questo caso sia presente 
+Infine, osservando le misurazioni sull'umidità, è possibile che in questo caso sia presente 
 un rapporto di causa e effetto, in quanto spesso, un valore alto di questo fattore 
 coincide con pioggia e temporali, che a loro volta rendono più difficoltosa la guida.
-
+\todo{lelepado: posso dirlo?}
 
 \chapter{Conclusioni}
+\todo{Da riguardare}
 
-Riprendendo alcune delle analisi realizzate in questo lavoro, è possibile dire che buona 
-parte di queste sono state portate a termine facendo compromessi tra precisione del dato, e 
-disponibilità di quest'ultimo.
+Riprendendo alcune delle analisi realizzate in questo lavoro, è opportuno dire che buona 
+parte di queste sono state portate a termine con compromessi tra la precisione del dato, e 
+la disponibilità di quest'ultimo.
 
 In particolare, i capitoli che fanno utilizzo dei dati localizzati, soffrono la mancanza di 
 queste informazioni per annate diverse dal 
-2016\footnote{Il dataset di incidenti geolocalizzati è disponibile solo per l'anno 2016}, 
+2016\footnote{Il dataset con le coordinate degli incidenti è disponibile solo per l'anno 2016}, 
 come si è potuto osservare nella sezione riguardante gli autovelox. 
 
 Le analisi dei dataset Istat e Aci, invece, facendo uso di informazioni già aggregate 
 e di facile elaborazione, sono state portate a termine con maggiore frequenza, e il 
 principale ostacolo è stato creare un contesto corretto attorno ai risultati ottenuti. 
 
-\`E il caso dei sinistri divisi per età della popolazione, dove si sono ottenuti esiti 
-molto diversi a seconda di quali percentuali venivano usate per fasce.
+\`E, per esempio, il caso dei sinistri divisi per età della popolazione, 
+dove si sono ottenuti esiti 
+molto diversi a seconda di quali percentuali venivano usate per stimare la quantità di 
+persone in ogni fascia.
 
 \skipline
 Per concludere, sarebbe opportuno riportare quali siano state le maggiori difficoltà 
@@ -3281,7 +3285,8 @@ Uno dei problemi riscontrati, soprattutto per quanto riguarda il confermare la
 validità dei risultati calcolati, è stata la mancanza di dataset in ambiti come 
 il traffico e il fondo stradale. 
 
-Nel capitolo riguardante gli autovelox non è stato possibile individuare una tendenza 
+Nel capitolo riguardante gli autovelox infatti, non è stato possibile individuare 
+uno comportamento precedente all'installazione delle telecamere, 
 per la mancanza di informazioni 
 sulla posizione precisa dei sinistri precedentemente all'anno 2016. 
 
@@ -3301,15 +3306,15 @@ solamente diviso in dodici file su base mensile.
 Questo, in passato, era un comportamento ricorrente, in 
 quanto molte piattaforme, come quella del Ministero dei 
 Trasporti\footnote{\url{http://dati.mit.gov.it/catalog/dataset}}, 
-misuravano le condivisioni di open data delle amministrazioni 
-sulla base del numero di file pubblicati.
+misuravano le condivisioni di open data delle istituzioni 
+sulla base del numero di documenti pubblicati.
 Era quindi più proficuo pubblicare dati separati, rispetto a tutte le informazioni in 
 un unico dataset.
 
 Ovviamente questa operazione rende non solo la raccolta delle informazioni più complessa, 
-ma anche l'associazione di dati, che magari sono presenti in un file e non in un altro. 
+ma anche l'associazione di queste, che magari sono presenti in un file e non in un altro. 
 Il sito Global Open Data Index, che offre un punteggio in base a quanti dati ogni paese 
-ha condiviso in formato libero, nelle metodologie di calcolo di questo, scrive: 
+ha condiviso in formato libero, nelle metodologie di calcolo della classifica, scrive: 
 
 \begin{quotation}
     \dots we expect that national governments also provide aggregation 
@@ -3331,13 +3336,12 @@ ha condiviso in formato libero, nelle metodologie di calcolo di questo, scrive:
 Infine, un problema sorto con frequenza è stato il fatto che 
 molti dataset non aderiscono ad 
 alcuno standard, per quanto riguarda la nomenclatura delle colonne.
-Nelle tabelle provenienti dal sito Istat, per esempio, nel 2011, hanno un campo denominato 
+Le tabelle provenienti dal sito Istat, per esempio, nel 2011, hanno un campo denominato 
 \columnstyle{intersezione\_o\_non\_interse1}, mentre nel 2018, la stessa informazione ha 
 nome \columnstyle{intersezione\_o\_non\_interse3}. 
 
 A cambiare non sono soltanto i nomi delle colonne negli anni, 
-ma in alcuni casi, 
-come quello esplorato in precedenza, è usato un solo \quotestyle{underscore} a 
+ma in alcuni casi, nei label, viene usato un solo \quotestyle{underscore} a 
 simboleggiare uno spazio, mentre nel campo \columnstyle{veicolo\_\_a\_\_\_et\_\_conducente} 
 ne sono usati due o anche tre.
 
@@ -3348,24 +3352,26 @@ In questo caso, non solo è presente un cambio di nomenclatura, ma il dato in s�
 anche reso più vago.
 
 \chapter{Utilizzo del Codice}
+\todo{Da riguardare}
 
 Tutti gli script utilizzati per questo lavoro sono reperibili a questa pagina 
 github: \url{https://github.com/lelepado01/Tirocinio}.
 
 Il repository è diviso in tre cartelle principali, \filenamestyle{dataset}, \filenamestyle{src} 
-e \filenamestyle{tesi}. La prima contiene tutti i file di informazioni utilizzati, divisi per 
+e \filenamestyle{tesi}. La prima contiene tutti i file di dati utilizzati, divisi per 
 argomento, e alcuni documenti di testo riguardanti le stime realizzate, come la percentuale di 
 conducenti maschio e femmina.
 
-La cartella \columnstyle{tesi} contiene la maggior parte delle immagini utilizzate 
-nella relazione\footnote{Ci si riferisce alle immagini realizzate tramite screenshot 
+La cartella \columnstyle{tesi} contiene la maggior parte delle immagini presenti 
+nella relazione\footnote{Ci si riferisce alle immagini ottenute tramite screenshot 
 da Google Maps e altri siti, non ai grafi.} 
-e il codice sorgente Latex del pdf.
+e il codice sorgente Latex usato per produrre questo documento pdf.
 
-Infine, nella directory \filenamestyle{src} è contenuto il codice sorgente utilizzato per realizzare 
-i grafi, le mappe e le stime, diviso per argomento. 
-Ogni grafo è associato allo script python che ne permette la creazione, registrato con 
+Infine, nella directory \filenamestyle{src} è contenuto il codice sorgente utilizzato 
+per realizzare i grafi, le mappe e le stime, diviso per argomento. 
+Ogni grafico è associato a uno script python che ne permette la creazione, registrato con 
 lo stesso nome, e estensione \filenamestyle{.py}. 
+
 Quindi se in una cartella fosse presente l'immagine \filenamestyle{esempio.png}, lo script con 
 cui questa è stata creata avrà nome \filenamestyle{esempio.py}.
 
@@ -3377,22 +3383,21 @@ dal 2010 al 2018, i dataset utilizzati si troverebbero nella directory:
 \indent\filenamestyle{dataset/incidenti/incidenti\_istat}
 
 \skipline
-\noindent Mentre il codice sorgente e le immagini sarebbero situate al percorso:
+\noindent Mentre il codice sorgente e le immagini sarebbero situati al percorso:
 
 \skipline
 \indent\filenamestyle{src/incidenti/incidenti\_senza\_coords/anno}
 
 \skipline
-
 Alcune immagini, in particolare quelle con grafi posizionati in coppia 
 orizzontalmente\footnote{I grafi singoli sono tutti nella directory \filenamestyle{src}, 
-le immagini doppie, unite tramite programmi esterni, in più, sono raccolte separatamente 
-in \filenamestyle{tesi/img\_unite}}, sono raccolte nella 
-cartella \filenamestyle{tesi/img\_unite}, 
+le figure doppie, unite tramite programmi esterni, in più, sono raccolte separatamente 
+in \filenamestyle{tesi/img\_unite}}, 
+sono raccolte nella cartella \filenamestyle{tesi/img\_unite}, 
 mentre la directory \filenamestyle{tesi/img} contiene gli screenshot e le 
 figure che non hanno bisogno di codice sorgente.
 
-Infine, in modo da fornire un collegamento tra i dataset nella specifica directory e i siti 
+Infine, in modo da fornire un collegamento tra i dataset nella specifica cartella e i siti 
 di open data in cui sono stati trovati, nella tabella sottostante sono forniti i percorsi di 
 ogni file con l'url del portale di origine.
 
