@@ -981,19 +981,19 @@ a guidare in grandi città, tengano in considerazione e evitino le strade con i 
 
 %\clearpage
 \section{Il pavé a Milano influisce in qualche modo sull'incidentalità?}
-\todo{Da Riguardare}
+\todo{Da leggere}
 
-Tra le domande poste nell'introduzioni, una particolarmente interessante è quella 
+Tra le domande poste nell'introduzione, una particolarmente interessante è quella 
 sull'influenza del pavé sull'incidentalità.
 
-Il primo dataset con cui si è tentato di approssimare le vie in pavé è stato quello 
+Il primo dataset, con cui si è tentato di approssimare le vie in pavé, è stato quello 
 delle linee tranviarie. 
-Confrontando queste e la cartina di Urbanfile, con l'immagine \ref{fig:tram-pave-milano}, 
+Confrontando queste e la cartina di Urbanfile, nell'immagine \ref{fig:tram-pave-milano}, 
 è possibile notare alcune somiglianze, come tra viale Sabotino e via 
 Alessandro Manzoni, tuttavia la maggior parte delle linee tranviarie segnate 
 passano su asfalto.
-Inoltre, in alcuni viali, come viale Premuda, i tram hanno una carreggiata separata, 
-che molto probabilmente ha influenza ancora minore sugli incidenti della zona.
+Inoltre, in alcune tratte, come viale Premuda, i tram viaggiano su una carreggiata separata, 
+che deve avere influenza minore sugli incidenti della zona.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/tram/tram_milano.png}
@@ -1001,23 +1001,23 @@ che molto probabilmente ha influenza ancora minore sugli incidenti della zona.
     \label{fig:tram-pave-milano}
 \end{figure}
 
-Viste le basse somiglianze tra la cartina di Urbanfile e le linee del tram, 
-per creare una stima, si sono convertite le vie principali della mappa trovata 
+Viste le basse somiglianze tra la mappa di Urbanfile e le linee dei trasporti pubblici, 
+per creare una stima, si sono convertite le vie principali della cartina trovata 
 in geojson. 
 Nella sezione sull'origine dei dati, si è parlato di come è stato possibile ricavare 
 un tracciato con la maggior parte delle strade in pavé a Milano e, allo stesso modo, 
-anche un campione di strade asfaltate con caratteristiche simili.
+anche un campione di tratte asfaltate con caratteristiche simili.
 
 Il risultato è visibile nella mappa sulla sinistra dell'immagine \ref{fig:mappa-pave}.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{img_unite/mappa_pave_asfalto.png}
-    \caption{Principali strade a Milano in pavé e campione simile di strade asfaltate}
+    \caption{Principali strade a Milano in pavé e campione simile con zone asfaltate}
     \label{fig:mappa-pave}
 \end{figure}
 
 Una volta creata l'area delle strade in pavé, è possibile calcolare quanti 
-incidenti avvengono in queste zone e confrontarlo con il numero di sinistri 
+incidenti avvengono in questi luoghi e confrontarlo con il numero di sinistri 
 nei viali asfaltati.
 
 \begin{code}
@@ -1036,59 +1036,60 @@ for rect in pave['geometry']:
 incidenti_per_km = inc_in_pave * 10**6 / area_pave
 \end{code}
 
-Il numero di incidenti per chilometro quadrato nelle strade in pavé è $229.45$, 
+La quantità di incidenti per chilometro quadrato su pavé è $229.45$, 
 questo è un valore particolarmente alto, anche se viene confrontato con il numero di 
-incidenti nel centro storico, cioè circa $120$.
-Tuttavia, bisogna tenere in considerazione che il dataset che è appena stato creato, 
+sinistri nel centro storico, cioè circa $120$. 
+Tuttavia, bisogna tenere in considerazione che il dataset appena creato 
 contiene solamente strade, senza alcuna \quotestyle{zona morta}, 
-come edifici o parchi, mentre l'area utilizzata 
-del centro storico, contiene tutto il territorio del centro.
+come edifici o parchi, mentre l'area del centro storico, 
+si riferisce a tutto il territorio, che si traduce in una frazione con 
+denominatore maggiore. 
 
 Per ovviare a questo problema, si è selezionato il campione di strade asfaltate, 
-prese circa nella stessa zona di Milano, per mantenere le quantità di traffico il più 
+prese nella stessa zona di Milano, per mantenere le quantità di traffico il più 
 costante possibile. 
-Inoltre, per lo stesso motivo, l'area totale dei due dataset è simile.
-Queste strade sono raffigurate nella mappa destra in figura \ref{fig:mappa-pave}. 
+Inoltre, per lo stesso motivo, la superficie totale dei due dataset è simile.
+Questi tracciati sono raffigurati nella mappa destra in figura \ref{fig:mappa-pave}. 
 
-Nonostante si sia tentato di tenere i due campioni di strade il più simili 
-possibili, nel campione delle strade asfaltate sono stati presi vari tratti 
+Nonostante si sia tentato di tenere i due campioni il più simili 
+possibili, in quello delle strade asfaltate sono stati presi vari tratti 
 provenienti dalla circonvallazione interna e altre zone molto trafficate, 
-mentre il campione di strade in pavé 
-contiene, per mancanza di altri dati, molte strade del centro storico, inevitabilmente 
-meno trafficate.
+mentre l'insieme in pavé contiene, per mancanza di altri dati, 
+molti viali provenienti dal centro storico, inevitabilmente 
+meno trafficati.
 
-Eseguendo lo stesso calcolo realizzato per le strade in pavé, risulta che 
-il numero di incidenti per 
+Con lo stesso calcolo realizzato per le strade in pavé, risulta che 
+il numero di scontri per 
 chilometro quadrato, nel campione creato, sia di $220.89$ incidenti.
 
-Per quanto il calcolo con le strade in pavé abbia restituito un valore di 
+Per quanto il risultato dell'analisi sulle strade in pavé abbia restituito un valore di 
 sinistri maggiore, non sarebbe sbagliato considerare i due numeri vicini. 
-Per rendere l'analisi più precisa, disponendo di informazioni sulla 
-posizione degli incidenti in più annate, e sapendo che il pavé è stato 
-rimosso da alcune strade, sarebbe possibile eseguire un confronto 
+Per rendere le informazioni più precise, disponendo di dati sulla 
+posizione degli scontri in più annate, e sapendo che il pavé è stato 
+rimosso da alcuni viali, sarebbe possibile eseguire un confronto 
 sulla stessa direttrice, avendo come unica variabile il cambio di pavimentazione.
 
 %\clearpage
 \section{Incidenti e Autovelox}
-\todo{Da riguardare}
+\todo{Da leggere}
 
-Per sapere se gli autovelox abbiano influenza sull'incidentalità, 
+Per sapere se gli autovelox abbiano influenza sugli incidenti, 
 bisognerebbe innanzitutto sapere quando sono stati posizionati i dispositivi, e solo 
 a quel punto, avendo dati sui sinistri prima e dopo l'installazione, sarebbe 
 possibile trarre conclusioni.
 
-Alcune informazioni, sul posizionamento degli autovelox esistono per 
-l'anno 2014, e sono visualizzabili 
-nella tabella \ref{ztl-milano}. 
+Informazioni sul posizionamento di alcune telecamere sono reperibili per 
+l'anno 2014, e sono visualizzabili nella tabella \ref{ztl-milano}. 
 Tuttavia la localizzazione degli incidenti 
-è disponibile solo per l'anno 2016, in quanto Istat non ha rilasciato 
+è disponibile solo per il 2016, in quanto Istat non ha rilasciato 
 le coordinate degli scontri in altre annate.
 
 Conoscendo il nome della via in cui sono stati installati gli autovelox nel 2014, 
-è possibile ricondursi alla posizione effettiva di questi ultimi sulla mappa.
-Per fare ciò, la soluzione più veloce è stata quella di enumerare tutti gli autovelox, 
-e confrontarli con le vie della tabella, salvando le coordinate che coincidono.
-Il risultato è rappresentato nella mappa sul lato sinistro della 
+è possibile ricondursi alla posizione effettiva di questi sulla mappa.
+Per fare ciò, la soluzione più veloce è stata quella di enumerare tutte le coordinate presenti 
+nel dataset dei dispositivi trovato, 
+e confrontarli con le vie della tabella, salvando quelle che coincidono.
+Il risultato è rappresentato nella cartina sul lato sinistro della 
 figura \ref{fig:autovelox-indici}.
 
 \begin{code}[language=Python]
@@ -1115,7 +1116,7 @@ plt.show()
 Per quanto non si disponga delle informazioni sui sinistri prima e dopo dell'installazione, 
 è comunque possibile sovrapporre i dataset, per vedere se gli autovelox 
 hanno un qualche tipo di effetto sugli incidenti, visto che i dati 
-localizzati sono successivi all'installazione delle telecamere.
+localizzati sono successivi al posizionamento delle telecamere.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/autovelox/autovelox_incidenti.png}
@@ -1123,13 +1124,12 @@ localizzati sono successivi all'installazione delle telecamere.
     \label{fig:autovelox-incidenti}
 \end{figure}
 
-La mappa \ref{fig:autovelox-incidenti} è stata realizzata contando gli incidenti avvenuti 
-nel raggio di un chilometro a ogni autovelox, in quanto non si dispone del nome della 
-via nel quale è avvenuto il sinistro. 
+La mappa \ref{fig:autovelox-incidenti} è stata realizzata contando gli scontri avvenuti 
+nel raggio di un chilometro da ogni autovelox. 
 Va precisato che le \quotestyle{bolle} non indicano il raggio di conteggio degli incidenti, ma 
 il numero dei sinistri trovati. 
 La colorazione dei cerchi è stata aggiunta per 
-rendere il grafo più leggibile, la cui interpretazione poteva risultare difficoltosa 
+rendere la cartina più leggibile, la cui interpretazione poteva risultare difficoltosa 
 osservando solo l'ampiezza di questi.
 
 \begin{center}
@@ -1172,8 +1172,8 @@ osservando solo l'ampiezza di questi.
 Una volta trovati i sinistri totali presenti nel raggio, 
 è possibile calcolare il numero di incidenti per chilometro quadrato 
 in base all'area utilizzata.
-Alla tabella degli autovelox sono aggiunte due colonne, una contenente gli incidenti totali, 
-l'altra contenente gli incidenti per chilometro.
+Alla tabella degli autovelox sono aggiunte tre colonne, contenenti gli scontri totali, 
+quelli per chilometro e i sinistri registrati nella zona municipale corrispondente.
 
 \begin{code}
 autovelox_2014['incidenti_vicini'] = gp.GeoSeries(df)
@@ -1187,14 +1187,15 @@ Quest'ultima colonna, in particolare, è divisa per $3.14$ perché l'area del ce
     $Area\, = \pi * r^2$
 \end{center}
 
-E, poiché si sta utilizzando un raggio di circa un chilometro, e si vuole ottenere il 
+Poiché si sta utilizzando un raggio di un chilometro, e si vuole ottenere il 
 numero di incidenti per chilometro quadrato, l'area ottenuta è $3.14$.
 
 Per facilitare la lettura della tabella precedente, nella figura \ref{fig:confronto-autovelox} 
-è visibile sia il confronto tra il numero di incidenti vicino a autovelox, 
+è visibile sia il confronto tra gli scontri vicino a autovelox, 
 sia quanti sinistri avvengono nel rispettivo municipio.
-In alcuni casi, il numero di scontri sembra essere ridotto dalla presenza della telecamera,  
-tuttavia nella maggior parte dei casi, e soprattutto nelle zone di Viale Serra e 
+In alcuni casi, il numero di incidenti sembra essere ridotto dalla presenza 
+della telecamera,  
+tuttavia nella maggior parte delle zone, e soprattutto in prossimità di Viale Serra e 
 Viale Monte Ceneri, questo valore è particolarmente più alto di 
 quello della zona municipale.
 
@@ -1213,23 +1214,24 @@ for km, zona in zip(data['Incidenti per chilometro'], data['Incidenti per zona']
 print(incremento_percentuale_totale)
 \end{code}
 
-Sarebbe interessante \quotestyle{catturare}, in un solo valore, l'incremento (o decremento) 
+Sarebbe interessante poter visualizzare, in un solo valore, l'incremento (o decremento) 
 globale, degli incidenti in zone vicine a 
 autovelox\footnote{Si tenta di capire, con un solo numero, se la presenza di 
-autovelox nella zona aumenta o diminuisce il numero di sinistri}.
+telecamere nella zona aumenta o diminuisce il numero di sinistri}.
 A causa delle zone menzionate in precedenza, che alzano di molto la media di sinistri, 
-in prossimità di autovelox si ha un aumento di 
+in prossimità di telecamere si ha un aumento di 
 incidenti del $329.6$ \%. 
 Tuttavia, nel caso in cui si considerino 
 outlier\footnote{In un campione di osservazioni, un outlier è un valore anomalo, 
 particolarmente distante dagli altri dati disponibili \cite{PROB_E_STATISTICA:1}} 
 i Viali Serra e Monte Ceneri, si ha invece un decremento generale del $113.6$ \%.
 
-Va comunque sottolineato che, non avendo dati sufficienti a calcolare una tendenza 
+Va comunque sottolineato che, non avendo informazioni sufficienti a calcolare una tendenza 
 precedente all'installazione dell'autovelox, non si ha modo di sapere se questi abbiano un 
 effetto positivo o negativo sull'incidentalità.
-Con il rilascio di nuovi dataset di incidenti geolocalizzati, possibilmente riferiti ad annate 
-precedenti al 2014, sarebbe possibile realizzare una stima con informazioni antecedenti e 
+Con il rilascio di nuovi dataset contenenti le coordinate di sinistri, 
+possibilmente riferiti ad annate antecedenti al 2014, sarebbe possibile realizzare 
+una stima con informazioni precedenti e 
 successive al posizionamento delle telecamere.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
