@@ -1682,19 +1682,19 @@ Chiaramente, con l'aumento del numero di automobili in viaggio, aumenta anche
 la pericolosità delle strade e la probabilità che avvenga un incidente.
 
 \subsection{Incidentalità in orari notturni}
-\todo{Da Rileggere}
+\todo{Da leggere}
 
 Nel grafo \ref{fig:week-weekend}, si è potuto osservare come, durante le 
 ore notturne, il comportamento degli incidenti tra settimana lavorativa e weekend 
-sia l'opposto, con maggior numero di sinistri durante le ore notturne del 
-Sabato e della Domenica.
-Nella figura \ref{fig:ore-notte} sono raffigurate le principali ore della notte, divise tra 
-settimana e weekend.
+sia l'opposto, con maggior numero di sinistri durante il 
+Sabato e la Domenica.
+Nell'immagine \ref{fig:ore-notte} sono raffigurati gli scontri avvenuti 
+nelle principali ore della notte, divise tra settimana e weekend.
 
-Chiaramente, durante il fine settimana si hanno un numero 
+Chiaramente, durante il fine settimana si ha un numero 
 più alto di incidenti negli orari serali, 
-in particolare si hanno in media $5$ sinistri per le giornate lavorative, 
-mentre il numero quasi raddoppia a $9.4$ durante il Sabato e la Domenica sera.
+in particolare si commettono in media $5$ sinistri nelle giornate lavorative, 
+mentre la quantità quasi raddoppia a $9.4$ durante il Sabato e la Domenica sera.
 
 \begin{code}
 notte = data[(data['Ora'] < 7) | (data['Ora'] > 22)]
@@ -1705,7 +1705,8 @@ ora_notte_week /= 5 * 52
 ora_notte_weekend /= 2 * 52
 \end{code}
 
-Il traffico, stimato tramite gli accessi all'area C, conferma questa tendenza?
+Ciò che è spontaneo chiedersi, è se 
+il traffico, stimato tramite gli accessi all'area C, confermi questa tendenza.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{img_unite/ore_punta.png}
@@ -1713,15 +1714,15 @@ Il traffico, stimato tramite gli accessi all'area C, conferma questa tendenza?
     \label{fig:ore-notte}
 \end{figure}
 
-Premettendo che la differenza di traffico tra settimana lavorativa e 
+Premettendo che la differenza di automobili in viaggio tra settimana lavorativa e 
 weekend in orari serali non è molta, il divario maggiore è presente alle ore 6:00 
-in favore della settimana, mentre gli ingressi in area C sono maggiori nel weekend in 
-quasi tutte le altre ore.
+in favore della settimana, mentre gli ingressi nella zona a traffico limitato 
+sono maggiori nel weekend in quasi tutte le altre ore.
 
 Una volta ottenuti questi risultati, è possibile ricavare quali siano gli orari
-più pericolosi, calcolando il rapporto tra incidenti e traffico per orario.
-Il risultato di questo procedimento è 
-raffigurato nella figura \ref{fig:rapp-inc-traff}.
+più pericolosi, calcolando il rapporto tra incidenti e automobili in viaggio, 
+in base all'orario.
+Il risultato è rappresentato nella figura \ref{fig:rapp-inc-traff}.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/area_c/rapporto_inc_notte.png}
@@ -1740,19 +1741,19 @@ la settimana lavorativa meno persone siano sveglie in orari notturni.
 
 %\clearpage
 \subsection{Quanto influiscono le vacanze estive sull'incidentalità?}
-\todo{Da riguardare}
+\todo{Da Leggere}
 
 Dalle analisi eseguite nei capitoli precedenti, sorge spontaneo chiedersi se lo stesso 
 procedimento sia realizzabile con le informazioni riguardanti il mese degli 
 incidenti. 
 
-Per fare ciò, si necessita, non solo dei sinistri avvenuti al mese, 
-ma anche di un dataset sugli accessi all'area C. 
-Questo è presente, nel caso della divisione per 
-mese, fino all'anno 2018, tuttavia il campo \columnstyle{mese} nei file Istat, è 
+Per fare ciò, sono necessari, non solo i sinistri avvenuti al mese, 
+ma anche il dataset sugli ingressi all'area C di Milano. 
+Questo è disponibile, nel caso della divisione 
+mensile, fino all'anno 2018, tuttavia il campo \columnstyle{mese} nei file Istat, è 
 presente nei solo fino all'anno 2013, ed è poi sostituito 
 dalla colonna \columnstyle{trimestre}. 
-Per mantenere i calcoli più precisi possibili, i grafici sull'argomento prenderanno 
+Per mantenere i calcoli più precisi e attuali possibili, i grafici sull'argomento prenderanno 
 in considerazione l'annata più recente contenente il label \columnstyle{mese}.
 
 \begin{figure}
@@ -1762,7 +1763,7 @@ in considerazione l'annata più recente contenente il label \columnstyle{mese}.
 \end{figure}
 
 Nel grafo \ref{fig:milano-mese}, che rappresenta gli incidenti avvenuti a Milano ogni mese, 
-si osserva una crescita di sinistri a partire dai primi mesi 
+si osserva una crescita di sinistri che parte dai primi periodi 
 dell'anno, che termina in Luglio e cala notevolmente in Agosto.
 Per verificare che questo comportamento non sia 
 un caso unico, la percentuale di decremento è riportata nella tabella sottostante, 
@@ -1786,21 +1787,21 @@ assieme agli altri anni per cui sono disponibili i dati.
 
 Ciò che si potrebbe dedurre, in modo errato, dalla figura \ref{fig:milano-mese}, 
 è l'idea che, in Agosto, le persone guidino meglio e dunque causino meno incidenti. 
-Per quanto possano esserci molti fattori che influenzino questa tendenza di 
-decremento di scontri, e non è detto che un miglioramento nella guida sia escluso, 
-i principali contributori devono essere le partenze 
+Per quanto possano esserci molti fattori che influenzino il 
+decremento degli scontri, e non è detto che un miglioramento nella guida sia escluso, 
+il principale deve essere la partenza di molte persone 
 per le vacanze estive.
 
 Un modo per verificare questa teoria è controllare se il traffico, 
-stimato tramite i dati sugli ingressi in area C, cala durante il mese di 
+stimato tramite i dati sugli ingressi in area C, cali durante il mese di 
 Agosto a Milano. 
 A supporto dell'ipotesi iniziale, nella figura sinistra \ref{fig:incidenti-traffico-mese}, 
 è visibile un calo di accessi alla zona a traffico limitato, 
 durante i mesi di Giugno, Luglio e Agosto.
 
-Una volta ottenuta una stima del traffico, è possibile calcolare quali mesi 
+Una volta ottenuta una stima di questo fattore, è possibile calcolare quali mesi 
 siano più pericolosi dal punto di vista degli incidenti, 
-rapportando il numero di questi alla quantità di accessi in area C mensile.
+rapportando il numero di questi alla quantità di ingressi in area C mensili.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/area_c/rapporto_mese.png}
@@ -1810,25 +1811,26 @@ rapportando il numero di questi alla quantità di accessi in area C mensile.
 
 L'immagine \ref{fig:incidenti-traffico-mese} contiene due grafi, 
 il primo riguardante la frazione di traffico annuale che interessa ogni mese, 
-mentre il secondo raffigura il rapporto tra il numero di incidenti mensili, e il traffico 
-stimato\footnote{Si è utilizzato l'anno 2012 perché è il primo anno contenente 
+mentre il secondo raffigura il rapporto tra il numero di incidenti mensili, 
+e il carattere presente nel primo
+istogramma\footnote{Si è utilizzato l'anno 2012 perché è il primo anno contenente 
 tutti i dati completi, tutti gli altri anni hanno mesi o campi mancanti, 
 per esempio il file corrispondente all'anno 
 2013 non ha le misurazioni per tutto il mese di Dicembre}.
 
-Nel grafo di destra il valore massimo corrisponde al mese di Agosto, 
-che nonostante abbia minore volume di sinistri, 
+Nel grafo di destra il valore massimo corrisponde al mese di Agosto 
+che, nonostante abbia minore volume di sinistri, 
 una volta tenuto conto della quantità di traffico, risulta essere 
 il mese in cui si commettono più incidenti.
 
 \skipline
 A partire dal 2014, il campo \columnstyle{mese} è stato convertito nella 
 colonna \columnstyle{trimestre}. 
-Si potrebbe eseguire un calcolo analogo a quello precedente, per tentare di visualizzare lo 
-stesso fenomeno con campioni più ampi.
+Si potrebbe comunque eseguire un calcolo analogo a quello precedente, 
+per tentare di visualizzare lo stesso fenomeno con campioni più ampi. 
 
 La figura \ref{fig:milano-trimestri} mostra la quantità di incidenti per 
-trimestre per ogni anno a partire dal 2010 fino al 2018.
+trimestre a partire dal 2010 fino al 2018.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/trimestri.png}
@@ -1840,21 +1842,27 @@ Per prima cosa, va detto che è possibile osservare anche in questo grafo
 l'aumento di sinistri a partire dall'anno 2013, di cui si è parlato nel capitolo 
 riguardante l'utilizzo del cellulare alla guida.
 
-Anche nel caso dei trimestri, quello estivo ha un numero minore di incidenti. 
-Tuttavia, in questo caso, il volume del primo trimestre è comparabile 
+In secondo luogo, per quanto riguarda i trimestri, è chiaro che quello estivo abbia 
+un numero minore di incidenti. 
+Tuttavia, in questo caso, il volume del primo periodo è comparabile 
 con quello del terzo, 
-mentre durante il secondo e il quarto avvengono la maggior parte degli scontri.
+mentre durante il secondo e il quarto avvengono la maggior parte degli scontri. 
+
+La maggiore omogeneità nei risultati calcolati in questa heatmap, 
+è dovuta all'utilizzo di campioni più ampi, di novanta giorni e non di trenta, 
+che permettono di bilanciare i valori fuori dalla norma, 
+come quelli riscontrati per Agosto.
 
 \subsection{In località di mare gli incidenti aumentano in estate?}
-\todo{Da Riguardare}
+\todo{Da Leggere}
 
-Visto il grafo in figura \ref{fig:milano-mese}, una domanda che sorge spontanea, è se 
+Osservando il grafo in figura \ref{fig:milano-mese}, una domanda che sorge spontanea, è se 
 il numero basso di incidenti in Agosto corrisponda con la tendenza inversa in 
-altre località feriali. 
+località feriali. 
 
 In altre parole, visto che un gran numero di persone si spostano in automobile 
-verso altre regioni durante il mese di Agosto, la differenza di traffico è osservabile 
-nella quantità di incidenti?
+verso altre regioni durante il mese estivo, la differenza di traffico è osservabile 
+nella quantità di sinistri?
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/mesi_estivi.png}
@@ -1866,20 +1874,20 @@ Nella figura \ref{fig:mesi-estivi} sono elencate le province con maggiore incide
 in Agosto rispetto a tutto l'anno, nel 
 2011\footnote{Si è utilizzato l'anno 2011 perché mostra un comportamento diverso rispetto a 
 tutte le altre annate disponibili}. 
-In particolare, ad aumentare in volume sono le province di Brescia e Palermo.
+In particolare, ad aumentare in volume sono Brescia e Palermo.
 
-Il comportamento rappresentato nel grafico, tuttavia, è unico del 2011, in quanto, 
+Il comportamento rappresentato nel grafo, tuttavia, è unico del 2011, in quanto, 
 per gli altri anni di cui si dispone dei dati, 
 Milano e Roma hanno il primato di incidenti sia per l'anno, come ci si attende, che per il 
 mese di Agosto preso singolarmente.
 
 D'altra parte, se si pensasse di comparare più nel dettaglio alcune province, 
-meta di vacanze estive con Milano, ciò che ci si aspetterebbe è 
-di avere un incremento di incidenti in Luglio e 
+meta di vacanze estive, con Milano, ciò che ci si aspetterebbe è 
+di avere un incremento di sinistri in Luglio e 
 Agosto\footnote{Si è utilizzato l'anno più recente per i dati a disposizione, 
 a partire dal 2014 non sono più disponibili dati riguardanti il mese}.
 Per eseguire questo confronto sono state prese in considerazione le 
-località di Rimini e Palermo, per mostrare che alcune province, come la prima, 
+località di Rimini e Palermo, mostrando che alcune province, come la prima, 
 confermano l'ipotesi, mentre altre, 
 come la seconda, possono essere usate come controesempio.
 
@@ -1890,20 +1898,21 @@ come la seconda, possono essere usate come controesempio.
 \end{figure}
 
 Il confronto tra Milano e Rimini è raffigurato nell'immagine sinistra della 
-figura \ref{fig:milano-rimini} e, nonostante a Milano avvengano un numero maggiore di 
+figura \ref{fig:milano-rimini} e, nonostante nella prima zona 
+avvengano un numero maggiore di 
 incidenti rispetto alla provincia Emiliana, nei mesi estivi, 
 la quantità di sinistri a Rimini è superiore alla media annuale, 
-mentre per Milano è inferiore. 
+mentre nel capoluogo lombardo è inferiore. 
 Inoltre, a Milano si ha una tendenza di diminuzione in Agosto e nei 
 mesi invernali, mentre a Rimini si ha incremento nei mesi estivi.
 
-Nella provincia di Palermo, visibile nel grafo destro in figura \ref{fig:milano-rimini}, 
+In provincia di Palermo, visibile nel grafo destro in figura \ref{fig:milano-rimini}, 
 d'altra parte, non risulta che nessun mese abbia un numero di incidenti 
-particolarmente più alto della media, anzi, sembra imitare il comportamento di 
-Milano, con Agosto e i mesi invernali più bassi della media.
+particolarmente più alto della media, anzi, questa sembra imitare il comportamento di 
+Milano, con Agosto e i mesi invernali più bassi.
 
-Nella seguente tabella, sono indicate le percentuali di aumento per anno degli 
-incidenti a Rimini.
+Nella seguente tabella, sono indicate le percentuali di aumento per anno dei sinistri 
+a Rimini.
 L'incremento più o meno costante in ogni anno, conferma questo fenomeno come 
 annuale, e non come un outlier dovuto a un 2011 fuori dalla norma.
 
@@ -1923,13 +1932,12 @@ annuale, e non come un outlier dovuto a un 2011 fuori dalla norma.
     \end{tabular}
 \end{center}
 
-Una domanda che sorge spontanea, è se i calcoli realizzati valgano anche nelle regioni 
-del nord Italia, e se questi permettano di individuare un aumenti di sinistri in 
+Una domanda che sorge spontanea, è se i calcoli realizzati valgano anche nelle altre 
+regioni del nord Italia, e se questi permettano di individuare un aumento di sinistri in 
 inverno, a segnalare la stagione sciistica.
-Nel grafico raffigurante gli incidenti per mese della Valle d'Aosta, 
-in figura \ref{fig:aosta}, si notano crescite nell'incidentalità 
-nei mesi di Giugno e Settembre, tuttavia, nei mesi invernali, il numero di scontri in 
-automobile è generalmente più basso rispetto alla media.
+Nel grafico  in figura \ref{fig:aosta}, si notano crescite nel numero di incidenti 
+in Valle d'Aosta, nei mesi di Giugno e Settembre, tuttavia, nei periodi invernali, 
+la quantità di sinistri è generalmente più basso rispetto alla media.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/aosta_mese.png}
@@ -1957,8 +1965,8 @@ rispetto alla media annuale, per ogni anno disponibile.
     \end{tabular}
 \end{center}
 
-Il comportamento degli incidenti in Valle d'Aosta mostrato, oltre che in tabella, 
-anche in figura \ref{fig:aosta-rimini-milano-trimestre} è molto inconsistente, 
+Il comportamento mostrato in Valle d'Aosta, sia nella tabella, 
+che nella figura \ref{fig:aosta-rimini-milano-trimestre}, è molto inconsistente, 
 soprattutto in Agosto.
 
 Va specificato che la taglia del campione con cui si sta lavorando, per questa provincia, 
@@ -1986,8 +1994,8 @@ tutte le annate.
 In particolare, un basso numero di sinistri 
 durante il primo trimestre, e un incremento durante il terzo.
 D'altra parte, a Milano, si ha la tendenza opposta, con maggior quantità di 
-incidenti nel secondo gruppo, e un abbassamento durante il primo 
-e terzo trimestre, soprattutto con l'aumento della taglia del campione, 
+incidenti nel secondo periodo, e un abbassamento durante il primo 
+e terzo, soprattutto con l'aumento della taglia del campione, 
 a partire dal 2015.
 
 Ciò che è possibile dedurre, è che a Milano il numero di sinistri decresce 
@@ -1996,7 +2004,7 @@ altre località raffigurate, avviene il comportamento opposta poiché
 queste sono spesso mete feriali.
 
 Sarebbe interessante capire se esistano destinazioni di vacanza preferite, 
-indipendentemente dall'anno, o se queste cambino. 
+indipendentemente dall'anno, o se queste cambino di stagione in stagione. 
 Si tenterà di rispondere a queste domande nei capitoli successivi.
 
 %\clearpage
