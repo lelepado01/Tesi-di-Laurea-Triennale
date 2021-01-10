@@ -433,7 +433,7 @@ Tra questi si è utilizzata la tipologia contenente orari e data dell'accesso.
     \indent day: giorno dell'accesso in area C,\\
     \indent hour: ora dell'accesso in area C,\\
     \indent totale: numero di accessi nella riga,\\
-    \indent areac: booleano che indica se l'area C sia attiva o meno\\
+    \indent areac\footnote{booleano che indica se l'area C sia attiva o meno}\\
 )}
 
 Oltre ai dati riguardo agli accessi all'area C, si è fatto uso anche di una mappa 
@@ -456,7 +456,7 @@ oltre a informazioni sulla superficie e il perimetro delle aree.
     \indent MUNICIPIO: id della zona,\\
     \indent AREA : della zona,\\
     \indent PERIMETRO: della zona,\\
-    \indent geometry: insieme di punti che formano il poligono\\
+    \indent geometry\footnote{insieme di punti che formano i poligoni rappresentati nel file}\\
 )}
 
 Queste informazioni sono utili a determinare, a grandi linee, quali sono le zone 
@@ -523,7 +523,7 @@ la lunghezza e il tipo di mezzo.
     \indent verso, nome,\\
     \indent tipo\_perc: Canonico o Barrato,\\
     \indent lung\_km, num\_ferm,\\
-    \indent geometry: insieme di linee che formano i percorsi\\
+    \indent geometry\footnote{insieme di linee che formano i percorsi contenuti nel file}\\
 )}
 
 Dallo stesso sito proviene anche il dataset riguardante gli autobus turistici, che 
@@ -740,7 +740,9 @@ normalmente ha precisione a sette cifre decimali, a cinque e numeri dopo la virg
 Contando i punti uguali, è stato possibile aggregare sinistri che avvengono in zone 
 vicine. 
 Questi dati elaborati sono poi stati memorizzati nel file reperibile al 
-percorso \filenamestyle{dataset/incidenti/incidenti\_round.csv}. 
+percorso:\\ 
+\filenamestyle{dataset/incidenti/incidenti\_round.csv} 
+\todo{lelepado: questo filepath quando lo visualizzo in pdf esce dai margini, se lo tengo in  linea come testo}
 
 Sarebbe interessante sapere se esistano zone con maggiore concentrazione 
 di incidenti rispetto alla media, e ottenere un indice numerico 
@@ -755,6 +757,7 @@ osservare che nel centro storico si ha la più alta concentrazione di sinistri.
     \caption{Incidenti a Milano per municipio}
     \label{fig:heatmap-municipi}
 \end{figure}
+\todo{Nell'ultima call mi sono dimenticato di dirle che ho modificato questa mappa, prima era calcolata sovrapponendo i punti e facendo uso della trasparenza, adesso ho invece approssimato le coordinate di ogni punto per avere effetto bubble chart}
 
 Non tutte le zone hanno la stessa superficie, e ovviamente sezioni più ampie hanno un maggior 
 numero di strade. Avendo a disposizione l'area dei vari municipi, 
@@ -807,6 +810,7 @@ for point in incidenti['geometry']:
 area_loreto = loreto.area * data['AREA'].iloc[0] / geometry.Polygon(data['geometry'].iloc[0]).area
 area_loreto_inc = loreto_incidenti * 1000000 / area_loreto
 \end{code}
+\todo{lelepado: che lei sappia, non c'è un modo per aumentare il margine dello sfondo grigio dietro il codice? Ho cercato ma tutti i comandi non  modificano il limite del colore, che rimane sempre 'attaccato' al codice}
 
 Il numero di incidenti per chilometro che risultano, nell'area considerata in figura 
 \ref{fig:zona-loreto}, sono $231.06$. 
@@ -1554,6 +1558,7 @@ Per quanto riguarda, le fasce orarie \quotestyle{di punta} di cui si
 è parlato precedentemente, 
 sono stati presi in considerazione, per la mattina, gli orari dalle 7:00 alle 10:00, 
 e per il pomeriggio, dalle 17:00 alle 19:00. 
+\todo{lelepado: nel link che mi ha mandato non ho visto nulla per gli orari, vanno bene così o devo usare il punto, come 7.00?}
 
 L'incremento durante la fascia oraria pomeridiana, presente nella figura 
 \ref{fig:week-weekend}, mostra un aumento della percentuale di incidenti 
@@ -2062,6 +2067,7 @@ sono riportate nella figura \ref{fig:rapporto-tipologie}:
     \caption{Categorie più frequenti di incidente, divise per anno}
     \label{fig:rapporto-tipologie}
 \end{figure}
+\todo{lelepado: se il codice che ho usato per questo tipo di heatmap è stato in parte preso dalla documentazione/esempi, devo citarlo?}
 
 Per tutte le annate disponibili, le prime due categorie di incidenti rimangono sempre 
 le stesse, cioè \columnstyle{Scontro frontale-laterale} e \columnstyle{tamponamento}. 
@@ -2263,8 +2269,9 @@ una maggiore percentuale di scontri con più di un ferito.
 
 Il dataset Istat fornisce varie informazioni riguardanti i pedoni coinvolti in un 
 incidente, tramite le colonne \columnstyle{pedone\_morto\_sesso}, 
-\columnstyle{pedone\_ferito\_sesso},\columnstyle{pedone\_morto\_età} e 
+\columnstyle{pedone\_ferito\_sesso}, \columnstyle{pedone\_morto\_età} e 
 \columnstyle{pedone\_ferito\_età}, ripetute quattro volte, una per ogni persona interessata. 
+\todo{controllare se i label escano dal margine}
 
 Rimanendo sul tema dei capitoli precedenti, 
 si potrebbe controllare l'esistenza di tipologie di incrocio che 
@@ -2430,7 +2437,7 @@ dell'insieme \columnstyle{15-19} per cinque e moltiplicare per due.
 Il risultato ottenuto va aggiunto alla fascia \columnstyle{18-29}. 
 
 \begin{code}
-correct_order =         ['0-5  ', '6-9  ', '10-14', '15-17', '18-29', '30-44', '45-54', '55-64','65+  ']
+correct_order = ['0-5  ', '6-9  ', '10-14', '15-17', '18-29', '30-44', '45-54', '55-64','65+  ']
 perc_fascia = np.array( [3.9, 4.5, 4.8, 3.1, 12.1, 19, 18.2, 13.7, 19.3]) / 100
 
 pedoni_feriti_vals = pedoni_feriti.values / perc_fascia
@@ -2614,7 +2621,7 @@ e quella dei patentati per regione.
     \def\arraystretch{1.5}%  
     \begin{tabular}{ |c|c|c| } 
     \hline
-    Zona & Media Incidenti annuali & Patentati (in Milioni) \\ 
+    Zona & Media Incidenti & Patentati (in Milioni) \\ 
     \hline
     \rowcolor{TableGray}
     Nord    &   2470 &   2.28 \\ 
@@ -3357,6 +3364,7 @@ alcuno standard, per quanto riguarda la nomenclatura delle colonne.
 Le tabelle provenienti dal sito Istat, per esempio, nel 2011, hanno un campo denominato 
 \columnstyle{intersezione\_o\_non\_interse1}, mentre nel 2018, la stessa informazione ha 
 nome \columnstyle{intersezione\_o\_non\_interse3}. 
+\todo{lelepado: questi due label su pdf escono dai margini}
 
 A cambiare non sono soltanto i nomi delle colonne negli anni, 
 ma in alcuni casi, nei label, viene usato un solo \quotestyle{underscore} a 

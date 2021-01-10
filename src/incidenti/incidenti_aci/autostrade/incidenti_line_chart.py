@@ -44,7 +44,7 @@ strade = gp.GeoDataFrame(inc, geometry=strade['geometry'])
 ax = strade.plot(figsize=(11,9), column= 0, cmap='hot_r' ,legend=True, linewidth=1.8)
 plt.ylim((5.68 * pow(10, 6), 5.72 * pow(10,6)))
 plt.xlim((pow(10, 6), 1.04 * pow(10,6)))
-plt.xlabel("Incidenti nelle principali strade a Milano (2018)")
+plt.axis('off')
 cx.add_basemap(ax=ax)
 plt.show()
 
