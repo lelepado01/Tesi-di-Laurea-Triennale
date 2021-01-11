@@ -2,7 +2,6 @@
 import matplotlib
 import numpy as np
 import matplotlib.pyplot as plt
-import pandas as pd
 
 def heatmap(data, row_labels, col_labels, ax=None, xticks_rotated = False,
             cbar_kw={}, cbarlabel="", cbar_visible=True, **kwargs):

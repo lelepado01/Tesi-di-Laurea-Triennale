@@ -1,7 +1,11 @@
 
 import pandas as pd
 
-def sum_columns(data, normalize = False, name=None) -> pd.Series: 
+# Returns a series result of the sum of all the columns in the given dataframe 
+# if normalize is True, the returned values will all be between 0 and 1
+# if name != None, the column with all the sums will be named as the given value,
+# else the column will we called 'val'
+def sum_columns(data : pd.DataFrame, normalize = False, name=None) -> pd.Series: 
     res = {}
     if data is pd.DataFrame: 
         for col in data.columns: 
@@ -19,6 +23,8 @@ def sum_columns(data, normalize = False, name=None) -> pd.Series:
 
     return res
 
+# the function returns a dataframe where all the values in the column named as column_to_sum 
+# are summed according to the selected field
 def sum_field_by_column(data : pd.DataFrame, select_field : str, column_to_sum : str) -> pd.DataFrame: 
     res = pd.DataFrame()
     for field in data[select_field].unique(): 
@@ -28,23 +34,8 @@ def sum_field_by_column(data : pd.DataFrame, select_field : str, column_to_sum :
     
     return res
 
-def two_cols_unique(data) -> list: 
-    res = []
-
-    field1 = data.columns[0]
-    field2 = data.columns[1]
-
-    for d1, d2 in zip(data[field1], data[field2]):
-        if not (d1, d2) in res: 
-            res.append((d1, d2))
-
-    return res
-
-
-def filter_with(data : pd.DataFrame, field, comb : str) -> pd.DataFrame: 
-    return data[data[field] == comb]
-
-
+# the function returns a dataframe where all the values in the column named as column_to_sum 
+# are summed according to the two selected fields, couple-wise
 def sum_field_by_two_columns(data : pd.DataFrame, field1 : str, field2 : str, field_to_sum : str) -> pd.DataFrame: 
     res = pd.DataFrame()
 
@@ -59,6 +50,26 @@ def sum_field_by_two_columns(data : pd.DataFrame, field1 : str, field2 : str, fi
     return res
 
 
+# The function converts the first two columns of a dataset in a list of couples 
+# without any repetition
+def two_cols_unique(data) -> list: 
+    res = []
+    field1 = data.columns[0]
+    field2 = data.columns[1]
+
+    for d1, d2 in zip(data[field1], data[field2]):
+        if not (d1, d2) in res: 
+            res.append((d1, d2))
+
+    return res
+
+
+def filter_with(data : pd.DataFrame, field, comb : str) -> pd.DataFrame: 
+    return data[data[field] == comb]
+
+
+# The function returns a boolean pd.Series used to filter only the fields 
+# which satisfy a property
 def filter_by_value(data : pd.Series, value : str, inverted = False) -> pd.Series:
     res = [] 
     for d in data: 
@@ -69,3 +80,19 @@ def filter_by_value(data : pd.Series, value : str, inverted = False) -> pd.Serie
 
     return pd.Series(res)
 
+# The function returns a pd.Dataframe where the column field_to_sum is summed according to 
+# the selected field
+def get_sum_of_fields(data : pd.DataFrame, select_field : str, field_to_sum : str) -> pd.Series: 
+    res = {}
+    index = 0
+    for reg in data[select_field].unique():
+        res[index] = [reg, 0]
+        index += 1
+
+    index = 0
+    for reg in data[select_field].unique():
+        for row in data[data[select_field] == reg][field_to_sum]:
+            res[index] = [res[index][0], res[index][1] + row]
+        index += 1
+
+    return pd.DataFrame(res, index=[select_field, field_to_sum]).transpose()

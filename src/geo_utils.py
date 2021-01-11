@@ -88,7 +88,7 @@ def convert_to_Point(df : gp.GeoDataFrame, base : int) -> list:
 
     return res
 
-
+# Small class used for the following functions
 class Point: 
     def __init__(self, x, y): 
         self.pos_x : float = x
@@ -109,13 +109,15 @@ class Point:
     def print(self): 
         print("POINT(" + str(self.pos_x) + ", " + str(self.pos_y) + ")")
 
+# The function returns, from the given list of points, eighter the first (x) column
+# or the second (y) 
 def get_coords_column(point_list : list, col : int) -> list:
     res = []
     for point in point_list: 
         res.append(point.get(col))
     return res 
     
-
+# The function prints a map using the given bounds
 def print_zoomed_graph(data : gp.GeoDataFrame, bounds : list, label=""): 
     ax = data.plot(figsize=(11,9), alpha=0.5)
     ax.set_title(label)

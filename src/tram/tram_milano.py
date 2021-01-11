@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 import contextily as cx
 
 path = "dataset/pave/tram/L010204.Shp"
-
 data = gp.read_file(path).to_crs(epsg=3857)
 
 ax = data.plot()

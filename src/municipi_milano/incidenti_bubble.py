@@ -11,9 +11,7 @@ ax = incidenti.plot(
     figsize=(9,7),
     alpha=0.8,
     column='field_3',
-    markersize=incidenti['field_3'].astype(int) **1.8,
-    cmap='viridis'
-    )
+    markersize=incidenti['field_3'] **1.8)
 
 cx.add_basemap(ax = ax)
 plt.axis('off')
