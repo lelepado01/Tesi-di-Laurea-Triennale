@@ -11,8 +11,6 @@ import contextily as cx
 
 incidenti = gp.read_file("dataset/incidenti/inc_strad_milano_2016.geojson").to_crs(epsg=3857)
 
-# print(data.columns)
-
 # data = data[data['ID_ZRIL'] == 'MI_2012_0922']
 
 # ax = data.plot(figsize=(11,9))

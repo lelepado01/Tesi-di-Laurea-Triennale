@@ -17,7 +17,7 @@ patches = [
     mpatches.Patch(color=color_ls[1], label='Installazioni ignote')
     ]
 
-
+# Per ottenere delle mappe di sfondo migliori rispetto a quella di default
 providers = {}
 def get_providers(provider):
     if "url" in provider:
@@ -25,7 +25,6 @@ def get_providers(provider):
     else:
         for prov in provider.values():
             get_providers(prov)
-
 get_providers(cx.providers)
 
 layer_i = autovelox_tutti.plot(color=color_ls[1],markersize=16, figsize=(7,5))
@@ -34,3 +33,6 @@ plt.legend(handles=patches)
 plt.axis('off')
 cx.add_basemap(ax=layer_a, source=providers['OpenStreetMap.Mapnik'])
 plt.show()
+
+# Le coordinate degli autovelox trovati, che sono stati installati nel 2014, 
+# sono state salvate nel file dal path dataset/autovelox/autovelox_2014.csv

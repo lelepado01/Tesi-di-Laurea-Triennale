@@ -28,8 +28,8 @@ for month in range(1,13):
 inc = inc.sort_index()
 meteo_per_mese = meteo_per_mese.sort_index()
 
-ax = plt.subplot(311)
-ax.bar(inc.index, inc, color='#86ba5d', width=0.9)
+plt.subplot(311)
+plt.bar(inc.index, inc, color='#86ba5d', width=0.9)
 plt.ylabel("Incidenti per mese (2011)")
 plt.xticks(range(1,13))
 

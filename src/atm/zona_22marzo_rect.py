@@ -22,6 +22,7 @@ def get_providers(provider):
         for prov in provider.values():
             get_providers(prov)
 
+# Per ottenere delle mappe di background migliori rispetto a quella di default
 get_providers(cx.providers)
 
 ax1 = bianca.plot(color='blue', alpha=0.5, figsize=(11,9))

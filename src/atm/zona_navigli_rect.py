@@ -14,7 +14,7 @@ data = gp.read_file("dataset/zone_milano/zone.geojson").to_crs(epsg=3857)
 autobus = data[data['name'] == "Navigli Autobus"]
 street = data[data['name'] == "Navigli Incidenti"]
 
-
+# Per ottenere delle mappe di background migliori rispetto a quella di default
 providers = {}
 def get_providers(provider):
     if "url" in provider:

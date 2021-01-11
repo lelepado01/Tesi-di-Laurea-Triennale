@@ -1,43 +1,30 @@
 
 import pandas as pd
 import matplotlib.pyplot as plt
-import numpy as np
+
+mesi = ["Gennaio","Febbraio","Marzo","Aprile","Maggio","Giugno","Luglio","Agosto","Settembre","Ottobre","Novembre","Dicembre"]
 
 path = "dataset/area_c/orari_2012.csv"
-
 data = pd.read_csv(path, sep=';')
 
-df = pd.Series()
+ingressi_area_c = pd.Series()
 for f in data['month'].unique():
-    df = df.append(
+    ingressi_area_c = ingressi_area_c.append(
         pd.Series(data[data['month'] == f]['totale'].sum()), 
-        ignore_index=True
-        )
+        ignore_index=True)
 
-mesi = [
-    'Gennaio',
-    'Febbraio',
-    'Marzo',
-    'Aprile',
-    'Maggio',
-    'Giugno',
-    'Luglio',
-    'Agosto',
-    'Settembre',
-    'Ottobre',
-    'Novembre',
-    'Dicembre'
-]
 
 incidenti = pd.read_csv("dataset/incidenti/istat/incidenti_2012.txt", sep='\t')
 mesi_incidenti = incidenti['mese'].value_counts().sort_index()
 
-df.index = range(1,13)
-perc_traffico = df / df.sum()
-rapp = mesi_incidenti / df
+# Normalizzazione di accessi a area c per orario tra 0 e 1
+ingressi_area_c.index = range(1,13)
+perc_traffico = ingressi_area_c / ingressi_area_c.sum()
 
-mesi = ["Gennaio","Febbraio","Marzo","Aprile","Maggio","Giugno","Luglio","Agosto","Settembre","Ottobre","Novembre","Dicembre"]
+# Calcolo rapporto tra incidenti e traffico
+rapp = mesi_incidenti / ingressi_area_c
 
+# Colorazione del grafico per avere colonne più accentuate
 color_ls = ['#dbad85']*12
 color_ls[5:7] = ['#dd8d46']*3
 

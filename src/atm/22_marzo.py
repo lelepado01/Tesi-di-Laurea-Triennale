@@ -1,14 +1,13 @@
 
-
 import geopandas as gp
 import sys
 sys.path.append("src/")
 import geo_utils
 
 path = "dataset/atm/atm_percorsi.geojson"
-
 percorsi_atm = gp.read_file(path).to_crs(epsg=3857)
 
+# Limiti, in coordinate della mappa
 scale = pow(10, 6)
 UPPER_BOUND = 5.708 * scale
 LOWER_BOUND = 5.683 * scale
@@ -20,9 +19,9 @@ percorsi_ridotti = percorsi_atm[geo_utils.remove_lines_out_of_range(
     [UPPER_BOUND, LOWER_BOUND, LEFT_BOUND, RIGHT_BOUND]
     )]
 
+
 path_incidenti = "dataset/incidenti/inc_strad_milano_2016.geojson"
 incidenti = gp.read_file(path_incidenti).to_crs(epsg=3857)
-
 
 import map_utils
 

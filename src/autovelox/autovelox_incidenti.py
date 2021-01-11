@@ -13,7 +13,8 @@ autovelox_2014 = gp.GeoDataFrame(geometry=gp.points_from_xy(
 
 incidenti = gp.read_file("dataset/incidenti/inc_strad_milano_2016.geojson").to_crs(epsg=3857)
 
-MAX_DIST = 1500 # -> ~= 1 Km
+# La misura equivale a circa un chilometro
+MAX_DIST = 1500 
 
 df = {}
 for i in autovelox_2014.index: 

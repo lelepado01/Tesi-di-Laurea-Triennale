@@ -11,7 +11,7 @@ incidenti = gp.read_file(path_incidenti).to_crs(epsg=3857)
 
 scale = 10**6
 
-
+# Per avere una mappa di sfondo migliore rispetto a quella di default
 providers = {}
 def get_providers(provider):
     if "url" in provider:

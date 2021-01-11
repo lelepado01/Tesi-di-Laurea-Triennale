@@ -28,6 +28,6 @@ for point in incidenti['geometry']:
         inc_s += 1
 
 print("Incidenti su linea autobus: " + str(inc_s * scale / premuda_rect.area))
-# = 93.96
+# = 93.96 incidenti per km^2
 print("Incidenti su strada senza linea: "+ str(inc_a * scale / bianca_rect.area))
-# = 254.31
+# = 254.31 incidenti al km^2
