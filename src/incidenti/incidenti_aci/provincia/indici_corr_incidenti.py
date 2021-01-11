@@ -1,4 +1,6 @@
 
+#TODO: da correggere, non funziona
+
 import pandas as pd
 
 data = pd.read_csv("dataset/incidenti/aci/autostrade/comuni_2018.csv")

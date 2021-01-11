@@ -1,7 +1,11 @@
 
 import pandas as pd
 import matplotlib.pyplot as plt
+import sys
+sys.path.append("src")
+import aci_utils
 
+# L'ordine utilizzato raggruppa le regioni del nord, centro e sud
 order = [
     'Piemonte', 'Valle d\'Aosta', 'Liguria', 'Lombardia', 
     'Trentino-Alto Adige', 'Veneto', 'Friuli-Venezia Giulia', 'Emilia Romagna', 
@@ -10,28 +14,12 @@ order = [
     'Sicilia', 'Sardegna'
 ]
 
-def get_sum_of_fields(data : pd.DataFrame, select_field : str, field_to_sum : str) -> pd.Series: 
-    res = {}
-    index = 0
-    for reg in data[select_field].unique():
-        res[index] = [reg, 0]
-        index += 1
-
-    index = 0
-    for reg in data[select_field].unique():
-        for row in data[data[select_field] == reg][field_to_sum]:
-            res[index] = [res[index][0], res[index][1] + row]
-        index += 1
-
-    return pd.DataFrame(res, index=[select_field, field_to_sum]).transpose()
-
-
 data = pd.read_csv('dataset/incidenti/aci/autostrade/mesi_2018.csv') 
 data = data[data['TOTALE'] != '0,0'].astype({'TOTALE': int})
 
 estate = pd.Series() 
 for mese in ['Giugno', 'Luglio', 'Agosto']: 
-    e = get_sum_of_fields(data, 'REGIONE', mese)
+    e = aci_utils.get_sum_of_fields(data, 'REGIONE', mese)
     e.index = e['REGIONE']
     e.reindex(order)
     e = e[mese]
@@ -40,10 +28,9 @@ for mese in ['Giugno', 'Luglio', 'Agosto']:
     else: 
         estate += e
 
-
 inverno = pd.Series()
 for mese in ['Dicembre', 'Gennaio', 'Febbraio']: 
-    e = get_sum_of_fields(data, 'REGIONE', mese)
+    e = aci_utils.get_sum_of_fields(data, 'REGIONE', mese)
     e.index = e['REGIONE']
     e.reindex(order)
     e = e[mese]

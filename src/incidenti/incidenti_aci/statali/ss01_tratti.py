@@ -4,19 +4,16 @@ import matplotlib.pyplot as plt
 
 data = pd.read_csv("dataset/incidenti/aci/autostrade/localizzazione_2018.csv")
 
-ss1 = data[data['CODICE'] == 'SS00101']
+data = data[data['CODICE'] == 'SS00101']
 
-def sum_fields(dataset : pd.DataFrame, select_field): 
-    df = {}
-    for d in dataset[select_field].unique(): 
-        df[d] = [
-            dataset[dataset[select_field] == d]['INC'].sum(), 
-            dataset[dataset[select_field] == d]['FER'].sum()
-            ]
+df = {}
+for d in data['PROVINCIA'].unique(): 
+    df[d] = [
+        data[data['PROVINCIA'] == d]['INC'].sum(), 
+        data[data['PROVINCIA'] == d]['FER'].sum()
+        ]
 
-    return pd.DataFrame(df, index=['Incidenti', 'Feriti'])
-
-ss1 = sum_fields(ss1, 'PROVINCIA').transpose()
+ss1 = pd.DataFrame(df, index=['Incidenti', 'Feriti']).transpose()
 
 ss1.plot.bar(width=0.9, color=['#4ea051', '#514ea0'])
 plt.ylabel("Province attraversate dalla SS01")

@@ -3,7 +3,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 data = pd.read_csv("dataset/incidenti/aci/autostrade/comuni_2018.csv")
-
 fields = ['INC','FER']
 
 df = pd.DataFrame()

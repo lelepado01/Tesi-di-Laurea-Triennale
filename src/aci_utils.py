@@ -3,15 +3,10 @@ import pandas as pd
 
 # Returns a series result of the sum of all the columns in the given dataframe 
 # if normalize is True, the returned values will all be between 0 and 1
-# if name != None, the column with all the sums will be named as the given value,
-# else the column will we called 'val'
 def sum_columns(data : pd.DataFrame, normalize = False, name=None) -> pd.Series: 
     res = {}
-    if data is pd.DataFrame: 
-        for col in data.columns: 
-            res[col] = sum(data[col])
-    else: 
-        res['val'] = data.sum()
+    for col in data.columns: 
+        res[col] = sum(data[col])
 
     if name is None:
         res = pd.Series(res).transpose()
@@ -38,7 +33,6 @@ def sum_field_by_column(data : pd.DataFrame, select_field : str, column_to_sum :
 # are summed according to the two selected fields, couple-wise
 def sum_field_by_two_columns(data : pd.DataFrame, field1 : str, field2 : str, field_to_sum : str) -> pd.DataFrame: 
     res = pd.DataFrame()
-
     for combination in two_cols_unique(data[[field1, field2]]): 
         filtered_data = filter_with(filter_with(data, field1, combination[0]), field2, combination[1])
         d = {
@@ -48,6 +42,18 @@ def sum_field_by_two_columns(data : pd.DataFrame, field1 : str, field2 : str, fi
         res = res.append(d, ignore_index=True)
 
     return res
+
+# The function returns a dataframe where two selected columns are summed according to a 
+# chosen field
+def sum_two_fields_by_column(data, select, field_to_sum1, field_to_sum2): 
+    dic = {}
+    for f in data[select].unique(): 
+        dic[f] = [
+            data[data[select] == f][field_to_sum1].sum(), 
+            data[data[select] == f][field_to_sum2].sum()
+            ]
+
+    return pd.DataFrame(dic).transpose()
 
 
 # The function converts the first two columns of a dataset in a list of couples 

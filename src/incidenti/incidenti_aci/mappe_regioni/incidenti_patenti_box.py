@@ -1,36 +1,25 @@
 
 import pandas as pd
 import matplotlib.pyplot as plt
+import sys
+sys.path.append("src")
+import aci_utils
 
-def get_sum_of_fields(data : pd.DataFrame, select_field : str, field_to_sum : str) -> pd.Series: 
-    res = {}
-    index = 0
-    for reg in data[select_field].unique():
-        res[index] = [reg, 0]
-        index += 1
-
-    index = 0
-    for reg in data[select_field].unique():
-        for row in data[data[select_field] == reg][field_to_sum]:
-            res[index] = [res[index][0], res[index][1] + row]
-        index += 1
-
-    return pd.DataFrame(res, index=[select_field, field_to_sum]).transpose()
-
-patenti = pd.read_csv("dataset/patenti/patenti_mit.csv")
-incidenti = pd.read_csv("dataset/incidenti/aci/autostrade/mesi_2018.csv")
-
-incidenti = get_sum_of_fields(incidenti, 'REGIONE', 'TOTALE')
-
-incidenti.index = incidenti['REGIONE']
-patenti.index = patenti['REGIONE']
-incidenti = incidenti.sort_index()
-
+# Divisione delle regioni tra nord sud e centro
 regioni_nord = ['Piemonte', 'Valle d\'Aosta', 'Liguria', 'Lombardia', 
     'Trentino-Alto Adige', 'Veneto', 'Friuli-Venezia Giulia', 'Emilia Romagna']
 regioni_centro = ['Toscana', 'Umbria', 'Marche', 'Lazio']
 regioni_sud = ['Abruzzo', 'Molise', 'Campania', 'Puglia', 'Basilicata', 'Calabria', 
     'Sicilia', 'Sardegna']
+
+patenti = pd.read_csv("dataset/patenti/patenti_mit.csv")
+incidenti = pd.read_csv("dataset/incidenti/aci/autostrade/mesi_2018.csv")
+
+incidenti = aci_utils.get_sum_of_fields(incidenti, 'REGIONE', 'TOTALE')
+
+incidenti.index = incidenti['REGIONE']
+patenti.index = patenti['REGIONE']
+incidenti = incidenti.sort_index()
 
 nord = incidenti.loc[regioni_nord]
 centro = incidenti.loc[regioni_centro]

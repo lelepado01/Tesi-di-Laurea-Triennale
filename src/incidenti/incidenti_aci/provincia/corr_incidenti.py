@@ -1,21 +1,14 @@
 
 import pandas as pd
 import matplotlib.pyplot as plt
+import sys
+sys.path.append("src")
+import aci_utils
 
 data = pd.read_csv("dataset/incidenti/aci/autostrade/comuni_2018.csv")
 fields = ['INC', 'FER']
 
-def sum_field_by_column(data, select, field_to_sum1, field_to_sum2): 
-    dic = {}
-    for f in data[select].unique(): 
-        dic[f] = [
-            data[data[select] == f][field_to_sum1].sum(), 
-            data[data[select] == f][field_to_sum2].sum()
-            ]
-
-    return pd.DataFrame(dic)
-
-provincia = sum_field_by_column(data, 'PROVINCIA', fields[0], fields[1]).transpose()
+provincia = aci_utils.sum_two_fields_by_column(data, 'PROVINCIA', fields[0], fields[1])
 
 provincia = provincia.sort_values(by=0).head(20).sort_index()
 plt.fill_between(provincia.index, provincia[1],label='Feriti', color='#71ceaf')

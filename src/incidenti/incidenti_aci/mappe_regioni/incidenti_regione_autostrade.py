@@ -2,21 +2,9 @@
 import geopandas as gp
 import pandas as pd
 import matplotlib.pyplot as plt
-
-def get_sum_of_fields(data : pd.DataFrame, select_field : str, field_to_sum : str) -> pd.Series: 
-    res = {}
-    index = 0
-    for reg in data[select_field].unique():
-        res[index] = [reg, 0]
-        index += 1
-
-    index = 0
-    for reg in data[select_field].unique():
-        for row in data[data[select_field] == reg][field_to_sum]:
-            res[index] = [res[index][0], res[index][1] + row]
-        index += 1
-
-    return pd.DataFrame(res, index=[select_field, field_to_sum]).transpose()
+import sys
+sys.path.append("src")
+import aci_utils
 
 field_incidenti = 'TOTALE'
 
@@ -26,7 +14,7 @@ regioni = gp.read_file(path)
 data = pd.read_csv('dataset/incidenti/aci/autostrade/mesi_2018.csv') 
 data = data[data['TOTALE'] != '0,0'].astype({'TOTALE': int})
 
-incidenti = get_sum_of_fields(data, 'REGIONE', field_incidenti)
+incidenti = aci_utils.get_sum_of_fields(data, 'REGIONE', field_incidenti)
 
 incidenti.index = incidenti['REGIONE']
 regioni.index = regioni['reg_name']

@@ -13,6 +13,7 @@ for k, inc in zip(data['NOME STRADA'], data['INC']):
 
 incidenti = pd.Series(df.values(), index=df.keys()).sort_values().tail(10)
 
+# Colorazione del grafico
 color_ls = ['#89c1a8'] * 10
 color_ls[9] = '#5daf8a'
 color_ls[7] = '#5daf8a'

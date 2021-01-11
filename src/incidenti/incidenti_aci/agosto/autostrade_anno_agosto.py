@@ -7,8 +7,8 @@ import aci_utils
 
 path = "dataset/incidenti/aci/autostrade/mesi_"
 
+# Per ogni annata sono calcolate le strade con più incidenti
 agosto = pd.DataFrame()
-
 for year in range(2011, 2019):
     print("Processing: " + str(year))
     data = pd.read_csv(path + str(year) + ".csv")
@@ -22,8 +22,10 @@ for year in range(2011, 2019):
 
     agosto = agosto.append(agosto_temp)
 
+# Le strade sono ordinate in ordine ascendente e sono prese le ultime 15 (con più incidenti)
 agosto = agosto.sort_values(by='Value', ascending=True).tail(15)
 
+# Colorazione del grafo 'a mano'
 color_ls = ['#79ceb6'] * 15
 color_ls[11] = '#7991ce'
 color_ls[7] = '#7991ce'
