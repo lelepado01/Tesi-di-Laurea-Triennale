@@ -10,8 +10,11 @@ path = "dataset/incidenti/istat/incidenti_"
 
 tipo_incidenti = ['Frontale-laterale', 'Tamponamento', 'Investimento pedoni', 'Scontro laterale']
 
+# Per ogni anno, somma incidenti per natura dell'incidente
 inc_per_anno = pd.DataFrame()
 for year in range(2010, 2019): 
+    print("Processing: " + str(year))
+    # inconsistenze tra dataset istat
     if year == 2017: 
         data = pd.read_csv(path + str(year) + ".txt", sep="\t",  error_bad_lines=False, engine='python')
     else: 
@@ -30,7 +33,6 @@ for year in range(2010, 2019):
 
 
 fig, ax = plt.subplots()
-
 im = H.heatmap(
     inc_per_anno, 
     inc_per_anno.index, 
@@ -38,6 +40,5 @@ im = H.heatmap(
     ax=ax, cmap="OrRd", 
     cbar_visible=False)
 texts = H.annotate_heatmap(im)
-
 fig.tight_layout()
 plt.show()

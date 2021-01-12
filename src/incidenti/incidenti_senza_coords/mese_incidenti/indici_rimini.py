@@ -5,8 +5,8 @@ def variazione_perc(x : float, y : float) -> float:
     return (y / x) * 100 -100
 
 mese_utilizzato = 7
-
 path = "dataset/incidenti/istat/incidenti_"
+# Per ogni anno, somma per mese, degli incidenti ad Rimini (cod. 99)
 for year in range(2010, 2014):
     dati = pd.read_csv(path + str(year) + ".txt", sep='\t')
     rimini_mese = dati[dati['provincia'] == 99]['mese'].value_counts().sort_index()

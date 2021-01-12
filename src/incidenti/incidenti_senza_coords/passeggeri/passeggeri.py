@@ -5,11 +5,9 @@ import sys
 sys.path.append("src/")
 
 data = pd.read_csv("dataset/incidenti/istat/incidenti_2018.txt", sep="\t")
-
+campi = ['veicolo__a___et__passegger36', 'veicolo__a___et__passegger39', 'veicolo__a___et__passegger42', 'veicolo__a___et__passegger45']
 
 def count_people(row) -> int: 
-    campi = ['veicolo__a___et__passegger36', 'veicolo__a___et__passegger39', 'veicolo__a___et__passegger42', 'veicolo__a___et__passegger45']
-
     count = 0
     for field in campi: 
         if row[field] != '     ' and row[field] != ' ':  
@@ -30,25 +28,26 @@ def get_people_in_vehicles(dataset : pd.DataFrame):
     return pd.Series(res)
 
 
+# Conteggio passeggeri in provincia di milano
 passenger_count_milano = get_people_in_vehicles(data[data['provincia'] == 15])
 passenger_count_milano = passenger_count_milano[passenger_count_milano < 4]
 passenger_count_milano = passenger_count_milano.value_counts(normalize=True).sort_index()
 
+# Conteggio passeggeri in prov. di rimini (nel trimestre estivo)
 estate = data[data['trimestre'] == 2]
 passenger_count_rimini = get_people_in_vehicles(estate[estate['provincia'] == 99])
 passenger_count_rimini = passenger_count_rimini[passenger_count_rimini < 4]
 passenger_count_rimini = passenger_count_rimini.value_counts(normalize=True).sort_index()
 
+# Conteggio passeggeri in prov. di Bari
 passenger_count_bari = get_people_in_vehicles(data[data['provincia'] == 72])
 passenger_count_bari = passenger_count_bari[passenger_count_bari < 4]
 passenger_count_bari = passenger_count_bari.value_counts(normalize=True).sort_index()
 
-color_ls = ['#5f64c6', '#c65f64', '#c6c15f']
-
 pd.DataFrame(
     [passenger_count_milano, passenger_count_rimini, passenger_count_bari],
     ['Milano', 'Rimini', 'Bari']
-).transpose().plot.bar(width=0.95, color=color_ls)
+).transpose().plot.bar(width=0.95, color=['#5f64c6', '#c65f64', '#c6c15f'])
 plt.xticks(rotation=0)
 plt.xlabel("Numero passeggeri")
 plt.show()

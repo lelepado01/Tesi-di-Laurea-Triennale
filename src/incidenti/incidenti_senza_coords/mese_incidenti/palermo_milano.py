@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 path = "dataset/incidenti/istat/incidenti_2013.txt"
 data = pd.read_csv(path, sep="\t")
 
+# Selezione dati per Milano(15) e Palermo (82)
 milano_mese = data[data['provincia'] == 15]['mese'].value_counts().sort_index()
 palermo_mese = data[data['provincia'] == 82]['mese'].value_counts().sort_index()
 
@@ -17,11 +18,8 @@ milano_media = milano_mese.mean()
 palermo_media = palermo_mese.mean()
 
 pd.DataFrame([milano_mese, palermo_mese], ['Milano', 'Palermo']).transpose().plot.bar(
-    width=0.9, 
-    color={
-        'Milano': '#4566c1',
-        'Palermo': '#66c145'
-    }
+    width = 0.9, 
+    color = {'Milano': '#4566c1', 'Palermo': '#66c145'}
 )
 
 plt.ylabel("Incidenti al giorno (2013)")

@@ -7,6 +7,7 @@ import label_utils
 
 data = pd.read_csv("dataset/incidenti/istat/incidenti_2018.txt", sep="\t")
 
+# Selezione dati per localizzazione incidente
 autostrade_veicoli = data[data['localizzazione_incidente'] == 7]['tipo_veicolo_a']
 autostrade_veicoli = label_utils.join_labels(autostrade_veicoli, "dataset/incidenti/istat/Classificazioni/tipo_veicoli__b_.csv").value_counts(normalize=True).sort_index()
 
@@ -20,7 +21,9 @@ uniti = pd.DataFrame([
    autostrade_veicoli, strade_urbane, strade_extraurbane
 ], index=['Autostrade', 'Strade urbane', 'Strade Extra-Urbane']).transpose().dropna().transpose()
 
+# eliminazione di vari campi troppo piccoli per essere mostrati
 uniti[uniti < 0.02] = 0.0
+# Raggruppamento dei campi rimossi in 'altro'
 uniti['altro'] = 1 - uniti.transpose().sum()
 
 # Colorazione del grafico in modo che sia consistente

@@ -9,7 +9,7 @@ import label_utils
 data = pd.read_csv("dataset/incidenti/istat/incidenti_2018.txt", sep='\t')
 
 tipo_incidenti = data[['natura_incidente', 'feriti']]
-
+# Selezione di alcuni campi di tipo incidente
 tamponamento = tipo_incidenti[tipo_incidenti['natura_incidente'] == 4]['feriti']
 frontale = tipo_incidenti[tipo_incidenti['natura_incidente'] == 1]['feriti']
 ostacolo = tipo_incidenti[tipo_incidenti['natura_incidente'] == 8]['feriti']
@@ -31,6 +31,7 @@ perc = tipo_incidenti['natura_incidente']
 perc = label_utils.join_labels(perc, "dataset/incidenti/istat/Classificazioni/natura_incidente.csv")
 perc = perc.value_counts(normalize=False)
 
+# Normalizzazione valori in base alla percentuale del tipo di incidente
 df['tamponamento'] = df['tamponamento'] / 32104 # numero di incidenti di questo tipo (da perc)
 df['frontale'] = df['frontale'] / 9715
 df['ostacolo'] = df['ostacolo'] / 8606

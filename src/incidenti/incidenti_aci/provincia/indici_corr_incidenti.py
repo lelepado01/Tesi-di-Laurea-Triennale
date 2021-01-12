@@ -4,6 +4,7 @@ import pandas as pd
 data = pd.read_csv("dataset/incidenti/aci/autostrade/comuni_2018.csv")
 fields = ['INC', 'FER', 'MOR']
 
+# Funzione usata solo qui, somma tre colonne selezionate in base al field passato
 def sum_field_by_column(data, select, field_to_sum1, field_to_sum2, field_to_sum3): 
     dic = {}
     for f in data[select].unique(): 

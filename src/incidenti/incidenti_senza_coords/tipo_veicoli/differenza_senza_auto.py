@@ -8,6 +8,7 @@ import heatmap as H
 
 data = pd.read_csv("dataset/incidenti/istat/incidenti_2018.txt", sep="\t")
 
+# selezione dati in base al luogo dell'incidente
 autostrade_veicoli = data[data['localizzazione_incidente'] == 7]['tipo_veicolo_a']
 autostrade_veicoli = label_utils.join_labels(autostrade_veicoli, "dataset/incidenti/istat/Classificazioni/tipo_veicoli__b_.csv").value_counts(normalize=True).sort_index()
 
@@ -17,6 +18,7 @@ strade_urbane = label_utils.join_labels(strade_urbane, "dataset/incidenti/istat/
 strade_extraurbane = data[(data['localizzazione_incidente'] == 4) | (data['localizzazione_incidente'] == 5) | (data['localizzazione_incidente'] == 6)]['tipo_veicolo_a']
 strade_extraurbane = label_utils.join_labels(strade_extraurbane, "dataset/incidenti/istat/Classificazioni/tipo_veicoli__b_.csv").value_counts(normalize=True).sort_index()
 
+# Rimozione delle auto private
 autostrade_veicoli = autostrade_veicoli[autostrade_veicoli.index != 'Auto privata']
 strade_urbane = strade_urbane[strade_urbane.index != 'Auto privata']
 strade_extraurbane = strade_extraurbane[strade_extraurbane.index != 'Auto privata']

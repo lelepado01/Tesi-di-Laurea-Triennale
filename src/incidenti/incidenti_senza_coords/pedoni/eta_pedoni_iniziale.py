@@ -3,6 +3,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 path = "dataset/incidenti/istat/incidenti_2018.txt"
+# Ordine corretto delle età, altrimenti '6-9' risulta dopo in ordine alfabetico
+correct_order = ['0-5  ','6-9  ','10-14', '15-17', '18-29', '30-44', '45-54', '55-64','65+  ']
 
 data = pd.read_csv(path, sep="\t")
 
@@ -12,8 +14,8 @@ pedoni_morti = pedoni_morti.value_counts().sort_index()
 pedoni_feriti = data['pedone_ferito_1__et_']
 pedoni_feriti = pedoni_feriti.value_counts().sort_index()
 
-correct_order = ['0-5  ','6-9  ','10-14', '15-17', '18-29', '30-44', '45-54', '55-64','65+  ']
-
+# Pulizia del dataset da campi non utili
+# e sort in base all'ordine corretto
 pedoni_feriti = pedoni_feriti[pedoni_feriti.index != '     ']
 pedoni_feriti = pedoni_feriti[pedoni_feriti.index != 'n.i. ']
 pedoni_feriti = pedoni_feriti.reindex(correct_order)

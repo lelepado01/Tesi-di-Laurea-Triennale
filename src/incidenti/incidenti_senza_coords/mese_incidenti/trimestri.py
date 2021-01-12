@@ -1,6 +1,10 @@
 
 import pandas as pd
 import matplotlib.pyplot as plt
+import sys
+sys.path.append("src")
+import istat_utils
+import heatmap as H
 
 giorni_al_mese = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 giorni_al_trimestre = [31 +28+ 31, 30+ 31+30, 31+ 31+ 30, 31+ 30+ 31]
@@ -15,21 +19,11 @@ incidenti_2016 = pd.read_csv("dataset/incidenti/istat/incidenti_2016.txt", sep="
 incidenti_2017 = pd.read_csv("dataset/incidenti/istat/incidenti_2017.txt", sep="\t", error_bad_lines=False, engine="python")
 incidenti_2018 = pd.read_csv("dataset/incidenti/istat/incidenti_2018.txt", sep="\t", encoding='latin1')
 
-def get_trimestre(data : pd.Series) -> pd.Series: 
-    res = {
-        1 : data.transpose()[0:3].sum(), 
-        2 : data.transpose()[3:6].sum(), 
-        3 : data.transpose()[6:9].sum(), 
-        4 : data.transpose()[9:13].sum()
-        }
-
-    return pd.Series(res.values(), res.keys())
-
 def get_provincia(prov : int) -> pd.DataFrame: 
-    aosta_2010 = get_trimestre(incidenti_2010[incidenti_2010['provincia'] == prov]['mese'].value_counts().sort_index())
-    aosta_2011 = get_trimestre(incidenti_2011[incidenti_2011['provincia'] == prov]['mese'].value_counts().sort_index())
-    aosta_2012 = get_trimestre(incidenti_2012[incidenti_2012['provincia'] == prov]['mese'].value_counts().sort_index())
-    aosta_2013 = get_trimestre(incidenti_2013[incidenti_2013['provincia'] == prov]['mese'].value_counts().sort_index())
+    aosta_2010 = istat_utils.get_trimestre(incidenti_2010[incidenti_2010['provincia'] == prov]['mese'].value_counts().sort_index())
+    aosta_2011 = istat_utils.get_trimestre(incidenti_2011[incidenti_2011['provincia'] == prov]['mese'].value_counts().sort_index())
+    aosta_2012 = istat_utils.get_trimestre(incidenti_2012[incidenti_2012['provincia'] == prov]['mese'].value_counts().sort_index())
+    aosta_2013 = istat_utils.get_trimestre(incidenti_2013[incidenti_2013['provincia'] == prov]['mese'].value_counts().sort_index())
     aosta_2014 = incidenti_2014[incidenti_2014['provincia'] == prov]['trimestre'].value_counts().sort_index()
     aosta_2015 = incidenti_2015[incidenti_2015['provincia'] == prov]['trimestre'].value_counts().sort_index()
     aosta_2016 = incidenti_2016[incidenti_2016['provincia'] == prov]['trimestre'].value_counts().sort_index()
@@ -44,14 +38,8 @@ def get_provincia(prov : int) -> pd.DataFrame:
 # Milano
 provs = get_provincia(15)
 
-import sys
-sys.path.append('src')
-import heatmap as H
-
 fig, ax = plt.subplots()
-
 im, cbar = H.heatmap(provs, provs.index, range(2010, 2019), ax=ax, cmap="YlGn", cbarlabel="")
-
 fig.tight_layout()
 plt.ylabel("Trimestre", fontdict={'fontsize': 10})
 plt.show()

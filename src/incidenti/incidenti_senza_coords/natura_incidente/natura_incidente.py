@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 data = pd.read_csv("dataset/incidenti/istat/incidenti_2018.txt", sep='\t')
 
 tipo_incidenti = data[['natura_incidente', 'feriti']]
-
+# Selezione di alcuni campi di tipo incidente
 tamponamento = tipo_incidenti[tipo_incidenti['natura_incidente'] == 4]['feriti']
 frontale = tipo_incidenti[tipo_incidenti['natura_incidente'] == 1]['feriti']
 ostacolo = tipo_incidenti[tipo_incidenti['natura_incidente'] == 8]['feriti']
