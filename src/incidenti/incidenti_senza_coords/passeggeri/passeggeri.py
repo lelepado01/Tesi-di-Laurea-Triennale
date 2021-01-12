@@ -3,44 +3,24 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import sys
 sys.path.append("src/")
+import istat_utils
 
 data = pd.read_csv("dataset/incidenti/istat/incidenti_2018.txt", sep="\t")
 campi = ['veicolo__a___et__passegger36', 'veicolo__a___et__passegger39', 'veicolo__a___et__passegger42', 'veicolo__a___et__passegger45']
 
-def count_people(row) -> int: 
-    count = 0
-    for field in campi: 
-        if row[field] != '     ' and row[field] != ' ':  
-            count += 1
-
-    return count
-
-
-def get_people_in_vehicles(dataset : pd.DataFrame): 
-    dataset = dataset[dataset['veicolo__a___sesso_conducente'] != ' ']
-    res = {}
-    for index in range(0, len(dataset)): 
-        res[index] = 0
-
-    for index, row in dataset.iterrows(): 
-        res[index] = count_people(row)
-
-    return pd.Series(res)
-
-
 # Conteggio passeggeri in provincia di milano
-passenger_count_milano = get_people_in_vehicles(data[data['provincia'] == 15])
+passenger_count_milano = istat_utils.get_people(data[data['provincia'] == 15], campi, in_vehicles = True)
 passenger_count_milano = passenger_count_milano[passenger_count_milano < 4]
 passenger_count_milano = passenger_count_milano.value_counts(normalize=True).sort_index()
 
 # Conteggio passeggeri in prov. di rimini (nel trimestre estivo)
 estate = data[data['trimestre'] == 2]
-passenger_count_rimini = get_people_in_vehicles(estate[estate['provincia'] == 99])
+passenger_count_rimini = istat_utils.get_people(estate[estate['provincia'] == 99], campi, in_vehicles = True)
 passenger_count_rimini = passenger_count_rimini[passenger_count_rimini < 4]
 passenger_count_rimini = passenger_count_rimini.value_counts(normalize=True).sort_index()
 
 # Conteggio passeggeri in prov. di Bari
-passenger_count_bari = get_people_in_vehicles(data[data['provincia'] == 72])
+passenger_count_bari = istat_utils.get_people(data[data['provincia'] == 72], campi, in_vehicles = True)
 passenger_count_bari = passenger_count_bari[passenger_count_bari < 4]
 passenger_count_bari = passenger_count_bari.value_counts(normalize=True).sort_index()
 

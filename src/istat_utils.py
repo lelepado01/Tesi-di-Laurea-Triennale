@@ -12,3 +12,34 @@ def get_trimestre(data : pd.Series) -> pd.Series:
         }
 
     return pd.Series(res.values(), res.keys())
+
+
+# La funzione conta il numero di campi non nulli passati in una colonna e
+# restituisce il numero 
+def count_people(row, campi, in_vehicles = False) -> int: 
+    count = 0
+    for field in campi: 
+        if in_vehicles: 
+            if row[field] != '     ' and row[field] != ' ':
+                count += 1
+        else: 
+            if row[field] != ' ' and row[field] != '': 
+                count += 1
+
+    return count
+
+# La funzione restituisce in una pd.Series il numero di campi non nulli in un dataset,
+# contando le colonne selezionate 
+# Se si vogliono contare i passeggeri nei veicoli, in_vehicle deve essere True
+def get_people(dataset : pd.DataFrame, campi, in_vehicles=False): 
+    if 'veicolo__a___sesso_conducente' in dataset.columns:
+        dataset = dataset[dataset['veicolo__a___sesso_conducente'] != ' ']
+    res = {}
+    for index in range(0, len(dataset)): 
+        res[index] = 0
+
+    for index, row in dataset.iterrows(): 
+        res[index] = count_people(row, campi, in_vehicles=in_vehicles)
+
+    return pd.Series(res)
+
