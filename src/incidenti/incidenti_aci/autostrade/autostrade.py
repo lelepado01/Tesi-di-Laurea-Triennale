@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 
 data = pd.read_csv("dataset/incidenti/aci/autostrade/comuni_2018.csv")
 
+# Conteggio di incidenti per nome della strada
 df = {}
 for auto in data['NOME STRADA'].unique(): 
     df[auto] = 0

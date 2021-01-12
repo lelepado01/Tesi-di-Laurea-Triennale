@@ -19,18 +19,21 @@ path = "dataset/regioni/regioni.geojson"
 regioni = gp.read_file(path)
 
 data = pd.read_csv('dataset/incidenti/aci/autostrade/mesi_2018.csv') 
+# Rimozione di valori nulli dal dataset e correzione del tipo di variabile, da string a int
 data = data[data['TOTALE'] != '0,0'].astype({'TOTALE': int})
 incidenti : pd.Series = aci_utils.get_sum_of_fields(data, 'REGIONE', 'TOTALE')
 
 patenti = pd.read_csv("dataset/patenti/patenti_mit.csv")
 
+# Ordinamento dei tre dataset per nord, centro e sud italia
+# incidenti
 incidenti.index = incidenti['REGIONE']
 incidenti = incidenti['TOTALE']
 incidenti = incidenti.reindex(order)
-
+# forme delle regioni
 regioni.index = regioni['reg_name']
 regioni.reindex(order)
-
+# patenti
 patenti.index = patenti['REGIONE']
 patenti = patenti['NUMERO']
 patenti = patenti.reindex(order)

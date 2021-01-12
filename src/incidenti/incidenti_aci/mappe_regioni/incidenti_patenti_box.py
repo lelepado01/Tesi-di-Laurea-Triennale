@@ -19,8 +19,8 @@ incidenti = aci_utils.get_sum_of_fields(incidenti, 'REGIONE', 'TOTALE')
 
 incidenti.index = incidenti['REGIONE']
 patenti.index = patenti['REGIONE']
-incidenti = incidenti.sort_index()
 
+# Divisione di incidenti e patenti a seconda delle regioni del nord, centro e sud
 nord = incidenti.loc[regioni_nord]
 centro = incidenti.loc[regioni_centro]
 sud = incidenti.loc[regioni_sud]

@@ -2,6 +2,7 @@
 import geopandas as gp
 import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
 import sys
 sys.path.append("src")
 import aci_utils
@@ -12,6 +13,7 @@ path = "dataset/regioni/regioni.geojson"
 regioni = gp.read_file(path)
 
 data = pd.read_csv('dataset/incidenti/aci/autostrade/mesi_2018.csv') 
+# Rimozione di valori nulli dal dataset e correzione del tipo di variabile, da string a int
 data = data[data['TOTALE'] != '0,0'].astype({'TOTALE': int})
 
 incidenti = aci_utils.get_sum_of_fields(data, 'REGIONE', field_incidenti)
@@ -20,8 +22,6 @@ incidenti.index = incidenti['REGIONE']
 regioni.index = regioni['reg_name']
 
 regioni = gp.GeoDataFrame(incidenti[field_incidenti], geometry=regioni['geometry'].transpose())
-
-from matplotlib.lines import Line2D
 
 regioni.plot(column=field_incidenti, cmap='OrRd', legend=True)
 plt.axis('off')

@@ -8,6 +8,7 @@ import aci_utils
 data = pd.read_csv('dataset/incidenti/aci/autostrade/ore_2018.csv')
 ore = ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24']
 
+# Selezione dataset per raccordo anulare, SS16 a Bari e SS1 a Genova (provincia) 
 raccordo = data[data['CODICE'] == 'AA09001']
 ss16 = data[data['CODICE'] == 'SS01601']
 ss16 = ss16[ss16['PROVINCIA'] == 'Bari']

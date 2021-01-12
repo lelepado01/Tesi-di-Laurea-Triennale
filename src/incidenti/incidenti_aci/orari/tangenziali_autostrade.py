@@ -29,14 +29,14 @@ for field in milano['NOME STRADA'].unique():
 
 incidenti = incidenti.drop(index='0')
 
-incidenti_1 = pd.DataFrame()
+incidenti_per_strada = pd.DataFrame()
 for i in [0, 2,3, 5,9,10,11]:
-    incidenti_1 = incidenti_1.append(incidenti.iloc[i])
+    incidenti_per_strada = incidenti_per_strada.append(incidenti.iloc[i])
 
 fig, ax = plt.subplots()
 im, cbar = H.heatmap(
-    incidenti_1, 
-    incidenti_1.index, 
+    incidenti_per_strada, 
+    incidenti_per_strada.index, 
     range(0,24), 
     ax=ax, 
     cmap="YlGn", 

@@ -5,14 +5,15 @@ sys.path.append("src")
 import aci_utils
 import heatmap as H
 
-data = pd.read_csv("dataset/incidenti/aci/autostrade/mesi_2018.csv")
-
 mesi = ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'] 
 
+data = pd.read_csv("dataset/incidenti/aci/autostrade/mesi_2018.csv")
+
+# Selezione dati per Adriatica (SS1), Aurelia (SS16),
+# A1 (del Sole), Torino-Trieste (A4) e Raccordo anulare di Roma
 adriatica = data[data['CODICE'] ==  'SS01601'][mesi]
 a1 = data[data['CODICE'] == 'AA00101'][mesi]
 aurelia = data[data['CODICE'] ==    'SS00101'][mesi]
-
 a4 = data[data['CODICE'] == 'AA00401'][mesi]
 a90 = data[data['CODICE'] == 'AA09001'][mesi]
 

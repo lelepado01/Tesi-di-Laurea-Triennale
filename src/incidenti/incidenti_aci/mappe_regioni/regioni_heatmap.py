@@ -10,6 +10,7 @@ import aci_utils
 path = "dataset/regioni/regioni.geojson"
 regioni = gp.read_file(path)
 
+# Per ogni anno, somma degli incidenti per regione, e sort in ordine alfabetico 
 incidenti_2011 = aci_utils.get_sum_of_fields(pd.read_csv('dataset/incidenti/aci/autostrade/mesi_2011.csv'), 'REGIONE', 'TOTALE').sort_values('REGIONE',inplace=False, ascending=True)
 incidenti_2012 = aci_utils.get_sum_of_fields(pd.read_csv('dataset/incidenti/aci/autostrade/mesi_2012.csv'), 'REGIONE', 'TOTALE').sort_values('REGIONE',inplace=False, ascending=True)
 incidenti_2013 = aci_utils.get_sum_of_fields(pd.read_csv('dataset/incidenti/aci/autostrade/mesi_2013.csv'), 'REGIONE', 'TOTALE').sort_values('REGIONE',inplace=False, ascending=True)
@@ -41,5 +42,4 @@ df = pd.DataFrame([
 
 fig, ax = plt.subplots()
 im, cbar = H.heatmap(df, df.index, [2011,2012,2013, 2014,2015,2016,2017,2018], ax=ax, cmap="YlGn", xticks_rotated=True, cbarlabel="Incidenti all'anno per regione")
-
 plt.show()

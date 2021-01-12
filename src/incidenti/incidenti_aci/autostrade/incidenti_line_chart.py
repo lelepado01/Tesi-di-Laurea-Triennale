@@ -7,10 +7,13 @@ import sys
 sys.path.append("src")
 import aci_utils
 
-data = pd.read_csv('dataset/incidenti/aci/autostrade/ore_2018.csv')
 ore = ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24']
 
+data = pd.read_csv('dataset/incidenti/aci/autostrade/ore_2018.csv')
 milano = data[data['PROVINCIA'] == 'Milano']
+
+strade = gp.read_file("dataset/autostrade/autostrade_milano_linee.geojson").to_crs(epsg=3857)
+strade.index = strade['name']
 
 incidenti = pd.DataFrame()
 for field in milano['NOME STRADA'].unique(): 
@@ -18,11 +21,8 @@ for field in milano['NOME STRADA'].unique():
         aci_utils.sum_columns(milano[milano['NOME STRADA'] == field][ore], name=field), 
     )
 
-strade = gp.read_file("dataset/autostrade/autostrade_milano_linee.geojson").to_crs(epsg=3857)
-strade.index = strade['name']
-
-inc = incidenti['01']
-ore.remove('01')
+# Conteggio incidenti per totali, indipendentemente dall'orario
+inc = 0
 for i in ore:
     inc = incidenti[i] + inc
 

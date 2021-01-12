@@ -9,7 +9,9 @@ data = pd.read_csv("dataset/incidenti/aci/autostrade/mesi_2018.csv")
 
 mesi = ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'] 
 
+# Selezione dati per raccordo anulare di Roma
 raccordo = data[data['CODICE'] == 'AA09001']
+# Selezione dati per SS16 Adriatica
 adriatica = data[data['CODICE'] == 'SS01601']
 
 adriatica = aci_utils.sum_columns(adriatica[mesi])

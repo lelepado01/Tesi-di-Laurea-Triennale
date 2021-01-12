@@ -2,6 +2,7 @@
 import geopandas as gp
 import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
 import sys
 sys.path.append("src")
 import aci_utils
@@ -18,8 +19,6 @@ incidenti.index = incidenti['REGIONE']
 regioni.index = regioni['reg_name']
 
 regioni = gp.GeoDataFrame(incidenti[field_incidenti], geometry=regioni['geometry'].transpose())
-
-from matplotlib.lines import Line2D
 
 regioni.plot(column=field_incidenti, cmap='OrRd', legend=True)
 plt.axis('off')
