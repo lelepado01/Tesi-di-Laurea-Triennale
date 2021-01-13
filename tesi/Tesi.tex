@@ -313,7 +313,9 @@ l'orario, il mese o il giorno della settimana.
     \indent COD REG,REGIONE,\\
     \indent COD PROV,PROVINCIA,\\
     \indent NOME STRADA : codice e nome della strada,\\
-    \indent INC: numero di incidenti (ce ne sono più per riga),\\
+    \indent INC: numero di incidenti\footnote{Potrebbero esserci più incidenti per 
+    riga, la divisione è eseguita in base alla caratteristica principale del file, 
+    come ora, giorno della settimana ecc.},\\
     \indent MOR,FER,\\
     \indent NVEI: numero di veicoli coinvolti\\
 )}
@@ -366,9 +368,9 @@ La lista di Ztlmilano contiene i seguenti autovelox:
     2   &   Viale Monte Ceneri dir. Serra\\
     \rowcolor{TableGray}
     3   &   Cavalcavia del Ghisallo\\
-    4   &   Viale Serra \\
+    4   &   Viale Serra dir. Lotto\\
     \rowcolor{TableGray}
-    5   &   Viale Serra\\
+    5   &   Viale Serra dir. Monte Ceneri\\
     6   &   Via Fermi\\
     \rowcolor{TableGray}
     7   &   Viale Fulvio Testi direz. perif.\\
@@ -1181,11 +1183,11 @@ osservando solo l'ampiezza di questi.
         V. Missaglia d. centro                  &   23  &    7.32   &   27.54 \\
         V. Ferrari                              &   57  &   18.15   &   44.3 \\
         \rowcolor{TableGray}
-        V. Monte Ceneri d. Serra                 &   291 &   92.67   &   44.3 \\
-        V. Monte Ceneri d. Lugano                &   290 &   92.35   &   44.3 \\
+        V. Monte Ceneri d. Serra                &   291 &   92.67   &   44.3 \\
+        V. Monte Ceneri d. Lugano               &   290 &   92.35   &   44.3 \\
         \rowcolor{TableGray}
-        Viale Serra                             &   296 &   94.26   &   44.3 \\
-        Viale Serra                             &   296 &   94.26   &   44.3 \\
+        V. Serra d. Lotto                       &   296 &   94.26   &   44.3 \\
+        V. Serra d. Monte Ceneri                &   296 &   94.26   &   44.3 \\
         \rowcolor{TableGray}
         V. Palmanova d. perif.                  &   149 &   47.45   &   59.79 \\
         V. Palmanova d. centro                  &   149 &   47.45   &   59.79 \\
@@ -2154,10 +2156,6 @@ strada più pericolosi.
 
 Nella tabella sottostante sono riportati i valori, sia dell'indice di mortalità, 
 sia dell'indice di feriti per tipologia di strada in cui è avvenuto l'incidente. 
-
-\begin{center}
-    $Indice\_Feriti\_Strada\_X = \displaystyle \frac{Numero\_Feriti\_Strada\_X}{Numero\_Incidenti\_Strada\_X} * 100$ 
-\end{center}
 
 \begin{center}
     \def\arraystretch{1.5}%  

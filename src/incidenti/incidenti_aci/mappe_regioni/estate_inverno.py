@@ -42,11 +42,11 @@ for mese in ['Dicembre', 'Gennaio', 'Febbraio']:
         inverno += e
 
 # Colorazione per grafico
-red_ls = ['#ce7182']*20
-blue_ls = ['#cebd71']*20
+red_ls = ['#7cd6aa']*20
+blue_ls = ['#7ca7d6']*20
 
 df = pd.DataFrame([inverno, estate], ['Inverno', 'Estate']).transpose()
-df.plot.bar(width=0.9, color=[red_ls, blue_ls])
+df.plot.bar(width=0.9, color=[blue_ls, red_ls])
 # Aggiunta di testi per indicare le regioni di nord, centro e sud
 plt.text(2, 1800, "Nord Italia")
 plt.text(8, 1100, "Centro Italia")

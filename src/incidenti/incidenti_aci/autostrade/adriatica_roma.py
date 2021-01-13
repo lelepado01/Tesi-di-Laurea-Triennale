@@ -19,7 +19,7 @@ raccordo = aci_utils.sum_columns(raccordo[mesi])
 
 df = pd.DataFrame([adriatica, raccordo], ['Adriatica', 'Raccordo Anulare Roma']).transpose()
 
-df.plot.bar(width=0.9, color=['#a1cc61', '#61a1cc'])
+df.plot.bar(width=0.9, color=['#d8cc6c', '#d8956c'])
 plt.ylabel("Numero di incidenti al mese (2018)")
 plt.tight_layout()
 plt.show()
