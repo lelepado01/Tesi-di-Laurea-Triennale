@@ -632,8 +632,8 @@ Per rimuovere i simboli superflui, si è fatto uso delle API di Google Maps,
 tramite il sito Jsfiddle\footnote{\url{https://jsfiddle.net/}}, un sito web che permette di 
 scrivere e eseguire codice JavaScript. 
 
-Gli screenshot realizzati rappresentano le zone dei Navigli e dell'incrocio tra viale 
-Bianca Maria e viale Ventidue Marzo a Milano. 
+Gli screenshot realizzati rappresentano le zone dei Navigli 
+e dell'incrocio tra viale Bianca Maria e viale Ventidue Marzo a Milano. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Dati mancanti}
@@ -740,7 +740,7 @@ come \quotestyle{ID\_ZRIL milano} o \quotestyle{ID\_ZRIL metadati}.
 Nel caso di quest'ultimo, si è ipotizzato, tracciando una parte dei valori della colonna, 
 che fosse un identificatore univoco del territorio, ipotesi confermata 
 da un pdf trovato sul sito 
-cittametropolitana\footnote{\url{https://www.cittametropolitana.mi.it/export/sites/default/DeCiMetro/DOCUMENTI-DA-SCARICARE/Manuale-civici.pdf}}. 
+Cittametropolitana\footnote{\url{https://www.cittametropolitana.mi.it/export/sites/default/DeCiMetro/DOCUMENTI-DA-SCARICARE/Manuale-civici.pdf}}. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Dati Geolocalizzati}
@@ -767,8 +767,6 @@ vicine.
 Questi dati elaborati sono poi stati memorizzati nel file reperibile al 
 percorso:\\ 
 \filenamestyle{dataset/incidenti/incidenti\_round.csv} 
-\todo{lelepado: questo filepath quando lo visualizzo in pdf esce dai margini, se lo tengo in  linea come testo
-- atrent: è un difetto di latex, a volte non riesce a calcolare bene la lunghezza del typeset}
 
 Sarebbe interessante sapere se esistano zone con maggiore concentrazione 
 di incidenti rispetto alla media, e ottenere un indice numerico 
@@ -837,8 +835,6 @@ for point in incidenti['geometry']:
 area_loreto = loreto.area * data['AREA'].iloc[0] / geometry.Polygon(data['geometry'].iloc[0]).area
 area_loreto_inc = loreto_incidenti * 1000000 / area_loreto
 \end{code}
-\todo{lelepado: che lei sappia, non c'è un modo per aumentare il margine dello sfondo grigio dietro il codice? Ho cercato ma tutti i comandi non  modificano il limite del colore, che rimane sempre 'attaccato' al codice
-- atrent: usa il package 'listings', te lo avevo aggiunto in cima}
 
 Il numero di incidenti per chilometro che risultano, nell'area considerata in figura 
 \ref{fig:zona-loreto}, sono $231.06$. 
@@ -1246,7 +1242,8 @@ for km, zona in zip(data['Incidenti per chilometro'], data['Incidenti per zona']
 print(incremento_percentuale_totale)
 \end{code}
 
-Sarebbe interessante poter visualizzare, in un solo valore, l'incremento (o decremento) 
+Sarebbe interessante poter visualizzare, in un solo valore, 
+l'incremento (o decremento) 
 globale, degli incidenti in zone vicine a 
 autovelox\footnote{Si tenta di capire, con un solo numero, se la presenza di 
 telecamere nella zona aumenta o diminuisce il numero di sinistri}. 
@@ -1345,10 +1342,8 @@ provocata dalle auto private.
 Inoltre, utilizzare il numero di incidenti come 
 stimatore\footnote{Stimatore: una qualunque statistica con 
 lo scopo di dare una stima di un parametro $\theta$ è detta stimatore 
-di $\theta$ (fonte: Probabilità e Statistica per l'ingegneria e 
-le scienze \cite{PROB_E_STATISTICA:1}, capitolo: Stima parametrica, pagine: 246-248)} 
-\todo{lelepado: è giusto come ho citato capitolo e pagine qui? atrent: vedi l'altro sotto}
-del traffico, potrebbe non portare a un risultato ottimale. 
+di $\theta$ (fonte: \citetitle{PROB_E_STATISTICA:1}\cite{PROB_E_STATISTICA:1}, 
+capitolo: Statistica descrittiva, pagine: 246-248)} 
 
 %\clearpage
 \section{Dati Istat su conducenti e passeggeri}
@@ -1441,7 +1436,7 @@ sinistro sia uguale a quella di un uomo, i risultati ottenuti sarebbero
 gli stessi osservabili nel campione. 
 
 %\clearpage
-\subsection{Il numero di passeggeri influisce sull'incidentalità?}
+\subsection{I passeggeri influiscono sull'incidentalità?}
 \todo{Da Leggere}
 
 Il dataset Istat dispone anche di una serie di colonne corrispondenti all'età, sesso e 
@@ -1586,7 +1581,6 @@ Per quanto riguarda, le fasce orarie \quotestyle{di punta} di cui si
 è parlato precedentemente, 
 sono stati presi in considerazione, per la mattina, gli orari dalle 7:00 alle 10:00, 
 e per il pomeriggio, dalle 17:00 alle 19:00. 
-\todo{lelepado: nel link che mi ha mandato non ho visto nulla per gli orari, vanno bene così o devo usare il punto, come 7.00? atrent: va bene il ":"}
 
 L'incremento durante la fascia oraria pomeridiana, presente nella figura 
 \ref{fig:week-weekend}, mostra un aumento della percentuale di incidenti 
@@ -1615,7 +1609,7 @@ Le informazioni ricavate ricalcano in modo particolarmente preciso,
 soprattutto nelle ore del pomeriggio, le ipotesi iniziali. 
 
 %\clearpage
-\subsection{Incremento dell'incidentalità nelle fasce orarie della mattina}
+\subsection{Incidentalità nelle fasce orarie della mattina}
 \todo{Da Leggere}
 
 I risultati ottenuti nella sezione precedente sembrano indicare 
@@ -1773,7 +1767,7 @@ numero di scontri avvenga in ore più tarde a causa della movida, mentre durante
 la settimana lavorativa meno persone siano sveglie in orari notturni. 
 
 %\clearpage
-\subsection{Quanto influiscono le vacanze estive sull'incidentalità?}
+\subsection{Quanto influiscono le vacanze sull'incidentalità?}
 \todo{Da Leggere}
 
 Dalle analisi eseguite nei capitoli precedenti, sorge spontaneo chiedersi se lo stesso 
@@ -2095,7 +2089,6 @@ sono riportate nella figura \ref{fig:rapporto-tipologie}:
     \caption{Categorie più frequenti di incidente, divise per anno}
     \label{fig:rapporto-tipologie}
 \end{figure}
-\todo{lelepado: se il codice che ho usato per questo tipo di heatmap è stato in parte preso dalla documentazione/esempi, devo citarlo? atrent: se doc ufficiale no}
 
 Per tutte le annate disponibili, le prime due categorie di incidenti rimangono sempre 
 le stesse, cioè \columnstyle{Scontro frontale-laterale} e \columnstyle{tamponamento}. 
@@ -2292,10 +2285,12 @@ una maggiore percentuale di scontri con più di un ferito.
 \todo{Da leggere}
 
 Il dataset Istat fornisce varie informazioni riguardanti i pedoni coinvolti in un 
-incidente, tramite le colonne \columnstyle{pedone\_morto\_sesso}, 
-\columnstyle{pedone\_ferito\_sesso}, \columnstyle{pedone\_morto\_età} e 
-\columnstyle{pedone\_ferito\_età}, ripetute quattro volte, una per ogni persona interessata. 
-\todo{controllare se i label escano dal margine}
+incidente, tramite le colonne 
+\columnstyle{pedone\_morto\_sesso}, 
+\columnstyle{pedone\_ferito\_sesso}, 
+\columnstyle{pedone\_morto\_età} e 
+\columnstyle{pedone\_ferito\_età}, 
+ripetute quattro volte, una per ogni persona interessata. 
 
 Rimanendo sul tema dei capitoli precedenti, 
 si potrebbe controllare l'esistenza di tipologie di incrocio che 
@@ -2611,7 +2606,6 @@ si è calcolata la deviazione standard\footnote{Deviazione standard:
 misura della distanza dei dati di un campione dalla media 
 (fonte: \citetitle{PROB_E_STATISTICA:1}\cite{PROB_E_STATISTICA:1}, 
 capitolo: Statistica descrittiva, pagine: 25-27)}. 
-\todo{lelepado: è giusto come ho citato capitolo e pagine qui? atrent: aggiunto citetitle, puoi usarlo anche in altri punti}
 Risulta che la regione con maggiori differenze di incidenti di anno in anno 
 è il Lazio, con $324$, mentre quella con minore 
 variazione è la Valle d'Aosta, con $8$. 
@@ -3073,7 +3067,7 @@ Infatti, su quest'ultima, se si osservano i dati nell'insieme totale degli otto 
 il numero di sinistri rimane relativamente costante, 
 con $99$ scontri nel 2011, e $97$ nel 2018. 
 
-\subsection{L'incidentalità su autostrade dipende dai mesi dell'anno?}
+\subsection{Gli incidenti su autostrade dipendono dai mesi dell'anno?}
 \todo{Da Leggere}
 
 Una questione, di cui ci si è occupati tramite dati Istat in precedenza, è 
@@ -3300,10 +3294,10 @@ oppure, avendo a disposizione la velocità del vento all'uscita delle gallerie,
 controllare la quantità di sinistri in queste zone, notoriamente pericolose 
 in presenza di correnti d'aria forti. 
 
-Infine, osservando le misurazioni sull'umidità, è possibile che in questo caso sia presente 
+Infine, osservando le misurazioni sull'umidità, è possibile ipotizzare 
+che in questo caso sia presente 
 un rapporto di causa e effetto, in quanto spesso, un valore alto di questo fattore 
 coincide con pioggia e temporali, che a loro volta rendono più difficoltosa la guida. 
-\todo{lelepado: posso dirlo? atrent: mettilo come ipotesi}
 
 \chapter{Conclusioni}
 \todo{Da leggere}
@@ -3385,14 +3379,16 @@ ha condiviso in formato libero, nelle metodologie di calcolo della classifica, s
 Infine, un problema sorto con frequenza è stato il fatto che 
 molti dataset non aderiscono ad 
 alcuno standard, per quanto riguarda la nomenclatura delle colonne. 
-Le tabelle provenienti dal sito Istat, per esempio, nel 2011, hanno un campo denominato 
-$intersezione\_o\_non\_interse1$, mentre nel 2018, la stessa informazione prende il nome
-di $intersezione\_o\_non\_interse3$.
-\todo{lelepado: questi due label su pdf escono dai margini - atrent: solito problema latex, ho fatto quache prova ma senza successo, prova a cercare su stackoverflow}
+Le tabelle provenienti dal sito Istat, per esempio, nel 2011, hanno un campo denominato\\
+\indent\columnstyle{intersezione\_o\_non\_interse1},\\
+mentre nel 2018, la stessa informazione prende il nome di\\
+\indent \columnstyle{intersezione\_o\_non\_interse3}.
+\todo{lelepado: risolto così}
 
 A cambiare non sono soltanto i nomi delle colonne negli anni, 
 ma in alcuni casi, nei label, viene usato un solo \quotestyle{underscore} a 
-simboleggiare uno spazio, mentre nel campo \columnstyle{veicolo\_\_a\_\_\_et\_\_conducente} 
+simboleggiare uno spazio, mentre nel campo\\
+\indent\columnstyle{veicolo\_\_a\_\_\_et\_\_conducente}\\
 ne sono usati due o anche tre. 
 
 Rimanendo in tema, lo stesso dataset Istat ha colonne con differenze di anno in anno, 
