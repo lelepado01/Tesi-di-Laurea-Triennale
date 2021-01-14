@@ -781,8 +781,6 @@ osservare che nel centro storico si ha la più alta concentrazione di sinistri.
     \caption{Incidenti a Milano per municipio}
     \label{fig:heatmap-municipi}
 \end{figure}
-\todo{Nell'ultima call mi sono dimenticato di dirle che ho modificato questa mappa, prima era calcolata sovrapponendo i punti e facendo uso della trasparenza, adesso ho invece approssimato le coordinate di ogni punto per avere effetto bubble chart
-- atrent: va bene}
 
 Non tutte le zone hanno la stessa superficie, e ovviamente sezioni più ampie hanno un maggior 
 numero di strade. Avendo a disposizione l'area dei vari municipi, 
@@ -1101,7 +1099,7 @@ sulla stessa direttrice, avendo come unica variabile il cambio di pavimentazione
 \section{Incidenti e Autovelox}
 \todo{Da leggere}
 
-Per sapere se gli autovelox abbiano influenza sugli incidenti, 
+Per sapere se la presenza di autovelox abbia influenza sugli incidenti, 
 bisognerebbe innanzitutto sapere quando sono stati posizionati i dispositivi, e solo 
 a quel punto, avendo dati sui sinistri prima e dopo l'installazione, sarebbe 
 possibile trarre conclusioni. 
@@ -2096,7 +2094,9 @@ Anche le frequenze corrispondenti restano molto simili, con la prima
 categoria che rimane attorno al $35$ \% e la seconda attorno al $18$ \%. 
 
 Nel terzo gruppo, d'altra parte, si iniziano ad osservare delle differenze. 
-Le tipologie di \columnstyle{investimento di pedoni} e \columnstyle{scontro laterale}, 
+
+Le tipologie di \columnstyle{investimento} \columnstyle{di} \columnstyle{pedoni} e 
+\columnstyle{scontro} \columnstyle{laterale}, 
 infatti, si alternano con percentuali simili, attorno al $12$ \%. 
 
 Ciò che è possibile dedurre dalla figura \ref{fig:rapporto-tipologie}, è che non 
@@ -2285,12 +2285,15 @@ una maggiore percentuale di scontri con più di un ferito.
 \todo{Da leggere}
 
 Il dataset Istat fornisce varie informazioni riguardanti i pedoni coinvolti in un 
-incidente, tramite le colonne 
-\columnstyle{pedone\_morto\_sesso}, 
-\columnstyle{pedone\_ferito\_sesso}, 
-\columnstyle{pedone\_morto\_età} e 
-\columnstyle{pedone\_ferito\_età}, 
-ripetute quattro volte, una per ogni persona interessata. 
+incidente, tramite le colonne sottostanti, ripetute quattro volte, 
+una per ogni persona interessata.
+
+\lighttext{(\\
+    \indent\columnstyle{pedone\_morto\_sesso}, \\
+    \indent\columnstyle{pedone\_ferito\_sesso}, \\
+    \indent\columnstyle{pedone\_morto\_età}, \\
+    \indent\columnstyle{pedone\_ferito\_età} \\
+)} 
 
 Rimanendo sul tema dei capitoli precedenti, 
 si potrebbe controllare l'esistenza di tipologie di incrocio che 
@@ -2527,9 +2530,9 @@ ACI del 2018 sugli incidenti stradali \cite{ACI:3}.
 
 Tuttavia, come già spiegato nei capitoli precedenti, il gruppo \columnstyle{30-44} 
 contiene quindici anni, invece che solamente due, come quello dei \columnstyle{15-17}. 
-Sarebbe quindi opportuno 
-normalizzare la percentuale di incidenti commessi, con una stima del numero di 
-guidatori nella rispettiva fascia di età. 
+
+Sarebbe quindi opportuno normalizzare la percentuale di incidenti commessi, 
+con una stima del numero di guidatori nella rispettiva fascia di età. 
 
 \begin{code}
 perc_fascia = np.array( [3.1, 12.2, 19, 18.2, 13.7, 19.3]) / 100
@@ -2753,7 +2756,7 @@ Inoltre, la provincia di Frosinone ha un numero particolarmente alto di incident
 autostrade, mentre quella di Latina, al contrario, ha un maggiore incremento di 
 sinistri su strade provinciali. 
 
-Non è difficile trovare il motivo di questi numeri, in quanto l'autostrada A1 passa 
+Non è difficile trovare il motivo di questi valori, in quanto l'autostrada A1 passa 
 attraverso la prima provincia e non la seconda, e conseguentemente provoca 
 un'impennata di scontri nella prima heatmap. 
 
@@ -2791,7 +2794,7 @@ più pericolose.
 \subsection{Esiste correlazione tra incidenti e feriti?}
 \todo{da leggere}
 
-Utilizzando i dataset ACI a disposizione, è possibile stabilire l'esistenza di 
+Facendo uso dei dataset ACI a disposizione, è possibile stabilire l'esistenza di 
 correlazione tra morti e incidenti, o tra morti e feriti?
 Ovviamente ci si aspetta che la risposta a questa domanda abbia un 
 esito positivo, poiché 
@@ -3280,6 +3283,7 @@ influenza sia proprio il mese, e non o l'umidità o la velocità del vento.
 
 Infatti, il dataset sulle condizioni meteo che si sta utilizzando è molto impreciso, 
 in quanto potrebbero esserci differenze di diversi gradi, in zone lontane di Milano. 
+
 Allo stesso modo, anche i dati sugli incidenti non sono particolarmente precisi, 
 visto che indicano solo il nome dell'autostrada in cui è avvenuto 
 il sinistro, e la posizione effettiva potrebbe essere a chilometri di distanza da dove 
