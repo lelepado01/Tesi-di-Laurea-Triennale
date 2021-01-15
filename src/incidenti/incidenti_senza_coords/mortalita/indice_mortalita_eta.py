@@ -34,6 +34,7 @@ plt.subplot(1,2,1)
 indice_mortalita.plot.bar(width=0.9, color='#69aaa3')
 plt.ylabel("Indice di mortalità per\nfascia di età del conducente")
 plt.tight_layout()
+
 plt.subplot(1,2,2)
 morti_per_eta = morti_per_eta / morti_per_eta.sum()
 incidenti_per_eta = incidenti_per_eta / incidenti_per_eta.sum()
@@ -43,4 +44,5 @@ plt.xticks(rotation=90)
 plt.legend()
 plt.ylabel("Percentuale di incidenti e\nmorti per fascia di età")
 plt.tight_layout()
+
 plt.show()

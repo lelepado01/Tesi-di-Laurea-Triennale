@@ -28,9 +28,7 @@ df = pd.DataFrame([
 ], index=['Autostrade', 'Strade urbane', 'Strade Extra-Urbane']).transpose().dropna().transpose()
 
 fig, ax = plt.subplots()
-
 im, cbar = H.heatmap(df, df.index, df.columns, ax=ax, cmap="YlGn", cbarlabel="Percentuale del tipo di veicolo (2018)", xticks_rotated=True)
 texts = H.annotate_heatmap(im, valfmt="")
-
 fig.tight_layout()
 plt.show()

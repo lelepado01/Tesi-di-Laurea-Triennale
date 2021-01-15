@@ -2,9 +2,11 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
+# Si usa 2013 perchè è l'ultimo anno disponibile con il campo mese
 path = "dataset/incidenti/istat/incidenti_2013.txt"
 data = pd.read_csv(path, sep="\t", encoding='latin1')
 
+# Provincia di Aosta = 7
 aosta_mese = data[data['provincia'] == 7]['mese'].value_counts().sort_index()
 
 index = 0

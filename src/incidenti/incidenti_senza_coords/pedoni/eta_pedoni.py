@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 path = "dataset/incidenti/istat/incidenti_2018.txt"
-
 data = pd.read_csv(path, sep="\t")
 
 pedoni_morti = data['pedone_morto_1__et_']

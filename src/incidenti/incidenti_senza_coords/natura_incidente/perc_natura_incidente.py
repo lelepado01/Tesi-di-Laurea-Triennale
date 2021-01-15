@@ -23,10 +23,9 @@ sbandamento = sbandamento.value_counts()
 df = pd.DataFrame(
     [tamponamento, frontale, ostacolo, sbandamento], 
     ['tamponamento', 'frontale', 'ostacolo', 'sbandamento']
-)
+)[[1,2,3,4]].transpose()
 
-df = df[[1,2,3,4]].transpose()
-
+# Conversione di indici numerici per tipologia di incidente 
 perc = tipo_incidenti['natura_incidente']
 perc = label_utils.join_labels(perc, "dataset/incidenti/istat/Classificazioni/natura_incidente.csv")
 perc = perc.value_counts(normalize=False)

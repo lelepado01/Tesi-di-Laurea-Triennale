@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
+mesi = ["Gennaio","Febbraio","Marzo","Aprile","Maggio","Giugno","Luglio","Agosto","Settembre","Ottobre","Novembre","Dicembre"]
 path = "dataset/incidenti/istat/incidenti_2013.txt"
 data = pd.read_csv(path, sep="\t")
 
@@ -23,7 +24,7 @@ pd.DataFrame([milano_mese, palermo_mese], ['Milano', 'Palermo']).transpose().plo
 )
 
 plt.ylabel("Incidenti al giorno (2013)")
-plt.xticks(range(0,12), ["Gennaio","Febbraio","Marzo","Aprile","Maggio","Giugno","Luglio","Agosto","Settembre","Ottobre","Novembre","Dicembre"])
+plt.xticks(range(0,12), mesi)
 plt.plot([-1, 15], [milano_media, milano_media], color='#f9f03b')
 plt.plot([-1, 15], [palermo_media, palermo_media], color='#f9f03b')
 plt.text(11.8,milano_media - 0.1,'Media Milano')

@@ -28,18 +28,19 @@ morti_per_eta = morti_per_eta.drop('10-14')
 morti_per_eta = morti_per_eta.drop('6-9  ')
 morti_per_eta = morti_per_eta.drop('0-5  ')
 
-# Normalizzazione delle percentuali di popolazione
+# Coversione in percentuale
 perc_fascia = np.array( [3.1, 2.8+4+5.3, 19, 18.2, 7.3+6.4, 19.3]) / 100
 
+# Normalizzazione delle percentuali di popolazione
 incidenti_per_eta /= perc_fascia
 morti_per_eta /= perc_fascia
-
 indice_mortalita = morti_per_eta * 100 / incidenti_per_eta
 
 plt.subplot(1,2,1)
 indice_mortalita.plot.bar(width=0.9, color='#69aaa3')
 plt.ylabel("Indice di mortalità per\nfascia di età del conducente")
 plt.tight_layout()
+
 plt.subplot(1,2,2)
 morti_per_eta = morti_per_eta / morti_per_eta.sum()
 incidenti_per_eta = incidenti_per_eta / incidenti_per_eta.sum()
@@ -49,4 +50,5 @@ plt.xticks(rotation=90)
 plt.legend()
 plt.ylabel("Percentuale di incidenti e\nmorti per fascia di età")
 plt.tight_layout()
+
 plt.show()

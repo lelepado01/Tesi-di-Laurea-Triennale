@@ -2,10 +2,10 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-path = "dataset/incidenti/istat/incidenti_2018.txt"
 # Ordine corretto delle età, altrimenti '6-9' risulta dopo in ordine alfabetico
 correct_order = ['0-5  ','6-9  ','10-14', '15-17', '18-29', '30-44', '45-54', '55-64','65+  ']
 
+path = "dataset/incidenti/istat/incidenti_2018.txt"
 data = pd.read_csv(path, sep="\t")
 
 pedoni_morti = data['pedone_morto_1__et_']
