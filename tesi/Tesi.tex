@@ -1110,6 +1110,29 @@ Tuttavia la localizzazione degli incidenti
 è disponibile solo per il 2016, in quanto Istat non ha rilasciato 
 le coordinate degli scontri in altre annate. 
 
+\todo{atrent: tutta questa sezione va resa più ipotetica perché non hai 
+informazioni "causali" lelepado: ho aggiunto la parte successiva 
+per spiegare meglio cosa manca}
+
+Non disponendo delle informazioni precedenti all'installazione degli autovelox, 
+non è possibile calcolare un contesto valido per quanto riguarda 
+i sinistri prima del 2016. 
+
+Nonostante ciò, avendo i dati riferiti al 2016, e le posizioni dei tutor 
+già presenti in quell'anno, è possibile eseguire comunque il procedimento corretto, 
+se pur con dei dati non coerenti, per vedere se gli 
+autovelox abbiano un qualche tipo di effetto sugli incidenti.
+
+Nella sezione seguente, dunque, si assume di disporre di due dataset di sinistri, uno 
+precedente e uno successivo al 2014, e di eseguire i calcoli su entrambi gli insiemi, 
+osservando le eventuali differenze presenti nei risultati ottenuti.
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{../src/autovelox/autovelox_2014.png}
+    \caption{Autovelox installati nel 2014 e quelli il cui anno di installazione è ignoto}
+    \label{fig:autovelox-indici}
+\end{figure}
+
 Conoscendo il nome della via in cui sono stati installati gli autovelox nel 2014, 
 è possibile ricondursi alla posizione effettiva di questi sulla mappa. 
 Per fare ciò, la soluzione più veloce è stata quella di enumerare tutte le coordinate presenti 
@@ -1132,12 +1155,6 @@ for lat, lon in geo_utils.parse_geojson_point_list(autovelox['geometry'].astype(
 cx.add_basemap(ax=layer_autovelox)
 plt.show()
 \end{code}
-
-\begin{figure}
-    \includegraphics[width=\linewidth]{../src/autovelox/autovelox_2014.png}
-    \caption{Autovelox installati nel 2014 e quelli il cui anno di installazione è ignoto}
-    \label{fig:autovelox-indici}
-\end{figure}
 
 Per quanto non si disponga delle informazioni sui sinistri prima e dopo dell'installazione, 
 è comunque possibile sovrapporre i dataset, per vedere se gli autovelox 
@@ -1259,7 +1276,7 @@ effetto positivo o negativo sull'incidentalità.
 Con il rilascio di nuovi dataset contenenti le coordinate di sinistri, 
 possibilmente riferiti ad annate antecedenti al 2014, sarebbe possibile realizzare 
 una stima con informazioni precedenti e 
-successive al posizionamento delle telecamere. \todo{atrent: tutta questa sezione va resa più ipotetica perché non hai informazioni "causali"}
+successive al posizionamento delle telecamere. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\clearpage
