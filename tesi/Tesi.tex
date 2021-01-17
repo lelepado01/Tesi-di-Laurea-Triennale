@@ -6,9 +6,10 @@
 \usepackage[italian,english]{babel}
 \usepackage[hyphens]{url}
 
-\usepackage[backend=bibtex]{biblatex}
+\usepackage{hyphenat}
+\hyphenation{in-te-res-san-te}
 
-\usepackage{todonotes}
+\usepackage[backend=bibtex]{biblatex}
 
 \usepackage{listings}
 % Per generare il file PDF aderente alle specifiche PDF/A-1b. Verificarne poi la validità. 
@@ -17,8 +18,10 @@
 \usepackage{graphicx}
 \usepackage{csquotes}
 \usepackage{color, colortbl}
+% usato per codice
 \usepackage{courier}
 
+\usepackage{todonotes}
 \usepackage{refcheck}
 
 % draft più leggibile
@@ -102,6 +105,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Introduzione}
+\todo{lelepado: per andare a capo, per parole come 'interessante', latex sbaglia la separazione in sillabe, che lei sappia devo specificarlo manualmente ogni volta con \\hyphenation?}
 
 Il termine dati aperti, o liberi, tradotto dall'inglese \quotestyle{open data}, 
 si riferisce a collezioni di informazioni liberamente accessibili e 
