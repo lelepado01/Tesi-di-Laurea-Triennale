@@ -3275,16 +3275,15 @@ nelle autostrade è sufficiente a garantire un posto nell'istogramma.
 \subsection{Analisi sulla correlazione tra fattori atmosferici e incidentalità}
 \todo{Da leggere + parte da controllare}
 
-L'idea di ipotizzare che esista correlazione tra le condizioni meteo e il numero 
-di incidenti, può non sembrare improponibile, in fondo nessuno adora guidare 
-durante una nevicata. 
-Tuttavia, le informazioni necessarie per ottenere una stima della dipendenza 
-tra i due fattori sono, o fuori dalla portata dei dati liberi, o inesistenti. 
 
-Un esempio dei dataset richiesti potrebbe essere, sapere il giorno e l'ora 
-dell'incidente, e allo stesso modo anche le zone in cui si sono verificati certi 
-fenomeni atmosferici, come la caduta di neve o temporali. 
-Entrambi questi dati non sono disponibili tramite i siti utilizzati fino a questo momento e, 
+Ipotizzare che esista correlazione tra le condizioni meteo e il numero di incidenti, 
+può non sembrare improponibile, tuttavia i valori necessari a quantificare una stima
+di tale interdipendenza, sono inesistenti a livello di dati liberi
+
+Un esempio dei dataset richiesti potrebbe essere, conoscere il giorno e l'ora 
+dell'incidente, e allo stesso modo anche le zone in cui si sono verificati determinati 
+fenomeni atmosferici, come nevicate abbondanti o temporali violenti. 
+Entrambi questi dati non sono disponibili tramite i siti utilizzati finora e, 
 probabilmente, anche con questi non sarebbe possibile dare una buona stima della correlazione 
 tra i due fattori. 
 
@@ -3327,8 +3326,8 @@ correlazione lineare tra temperatura e sinistri, mentre si ha dipendenza inversa
 riguarda l'umidità. 
 
 Ciò non significa che, nel 2011, sia stata l'alta temperatura a provocare 
-tutti gli incidenti, anzi, è molto più probabile che il fattore con maggiore 
-influenza sia proprio il mese, e non o l'umidità o la velocità del vento. 
+tutti gli incidenti, anzi, è molto più probabile che il fattore determinante 
+sia proprio il mese, e non invece l'umidità o la velocità del vento. 
 
 Infatti, il dataset sulle condizioni meteo che si sta utilizzando è molto impreciso, 
 in quanto potrebbero esserci differenze di diversi gradi, in zone lontane di Milano. 
@@ -3341,11 +3340,11 @@ si è calcolata l'informazione sul clima.
 Dal punto di vista, invece, della velocità del vento, sarebbe possibile eseguire 
 un'analisi più approfondita, in quanto un valore del coefficiente di Pearson uguale 
 a $0.5$ non è particolarmente alto. 
-Si potrebbe, per esempio, controllare se esista una qualche differenza tra gli 
+Si potrebbe, per esempio, verificare se esista una qualche differenza tra gli 
 incidenti su moto rispetto a quelli in automobile; 
 oppure, avendo a disposizione la velocità del vento all'uscita delle gallerie, 
-controllare la quantità di sinistri in queste zone, notoriamente pericolose 
-in presenza di correnti d'aria forti. 
+analizzare la quantità di sinistri in queste zone, notoriamente pericolose 
+in presenza di forti correnti d'aria improvvise. 
 
 Infine, osservando le misurazioni sull'umidità, è possibile ipotizzare 
 in questo caso la presenza di un rapporto di causa e effetto, 
@@ -3356,8 +3355,8 @@ coincide con pioggia e temporali, che a loro volta rendono più difficoltosa la 
 \todo{ATOK}
 
 Riprendendo alcune delle analisi realizzate in questo lavoro, è opportuno dire che buona 
-parte di queste sono state portate a termine con compromessi tra la precisione del dato, e 
-la disponibilità di quest'ultimo. 
+parte di queste sono state portate a termine con compromessi 
+tra la disponibilità di un dato e la sua precisione ed attendibilità.
 
 In particolare, i capitoli che fanno utilizzo dei dati localizzati, soffrono la mancanza di 
 queste informazioni per annate diverse dal 
@@ -3365,8 +3364,9 @@ queste informazioni per annate diverse dal
 come si è potuto osservare nella sezione riguardante gli autovelox. 
 
 Le analisi dei dataset Istat e Aci, invece, facendo uso di informazioni già aggregate 
-e di facile elaborazione, sono state portate a termine con maggiore frequenza, e il 
-principale ostacolo è stato il creare un contesto corretto attorno ai risultati ottenuti. 
+e di facile elaborazione, sono state portate a termine con maggiore 
+accuratezza, e il principale ostacolo è stato il creare un contesto 
+corretto attorno ai risultati ottenuti. 
 
 \`E, per esempio, il caso dei sinistri divisi per età della popolazione, 
 dove si sono ottenuti esiti 
@@ -3378,8 +3378,8 @@ Per concludere, sarebbe opportuno riportare quali siano state le maggiori diffic
 incontrate durante l'analisi di dati liberi appena realizzata. 
 
 Uno dei problemi riscontrati, soprattutto per quanto riguarda il confermare la 
-validità dei risultati calcolati, è stata la mancanza di dataset in ambiti come 
-il traffico e il fondo stradale. 
+validità dei risultati calcolati, è stata la mancanza di dataset 
+inerenti la mole di traffico e la tipologia di fondo stradale.
 
 Nel capitolo riguardante gli autovelox infatti, non è stato possibile individuare 
 un comportamento precedente all'installazione delle telecamere, cioè prima dell'anno 2016, 
@@ -3392,8 +3392,7 @@ in quanto non si sono trovati riferimenti al totale di questi in alcun sito di o
 anche tentando di restringere il campo di ricerca a singole città. 
 
 
-In secondo luogo, alcuni dataset non sono completi, o hanno sezioni temporali mancanti,
-estese anche svariati mesi. 
+In secondo luogo, alcuni dataset non sono completi, o hanno sezioni temporali mancanti. 
 \`E il caso delle informazioni sugli ingressi all'area C di Milano dove, 
 per il 2013 non è presente il mese di Dicembre. 
 
@@ -3429,9 +3428,9 @@ ha condiviso in formato libero, nelle metodologie di calcolo della classifica, s
 \end{quotation}
 
 \skipline
-Infine, un problema sorto con frequenza è stato il fatto che 
-molti dataset non aderiscono ad 
-alcuno standard, per quanto riguarda la nomenclatura delle colonne. 
+Infine, 
+una problematica riscontrata con frequenza è stata la mancanza di uno standard per quanto 
+riguarda la nomenclatura delle colonne. 
 Le tabelle provenienti dal sito Istat, per esempio, nel 2011, hanno un campo denominato\\
 \indent\columnstyle{intersezione\_o\_non\_interse1},\\
 mentre nel 2018, la stessa informazione prende il nome di\\
