@@ -2837,9 +2837,9 @@ In particolare, dalla mappa \ref{fig:line-incidenti-milano}, si deduce che le
 Tangenziali Ovest e Est, e l'autostrada Torino-Trieste, sono i tratti di 
 strada con maggior numero di incidenti, con più di $150$ sinistri all'anno. 
 
-Infine, se si avesse a disposizione le coordinate precise degli incidenti, 
+Infine, se si avessero a disposizione le coordinate precise degli incidenti, 
 sarebbe possibile anche dividere queste tratte in sezioni più piccole, 
-e controllare se esistano zone che alzano il volume di sinistri, e rendono queste strade 
+e verificare se esistano zone che alzano il volume di sinistri, e rendono queste strade 
 più pericolose. 
 
 %\clearpage
@@ -2896,9 +2896,8 @@ del dataset ACI, è chiaramente visibile la correlazione tra
 numero di incidenti e di feriti, in quanto, nella maggior parte dei casi, 
 all'aumentare dei primi il volume dei secondi cresce allo stesso modo. 
 
-L'unico dubbio che possa sorgere è che il numero di infortunati sia maggiore di quello 
-di incidenti, tuttavia, controllando il dataset, ogni 
-riga contiene più feriti rispetto a sinistri. 
+Si è notato che, sia nel diagramma, sia nel dataset, il numero di feriti supera quello 
+degli incidenti, indubbiamente per la presenza di passeggeri a bordo.
 
 Nella tabella sottostante è raffigurato un estratto del dataset ACI, 
 di cui si sono prese in considerazione le colonne principali, più 
@@ -2929,26 +2928,29 @@ un alto numero di infortunati.
 Il coefficiente di Pearson, per quanto riguarda i campi \columnstyle{Incidenti} 
 e \columnstyle{Feriti}, 
 è molto vicino a uno, quindi i due campioni sono strettamente correlati. 
-Nonostante, in generale, correlazione non implichi causa o effetto, cioè, non 
-è detto che due fattori correlati si influenzino in alcun modo, in questo caso è 
-difficile pensare che il numero di incidenti non sia il motivo dell'aumentare o diminuire 
-dei feriti. 
+
+Correlazione, certo, non implica il nesso di causa e effetto, 
+cioè, non è detto che due fattori correlati si influenzino in alcun modo,
+ma sicuramente il variare del numero di sinistri genera una variazione del numero di feriti.
+
 I valori riguardanti i morti invece, sono molto meno vicini a uno, probabilmente 
-per il minor numero di sinistri mortali, che rende il campione più ristretto. 
+per il minor numero di sinistri con esiti mortali, che rende il campione più ristretto. 
 
 \subsection{Le autostrade italiane con maggior numero di incidenti}
 \todo{Da Leggere}
 
 Il dataset ACI raggruppa in un solo dataset sia le autostrade che le strade statali, 
-esistono differenze sostanziali tra le due categorie? 
-Una domanda che sorge spontanea è se
-la maggiore capienza di veicoli lungo le autostrade porti queste a occupare i primi 
-posti per quanto riguarda le strade con più sinistri. 
+esistono differenze sostanziali tra le due categorie? \todo{correzione}
 
-\`E possibile utilizzare i file con incidenti 
+Essendo la densità veicolare sulle autostrade indubbiamente 
+maggiore di quella sulle strade urbane, è possibile supporre che 
+ciò renda le prime più pericolose delle seconde.
+
+I file con incidenti 
 localizzati\footnote{Per localizzati si intende che è stato riportato nel dataset 
 il nome della strada in cui è avvenuto il sinistro}, 
-per tentare di rispondere a queste domande. 
+possono permettere di verificare la correttezza dell'ipotesi, 
+nonchè le differenze evidenziabili a parità di tipologia. 
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/autostrade/autostrade.png}
@@ -2963,31 +2965,31 @@ anche con le strade più trafficate, come l'Autostrada del Sole e l'Adriatica,
 tuttavia sono anche presenti, due strade statali, la SS1 e la SS16. 
 
 La motivazione dell'alto numero di incidenti su queste direttrici, potrebbe essere 
-l'estensione di queste. Infatti entrambe sono strade che corrono lungo tutta la 
-costa Italiana da nord a sud e, nella maggior parte delle tratte, 
+la loro estensione. Infatti entrambe sono strade che corrono lungo tutta la 
+penisola Italiana da nord a sud e, nella maggior parte delle tratte, 
 hanno solamente due corsie. 
 
 L'avere i sensi di marcia separati, e delle corsie designate al sorpasso, nel caso 
 delle autostrade, non può che essere un fattore che influenza negativamente 
 il numero degli incidenti. 
 D'altra parte, l'essere costretti a sorpassare sulla corsia adibita al senso di 
-marcia opposto, nel caso della SS1 e SS16, può portare a un aumento dei 
+marcia opposto, nel caso della SS1 e SS16, può portare ad un incremento dei 
 sinistri. 
 
-Va sottolineato che quelle riportate sono solamente ipotesi, e che servirebbero 
-dati più precisi per capire se esistano tratte particolarmente 
-pericolose lungo queste strade. 
+Purtroppo l'impossibilità di reperire dati precisi in merito, 
+non consente di confutare le ipotesi con il dovuto grado di certezza.
+Particolarmente utili sarebbero le coordinate di incidenti avvenuti lungo queste direttrici, 
+in modo da poter individuare zone particolarmente pericolose.
 
 \subsection{Analisi delle tratte pericolose lungo le principali strade statali}
 \todo{Da leggere}
 
 Nonostante il dataset ACI non fornisca le coordinate geografiche degli incidenti avvenuti, 
 un modo per aumentare la precisione dei dati a disposizione, potrebbe essere il 
-dividere i sinistri in base alla provincia. 
+ripartire i sinistri per provincia. 
 
-Nonostante il procedimento sia stato eseguito solo per le strade statali, le stesse categorie 
-sono presenti anche per le autostrade e le strade provinciali, e un'analisi più 
-approfondita potrebbe includere queste informazioni. 
+Il procedimento è stato eseguito solo per le strade statali, 
+ma per un'analisi più dettagliata di potrebbe estendere la verifica anche alle autostrade.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{img_unite/tratti_ss1_ss16.png}
@@ -3007,7 +3009,7 @@ Lo stesso grafo, realizzato per la SS16, è rappresentato nella figura destra de
 In questo caso, il picco di scontri avviene nella provincia 
 di Bari, con quasi $200$ incidenti e $400$ feriti nel 2018. 
 
-Una provincia che salta all'occhio invece, per dei valori bassi è quella di Pescara. 
+Una provincia che si differenzia vistosamente, per dei valori minori è quella di Pescara. 
 Dopo aver eseguito il codice sottostante, tuttavia, si è osservato che tutte le righe 
 del dataset per questa zona riportano valori uguali a zero, eccetto una. 
 
@@ -3018,13 +3020,13 @@ ss16 = data[data['CODICE'] == 'SS01601']
 pescara = ss16[ss16['PROVINCIA'] == 'Pescara'][['INC', 'FER']]
 \end{code}
 
-Dopo un'osservazione superficiale questo risultato potrebbe 
-essere considerato un errore nei dati. 
-Tuttavia, considerando che la SS16 in questa provincia non 
-sia particolarmente estesa, è plausibile che durante l'anno sia avvenuto un solo incidente. 
-A supportare questa teoria, nella figura \ref{fig:ss16-pescara} si osserva come 
-questa direttrice, all'ingresso in città, diventi una strada urbana e, molto probabilmente, 
-sia registrata con un altro nome. 
+Osservando superficialmente i dati, si potrebbe essere portati a pensare 
+che ci sia un errore di base nel conteggio dei valori. 
+Del resto, considerando cha la SS16 in questa provincia non è molto lunga, 
+può essere plausibile che durante l'anno sia avvenuto un solo incidente. 
+A supporto i tale tesi, nella figura \ref{fig:ss16-pescara} si nota che questa direttrice, 
+all'ingresso in città, diventi una strada urbana e molto probabilmente venga 
+registrata con un altro nome.
 
 \begin{figure}
     \hfill\includegraphics[width=0.7\linewidth]{img/pescara_ss16.png}\hspace*{\fill}
@@ -3032,10 +3034,11 @@ sia registrata con un altro nome.
     \label{fig:ss16-pescara}
 \end{figure}
 
-Da un'analisi di questo tipo, non è facile trarre conclusioni approfondite, in quanto la 
-zona in cui può essere avvenuto lo scontro è particolarmente ampia, 
-e il numero maggiore di sinistri in un luogo potrebbe essere semplicemente 
-dovuto all'estensione della strada nella provincia sotto osservazione. 
+Da un'analisi di questo tipo, non è facile trarre conclusioni approfondite 
+o certe, data l'ampiezza della zona in cui può essere avvenuto il sinistro. 
+Così pure il maggior numero di incidenti per provincia potrebbe essere dovuto 
+semplicemente alla maggiore o minore estensione della strada nella 
+provincia sotto osservazione. 
 Inoltre, a eccezione di alcuni luoghi, come Bari, Savona, Viterbo e Massa-Carrara, 
 la maggior parte degli incidenti sembrano essere omogeneamente distribuiti 
 in tutte le colonne presenti nel grafo. 
@@ -3049,8 +3052,7 @@ si potrebbe verificare l'esistenza di tratti particolarmente pericolosi.
 \todo{Da Leggere}
 
 Tornando a concentrarsi sui dati riguardanti le autostrade, 
-sarebbe interessante sapere se quelle 
-con più incidenti cambino al cambiare dell'anno. 
+sarebbe interessante sapere ci sia una variazione di incidenti con il trascorrere degli anni. 
 Una motivazione di questo fenomeno potrebbe essere il cambiamento 
 delle località di vacanza preferite. 
 Nel 2018, le mete più frequentate sono state Puglia e 
@@ -3059,7 +3061,7 @@ una percentuale sostanziale di turisti si è recata in
 Emilia Romagna e Liguria\cite{REPORT_ISTAT_2019:1}. 
 
 Avendo a disposizione i dati di tutte le annate, a partire dal 2010 fino al 2018, 
-è possibile controllare se esistano anni con un volume di 
+è possibile verificare se esistano anni con un volume di 
 sinistri in Agosto particolarmente alto. 
 
 \begin{figure}
@@ -3069,18 +3071,17 @@ sinistri in Agosto particolarmente alto.
 \end{figure}
 
 Controllando le prime cinque direttrici per incidentalità ogni anno, 
-raffigurate nel grafo \ref{fig:autostrade-anno}, si ottiene un'immagine 
-abbastanza consistente, in quanto le tratte in testa alla classifica sono 
-sempre le stesse. 
+raffigurate nel grafo \ref{fig:autostrade-anno}, si ottiene 
+un risultato decisamente definito, vista la ripetizione delle medesime 
+tratte ai vertici della classifica.
 
 La strada statale Adriatica è sempre in prima posizione, con una media di $171.5$ 
 sinistri nel mese di Agosto. 
 Le posizioni successive invece cambiano a seconda dell'anno, in particolare però, 
 nell'autostrada A4 (Torino-Trieste) il numero di incidenti è progressivamente cresciuto, 
-evento possibilmente dovuto all'aumento di popolarità delle vacanze 
-in montagna anche nel periodo estivo. 
+evento imputabile alla nuova popolarità delle vacanze in montagna anche nel periodo estivo. 
 
-Facendo utilizzo del dataset Istat riguardante il turismo in Italia, e in 
+Utilizzando il dataset Istat riguardante il turismo in Italia, e in 
 particolare sfruttando due indicatori, Tasso di 
 Turisticità\footnote{Tasso di Turisticità: indica il numero di turisti 
 presenti ogni 100.000 abitanti\cite{ONTIT:1}} 
@@ -3100,35 +3101,32 @@ La Lombardia, infine, è stata aggiunta per assicurarsi che il comportamento del
 di alpine non fosse comune a tutto il Nord Italia. 
 
 Ciò che si può concludere, oltre al fatto che le zone di montagna abbiano 
-un tasso di turisticità particolarmente alto, probabilmente per il numero 
-ristretto di abitanti, 
-è che, a partire dal 2015, è presente una crescita nel volume di turisti nelle località 
-del Nord Italia a eccezione della Lombardia, che questo incremento non è visibile nelle 
-destinazioni di mare. 
+un tasso di turisticità particolarmente alto, rapportato al minor numero di residenti,
+è che, a partire dal 2015, sia presente una crescita nel volume di turisti nelle località 
+del Nord Italia a eccezione della Lombardia, e che questo incremento non è visibile nelle 
+destinazioni marittime. 
 
 In particolare, rispetto al 2015, in Trentino nel 2018 si ha un aumento 
-di turisti del $11.9$ \%, mentre eseguendo lo stesso calcolo rispetto alla 
+di turisti del $11.9$ \%, mentre rispetto alla 
 media\footnote{Calcolata sull'insieme di anni disponibili, quindi 
 a partire dal 1995 fino al 2018} l'aumento è del $14.7$ \%. 
 
 In Valle d'Aosta, allo stesso modo, l'incremento di turisti nel 2018 
-rispetto al 2015 è del $13$ \%, mentre questo è del $7.6$ \% rispetto alla media annuale. 
+rispetto al 2015 è del $13$ \%, mentre scende al $7.6$ \% rispetto alla media annuale. 
 
-Va sottolineato infine, che non è possibile dire con sicurezza che 
-la crescita in popolarità delle zone di montagna sia alla causa dell'aumento 
-di incidenti sull'autostrada Torino-Trieste. 
-
-Infatti, su quest'ultima, se si osservano i dati nell'insieme totale degli otto anni, 
-il numero di sinistri rimane relativamente costante, 
-con $99$ scontri nel 2011, e $97$ nel 2018. 
+Occorre evidenziare, infine, che non è possibile stabilire una relazione 
+tra la crescita di popolarità delle zone montane, 
+con l'aumento di incidenti sull'autostrada Torino-Trieste. 
+Il numero di sinistri, infatti rimane sostanzialmente costante negli anni analizzati, 
+variando da $99$ incidenti nel 2011 a $97$ nel 2018. 
 
 \subsection{Differenze di incidenti su autostrade in base al mese dell'anno}
 \todo{Da Leggere}
 
 Una questione, di cui ci si è occupati tramite dati Istat in precedenza, è 
 quella dei mesi con maggiore incidentalità. 
-Il dataset ACI permette di individuare gli stessi cambiamenti di tendenza trovati nei 
-capitoli precedenti, e in più però divide i sinistri in base alla strada. 
+Il dataset ACI permette di individuare gli stessi cambiamenti di tendenza rilevati nei 
+capitoli precedenti, aggiungendo la discrimina della tipologia di strada. 
 
 In particolare, nell'analisi precedente si era individuato un decremento di scontri 
 nei mesi estivi nella provincia di Milano, e il comportamento opposto a 
@@ -3158,18 +3156,15 @@ in Luglio e Agosto e in generale nei mesi estivi.
 Isolando gli incidenti avvenuti sul Grande Raccordo Anulare a Roma, e quelli avvenuti 
 sull'Adriatica, raffigurati nel grafo \ref{fig:adriatica-roma}, si osserva, 
 nel primo caso, un numero di sinistri per mese molto omogeneo, a eccezione di 
-Agosto, quando avviene un calo del $46$ \% rispetto alla media mensile. 
+Agosto, quando si rileva un calo del $46$ \% rispetto alla media mensile. 
 D'altra parte, nel caso dell'Adriatica, è presente una campana con apice nei 
 mesi di Luglio e Agosto, comportamento opposto a quello sull'autostrada 
 romana. 
 
-Come ultimo quesito, bisognerebbe domandarsi se ha senso dire che il mese dell'anno 
-influenzi l'incidentalità. 
-Di certo il questo indicatore sembra essere un buon stimatore 
-per i numero di sinistri. 
-Tuttavia va ricordato che sono tutti i fattori 
-nascosti in questa indagine, che variano mensilmente, a influenzare l'esito, e 
-non il cambio della data. 
+L'analisi si conclude quindi asserendo che l'incidentalità sicuramente subisce 
+variazioni anche profonde, in base alla stagionalità, ma certo le variabili 
+che intervengono sono tante, la maggior parte delle quali sono
+a loro volta influenzate dal trascorrere dei mesi.
 
 %\clearpage%
 \subsection{Analisi degli incidenti in orari di punta su autostrade}
@@ -3209,24 +3204,26 @@ andare e tornare dai luoghi di lavoro.
 \end{figure}
 
 La heatmap \ref{fig:tangenziali-autostrade} conferma, per alcune autostrade, 
-l'esistenza di picchi di incidenti durante gli orari di punta. 
-In particolare sono molto visibili per la A4 Torino-Trieste, 
+l'esistenza di picchi di incidenti durante gli orari di punta ad esempio, 
+sulla A4 Torino-Trieste, 
 per la Tangenziale Ovest e per la Tangenziale Est. 
 
 \`E possibile ipotizzare che queste siano le strade più utilizzate per 
-andare a lavoro? 
+raggiungere i luoghi di lavoro? 
 
 Certamente la maggior parte dei residenti a Milano non utilizzerà le tratte incluse 
-nell'ultimo grafico, poiché essendo già a Milano, viaggeranno lungo le direttrici urbane. 
+nell'ultimo grafico, poiché essendo già a Milano, 
+viaggeranno lungo le direttrici urbane, o utilizzando i mezzi pubblici. 
 Tuttavia, per quanto riguarda i pendolari, è molto probabile che, quelli provenienti 
-da Varese, Busto Arsizio o Novara, facciano uso della Tangenziale Ovest, 
+da nord, ad esempio da Varese, Busto Arsizio o Novara, 
+facciano uso della Tangenziale Ovest, 
 e dunque siano registrati nei conteggi. 
 
 Questa stima, di certo, non permette di affermare con sicurezza 
 che la maggior parte dei pendolari utilizzino le strade prese in considerazione 
 nei grafi, 
 tuttavia, gli incidenti durante le ore di punta sulle autostrade A4 e sulle 
-Tangenziali sono particolarmente alti e, avendo a disposizione dati più 
+Tangenziali sono particolarmente frequenti e, avendo a disposizione dati più 
 precisi, per esempio sulle tratte percorse dai pendolari, sarebbe possibile 
 realizzare analisi più approfondite. 
 
@@ -3239,9 +3236,9 @@ utilizzate per recarsi a lavoro a Milano.
 Sarebbe interessante realizzare un calcolo simile, per quanto riguarda le autostrade 
 più percorse per spostarsi in località di vacanza. 
 
-Non è un segreto che, durante il mese di Agosto, si abbia il maggior numero di 
-partenze per le vacanze e, in genere, per quanto riguarda i viaggi 
-in automobile, la tendenza è quella di spostarsi verso sud, 
+Sicuramente il mese di Agosto è quello interessato dal maggior numero 
+di partenze per le località di villeggiatura e sicuramente l'orientamento 
+di chi si sposta in automobile è quello di spostarsi verso sud, 
 e raggiungere le zone balneari. 
 
 \begin{figure}
@@ -3259,11 +3256,11 @@ heatmap, come nella figura \ref{fig:autostrade-anno}.
 La colorazione delle colonne, nel grafico \ref{fig:autostrade-anno-agosto}, è stata aggiunta per 
 facilitare la lettura delle direttrici, infatti a colori diversi corrispondono tratte diverse. 
 
-In particolare spiccano la SS16 Adriatica e SS1 Aurelia che, come già 
+In particolare emergono la SS16 Adriatica e SS1 Aurelia che, come già 
 detto in precedenza, essendo strade statali molto lunghe e con corsie di marcia 
-non separate, devono essere più pericolose rispetto alle autostrade, 
-per non parlare del fatto che entrambe le direttrici passano attraverso un 
-alto numero di centri abitati. 
+non separate, risultano più pericolose rispetto alle autostrade. 
+A questo si deve poi aggiungere l'attraversamento di diversi centri urbani, 
+che certo aumenta la possibilità di incidenti. 
 
 \`E anche curioso che le uniche autostrade presenti nel grafo siano la A1 e la A14, 
 solamente in occasione dell'estate 2011. 
