@@ -133,7 +133,7 @@ cioè letteralmente \quotestyle{lavoro libero} sono:
 \begin{itemize}
     \item Uso di una \textbf{Licenza Aperta}, cioè una licenza che permetta 
     il miglioramento e la circolazione del lavoro;
-    \item \textbf{Disponibilità di accesso} gratuita e completa di ogni informazione necessaria 
+    \item \textbf{Disponibilità di accesso} gratuita e completa a ogni informazione utile 
     alla comprensione del lavoro; 
     \item \textbf{Machine Readability}: il lavoro deve essere leggibile e modificabile da computer; 
     \item \textbf{Formato Libero}: cioè un formato che non pone restrizioni di utilizzo, 
@@ -161,12 +161,12 @@ Tim Berners-Lee, di cinque gruppi di categorizzazione dei dataset:
     per fornire un contesto tra le risorse. 
 \end{itemize}
 
-Va osservato, che la categorizzazione tramite le cinque stelle di Berners-Lee, 
+Va osservato, che la categorizzazione tramite le cinque stelle di Tim Berners-Lee, 
 tralascia svariati problemi, come l'assenza di vincoli sulla 
 frequenza di aggiornamento, o sulla granularità dei dati. 
 Queste cinque categorie iniziali hanno permesso, tuttavia, una prima valutazione 
 della qualità delle informazioni condivise, 
-e hanno aperto la strada alla creazione di nuove metriche, come 
+e hanno aperto la strada all'istituzione di nuove metriche, come 
 Open Data Certificates\footnote{https://certificates.theodi.org/en/} e FAIR data 
 principles\footnote{https://www.go-fair.org/fair-principles/}. 
 
@@ -195,7 +195,8 @@ possono infatti contribuire alla trasparenza nei rapporti tra Istituzioni ed ute
 anche se spesso l'ottenimento delle informazioni risulti complicato 
 se non del tutto impossibile.
 
-Ad esempio, una delle pagine che è possibile analizzare, è quella di richiesta dati 
+Ad esempio, una delle pagine che è possibile analizzare, è quella di richiesta 
+di dati del sito 
 Arpa\footnote{\url{https://www.arpalombardia.it/Pages/ARPA_Home_Page.aspx}}, 
 visibile in figura \ref{fig:arpa},
 soprattutto negli anni precedenti al 2017 quando, per ottenere le loro informazioni 
@@ -253,9 +254,12 @@ O ancora se le linee dei trasporti pubblici aumentino o diminuiscano il numero d
 Altre questioni interessanti potrebbero essere:
 \begin{itemize}
     \item Quali sono le strade più pericolose in Italia?
-    \item Si ha più probabilità di essere coinvolti in un sinistro in città o su una strada extraurbana? 
-    \item Le linee di trasporto pubblico influenzano il traffico positivamente o negativamente?
-    \item Il numero di passeggeri influisce sulla probabilità di essere coinvolti in un incidente? 
+    \item Si ha più probabilità di essere coinvolti in un sinistro in città o su una 
+    strada extraurbana? 
+    \item Le linee di trasporto pubblico influenzano il traffico positivamente 
+    o negativamente?
+    \item Il numero di passeggeri influisce sulla probabilità di essere coinvolti 
+    in un incidente? 
     \item Esistono fattori di distrazione per il conducente di un'automobile? 
 \end{itemize}
 
@@ -278,7 +282,8 @@ in cui è avvenuto il sinistro, come rettilineo, rotonda o semaforo.
 \lighttext{(\\
     \indent anno, provincia, \\
     \indent comune, giorno,\\
-    \indent localizzazione\_incidente\footnote{zona incidente come urbana, extraurbana o autostrada}\\
+    \indent localizzazione\_incidente\footnote{zona incidente come urbana, extraurbana 
+    o autostrada}\\
     \indent tipo\_di\_strada\footnote{numero di carreggiate della strada},\\
     \indent pavimentazione,\\
     \indent intersezione\_o\_non\_interse3\footnote{tipo di intersezione},\\
@@ -286,11 +291,13 @@ in cui è avvenuto il sinistro, come rettilineo, rotonda o semaforo.
     \indent condizioni\_meteorologiche, \\
     \indent natura\_incidente,\\
     \indent tipo\_veicolo\_a\footnote{questo campo è ripetuto per altri due veicoli},\\
-    \indent veicolo\_\_a\_\_\_et\_\_conducente\footnote{questo e i due campi successivi sono ripetuti anche per i passeggeri},\\
+    \indent veicolo\_\_a\_\_\_et\_\_conducente\footnote{questo e i due campi successivi 
+    sono ripetuti anche per i passeggeri},\\
     \indent veicolo\_\_a\_\_\_sesso\_conducente,\\
     \indent veicolo\_\_a\_\_\_esito\_conducente, \\
     \indent morti\_entro\_24\_ore,\\
-    \indent morti\_entro\_30\_giorni\footnote{questo insieme non contiene la categoria precedentemente},\\
+    \indent morti\_entro\_30\_giorni\footnote{questo insieme non contiene la categoria 
+    precedentemente},\\
     \indent feriti, Ora, trimestre\footnote{prima del 2014 questo campo è sostituito dall'anno}\\
 )}
 
@@ -299,9 +306,10 @@ la fonte è invece il giornale online TheSubmarine \cite{SUBMARINE:1}
 che, in un articolo riguardante l'incidentalità a Milano, 
 ha ottenuto dall'ente Istat la pubblicazione di una parte dei dati inerenti 
 incidenti avvenuti in città, nel 2016, con la relativa 
-posizione\footnote{La fonte è la stessa del dataset precedente, ma i proprietari dell'articolo sono 
-riusciti a fare pubblicare da Istat una parte delle posizioni geolocalizzate di incidenti a Milano, 
-normalmente private per proteggere la privacy delle persone coinvolte.}. 
+posizione\footnote{La fonte è la stessa del dataset precedente, ma i proprietari 
+dell'articolo sono riusciti a fare pubblicare da Istat una parte delle posizioni 
+geolocalizzate di incidenti a Milano, normalmente private per proteggere la privacy 
+delle persone coinvolte.}. 
 Il dataset in questione è abbastanza scarno, contiene solamente 
 l'incidente con la relativa posizione, indicata tramite coordinate geografiche. 
 
@@ -329,7 +337,7 @@ Una delle prime domande che ci si è posti, è stata se gli autovelox, installat
 nel tentativo di ridurre la velocità delle vetture, avessero influenza sul numero 
 degli incidenti del luogo. 
 
-Un primo dataset individuato, che riguardasse delle posizioni 
+Un primo dataset individuato, che riguardasse le coordinate 
 degli autovelox fissi, è stata una mappa 
 GoogleMyMaps\footnote{\url{https://www.google.com/maps/d/viewer?mid=1CBgMTvIDnbGo22-Y1f3rVcbeX4C0v_w1&ll=45.365557951599605\%2C10.03650113755961&z=8}} 
 creata da un utente anonimo, dunque senza possibilità di verificarne l'autenticità. 
@@ -524,7 +532,7 @@ trovato sul sito Zenodo\footnote{\url{https://zenodo.org/record/3992354}},
 che contiene questi campi, misurati ogni ora a Milano, a partire dal 2008, fino al 2018. 
 
 \lighttext{(\\
-    \indent Date\_Time: campo che contiene giorno, mese e anno,\\
+    \indent Date\_Time: contiene giorno, mese e anno,\\
     \indent Temperature: in gradi Celsius,\\
     \indent Dew\_Point: temperatura di condensazione,\\
     \indent Humidity : umidità,\\
@@ -537,7 +545,7 @@ che contiene questi campi, misurati ogni ora a Milano, a partire dal 2008, fino 
 Un altro fattore di cui ci si è chiesti l'influenza sull'incidentalità, è la 
 presenza, nella via o viale, di trasporti pubblici. 
 
-I dati riguardanti questi ultimi, hanno due provenienze, i primi sono 
+I dati riguardanti questi ultimi, provengono da due fonti, i primi sono 
 dati riferiti alle linee ATM, scaricati sul sito del comune di 
 Milano\footnote{\url{https://dati.comune.milano.it/dataset/ds532-atm-composizione-percorsi-linee-di-superficie-urbane}}, 
 contenenti informazioni quali il numero identificativo della linea, 
@@ -634,7 +642,7 @@ Per rimuovere i simboli superflui, si è fatto uso delle API di Google Maps,
 tramite il sito Jsfiddle\footnote{\url{https://jsfiddle.net/}}, un sito web che permette di 
 scrivere e eseguire codice JavaScript. 
 
-Gli screenshot realizzati rappresentano le zone dei Navigli 
+Gli screenshot realizzati rappresentano le zone nelle vicinanze dei Navigli 
 e dell'incrocio tra viale Bianca Maria e viale Ventidue Marzo a Milano. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1116,7 +1124,8 @@ le coordinate di sinistri in altre annate.
 informazioni "causali" lelepado: ho aggiunto la parte successiva 
 per spiegare meglio cosa manca}
 
-Non disponendo delle informazioni precedenti all'installazione degli autovelox, 
+Non disponendo delle informazioni sul comportamento delle vetture 
+precedentemente all'installazione degli autovelox, 
 non è possibile calcolare un contesto valido per quanto riguarda 
 i sinistri prima del 2016. 
 Nonostante ciò, avendo i dati riferiti al 2016, e le posizioni dei tutor 
@@ -1258,9 +1267,8 @@ for km, zona in zip(data['Incidenti per chilometro'], data['Incidenti per zona']
 print(incremento_percentuale_totale)
 \end{code}
 
-Sarebbe interessante poter visualizzare, in un solo valore, 
-l'incremento (o decremento) 
-globale, degli incidenti in zone vicine a 
+Sarebbe interessante poter visualizzare, tramite un solo valore numerico, 
+l'incremento (o il decremento) globale, degli incidenti in zone vicine a 
 autovelox\footnote{Si tenta di capire, con un solo numero, se la presenza di 
 telecamere nella zona aumenta o diminuisce il numero di sinistri}. 
 A causa delle zone menzionate in precedenza, che alzano di molto la media di sinistri, 
@@ -1434,7 +1442,7 @@ accurato della percentuale di maschi e femmine al volante.
 
 Si sono comunque contate le persone al volante nell vetture passanti a Somma 
 Lombardo\footnote{sul Sempione basso, strada urbana principale, 
-all'altezza chiesa di San Bernardino}, 
+nei pressi della chiesa di San Bernardino}, 
 tra le 15:00 e le 16:00 di Giovedì 5 Novembre 
 (settimana predente alla seconda quarantena della regione Lombardia), 
 sono stati ottenuti i seguenti risultati:
@@ -2079,7 +2087,7 @@ nel terzo trimestre in corrispondenza con le partenze per le vacanze, mentre nel
 altre località raffigurate, avviene il comportamento opposto poiché 
 queste sono spesso mete feriali. 
 
-Sarebbe interessante capire se esistano destinazioni di vacanza preferite, 
+Sarebbe interessante individuare l'esistenza di destinazioni di vacanza preferite, 
 indipendentemente dall'anno, o se queste cambino di stagione in stagione. 
 Si tenterà di rispondere a queste domande nei capitoli successivi. 
 
@@ -2259,7 +2267,7 @@ curve e gallerie, rispetto a tratti di strada, come incroci e semafori,
 quando i veicoli stanno ripartendo dopo una fermata.
 
 %\clearpage
-\subsection{Le tipologie di incidenti che provocano il maggior numero di feriti}
+\subsection{Le tipologie di sinistro che provocano il maggior numero di feriti}
 \todo{ATOK}
 
 Il dataset Istat contiene informazioni riguardanti il numero di persone coinvolte 
@@ -2527,7 +2535,7 @@ Anche nel grafico di sinistra è visibile la stessa impennata in corrispondenza
 del gruppo \columnstyle{18-29}, mentre in quello dei \columnstyle{65+} la 
 percentuale non risulta particolarmente alta. 
 
-Si può ipotizzare che l'incremento dei deceduti nelle fasce più anziane, sia dovuto al 
+Si può ipotizzare che l'incremento di deceduti nelle fasce più anziane, sia dovuto al 
 fatto che questi ultimi siano più propensi all'essere feriti in un incidente. 
 Nonostante ciò, le categorie centrali, in particolare \columnstyle{18-29 anni}, 
 una volta aggiustati i calcoli per popolazione standard, sembrano essere comunque 
@@ -2770,7 +2778,7 @@ incidenti.
 (a meno che non lo specifichi) valori assoluti, non in rapporto al traffico, 
 alla popolazione, ai km di strade, ecc. tienilo sempre ben presente}
 
-Avendo a disposizione dati riguardanti strade provinciali e autostrade, 
+Avendo a disposizione dati riguardanti le strade provinciali e le autostrade, 
 è stato realizzato lo stesso calcolo per entrambe le tipologie. 
 
 \begin{figure}
@@ -3067,7 +3075,7 @@ sinistri in Agosto particolarmente alto.
     \label{fig:autostrade-anno}
 \end{figure}
 
-Controllando le prime cinque direttrici per incidentalità ogni anno, 
+Controllando le prime cinque direttrici per incidentalità in ogni anno, 
 raffigurate nella heatmap \ref{fig:autostrade-anno}, si ottiene 
 un risultato decisamente definito, vista la ripetizione delle medesime 
 tratte ai vertici della classifica.
@@ -3425,9 +3433,8 @@ ha condiviso in formato libero, nelle metodologie di calcolo della classifica, s
 \end{quotation}
 
 \skipline
-Infine, 
-una problematica riscontrata con frequenza è stata la mancanza di uno standard per quanto 
-riguarda la nomenclatura delle colonne. 
+Infine, una problematica riscontrata con frequenza è stata la mancanza 
+di uno standard per quanto riguarda la nomenclatura delle colonne. 
 Le tabelle provenienti dal sito Istat, per esempio, nel 2011, hanno un campo denominato\\
 \indent\columnstyle{intersezione\_o\_non\_interse1},\\
 mentre nel 2018, la stessa informazione prende il nome di\\
