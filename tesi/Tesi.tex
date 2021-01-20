@@ -495,9 +495,9 @@ ma anche abitazioni e terreni, dove naturalmente non avvengono incidenti.
 Pertanto, il numero di sinistri per zona così ricavato, 
 è da considerarsi come un'approssimazione per difetto, o una stima del 
 \quotestyle{lower bound}, perché il valore è abbassato dalle aree in cui non 
-possono avvenire scontri tra vetture. 
+possono avvenire incidenti tra vetture. 
 Viceversa, i calcoli che utilizzano solamente la superficie stradale avranno 
-inevitabilmente volume di incidenti per chilometro maggiore. 
+inevitabilmente valori maggiori. 
 
 \section{Dati riguardanti il meteo}
 \todo{ATOK}
@@ -751,7 +751,7 @@ Cittametropolitana\footnote{\url{https://www.cittametropolitana.mi.it/export/sit
 \todo{ATOK}
 
 I dati riguardanti gli incidenti geolocalizzati, sono disponibili in un dataset 
-contenente una lista di punti indicanti latitudine e longitudine dello scontro. 
+contenente una lista di punti indicanti latitudine e longitudine dell'evento. 
 Ciò che delude, è che non è presente nessuna informazione aggiuntiva, 
 oltre alla posizione. 
 
@@ -1087,13 +1087,13 @@ molti viali provenienti dal centro storico, inevitabilmente
 meno trafficati. 
 
 Con lo stesso calcolo realizzato per le strade in pavé, risulta che 
-il numero di scontri per 
-chilometro quadrato, nel campione creato, sia di $220.89$ incidenti. 
+il numero di incidenti per 
+chilometro quadrato, nel campione creato, sia uguale a $220.89$. 
 
 Per quanto il risultato dell'analisi sulle strade in pavé abbia restituito un valore di 
 sinistri maggiore, non sarebbe sbagliato considerare i due numeri vicini. 
 Per rendere le informazioni più precise, disponendo di dati sulla 
-posizione degli scontri in più annate, e sapendo che il pavé è stato 
+posizione degli incidenti in più annate, e sapendo che il pavé è stato 
 rimosso da alcuni viali, sarebbe possibile eseguire un confronto 
 sulla stessa direttrice, avendo come unica variabile il cambio di pavimentazione. 
 
@@ -1110,7 +1110,7 @@ Informazioni sul posizionamento di alcune telecamere sono reperibili per
 l'anno 2014, e sono visualizzabili nella tabella \ref{ztl-milano}. 
 Tuttavia la localizzazione degli incidenti 
 è disponibile solo per il 2016, in quanto Istat non ha rilasciato 
-le coordinate degli scontri in altre annate. 
+le coordinate di sinistri in altre annate. 
 
 \todo{atrent: tutta questa sezione va resa più ipotetica perché non hai 
 informazioni "causali" lelepado: ho aggiunto la parte successiva 
@@ -1119,7 +1119,6 @@ per spiegare meglio cosa manca}
 Non disponendo delle informazioni precedenti all'installazione degli autovelox, 
 non è possibile calcolare un contesto valido per quanto riguarda 
 i sinistri prima del 2016. 
-
 Nonostante ciò, avendo i dati riferiti al 2016, e le posizioni dei tutor 
 già presenti in quell'anno, è possibile eseguire comunque il procedimento corretto, 
 se pur con dei dati non coerenti, per vedere se gli 
@@ -1169,8 +1168,8 @@ localizzati sono successivi al posizionamento delle telecamere.
     \label{fig:autovelox-incidenti}
 \end{figure}
 
-La mappa \ref{fig:autovelox-incidenti} è stata realizzata contando gli scontri avvenuti 
-nel raggio di un chilometro da ogni autovelox. 
+La mappa \ref{fig:autovelox-incidenti} è stata realizzata contando 
+gli eventi avvenuti nel raggio di un chilometro da ogni autovelox. 
 Va precisato che le \quotestyle{bolle} non indicano il raggio di conteggio degli incidenti, ma 
 il numero dei sinistri trovati. 
 La colorazione dei cerchi è stata aggiunta per 
@@ -1215,10 +1214,10 @@ difficoltosa osservando solo l'ampiezza di questi.
 \footnotetext[2]{Cavalcavia del Ghisallo}
 
 Una volta trovati i sinistri totali presenti nel raggio, 
-è possibile calcolare il numero di incidenti per chilometro quadrato 
+è possibile calcolare il numero di eventi avvenuti per chilometro quadrato, 
 in base all'area utilizzata. 
-Alla tabella degli autovelox sono aggiunte tre colonne, contenenti gli scontri totali, 
-quelli per chilometro e i sinistri registrati nella zona municipale corrispondente. 
+Alla tabella degli autovelox sono aggiunte tre colonne, contenenti gli incidenti totali, 
+quelli per chilometro quadrato e quelli registrati nella zona municipale corrispondente. 
 
 \begin{code}
 autovelox_2014['incidenti_vicini'] = gp.GeoSeries(df)
@@ -1236,8 +1235,8 @@ Poiché si sta utilizzando un raggio di un chilometro, e si vuole ottenere il
 numero di incidenti per chilometro quadrato, l'area ottenuta è $3.14$. 
 
 Per facilitare la lettura della tabella precedente, nella figura \ref{fig:confronto-autovelox} 
-è visibile sia il confronto tra gli scontri vicino a autovelox, 
-sia quanti sinistri avvengono nel rispettivo municipio. 
+è visibile sia il confronto tra i sinistri vicino a autovelox, 
+sia tra quelli che avvengono nel rispettivo municipio. 
 In alcuni casi, il numero di incidenti sembra essere ridotto dalla presenza 
 della telecamera,  
 tuttavia nella maggior parte delle zone, e soprattutto in prossimità di Viale Serra e 
@@ -1300,7 +1299,7 @@ sinistro.
 
 %\clearpage
 \subsection{Le tipologie di veicoli che commettono incidenti dipendono dalla conformazione della strada?}
-\todo{atrent: non avevo detto di riformulare il titolo? lelepado: cambiato}
+\todo{atrent: non avevo detto di riformulare il titolo? lelepado: cambiato - atrent: rivediamoli TUTTI insieme}
 \todo{ATOK}
 
 Una prima analisi che è possibile realizzare, utilizzando il dataset Istat è, 
@@ -1389,8 +1388,8 @@ Avendo a disposizione le informazioni sul genere del conducente che ha causato l
 L'istogramma in figura \ref{fig:differenza-uomo-donna} mostra con quale frequenza 
 gli incidenti sono causati da uomini e da donne, per tre diverse tipologie di strada. 
 
-Per quanto riguarda il luogo del sinistro, non è possibile individuare alcuna 
-variazione nella percentuale di scontri. 
+Per quanto riguarda la localizzazione, non è possibile individuare alcuna 
+variazione nella percentuale di sinistri. 
 La differenza maggiore si registra sulle strade urbane, dove le donne causano circa il 
 $5$ \% di incidenti in più, nonostante ciò 
 questi tendono ad essere causati per il $75$ \% circa da uomini e 
@@ -1459,7 +1458,8 @@ sinistro sia uguale a quella di un uomo, i risultati ottenuti sarebbero
 gli stessi osservabili nel campione. 
 
 \todo{atrent: potresti trovare bibliografia a supporto delle tue conclusioni, 
-anche solo il fatto che le assicurazioni fanno pagare meno alle donne (almeno così sapevo)}
+anche solo il fatto che le assicurazioni fanno pagare meno alle donne (almeno così sapevo) 
+lelepado: ho trovato un articolo del corriere, citato sotto}
 A smentire ulteriormente lo stereotipo illustrato all'inizio di questo capitolo, sono 
 anche le compagnie di assicurazione di automobili che, fino al 2011, offrivano 
 alle donne polizze meno costose. 
@@ -1470,8 +1470,6 @@ sul sesso del conducente \cite{CORRIERE:1}, che precedentemente riducevano circa
 
 %\clearpage
 \subsection{Il numero di passeggeri presenti nella vettura influisce sulla probabilità di commettere un incidente?}
-\todo{atrent: secondo me molti titoli vanno rifatti, mi suonano strani dal 
-punto di vista statistico lelepado: ne ho rifatta buona parte}
 \todo{ATOK}
 
 Il dataset Istat dispone anche di una serie di colonne corrispondenti all'età, sesso 
@@ -1486,7 +1484,7 @@ di essere causa di incidente.
     \label{fig:passeggeri-milano-rimini}
 \end{figure}
 
-La figura \ref{fig:passeggeri-milano-rimini} mostra che oltre il $90$ \% degli scontri
+La figura \ref{fig:passeggeri-milano-rimini} mostra che oltre il $90$ \% degli eventi
 avviene quando nel veicolo è presente solo il conducente, 
 cioè la colonna indicata con 0. 
 Si sono prese in considerazione le provincie di Milano, Rimini e Bari, 
@@ -1568,7 +1566,7 @@ Tuttavia, il numero di sinistri nei quali è presente solo il conducente
 cresce allo stesso modo, e i quelli con più di una persona nel veicolo 
 salgono in maniera ancora maggiore. 
 Queste tendenze riscontrate nell'aumento dell'ampiezza dell'area blu, nel grafo 
-\ref{fig:incremento-incidenti}, che mostra un minor numero di scontri con solo il conducente, 
+\ref{fig:incremento-incidenti}, che mostra un minor numero di sinistri con solo il conducente, 
 e per sottrazione, l'incremento delle altre categorie. 
 
 L'ampia crescita di incidenti, a partire dal 2013, si arresta l'anno successivo e, 
@@ -1710,7 +1708,7 @@ stima appena realizzata.
 Sono presenti molte similitudini tra gli ingressi alla zona a traffico limitato, 
 rappresentati nel grafico di sinistra nella 
 figura \ref{fig:rapporto-incidenti-traffico} e l'immagine \ref{fig:week-weekend-milano}, 
-raffigurante gli scontri a Milano, suddivisi per orario. 
+raffigurante gli eventi a Milano, suddivisi per orario. 
 In particolare, tra traffico in area C a Milano e 
 numero incidenti, si è calcolata una correlazione pari a $0.877$. 
 
@@ -1746,13 +1744,13 @@ Chiaramente, con l'aumento del numero di automobili in viaggio, aumenta anche
 la pericolosità delle strade e la probabilità che avvenga un incidente. 
 
 \subsection{Differenze nel numero di incidenti in orari notturni}
-\todo{Da leggere}
+\todo{ATOK}
 
 Nel grafo \ref{fig:week-weekend}, si è potuto osservare come, durante le 
 ore notturne, il comportamento degli incidenti tra settimana lavorativa e weekend 
 sia l'opposto, con maggior numero di sinistri durante il 
 Sabato e la Domenica. 
-Nell'immagine \ref{fig:ore-notte} sono raffigurati gli scontri avvenuti 
+Nell'immagine \ref{fig:ore-notte} sono raffigurati gli eventi avvenuti 
 nelle principali ore della notte, divise tra settimana e weekend. 
 
 Chiaramente, durante il fine settimana si ha un numero 
@@ -1806,7 +1804,7 @@ siano quelli più tranquilli.
 
 %\clearpage
 \subsection{Influenza delle vacanze sull'incidentalità nel mese di Agosto}
-\todo{Da Leggere}
+\todo{ATOK}
 
 Alle analisi eseguite nei capitoli precedenti, 
 è possibile aggiungere una valutazione anche riguardo i mesi più pericolosi per spostarsi, 
@@ -1854,7 +1852,7 @@ Ciò che si potrebbe dedurre, in modo errato, dalla figura \ref{fig:milano-mese}
 è l'idea che, in Agosto, ci si metta alla guida con più attenzione, 
 e dunque si causino meno incidenti. 
 Pur non potendo escludere a priori tale ipotesi, i fattori che determinano 
-il decremento degli scontri possono essere molteplici, 
+il decremento dei sinistri possono essere molteplici, 
 ma certamente l'esodo verso le località di villeggiatura ha un peso marcato.
 
 Un modo per verificare questa teoria è controllare se il traffico, 
@@ -1911,7 +1909,7 @@ In secondo luogo, per quanto riguarda i trimestri, è chiaro che quello estivo a
 un numero minore di incidenti. 
 Tuttavia, in questo caso, il volume del primo periodo è comparabile 
 con quello del terzo, 
-mentre durante il secondo e il quarto avvengono la maggior parte degli scontri. 
+mentre durante il secondo e il quarto avvengono la maggior parte dei sinistri. 
 
 La maggiore omogeneità nei risultati calcolati in questa heatmap, 
 è dovuta all'utilizzo di campioni più ampi, di novanta giorni e non di trenta, 
@@ -1919,7 +1917,7 @@ che permettono di bilanciare i valori fuori dalla norma,
 come quelli riscontrati per Agosto. 
 
 \subsection{Differenze di incidenti in località di mare nei mesi estivi}
-\todo{Da leggere}
+\todo{ATOK}
 
 Osservando il grafo in figura \ref{fig:milano-mese}, 
 ci si può chiedere se alla diminuzione degli incidenti estivi in città, 
@@ -2047,7 +2045,7 @@ la guida particolarmente virtuosa e attenta.
 
 Per avere una visione di insieme delle tendenze di tutti gli anni disponibili, 
 è possibile tracciare 
-il grafo \ref{fig:aosta-rimini-milano-trimestre}, dividendo gli scontri 
+il grafo \ref{fig:aosta-rimini-milano-trimestre}, dividendo gli eventi 
 per trimestre\footnote{Per primo trimestre si intende Gennaio, Febbraio e Marzo ecc.}. 
 
 \begin{figure}
@@ -2055,6 +2053,9 @@ per trimestre\footnote{Per primo trimestre si intende Gennaio, Febbraio e Marzo 
     \caption{Incidenti per trimestre in Valle d'Aosta, a Rimini e a Milano}
     \label{fig:aosta-rimini-milano-trimestre}
 \end{figure}
+\todo{atrent: attenzione alle scale!!! dovunque tu vuoi fare un confronto 
+visivo tra grafici devi avere la stessa scala!!! vale dappertutto, l'ho notato qui, 
+fai verifica su tutta la tesi}
 
 In tutti i graficinella figura \ref{fig:aosta-rimini-milano-trimestre}, 
 si osserva, come già visto in precedenza, che dall'anno 2015 si ha un'ampia crescita  
@@ -2092,7 +2093,7 @@ sia comparabile o se alcuni tipi di sinistri siano più pericolosi di altri.
 
 %\clearpage
 \subsection{Frequenza di incidenti per tipologia }
-\todo{Da Leggere}
+\todo{ATOK}
 
 Per rispondere alla prima delle domande poste nell'introduzione, è possibile, 
 utilizzando i dati a disposizione, contare la frequenza di ogni categoria di incidente. 
@@ -2149,7 +2150,7 @@ di incroci in una località, sarebbe possibile giustificare
 la maggiore frequenza di sinistri di un tipo rispetto a un altro. 
 
 \subsection{Le tipologie di strada con maggiore indice di mortalità}
-\todo{Da Leggere}
+\todo{ATOK}
 
 Per tutte queste analisi, in cui si utilizzano le informazioni su tipologie 
 di incrocio e di strada, 
@@ -2256,7 +2257,7 @@ quando i veicoli stanno ripartendo dopo una fermata.
 
 %\clearpage
 \subsection{Le tipologie di incidenti che provocano il maggior numero di feriti}
-\todo{Da Leggere}
+\todo{ATOK}
 
 Il dataset Istat contiene informazioni riguardanti il numero di persone coinvolte 
 in incidenti, in particolare l'età, il sesso e l'esito dove, 
@@ -2312,18 +2313,18 @@ o alla pericolosità del tipo di scontro.
     \label{fig:perc-numero-feriti}
 \end{figure}
 
-La figura \ref{fig:perc-numero-feriti} mostra la distribuzione di scontri con un dato numero 
+La figura \ref{fig:perc-numero-feriti} mostra la distribuzione di incidenti con un dato numero 
 di feriti, divisa per la percentuale di sinistri del tipo interessato. 
 
-Avendo a disposizione un indice di incidenti, corretto in base al volume della categoria, 
+Avendo a disposizione un indice, corretto in base al volume della categoria, 
 si osserva come alcune di queste, come \columnstyle{urto con ostacolo} 
 e \columnstyle{sbandamento}, favoriscano una sola persona lesa, mentre altre, 
 come i \columnstyle{tamponamenti} e gli \columnstyle{scontri frontali}, presentino 
-una maggiore percentuale di scontri con più di un ferito. 
+una maggiore percentuale di eventi con più di un ferito. 
 
 %\clearpage
 \subsection{Le tipologie di incroci che favoriscono incidenti con coinvolgimento di pedoni}
-\todo{Da leggere}
+\todo{ATOK}
 
 Il dataset Istat fornisce varie informazioni riguardanti i pedoni coinvolti in un 
 incidente, tramite le colonne sottostanti, ripetute quattro volte, 
@@ -2407,7 +2408,7 @@ segnaletica non ben evidenziata.
 
 %\clearpage
 \subsection{Differenze nell'età dei pedoni coinvolti in incidenti}
-\todo{Da leggere}
+\todo{ATOK}
 
 Può sembrare scontato che, qualora coinvolti in un incidente, un pedone ventenne e 
 uno settantenne non abbiano la stessa probabilità di rimanere feriti. 
@@ -2540,7 +2541,7 @@ una volta aggiustati i calcoli per popolazione standard, sembrano essere comunqu
 quelle più coinvolte in sinistri. 
 
 \subsection{Differenze nell'età dei conducenti che causano sinistri}
-\todo{Da Leggere}
+\todo{ATOK}
 
 Come specificato nel capitolo precedente, il dataset Istat dispone di 
 informazioni sull'età dei pedoni coinvolti. Analogamente a questi, 
@@ -2558,7 +2559,7 @@ che provocano un numero di sinistri particolarmente alto.
 
 In primo luogo, il grafo destro nella figura \ref{fig:indice-mortalita-eta} contiene 
 la percentuale di incidenti totali commessi per fascia di età del conducente, insieme 
-al numero di morti in questi scontri\footnote{Ogni punto contiene sinistri in 
+al numero di morti in questi eventi\footnote{Ogni punto contiene sinistri in 
 cui il conducente rientra nella fascia di età, la persona deceduta tuttavia potrebbe non 
 essere la persona alla guida}. 
 
@@ -2622,7 +2623,7 @@ località\footnote{Per località si intende il nome della via in cui è avvenuto
 per comune, per mese, per giorno della settimana o per ora. 
 
 \subsection{Regioni italiane con maggior numero di incidenti}
-\todo{Da leggere}
+\todo{ATOK}
 
 I dati ACI, in particolare i file riguardanti la 
 localizzazione degli incidenti, contengono informazioni che è  
@@ -2655,9 +2656,9 @@ in quanto il volume di questi, in figura \ref{fig:incidenti-per-regione},
 Per quanto riguarda, invece, il numero di incidenti 
 nella heatmap \ref{fig:regione-heatmap}, 
 si nota che questi non cambiano molto di anno in anno, e le regioni con maggiore quantità 
-di sinistri rimangono sempre Lombardia e Veneto. 
+di eventi rimangono sempre Lombardia e Veneto. 
 
-Per controllare le tendenze di incremento e decremento di scontri per regione, 
+Per controllare le tendenze di incremento e decremento di sinistri per regione, 
 si è calcolata la deviazione standard\footnote{Deviazione standard: 
 misura della distanza dei dati di un campione dalla media 
 (fonte: \citetitle{PROB_E_STATISTICA:1}\cite{PROB_E_STATISTICA:1}, 
@@ -2739,7 +2740,7 @@ la precisione del numero di patenti come fattore utilizzato per la stima
 del traffico non è da considerarsi particolarmente attendibile. 
 
 \subsection{Differenze di incidenti tra mesi estivi e invernali}
-\todo{da leggere}
+\todo{ATOK}
 
 Sarebbe interessante verificare se i dati ACI confermano le tendenze trovate tramite 
 le informazioni Istat, e vedere se nel Sud Italia, il numero di incidenti cresca 
@@ -2766,12 +2767,15 @@ nelle località marittime.
 Questo tipo di analisi verrà eseguita nei capitoli successivi. 
 
 \subsection{Province italiane con maggior numero di incidenti}
-\todo{Da leggere}
+\todo{ATOK}
 
 Utilizzando ancora una volta, i file geojson trovati sul repository Github di 
 Guglielmo Celata riguardanti le province, 
 è possibile creare delle heatmap raffiguranti in quali, tra queste, avvengano più 
 incidenti. 
+\todo{atrent: considerazione che vale un po' ovunque, attenzione che stai dando 
+(a meno che non lo specifichi) valori assoluti, non in rapporto al traffico, 
+alla popolazione, ai km di strade, ecc. tienilo sempre ben presente}
 
 Avendo a disposizione dati riguardanti strade provinciali e autostrade, 
 è stato realizzato lo stesso calcolo per entrambe le tipologie. 
@@ -2787,7 +2791,7 @@ avvenuti rispettivamente sulle autostrade e nelle strade provinciali.
 In entrambi i casi, si nota che la provincia di Milano è quella caratterizzata da 
 un maggior numero di incidenti. 
 D'altra parte, per quanto riguarda le differenze, a Bergamo e Como, 
-la quantità di scontri cresce molto nella seconda categoria di strade osservata. 
+la quantità di sinistri cresce molto nella seconda categoria di strade osservata. 
 
 Lo stesso calcolo è stato eseguito per le province del Lazio, visto che nel capitolo 
 precedente sugli incidenti per regione, si era notata ampia disparità tra i due gruppi. 
@@ -2807,13 +2811,13 @@ Inoltre, la provincia di Frosinone ha un numero particolarmente alto di incident
 autostrade, mentre quella di Latina, al contrario, ha un maggiore incremento di 
 sinistri su strade provinciali. 
 
-Non è difficile trovare il motivo di questi valori, in quanto l'autostrada A1 passa 
+Non è difficile trovare il motivo di questo comportamento, in quanto l'autostrada A1 passa 
 attraverso la prima provincia e non la seconda, e conseguentemente provoca 
-un'impennata di scontri nella prima heatmap. 
+un'impennata di valori nella prima heatmap. 
 
 %\clearpage
 \subsection{Le strade in provincia di Milano con maggiore numero di incidenti}
-\todo{Da leggere}
+\todo{ATOK}
 
 Approfondendo le analisi del capitolo precedente, è possibile calcolare quali siano 
 le strade più pericolose, concentrandosi sulla provincia di Milano. 
@@ -2843,7 +2847,7 @@ più pericolose.
 
 %\clearpage
 \subsection{Analisi della correlazione tra numero incidenti e numero di feriti}
-\todo{da leggere}
+\todo{ATOK}
 
 Facendo uso dei dataset ACI a disposizione, è possibile stabilire l'esistenza di 
 correlazione tra morti e incidenti, o tra morti e feriti?
@@ -2918,10 +2922,10 @@ rilevanti per questo calcolo.
     \end{tabular}
 \end{center}
 
-Un'ipotesi, è che il dataset contenga solo scontri con almeno un ferito, 
+Un'ipotesi, è che il dataset contenga solo eventi con almeno un ferito, 
 e quindi ignori tutti i sinistri non particolarmente significativi. 
 D'altra parte, tenendo conto che si sono utilizzati dati raccolti lungo 
-le autostrade, è anche possibile che la maggior parte degli scontri comporti 
+le autostrade, è anche possibile che la maggior parte degli eventi comporti 
 un alto numero di infortunati. 
 
 Il coefficiente di Pearson, per quanto riguarda i campi \columnstyle{Incidenti} 
@@ -2936,7 +2940,7 @@ I valori riguardanti i morti invece, sono molto meno vicini a uno, probabilmente
 per il minor numero di sinistri con esiti mortali, che rende il campione più ristretto. 
 
 \subsection{Le autostrade italiane con maggior numero di incidenti}
-\todo{Da Leggere}
+\todo{ATOK}
 
 Il dataset ACI raggruppa in un solo dataset sia le autostrade che le strade statali, 
 esistono differenze sostanziali tra le due categorie? \todo{correzione}
@@ -2955,10 +2959,10 @@ nonchè le differenze evidenziabili a parità di tipologia.
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/autostrade/autostrade.png}
     \caption{Autostrade e strade statali con più incidenti nel 2018}
     \label{fig:incidenti-autostrade}
-\end{figure}
+\end{figure}\todo{atrent: vale discorso assoluto/relativo}
 
 Nella figura \ref{fig:incidenti-autostrade} sono  raffigurate le strade con 
-maggiore numero di scontri nel 2018. 
+maggiore numero di sinistri nel 2018. \todo{atrent: abolirei la parola "scontro", se non vuoi ripetere "incidente" usa "evento" o altri sinonimi}
 Non è una sorpresa che le prime posizioni della lista coincidano 
 anche con le strade più trafficate, come l'Autostrada del Sole e l'Adriatica, 
 tuttavia sono anche presenti, due strade statali, la SS1 e la SS16. 
@@ -2981,7 +2985,7 @@ Particolarmente utili sarebbero le coordinate di incidenti avvenuti lungo queste
 in modo da poter individuare zone particolarmente pericolose.
 
 \subsection{Analisi delle tratte pericolose lungo le principali strade statali}
-\todo{Da leggere}
+\todo{ATOK}
 
 Nonostante il dataset ACI non fornisca le coordinate geografiche degli incidenti avvenuti, 
 un modo per aumentare la precisione dei dati a disposizione, potrebbe essere il 
@@ -3005,7 +3009,7 @@ Roma e Livorno hanno valori nella media o poco superiori.
 
 Lo stesso grafo, realizzato per la SS16, è rappresentato nella figura destra dell'immagine 
 \ref{fig:incidenti-strade-statali}. 
-In questo caso, il picco di scontri avviene nella provincia 
+In questo caso, il picco di sinistri avviene nella provincia 
 di Bari, con quasi $200$ incidenti e $400$ feriti nel 2018. 
 
 Una provincia che si differenzia vistosamente, per dei valori minori è quella di Pescara. 
@@ -3048,7 +3052,7 @@ o anche il flusso di automobili nei luoghi in questione,
 si potrebbe verificare l'esistenza di tratti particolarmente pericolosi. 
 
 \subsection{Le autostrade con più incidenti cambiano di anno in anno?}
-\todo{Da Leggere}
+\todo{ATOK}
 
 Tornando a concentrarsi sui dati riguardanti le autostrade, 
 sarebbe interessante sapere ci sia una variazione di incidenti con il trascorrere degli anni. 
@@ -3120,14 +3124,14 @@ Il numero di sinistri, infatti rimane sostanzialmente costante negli anni analiz
 variando da $99$ incidenti nel 2011 a $97$ nel 2018. 
 
 \subsection{Differenze di incidenti su autostrade in base al mese dell'anno}
-\todo{Da Leggere}
+\todo{ATOK}
 
 Una questione, di cui ci si è occupati tramite dati Istat in precedenza, è 
 quella dei mesi con maggiore incidentalità. 
 Il dataset ACI permette di individuare gli stessi cambiamenti di tendenza rilevati nei 
 capitoli precedenti, aggiungendo la discrimina della tipologia di strada. 
 
-In particolare, nell'analisi precedente si era individuato un decremento di scontri 
+In particolare, nell'analisi precedente si era individuato un decremento di valori 
 nei mesi estivi nella provincia di Milano, e il comportamento opposto a 
 Rimini e Aosta. 
 
@@ -3143,7 +3147,7 @@ estivi.
 D'altra parte, la tendenza opposta avviene sulla A1 e la A4, 
 con picchi di sinistri in Giugno e Luglio per, come precedentemente ipotizzato, 
 l'aumento di traffico dovuto alle partenze per le vacanze. 
-Sull'Adriatica e sull'Aurelia infine, prevalgono scontri 
+Sull'Adriatica e sull'Aurelia infine, prevalgono eventi 
 in Luglio e Agosto e in generale nei mesi estivi. 
 
 \begin{figure}
@@ -3167,7 +3171,7 @@ a loro volta influenzate dal trascorrere dei mesi.
 
 %\clearpage%
 \subsection{Analisi degli incidenti in orari di punta su autostrade}
-\todo{Da leggere}
+\todo{ATOK}
 
 Rimanendo sull'argomento delle analisi già eseguite con i dati Istat, 
 si potrebbe replicare, con i dataset ACI, quella riguardante gli orari di incidenti. 
@@ -3228,7 +3232,7 @@ realizzare analisi più approfondite.
 
 %\clearpage
 \subsection{Annate con maggior numero di incidenti su autostrade}
-\todo{Da leggere}
+\todo{ATOK}
 
 Nel capitolo precedente si è tentato di individuare quali strade siano maggiormente 
 utilizzate per recarsi a lavoro a Milano. 
@@ -3460,7 +3464,8 @@ argomento, e alcuni documenti di testo riguardanti le stime realizzate, come la 
 conducenti maschio e femmina. 
 
 La cartella \columnstyle{tesi}
-\todo{atrent: io questo columnstyle lo vedo identico al resto lelepado: in che senso? io lo vedo con font typewriter} contiene la maggior parte delle immagini presenti 
+\todo{atrent: io questo columnstyle lo vedo identico al resto lelepado: in che senso? 
+io lo vedo con font typewriter} contiene la maggior parte delle immagini presenti 
 nella relazione\footnote{Ci si riferisce alle figure ottenute tramite screenshot 
 da Google Maps e altri siti, non ai grafi.} 
 e il codice sorgente \LaTeX usato per produrre questo documento.
@@ -3548,7 +3553,5 @@ ogni file e l'url del portale di origine.
 
 %\addcontentsline{toc}{chapter}{Bibliografia}
 \printbibliography
-
-% \todo{atrent: leggi \url{http://appunti.linux.it/a2/a269.htm\#almltitle2772}}
 
 \end{document}
