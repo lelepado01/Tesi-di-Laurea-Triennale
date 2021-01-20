@@ -15,11 +15,12 @@ intersezione_labels = label_utils.join_labels(
     "dataset/incidenti/istat/Classificazioni/intersezione_o_non_interse3.csv"
     ).value_counts().sort_index()
 
-intersezione_labels /= intersezione_labels.sum()
+# Tengo scala in decine di migliaia
+intersezione_labels /= 1000
 intersezione_labels = intersezione_labels.sort_index()
 
 intersezione_labels.plot.barh(color=['#77aa66'], width=0.9)
-plt.xlabel("Percercentuale di incidenti totali per tipo di incrocio (2018)")
+plt.xlabel("Incidenti totali, in migliaia, per tipo di incrocio (2018)")
 plt.ylabel("")
 plt.tight_layout()
 plt.show()
