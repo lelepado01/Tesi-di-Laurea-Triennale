@@ -59,6 +59,8 @@
 \newcommand{\filenamestyle}[1]{\texttt{#1}}
 \newcommand{\methodstyle}[1]{\textbf{#1}}
 \newcommand{\quotestyle}[1]{\textit{#1}}
+\newcommand{\engstyle}[1]{\textbf{#1}}
+
 \def\light#1{{\color{LightTextColor}#1}}
 \newcommand{\skipline}{\vspace{0.2in}}
 \newcommand{\lighttext}[1]{\skipline\noindent\light{\texttt{#1}}\skipline}
@@ -155,7 +157,7 @@ Tim Berners-Lee, di cinque gruppi di categorizzazione dei dataset:
     per esempio, non sono raccolti in un pdf ma in una tabella excel}. 
     \item[$\ast$] Tre stelle, se il dato è disponibile in un formato non proprietario. 
     \item[$\ast$] Quattro stelle, se si fa uso 
-    di \textbf{URI}\footnote{Uniform Resource Identifier, permette di indirizzare e 
+    di \engstyle{URI}\footnote{Uniform Resource Identifier, permette di indirizzare e 
     identificare univocamente una risorsa}, per indirizzare le informazioni. 
     \item[$\ast$] Cinque stelle, se i dati sono collegati ad altri, 
     per fornire un contesto tra le risorse. 
@@ -201,7 +203,7 @@ Arpa\footnote{\url{https://www.arpalombardia.it/Pages/ARPA_Home_Page.aspx}},
 visibile in figura \ref{fig:arpa},
 soprattutto negli anni precedenti al 2017 quando, per ottenere le loro informazioni 
 sulla qualità dell'aria si sarebbe dovuto compilare un 
-\textbf{form}\footnote{Un form è un questionario, costituito da più campi, che 
+\engstyle{form}\footnote{Un form è un questionario, costituito da più campi, che 
 permettono all'utente l'inserimento di dati utilizzati, per esempio, da un sito web}, 
 che richiede l'inserimento di un periodo, al massimo di un anno, di una sola 
 centralina, e di una sola tipologia di informazione, come il tipo di inquinante. 
@@ -209,7 +211,7 @@ centralina, e di una sola tipologia di informazione, come il tipo di inquinante.
 A rendere il processo ancora più complesso è il fatto che i dati sarebbero stati 
 spediti via email, dunque con un peso massimo di 20MB. 
 Infine, per evitare che delle persone creassero script per automatizzare la compilazione, 
-era presente un \textbf{captcha}\footnote{Un captcha è un test per determinare se l'utente 
+era presente un \engstyle{captcha}\footnote{Un captcha è un test per determinare se l'utente 
 sia umano o un computer. Tipicamente si richiede di scrivere quali parole siano 
 contenute in un'immagine distorta o offuscata.}, in modo da richiedere l'intervento 
 di un utente reale per ogni query \cite{TRENTINI:1}. 
@@ -224,8 +226,9 @@ La condivisione di questi ha reso meno necessario l'utilizzo del form, che
     \label{fig:arpa}
 \end{figure}
 
-La possibilità di \quotestyle{poter fare i conti in tasca alle istituzioni}, viene 
-spesso contrapposta al diritto alla privacy, anche in 
+
+La possibilità di \quotestyle{poter fare i conti in tasca} a enti come Arpa, 
+viene spesso contrapposta al diritto alla privacy, anche in 
 modo completamente ingiustificato, quando invece numerosi sarebbero i vantaggi 
 del rendere accessibili più informazioni agli utenti.
 
@@ -540,9 +543,10 @@ si nota che mancano quelle di Abbiategrasso Sud e Cadorna.
 Inoltre, per mancanza di dati precisi sul giorno degli incidenti, 
 è superfluo avere informazioni con posizione e data così precise. 
 
-Si è dunque optato per un dataset contenente temperature, umidità, e velocità del vento, 
-trovato sul sito Zenodo\footnote{\url{https://zenodo.org/record/3992354}},
-che contiene questi campi, misurati ogni ora a Milano, a partire dal 2008, fino al 2018. 
+Si è dunque optato per un dataset trovato sul sito 
+Zenodo\footnote{\url{https://zenodo.org/record/3992354}},
+contenente temperature, umidità, e velocità del vento, 
+misurati ogni ora a Milano, a partire dal 2008, fino al 2018. 
 
 \lighttext{(\\
     \indent Date\_Time: contiene giorno, mese e anno,\\
@@ -608,7 +612,7 @@ Anche quest'ultimo risulta però troppo dettagliato, in quanto riporta la
 totalità del manto stradale della città. 
 
 Come ultima risorsa, si è deciso di tracciare alcune mappe in formato 
-\textbf{geojson}\footnote{Formato di file derivato da \textbf{Json} 
+\engstyle{geojson}\footnote{Formato di file derivato da \engstyle{Json} 
 (JavaScript Object Notation), che è usato spesso per il salvataggio di informazioni, ma 
 in aggiunta permette di memorizzare insiemi di punti, sotto forma di linee o poligoni, 
 tramite l'apposito campo \columnstyle{geometry}.} utilizzando il sito 
@@ -628,7 +632,9 @@ tramite un campione di dati diverso.
 
 I dataset sul turismo in Italia, sono stati trovati nell'archivio Istat sul 
 tema\footnote{\url{https://www.istat.it/it/archivio/16777}}. 
-Il file originale era in formato xls, contenente informazioni a partire dal 1995 
+Il file originale era in formato \engstyle{xls}\footnote{Formato di memorizzazione dei file 
+utilizzato spesso da Microsoft Excel}, 
+contenente informazioni a partire dal 1995 
 fino al 2019, sia regione per regione, sia divise tra nord, centro e sud. 
 A loro volta, i documenti sono divisi in più tabelle, ognuna raffigurante un particolare 
 indicatore, come produttività del lavoro, turismo nei mesi non estivi, 
