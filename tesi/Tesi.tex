@@ -438,13 +438,13 @@ regionale, proviene dal sito del Ministero delle Infrastrutture e
 Trasporti\footnote{\url{http://dati.mit.gov.it/catalog/dataset/patenti}}. 
 
 
-\lighttext{(
-    \noindent id : progressivo numerico,\\
-    \noindent provincia\_residenza, \\
-    \noindent categoria\_patente : più elevata, \\
-    \noindent abilitato\_a : se la patente ha abilitazioni A2-A4, \\
-    \noindent data\_rilascio, \\
-    \noindent nazionalita: di emissione \\
+\lighttext{(\\
+    \indent id : progressivo numerico,\\
+    \indent provincia\_residenza, \\
+    \indent categoria\_patente : più elevata, \\
+    \indent abilitato\_a : se la patente ha abilitazioni A2-A4, \\
+    \indent data\_rilascio, \\
+    \indent nazionalita: di emissione \\
 )}
 
 
@@ -777,12 +777,12 @@ Cittametropolitana\footnote{\url{https://www.cittametropolitana.mi.it/export/sit
 \section{Incidenti}
 \todo{ATOK}
 
-I dati riguardanti gli incidenti geolocalizzati, sono disponibili in un dataset 
+I dati riguardanti gli incidenti geolocalizzati sono disponibili in un dataset 
 contenente una lista di punti indicanti latitudine e longitudine dell'evento. 
 Ciò che delude, è che non è presente nessuna informazione aggiuntiva, 
 oltre alla posizione. 
 
-Controllando come gli incidenti siano distribuiti, 
+Controllando la distribuzione degli incidenti, 
 si nota, dalla mappa destra nella figura \ref{fig:heatmap-municipi} come questi, 
 a Milano abbiano concentrazioni più alte, 
 in alcuni punti di interesse della città, come Piazzale Loreto, le circonvallazioni 
@@ -790,7 +790,7 @@ interna e esterna\footnote{Si evidenzieranno, in particolare, Corso Ventidue Mar
 e la zona dei Navigli}, Piazza Kennedy e Cavalcavia del Ghisallo. 
 
 Questa figura è stata realizzata approssimando ogni coordinata di incidente, che  
-normalmente ha precisione a sette cifre decimali, a cinque e numeri dopo la virgola. 
+normalmente ha precisione a sette cifre decimali, a cinque numeri dopo la virgola. 
 Contando i punti uguali, è stato possibile aggregare sinistri che avvengono in zone 
 vicine. 
 Questi dati elaborati sono poi stati memorizzati nel file reperibile al 
@@ -834,9 +834,9 @@ incidenti_per_zona = (incidenti / area) * 1000000
 
 Nella figura \ref{fig:incidenti-chilometro} spicca, sia nel grafico di sinistra, rappresentante 
 il numero di incidenti totali per zona, che in 
-quello di destra, che contiene il numero di incidenti divisi per l'area del municipio, 
+quello di destra, che contiene il volume di sinistri divisi per l'area del municipio, 
 la zona 1, cioè quella del centro storico. 
-La causa dell'alto valore di sinistri può essere ricondotta alla superficie minore 
+La causa dell'alta quantità di eventi può essere ricondotta alla superficie minore 
 di questa area rispetto agli altri municipi. 
 
 Una volta creata la tendenza generale di ogni zona, è possibile confrontare i risultati 
@@ -1057,7 +1057,7 @@ che deve avere influenza minore sugli incidenti della zona.
 \end{figure}
 
 Viste le basse somiglianze tra la mappa di Urbanfile e le linee dei trasporti pubblici, 
-per creare una stima, si sono convertite le vie principali della cartina trovata 
+per creare un dataset, si sono convertite le vie principali della cartina trovata 
 in geojson. 
 Nella sezione sull'origine dei dati, si è parlato di come è stato possibile ricavare 
 un tracciato con la maggior parte delle strade in pavé a Milano e, allo stesso modo, 
@@ -1332,7 +1332,7 @@ sinistro.
 Una prima analisi che è possibile realizzare, utilizzando il dataset Istat è, 
 per quanto riguarda i veicoli, 
 come la composizione di questi cambia al cambiare del tipo di strada. 
-In altre parole, la percentuale di autotreni sul totale dei veicoli 
+In altre parole, la percentuale, ad esempio, di autotreni sul totale dei veicoli 
 in circolazione è diversa sulle autostrade rispetto alle strade provinciali?
 
 \begin{code}[language=Python]
@@ -1358,7 +1358,7 @@ tutte le righe di \columnstyle{Autostrade}, si ottiene $1.0$.
 Possiamo quindi, notare che le auto private sono di gran lunga il tipo di veicolo 
 maggiormente coinvolto in incidenti su ogni categoria di strada. 
 I motocicli invece subiscono sinistri soprattutto su strade urbane.
-Nel caso degli autotreni, si ha invece una bassa percentuale nelle strade 
+Nel caso degli autocarri, si ha invece una bassa percentuale nelle strade 
 urbane, mentre il volume di questa tipologia aumenta sulle autostrade. 
 
 Visto che le auto private causano oltre tre quarti degli 
@@ -1424,7 +1424,7 @@ questi tendono ad essere causati per il $75$ \% circa da uomini e
 per il $25$ \% donne. 
 
 Avendo a disposizione i dati corrispondenti a tutti gli anni a partire dal 2010, 
-è anche possibile verificare che le percentuali trovate sono costanti con 
+è anche possibile verificare che le percentuali trovate siano costanti  
 nel tempo. 
 Nella tabella sottostante sono riportati gli esiti dell calcolo precedente per le 
 autostrade e le strade urbane. 
@@ -1457,7 +1457,7 @@ Un modo per confutare l'ipotesi è quello di ricavare un campione di conducenti,
 distinguendo tra uomini e donne. 
 Va sottolineato che un campione, preso durante un mese prossimo alla quarantena per 
 la pandemia dovuta al Covid-19, non sarà mai uno stimatore estremamente 
-accurato della percentuale di maschi e femmine al volante. 
+accurato della percentuale di maschi e femmine alla guida. 
 
 Si sono comunque contate le persone al volante nell vetture passanti a Somma 
 Lombardo\footnote{sul Sempione basso, strada urbana principale, 
@@ -1521,9 +1521,10 @@ Non sembra però, esserci grande differenza tra le province, nonostante a Rimini
 più alta la categoria con solo il conducente, mentre a Bari valga l'opposto. 
 
 Appurato, quindi, che la frequenza degli incidenti è massima in caso di guidatore solo, 
-possiamo chiederci se ciò è dovuto a semplice motivo quantitativo o se invece esistano 
-fattori esterni che inducano alla distrazione, o addirittura se la presenza 
-di passeggeri generi maggior attenzione per senso di responsabilità.
+è possibile chiedersi se ciò sia dovuto a un semplice motivo quantitativo o 
+se invece esistano fattori esterni che inducano alla distrazione, o 
+addirittura se la presenza di passeggeri generi maggior 
+attenzione per senso di responsabilità.
 
 A tale scopo, sarebbe utile poter ricavare un campione di vetture divise per 
 numero di persone a bordo, tuttavia, per il periodo in cui si è eseguito questo 
@@ -1545,7 +1546,7 @@ Anna Donati scriveva:
 
 La fonte dell'articolo è il sito Isfort\footnote{https://www.isfort.it/}, 
 in particolare il loro rapporto sulla mobilità. 
-Cercando nell'archivio, si è riusciti a reperire il rapporto del 2010, 
+Cercando nel loro archivio, non si è riusciti a reperire il rapporto del 2010, 
 tuttavia si sono trovati quelli più recenti, in particolare per 
 2018\footnote{\url{https://www.isfort.it/wp-content/uploads/2019/09/Rapporto_Mobilita_2018.pdf}}, 
 2019, 2020. 
@@ -1572,7 +1573,7 @@ sia cresciuto negli anni, parallelamente all'aumento di popolarità di quest'ult
 
 Per il giornale online l'Automobile \cite{AUTOMOBILE:1}, gli automobilisti americani 
 passano quasi due minuti guardando il cellulare, in un'ora di guida. 
-Questo comportamento non può che diminuire l'attenzione alla guida, e di conseguenza 
+Questo comportamento non può che diminuire l'attenzione al volante, e di conseguenza 
 aumentare la frequenza di incidenti. 
 Sarebbe interessante riuscire a osservare questa tendenza con le 
 informazioni a disposizione. 
@@ -1593,7 +1594,7 @@ incidenti all'anno, il che supporterebbe l'ipotesi iniziale.
 Tuttavia, il numero di sinistri nei quali è presente solo il conducente 
 cresce allo stesso modo, e i quelli con più di una persona nel veicolo 
 salgono in maniera ancora maggiore. 
-Queste tendenze riscontrate nell'aumento dell'ampiezza dell'area blu, nel grafico 
+Queste tendenze sono riscontrate nell'aumento dell'ampiezza dell'area blu, nel grafico 
 \ref{fig:incremento-incidenti}, che mostra un minor numero di sinistri con solo il conducente, 
 e per sottrazione, l'incremento delle altre categorie. 
 
@@ -1682,7 +1683,7 @@ Questa tendenza è vera anche nel caso in cui si isoli una città come Milano,
 destinazione di molti pendolari della regione, probabilmente 
 già in viaggio prima delle 9:00?
 
-Selezionano solo i sinistri nella provincia di Milano, mostrati nel grafico 
+Selezionando solo i sinistri nella provincia di Milano, mostrati nel grafico 
 \ref{fig:week-weekend-milano}, è possibile individuare in modo più preciso
 il primo picco di incidenti, quello durante le ore di punta mattutine. 
 In particolare si ha un incremento del $34.3$ \% alle 8:00 rispetto alla media, 
@@ -1710,8 +1711,8 @@ e in
 particolare non si è tenuto conto del numero di automobili presenti sulle strade. 
 \`E chiaro che uno dei principali fattori che causa sinistri sia proprio 
 la quantità di veicoli in movimento. 
-Sarebbe interessante riuscire a quantificare quanto la mole di traffico accresca 
-l'incidentalità, nelle diverse ore della giornata.
+Sarebbe interessante riuscire a quantificare l'impatto della mole di traffico 
+sull'incidentalità, nelle diverse ore della giornata.
 
 Un primo problema da affrontare è quello di individuare informazioni sul 
 numero di vetture presenti su strada in diverse fasce orarie. 
@@ -1730,7 +1731,7 @@ L'immagine \ref{fig:rapporto-incidenti-traffico} contiene, sulla sinistra,
 la percentuale di accessi in area a traffico limitato a una determinata 
 ora\footnote{Si sono utilizzati i dati dell'anno 2016, perché non si sono trovati 
 dataset più recenti per quanto riguarda gli accessi all'area C di Milano}, 
-e nel grafo di destra, il numero di incidenti a Milano, pesati in base alla 
+e nella figura di destra, il numero di incidenti a Milano, pesati in base alla 
 stima appena realizzata. 
 
 Sono presenti molte similitudini tra gli ingressi alla zona a traffico limitato, 
@@ -1766,7 +1767,7 @@ ingressi della giornata.
 Gli altri due sono certamente dovuti all'alto 
 numero di incidenti, in quanto il traffico in questi orari è pienamente nella media. 
 Gli ultimi due gruppi, inoltre, corrispondono alle fasce orarie di punta, che coincidono 
-con l'inizio e la fine della giornata lavorativa per la maggior parte degli utenti. 
+con l'inizio e la fine della giornata lavorativa per la maggior parte dei milanesi. 
 
 Chiaramente, con l'aumento del numero di automobili in viaggio, aumenta anche 
 la pericolosità delle strade e la probabilità che avvenga un incidente. 
@@ -1967,10 +1968,11 @@ in Agosto rispetto a tutto l'anno, nel
 tutte le altre annate disponibili}. 
 In particolare, ad aumentare di valore sono le zone vicino a Brescia e Palermo. 
 
-Il comportamento rappresentato nel grafo, tuttavia, è unico del 2011, in quanto, 
+Il comportamento rappresentato nel grafico, tuttavia, è unico del 2011, in quanto, 
 per gli altri anni di cui si dispone dei dati, 
 Milano e Roma hanno il primato di incidenti sia per l'anno, come ci si attende, sia per il 
 mese di Agosto preso singolarmente. 
+
 
 D'altra parte, se si pensasse di comparare più nel dettaglio alcune province, 
 meta di vacanze estive, con Milano, ciò che ci si aspetterebbe è 
@@ -2005,7 +2007,7 @@ Milano, con Agosto e i mesi invernali più bassi.
 Nella seguente tabella, sono indicate le percentuali di aumento per annata dei sinistri 
 a Rimini. 
 L'incremento, più o meno costante in ogni anno, conferma questo fenomeno come un trend 
-annuale, e non come un outlier dovuto a un 2011 fuori dalla norma. 
+annuale, e non come un outlier dovuto a un 2013 fuori dalla norma. 
 
 \begin{center}
     \def\arraystretch{1.5}%  
@@ -2024,7 +2026,7 @@ annuale, e non come un outlier dovuto a un 2011 fuori dalla norma.
 \end{center}
 
 Questo tipo di analisi può essere estesa a livello regionale, 
-per esempio in Valle d'Aosta e a livello stagionale, per esempio per 
+per esempio in Valle d'Aosta e su base stagionale, per esempio per 
 comparare le vacanze invernali sugli sci. 
 Nel grafico in figura \ref{fig:aosta}, si notano crescite nel numero di incidenti 
 in Valle d'Aosta, nei mesi di Giugno e Settembre, tuttavia, nei periodi invernali, 
@@ -2069,7 +2071,7 @@ questo mese è sempre in diminuzione rispetto alla media, con percentuali abbast
 L'inconsistenza registrata ad Aosta è comune anche ad altre località di montagna, come Trento e 
 Bolzano, e potrebbe essere dovuta a diversi fattori, come 
 le dimensioni ridotte delle città, oppure il manto stradale meno esteso, oppure ancora, 
-la guida particolarmente virtuosa e attenta.
+una guida particolarmente virtuosa e attenta.
 
 Per avere una visione di insieme delle tendenze di tutti gli anni disponibili, 
 è possibile tracciare 
@@ -2087,7 +2089,7 @@ fai verifica su tutta la tesi
 lelepado: intende Aosta? i valori sono tutti assoluti, ma 
 nella provincia ce ne sono così pochi che sembrano tra 0 e 1 normalizzati}
 
-In tutti i graficinella figura \ref{fig:aosta-rimini-milano-trimestre}, 
+In tutti i grafici nella figura \ref{fig:aosta-rimini-milano-trimestre}, 
 si osserva, come già visto in precedenza, che dall'anno 2015 si ha un'ampia crescita  
 del numero di incidenti, probabilmente dovuta a un cambio 
 nella metodologia di misurazione dei dati. 
@@ -2134,15 +2136,15 @@ utilizzando i dati a disposizione, contare la frequenza di ogni categoria di inc
     \label{fig:tipo-incidente}
 \end{figure}
 
-Nella figura \ref{fig:tipo-incidente} sono riportate le categorie di 
+Nella figura \ref{fig:tipo-incidente} sono riportate le circostanze di 
 incidente più frequenti nel 2018. 
 In particolare, sono molto numerosi gli scontri frontali, laterali e tamponamenti. 
 La tipologia \columnstyle{frontali-laterali} è quella più rappresentata, 
 probabilmente per l'ampiezza della categoria, in quanto contiene 
 tutte le sfumature di incidenti che non sono 
-precisamente contatti frontali o laterali. 
+contatti precisamente frontali o precisamente laterali. 
 
-Prima di realizzare assunzioni errate, va detto che questo grafo, senza un contesto, 
+Prima di realizzare assunzioni errate, va detto che questo grafico, senza un contesto, 
 non è molto utile, poiché il numero di incidenti di una categoria deve 
 essere strettamente influenzato dalla tipo di strada e intersezione. 
 Per esempio, si ha una probabilità bassa di essere coinvolti in un tamponamento 
@@ -2235,10 +2237,10 @@ sia dell'indice di feriti per tipologia di strada in cui è avvenuto l'incidente
     Incrocio                & 0.88 & 143.10 \\
     Rotatoria               & 0.82 & 127.22 \\
     \rowcolor{TableGray}
-    Intersez. segnalata     & 1.24 & 142.14 \\
-    Intersez. con semaforo  & 0.9 & 147.05 \\
+    Int. segnalata          & 1.24 & 142.14 \\
+    Int. con semaforo       & 0.9 & 147.05 \\
     \rowcolor{TableGray}
-    Intersez. non segnalata & 1.36 & 139.97\\
+    Int. non segnalata      & 1.36 & 139.97\\
     Passaggio a livello     & 4.0 & 134.67\\
     \rowcolor{TableGray}
     Rettilineo              & 2.33 & 138.94\\
@@ -2324,18 +2326,18 @@ interessate, e non tutte.}:
     Incidente & Percentuale del tipo \\ 
     \hline
     \rowcolor{TableGray}
-    Sbandamento       & 0.097 \\
-    Tamponamento      & 0.143 \\
+    Sbandamento       & 0.088 \\
+    Tamponamento      & 0.186 \\
     \rowcolor{TableGray}
-    Scontro frontale  & 0.061 \\
-    Urto con ostacolo & 0.039 \\
+    Scontro frontale  & 0.056 \\
+    Urto con ostacolo & 0.049 \\
     \hline
     \end{tabular}
 \end{center}
 
 Avendo a disposizione il numero di sinistri per categoria, è possibile capire 
 se il comportamento visibile nel grafico sia dovuto alla maggiore frequenza della tipologie, 
-o alla pericolosità del tipo di scontro. 
+o alla pericolosità del tipo di evento. 
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/natura_incidente/perc_natura_incidente.png}
@@ -2392,7 +2394,7 @@ numero di tratti di strada dritti, tuttavia confrontando le due immagini,
 la frequenza di sinistri su rettilineo è quasi cinque 
 volte il valore della seconda posizione. 
 
-Questo alta quantità di incidenti fa pensare che esista un qualche fattore 
+Questa alta quantità di incidenti fa pensare che esista un qualche fattore 
 che comporti maggiore coinvolgimento di pedoni lungo rettilinei, come 
 l'alta velocità dei veicoli. 
 
@@ -2423,7 +2425,7 @@ verso l'asse delle ordinate.
 A differenza dell'analisi precedente sui tratti di strada più pericolosi, 
 escludendo di proposito i rettilinei, emerge un'immagine decisamente diversa. 
 Non sembra, infatti, più essere l'alta velocità la causa di incidenti convolgenti pedoni, 
-quanto invece la scarsa visibilità reciproca, dovuta per esempio a curve o siepi o a 
+quanto invece la scarsa visibilità reciproca, dovuta per esempio a curve, siepi o a 
 segnaletica non ben evidenziata.
 
 %\clearpage
@@ -2547,7 +2549,7 @@ pedoni_morti_vals = pedoni_morti.values / perc_fascia
 \end{figure}
 
 Una volta corretta l'immagine precedente, si ottiene la figura \ref{fig:eta-pedoni-norm} 
-dove, soprattutto nel grafo di destra, è presente una curva particolarmente alta 
+dove, soprattutto nella rappresentazione di destra, è presente una curva particolarmente alta 
 nelle fasce più anziane, e un secondo picco nella categoria \columnstyle{18-29 anni}. 
 
 Anche nel grafico di sinistra è visibile la stessa impennata in corrispondenza 
@@ -2598,7 +2600,7 @@ calcolato utilizzando la formula:
     $Indice\_Mortalita\_X = \displaystyle \frac{Numero\_Morti\_X}{Numero\_Incidenti\_X} * 100$ 
 \end{center}
 
-Il risultato calcolato, presente nel grafo, aumenta al crescere dell'età, 
+Il risultato calcolato, presente nel grafico, aumenta al crescere dell'età, 
 e sembra essere confermato dalla stima realizzata nello studio 
 ACI del 2018 sugli incidenti stradali \cite{ACI:3}. 
 
@@ -2687,7 +2689,7 @@ Risulta che la regione con maggiori differenze di incidenti di anno in anno
 è il Lazio, con $324$, mentre quella con minore 
 variazione è la Valle d'Aosta, con $8$. 
 
-I graficiprecedenti, soprattutto le heatmap regionali, non tengono conto del 
+I grafici precedenti, soprattutto le heatmap regionali, non tengono conto del 
 volume del automobili in viaggio. 
 Non avendo informazioni riguardanti il traffico in tutta Italia, 
 e non potendo usare gli accessi all'area C, validi solo a Milano, si sono realizzate 
@@ -3028,7 +3030,7 @@ Il tratto in cui avvengono più sinistri è quello prossimo a Savona,
 mentre le grandi città come 
 Roma e Livorno hanno valori nella media o poco superiori. 
 
-Lo stesso grafo, realizzato per la SS16, è rappresentato nella figura destra dell'immagine 
+Lo stesso grafico, realizzato per la SS16, è rappresentato nella figura destra dell'immagine 
 \ref{fig:incidenti-strade-statali}. 
 In questo caso, il picco di sinistri avviene nella provincia 
 di Bari, con quasi $200$ incidenti e $400$ feriti nel 2018. 
@@ -3065,7 +3067,7 @@ semplicemente alla maggiore o minore estensione della strada nella
 provincia sotto osservazione. 
 Inoltre, a eccezione di alcuni luoghi, come Bari, Savona, Viterbo e Massa-Carrara, 
 la maggior parte degli incidenti sembrano essere omogeneamente distribuiti 
-in tutte le colonne presenti nel grafo. 
+in tutte le colonne presenti nel grafico. 
 
 Se si avesse a disposizione la lunghezza delle due strade statali, 
 divisa per ogni provincia attraversata,
@@ -3498,9 +3500,9 @@ lo stesso nome, e estensione \filenamestyle{.py}.
 Quindi se in una cartella fosse presente l'immagine \filenamestyle{esempio.png}, lo script con 
 cui questa è stata creata avrà nome \filenamestyle{esempio.py}. 
 
-Invece, se si volessero trovare le informazioni sul grafo raffigurante 
-l'incremento di incidenti 
-dal 2010 al 2018, i dataset utilizzati si troverebbero nella directory:
+Invece, se si volessero trovare le informazioni sul grafico raffigurante 
+l'incremento di incidenti dal 2010 al 2018, i dataset utilizzati si troverebbero 
+nella directory:
 
 \skipline
 \indent\filenamestyle{dataset/incidenti/incidenti\_istat}
@@ -3512,7 +3514,7 @@ dal 2010 al 2018, i dataset utilizzati si troverebbero nella directory:
 \indent\filenamestyle{src/incidenti/incidenti\_senza\_coords/anno}
 
 \skipline
-Alcune figure, in particolare quelle con graficiposizionati in coppia 
+Alcune figure, in particolare quelle con grafici posizionati in coppia 
 orizzontalmente\footnote{I grafici singoli sono tutti nella directory \filenamestyle{src}, 
 le figure doppie, unite tramite programmi esterni, in più, sono raccolte separatamente 
 in \filenamestyle{tesi/img\_unite}}, 
