@@ -208,7 +208,7 @@ centralina, e di una sola tipologia di informazione, come il tipo di inquinante.
 
 A rendere il processo ancora più complesso è il fatto che i dati sarebbero stati 
 spediti via email, dunque con un peso massimo di 20MB. 
-Infine, per evitare che persone creassero script per automatizzare la compilazione, 
+Infine, per evitare che delle persone creassero script per automatizzare la compilazione, 
 era presente un \textbf{captcha}\footnote{Un captcha è un test per determinare se l'utente 
 sia umano o un computer. Tipicamente si richiede di scrivere quali parole siano 
 contenute in un'immagine distorta o offuscata.}, in modo da richiedere l'intervento 
@@ -271,8 +271,8 @@ Altre questioni interessanti potrebbero essere:
 
 La maggior parte dei dataset utilizzati in questo lavoro 
 provengono dall'Istituto nazionale di statistica, in particolare 
-dall'archivio\footnote{\url{https://www.istat.it/it/archivio/87539}}
-di dati non geolocalizzati su incidenti stradali in Italia. 
+dall'archivio di dati non geolocalizzati su incidenti stradali in 
+Italia\footnote{\url{https://www.istat.it/it/archivio/87539}}. 
 Questo dataset contiene un'ampia gamma di campi, tra cui ora, 
 mese, giorno della settimana in cui è avvenuto l'incidente, 
 ma anche informazioni sui passeggeri, la natura del sinistro e il tipo di strada. 
@@ -302,8 +302,8 @@ in cui è avvenuto il sinistro, come rettilineo, rotonda o semaforo.
 )}
 
 Per quanto riguarda i dati geolocalizzati, 
-la fonte è invece il giornale online TheSubmarine \cite{SUBMARINE:1}
-che, in un articolo riguardante l'incidentalità a Milano, 
+la fonte è invece il giornale online TheSubmarine 
+che, in un articolo riguardante l'incidentalità a Milano \cite{SUBMARINE:1}, 
 ha ottenuto dall'ente Istat la pubblicazione di una parte dei dati inerenti 
 incidenti avvenuti in città, nel 2016, con la relativa 
 posizione\footnote{La fonte è la stessa del dataset precedente, ma i proprietari 
@@ -344,10 +344,12 @@ creata da un utente anonimo, dunque senza possibilità di verificarne l'autentic
 Per evitare di fare uso di informazioni non corrette, si è preferito scartare 
 questa fonte. 
 
-I dati utilizzati, invece, sono stati ottenuti tramite OpenStreetMaps, 
+I dati utilizzati, invece, sono stati ottenuti tramite il sito OpenStreetMaps, 
 realizzando una query per selezionare solo gli autovelox presenti a Milano. 
 Per restringere il campo di ricerca alla sola città, si è fatto uso delle 
-Overpass API\footnote{\url{https://overpass-turbo.eu/}}, 
+Overpass API\footnote{Application Programming Interface, cioè un insieme di 
+procedure utili, in questo caso all'ottenimento di dati, ma che permettono 
+lo svolgimento di svariati compiti.}\footnote{\url{https://overpass-turbo.eu/}}, 
 specifiche per OpenStreetMaps, utilizzando il codice riportato nel riquadro seguente: 
 
 \begin{code}
@@ -359,9 +361,9 @@ out meta;
 Il dataset ricavato, purtroppo, non contiene informazioni riguardanti quando gli 
 autovelox siano stati installati, fattore importante per capirne l'effetto 
 sul traffico e sugli incidenti. 
-Tuttavia il sito web Ztlmilano \cite{ZTLMILANO:1}
+Tuttavia il sito web Ztlmilano 
 contiene un articolo nel quale specifica una lista di 
-autovelox installati nel 2014. 
+autovelox installati nel 2014 \cite{ZTLMILANO:1}. 
 Sapendo che il dataset di OpenStreetMaps è stato aggiornato fino ad oggi, 
 è possibile ricavare la posizione precisa di questi ultimi. 
 
@@ -447,7 +449,7 @@ Questo dataset è formato da un'ampia quantità di informazioni,
 non utili al fine dell'analisi, 
 si è preferito quindi usare una sintesi di queste, proveniente da 
 un'infografica che riassume i dati in questione \cite{INFOGRAFICA_MIT:1}. 
-In particolare, da questo file pdf si è utilizzato solamente 
+In particolare, da questo file si è utilizzato solamente 
 il numero di patentati per regione. 
 
 \`E anche necessario chiedersi quanto, il numero delle persone che hanno ottenuto 
@@ -572,7 +574,7 @@ la lunghezza e il tipo di mezzo.
     \indent geometry\footnote{insieme di linee che formano i percorsi contenuti nel file}\\
 )}
 
-Dallo stesso sito proviene anche il dataset riguardante gli autobus turistici, che 
+Dallo stesso sito proviene anche il file riguardante gli autobus turistici, che 
 contiene, in particolare, solo le aree di 
 sosta\footnote{\url{https://dati.comune.milano.it/dataset/ds740_sosta_bus_gt_turistici}}. 
 
@@ -580,7 +582,7 @@ Si è anche fatto uso di un dataset contenente
 solamente le linee tranviarie, reperito dal portale di dati geolocalizzati 
 del comune di 
 Milano\footnote{\url{https://geoportale.comune.milano.it/ATOM/SIT/DBT2012/DBT2012_STRATO_01_Dataset_1.xml}}. 
-Questo dataset è molto ampio e contiene altri livelli di informazioni, tra cui 
+Questo documento è molto ampio e contiene altri livelli di informazioni, tra cui 
 le strade, le ferrovie o le piste ciclabili passanti per la città. 
 
 La principale funzione di questi dataset è l'ottenere i percorsi delle linee di trasporto pubblico, 
@@ -598,7 +600,7 @@ Il primo dataset individuato, riguardante il manto  stradale, è stato trovato s
 internet dell'ente  
 ANAS\footnote{\url{http://dati.mit.gov.it/catalog/dataset/grafo-stradale-anas}}. 
 Tuttavia, questo consisteva in un file molto grande, contenente tutte le principali 
-strade in Italia, dalla precisione superflua per le mappe che si sta tentando di ottenere. 
+strade in Italia, dalla precisione superflua per le mappe che si vuole ottenere. 
 
 Si è dunque tentato di utilizzare il dataset presente sul portale di dati geolocalizzati 
 del comune di Milano\footnote{\url{https://geoportale.comune.milano.it/}}. 
@@ -609,7 +611,7 @@ Come ultima risorsa, si è deciso di tracciare alcune mappe in formato
 \textbf{geojson}\footnote{Formato di file derivato da \textbf{Json} 
 (JavaScript Object Notation), che è usato spesso per il salvataggio di informazioni, ma 
 in aggiunta permette di memorizzare insiemi di punti, sotto forma di linee o poligoni, 
-tramite l'apposito campo \columnstyle{geometry}.} utilizzando 
+tramite l'apposito campo \columnstyle{geometry}.} utilizzando il sito 
 Geojson.io\footnote{\url{https://geojson.io/}}, in particolare nella zona di Milano, 
 per le principali autostrade, tangenziali e strade statali. 
 Allo stesso modo, Geojson.io è stato utile a tracciare alcune aree in centro a Milano, 
@@ -628,14 +630,14 @@ I dataset sul turismo in Italia, sono stati trovati nell'archivio Istat sul
 tema\footnote{\url{https://www.istat.it/it/archivio/16777}}. 
 Il file originale era in formato xls, contenente informazioni a partire dal 1995 
 fino al 2019, sia regione per regione, sia divise tra nord, centro e sud. 
-A loro volta, i file sono divisi in più tabelle, ognuna raffigurante un particolare 
+A loro volta, i documenti sono divisi in più tabelle, ognuna raffigurante un particolare 
 indicatore, come produttività del lavoro, turismo nei mesi non estivi, 
 tasso di turisticità\footnote{Il tasso di turisticità misura il livello di "affollamento" 
 turistico in un determinato periodo (anno o mese) indicando il numero di turisti presenti 
 ogni 100.000 abitanti. \cite{ONTIT:1}} 
 e valore aggiunto del turismo. 
 
-Per controllare la tendenza, sono stati necessari i dati regione per regione, 
+Per controllare la tendenza, sono stati necessari i dati divisi regione per regione, 
 a partire dal 2010 fino al 2018, convertiti in formato csv, e sono stati scelti gli 
 indicatori di turismo nei mesi non estivi, e tasso di turisticità. 
 
@@ -646,7 +648,7 @@ Le immagini raffiguranti il traffico in tempo reale sono prese da Google
 Maps\footnote{\url{https://www.google.com/maps/}}. 
 
 In primo luogo, si è tentato di realizzare degli screenshot direttamente dal sito, 
-tuttavia immagini prese in questo modo, contengono molti punti di interesse e altri simboli, 
+tuttavia le figure prese in questo modo, contengono molti punti di interesse e altri simboli, 
 che coprono informazioni importanti, come i nomi delle strade. 
 
 Per rimuovere i simboli superflui, si è fatto uso delle API di Google Maps, 
@@ -662,8 +664,8 @@ e dell'incrocio tra viale Bianca Maria e viale Ventidue Marzo a Milano.
 \subsection{Dati riguardanti pavé}
 \todo{ATOK}
 
-Nonostante le ricerche nei principali siti di opendata
-\footnote{
+Nonostante le ricerche nei principali siti di 
+opendata\footnote{
     \url{https://dati.comune.milano.it/dataset}, 
     \url{https://www.dati.lombardia.it/},
     \url{https://www.dati.gov.it/}}
@@ -701,11 +703,11 @@ autostrade\footnote{\url{http://www.autostrade.it/it/home}}.
 
 Il primo tentativo, per avere una stima del traffico è stato la realizzazione di uno 
 script per fare scraping da Google Maps. 
-Quest'ultimo infatti mostra sia il traffico in tempo reale, sia 
+Questo sito infatti mostra sia il traffico in tempo reale, sia 
 il traffico stimato a una determinata ora. 
 Tuttavia, leggendo la documentazione, si è scoperto che non è possibile ottenere 
 dati sul traffico abituale, per la mancanza delle API corrispondenti. 
-Invece, il traffico in tempo reale è disponibile, ma non è particolarmente utile 
+D'altra parte, il traffico in tempo reale è disponibile, ma non è particolarmente utile 
 poiché questo studio è stato svolto in concomitanza a un lungo periodo di quarantena 
 dovuto al Covid-19, le cui limitazioni hanno ridotto in maniera significativa 
 i volumi di traffico. 
@@ -749,8 +751,8 @@ Questa collezione contiene vari livelli di informazioni, tra cui
 tuttavia, in nessuno di questi layer, si sono trovate risorse utili a dividere, 
 per esempio, intersezioni segnalate da incroci con semaforo. 
 
-Inoltre, per la maggior parte dei livelli, non si sono trovate informazioni sul significato 
-delle colonne presenti nei dataset come \columnstyle{GZ\_STR\_TY} o 
+Inoltre, per la maggior parte dei livelli, non sono state reperite informazioni 
+sul significato delle colonne presenti nei dataset come \columnstyle{GZ\_STR\_TY} o 
 \columnstyle{GZ\_STR\_TYF}\footnote{Il dataset trovato aderisce al regolamento UE n. 1089/2010, 
 tuttavia, leggendo questo documento, non è stato possibile reperire informazioni sulle colonne 
 in questione \cite{REGOLAMENTOUE:1}}. 
