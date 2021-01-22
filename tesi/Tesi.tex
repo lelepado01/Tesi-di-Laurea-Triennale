@@ -267,7 +267,7 @@ Altre questioni interessanti potrebbero essere:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Origine dei dati}
 
-\section{Dati riguardanti incidenti}
+\section{Incidenti}
 \todo{ATOK}
 
 La maggior parte dei dataset utilizzati in questo lavoro 
@@ -331,7 +331,7 @@ l'orario, il mese o il giorno della settimana.
     \indent NVEI: numero di veicoli coinvolti\\
 )}
 
-\section{Dati riguardanti autovelox}
+\section{Autovelox}
 \todo{ATOK}
 
 Una delle prime domande che ci si è posti, è stata se gli autovelox, installati 
@@ -411,7 +411,7 @@ La lista di Ztlmilano contiene i seguenti autovelox:
 Il campi della tabella ripetuti sono dovuti al fatto che alcuni autovelox sono stati 
 installati in entrambe le direzioni. 
 
-\section{Dati riguardanti patentati}
+\section{Patentati}
 \todo{ATOK}
 
 Un'importante necessità in un'indagine di questo tipo, è avere un contesto in cui inserire 
@@ -462,7 +462,7 @@ luoghi per questioni di lavoro.
 e in caso di grandi disparità tra regioni, si potrebbe dover invalidare 
 i calcoli eseguiti. 
 
-\section{Dati riguardanti l'area C}
+\section{Area C di Milano}
 \todo{ATOK}
 
 Per lo stesso motivo del capitolo precedente, cioè realizzare una stima approssimativa 
@@ -493,7 +493,7 @@ Milano\footnote{\url{https://www.comune.milano.it/aree-tematiche/mobilita/area-c
 Per quanto anche questa stima non sia tra le più accurate, ci si può aspettare che 
 il numero di accessi corrisponda, almeno in parte, al volume di traffico di Milano. 
 
-\section{Dati riguardanti le zone di Milano}
+\section{Le zone di Milano}
 \todo{ATOK}
 
 I dataset delle zone di Milano provengono dal portale di dati geolocalizzati della 
@@ -521,7 +521,7 @@ possono avvenire incidenti tra vetture.
 Viceversa, i calcoli che utilizzano solamente la superficie stradale avranno 
 inevitabilmente valori maggiori. 
 
-\section{Dati riguardanti il meteo}
+\section{Il meteo}
 \todo{ATOK}
 
 Per quanto riguarda i dati sul meteo, si è tentato di utilizzare le informazioni 
@@ -554,7 +554,7 @@ misurati ogni ora a Milano, a partire dal 2008, fino al 2018.
     \indent Wind\_Speed: velocità del vento\\
 )}
 
-\section{Dati riguardanti trasporti pubblici}
+\section{Trasporti pubblici}
 \todo{ATOK}
 
 Un altro fattore di cui ci si è chiesti l'influenza sull'incidentalità, è la 
@@ -591,7 +591,7 @@ La principale funzione di questi dataset è l'ottenere i percorsi delle linee di
 per confrontare il numero di incidenti, nelle vie in cui viaggiano autobus, rispetto a 
 quelle in cui sono presenti solo autovetture private. 
 
-\section{Dati riguardanti autostrade e manto stradale}
+\section{Autostrade e manto stradale}
 \todo{ATOK}
 
 Puramente per la realizzazione di alcune mappe, quindi non a scopo di analisi 
@@ -619,7 +619,7 @@ per le principali autostrade, tangenziali e strade statali.
 Allo stesso modo, Geojson.io è stato utile a tracciare alcune aree in centro a Milano, 
 per confrontare gli incidenti su pavé agli incidenti su asfalto. 
 
-\section{Dati riguardanti il turismo}
+\section{Il turismo}
 \todo{ATOK}
 
 Durante le analisi degli incidenti autostradali, è sorto il dubbio che 
@@ -665,7 +665,7 @@ e dell'incrocio tra viale Bianca Maria e viale Ventidue Marzo a Milano.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Dati mancanti}
 
-\subsection{Dati riguardanti pavé}
+\subsection{Il pavé}
 \todo{ATOK}
 
 Nonostante le ricerche nei principali siti di 
@@ -698,7 +698,7 @@ A conclusione, si è optato per tracciare una mappa utilizzando
 Geojson.io\footnote{\url{https://geojson.io/}}, come già fatto per le autostrade a Milano, 
 basandosi sulla cartina trovata su Urbanfile. 
 
-\subsection{Dati riguardanti traffico stradale}
+\subsection{Traffico stradale}
 \todo{ATOK}
 
 Per quanto riguarda i dati sul traffico stradale, anche in questo caso non è stato trovato un 
@@ -770,9 +770,24 @@ da un pdf trovato sul sito
 Cittametropolitana\footnote{\url{https://www.cittametropolitana.mi.it/export/sites/default/DeCiMetro/DOCUMENTI-DA-SCARICARE/Manuale-civici.pdf}}. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Dati Geolocalizzati}
+%\clearpage
+\chapter{Analisi sull'incidentalità}
 
-\section{Incidenti}
+Per quanto riguarda i dati sugli incidenti avvenuti in Italia, 
+sono disponibili due dataset molto ampi. 
+Il primo, rilasciato da Istat, contiene campi quali data, ora, 
+numero di persone a bordo, tipo di incrocio e tipo di veicolo. 
+Queste informazioni sono presenti a partire dal 2010 fino al 2018. 
+Il secondo è invece messo a disposizione da Automobile Club D'Italia (ACI) 
+e contiene dati simili, 
+aggiungendo il luogo dell'incidente, su autostrada o strada provinciale, 
+inteso come il nome della strada, il che permette di avere una minima localizzazione del 
+sinistro. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Dati Geolocalizzati}
+
+\subsection{Incidenti}
 \todo{ATOK}
 
 I dati riguardanti gli incidenti geolocalizzati sono disponibili in un dataset 
@@ -894,7 +909,7 @@ per chilometro quadrato, di gran lunga minore rispetto al valore del centro stor
 dell'area C, ha impatto considerevole sull'incidentalità. 
 
 %\clearpage
-\section{Incidenti e Linee dei Trasporti Pubblici}
+\subsection{Incidenti e Linee dei Trasporti Pubblici}
 \todo{ATOK}
 
 Proseguendo con la serie di questioni poste nell'introduzione, ci si è chiesti quale 
@@ -1033,7 +1048,7 @@ come quelli con maggiore esperienza di guida in grandi città, evitino di propos
 strade con mezzi pubblici.
 
 %\clearpage
-\section{Il pavé a Milano influisce in qualche modo sull'incidentalità?}
+\subsection{Il pavé a Milano influisce in qualche modo sull'incidentalità?}
 \todo{ATOK}
 
 Tra le domande poste nell'introduzione, una particolarmente interessante è quella 
@@ -1123,7 +1138,7 @@ rimosso da alcuni viali, sarebbe possibile eseguire un confronto
 sulla stessa direttrice, avendo come unica variabile il cambio di pavimentazione. 
 
 %\clearpage
-\section{Incidenti e Autovelox}
+\subsection{Incidenti e Autovelox}
 \todo{ATOK}
 
 Per sapere se la presenza di autovelox abbia influenza sugli incidenti, 
@@ -1304,20 +1319,6 @@ possibilmente riferiti ad annate antecedenti al 2014, sarebbe possibile realizza
 una stima con informazioni precedenti e 
 successive al posizionamento delle telecamere. 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\clearpage
-\chapter{Dati su Incidenti}
-
-Per quanto riguarda i dati sugli incidenti avvenuti in Italia, 
-sono disponibili due dataset molto ampi. 
-Il primo, rilasciato da Istat, contiene campi quali data, ora, 
-numero di persone a bordo, tipo di incrocio e tipo di veicolo. 
-Queste informazioni sono presenti a partire dal 2010 fino al 2018. 
-Il secondo è invece messo a disposizione da Automobile Club D'Italia (ACI) 
-e contiene dati simili, 
-aggiungendo il luogo dell'incidente, su autostrada o strada provinciale, 
-inteso come il nome della strada, il che permette di avere una minima localizzazione del 
-sinistro. 
 
 %\clearpage
 \section{Dati Istat su veicoli}
@@ -3294,8 +3295,6 @@ solamente in occasione dell'estate 2011.
 Ciò è dovuto al fatto che, in ogni annata, le strade nelle prime posizioni per incidenti sono 
 quelle statali citate in precedenza, e solo in alcune occasioni il numero di sinistri 
 nelle autostrade è sufficiente a garantire un posto nell'istogramma. 
-
-\chapter{Dati su Meteo}
 
 \section{Meteo a Milano}
 
