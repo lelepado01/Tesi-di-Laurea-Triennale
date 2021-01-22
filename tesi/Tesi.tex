@@ -104,7 +104,6 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Introduzione}
-\todo{lelepado: per andare a capo, per parole come 'interessante', latex sbaglia la separazione in sillabe, che lei sappia devo specificarlo manualmente ogni volta con \\hyphenation?}
 
 Il termine dati aperti, o liberi, tradotto dall'inglese \quotestyle{open data}, 
 si riferisce a collezioni di informazioni liberamente accessibili e 
@@ -1396,8 +1395,6 @@ influiscono sui sinistri.
 \subsection{Legami tra guida e sesso del conducente}
 \todo{ATOK}
 
-% https://media.cdn.facile.it/facile/comunicati/pdf/195/original.pdf?v=20200911094353&
-
 Un frequente stereotipo riguardante le donne, è la credenza che queste  
 sarebbero meno abili alla guida rispetto alla controparte maschile. 
 \todo{atrent: frase pericolosa, andrebbe sostanziata, anche se lo dici solo per poi negarla
@@ -1938,7 +1935,7 @@ Tuttavia, in questo caso, il volume del primo periodo è comparabile
 con quello del terzo, 
 mentre durante il secondo e il quarto avvengono la maggior parte dei sinistri. 
 
-La maggiore omogeneità nei risultati calcolati in questa heatmap, 
+La maggiore omogeneità nei risultati calcolati in questa \quotestyle{heatmap}, 
 è dovuta all'utilizzo di campioni più ampi, di novanta giorni e non di trenta, 
 che permettono di bilanciare i valori fuori dalla norma, 
 come quelli riscontrati per Agosto. 
@@ -2078,14 +2075,9 @@ per trimestre\footnote{Per primo trimestre si intende Gennaio, Febbraio e Marzo 
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/trimestri_aosta_milano_rimini.png}
-    \caption{Incidenti per trimestre in Valle d'Aosta, a Rimini e a Milano}
+    \caption{Andamento trimestrale in tre contesti di esempio}
     \label{fig:aosta-rimini-milano-trimestre}
 \end{figure}
-\todo{atrent: attenzione alle scale!!! dovunque tu vuoi fare un confronto 
-visivo tra grafici devi avere la stessa scala!!! vale dappertutto, l'ho notato qui, 
-fai verifica su tutta la tesi 
-lelepado: intende Aosta? i valori sono tutti assoluti, ma 
-nella provincia ce ne sono così pochi che sembrano tra 0 e 1 normalizzati}
 
 In tutti i grafici nella figura \ref{fig:aosta-rimini-milano-trimestre}, 
 si osserva, come già visto in precedenza, che dall'anno 2015 si ha un'ampia crescita  
@@ -2674,7 +2666,7 @@ in quanto il volume di questi, in figura \ref{fig:incidenti-per-regione},
 \end{figure}
 
 Per quanto riguarda, invece, il numero di incidenti 
-nella heatmap \ref{fig:regione-heatmap}, 
+nella \quotestyle{heatmap} \ref{fig:regione-heatmap}, 
 si nota che questi non cambiano molto di anno in anno, e le regioni con maggiore quantità 
 di eventi rimangono sempre Lombardia e Veneto. 
 
@@ -2687,7 +2679,7 @@ Risulta che la regione con maggiori differenze di incidenti di anno in anno
 è il Lazio, con $324$, mentre quella con minore 
 variazione è la Valle d'Aosta, con $8$. 
 
-I grafici precedenti, soprattutto le heatmap regionali, non tengono conto del 
+I grafici precedenti, soprattutto le \quotestyle{heatmap} regionali, non tengono conto del 
 volume del automobili in viaggio. 
 Non avendo informazioni riguardanti il traffico in tutta Italia, 
 e non potendo usare gli accessi all'area C, validi solo a Milano, si sono realizzate 
@@ -2791,12 +2783,12 @@ Questo tipo di analisi verrà eseguita nei capitoli successivi.
 
 Utilizzando ancora una volta, i file geojson trovati sul repository Github di 
 Guglielmo Celata riguardanti le province, 
-è possibile creare delle heatmap raffiguranti in quali, tra queste, siano 
+è possibile creare delle \quotestyle{heatmap} raffiguranti in quali, tra queste, siano 
 presenti più incidenti. 
 \todo{atrent: considerazione che vale un po' ovunque, attenzione che stai dando 
 (a meno che non lo specifichi) valori assoluti, non in rapporto al traffico, 
 alla popolazione, ai km di strade, ecc. tienilo sempre ben presente}
-
+\todo{specificare a cosa sono rapportati gli incidenti, o se sono valori assoluti}
 Avendo a disposizione dati riguardanti gli eventi lungo le strade provinciali e le autostrade, 
 è stato realizzato lo stesso calcolo per entrambe le tipologie. 
 
@@ -2833,7 +2825,7 @@ sinistri su strade provinciali.
 
 Non è difficile trovare il motivo di questo comportamento, in quanto l'autostrada A1 passa 
 attraverso la prima provincia e non la seconda, e conseguentemente provoca 
-un'impennata di valori nella heatmap di destra. 
+un'impennata di valori nella \quotestyle{heatmap} di destra. 
 
 %\clearpage
 \subsection{Approfondimento sulla regione Lombardia}
@@ -3084,7 +3076,6 @@ Nel 2018, le mete più frequentate sono state Puglia e
 Toscana \cite{INFOGRAFICA_ISTAT:1}, mentre nel 2019, oltre alla Puglia, 
 una percentuale sostanziale di turisti si è recata in 
 Emilia Romagna e Liguria \cite{REPORT_ISTAT_2019:1}. 
-\todo{lelepado: è giusto lo spazio tra parola e citazione?}
 
 Avendo a disposizione i dati di tutte le annate, a partire dal 2010 fino al 2018, 
 è possibile verificare se esistano anni con un volume di 
@@ -3097,10 +3088,9 @@ sinistri in Agosto particolarmente alto.
 \end{figure}
 
 Controllando le prime cinque direttrici per incidentalità in ogni anno, 
-raffigurate nella heatmap \ref{fig:autostrade-anno}, si ottiene 
+raffigurate nella \quotestyle{heatmap} \ref{fig:autostrade-anno}, si ottiene 
 un risultato decisamente definito, vista la ripetizione delle medesime 
 tratte ai vertici della classifica.
-\todo{lelepado: i termini inglesi vanno messi in corsivo?}
 
 La strada statale Adriatica è sempre in prima posizione, con una media di $171.5$ 
 sinistri nel mese di Agosto. 
@@ -3167,7 +3157,7 @@ Rimini e Aosta.
     \label{fig:incidenti-per-mese}
 \end{figure}
 
-La heatmap \ref{fig:incidenti-per-mese} mostra che su alcune autostrade, come il 
+La \quotestyle{heatmap} \ref{fig:incidenti-per-mese} mostra che su alcune autostrade, come il 
 Grande Raccordo Anulare a Roma, il numero di incidenti diminuisce durante i mesi 
 estivi. 
 D'altra parte, la tendenza opposta avviene sulla A1 e la A4, 
@@ -3233,7 +3223,7 @@ andare e tornare dai luoghi di lavoro.
     \label{fig:tangenziali-autostrade}
 \end{figure}
 
-La heatmap \ref{fig:tangenziali-autostrade} conferma, per alcune autostrade, 
+La \quotestyle{heatmap} \ref{fig:tangenziali-autostrade} conferma, per alcune autostrade, 
 l'esistenza di picchi di incidenti durante gli orari di punta ad esempio, 
 sulla A4 Torino-Trieste, 
 per la Tangenziale Ovest e per la Tangenziale Est. 
@@ -3280,9 +3270,10 @@ e raggiungere le zone balneari.
 
 Nell'istogramma \ref{fig:autostrade-anno-agosto} sono elencate le 
 autostrade su cui sono avvenuti più incidenti nel mese di Agosto, per annata. 
-In questo grafico, si è tentato un approccio diverso rispetto a quello del capitolo precedente, 
-elencando le strade più pericolose in base all'anno e al numero di sinistri, invece di usare una 
-heatmap, come nella figura \ref{fig:autostrade-anno}. 
+In questo grafico, si è tentato un approccio diverso rispetto a quello del capitolo 
+precedente, elencando le strade più pericolose in base all'anno e al numero di sinistri, 
+invece di usare una 
+\quotestyle{heatmap}, come nella figura \ref{fig:autostrade-anno}. 
 
 La colorazione delle colonne, nel grafico \ref{fig:autostrade-anno-agosto}, è stata aggiunta per 
 facilitare la lettura delle direttrici, infatti a colori diversi corrispondono tratte diverse. 
@@ -3462,7 +3453,6 @@ Le tabelle provenienti dal sito Istat, per esempio, nel 2011, hanno un campo den
 \columnstyle{intersezione\_o\_non\_interse1}, 
 mentre nel 2018, la stessa informazione prende il nome di 
 \columnstyle{intersezione\_o\_non\_interse3}.
-\todo{lelepado: risolto così l'uscita delle parole dai margini}
 
 A cambiare non sono soltanto i nomi delle colonne negli anni, 
 ma in alcuni casi, nei label, viene usato un solo \quotestyle{underscore} a 
