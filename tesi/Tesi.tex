@@ -1844,7 +1844,7 @@ in considerazione l'annata più recente contenente il label \columnstyle{mese}.
 
 \begin{figure}
     \hfill\includegraphics[width=0.7\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/milano_mese.png}\hspace*{\fill}
-    \caption{Incidenti per mese in Milano nel 2013}
+    \caption{Incidenti per mese a Milano nel 2013}
     \label{fig:milano-mese}
 \end{figure}
 
@@ -1891,7 +1891,7 @@ rapportando il loro numero agli ingressi in area C mensili.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/area_c/rapporto_mese.png}
-    \caption{Incidenti al mese, tenendo conto del traffico nello stesso periodo (2012)}
+    \caption{Incidenti al mese, rapportati al traffico nello stesso periodo (2012)}
     \label{fig:incidenti-traffico-mese}
 \end{figure}
 
@@ -1920,7 +1920,7 @@ trimestre a partire dal 2010 fino al 2018.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/trimestri.png}
-    \caption{Incidenti per trimestre a Milano}
+    \caption{Incidenti per trimestre a Milano, normalizzati per numero di giorni nel periodo}
     \label{fig:milano-trimestri}
 \end{figure}
 
@@ -1952,7 +1952,7 @@ nella quantità di sinistri?
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/mesi_estivi.png}
-    \caption{Prime 10 province per incidenti in Agosto rispetto a tutto l'anno}
+    \caption{Prime 10 province per incidenti totali}
     \label{fig:mesi-estivi}
 \end{figure}
 
@@ -1980,7 +1980,7 @@ come la seconda, possono essere usate come controesempio.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{img_unite/milano_rimini_palermo.png}
-    \caption{Incidenti per mese a Milano, Rimini e Palermo}
+    \caption{Confronto di incidenti tra Milano, Rimini e Palermo}
     \label{fig:milano-rimini}
 \end{figure}
 
@@ -2028,7 +2028,7 @@ la quantità di sinistri è generalmente più bassa rispetto alla media.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/aosta_mese.png}
-    \caption{Incidenti per mese Valle d'Aosta}
+    \caption{Incidenti assoluti per mese, in Valle d'Aosta}
     \label{fig:aosta}
 \end{figure}
 
@@ -2121,7 +2121,7 @@ utilizzando i dati a disposizione, contare la frequenza di ogni categoria di inc
 
 \begin{figure}
     \hfill\includegraphics[width=0.7\linewidth]{../src/incidenti/incidenti_senza_coords/localizzazione_incidente/tipo_incidente.png}\hspace*{\fill}
-    \caption{Numero di incidenti divisi per tipologia}
+    \caption{Numero di incidenti assoluti, divisi per tipologia}
     \label{fig:tipo-incidente}
 \end{figure}
 
@@ -2147,7 +2147,7 @@ sono riportate nella figura \ref{fig:rapporto-tipologie}:
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/localizzazione_incidente/rapporto_tipologie.png}
-    \caption{Categorie più frequenti di incidente, divise per anno}
+    \caption{Frequenza delle categorie di incidente, divise per anno}
     \label{fig:rapporto-tipologie}
 \end{figure}
 
@@ -2189,7 +2189,7 @@ di strada su cui sono avvenuti.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{img_unite/intersezioni_indice_mortalita.png}
-    \caption{Percentuale di incidenti e rispettivo indice di mortalità per tipo di strada}
+    \caption{Percentuale di incidenti e rispettivo indice di mortalità, per tipo di strada}
     \label{fig:tipo-intersezioni}
 \end{figure}
 
@@ -2290,7 +2290,7 @@ sinistri che provocano il maggior numero di feriti.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/natura_incidente/natura_incidente.png}
-    \caption{Numero di feriti in base alla natura dell'incidente}
+    \caption{Numero assoluto di feriti per natura dell'incidente}
     \label{fig:numero-feriti}
 \end{figure}
 
@@ -2330,7 +2330,8 @@ o alla pericolosità del tipo di evento.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/natura_incidente/perc_natura_incidente.png}
-    \caption{Frequenza del tipo di incidente con numero di feriti, diviso per la percentuale di incidenti della rispettiva categoria}
+    \caption{Frequenza del tipo di incidente con numero di feriti, 
+    diviso per la percentuale di incidenti della rispettiva categoria}
     \label{fig:perc-numero-feriti}
 \end{figure}
 
@@ -2367,7 +2368,7 @@ il maggior numero di pedoni.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/pedoni/pedoni_incroci.png}
-    \caption{Tipologia di intersezioni e pedoni coinvolti}
+    \caption{Numero assoluto di pedoni coinvolti per tipologia di intersezione}
     \label{fig:pedoni-intersezioni}
 \end{figure}
 
@@ -2389,7 +2390,7 @@ l'alta velocità dei veicoli.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/pedoni/pedoni_log.png}
-    \caption{Tipologia di intersezioni e pedoni coinvolti, ignorando le categorie con valori più bassi}
+    \caption{Tipologia di intersezioni e pedoni coinvolti, ignorando le categorie con valori più bassi (scala logaritmica)}
     \label{fig:pedoni-no-rett}
 \end{figure}
 
@@ -2432,7 +2433,7 @@ annotare l'età dei pedoni coinvolti, dove l'indice della colonna sostituisce la
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/pedoni/eta_pedoni_iniziale.png}
-    \caption{Frequenze di coinvolgimento di pedoni in incidenti per fascia di età}
+    \caption{Numero assoluto di pedoni coinvolti in incidenti per fascia di età}
     \label{fig:eta-pedoni-iniziale}
 \end{figure}
 
@@ -2533,7 +2534,8 @@ pedoni_morti_vals = pedoni_morti.values / perc_fascia
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/pedoni/eta_pedoni_norm.png}
-    \caption{Fasce di età dei pedoni coinvolti in incidenti, normalizzate tramite percentuale di popolazione}
+    \caption{Fasce di età dei pedoni coinvolti in incidenti, normalizzate 
+    tramite popolazione standard italiana}
     \label{fig:eta-pedoni-norm}
 \end{figure}
 
@@ -2691,7 +2693,7 @@ lavoro o di studio che può decisamente falsare la localizzazione dei sinistri.
 
 \begin{figure}
     \hfill\includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/mappe_regioni/incidenti_patenti_italia.png}\hspace*{\fill}
-    \caption{Incidenti e patentati per regione}
+    \caption{Rapporto tra incidenti e patentati per ogni regione}
     \label{fig:incidenti-patentati}
 \end{figure}
 
@@ -2727,7 +2729,7 @@ mentre al sud avviene il fenomeno opposto.
 
 \begin{figure}
     \hfill\includegraphics[width=0.7\linewidth]{../src/incidenti/incidenti_aci/mappe_regioni/incidenti_patenti_bar.png}\hspace*{\fill}
-    \caption{Incidenti e patentati per regione}
+    \caption{Numero assoluto di incidenti e patentati per regione}
     \label{fig:incidenti-patentati-bar}
 \end{figure}
 
@@ -2759,7 +2761,7 @@ come conseguenza delle vacanze estive.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/mappe_regioni/estate_inverno.png}
-    \caption{Incidenti per regione nei mesi estivi e invernali}
+    \caption{Incidenti assoluti per regione nei mesi estivi e invernali}
     \label{fig:estate-inverno}
 \end{figure}
 
@@ -2843,7 +2845,7 @@ Il risultato è visibile nella figura \ref{fig:line-incidenti-milano}.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/autostrade/incidenti_line_chart.png}
-    \caption{Autostrade con più incidenti nel 2018}
+    \caption{Autostrade con più incidenti assoluti nel 2018}
     \label{fig:line-incidenti-milano}
 \end{figure}
 
@@ -2968,7 +2970,7 @@ nonchè le differenze evidenziabili a parità di tipologia.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/autostrade/autostrade.png}
-    \caption{Autostrade e strade statali con più incidenti nel 2018}
+    \caption{Autostrade e strade statali con più incidenti assoluti nel 2018}
     \label{fig:incidenti-autostrade}
 \end{figure}
 \todo{atrent: vale discorso assoluto/relativo}
@@ -3008,7 +3010,7 @@ ma per un'analisi più dettagliata di potrebbe estendere la verifica anche alle 
 
 \begin{figure}
     \includegraphics[width=\linewidth]{img_unite/tratti_ss1_ss16.png}
-    \caption{Incidenti su SS1 e SS16, divisi per provincia in cui questi sono avvenuti}
+    \caption{Incidenti assoluti su SS1 e SS16, divisi per provincia in cui questi sono avvenuti}
     \label{fig:incidenti-strade-statali}
 \end{figure}
 
@@ -3066,6 +3068,7 @@ si potrebbe verificare l'esistenza di tratti particolarmente pericolosi.
 
 \subsection{Evoluzione cronologica degli incidenti}
 \todo{ATOK}
+\todo{controllare questo capitolo unito}
 
 Tornando a concentrarsi sui dati riguardanti le autostrade, 
 sarebbe interessante sapere ci sia una variazione di incidenti con il trascorrere degli anni. 
@@ -3082,7 +3085,7 @@ sinistri in Agosto particolarmente alto.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/agosto/vacanze_autostrade.png}
-    \caption{Incidenti in strade per anno nel mese di Agosto}
+    \caption{Incidenti assoluti in strade per anno nel mese di Agosto}
     \label{fig:autostrade-anno}
 \end{figure}
 
@@ -3152,7 +3155,7 @@ Rimini e Aosta.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/autostrade/mesi_autostrade.png}
-    \caption{Incidenti per mese nel 2018}
+    \caption{Incidenti assoluti per mese nel 2018}
     \label{fig:incidenti-per-mese}
 \end{figure}
 
@@ -3167,7 +3170,7 @@ in Luglio e Agosto e in generale nei mesi estivi.
 
 \begin{figure}
     \hfill\includegraphics[width=0.7\linewidth]{../src/incidenti/incidenti_aci/autostrade/adriatica_roma.png}\hspace*{\fill}
-    \caption{Incidenti sull'Adriatica e sul Grande Raccordo Anulare a Roma nel 2018}
+    \caption{Incidenti assoluti sull'Adriatica e sul Grande Raccordo Anulare a Roma nel 2018}
     \label{fig:adriatica-roma}
 \end{figure}
 
@@ -3196,7 +3199,7 @@ su cui avvengono molti sinistri, come la SS1 e SS16.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/orari/orari.png}
-    \caption{Incidenti all'anno per orario su strade e località italiane diverse}
+    \caption{Confronto del numero di incidenti assoluti per orario in tre località diverse}
     \label{fig:orari-strade-aci}
 \end{figure}
 
@@ -3263,7 +3266,7 @@ e raggiungere le zone balneari.
 
 \begin{figure}
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/agosto/autostrade_anno_agosto.png}
-    \caption{Autostrade con più incidenti per anno, in Agosto}
+    \caption{Autostrade con più incidenti assoluti per anno, in Agosto}
     \label{fig:autostrade-anno-agosto}
 \end{figure}
 
