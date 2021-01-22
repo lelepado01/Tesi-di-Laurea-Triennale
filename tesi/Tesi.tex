@@ -325,7 +325,7 @@ l'orario, il mese o il giorno della settimana.
 \lighttext{(\\
     \indent COD REG,REGIONE,\\
     \indent COD PROV,PROVINCIA,\\
-    \indent NOME STRADA : codice e nome della strada,\\
+    \indent NOME STRADA: codice e nome della strada,\\
     \indent INC: numero di incidenti\footnote{Potrebbero esserci più incidenti per 
     riga, la divisione è eseguita in base alla caratteristica principale del file, 
     come ora, giorno della settimana ecc.},\\
@@ -439,10 +439,10 @@ Trasporti\footnote{\url{http://dati.mit.gov.it/catalog/dataset/patenti}}.
 
 
 \lighttext{(\\
-    \indent id : progressivo numerico,\\
+    \indent id: progressivo numerico,\\
     \indent provincia\_residenza, \\
-    \indent categoria\_patente : più elevata, \\
-    \indent abilitato\_a : se la patente ha abilitazioni A2-A4, \\
+    \indent categoria\_patente: più elevata, \\
+    \indent abilitato\_a: abilitazioni A2-A4 della patente, \\
     \indent data\_rilascio, \\
     \indent nazionalita: di emissione \\
 )}
@@ -479,7 +479,7 @@ mese o località.
 Tra questi si è utilizzata la tipologia contenente orari e data dell'accesso. 
 
 \lighttext{(\\
-    \indent year : anno dell'accesso in area C,\\
+    \indent year: anno dell'accesso in area C,\\
     \indent month: mese dell'accesso in area C,\\
     \indent day: giorno dell'accesso in area C,\\
     \indent hour: ora dell'accesso in area C,\\
@@ -505,7 +505,7 @@ oltre a informazioni sulla superficie e il perimetro delle aree.
 
 \lighttext{(\\
     \indent MUNICIPIO: id della zona,\\
-    \indent AREA : della zona,\\
+    \indent AREA: della zona,\\
     \indent PERIMETRO: della zona,\\
     \indent geometry\footnote{insieme di punti che formano i poligoni rappresentati nel file}\\
 )}
@@ -552,8 +552,8 @@ misurati ogni ora a Milano, a partire dal 2008, fino al 2018.
     \indent Date\_Time: contiene giorno, mese e anno,\\
     \indent Temperature: in gradi Celsius,\\
     \indent Dew\_Point: temperatura di condensazione,\\
-    \indent Humidity : umidità,\\
-    \indent Wind\_Speed : velocità del vento\\
+    \indent Humidity: umidità,\\
+    \indent Wind\_Speed: velocità del vento\\
 )}
 
 \section{Dati riguardanti trasporti pubblici}
@@ -1656,7 +1656,7 @@ ma questo ammonta al $34.6$ \% alle 8:00, e al $80.6$ \% alle 9:00,
 mentre nel weekend si hanno addirittura percentuali di decremento 
 in entrambi gli orari, rispettivamente $47.6$ \% e $17.9$ \%. 
 
-I graficipresentati indicano i sinistri all'anno, normalizzati per numero di 
+I grafici presentati indicano i sinistri all'anno, normalizzati per numero di 
 giorni settimanali o feriali, quindi gli incidenti totali della settimana sono divisi 
 per cinque giorni, mentre quelli del weekend per due, 
 come mostrato nel codice sottostante. 
@@ -2697,8 +2697,8 @@ delle stime tramite il numero di patentati per regione.
 
 Va sottolineato che una stima eseguita con tale modalità, 
 non potrà essere particolarmente 
-sicura, vista la mobilità tra luoghi di residenza e luoghi di 
-lavoro o studio che può decisamente falsare la localizzazione dei sinistri.
+sicura, vista la mobilità tra luoghi di residenza, di 
+lavoro o di studio che può decisamente falsare la localizzazione dei sinistri.
 
 \begin{figure}
     \hfill\includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/mappe_regioni/incidenti_patenti_italia.png}\hspace*{\fill}
@@ -2793,13 +2793,13 @@ Questo tipo di analisi verrà eseguita nei capitoli successivi.
 
 Utilizzando ancora una volta, i file geojson trovati sul repository Github di 
 Guglielmo Celata riguardanti le province, 
-è possibile creare delle heatmap raffiguranti in quali, tra queste, avvengano più 
-incidenti. 
+è possibile creare delle heatmap raffiguranti in quali, tra queste, siano 
+presenti più incidenti. 
 \todo{atrent: considerazione che vale un po' ovunque, attenzione che stai dando 
 (a meno che non lo specifichi) valori assoluti, non in rapporto al traffico, 
 alla popolazione, ai km di strade, ecc. tienilo sempre ben presente}
 
-Avendo a disposizione dati riguardanti le strade provinciali e le autostrade, 
+Avendo a disposizione dati riguardanti gli eventi lungo le strade provinciali e le autostrade, 
 è stato realizzato lo stesso calcolo per entrambe le tipologie. 
 
 \begin{figure}
@@ -2835,7 +2835,7 @@ sinistri su strade provinciali.
 
 Non è difficile trovare il motivo di questo comportamento, in quanto l'autostrada A1 passa 
 attraverso la prima provincia e non la seconda, e conseguentemente provoca 
-un'impennata di valori nella prima heatmap. 
+un'impennata di valori nella heatmap di destra. 
 
 %\clearpage
 \subsection{Le strade in provincia di Milano con maggiore numero di incidenti}
@@ -2860,7 +2860,7 @@ Il risultato è visibile nella figura \ref{fig:line-incidenti-milano}.
 
 In particolare, dalla mappa \ref{fig:line-incidenti-milano}, si deduce che le 
 Tangenziali Ovest e Est, e l'autostrada Torino-Trieste, sono i tratti di 
-strada con maggior numero di incidenti, con più di $150$ sinistri all'anno. 
+strada con maggior numero di incidenti, con più di $150$ all'anno. 
 
 Infine, se si avessero a disposizione le coordinate precise degli incidenti, 
 sarebbe possibile anche dividere queste tratte in sezioni più piccole, 
@@ -2888,7 +2888,7 @@ calcolato tramite la formula sottostante:
     con: $\rho_{X, Y} \rightarrow [-1, 1]$
 \end{center}
 
-Nella formula, X e Y sono i due campioni tra cui si vuole calcolare la correlazione, 
+Dove X e Y sono i due campioni tra cui si vuole calcolare la correlazione, 
 \methodstyle{cov()} restituisce la covarianza, e $\sigma_X$ è la deviazione standard del 
 campione X \cite{PROB_E_STATISTICA:1}. 
 
@@ -2922,8 +2922,7 @@ numero di incidenti e di feriti, in quanto, nella maggior parte dei casi,
 all'aumentare dei primi il volume dei secondi cresce allo stesso modo. 
 
 Si è notato che, sia nel diagramma, sia nel dataset, il numero di feriti supera quello 
-degli incidenti, indubbiamente per la presenza di passeggeri a bordo.
-
+degli incidenti. 
 Nella tabella sottostante è raffigurato un estratto del dataset ACI, 
 di cui si sono prese in considerazione le colonne principali, più 
 rilevanti per questo calcolo. 
@@ -2948,7 +2947,7 @@ Un'ipotesi, è che il dataset contenga solo incidenti con almeno un ferito,
 e quindi ignori tutti i sinistri non particolarmente significativi. 
 D'altra parte, tenendo conto che si sono utilizzati dati raccolti lungo 
 le autostrade, è anche possibile che la maggior parte degli eventi comporti 
-un alto numero di infortunati. 
+un alto numero di infortunati, indubbiamente anche per la presenza di passeggeri a bordo.
 
 Il coefficiente di Pearson, per quanto riguarda i campi \columnstyle{Incidenti} 
 e \columnstyle{Feriti}, 
@@ -2956,7 +2955,8 @@ e \columnstyle{Feriti},
 
 Correlazione, certo, non implica il nesso di causa e effetto, 
 cioè, non è detto che due fattori correlati si influenzino in alcun modo,
-ma sicuramente il variare del numero di sinistri genera una variazione del numero di feriti.
+ma sicuramente il variare del numero di sinistri nel dataset corrisponde 
+a una variazione del numero di feriti.
 
 I valori riguardanti i morti invece, sono molto meno vicini a uno, probabilmente 
 per il minor numero di sinistri con esiti mortali, che rende il campione più ristretto. 
@@ -3046,7 +3046,7 @@ ss16 = data[data['CODICE'] == 'SS01601']
 pescara = ss16[ss16['PROVINCIA'] == 'Pescara'][['INC', 'FER']]
 \end{code}
 
-Osservando superficialmente i dati, si potrebbe essere portati a pensare 
+Controllando superficialmente i dati, si potrebbe essere portati a pensare 
 che ci sia un errore di base nel conteggio dei valori. 
 Del resto, considerando cha la SS16 in questa provincia non è molto lunga, 
 può essere plausibile che durante l'anno sia avvenuto un solo incidente. 
@@ -3082,9 +3082,10 @@ sarebbe interessante sapere ci sia una variazione di incidenti con il trascorrer
 Una motivazione di questo fenomeno potrebbe essere il cambiamento 
 delle località di vacanza preferite. 
 Nel 2018, le mete più frequentate sono state Puglia e 
-Toscana\cite{INFOGRAFICA_ISTAT:1}, mentre nel 2019, oltre alla Puglia, 
+Toscana \cite{INFOGRAFICA_ISTAT:1}, mentre nel 2019, oltre alla Puglia, 
 una percentuale sostanziale di turisti si è recata in 
-Emilia Romagna e Liguria\cite{REPORT_ISTAT_2019:1}. 
+Emilia Romagna e Liguria \cite{REPORT_ISTAT_2019:1}. 
+\todo{lelepado: è giusto lo spazio tra parola e citazione?}
 
 Avendo a disposizione i dati di tutte le annate, a partire dal 2010 fino al 2018, 
 è possibile verificare se esistano anni con un volume di 
@@ -3216,7 +3217,7 @@ a Genova, e infine sul Grande Raccordo Anulare a
 Roma\footnote{Si sono prese in considerazione delle zone, distanti tra loro, 
 con dimensione del campione significativa.}. 
 
-Le tendenze visibili nei tre graficisono molto simili tra loro. 
+Le tendenze visibili nei tre grafici sono molto simili tra loro. 
 A Roma in particolare, dove si ha maggiore 
 volume di sinistri, si osservano picchi nelle fasce orarie delle 
 7:00-9:00 e delle 17:00-19:00, già evidenziate nei capitoli precedenti sull'argomento. 
@@ -3265,8 +3266,8 @@ Sarebbe interessante realizzare un calcolo simile, per quanto riguarda le autost
 più percorse per spostarsi in località di vacanza. 
 
 Sicuramente il mese di Agosto è quello interessato dal maggior numero 
-di partenze per le località di villeggiatura e sicuramente l'orientamento 
-di chi si sposta in automobile è quello di spostarsi verso sud, 
+di partenze per le località di villeggiatura e sicuramente l'intenzione 
+di chi si sposta in automobile è quella di spostarsi verso sud, 
 e raggiungere le zone balneari. 
 
 \begin{figure}
@@ -3286,7 +3287,7 @@ facilitare la lettura delle direttrici, infatti a colori diversi corrispondono t
 
 In particolare emergono la SS16 Adriatica e SS1 Aurelia che, come già 
 detto in precedenza, essendo strade statali molto lunghe e con corsie di marcia 
-non separate, risultano più pericolose rispetto alle autostrade. 
+non separate, potrebbero risultare più pericolose rispetto alle autostrade. 
 A questo si deve poi aggiungere l'attraversamento di diversi centri urbani, 
 che certo aumenta la possibilità di incidenti. 
 
