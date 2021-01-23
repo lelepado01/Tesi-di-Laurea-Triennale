@@ -1,4 +1,5 @@
-\documentclass[a4paper,12pt]{report}
+\documentclass[a4paper]{report}
+% \documentclass[a4paper,12pt]{report}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % packages... 
@@ -21,8 +22,8 @@
 \usepackage{refcheck}
 
 % draft più leggibile
-\usepackage[a4paper,top=2cm,bottom=2cm,outer=5cm,verbose,headheight=1cm,heightrounded]{geometry}
-\setlength{\marginparwidth}{4.5cm} %per farci stare todonotes
+% \usepackage[a4paper,top=2cm,bottom=2cm,outer=5cm,verbose,headheight=1cm,heightrounded]{geometry}
+% \setlength{\marginparwidth}{4.5cm} %per farci stare todonotes
 
 \definecolor{CodeGray}{gray}{0.95}
 \definecolor{TableGray}{gray}{0.9}
@@ -76,9 +77,9 @@
 \end{center}
 \vspace{12mm}
 \begin{center}
-{\huge{\bf Studio sull'incidentalità stradale}}\\
+{\huge{\bf Studio sull'incidentalità}}\\
 \vspace{4mm}
-{\huge{\bf tramite dataset aperti}}\\
+{\huge{\bf stradale tramite dataset aperti}}\\
 \end{center}
 \vspace{12mm}
 \begin{flushright}
@@ -283,11 +284,9 @@ in cui è avvenuto il sinistro, come rettilineo, rotonda o semaforo.
     \indent comune, giorno,\\
     \indent localizzazione\_incidente\footnote{zona incidente come urbana, extraurbana 
     o autostrada}\\
-    \indent tipo\_di\_strada\footnote{numero di carreggiate della strada},\\
-    \indent pavimentazione,\\
+    \indent pavimentazione, tipo\_di\_strada\footnote{numero di carreggiate della strada},\\
     \indent intersezione\_o\_non\_interse3\footnote{tipo di intersezione},\\
-    \indent segnaletica,\\
-    \indent condizioni\_meteorologiche, \\
+    \indent segnaletica, condizioni\_meteorologiche, \\
     \indent natura\_incidente,\\
     \indent tipo\_veicolo\_a\footnote{questo campo è ripetuto per altri due veicoli},\\
     \indent veicolo\_\_a\_\_\_et\_\_conducente\footnote{questo e i due campi successivi 

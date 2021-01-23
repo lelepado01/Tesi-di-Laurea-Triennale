@@ -1,0 +1,97 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% packages... 
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{graphicx}
+
+\usepackage[backend=bibtex]{biblatex}
+
+\begin{document}
+
+    \begin{center}
+    {\huge{\bf Studio sull'incidentalità}}\\
+    \vspace{3mm}
+    {\huge{\bf stradale tramite dataset aperti}}\\
+    \end{center}
+    \vspace{3mm}
+    \begin{center}
+    {\bf Gabriele Padovani - Matr. 909165}\\
+    \end{center}
+    \vspace{2mm}
+    \begin{center}
+    {\bf Termine:}\\
+    \end{center}
+
+
+    % 1 Introduzione 5
+    % 2 Origine dei dati 9
+    % 2.1 Incidenti . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+    % 2.2 Autovelox . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+    % 2.3 Patentati . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+    % 2.4 Area C di Milano . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+    % 2.5 Le zone di Milano . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+    % 2.6 Il meteo . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+    % 2.7 Trasporti pubblici . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+    % 2.8 Autostrade e manto stradale . . . . . . . . . . . . . . . . . . . . . 15
+    % 2.9 Il turismo . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+    % 2.10 Immagini del traffico . . . . . . . . . . . . . . . . . . . . . . . . . 16
+    % 2.11 Dati mancanti . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+    % 2.11.1 Il pav´e . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+    % 2.11.2 Traffico stradale . . . . . . . . . . . . . . . . . . . . . . . 17
+    % 2.11.3 Dati su strade, incroci, semafori . . . . . . . . . . . . . . 17
+
+    % 3 Analisi sull’incidentalit`a 19
+
+    % 3.1 Dati Geolocalizzati . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+    % 3.1.1 Distribuzione degli incidenti . . . . . . . . . . . . . . . . . 19
+    % 3.1.2 Legame tra incidenti e trasporti pubblici . . . . . . . . . . 22
+    % 3.1.3 Influenza del pav´e sull’incidentalit`a . . . . . . . . . . . . . 25
+    % 3.1.4 Legame tra incidenti e autovelox . . . . . . . . . . . . . . 27
+
+    % 3.2 Dati Istat su veicoli . . . . . . . . . . . . . . . . . . . . . . . . . . 32
+    % 3.2.1 Incidenti per tipologia della strada . . . . . . . . . . . . . 32
+    % 3.3 Dati Istat su conducenti e passeggeri . . . . . . . . . . . . . . . . 33
+    % 3.3.1 Legami tra guida e sesso del conducente . . . . . . . . . . 33
+    % 3.3.2 Numero di passeggeri . . . . . . . . . . . . . . . . . . . . 35
+    % 3.3.3 Utilizzo del cellulare in incidenti . . . . . . . . . . . . . . 37
+    % 3.4 Dati Istat su orari e mesi . . . . . . . . . . . . . . . . . . . . . . 38
+    % 3.4.1 Differenze nei diversi orari della giornata . . . . . . . . . . 38
+    % 3.4.2 Incidenti nelle fasce orarie della mattina . . . . . . . . . . 39
+    % 3.4.3 Correlazione tra incidenti e traffico stradale . . . . . . . . 39
+    % 3.4.4 Situazione in orari notturni . . . . . . . . . . . . . . . . . 41
+    % 3.4.5 Vacanze nel mese di Agosto . . . . . . . . . . . . . . . . . 42
+    % 3.4.6 Localit`a di mare nei mesi estivi . . . . . . . . . . . . . . . 46
+    % 3.5 Dati Istat su tipi di incidenti e incroci . . . . . . . . . . . . . . . 49
+    % 3.5.1 Frequenza di incidenti per tipologia . . . . . . . . . . . . 49
+    % 3.5.2 Tipologie di strada e indice di mortalit`a . . . . . . . . . . 51
+    % 3.5.3 Feriti per tipologia di sinistro . . . . . . . . . . . . . . . . 52
+    % 3.5.4 Coinvolgimento di pedoni in incidenti . . . . . . . . . . . 54
+    % 3.5.5 Et`a dei pedoni coinvolti . . . . . . . . . . . . . . . . . . . 56
+    % 3.5.6 Et`a dei conducenti . . . . . . . . . . . . . . . . . . . . . . 59
+
+    % 3.6 Dati ACI . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 61
+    % 3.6.1 Quadro delle regioni italiane . . . . . . . . . . . . . . . . 61
+    % 3.6.2 Differenze di incidenti tra mesi estivi e invernali . . . . . 64
+    % 3.6.3 Quadro delle province lombarde e laziali . . . . . . . . . . 66
+    % 3.6.4 Approfondimento sulla regione Lombardia . . . . . . . . . 66
+    % 3.6.5 Correlazione tra incidenti e numero di feriti . . . . . . . . 67
+    % 3.6.6 Quadro delle strade pi`u pericolose . . . . . . . . . . . . . 70
+    % 3.6.7 Approfondimento delle tratte pi`u pericolose . . . . . . . . 71
+    % 3.6.8 Evoluzione cronologica degli incidenti . . . . . . . . . . . 72
+
+    % 3.7 Meteo a Milano . . . . . . . . . . . . . . . . . . . . . . . . . . . . 78
+    % 3.7.1 Correlazione tra fattori atmosferici e incidentalit`a . . . . . 78
+
+
+\section{Intro}
+\section{Origine dei dati}
+\section{Analisi dei dati geolocalizzati}
+\section{Analisi con dati Istat}
+\section{Analisi con dati Aci}
+\section{Analisi con dati Meteo}
+\section{Conclusioni}
+
+
+\end{document}
