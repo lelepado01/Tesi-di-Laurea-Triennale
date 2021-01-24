@@ -3,10 +3,13 @@
 \usepackage[utf8]{inputenc}
 \usepackage[italian]{babel}
 \usepackage{graphicx}
+\usepackage{csquotes}
+\usepackage[usestackEOL]{stackengine}
 
 \usepackage[backend=bibtex]{biblatex}
 
 \addbibresource{../tesi/Biblio.bib}
+
 
 \begin{document}
 
@@ -24,73 +27,17 @@
     {\bf Termine:}\\
     \end{center}
 
-
-    % 1 Introduzione 5
-    % 2 Origine dei dati 9
-    % 2.1 Incidenti . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
-    % 2.2 Autovelox . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
-    % 2.3 Patentati . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
-    % 2.4 Area C di Milano . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
-    % 2.5 Le zone di Milano . . . . . . . . . . . . . . . . . . . . . . . . . . 13
-    % 2.6 Il meteo . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
-    % 2.7 Trasporti pubblici . . . . . . . . . . . . . . . . . . . . . . . . . . 14
-    % 2.8 Autostrade e manto stradale . . . . . . . . . . . . . . . . . . . . . 15
-    % 2.9 Il turismo . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
-    % 2.10 Immagini del traffico . . . . . . . . . . . . . . . . . . . . . . . . . 16
-    % 2.11 Dati mancanti . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
-    % 2.11.1 Il pav´e . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
-    % 2.11.2 Traffico stradale . . . . . . . . . . . . . . . . . . . . . . . 17
-    % 2.11.3 Dati su strade, incroci, semafori . . . . . . . . . . . . . . 17
-
-    % 3 Analisi sull’incidentalit`a 19
-
-    % 3.1 Dati Geolocalizzati . . . . . . . . . . . . . . . . . . . . . . . . . . 19
-    % 3.1.1 Distribuzione degli incidenti . . . . . . . . . . . . . . . . . 19
-    % 3.1.2 Legame tra incidenti e trasporti pubblici . . . . . . . . . . 22
-    % 3.1.3 Influenza del pav´e sull’incidentalit`a . . . . . . . . . . . . . 25
-    % 3.1.4 Legame tra incidenti e autovelox . . . . . . . . . . . . . . 27
-
-    % 3.2 Dati Istat su veicoli . . . . . . . . . . . . . . . . . . . . . . . . . . 32
-    % 3.2.1 Incidenti per tipologia della strada . . . . . . . . . . . . . 32
-    % 3.3 Dati Istat su conducenti e passeggeri . . . . . . . . . . . . . . . . 33
-    % 3.3.1 Legami tra guida e sesso del conducente . . . . . . . . . . 33
-    % 3.3.2 Numero di passeggeri . . . . . . . . . . . . . . . . . . . . 35
-    % 3.3.3 Utilizzo del cellulare in incidenti . . . . . . . . . . . . . . 37
-    % 3.4 Dati Istat su orari e mesi . . . . . . . . . . . . . . . . . . . . . . 38
-    % 3.4.1 Differenze nei diversi orari della giornata . . . . . . . . . . 38
-    % 3.4.2 Incidenti nelle fasce orarie della mattina . . . . . . . . . . 39
-    % 3.4.3 Correlazione tra incidenti e traffico stradale . . . . . . . . 39
-    % 3.4.4 Situazione in orari notturni . . . . . . . . . . . . . . . . . 41
-    % 3.4.5 Vacanze nel mese di Agosto . . . . . . . . . . . . . . . . . 42
-    % 3.4.6 Localit`a di mare nei mesi estivi . . . . . . . . . . . . . . . 46
-    % 3.5 Dati Istat su tipi di incidenti e incroci . . . . . . . . . . . . . . . 49
-    % 3.5.1 Frequenza di incidenti per tipologia . . . . . . . . . . . . 49
-    % 3.5.2 Tipologie di strada e indice di mortalit`a . . . . . . . . . . 51
-    % 3.5.3 Feriti per tipologia di sinistro . . . . . . . . . . . . . . . . 52
-    % 3.5.4 Coinvolgimento di pedoni in incidenti . . . . . . . . . . . 54
-    % 3.5.5 Et`a dei pedoni coinvolti . . . . . . . . . . . . . . . . . . . 56
-    % 3.5.6 Et`a dei conducenti . . . . . . . . . . . . . . . . . . . . . . 59
-
-    % 3.6 Dati ACI . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 61
-    % 3.6.1 Quadro delle regioni italiane . . . . . . . . . . . . . . . . 61
-    % 3.6.2 Differenze di incidenti tra mesi estivi e invernali . . . . . 64
-    % 3.6.3 Quadro delle province lombarde e laziali . . . . . . . . . . 66
-    % 3.6.4 Approfondimento sulla regione Lombardia . . . . . . . . . 66
-    % 3.6.5 Correlazione tra incidenti e numero di feriti . . . . . . . . 67
-    % 3.6.6 Quadro delle strade pi`u pericolose . . . . . . . . . . . . . 70
-    % 3.6.7 Approfondimento delle tratte pi`u pericolose . . . . . . . . 71
-    % 3.6.8 Evoluzione cronologica degli incidenti . . . . . . . . . . . 72
-
-    % 3.7 Meteo a Milano . . . . . . . . . . . . . . . . . . . . . . . . . . . . 78
-    % 3.7.1 Correlazione tra fattori atmosferici e incidentalit`a . . . . . 78
-
 \section{Introduzione}
 
 Nel documento di tesi si è esplorato che tipo di analisi è possibile realizzare, 
 avendo a disposizione sufficiente quantità di dati liberi. 
-Gli argomenti del lavoro, si concentrano in particolare sull'ambito degli incidenti stradali, 
-con enfasi sulle posizioni di questi ultimi, sia dal punto di vista delle coordinate 
+Gli argomenti del lavoro, si concentrano, in particolare, sull'ambito dell'incidentalità 
+stradale, dando enfasi alle posizioni di questi ultimi, sia dal punto di vista delle coordinate 
 geografiche, sia da quello delle strade con maggiore numero di sinistri. 
+
+Si è inoltre tentato di ricavare il legame tra il numero di incidenti e svariati fattori, 
+tra cui, la presenza di passeggeri, l'età del conducente, la pavimentazione della direttrice, 
+o la tipologia di incrocio.
 
 \section{Origine dei dati}
 
@@ -111,10 +58,14 @@ normalmente oscurati per rispettare la privacy degli individui coinvolti nei sin
 
 \section{Analisi dei dati geolocalizzati}
 
-Per quanto le analisi riguardanti gli incidenti che dispongono di localizzazione, 
-si sono incentrate soprattutto sulla relazione tra incidentalità e pavimentazione 
-della strada, o sulla rapporto tra numero di incidenti e presenza di linee di 
-trasporti pubblici, o ancora sulla differenza di sinistri nelle vicinanze di autovelox. 
+Per quanto le analisi riguardanti gli eventi che dispongono di localizzazione, 
+si siano incentrate soprattutto sulla relazione tra incidentalità e pavimentazione 
+della strada, è stata posta particolare enfasi anche sul rapporto tra numero di 
+incidenti e presenza di linee di trasporti pubblici, 
+e allo stesso modo sulla differenza di sinistri nelle vicinanze di autovelox. 
+
+Queste analisi si concentrano sulla città di Milano, in quanto le informazioni rilasciate da 
+Istat sono limitate al capoluogo lombardo.
 
 \section{Analisi con dati Istat}
 
@@ -160,6 +111,25 @@ sia possibile ottenere risultati validi.
 
 \section{Conclusioni}
 
+\`E opportuno evidenziare che la maggior parte delle analisi realizzate, 
+è stata portata a termine facendo compromessi tra la disponibilità del dato e la 
+precisione di questo. 
+
+Se per analisi realizzate su dataset Istat, le informazioni sono già parzialmente aggregate, 
+e quindi di facile elaborazione, per i dati riguardanti le coordinate degli incidenti, 
+o quelli sugli autovelox, uno dei maggiori problemi è stata l'assenza dei dati necessari come, 
+ad esempio, le date di posizionamento delle telecamere a Milano. 
+
+Un altro problema, questa volta presente prevalentemente nelle analisi di dati già aggregati, 
+è stata la difficoltà nel creare un contesto valido attorno alle informazioni ricavate. 
+\`E il caso dei sinistri divisi a seconda della fascia di età del conducente, dove è possibile 
+ottenere esiti marcatamente differenti a seconda del denominatore utilizzato per 
+stimare la popolazione per età.
+
 \printbibliography
+
+\raggedleft\vfill\Longstack[l]{%
+  \scriptsize Ultima revisione: \today
+}\par
 
 \end{document}
