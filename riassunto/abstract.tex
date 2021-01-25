@@ -7,8 +7,7 @@
 
 \usepackage[backend=bibtex]{biblatex}
 
-\addbibresource{../tesi/Biblio.bib}
-
+\newcommand{\skipline}{\vspace{0.2in}}
 
 \begin{document}
 
@@ -51,10 +50,11 @@ nel caso delle patenti.
 D'altra parte, i file principali, contenenti i dati riguardanti gli incidenti, sono 
 stati reperiti sul sito 
 dell'istituto nazionale di statistica\footnote{\url{https://www.istat.it/it/archivio/87539}}, 
-e su quello dell'Aci \cite{ACI:1}. 
+e su quello dell'Aci\footnote{\url{http://www.aci.it/fileadmin/documenti/ACI/Trasparenza/Open_Data/Catalogo_localizzazione_in_formato_Open_2019.pdf}}. 
 
-Le informazioni riguardanti le coordinate degli incidenti avvenuti a Milano, provengono invece 
-dal giornale online TheSubmarine \cite{SUBMARINE:1}, 
+Le informazioni riguardanti le coordinate degli incidenti avvenuti a Milano, 
+provengono invece dal giornale online 
+TheSubmarine\footnote{\url{https://thesubmarine.it/2018/06/20/mappa-incidenti-stradali-milano}}, 
 che ha ottenuto, da parte di Istat, il rilascio di una parte di questi dati, 
 normalmente oscurati per rispettare la privacy degli individui coinvolti nei sinistri. 
 
@@ -68,7 +68,7 @@ Infine, per poter rappresentare i risultati ricavati, in molti casi si è fatto 
 alcune mappe, riguardanti le regioni e le province italiane trovate su un \textit{repository} 
 Github\footnote{\url{https://github.com/openpolis/geojson-italy}}.
 
-\section{Analisi dei dati geolocalizzati}
+\section{Analisi}
 
 Per quanto le analisi riguardanti gli eventi che dispongono di localizzazione, 
 si siano incentrate soprattutto sulla relazione tra incidentalità e pavimentazione 
@@ -79,8 +79,7 @@ allo stesso modo, sulla differenza di sinistri nelle vicinanze di autovelox.
 Queste analisi si concentrano sulla città di Milano, in quanto le informazioni rilasciate da 
 Istat sono limitate al capoluogo lombardo.
 
-\section{Analisi con dati Istat}
-
+\skipline
 Per quanto riguarda le analisi realizzate sui dataset provenienti dal sito Istat, 
 ci si è concentrati principalmente sull'evoluzione dell'incidentalità nei diversi orari 
 della giornata, e allo stesso modo al passare dei mesi. 
@@ -97,8 +96,7 @@ Infine, si è tentato di individuare l'esistenza di fattori di distrazione del
 conducente, in particolare nella forma dei telefoni cellulari o nella presenza 
 di altri passeggeri a bordo. 
 
-\section{Analisi con dati Aci}
-
+\skipline
 I dataset provenienti dal sito Aci, d'altra parte, sono stati oggetto di varie analisi per 
 quanto riguarda il luogo dell'incidente, inteso come il nome della strada o la provincia 
 in cui questo è avvenuto. 
@@ -111,8 +109,7 @@ Infine, riprendendo alcune delle analisi realizzate su dati Istat, si sono ripet
 calcoli incentrati, soprattutto, sull'evoluzione dei sinistri al cambiare dell'orario 
 o del mese dell'anno.
 
-\section{Analisi con dati Meteo}
-
+\skipline
 I dataset riguardanti le informazioni meteo, sono stati utilizzati per un'analisi sulla 
 correlazione tra i fattori atmosferici e l'incidentalità in 
 prossimità della città di Milano. 
@@ -145,8 +142,6 @@ Un altro problema, questa volta presente prevalentemente nelle analisi di dati g
 \`E il caso dei sinistri divisi a seconda della fascia di età del conducente, dove è possibile 
 ottenere esiti marcatamente differenti a seconda del denominatore utilizzato per 
 stimare la popolazione per età.
-
-\printbibliography
 
 \raggedleft\vfill\scriptsize Ultima revisione: \today\par
 
