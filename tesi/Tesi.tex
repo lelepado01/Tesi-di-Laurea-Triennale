@@ -1321,79 +1321,7 @@ possibilmente riferiti ad annate antecedenti al 2014, sarebbe possibile realizza
 una stima con informazioni precedenti e 
 successive al posizionamento delle telecamere. 
 
-
-
-\section{Dati Istat su veicoli}
-
-
-\subsection{Incidenti per tipologia della strada}
-\todo{ATOK}
-
-Una prima analisi che è possibile realizzare, utilizzando il dataset Istat è, 
-per quanto riguarda i veicoli, 
-come la composizione di questi cambia al cambiare del tipo di strada. 
-In altre parole, la percentuale, ad esempio, di autotreni sul totale dei veicoli 
-in circolazione è diversa sulle autostrade rispetto alle strade provinciali?
-
-\begin{code}[language=Python]
-# Dove 1,2,3 sono gli ID dei diversi tipi di strade urbane, 
-# mentre 4,5,6 gli ID delle strade extraurbane
-
-strade_urbane = data[(data['localizzazione_incidente'] == 1) | (data['localizzazione_incidente'] == 2) | (data['localizzazione_incidente'] == 3)]['tipo_veicolo_a']
-strade_extraurbane = data[(data['localizzazione_incidente'] == 4) | (data['localizzazione_incidente'] == 5) | (data['localizzazione_incidente'] == 6)]['tipo_veicolo_a']
-\end{code}
-
-Il grafico \ref{fig:differenza-strade} rappresenta quali sono le categorie di veicoli 
-coinvolte con più frequenza in sinistri, per tre tipi di strade diverse, strade urbane, 
-extraurbane e autostrade. 
-Le percentuali sono calcolate per gruppo, quindi, sommando 
-tutte le righe di \columnstyle{Autostrade}, si ottiene $1.0$. 
-
-\begin{figure}
-    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/tipo_veicoli/differenza_strade.png}
-    \caption{Percentuale del tipo di veicoli coinvolti in incidenti, nel 2018}
-    \label{fig:differenza-strade}
-\end{figure}
-
-Possiamo quindi, notare che le auto private sono di gran lunga il tipo di veicolo 
-maggiormente coinvolto in incidenti su ogni categoria di strada. 
-I motocicli invece subiscono sinistri soprattutto su strade urbane.
-Nel caso degli autocarri, si ha invece una bassa percentuale nelle strade 
-urbane, mentre il volume di questa tipologia aumenta sulle autostrade. 
-
-Visto che le auto private causano oltre tre quarti degli 
-incidenti in ogni categoria di strada,  
-si è deciso di ometterle, per avere una rappresentazione più 
-precisa delle tipologie di veicoli che ricorrono con minore frequenza. 
-I risultati sono mostrati, per l'anno 2018, 
-nella figura \ref{fig:differenza-strade-no-auto}. 
-
-\begin{figure}
-    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/tipo_veicoli/differenza_senza_auto.png}
-    \caption{Numero assoluto di incidenti per tipo veicolo, ignorando le auto private}
-    \label{fig:differenza-strade-no-auto}
-\end{figure}
-
-Omesse le automobili private, appare chiaro che gli autocarri siano coinvolti in un maggior 
-numero di incidenti su autostrade, mentre i motocicli abbiano il primato sulle strade urbane. 
-Può anche sembrare strano che i trattori stradali siano coinvolti così spesso in incidenti 
-su autostrade, tuttavia, in questo caso, per \quotestyle{trattore} non si intende la macchina 
-agricola, ma la motrice di un autocarro senza rimorchio. 
-
-Va comunque sottolineato che le percentuali di incidenti provocati da queste tipologie di 
-veicoli, sono tutte al di sotto del $10$ \%, e che la sezione maggiore di sinistri è 
-provocata dalle auto private. 
-Inoltre, utilizzare il numero di incidenti come 
-stimatore\footnote{Stimatore: una qualunque statistica con 
-lo scopo di dare una stima di un parametro $\theta$ è detta stimatore 
-di $\theta$ (fonte: \citetitle{PROB_E_STATISTICA:1}\cite{PROB_E_STATISTICA:1}, 
-capitolo: Statistica descrittiva, pagine: 246-248)} del traffico, potrebbe non risultare 
-estremamente preciso, per la presenza di fattori, come la conformazione della strada, che 
-influiscono sui sinistri. 
-
-
 \section{Dati Istat su conducenti e passeggeri}
-
 
 \subsection{Legami tra guida e sesso del conducente}
 \todo{ATOK}
@@ -2106,7 +2034,7 @@ indipendentemente dall'anno, o se queste cambino di stagione in stagione.
 Si tenterà di rispondere a queste domande nei capitoli successivi. 
 
 
-\section{Dati Istat su tipi di incidenti e incroci}
+\section{Dati Istat su tipi di veicolo, strade e incroci}
 
 Avendo a disposizione informazioni sulle località degli incidenti 
 e sul tipo di incrocio, 
@@ -2116,6 +2044,72 @@ con più frequenza di altre.
 Un'altra questione potrebbe essere se, tra queste categorie, il numero di feriti 
 sia comparabile o se alcuni tipi di sinistri siano più pericolosi di altri. 
 
+
+
+\subsection{Incidenti per tipologia della strada}
+\todo{ATOK}
+
+Una prima analisi che è possibile realizzare, utilizzando il dataset Istat è, 
+per quanto riguarda i veicoli, 
+come la composizione di questi cambia al cambiare del tipo di strada. 
+In altre parole, la percentuale, ad esempio, di autotreni sul totale dei veicoli 
+in circolazione è diversa sulle autostrade rispetto alle strade provinciali?
+
+\begin{code}[language=Python]
+# Dove 1,2,3 sono gli ID dei diversi tipi di strade urbane, 
+# mentre 4,5,6 gli ID delle strade extraurbane
+
+strade_urbane = data[(data['localizzazione_incidente'] == 1) | (data['localizzazione_incidente'] == 2) | (data['localizzazione_incidente'] == 3)]['tipo_veicolo_a']
+strade_extraurbane = data[(data['localizzazione_incidente'] == 4) | (data['localizzazione_incidente'] == 5) | (data['localizzazione_incidente'] == 6)]['tipo_veicolo_a']
+\end{code}
+
+Il grafico \ref{fig:differenza-strade} rappresenta quali sono le categorie di veicoli 
+coinvolte con più frequenza in sinistri, per tre tipi di strade diverse, strade urbane, 
+extraurbane e autostrade. 
+Le percentuali sono calcolate per gruppo, quindi, sommando 
+tutte le righe di \columnstyle{Autostrade}, si ottiene $1.0$. 
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/tipo_veicoli/differenza_strade.png}
+    \caption{Percentuale del tipo di veicoli coinvolti in incidenti, nel 2018}
+    \label{fig:differenza-strade}
+\end{figure}
+
+Possiamo quindi, notare che le auto private sono di gran lunga il tipo di veicolo 
+maggiormente coinvolto in incidenti su ogni categoria di strada. 
+I motocicli invece subiscono sinistri soprattutto su strade urbane.
+Nel caso degli autocarri, si ha invece una bassa percentuale nelle strade 
+urbane, mentre il volume di questa tipologia aumenta sulle autostrade. 
+
+Visto che le auto private causano oltre tre quarti degli 
+incidenti in ogni categoria di strada,  
+si è deciso di ometterle, per avere una rappresentazione più 
+precisa delle tipologie di veicoli che ricorrono con minore frequenza. 
+I risultati sono mostrati, per l'anno 2018, 
+nella figura \ref{fig:differenza-strade-no-auto}. 
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/tipo_veicoli/differenza_senza_auto.png}
+    \caption{Numero assoluto di incidenti per tipo veicolo, ignorando le auto private}
+    \label{fig:differenza-strade-no-auto}
+\end{figure}
+
+Omesse le automobili private, appare chiaro che gli autocarri siano coinvolti in un maggior 
+numero di incidenti su autostrade, mentre i motocicli abbiano il primato sulle strade urbane. 
+Può anche sembrare strano che i trattori stradali siano coinvolti così spesso in incidenti 
+su autostrade, tuttavia, in questo caso, per \quotestyle{trattore} non si intende la macchina 
+agricola, ma la motrice di un autocarro senza rimorchio. 
+
+Va comunque sottolineato che le percentuali di incidenti provocati da queste tipologie di 
+veicoli, sono tutte al di sotto del $10$ \%, e che la sezione maggiore di sinistri è 
+provocata dalle auto private. 
+Inoltre, utilizzare il numero di incidenti come 
+stimatore\footnote{Stimatore: una qualunque statistica con 
+lo scopo di dare una stima di un parametro $\theta$ è detta stimatore 
+di $\theta$ (fonte: \citetitle{PROB_E_STATISTICA:1}\cite{PROB_E_STATISTICA:1}, 
+capitolo: Statistica descrittiva, pagine: 246-248)} del traffico, potrebbe non risultare 
+estremamente preciso, per la presenza di fattori, come la conformazione della strada, che 
+influiscono sui sinistri. 
 
 \subsection{Frequenza di incidenti per tipologia}
 \todo{ATOK}
