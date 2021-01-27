@@ -19,19 +19,3 @@ for point in incidenti['geometry']:
 
 rounded = gp.GeoDataFrame(df.values(), geometry=gp.points_from_xy([i[0] for i in df.keys()], [i[1] for i in df.keys()]))
 # Il Dataframe è stato salvato nella cartella dataset
-
-# #####################################
-# Rappresentazione del dataset ottenuto
-# import matplotlib.pyplot as plt
-# import contextily as cx
-# ax = rounded.plot(
-#     figsize=(9,7),
-#     alpha=0.8,
-#     column=0,
-#     markersize=rounded[0].astype(int) **1.8,
-#     cmap='viridis'
-#     )
-# 
-# cx.add_basemap(ax = ax)
-# plt.axis('off')
-# plt.show()

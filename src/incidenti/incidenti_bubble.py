@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import contextily as cx
 
 incidenti = gp.read_file("dataset/incidenti/incidenti_round.csv")
+# creazione della colonna geometry, tramite le coordinate in field_1 e field_2
 incidenti = gp.GeoDataFrame(incidenti['field_3'], geometry=gp.points_from_xy(incidenti['field_2'], incidenti['field_1'])).set_crs(epsg=4326).to_crs(epsg=3857)
 incidenti['field_3'] = incidenti['field_3'].astype(float)
 
