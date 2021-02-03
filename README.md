@@ -5,7 +5,7 @@
 ### Utilizzo del codice: 
 
 Tutti gli script utilizzati per questo lavoro sono reperibili a questa pagina 
-[github](https://github.com/lelepado01/Tirocinio). 
+[github](https://github.com/lelepado01/Tesi-di-Laurea-Triennale). 
 
 Il repository è diviso in tre cartelle principali, *dataset*, *src* 
 e *tesi*. La prima contiene tutti i file di dati utilizzati, divisi per 
