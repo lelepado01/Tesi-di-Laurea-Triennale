@@ -204,7 +204,7 @@ parte delle informazioni rilevanti su meteo e ambiente del sito Arpa.
 La condivisione di questi ha reso meno necessario l'utilizzo del form, che 
 è comunque ancora online per l'ottenimento di dati più precisi. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \hfill\includegraphics[width=0.7\linewidth]{img/arpa.png}\hspace*{\fill}
     \caption{Form per la richiesta di dati sul sito Arpa (fonte: Trentini)}
     \label{fig:arpa}
@@ -513,7 +513,7 @@ provenienti dalle centraline Arpa.
 Dopo un veloce controllo delle loro posizioni, visibili in figura \ref{fig:centraline-arpa}, 
 si è notato che il dataset non contiene tutte le stazioni di Milano. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \hfill\includegraphics[width=0.7\linewidth]{../src/meteo/centraline_arpa.png}\hspace*{\fill}
     \caption{Posizione delle centraline Arpa a Milano}
     \label{fig:centraline-arpa}
@@ -805,7 +805,7 @@ Nella mappa sinistra della figura \ref{fig:heatmap-municipi}, si è divisa
 la città di Milano in base ai diversi municipi, ed è possibile 
 osservare che nel centro storico si ha la più alta concentrazione di sinistri. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/municipi_milano/incidenti_municipio.png}
     \caption{Numero di incidenti assoluti a Milano per zona municipale e distribuzione dei sinistri tramite \engstyle{bubblechart}}
     \label{fig:heatmap-municipi}
@@ -826,7 +826,7 @@ incidenti = pd.Series(inc, index=inc.index)
 incidenti_per_zona = (incidenti / area) * 1000000 
 \end{code}
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/municipi_milano/incidenti_superf.png}
     \caption{Numero di incidenti a Milano per municipio e normalizzati in base alla 
     superficie della zona}
@@ -844,7 +844,7 @@ Una volta creata la tendenza generale di ogni zona, è possibile confrontare i r
 ottenuti con il numero di incidenti in aree più ristrette come, per esempio, 
 attorno a piazzale Loreto. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \hfill\includegraphics[width=0.7\linewidth]{../src/municipi_milano/zona_loreto.png}\hspace*{\fill}
     \caption{Zona presa in considerazione per piazzale Loreto}
     \label{fig:zona-loreto}
@@ -879,7 +879,7 @@ Sorge spontaneo domandarsi perché il centro storico risulti tra le aree con mag
 incidentalità, il volume di traffico, e quindi di incidenti, non dovrebbe essere abbassato 
 della presenza dell'area C?
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/area_c/area_c_incidenti.png}
     \caption{Perimetro dell'area C e incidenti nella zona}
     \label{fig:perimetro-area-c}
@@ -908,7 +908,7 @@ Il dataset dei tragitti dei trasporti pubblici copre una superficie più ampia r
 quello degli incidenti, dopo aver eliminato alcune linee di autobus che risultavano 
 troppo in periferia, si ottiene la mappa sinistra nella figura \ref{fig:geo-trasporti}: 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/atm/linee_atm.png}
     \caption{Posizione delle linee dei trasporti pubblici e incidenti a Milano}
     \label{fig:geo-trasporti}
@@ -927,7 +927,7 @@ parallele a Viale Col di Lana e Viale Bligny.
 Lo stesso comportamento prosegue su Viale Gabriele D'Annunzio e Viale Gorizia e Coni Zugna, 
 località vicine alle direttrici precedenti. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/atm/navigli.png}
     \caption{Linee dei trasporti pubblici e condizioni di traffico nella zona Navigli}
     \label{fig:navigli}
@@ -936,7 +936,7 @@ località vicine alle direttrici precedenti.
 Anche tra Viale Bianca Maria e Viale Premuda, nella mappa \ref{fig:22-marzo} si può 
 notare lo stesso fenomeno, in prossimità di corso Ventidue Marzo. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/atm/22_marzo.png}
     \caption{Linee dei trasporti pubblici e condizioni del traffico vicino 
     a Corso Ventidue Marzo}
@@ -963,7 +963,7 @@ perché sono presenti molti incidenti in viale Papiniano e viale Beatrice d'Este
 e un numero minore nella vie parallele sottostanti, su cui viaggiano 
 trasporti pubblici. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{img_unite/zona_navigli_22marzo.png}
     \caption{Sezioni di Milano prese in considerazione per contare gli incidenti in 
     prossimità dei Navigli e di Corso Ventidue Marzo}
@@ -1053,7 +1053,7 @@ passano su asfalto.
 Inoltre, in alcune tratte, come viale Premuda, i tram viaggiano su una carreggiata separata, 
 che deve avere influenza minore sugli incidenti della zona. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/tram/tram_milano.png}
     \caption{Cartina con strade in pavé e linee tranviarie a Milano}
     \label{fig:tram-pave-milano}
@@ -1068,7 +1068,7 @@ anche un campione di tratte asfaltate con caratteristiche simili.
 
 Il risultato è visibile nella mappa sulla sinistra dell'immagine \ref{fig:mappa-pave}. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{img_unite/mappa_pave_asfalto.png}
     \caption{Principali strade a Milano in pavé e campione simile con zone asfaltate}
     \label{fig:mappa-pave}
@@ -1155,7 +1155,7 @@ Nella sezione seguente, dunque, si assume di disporre di due dataset di sinistri
 precedente e uno successivo al 2014, e di eseguire i calcoli su entrambi gli insiemi, 
 osservando le eventuali differenze presenti nei risultati ottenuti.
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/autovelox/autovelox_2014.png}
     \caption{Posizione degli autovelox installati nel 2014 e quelli il cui 
     anno di installazione è ignoto}
@@ -1190,7 +1190,7 @@ Per quanto non si disponga delle informazioni sui sinistri prima e dopo dell'ins
 hanno un qualche tipo di effetto sugli incidenti, visto che i dati 
 localizzati sono successivi al posizionamento delle telecamere. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/autovelox/autovelox_incidenti.png}
     \caption{Numero di incidenti per chilometro in prossimità di autovelox, a Milano}
     \label{fig:autovelox-incidenti}
@@ -1271,7 +1271,7 @@ tuttavia nella maggior parte delle zone, e soprattutto in prossimità di Viale S
 Viale Monte Ceneri, questo valore è particolarmente più alto di 
 quello della zona municipale. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/autovelox/conclusioni_autovelox.png}
     \caption{Numero di incidenti in prossimità di autovelox, rispetto a quelli 
     della zona di Milano}
@@ -1317,7 +1317,7 @@ sarebbero meno abili alla guida rispetto alla controparte maschile.
 Avendo a disposizione le informazioni sul genere del conducente che ha causato l'incidente, 
 è possibile controllare se esista un riscontro reale per questa credenza. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \hfill\includegraphics[width=0.7\linewidth]{../src/incidenti/incidenti_senza_coords/tipo_veicoli/uomo-donna.png}\hspace*{\fill}
     \caption{Numero assoluto di incidenti, divisi tra uomini e donne, nel 2018}
     \label{fig:differenza-uomo-donna}
@@ -1413,7 +1413,7 @@ Analizzando i dati è possibile valutare se esiste una
 relazione tra la presenza di uno o più passeggeri e la probabilità 
 di essere causa di incidente.
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/passeggeri/passeggeri.png}
     \caption{Numero di passeggeri in incidenti in tre località di esempio}
     \label{fig:passeggeri-milano-rimini}
@@ -1490,7 +1490,7 @@ anni tra 2010 e 2013, in cui l'uso del cellulare in macchina non era ancora diff
 rispetto agli anni più recenti, quando gli smartphone hanno iniziato a essere utilizzati 
 frequentemente durante la guida. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/anno/incremento_incidenti.png}
     \caption{Numero assoluto di incidenti all'anno, in cui è presente solo il conducente}
     \label{fig:incremento-incidenti}
@@ -1536,7 +1536,7 @@ in corrispondenza delle fasce orarie di entrata e di uscita dal lavoro.
 Analizzando i dati riferiti ai sinistri e non al traffico, si può, 
 quindi, tentare di verificare tale ipotesi.
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/ore_punta/week_weekend.png}
     \caption{Numero assoluto di incidenti per orario}
     \label{fig:week-weekend}
@@ -1599,7 +1599,7 @@ che aumenta fino al $118.7$ \% delle 9:00, nelle giornate lavorative.
 D'altro canto, durante il weekend, il numero di incidenti alle 8:00 cala del $58.5$ \% rispetto 
 alla media e allo stesso modo alle 9:00, del $37$ \%. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/ore_punta/week_weekend_milano.png}
     \caption{Numero assoluto di incidenti per orario a Milano}
     \label{fig:week-weekend-milano}
@@ -1628,7 +1628,7 @@ Per quanto un dataset contenente questi dati non sia stato trovato,
 utilizzando il numero degli ingressi all'area C di Milano, 
 disponibile a partire dal 2011, fino al 2016. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/area_c/rapporto_orario.png}
     \caption{Rapporto tra incidenti e traffico per orario a Milano}
     \label{fig:rapporto-incidenti-traffico}
@@ -1706,7 +1706,7 @@ ora_notte_weekend /= 2 * 52
 \`E possibile ora verificare se il traffico stimato tramite il conteggio degli 
 accessi in area C, dia conferma a questa tendenza.
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{img_unite/ore_punta.png}
     \caption{Numero di incidenti e traffico durante ore notturne}
     \label{fig:ore-notte}
@@ -1722,7 +1722,7 @@ più pericolosi, calcolando il rapporto tra incidenti e veicoli in movimento,
 in base all'orario. 
 Il risultato è rappresentato nella figura \ref{fig:rapp-inc-traff}. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/area_c/rapporto_inc_notte.png}
     \caption{Rapporto tra incidenti e traffico durante ore notturne}
     \label{fig:rapp-inc-traff}
@@ -1755,7 +1755,7 @@ dalla colonna \columnstyle{trimestre}.
 Per mantenere i calcoli più precisi e attuali possibili, i grafici sull'argomento prenderanno 
 in considerazione l'annata più recente contenente il label \columnstyle{mese}. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \hfill\includegraphics[width=0.7\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/milano_mese.png}\hspace*{\fill}
     \caption{Incidenti a Milano normalizzati per numero di giorni nel mese, nel 2013}
     \label{fig:milano-mese}
@@ -1802,7 +1802,7 @@ Una volta ottenuta una stima di questo fattore, è possibile calcolare quali mes
 siano più pericolosi dal punto di vista degli incidenti, 
 rapportando il loro numero agli ingressi in area C mensili.
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/area_c/rapporto_mese.png}
     \caption{Incidenti al mese, rapportati al traffico nello stesso periodo (2012)}
     \label{fig:incidenti-traffico-mese}
@@ -1831,7 +1831,7 @@ per tentare di visualizzare lo stesso fenomeno con campioni più ampi.
 La figura \ref{fig:milano-trimestri} mostra la quantità di incidenti per 
 trimestre a partire dal 2010 fino al 2018. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/trimestri.png}
     \caption{Incidenti per trimestre a Milano, normalizzati per numero di giorni nel periodo}
     \label{fig:milano-trimestri}
@@ -1863,7 +1863,7 @@ In altre parole, visto che un gran numero di persone si sposta in automobile
 verso altre regioni durante i mesi estivi, la differenza di traffico è osservabile 
 nella quantità di sinistri?
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/mesi_estivi.png}
     \caption{Prime 10 province per incidenti totali}
     \label{fig:mesi-estivi}
@@ -1891,7 +1891,7 @@ località di Rimini e Palermo, mostrando che alcune province, come la prima,
 confermano l'ipotesi, mentre altre, 
 come la seconda, possono essere usate come controesempio. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{img_unite/milano_rimini_palermo.png}
     \caption{Confronto di incidenti tra Milano, Rimini e Palermo}
     \label{fig:milano-rimini}
@@ -1939,7 +1939,7 @@ Nel grafico in figura \ref{fig:aosta}, si notano crescite nel numero di incident
 in Valle d'Aosta, nei mesi di Giugno e Settembre, tuttavia, nei periodi invernali, 
 la quantità di sinistri è generalmente più bassa rispetto alla media. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/aosta_mese.png}
     \caption{Incidenti assoluti per mese, in Valle d'Aosta}
     \label{fig:aosta}
@@ -1985,7 +1985,7 @@ Per avere una visione di insieme delle tendenze di tutti gli anni disponibili,
 il grafico \ref{fig:aosta-rimini-milano-trimestre}, dividendo gli eventi 
 per trimestre\footnote{Per primo trimestre si intende Gennaio, Febbraio e Marzo ecc.}. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mese_incidenti/trimestri_aosta_milano_rimini.png}
     \caption{Andamento trimestrale in tre contesti di esempio}
     \label{fig:aosta-rimini-milano-trimestre}
@@ -2050,7 +2050,7 @@ extraurbane e autostrade.
 Le percentuali sono calcolate per gruppo, quindi, sommando 
 tutte le righe di \columnstyle{Autostrade}, si ottiene $1.0$. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/tipo_veicoli/differenza_strade.png}
     \caption{Percentuale del tipo di veicoli coinvolti in incidenti, nel 2018}
     \label{fig:differenza-strade}
@@ -2069,7 +2069,7 @@ precisa delle tipologie di veicoli che ricorrono con minore frequenza.
 I risultati sono mostrati, per l'anno 2018, 
 nella figura \ref{fig:differenza-strade-no-auto}. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/tipo_veicoli/differenza_senza_auto.png}
     \caption{Numero assoluto di incidenti per tipo veicolo, ignorando le auto private}
     \label{fig:differenza-strade-no-auto}
@@ -2098,7 +2098,7 @@ influiscono sui sinistri.
 Per rispondere alla prima delle domande poste nell'introduzione, è possibile, 
 utilizzando i dati a disposizione, contare la frequenza di ogni categoria di incidente. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \hfill\includegraphics[width=0.7\linewidth]{../src/incidenti/incidenti_senza_coords/localizzazione_incidente/tipo_incidente.png}\hspace*{\fill}
     \caption{Numero di incidenti assoluti, divisi per tipologia}
     \label{fig:tipo-incidente}
@@ -2124,7 +2124,7 @@ tipologie di intersezioni rimangano costanti o meno.
 Le percentuali delle categorie di incroci che provocano più sinistri 
 sono riportate nella figura \ref{fig:rapporto-tipologie}: 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/localizzazione_incidente/rapporto_tipologie.png}
     \caption{Frequenza delle categorie di incidente, divise per anno}
     \label{fig:rapporto-tipologie}
@@ -2166,7 +2166,7 @@ Nel grafo a barre sul lato sinistro della figura \ref{fig:tipo-intersezioni},
 sono rappresentati i sinistri in Italia nel 2018, divisi per tipologia 
 di strada su cui sono avvenuti. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{img_unite/intersezioni_indice_mortalita.png}
     \caption{Percentuale di incidenti e rispettivo indice di mortalità, per tipo di strada}
     \label{fig:tipo-intersezioni}
@@ -2185,7 +2185,7 @@ riportato nel grafico destro dell'immagine \ref{fig:tipo-intersezioni}, e calcol
 formula sottostante. 
 
 \begin{center}
-    $Indice\_Mortalita\_Strada\_X = \displaystyle \frac{Numero\_Morti\_Strada\_X}{Numero\_Incidenti\_Strada\_X} \times 100$ 
+    $Indice\_Mortalita\_Strada = \displaystyle \frac{Numero\_Morti\_Strada}{Numero\_Incidenti\_Strada} \times 100$ 
 \end{center}
 
 Questo indicatore mostra come, nonostante i rettilinei siano le zone in cui 
@@ -2267,7 +2267,7 @@ dopo l'incidente, che può essere: incolume, ferito, deceduto entro 24 ore o ent
 Può essere utile, pertanto, verificare quali siano le tipologie di 
 sinistri che provocano il maggior numero di feriti.
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/natura_incidente/natura_incidente.png}
     \caption{Numero assoluto di feriti per natura dell'incidente}
     \label{fig:numero-feriti}
@@ -2307,7 +2307,7 @@ Avendo a disposizione il numero di sinistri per categoria, è possibile capire
 se il comportamento visibile nel grafico sia dovuto alla maggiore frequenza della tipologie, 
 o alla pericolosità del tipo di evento. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/natura_incidente/perc_natura_incidente.png}
     \caption{Frequenza del tipo di incidente con numero di feriti, 
     diviso per la percentuale di incidenti della rispettiva categoria}
@@ -2345,7 +2345,7 @@ Rimanendo sul tema dei capitoli precedenti,
 si potrebbe verificare quali tipologie di incrocio coinvolgono 
 il maggior numero di pedoni.
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/pedoni/pedoni_incroci.png}
     \caption{Numero assoluto di pedoni coinvolti per tipologia di intersezione}
     \label{fig:pedoni-intersezioni}
@@ -2367,7 +2367,7 @@ Questa alta quantità di incidenti fa pensare che esista un qualche fattore
 che comporti maggiore coinvolgimento di pedoni lungo rettilinei, come 
 l'alta velocità dei veicoli. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/pedoni/pedoni_log.png}
     \caption{Tipologia di intersezioni e pedoni coinvolti, ignorando le categorie con valori più bassi (scala logaritmica)}
     \label{fig:pedoni-no-rett}
@@ -2410,7 +2410,7 @@ con il label
 \columnstyle{pedone\_X\_ferito\_età}\footnote{Nel dataset sono presenti quattro colonne per 
 annotare l'età dei pedoni coinvolti, dove l'indice della colonna sostituisce la 'X' nel label.}. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/pedoni/eta_pedoni_iniziale.png}
     \caption{Numero assoluto di pedoni coinvolti in incidenti per fascia di età}
     \label{fig:eta-pedoni-iniziale}
@@ -2433,7 +2433,7 @@ pedoni_feriti_vals = pedoni_feriti.values / numero_anni
 pedoni_morti_vals = pedoni_morti.values / numero_anni
 \end{code}
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/pedoni/eta_pedoni.png}
     \caption{Fasce di età dei pedoni coinvolti in incidenti, normalizzate per numero di anni 
     presenti nella categoria}
@@ -2511,7 +2511,7 @@ pedoni_feriti_vals = pedoni_feriti.values / perc_fascia
 pedoni_morti_vals = pedoni_morti.values / perc_fascia
 \end{code}
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/pedoni/eta_pedoni_norm.png}
     \caption{Fasce di età dei pedoni coinvolti in incidenti, normalizzate 
     tramite popolazione standard italiana}
@@ -2543,7 +2543,7 @@ veicoli.
 \`E dunque possibile verificare se esistono fasce di età di persone alla guida, 
 che provocano un numero di sinistri particolarmente alto. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mortalita/indice_mortalita_eta.png}
     \caption{Indice di mortalità degli incidenti, divisi in base all'età del conducente}
     \label{fig:indice-mortalita-eta}
@@ -2567,7 +2567,7 @@ Nell'istogramma in figura \ref{fig:indice-mortalita-eta}, invece,
 calcolato utilizzando la formula: 
 
 \begin{center}
-    $Indice\_Mortalita\_X = \displaystyle \frac{Numero\_Morti\_X}{Numero\_Incidenti\_X} * 100$ 
+    $Indice\_Mortalita = \displaystyle \frac{Numero\_Morti}{Numero\_Incidenti} \times 100$ 
 \end{center}
 
 Il risultato calcolato, presente nel grafico, aumenta al crescere dell'età, 
@@ -2589,7 +2589,7 @@ morti_per_eta /= perc_fascia
 indice_mortalita = morti_per_eta * 100 / incidenti_per_eta
 \end{code}
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_senza_coords/mortalita/indice_mort_norm.png}
     \caption{Indice di mortalità degli incidenti, normalizzato per popolazione standard}
     \label{fig:indice-mort-norm}
@@ -2627,7 +2627,7 @@ sono state realizzate le mappe in figura \ref{fig:incidenti-per-regione},
 che rappresentano rispettivamente, le regioni con più incidenti 
 sulle strade provinciali e sulle autostrade, nell'anno 2018. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{img_unite/incidenti_autostrade_provinciali.png}
     \caption{Incidenti su autostrade e su strade provinciali nel 2018}
     \label{fig:incidenti-per-regione}
@@ -2639,7 +2639,7 @@ Emerge poi il Lazio, dove la maggior parte dei sinistri avvengono su autostrade,
 in quanto il volume di questi, in figura \ref{fig:incidenti-per-regione}, 
 è nella media nella prima mappa, mentre è il valore massimo nella seconda. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/mappe_regioni/regioni_heatmap.png}
     \caption{Incidenti all'anno per regione su strade provinciali}
     \label{fig:regione-heatmap}
@@ -2670,7 +2670,7 @@ non potrà essere particolarmente
 sicura, vista la mobilità tra luoghi di residenza, di 
 lavoro o di studio che può decisamente falsare la localizzazione dei sinistri.
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \hfill\includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/mappe_regioni/incidenti_patenti_italia.png}\hspace*{\fill}
     \caption{Rapporto tra incidenti e patentati per ogni regione}
     \label{fig:incidenti-patentati}
@@ -2706,7 +2706,7 @@ patentati per la rispettiva regione.
 la frequenza di incidenti supera quella delle patenti, 
 mentre al sud avviene il fenomeno opposto. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \hfill\includegraphics[width=0.7\linewidth]{../src/incidenti/incidenti_aci/mappe_regioni/incidenti_patenti_bar.png}\hspace*{\fill}
     \caption{Numero assoluto di incidenti e patentati per regione}
     \label{fig:incidenti-patentati-bar}
@@ -2719,7 +2719,7 @@ sempre nelle stesse due zone, il numero di patentati non cambia molto.
 \`E ovvio che tenendo il denominatore costante, il valore più basso di incidenti al 
 sud porta come risultato a una frazione minore. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \hfill\includegraphics[width=0.7\linewidth]{../src/incidenti/incidenti_aci/mappe_regioni/incidenti_patenti_box.png}\hspace*{\fill}
     \caption{Incidenti e patentati per Nord, Centro e Sud Italia}
     \label{fig:incidenti-patentati-box}
@@ -2738,7 +2738,7 @@ Sarebbe interessante verificare se i dati ACI confermano le tendenze trovate tra
 le informazioni Istat, e vedere se nel Sud Italia, il numero di incidenti cresca 
 come conseguenza delle vacanze estive. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/mappe_regioni/estate_inverno.png}
     \caption{Incidenti assoluti per regione nei mesi estivi e invernali}
     \label{fig:estate-inverno}
@@ -2768,7 +2768,7 @@ presenti più incidenti.
 Avendo a disposizione dati riguardanti gli eventi lungo le strade provinciali e le autostrade, 
 è stato realizzato lo stesso calcolo per entrambe le tipologie. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{img_unite/lombardia_autostrade_provinciali.png}
     \caption{Incidenti sulle autostrade e strade provinciali in Lombardia}
     \label{fig:lombardia-strade}
@@ -2784,7 +2784,7 @@ la quantità di sinistri cresce molto nella seconda categoria di strade osservat
 Lo stesso calcolo è stato eseguito per le province del Lazio, visto che nel capitolo 
 precedente sugli incidenti per regione, si era notata ampia disparità tra i due gruppi. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{img_unite/lazio_autostrade_provinciali.png}
     \caption{Incidenti sulle autostrade e nelle strade provinciali nel Lazio}
     \label{fig:lazio-strade}
@@ -2818,7 +2818,7 @@ Utilizzando il sito Geojson.io\footnote{\url{https://geojson.io/}},
 Milano, come le Tangenziali Est e Ovest, la Torino-Trieste e la A1. 
 Il risultato è visibile nella figura \ref{fig:line-incidenti-milano}. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/autostrade/incidenti_line_chart.png}
     \caption{Autostrade con più incidenti assoluti nel 2018}
     \label{fig:line-incidenti-milano}
@@ -2876,7 +2876,7 @@ I risultati del calcolo sono riportati nella tabella sottostante:
     \end{tabular}
 \end{center}
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/provincia/corr_incidenti.png}
     \caption{Correlazione tra numero di feriti e incidenti nelle venti province con maggior numero di sinistri}
     \label{fig:corr-incidenti-feriti}
@@ -2942,7 +2942,7 @@ il nome della strada in cui è avvenuto il sinistro},
 possono permettere di verificare la correttezza dell'ipotesi, 
 nonché le differenze evidenziabili a parità di tipologia. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/autostrade/autostrade.png}
     \caption{Autostrade e strade statali con più incidenti assoluti nel 2018}
     \label{fig:incidenti-autostrade}
@@ -2981,7 +2981,7 @@ ripartire i sinistri per provincia.
 Il procedimento è stato eseguito solo per le strade statali, 
 ma per un'analisi più dettagliata di potrebbe estendere la verifica anche alle autostrade.
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{img_unite/tratti_ss1_ss16.png}
     \caption{Incidenti assoluti su SS1 e SS16, divisi per provincia in cui questi sono avvenuti}
     \label{fig:incidenti-strade-statali}
@@ -3018,7 +3018,7 @@ A supporto i tale tesi, nella figura \ref{fig:ss16-pescara} si nota che questa d
 all'ingresso in città, diventi una strada urbana e molto probabilmente venga 
 registrata con un altro nome.
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \hfill\includegraphics[width=0.7\linewidth]{img/pescara_ss16.png}\hspace*{\fill}
     \caption{La SS16 nella provincia di Pescara. All'ingresso in città questa strada cambia nome in SS714}
     \label{fig:ss16-pescara}
@@ -3056,7 +3056,7 @@ Avendo a disposizione i dati di tutte le annate, a partire dal 2010 fino al 2018
 è possibile verificare se esistano anni con un volume di 
 sinistri in Agosto particolarmente alto. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/agosto/vacanze_autostrade.png}
     \caption{Incidenti assoluti in strade per anno nel mese di Agosto}
     \label{fig:autostrade-anno}
@@ -3081,7 +3081,7 @@ e turismo nei mesi non estivi, è stato possibile realizzare
 la figura \ref{fig:turismo}, 
 contenente i valori di questi, nel periodo a partire dall'anno 1995 fino al 2018. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/turismo/turismo.png}
     \caption{Turismo nelle principali località estive e invernali}
     \label{fig:turismo}
@@ -3125,7 +3125,7 @@ In particolare, nell'analisi precedente si era individuato un decremento di valo
 nei mesi estivi nella provincia di Milano, e il comportamento opposto a 
 Rimini e Aosta. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/autostrade/mesi_autostrade.png}
     \caption{Incidenti assoluti per mese nel 2018}
     \label{fig:incidenti-per-mese}
@@ -3140,7 +3140,7 @@ l'aumento di traffico dovuto alle partenze per le vacanze.
 Sull'Adriatica e sull'Aurelia infine, prevalgono eventi 
 in Luglio e Agosto e in generale nei mesi estivi. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \hfill\includegraphics[width=0.7\linewidth]{../src/incidenti/incidenti_aci/autostrade/adriatica_roma.png}\hspace*{\fill}
     \caption{Incidenti assoluti sull'Adriatica e sul Grande Raccordo Anulare a Roma nel 2018}
     \label{fig:adriatica-roma}
@@ -3167,7 +3167,7 @@ si potrebbe replicare, con i dataset ACI, quella riguardante gli orari di incide
 Avendo a disposizione il nome della strada, è anche possibile selezionare delle zone precise 
 su cui avvengono molti sinistri, come la SS1 e SS16. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/orari/orari.png}
     \caption{Confronto del numero di incidenti assoluti per orario in tre località diverse}
     \label{fig:orari-strade-aci}
@@ -3189,7 +3189,7 @@ Prendendo in considerazione invece, la provincia di Milano, si potrebbero ricava
 informazioni interessanti su quali siano le strade più utilizzate per 
 andare e tornare dai luoghi di lavoro. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/orari/tangenziali_autostrade.png}
     \caption{Incidenti nelle principali autostrade di Milano per orario}
     \label{fig:tangenziali-autostrade}
@@ -3230,7 +3230,7 @@ di partenze per le località di villeggiatura e sicuramente l'intenzione
 di chi parte in automobile è quella di spostarsi verso sud, 
 e raggiungere le zone balneari. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{../src/incidenti/incidenti_aci/agosto/autostrade_anno_agosto.png}
     \caption{Autostrade con più incidenti assoluti per anno, in Agosto}
     \label{fig:autostrade-anno-agosto}
@@ -3277,7 +3277,7 @@ buona stima della correlazione tra i due fattori.
 \`E comunque interessante mostrare come, il coefficiente di Pearson tra due campioni 
 possa essere estremamente alto, anche se questi ultimi sono completamente scollegati. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
     \includegraphics[width=\linewidth]{img_unite/temp_incidenti.png}
     \caption{Incidenti, temperature e umidità medi per mese nel 2011 e nel 2013}
     \label{fig:incidenti-temp}
