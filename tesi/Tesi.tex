@@ -1,4 +1,5 @@
 \documentclass[a4paper]{report}
+% \documentclass[a4paper,12pt]{report}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % packages... 
@@ -15,6 +16,7 @@
 \usepackage{csquotes}
 \usepackage{color, colortbl}
 \usepackage{courier}
+\usepackage{todonotes}
 
 \definecolor{CodeGray}{gray}{0.95}
 \definecolor{TableGray}{gray}{0.9}
@@ -90,8 +92,11 @@
 
 \tableofcontents
 
+\listoftodos
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Introduzione}
+\todo{ATOK}
 
 Il termine dati aperti, o liberi, tradotto dall'inglese \quotestyle{open data}, 
 si riferisce a collezioni di informazioni liberamente accessibili e 
@@ -254,7 +259,7 @@ Altre questioni interessanti potrebbero essere:
 \chapter{Origine dei dati}
 
 \section{Incidenti}
-
+\todo{ATOK}
 
 La maggior parte dei dataset utilizzati in questo lavoro 
 provengono dall'Istituto nazionale di statistica, in particolare 
@@ -316,7 +321,7 @@ l'orario, il mese o il giorno della settimana.
 )}
 
 \section{Autovelox}
-
+\todo{ATOK}
 
 Una delle prime domande che ci si è posti, è stata se gli autovelox, installati 
 nel tentativo di ridurre la velocità delle vetture, avessero influenza sul numero 
@@ -396,7 +401,7 @@ Il campi della tabella ripetuti sono dovuti al fatto che alcuni autovelox sono s
 installati in entrambe le direzioni. 
 
 \section{Patentati}
-
+\todo{ATOK}
 
 Un'importante necessità in un'indagine di questo tipo, è avere un contesto in cui inserire 
 i risultati ottenuti. 
@@ -447,7 +452,7 @@ e in caso di grandi disparità tra regioni, si potrebbe dover invalidare
 i calcoli eseguiti. 
 
 \section{Area C di Milano}
-
+\todo{ATOK}
 
 Per lo stesso motivo del capitolo precedente, cioè realizzare una stima approssimativa 
 del traffico, si sono cercate informazioni sugli accessi all'area C di Milano, 
@@ -478,7 +483,7 @@ Per quanto anche questa stima non sia tra le più accurate, ci si può aspettare
 il numero di accessi corrisponda, almeno in parte, al volume di traffico di Milano. 
 
 \section{Le zone di Milano}
-
+\todo{ATOK}
 
 I dataset delle zone di Milano provengono dal portale di dati geolocalizzati della 
 città\footnote{\url{https://geoportale.comune.milano.it/}}, 
@@ -506,7 +511,7 @@ Viceversa, i calcoli che utilizzano solamente la superficie stradale avranno
 inevitabilmente valori maggiori. 
 
 \section{Il meteo}
-
+\todo{ATOK}
 
 Per quanto riguarda i dati sul meteo, si è tentato di utilizzare le informazioni 
 provenienti dalle centraline Arpa. 
@@ -539,7 +544,7 @@ misurati ogni ora a Milano, a partire dal 2008, fino al 2018.
 )}
 
 \section{Trasporti pubblici}
-
+\todo{ATOK}
 
 Un altro fattore di cui ci si è chiesti l'influenza sull'incidentalità, è la 
 presenza, nella via o viale, di trasporti pubblici. 
@@ -576,7 +581,7 @@ per confrontare il numero di incidenti, nelle vie in cui viaggiano autobus, risp
 quelle in cui sono presenti solo autovetture private. 
 
 \section{Autostrade e manto stradale}
-
+\todo{ATOK}
 
 Puramente per la realizzazione di alcune mappe, quindi non a scopo di analisi 
 ma più di visualizzazione, si è tentata la ricerca di dati geolocalizzati sulle 
@@ -604,7 +609,7 @@ Allo stesso modo, Geojson.io è stato utile a tracciare alcune aree in centro a 
 per confrontare gli incidenti su pavé agli incidenti su asfalto. 
 
 \section{Il turismo}
-
+\todo{ATOK}
 
 Durante le analisi degli incidenti autostradali, è sorto il dubbio che 
 nelle annate più recenti, tra 2015 e 2018, 
@@ -630,7 +635,7 @@ a partire dal 2010 fino al 2018, convertiti in formato csv, e sono stati scelti 
 indicatori di turismo nei mesi non estivi, e tasso di turisticità. 
 
 \section{Immagini del traffico}
-
+\todo{ATOK}
 
 Le immagini raffiguranti il traffico in tempo reale sono prese da Google 
 Maps\footnote{\url{https://www.google.com/maps/}}. 
@@ -650,7 +655,7 @@ e dell'incrocio tra viale Bianca Maria e viale Ventidue Marzo a Milano.
 \section{Dati mancanti}
 
 \subsection{Il pavé}
-
+\todo{ATOK}
 
 Nonostante le ricerche nei principali siti di 
 opendata\footnote{
@@ -683,7 +688,7 @@ Geojson.io\footnote{\url{https://geojson.io/}}, come già fatto per le autostrad
 basandosi sulla cartina trovata su Urbanfile. 
 
 \subsection{Traffico stradale}
-
+\todo{ATOK}
 
 Per quanto riguarda i dati sul traffico stradale, anche in questo caso non è stato trovato un 
 dataset, sia nei siti di cui si è parlato in precedenza, sia su quello di 
@@ -716,7 +721,7 @@ contengono anche informazioni riguardanti la provincia e data di conseguimento d
 patente, oltre al tipo di certificato ottenuto. 
 
 \subsection{Dati su strade, incroci, semafori}
-
+\todo{ATOK}
 
 In alcuni capitoli, in particolare quelli riguardanti le tipologie di incidente e 
 di incrocio, i dati disponibili non permettono di realizzare delle stime sulle 
@@ -775,7 +780,7 @@ sinistro.
 \section{Dati Geolocalizzati}
 
 \subsection{Distribuzione degli incidenti}
-
+\todo{ATOK}
 
 I dati riguardanti gli incidenti geolocalizzati sono disponibili in un dataset 
 contenente una lista di punti indicanti latitudine e longitudine dell'evento. 
@@ -898,7 +903,7 @@ dell'area C, ha impatto considerevole sull'incidentalità.
 
 
 \subsection{Legame tra incidenti e trasporti pubblici}
-
+\todo{ATOK}
 
 Proseguendo con la serie di questioni poste nell'introduzione, ci si è chiesti quale 
 fosse l'effetto delle linee di trasporti pubblici, come tram e autobus, 
@@ -1039,7 +1044,7 @@ strade con mezzi pubblici.
 
 
 \subsection{Influenza del pavé sull'incidentalità}
-
+\todo{ATOK}
 
 Tra le domande poste nell'introduzione, una particolarmente interessante è quella 
 sull'influenza del pavé sull'incidentalità. 
@@ -1129,7 +1134,7 @@ sulla stessa direttrice, avendo come unica variabile il cambio di pavimentazione
 
 
 \subsection{Legame tra incidenti e autovelox}
-
+\todo{ATOK}
 
 Per sapere se la presenza di autovelox abbia influenza sugli incidenti, 
 bisognerebbe innanzitutto sapere quando sono stati posizionati i dispositivi, e solo 
@@ -1141,6 +1146,10 @@ l'anno 2014, e sono visualizzabili nella tabella \ref{ztl-milano}.
 Tuttavia la localizzazione degli incidenti 
 è disponibile solo per il 2016, in quanto Istat non ha rilasciato 
 le coordinate di sinistri in altre annate. 
+
+\todo{atrent: tutta questa sezione va resa più ipotetica perché non hai 
+informazioni "causali" lelepado: ho aggiunto la parte successiva 
+per spiegare meglio cosa manca}
 
 Non disponendo delle informazioni sul comportamento delle vetture 
 precedentemente all'installazione degli autovelox, 
@@ -1310,10 +1319,11 @@ successive al posizionamento delle telecamere.
 \section{Dati Istat su conducenti e passeggeri}
 
 \subsection{Legami tra guida e sesso del conducente}
-
-
+\todo{ATOK}
 Un frequente stereotipo riguardante le donne, è la credenza che queste  
 sarebbero meno abili alla guida rispetto alla controparte maschile. 
+\todo{atrent: frase pericolosa, andrebbe sostanziata, anche se lo dici solo per poi negarla
+lelepado: la ho cambiata, può andare?}
 Avendo a disposizione le informazioni sul genere del conducente che ha causato l'incidente, 
 è possibile controllare se esista un riscontro reale per questa credenza. 
 
@@ -1395,6 +1405,10 @@ della guida tra i due sessi, in quanto, assumendo che la probabilità che una do
 sinistro sia uguale a quella di un uomo, i risultati ottenuti sarebbero 
 gli stessi osservabili nel campione. 
 
+\todo{atrent: potresti trovare bibliografia a supporto delle tue conclusioni, 
+anche solo il fatto che le assicurazioni fanno pagare meno alle donne (almeno così sapevo) 
+lelepado: ho trovato un articolo del corriere, citato sotto}
+
 A smentire ulteriormente lo stereotipo illustrato all'inizio di questo capitolo, sono 
 anche le compagnie di assicurazione di automobili che, fino al 2011, offrivano 
 alle donne polizze meno costose. 
@@ -1405,6 +1419,7 @@ sul sesso del conducente \cite{CORRIERE:1}, che precedentemente riducevano circa
 
 
 \subsection{Numero di passeggeri}
+\todo{ATOK}
 
 
 Il dataset Istat dispone anche di una serie di colonne corrispondenti all'età, sesso 
@@ -1472,7 +1487,7 @@ essere l'utilizzo del cellulare durante la guida.
 
 
 \subsection{Utilizzo del cellulare in incidenti}
-
+\todo{ATOK}
 
 Non è un segreto che il numero di conducenti 
 che utilizzano lo smartphone alla guida 
@@ -1523,7 +1538,7 @@ più dettagliate ed approfondite.
 
 
 \subsection{Differenze nei diversi orari della giornata}
-
+\todo{ATOK}
 
 Se si volesse stimare la distribuzione di traffico per fasce orarie, 
 sicuramente una prima ipotesi 
@@ -1581,7 +1596,7 @@ soprattutto nelle ore del pomeriggio, le ipotesi iniziali.
 
 
 \subsection{Incidenti nelle fasce orarie della mattina}
-
+\todo{ATOK}
 
 I risultati ottenuti nella sezione precedente sembrano indicare 
 che la maggior parte degli incidenti si verifica attorno alle 9:00 di mattina. 
@@ -1611,7 +1626,7 @@ alla guida in orari precedenti alle 9:00,
 non sembra influenzare il volume di sinistri. 
 
 \subsection{Correlazione tra incidenti e traffico stradale}
-
+\todo{ATOK}
 
 Fino a questo momento, si è parlato di incidenti senza alcun tipo di contesto, 
 e in 
@@ -1680,7 +1695,7 @@ Chiaramente, con l'aumento del numero di automobili in viaggio, aumenta anche
 la pericolosità delle strade e la probabilità che avvenga un incidente. 
 
 \subsection{Situazione in orari notturni}
-
+\todo{ATOK}
 
 Nel grafico \ref{fig:week-weekend}, si è potuto osservare come, durante le 
 ore notturne, il comportamento degli incidenti tra settimana lavorativa e weekend 
@@ -1740,7 +1755,7 @@ siano quelli più tranquilli.
 
 
 \subsection{Vacanze nel mese di Agosto}
-
+\todo{ATOK}
 
 Alle analisi eseguite nei capitoli precedenti, 
 è possibile aggiungere una valutazione anche riguardo i mesi più pericolosi per spostarsi, 
@@ -1853,7 +1868,7 @@ che permettono di bilanciare i valori fuori dalla norma,
 come quelli riscontrati per Agosto. 
 
 \subsection{Località di mare nei mesi estivi}
-
+\todo{ATOK}
 
 Osservando il grafico in figura \ref{fig:milano-mese}, 
 ci si può chiedere se alla diminuzione degli incidenti estivi in città, 
@@ -2028,7 +2043,7 @@ sia comparabile o se alcuni tipi di sinistri siano più pericolosi di altri.
 
 
 \subsection{Incidenti per tipologia della strada}
-
+\todo{ATOK}
 
 Una prima analisi che è possibile realizzare, utilizzando il dataset Istat è, 
 per quanto riguarda i veicoli, 
@@ -2093,7 +2108,7 @@ estremamente preciso, per la presenza di fattori, come la conformazione della st
 influiscono sui sinistri. 
 
 \subsection{Frequenza di incidenti per tipologia}
-
+\todo{ATOK}
 
 Per rispondere alla prima delle domande poste nell'introduzione, è possibile, 
 utilizzando i dati a disposizione, contare la frequenza di ogni categoria di incidente. 
@@ -2150,7 +2165,7 @@ di incroci in una località, sarebbe possibile giustificare
 la maggiore frequenza di sinistri di un tipo rispetto a un altro. 
 
 \subsection{Tipologie di strada e indice di mortalità}
-
+\todo{ATOK}
 
 Per tutte queste analisi, in cui si utilizzano le informazioni su tipologie 
 di incrocio e di strada, 
@@ -2257,7 +2272,7 @@ quando i veicoli stanno ripartendo dopo una fermata.
 
 
 \subsection{Feriti per tipologia di sinistro}
-
+\todo{ATOK}
 
 Il dataset Istat contiene informazioni riguardanti il numero di persone coinvolte 
 in incidenti, in particolare l'età, il sesso e l'esito dove, 
@@ -2325,7 +2340,7 @@ una maggiore percentuale di eventi con più di un ferito.
 
 
 \subsection{Coinvolgimento di pedoni in incidenti}
-
+\todo{ATOK}
 
 Il dataset Istat fornisce varie informazioni riguardanti i pedoni coinvolti in un 
 incidente, tramite le colonne sottostanti, ripetute quattro volte, 
@@ -2399,7 +2414,7 @@ segnaletica non ben evidenziata.
 
 
 \subsection{Età dei pedoni coinvolti}
-
+\todo{ATOK}
 
 Può sembrare scontato che, qualora coinvolti in un incidente, un pedone ventenne e 
 uno settantenne non abbiano la stessa probabilità di rimanere feriti. 
@@ -2533,7 +2548,7 @@ una volta aggiustati i calcoli per popolazione standard, sembrano essere comunqu
 quelle più coinvolte in sinistri. 
 
 \subsection{Età dei conducenti}
-
+\todo{ATOK}
 
 Come specificato nel capitolo precedente, il dataset Istat dispone di 
 informazioni sull'età dei pedoni coinvolti. Analogamente a questi, 
@@ -2615,7 +2630,7 @@ località\footnote{Per località si intende il nome della via in cui è avvenuto
 per comune, per mese, per giorno della settimana o per ora. 
 
 \subsection{Quadro delle regioni italiane}
-
+\todo{ATOK}
 
 I dati ACI, in particolare i file riguardanti la 
 localizzazione degli incidenti, contengono informazioni che è  
@@ -2732,7 +2747,7 @@ la precisione del numero di patenti come fattore utilizzato per la stima
 del traffico non è da considerarsi particolarmente attendibile. 
 
 \subsection{Differenze di incidenti tra mesi estivi e invernali}
-
+\todo{ATOK}
 
 Sarebbe interessante verificare se i dati ACI confermano le tendenze trovate tramite 
 le informazioni Istat, e vedere se nel Sud Italia, il numero di incidenti cresca 
@@ -2759,12 +2774,18 @@ nelle località marittime.
 Questo tipo di analisi verrà eseguita nei capitoli successivi. 
 
 \subsection{Quadro delle province lombarde e laziali}
-
+\todo{ATOK}
 
 Utilizzando ancora una volta, i file geojson trovati sul repository Github di 
 Guglielmo Celata riguardanti le province, 
 è possibile creare delle \quotestyle{heatmap} raffiguranti in quali, tra queste, siano 
 presenti più incidenti. 
+
+\todo{atrent: considerazione che vale un po' ovunque, attenzione che stai dando 
+(a meno che non lo specifichi) valori assoluti, non in rapporto al traffico, 
+alla popolazione, ai km di strade, ecc. tienilo sempre ben presente}
+\todo{specificare a cosa sono rapportati gli incidenti, o se sono valori assoluti}
+
 Avendo a disposizione dati riguardanti gli eventi lungo le strade provinciali e le autostrade, 
 è stato realizzato lo stesso calcolo per entrambe le tipologie. 
 
@@ -2805,7 +2826,7 @@ un'impennata di valori nella \quotestyle{heatmap} di destra.
 
 
 \subsection{Approfondimento sulla regione Lombardia}
-
+\todo{ATOK}
 
 Approfondendo le analisi del capitolo precedente, è possibile calcolare quali siano 
 le strade più pericolose, concentrandosi sulla provincia di Milano. 
@@ -2835,7 +2856,7 @@ più pericolose.
 
 
 \subsection{Correlazione tra incidenti e numero di feriti}
-
+\todo{ATOK}
 
 Facendo uso dei dataset ACI a disposizione, è possibile stabilire l'esistenza di 
 correlazione tra morti e incidenti, o tra morti e feriti?
@@ -2927,7 +2948,7 @@ I valori riguardanti i morti invece, sono molto meno vicini a uno, probabilmente
 per il minor numero di sinistri con esiti mortali, che rende il campione più ristretto. 
 
 \subsection{Quadro delle strade più pericolose}
-
+\todo{ATOK}
 
 Il dataset ACI raggruppa in un solo insieme sia le autostrade che le strade statali, 
 esistono differenze sostanziali tra le due categorie? 
@@ -2947,6 +2968,7 @@ nonché le differenze evidenziabili a parità di tipologia.
     \caption{Autostrade e strade statali con più incidenti assoluti nel 2018}
     \label{fig:incidenti-autostrade}
 \end{figure}
+\todo{atrent: vale discorso assoluto/relativo}
 
 Nella figura \ref{fig:incidenti-autostrade} sono  raffigurate le strade con 
 maggiore numero di sinistri nel 2018. 
@@ -2972,7 +2994,7 @@ Particolarmente utili sarebbero le coordinate di incidenti avvenuti lungo queste
 in modo da poter individuare zone particolarmente pericolose.
 
 \subsection{Approfondimento delle tratte più pericolose}
-
+\todo{ATOK}
 
 Nonostante il dataset ACI non fornisca le coordinate geografiche degli incidenti avvenuti, 
 un modo per aumentare la precisione dei dati a disposizione, potrebbe essere il 
@@ -3040,7 +3062,7 @@ si potrebbe verificare l'esistenza di tratti particolarmente pericolosi.
 
 
 \subsection{Evoluzione cronologica degli incidenti}
-
+\todo{ATOK}
 
 Tornando a concentrarsi sui dati riguardanti le autostrade, 
 sarebbe interessante sapere se ci sia una variazione di incidenti 
@@ -3113,7 +3135,8 @@ con l'aumento di incidenti sull'autostrada Torino-Trieste.
 Il numero di sinistri, infatti rimane sostanzialmente costante negli anni analizzati, 
 variando da $99$ incidenti nel 2011 a $97$ nel 2018. 
 
-
+% \subsection{Differenze di incidenti su autostrade in base al mese dell'anno}
+% \todo{ATOK}
 
 \skipline
 Una questione, di cui ci si è occupati tramite dati Istat in precedenza, è 
@@ -3159,6 +3182,8 @@ variazioni anche profonde, in base alla stagionalità, ma certo le variabili
 che intervengono sono tante, la maggior parte delle quali sono
 a loro volta influenzate dal trascorrere dei mesi.
 
+% \subsection{Analisi degli incidenti in orari di punta su autostrade}
+% \todo{ATOK}
 
 
 \skipline
@@ -3217,6 +3242,8 @@ Tangenziali sono particolarmente frequenti e, avendo a disposizione dati più
 precisi, per esempio sulle tratte percorse dai pendolari, sarebbe possibile 
 realizzare analisi più approfondite. 
 
+% \subsection{Annate con maggior numero di incidenti su autostrade}
+% \todo{ATOK}
 
 
 \skipline
@@ -3262,6 +3289,7 @@ nelle autostrade è sufficiente a garantire un posto nell'istogramma.
 \section{Meteo a Milano}
 
 \subsection{Correlazione tra fattori atmosferici e incidentalità}
+\todo{ATOK}
 
 Ipotizzare che esista correlazione tra le condizioni meteo e il numero di incidenti, 
 può non sembrare improponibile, tuttavia i valori necessari a quantificare una stima
@@ -3533,6 +3561,7 @@ ogni file e l'url del portale di origine.
 \footnotetext[14]{\url{https://www.istat.it/it/archivio/16777}}
 
 
+%\addcontentsline{toc}{chapter}{Bibliografia}
 \printbibliography
 
 \end{document}
