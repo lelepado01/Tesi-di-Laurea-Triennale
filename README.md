@@ -1,5 +1,10 @@
 # Studio sull'incidentalità stradale tramite dataset aperti
 
+<p align="middle">
+  <img title="Area utilizzata come pool per incidenti su pavè (sinistra) rispetto a quella utilizzata per gli incidenti su asfalto (destra)" src="tesi/img_unite/mappa_pave_asfalto.png" width="49%" />
+  <img title="Incidenti lungo le autostrade (sinistra) rispetto a quelli avvenuti lungo strade provinciali (destra)" src="tesi/img_unite/incidenti_autostrade_provinciali.png" width="49%" /> 
+</p>
+
 ### Utilizzo del codice
 
 Il repository è diviso in tre cartelle principali, *dataset*, *src* 
